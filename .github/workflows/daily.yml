@@ -1,0 +1,53 @@
+name: daily-brief
+
+# SPEC §7.2 — UTC 21:30 = KST 익일 06:30, 평일만(UTC 일~목 = KST 월~금).
+# GH Actions 는 부하 시 5~15분 지연이 흔해 06:30 목표로 30분 여유(07:00 도착).
+on:
+  schedule:
+    - cron: '30 21 * * 0-4'
+  workflow_dispatch:        # 수동 실행 (3-e 정지 지점: 먼저 이걸로 1회 돌려 텔레그램 도착 확인)
+
+# 생성물(news/·index.html·data/published/·data/seen.json)을 레포에 커밋-백 →
+# GitHub Pages(브랜치 배포)가 서빙하고, seen.json 이 다음 실행까지 상태로 남는다.
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-brief
+  cancel-in-progress: false
+
+jobs:
+  brief:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup uv + Python
+        uses: astral-sh/setup-uv@v3
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: uv sync
+
+      - name: Run daily brief
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          # Pages URL. Settings > Secrets and variables > Actions > Variables 에 등록.
+          SITE_BASE_URL: ${{ vars.SITE_BASE_URL }}
+        run: uv run python -m src.run_daily
+
+      - name: Commit generated artifacts
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add news index.html data/published data/seen.json
+          if git diff --cached --quiet; then
+            echo "변경 없음 — 커밋 생략"
+          else
+            git commit -m "chore(daily): $(date -u +%Y-%m-%d) 브리핑 발행"
+            git push
+          fi

@@ -1,0 +1,186 @@
+# 수집 소스 — SPEC §3.
+# lane_weight(관심도) / source_tier(원본성) 는 두 독립 축 (SPEC 원칙 8).
+# lane_weight 값은 Phase 0 실측 후 튜닝 대상 (SPEC §3.1, §10) — 임의 변경 금지.
+#
+# 일부 빅테크/미디어 RSS URL 은 미확정(SPEC §10). 실행 시 피드별 진단(ok/empty/error)이
+# 죽은 피드를 드러낸다 — 그게 Phase 0 의 일이다.
+
+# ---- 레인 메타 (SPEC §3.1 표) ----
+lanes:
+  1: { name: "빅테크 리서치 블로그", lane_weight: 1.0,  source_tier: 1, content_type: blog,    method: rss }
+  2: { name: "학회 논문",           lane_weight: 0.85, source_tier: 1, content_type: paper,   method: arxiv }
+  3: { name: "큐레이션 뉴스레터",   lane_weight: 0.8,  source_tier: 2, content_type: news,    method: rss }
+  4: { name: "arXiv 일반",          lane_weight: 0.7,  source_tier: 1, content_type: paper,   method: arxiv }
+  5: { name: "실무 블로그",         lane_weight: 0.6,  source_tier: 3, content_type: blog,    method: rss }
+  6: { name: "AI 미디어",           lane_weight: 0.55, source_tier: 4, content_type: news,    method: rss }
+  7: { name: "GitHub Releases",     lane_weight: 0.4,  source_tier: 1, content_type: release, method: github }
+  8: { name: "국문 보조",           lane_weight: 0.6,  source_tier: 1, content_type: blog,    method: rss }
+
+# ---- 레인 1: 빅테크 리서치 블로그 (SPEC §3.2) ----
+lane1_feeds:
+  - { name: "Google Research Blog",     url: "https://research.google/blog/rss/" }
+  - { name: "Google DeepMind Blog",     url: "https://deepmind.google/blog/rss.xml" }
+  # Meta AI(ai.meta.com/blog/rss)는 404. engineering.fb.com 이 유일한 살아있는 Meta 피드.
+  - { name: "Meta Engineering",         url: "https://engineering.fb.com/feed/" }
+  - { name: "Microsoft Research Blog",  url: "https://www.microsoft.com/en-us/research/feed/" }
+  - { name: "Amazon Science Blog",      url: "https://www.amazon.science/index.rss" }
+  - { name: "Apple ML Research",        url: "https://machinelearning.apple.com/rss.xml" }
+  - { name: "NVIDIA Developer Blog",    url: "https://developer.nvidia.com/blog/feed" }
+  - { name: "OpenAI News",              url: "https://openai.com/news/rss.xml" }
+  # Anthropic: 공식 RSS 미제공(전 경로 404) → HTML 스크래퍼로 별도 수집(collectors/anthropic_news.py)
+  # applied_engineering (tabular 실무 사례)
+  - { name: "Netflix Tech Blog",        url: "https://netflixtechblog.com/feed" }
+  - { name: "Airbnb Engineering",       url: "https://medium.com/feed/airbnb-engineering" }
+  - { name: "Spotify Engineering",      url: "https://engineering.atspotify.com/feed/" }
+  # 복구불가 — 제거:
+  #   Uber Engineering    : eng 블로그 RSS 폐지 (uber.com 406 봇차단, eng.uber.com 404)
+  #   LinkedIn Engineering: RSS 폐지 (전 경로 404)
+  #   DoorDash Engineering: 403 Cloudflare, Medium 핸들도 빈 피드
+
+# ---- 레인 3: 큐레이션 뉴스레터 (SPEC §3.4) ----
+lane3_feeds:
+  - { name: "Import AI",                url: "https://importai.substack.com/feed" }
+  # The Batch: 작동 피드 없음 — rss.xml=500, feed/=404. 대체 소스 필요(§10).
+  - { name: "Last Week in AI",          url: "https://lastweekin.ai/feed" }
+  - { name: "TLDR AI",                  url: "https://tldr.tech/api/rss/ai" }
+  - { name: "AlphaSignal",              url: "https://alphasignalai.substack.com/feed" }
+  - { name: "Hugging Face Blog",        url: "https://huggingface.co/blog/feed.xml", source_tier: 1 }
+  - { name: "O'Reilly Radar",           url: "https://www.oreilly.com/radar/feed/index.xml" }
+
+# ---- 레인 5: 실무 블로그 (SPEC §3.6) ----
+lane5_feeds:
+  - { name: "Towards Data Science",     url: "https://towardsdatascience.com/feed" }
+  - { name: "KDnuggets",                url: "https://www.kdnuggets.com/feed" }
+  - { name: "Machine Learning Mastery", url: "https://machinelearningmastery.com/feed/" }
+  - { name: "Sebastian Raschka",        url: "https://magazine.sebastianraschka.com/feed" }
+  - { name: "Eugene Yan",               url: "https://eugeneyan.com/rss/" }
+  - { name: "Chip Huyen",               url: "https://huyenchip.com/feed.xml" }
+  - { name: "Lilian Weng",              url: "https://lilianweng.github.io/index.xml" }
+  - { name: "Analytics Vidhya",         url: "https://www.analyticsvidhya.com/feed/" }
+
+# ---- 레인 6: AI 미디어 (SPEC §3.7, RSS만; 웹서치·research_house 는 §10 미결정 → 제외) ----
+lane6_feeds:
+  - { name: "MIT Technology Review",    url: "https://www.technologyreview.com/feed/" }
+  - { name: "IEEE Spectrum",            url: "https://spectrum.ieee.org/feeds/topic/artificial-intelligence.rss" }
+  - { name: "TechCrunch AI",            url: "https://techcrunch.com/category/artificial-intelligence/feed/" }
+  - { name: "VentureBeat AI",           url: "https://venturebeat.com/category/ai/feed/" }
+  - { name: "Ars Technica",             url: "https://feeds.arstechnica.com/arstechnica/index" }
+  - { name: "Wired AI",                 url: "https://www.wired.com/feed/tag/ai/latest/rss" }
+  # Semafor: 제외 확정 — 테크 전용 피드 없음. 전 사이트 rss.xml 은 레인6을 비테크 뉴스로 오염.
+
+# ---- 레인 2 & 4: arXiv (SPEC §3.3 / §3.5) ----
+# 역할 분리: HF Daily Papers 는 LLM 편향이 커 DL / LLM·FM 를 담당하고,
+# arXiv raw 는 HF 가 안 다루는 니치(tabular/causal/timeseries/...)만 전담한다.
+# arXiv raw 는 아래 keyword_groups 에 매칭되는 논문만 통과 → firehose 억제.
+arxiv:
+  categories: [cs.LG, stat.ML, cs.AI, econ.EM, stat.ME]   # econ.EM/stat.ME = 인과
+  max_total: 3000        # 수집 창 페이징 상한 (안전장치)
+  keyword_groups:
+    # causal: bare "causal" 제거 — causal attention/mask/LM/decoder(LLM 논문) 대량 오탐 방지.
+    causal:
+      - causal inference
+      - causal effect
+      - causal discovery
+      - causal graph
+      - counterfactual
+      - treatment effect
+      - ATE
+      - CATE
+      - HTE
+      - uplift
+      - confounder
+      - confounding
+      - instrumental variable
+      - propensity score
+      - difference-in-differences
+      - DiD
+      - double machine learning
+      - DML
+      - do-calculus
+      - backdoor adjustment
+      - frontdoor
+      - mediation analysis
+      - structural causal model
+      - SCM
+      - potential outcome
+    tabular:
+      - tabular
+      - gradient boosting
+      - GBDT
+      - decision tree ensemble
+      - LightGBM
+      - XGBoost
+      - CatBoost
+      - random forest
+      - TabPFN
+      - tabular foundation model
+    xai:
+      - SHAP
+      - interpretab
+      - explainab
+      - feature attribution
+      - feature selection
+    # timeseries: bare "temporal" 제거 — temporal graph/video 논문 대량 오탐 방지.
+    timeseries:
+      - time series
+      - time-series
+      - forecasting
+      - seasonality
+      - exogenous
+      - ARIMA
+      - SARIMA
+      - N-BEATS
+      - PatchTST
+      - Informer
+      - Autoformer
+      - temporal fusion transformer
+      - TFT
+      - Chronos
+      - TimesFM
+      - Moirai
+      - Lag-Llama
+      - TimeGPT
+    anomaly:
+      - anomaly detection
+      - outlier detection
+      - novelty detection
+    # imbalanced: bare "calibration" 제거 — LLM uncertainty calibration 논문 대량 오탐 방지.
+    imbalanced:
+      - class imbalance
+      - imbalanced
+      - long-tail
+      - long-tailed
+      - focal loss
+      - minority class
+      - resampling
+      - SMOTE
+      - probability calibration
+      - Platt scaling
+      - isotonic regression
+      - beta calibration
+    clustering:
+      - clustering
+      - representation learning for tabular
+
+# ---- 레인 7: GitHub Releases (SPEC §3.8) ----
+lane7_repos:
+  - microsoft/LightGBM
+  - dmlc/xgboost
+  - py-why/dowhy
+  - py-why/EconML
+  - uber/causalml
+  - shap/shap
+  - Nixtla/statsforecast
+  - yzhao062/pyod
+  - mlflow/mlflow
+  - langchain-ai/langgraph
+
+# ---- 레인 8: 국문 보조 (SPEC §3.9) — 회사 기술블로그는 원 소스 → tier 1 ----
+lane8_feeds:
+  - { name: "네이버 D2",                url: "https://d2.naver.com/d2.atom" }
+  - { name: "카카오 기술블로그",        url: "https://tech.kakao.com/feed/" }
+  - { name: "토스 기술블로그",          url: "https://toss.tech/rss.xml" }
+  - { name: "당근 기술블로그",          url: "https://medium.com/feed/daangn" }
+  - { name: "우아한형제들",             url: "https://techblog.woowahan.com/feed/" }
+  # LG AI연구원: RSS 미제공(전 경로 404) → 제거.
+  - { name: "삼성SDS 인사이트",         url: "https://www.samsungsds.com/kr/rss/insights.xml" }
