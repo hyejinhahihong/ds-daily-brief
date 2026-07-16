@@ -2636,5 +2636,488 @@
     "tags": [
       "timeseries"
     ]
+  },
+  "04a956338a62ade33a6bbaa37419cb95672571bb": {
+    "url": "https://machinelearning.apple.com/research/location-invariant-functions",
+    "title": "Location-Invariant Properties of Functions Versus Properties of Distributions: United in Testing but Separated in Verification",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "a3fb695dd3ee032847f6058bb49da222645f5be9": {
+    "url": "https://machinelearning.apple.com/research/interactive-proofs-distribution-properties",
+    "title": "Interactive Proofs for General Distribution Properties",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "f9d36b1ce1655e99c22dcc57da843e94f4969e3c": {
+    "url": "https://machinelearning.apple.com/research/doubly-sublinear-interactive-proofs",
+    "title": "Doubly Sub-linear Interactive Proofs of Proximity",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "7c99427116a9eecbad7e28096700094e90a5815d": {
+    "url": "https://developer.nvidia.com/blog/integrating-context-aware-video-ai-agents-into-enterprise-workflows/",
+    "title": "Integrating Context-Aware Video AI Agents Into Enterprise Workflows",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-07-16",
+    "tags": [
+      "orchestration",
+      "agentic-workflow"
+    ]
+  },
+  "6df1741820f2214eb2a1eb1c389d39e3912ff73f": {
+    "url": "https://developer.nvidia.com/blog/scaling-agentic-ai-factories-through-extreme-co-design-with-nvidia-bluefield/",
+    "title": "Scaling Agentic AI Factories Through Extreme Co-Design with NVIDIA BlueField",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-07-16",
+    "tags": [
+      "orchestration",
+      "agentic-workflow",
+      "deployment"
+    ]
+  },
+  "8fe39edff791751de0c2c6545e4ca710ed977e69": {
+    "url": "https://openai.com/index/why-teens-deserve-access-safe-ai",
+    "title": "Why teens deserve access to safe AI",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-07-16",
+    "tags": [
+      "alignment"
+    ]
+  },
+  "6f16a999c8ddd889e881e535b45bac9cfa6b8f4a": {
+    "url": "https://openai.com/index/cars24",
+    "title": "How Cars24 scales conversations and builds faster with OpenAI",
+    "category": "industry-application",
+    "source_tier": 1,
+    "first_seen": "2026-07-16",
+    "tags": [
+      "conversational-ai"
+    ]
+  },
+  "196e46fd3a04b1859d68c149f2789b321759f7f4": {
+    "url": "https://tldr.tech/ai/2026-07-16",
+    "title": "Thinking Machines Inkling 🧠, GPT-Red 🔒, Perplexity sandboxes 🛡️",
+    "category": "ai-agent",
+    "source_tier": 2,
+    "first_seen": "2026-07-16",
+    "tags": [
+      "agentic-workflow"
+    ]
+  },
+  "ff8c14b3821e60f138bcff504183a61f06cea6c5": {
+    "url": "https://huggingface.co/blog/nvidia/nemotron-3-embed-wins-rteb",
+    "title": "NVIDIA Nemotron 3 Embed Ranks #1 Overall on RTEB, Advancing Agentic Retrieval",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-07-16",
+    "tags": [
+      "rag",
+      "embedding-model"
+    ]
+  },
+  "fb19ea21b2fb049c2bb97bd662784c2d143b9e75": {
+    "url": "https://www.oreilly.com/radar/podcast/generative-ai-in-the-real-world-agentic-coding-with-chelsea-troy/",
+    "title": "Generative AI in the Real World: Agentic Coding with Chelsea Troy",
+    "category": "ai-agent",
+    "source_tier": 2,
+    "first_seen": "2026-07-16",
+    "tags": [
+      "agentic-workflow",
+      "coding"
+    ]
+  },
+  "81936ba1a4d40980fe9dc1328a881744f9395849": {
+    "url": "https://towardsdatascience.com/prepare-these-5-assets-before-your-ai-agents-take-on-more-work/",
+    "title": "Prepare These 5 Assets Before Your AI Agents Take On More Work",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-07-16",
+    "tags": [
+      "agentic-workflow",
+      "practice"
+    ]
+  },
+  "2a46e12075c4af31d40cf24db5f1eb9294078190": {
+    "url": "https://towardsdatascience.com/context-engineering-for-rag-question-parsing-from-a-raw-question-to-typed-fields-that-steer-retrieval-and-generation/",
+    "title": "Context Engineering for RAG Question Parsing: From a Raw Question to Typed Fields That Steer Retrieval and Generation",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-07-16",
+    "tags": [
+      "rag",
+      "prompting"
+    ]
+  },
+  "46d2afc3514ff695a1d922e17c903d868d37622e": {
+    "url": "https://towardsdatascience.com/how-to-get-the-most-out-of-claude-fable-5/",
+    "title": "How to Get the Most Out of Claude Fable 5",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-07-16",
+    "tags": [
+      "prompting"
+    ]
+  },
+  "1168de09f3f64f141e5a07d8f65b9ce9afc381df": {
+    "url": "https://towardsdatascience.com/why-your-betas-explode-the-hidden-geometry-of-multicollinearity/",
+    "title": "Why Your Betas Explode: The Hidden Geometry of Multicollinearity",
+    "category": "predictive-modeling",
+    "source_tier": 3,
+    "first_seen": "2026-07-16",
+    "tags": [
+      "tabular",
+      "feature-selection"
+    ]
+  },
+  "0933cf1ad172719e526c724624e17f9ec5e09e49": {
+    "url": "https://www.kdnuggets.com/working-with-pi-coding-agents",
+    "title": "Working with Pi Coding Agents",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-07-16",
+    "tags": [
+      "agentic-workflow",
+      "coding"
+    ]
+  },
+  "3b72ff0584575d981509b30362053796ec15374d": {
+    "url": "https://www.kdnuggets.com/10-youtube-channels-keeping-you-ahead-in-ai",
+    "title": "10 YouTube Channels Keeping You Ahead in AI",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "11ad2846977a2e41b078380a6f82faa9992a186d": {
+    "url": "https://machinelearningmastery.com/run-a-local-ai-model-with-ollama-in-15-minutes/",
+    "title": "Run a Local AI Model with Ollama in 15 Minutes",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "e7fe13823bcdb11e74fed989971b354f6f55e65d": {
+    "url": "https://www.analyticsvidhya.com/blog/2026/07/gpt-5-6-sol-vs-claude-fable-5/",
+    "title": "GPT-5.6 Sol vs Claude Fable 5: Benchmarks, Pricing & Hands-On",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "57caac067c41929b7500ee9d1fec9da015c25cd1": {
+    "url": "https://www.technologyreview.com/2026/07/16/1140600/the-download-openai-unveils-gpt-red-heat-pumps-rise-us/",
+    "title": "The Download: OpenAI unveils GPT-Red and heat pumps rise in the US",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "9d62699b319a50807472a5861e1d3e834d57c25c": {
+    "url": "https://spectrum.ieee.org/invisible-spinning-drone",
+    "title": "How to Make an Invisible Drone",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "d03c56bc4c242c16c90d9042e1b9463f3e71cd85": {
+    "url": "https://spectrum.ieee.org/fishery-satellite-surveillance",
+    "title": "Digital Surveillance Reshapes Fishery Enforcement in Indonesia",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "d4ca69cf5d377e302c3bab5bfab82ebe82b6c48f": {
+    "url": "https://techcrunch.com/2026/07/16/google-vids-now-lets-you-star-in-your-own-ai-videos/",
+    "title": "Google Vids now lets you star in your own AI videos",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "e3176d1ee3b1cf6baf941115d20d28fa9b91c64d": {
+    "url": "https://techcrunch.com/2026/07/16/roblox-launches-an-ai-powered-game-creation-feature-in-its-mobile-app/",
+    "title": "Roblox launches an AI-powered game-creation feature in its mobile app",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "4ccf42e2190c31a28e3cf098fc55b975f99fd46f": {
+    "url": "https://techcrunch.com/2026/07/16/googles-ai-mode-now-lets-you-link-and-interact-with-select-apps/",
+    "title": "Google’s AI Mode now lets you link and interact with select apps",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "5f22dfb9fcfeed7cc53a7f0fdc540bbefe73cea1": {
+    "url": "https://techcrunch.com/2026/07/16/yes-you-can-now-order-doordash-from-the-command-line/",
+    "title": "Yes, you can now order DoorDash from the command line",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "d322af2b7cf7e9e832ad546bb281cdc27c3694f4": {
+    "url": "https://techcrunch.com/2026/07/16/why-is-openai-selling-a-chatgpt-basketball/",
+    "title": "Why is OpenAI selling a ChatGPT basketball?",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "5e9c9fdf3aeaf6d47f0a36eb0cf1ab90ab5b88cb": {
+    "url": "https://techcrunch.com/2026/07/16/how-a-former-deepmind-researcher-raised-at-a-300m-pre-seed-valuation-before-launching-a-product/",
+    "title": "How a former DeepMind researcher raised at a $300M pre-seed valuation before launching a product",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "c7743c902ae3f2071fba29affef6c7189e00a384": {
+    "url": "https://techcrunch.com/2026/07/16/why-ami-labs-alexandre-lebrun-wont-call-his-ai-agi-or-superintelligence/",
+    "title": "Why AMI Labs’ Alexandre LeBrun won’t call his AI ‘AGI’ or ‘superintelligence’",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "652c69cdeba831cd3e54ca1408a0c1a50bcbe6a9": {
+    "url": "https://techcrunch.com/2026/07/16/moonshots-upcoming-kimi-3-is-expected-to-close-the-gap-with-anthropics-opus-4-8/",
+    "title": "Moonshot’s upcoming Kimi 3 is expected to close the gap with Anthropic’s Opus 4.8",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "c599c61e0255f9ca5ccd88caf4b82e0b705afc2d": {
+    "url": "https://techcrunch.com/2026/07/16/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/",
+    "title": "Apple Intelligence approved for launch in China with Alibaba and Baidu",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "cec1ebe5d23f0658e4aee97ca1aa7e60f69577fc": {
+    "url": "https://venturebeat.com/ai/the-ai-compute-gap-enterprises-are-buying-infrastructure-faster-than-they-can-measure-what-it-costs",
+    "title": "The AI compute gap: Enterprises are buying infrastructure faster than they can measure what it costs",
+    "category": "mlops",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "09e86f1db1bc975bb4d7c284b5d1f4ba949c4925": {
+    "url": "https://venturebeat.com/ai/the-agent-security-gap-54-of-enterprises-have-already-had-an-ai-agent-incident-and-most-still-let-agents-share-credentials",
+    "title": "The agent security gap: 54% of enterprises have already had an AI agent incident, and most still let agents share credentials",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "e9ea1363a186c8a2e72e5193f34eda240a969148": {
+    "url": "https://venturebeat.com/ai/the-ai-context-gap-enterprise-ai-organizations-have-a-trust-problem-not-a-retrieval-problem-and-most-are-still-building-the-fix",
+    "title": "The AI context gap: Enterprise AI organizations have a trust problem, not a retrieval problem — and most are still building the fix",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "9a3bfba7061ea5562dbd3a7a19293538710d2665": {
+    "url": "https://venturebeat.com/ai/the-agent-evaluation-gap-enterprise-ai-organizations-have-a-reality-alignment-problem-not-a-coverage-problem-and-most-are-shipping-to-production-anyway",
+    "title": "The agent evaluation gap: Enterprise AI organizations have a reality-alignment problem, not a coverage problem — and most are shipping to production anyway",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "f10d41c761dd043291972dca36196950703c2366": {
+    "url": "https://arstechnica.com/tech-policy/2026/07/t-mobile-bungled-forced-plan-migration-canceling-some-users-free-lines/",
+    "title": "T-Mobile bungled forced plan migration, canceling some users' free lines",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "252ccc31ca52ec0029c5c43f19c9cd2bab8927dd": {
+    "url": "https://arstechnica.com/gadgets/2026/07/its-official-eu-will-force-google-to-share-search-data-and-open-up-ai-on-android/",
+    "title": "It's official: EU will force Google to share search data and open up AI on Android",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "976e25fe768e3c131bf99cd7d4ea8338c8f72d61": {
+    "url": "https://arstechnica.com/tech-policy/2026/07/xai-cant-deny-grok-makes-csam-anymore-so-its-suing-users/",
+    "title": "xAI can’t deny Grok makes CSAM anymore. So it’s suing users.",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "4cd6d663b70d292733989807e1f2a30c00bcbfce": {
+    "url": "https://arstechnica.com/ai/2026/07/fear-of-humanoid-robots-spurs-human-workers-to-strike-at-hyundai-auto-factory/",
+    "title": "Fear of humanoid robots spurs human workers to strike at Hyundai auto factory",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "a2001b708492e206670bc33dab7d4ea256cd803b": {
+    "url": "https://arstechnica.com/culture/2026/07/trump-teleprompter-aide-made-100000-betting-on-what-trump-would-say-reports-say/",
+    "title": "Trump teleprompter aide made $100,000 betting on what Trump would say, reports say",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "d519d2ec8932d5096365028f6813560f1468eee0": {
+    "url": "https://arstechnica.com/cars/2026/07/2026-toyota-rav4-plug-in-review-good-but-skip-the-gr-sport/",
+    "title": "2026 Toyota RAV4 plug-in: Big battery means daily drives are all-electric",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "c2b88d87def0db74c948b4ff268b93d513a7d8df": {
+    "url": "https://arstechnica.com/security/2026/07/now-even-russias-most-elite-hackers-are-using-clickfix-to-infect-devices/",
+    "title": "Now, even Russia's most elite hackers are using Clickfix to infect devices",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "ba15284a70a8e23cae8eff983fec85021d15734e": {
+    "url": "https://arstechnica.com/ai/2026/07/linus-torvalds-to-critics-of-ai-coding-in-linux-fork-it-or-just-walk-away/",
+    "title": "Linus Torvalds to critics of AI coding in Linux: \"Fork it. Or just walk away.\"",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "5bba3723b30d18f4ee8dccb787a23e27aaab90c9": {
+    "url": "https://arstechnica.com/science/2026/07/weve-seen-helium-baked-off-a-rocky-exoplanets-atmosphere/",
+    "title": "We've seen helium baked off a rocky exoplanet's atmosphere",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "cdfee41bf0f3ec12beaa6539593ec45e08bf6e46": {
+    "url": "https://arstechnica.com/gadgets/2026/07/oneplus-ends-phone-releases-in-us-and-europe-further-reducing-smartphone-choice/",
+    "title": "OnePlus confirms shutdown in the US and Europe, ending months of speculation",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "b5f150164f7b460b7840a4b66c5a4f8459c343da": {
+    "url": "https://arstechnica.com/space/2026/07/could-china-and-russia-really-destroy-starlink-only-with-a-boomerang/",
+    "title": "Could China and Russia really destroy Starlink? Only with a boomerang.",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "e433f7530f10d9107e69dda19c08d456db12aaa9": {
+    "url": "https://arstechnica.com/information-technology/2026/07/energy-ipos-surge-as-investors-hunt-for-ways-to-play-ai-boom/",
+    "title": "Energy IPOs surge as investors hunt for ways to play AI boom",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "12f77bdf2ba1e70efc0e4374594887f1a866e743": {
+    "url": "https://arstechnica.com/tech-policy/2026/07/tesla-driver-who-blamed-crash-on-autopilot-pressed-accelerator-100-ntsb-finds/",
+    "title": "Tesla driver who blamed crash on autopilot pressed accelerator 100%, NTSB finds",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "57d3fdc0629494de8827ba2cfb333f27a1f13d8d": {
+    "url": "https://arstechnica.com/space/2026/07/move-over-gps-navigation-satellites-in-low-earth-orbit-are-making-a-comeback/",
+    "title": "Move over, GPS: Navigation satellites in low-Earth orbit are making a comeback",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "596493d60f795b3f19c025327079473fd132114f": {
+    "url": "https://www.wired.com/story/uncanny-valley-podcase-apple-sued-openai-new-york-data-center-moratorium-cyclosporiasis-outbreak/",
+    "title": "Why Apple Sued OpenAI, New York Takes on Data Centers, and What to Know about Cyclosporiasis",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "2292033b864c1feace59fbfa034a6158fc8ee395": {
+    "url": "https://www.wired.com/story/why-anthropic-is-pushing-states-to-regulate-ai-faster/",
+    "title": "Here’s Why Anthropic Is Pushing States to Regulate AI Faster",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "922fdc3b86c0827ed179774d295daf2888642fdd": {
+    "url": "https://arxiv.org/abs/2607.13921",
+    "title": "Generative Compilation: On-the-Fly Compiler Feedback as AI Generates Code",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "949e8a92fd92355b68ceccc5971645c718fa1926": {
+    "url": "https://arxiv.org/abs/2607.09786",
+    "title": "Length Penalties Make Chain-of-Thought Less Monitorable",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "2e81cbd33b424efe1fd950dac4d75d6bad121c7a": {
+    "url": "https://arxiv.org/abs/2607.06701",
+    "title": "SPEAR: A Simulator for Photorealistic Embodied AI Research",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "6f94d598c77f6a66f711414247ec9bfdab0583bb": {
+    "url": "https://arxiv.org/abs/2607.12477",
+    "title": "Self in Space: Benchmarking Self-Awareness and Spatial Cognition in UAV Embodied Intelligence",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "5ef4f381c2480ed9caf66427c3f3ed56b83156b0": {
+    "url": "https://arxiv.org/abs/2607.13431",
+    "title": "Discrete Diffusion Models: A Unified Framework from Tokenization to Generation",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-07-16",
+    "tags": []
+  },
+  "7214f32d2a60ae44a3f99d0101f8187843f3c997": {
+    "url": "https://arxiv.org/abs/2607.13250",
+    "title": "AffectFlow-DINO: Uncertainty-Aware Multi-Task Affect Estimation via Conditional Rectified Flow",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-16",
+    "tags": [
+      "imbalanced"
+    ]
   }
 }
