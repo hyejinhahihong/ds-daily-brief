@@ -7,9 +7,27 @@ SPEC §7.3 ("폭주 방지 필수 구현").
 from __future__ import annotations
 
 import os
+from datetime import datetime
 from pathlib import Path
+from zoneinfo import ZoneInfo
 
 ROOT = Path(__file__).resolve().parent.parent
+
+# --- 타임존: 모든 날짜 라벨은 KST 기준 (SPEC §7.2) ---
+# GitHub Actions 러너는 UTC다. naive date.today()/datetime.now()를 쓰면 KST 06:30 실행이
+# UTC 전날로 찍혀 파일이 하루 밀린다(2026-07-17 06:30 실행이 07-16 으로 저장된 버그).
+# → 날짜/파일명/마스트헤드/first_seen/발송본문/수집창은 전부 아래 헬퍼로 KST 계산.
+KST = ZoneInfo("Asia/Seoul")
+
+
+def now_kst() -> datetime:
+    """현재 시각(Asia/Seoul, tz-aware)."""
+    return datetime.now(KST)
+
+
+def today_kst_iso() -> str:
+    """오늘 날짜 YYYY-MM-DD (KST). 출력 경로·published 파일명·run_date 의 기준."""
+    return datetime.now(KST).date().isoformat()
 
 
 def load_dotenv(path: Path | None = None) -> None:

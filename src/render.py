@@ -169,6 +169,41 @@ strong{font-weight:600;color:var(--text)}
 }
 """
 
+# archive/category(리스트 페이지) 전용 CSS. _CSS 뒤에 이어붙여 팔레트·타이포 공유.
+_CSS_LIST = """
+.crumb{font-size:13px;color:var(--text-2);margin:0 0 14px}
+.crumb a{color:var(--text-2)} .crumb a:hover{color:var(--accent)}
+.otherk{font-size:13px;color:var(--text-2);margin:0 0 20px;line-height:1.9}
+.otherk a{display:inline-block;margin-right:4px;padding:2px 9px;border:1px solid var(--border);
+  border-radius:13px;color:var(--text-2)}
+.otherk a:hover{color:var(--accent);text-decoration:none;border-color:var(--accent)}
+.catdesc{font-size:14px;color:var(--text-2);margin:0 0 18px}
+/* 태그 필터 */
+.tfilter{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 20px}
+.tfilter button{font-size:12px;font-family:inherit;cursor:pointer;padding:3px 11px;border-radius:14px;
+  border:1px solid var(--border);background:var(--bg-subtle);color:var(--text-2)}
+.tfilter button.on{background:var(--accent-weak);border-color:var(--accent);color:var(--accent)}
+/* 리스트 행 */
+.clist{list-style:none;margin:0;padding:0}
+.crow{padding:13px 0;border-top:1px solid var(--border)}
+.crow:first-child{border-top:none}
+.crow .cdate{font-size:12px;color:var(--text-3);font-variant-numeric:tabular-nums;margin-right:7px}
+.crow .cbadge{font-size:12px;color:var(--text-2);margin-right:6px}
+.crow .ctitle{font-size:16px;font-weight:600;color:var(--text);line-height:1.4}
+.crow .clede{display:block;font-size:14px;color:var(--text-2);margin-top:4px;line-height:1.5}
+.crow .clinks{margin-top:5px;font-size:13px}
+.crow .clinks a{margin-right:12px}
+.crow .ctag{font-size:11px;color:var(--text-3);margin-left:6px}
+.empty{color:var(--text-3);font-size:14px;padding:10px 0}
+/* 아카이브 계층 */
+.arcyear{font-size:22px;font-weight:600;margin:26px 0 4px}
+.arcmonth{font-size:15px;font-weight:600;color:var(--text-2);margin:16px 0 6px}
+.arclist{list-style:none;margin:0;padding:0}
+.arcrow{padding:9px 0;border-top:1px solid var(--border);display:flex;gap:10px;align-items:baseline}
+.arcrow:first-child{border-top:none}
+.arcrow .ad{font-weight:500} .arcrow .ac{font-size:13px;color:var(--text-3);margin-left:auto}
+"""
+
 _JS = """
 (function(){
 var r=document.documentElement,k="dsb-theme",s=localStorage.getItem(k);
@@ -285,7 +320,14 @@ def _item_html(it: Item, num: int) -> str:
     return "".join(p)
 
 
-def render_daily(items: list[Item], categories: list[dict], run_date: str) -> str:
+def render_daily(items: list[Item], categories: list[dict], run_date: str,
+                 prefix: str = "../../../") -> str:
+    """일별 페이지. prefix = 사이트 루트까지의 상대경로.
+
+    일별 파일은 news/YYYY/MM/DD.html(깊이 3)이라 기본 '../../../'.
+    index.html(루트, 깊이 0)로 쓸 땐 prefix='' 로 호출. (GitHub 프로젝트 Pages 는
+    /repo/ 하위라 절대경로 '/category/'가 깨진다 → 상대경로 필수.)
+    """
     by_cat: dict[str, list[Item]] = {c["id"]: [] for c in categories}
     for it in items:
         if it.category in by_cat:
@@ -336,7 +378,7 @@ def render_daily(items: list[Item], categories: list[dict], run_date: str) -> st
             head = (
                 f'<div class="sec-h"><span class="nm">{_esc(c["name"])}</span>'
                 f'<span class="cnt">{len(lst)}건</span>'
-                f'<span class="all"><span>주제별 전체 보기 ↗</span></span>'
+                f'<span class="all"><a href="{prefix}category/{cid}.html">주제별 전체 보기 ↗</a></span>'
                 f'<button class="exp" type="button" data-sec="{cid}">전체 펼치기</button></div>'
             )
             body = "".join(_item_html(it, i + 1) for i, it in enumerate(lst))
@@ -353,9 +395,9 @@ def render_daily(items: list[Item], categories: list[dict], run_date: str) -> st
                 f'<div class="sec-empty">금일 신규 없음</div></section>'
             )
 
-    # "다루는 주제" 푸터 — /category/*.html 링크(아직 미생성, 링크만) + 섹션 헤더와 동일 설명 재사용
+    # "다루는 주제" 푸터 — category/*.html 링크(상대경로) + 섹션 헤더와 동일 설명 재사용
     topic_lis = "".join(
-        f'<li><a class="tnm" href="/category/{c["id"]}.html">{_esc(c["name"])}</a>'
+        f'<li><a class="tnm" href="{prefix}category/{c["id"]}.html">{_esc(c["name"])}</a>'
         f'{_esc(_CAT_DESC.get(c["id"], ""))}</li>'
         for c in categories
     )
@@ -390,3 +432,130 @@ def render_daily(items: list[Item], categories: list[dict], run_date: str) -> st
 </body>
 </html>
 """
+
+
+# 리스트 페이지(archive/category)용 최소 테마 토글 JS.
+_JS_THEME = """
+(function(){var r=document.documentElement,k="dsb-theme",s=localStorage.getItem(k);
+if(s)r.dataset.theme=s;var b=document.getElementById('tbtn');if(b)b.addEventListener('click',function(){
+var cur=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+var n=cur==='dark'?'light':'dark';r.dataset.theme=n;localStorage.setItem(k,n);});})();
+"""
+
+# 카테고리 태그 필터 JS.
+_JS_TAGFILTER = """
+(function(){var btns=document.querySelectorAll('.tfilter button');if(!btns.length)return;
+var rows=document.querySelectorAll('.crow');
+btns.forEach(function(b){b.addEventListener('click',function(){
+btns.forEach(function(x){x.classList.remove('on');});b.classList.add('on');
+var t=b.dataset.tag;rows.forEach(function(r){
+var tags=(r.dataset.tags||'').split(' ');
+r.style.display=(!t||tags.indexOf(t)>=0)?'':'none';});});});})();
+"""
+
+
+def _page_head(title: str, extra_css: str = "") -> str:
+    return (f'<!doctype html>\n<html lang="ko">\n<head>\n<meta charset="utf-8">\n'
+            f'<meta name="viewport" content="width=device-width, initial-scale=1">\n'
+            f'<title>{_esc(title)}</title>\n'
+            f'<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard'
+            f'@v1.3.9/dist/web/static/pretendard.min.css">\n'
+            f'<style>{_CSS}{extra_css}</style>\n</head>\n')
+
+
+def _mast(eyebrow: str, title: str) -> str:
+    return (f'<header class="mast"><div class="mast-l">'
+            f'<div class="eyebrow">{eyebrow}</div>'
+            f'<h1 class="mast-title">{_esc(title)}</h1></div>'
+            f'<button id="tbtn" class="themebtn" type="button">🌓 테마</button></header>')
+
+
+def render_archive(days: list[dict], prefix: str = "") -> str:
+    """아카이브 — 연 > 월 > 일 계층, 최신순. 소스=published/*.json (재집필 없음).
+
+    days: [{"run_date": "2026-07-17", "count": 14}, ...] (정렬 무관, 내부 정렬).
+    """
+    days = sorted(days, key=lambda d: d["run_date"], reverse=True)
+    by_year: dict[str, dict[str, list[dict]]] = {}
+    for d in days:
+        y, m = d["run_date"][:4], d["run_date"][5:7]
+        by_year.setdefault(y, {}).setdefault(m, []).append(d)
+
+    blocks = []
+    for y in sorted(by_year, reverse=True):
+        blocks.append(f'<div class="arcyear">{y}</div>')
+        for m in sorted(by_year[y], reverse=True):
+            blocks.append(f'<div class="arcmonth">{int(m)}월</div><ul class="arclist">')
+            for d in by_year[y][m]:
+                rd = d["run_date"]
+                wd = _WEEKDAY_KO[datetime.date.fromisoformat(rd).weekday()]
+                href = f'{prefix}news/{rd[:4]}/{rd[5:7]}/{rd[8:10]}.html'
+                blocks.append(
+                    f'<li class="arcrow"><a class="ad" href="{href}">'
+                    f'{rd[5:7]}/{rd[8:10]} ({wd})</a>'
+                    f'<span class="ac">{d["count"]}건</span></li>'
+                )
+            blocks.append('</ul>')
+    body = "".join(blocks) if days else '<div class="empty">아직 발행된 브리핑이 없습니다.</div>'
+
+    return (_page_head("아카이브 · AI & ML News Letter", _CSS_LIST) +
+            f'<body>\n<div class="page">\n'
+            f'<div class="crumb"><a href="{prefix}index.html">홈</a> · 아카이브</div>\n'
+            f'{_mast("ARCHIVE", "아카이브")}\n'
+            f'<main class="main">{body}</main>\n'
+            f'</div>\n<script>{_JS_THEME}</script>\n</body>\n</html>\n')
+
+
+def render_category(cid: str, name: str, entries: list[tuple[str, Item]],
+                    subtags: list[str], categories: list[dict], prefix: str = "../") -> str:
+    """카테고리 누적 — 전 기간 리스트(최신순), 전문 미표시. 소스=published/*.json.
+
+    entries: [(run_date, Item), ...]. 리스트 형식(레퍼런스 전문방식 거부, DECISIONS 참조).
+    subtags: 이 카테고리의 태그 칩(없으면 필터 UI 생략).
+    """
+    entries = sorted(entries, key=lambda e: (e[0], e[1].final_score or 0), reverse=True)
+    desc = _CAT_DESC.get(cid, "")
+
+    # 다른 주제 링크 7개
+    others = "".join(
+        f'<a href="{prefix}category/{c["id"]}.html">{_esc(c["name"])}</a>'
+        for c in categories if c["id"] != cid
+    )
+    other_html = f'<div class="otherk"><b>다른 주제:</b> {others}</div>'
+
+    # 태그 필터 (subtags 있을 때만)
+    filt = ""
+    if subtags:
+        chips = '<button class="on" data-tag="" type="button">전체</button>'
+        chips += "".join(f'<button data-tag="{t}" type="button">#{t}</button>' for t in subtags)
+        filt = f'<div class="tfilter">{chips}</div>'
+
+    rows = []
+    for rd, it in entries:
+        emoji, label = _BADGE.get(it.content_type, ("•", it.content_type))
+        primary = it.title_ko or it.title
+        lede = _first_sentence(it.summary or "")[0]
+        daily = f'{prefix}news/{rd[:4]}/{rd[5:7]}/{rd[8:10]}.html#{it.url_hash[:12]}'
+        tagattr = " ".join(it.tags)
+        tagchips = "".join(f'<span class="ctag">#{_esc(t)}</span>' for t in it.tags)
+        rows.append(
+            f'<li class="crow" data-tags="{_esc(tagattr)}">'
+            f'<span class="cdate">{rd[5:7]}/{rd[8:10]}</span>'
+            f'<span class="cbadge">{emoji} {label}</span>'
+            f'<span class="ctitle">{_esc(primary)}</span>{tagchips}'
+            f'<span class="clede">{_esc(lede)}</span>'
+            f'<span class="clinks">'
+            f'<a href="{_esc(it.url)}" target="_blank" rel="noopener">원문 →</a>'
+            f'<a href="{daily}">그날 브리핑 ↗</a></span></li>'
+        )
+    body = (f'<ul class="clist">{"".join(rows)}</ul>' if rows
+            else '<div class="empty">아직 이 주제의 누적 항목이 없습니다.</div>')
+
+    return (_page_head(f"{name} · AI & ML News Letter", _CSS_LIST) +
+            f'<body>\n<div class="page">\n'
+            f'<div class="crumb"><a href="{prefix}index.html">홈</a> · {_esc(name)}</div>\n'
+            f'{_mast("CATEGORY", name)}\n'
+            f'<div class="catdesc">{_esc(desc)}</div>\n'
+            f'{other_html}\n{filt}\n'
+            f'<main class="main">{body}</main>\n'
+            f'</div>\n<script>{_JS_THEME}{_JS_TAGFILTER}</script>\n</body>\n</html>\n')

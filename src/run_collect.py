@@ -14,7 +14,7 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from datetime import date, datetime, timezone
+from datetime import datetime, timezone
 from pathlib import Path
 
 # Windows 콘솔(cp949)에서도 한국어/em-dash 출력이 깨지지 않도록.
@@ -30,6 +30,7 @@ from .collectors.anthropic_news import collect_anthropic
 from .collectors.arxiv import ArxivResult, collect_arxiv
 from .collectors.base import FeedStatus, collect_rss_feed, set_window_since, window_cutoff
 from .collectors.github import collect_github
+from .config import now_kst, today_kst_iso
 from .models import Item
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -103,7 +104,7 @@ def write_json(items: list[Item], run_date: str) -> Path:
 
 def _window_label(days: float) -> str:
     cutoff = window_cutoff()
-    return f"{cutoff.date()} ~ {date.today()}  ({days:.0f}일)"
+    return f"{cutoff.date()} ~ {now_kst().date()}  ({days:.0f}일)"
 
 
 # --------------------------------------------------------------------------
@@ -259,7 +260,7 @@ def main() -> None:
     else:
         window_days = 3.0
 
-    run_date = date.today().isoformat()
+    run_date = today_kst_iso()
     print(f"[collect] 시작 — {run_date}  창={_window_label(window_days)}")
 
     raw, diags, res = collect_all(cfg)

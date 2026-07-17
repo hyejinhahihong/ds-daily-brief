@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>예측 모델링 · AI &amp; ML News Letter</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --accent:#5DB8A6; --accent-hover:#479B8B; --accent-weak:#E8F4F1;
+  --focus-ring:rgba(93,184,166,.5);
+  --bg:#FAF9F5; --bg-subtle:#F0EEE6; --border:#E7E3D9;
+  --text:#1F1E1D; --text-2:#6B6862; --text-3:#A39E94;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}}
+:root[data-theme="dark"]{
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover);text-decoration:underline}
+strong{font-weight:600;color:var(--text)}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px;border-radius:3px}
+
+/* 모바일 우선 단일 컬럼 (<1200px). 덩어리 중앙 정렬은 margin:0 auto. */
+.page{max-width:760px;margin:0 auto;padding:20px 18px 40px}
+
+/* --- 마스트헤드 (뉴스레터 제호) --- */
+.mast{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+  padding-bottom:14px;border-bottom:2px solid var(--text);margin-bottom:24px}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--accent);
+  text-transform:uppercase;margin:0 0 6px}
+.mast-title{font-size:26px;font-weight:600;margin:0;letter-spacing:-.01em;line-height:1.15}
+.mast-date{font-size:14px;color:var(--text-2);margin-top:8px}
+.themebtn{flex:none;background:var(--bg-subtle);border:1px solid var(--border);color:var(--text-2);
+  border-radius:20px;padding:5px 12px;font-size:13px;cursor:pointer;font-family:inherit}
+@media (min-width:640px){.mast-title{font-size:31px}}
+
+/* --- TODAY'S TOP 3 --- */
+.top3{background:var(--accent-weak);border-radius:12px;padding:14px 18px;margin-bottom:24px}
+.top3 h2{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--accent);margin:0 0 8px}
+.top3 ol{margin:0;padding:0;list-style:none}
+.top3 li{padding:4px 0 4px 22px;position:relative;font-size:15px;color:var(--text)}
+.top3 li::before{content:"\2605";position:absolute;left:0;color:var(--accent);font-size:12px;top:7px}
+.top3 .t3cat{color:var(--text-2);font-size:12px;margin-right:5px}
+.top3 a{color:var(--text)} .top3 a:hover{color:var(--accent-hover)}
+
+/* --- 목차 (TOC) --- */
+.toc{margin-bottom:26px}
+.toc h2{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--text-2);margin:0 0 8px}
+.toc ul{margin:0;padding:0;list-style:none}
+.toc li{padding:6px 0;border-top:1px solid var(--border)}
+.toc li:first-child{border-top:none}
+.toc .r{display:flex;gap:6px;align-items:baseline;font-size:14px}
+.toc .nm{font-weight:500;color:var(--text)} .toc a:hover .nm{color:var(--accent)}
+.toc .cnt{color:var(--text-3);font-size:12px}
+.toc .lead{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  font-size:12px;color:var(--text-2);margin-top:2px;line-height:1.4}
+.toc li.active .nm{color:var(--accent)}
+.toc li.active{border-left:2px solid var(--accent);padding-left:8px;margin-left:-10px}
+
+/* --- 섹션 --- */
+.sec{margin:0 0 34px;scroll-margin-top:14px}
+.sec-h{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:0 0 2px;padding-top:6px}
+.sec-h .nm{font-size:20px;font-weight:600}
+.sec-h .cnt{font-size:13px;color:var(--text-3)}
+.sec-h .all{font-size:12px;color:var(--text-3);margin-left:auto}
+.sec-h .all span{color:var(--text-2)}
+.sec-h .exp{font-size:12px;background:none;border:1px solid var(--border);color:var(--text-2);
+  border-radius:14px;padding:2px 10px;cursor:pointer;font-family:inherit}
+.sec-desc{font-size:13px;color:var(--text-2);margin:0 0 8px}
+.sec-empty{font-size:14px;color:var(--text-3);padding:4px 0 6px}
+.backtop{display:inline-block;font-size:12px;color:var(--text-3);margin-top:6px}
+
+/* --- 아이템 (아코디언) — 거터(번호) + 단일 콘텐츠 컬럼 (DESIGN §3 v4). 좌측 정렬선 1개. --- */
+.item{border-bottom:1px solid var(--border);--gutter:28px}
+.item>summary{list-style:none;cursor:pointer;padding:16px 26px 16px 0;position:relative;
+  display:grid;grid-template-columns:var(--gutter) 1fr;align-items:start}
+.item>summary::-webkit-details-marker{display:none}
+.item>summary::after{content:"\25B8";position:absolute;right:2px;top:16px;color:var(--text-3);
+  font-size:13px;transition:transform .15s;display:inline-block}
+.item[open]>summary::after{transform:rotate(90deg)}
+.num{font-size:13px;color:var(--text-3);font-variant-numeric:tabular-nums;font-weight:500;padding-top:3px}
+.t3star{color:var(--accent);font-size:11px;margin-right:2px}
+.body-col{min-width:0}
+.it-title{display:block;font-size:18px;font-weight:600;color:var(--text);line-height:1.4}
+.item>summary:hover .it-title{color:var(--accent)}
+.it-sub{display:block;font-size:13px;color:var(--text-2);margin-top:3px;line-height:1.35}
+.it-meta{display:block;font-size:13px;color:var(--text-2);margin-top:6px}
+.it-lede{display:block;font-size:15px;color:var(--text-2);margin-top:7px;line-height:1.5}
+.item[open] .it-lede{color:var(--text)}
+/* 접힘 본문도 콘텐츠 컬럼에 정렬 (거터만큼 들여씀) */
+.it-body{padding:0 0 20px var(--gutter)}
+.it-body p{margin:0 0 10px}
+@media (min-width:900px){.item{--gutter:40px}}
+.slot-l{font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--text-2);margin:14px 0 2px}
+.tags{margin-top:10px}
+.tag{display:inline-block;font-size:12px;color:var(--text-2);background:var(--bg-subtle);
+  border:1px solid var(--border);border-radius:12px;padding:1px 9px;margin:0 5px 5px 0}
+.prev{font-size:13px;color:var(--text-3);margin-top:8px}
+.src-cta{display:inline-block;margin-top:12px;font-size:14px;font-weight:500;color:var(--accent)}
+.weak{color:var(--accent);font-size:12px;border:1px solid var(--accent);border-radius:5px;
+  padding:0 6px;margin-left:6px}
+
+/* --- "다루는 주제" 푸터 --- */
+.topics{margin-top:36px;padding-top:22px;border-top:2px solid var(--text)}
+.topics h2{font-size:15px;font-weight:600;margin:0 0 12px}
+.topics ul{margin:0;padding:0;list-style:none}
+.topics li{padding:7px 0;border-top:1px solid var(--border);font-size:13px;color:var(--text-2)}
+.topics li:first-child{border-top:none}
+.topics .tnm{font-weight:600;color:var(--accent);margin-right:6px}
+
+/* --- 데스크톱 (≥1200px): 좌측 sticky TOC(260) + 본문(720), 덩어리 중앙 정렬 --- */
+@media (min-width:1200px){
+  /* max-width = 260+44+720 그리드(1024) + 좌우 padding(18*2). box-sizing:border-box
+     라 padding 을 포함해야 본문 720 이 찌그러지지 않는다. */
+  .page{max-width:1060px;display:grid;grid-template-columns:260px minmax(0,720px);
+    column-gap:44px;justify-content:center;align-items:start;padding-top:28px}
+  .mast{grid-column:1/3}
+  .toc{grid-column:1;grid-row:2/999;position:sticky;top:24px;margin:0;align-self:start}
+  .top3,.main{grid-column:2}
+  .topics{grid-column:1/3}
+}
+
+.crumb{font-size:13px;color:var(--text-2);margin:0 0 14px}
+.crumb a{color:var(--text-2)} .crumb a:hover{color:var(--accent)}
+.otherk{font-size:13px;color:var(--text-2);margin:0 0 20px;line-height:1.9}
+.otherk a{display:inline-block;margin-right:4px;padding:2px 9px;border:1px solid var(--border);
+  border-radius:13px;color:var(--text-2)}
+.otherk a:hover{color:var(--accent);text-decoration:none;border-color:var(--accent)}
+.catdesc{font-size:14px;color:var(--text-2);margin:0 0 18px}
+/* 태그 필터 */
+.tfilter{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 20px}
+.tfilter button{font-size:12px;font-family:inherit;cursor:pointer;padding:3px 11px;border-radius:14px;
+  border:1px solid var(--border);background:var(--bg-subtle);color:var(--text-2)}
+.tfilter button.on{background:var(--accent-weak);border-color:var(--accent);color:var(--accent)}
+/* 리스트 행 */
+.clist{list-style:none;margin:0;padding:0}
+.crow{padding:13px 0;border-top:1px solid var(--border)}
+.crow:first-child{border-top:none}
+.crow .cdate{font-size:12px;color:var(--text-3);font-variant-numeric:tabular-nums;margin-right:7px}
+.crow .cbadge{font-size:12px;color:var(--text-2);margin-right:6px}
+.crow .ctitle{font-size:16px;font-weight:600;color:var(--text);line-height:1.4}
+.crow .clede{display:block;font-size:14px;color:var(--text-2);margin-top:4px;line-height:1.5}
+.crow .clinks{margin-top:5px;font-size:13px}
+.crow .clinks a{margin-right:12px}
+.crow .ctag{font-size:11px;color:var(--text-3);margin-left:6px}
+.empty{color:var(--text-3);font-size:14px;padding:10px 0}
+/* 아카이브 계층 */
+.arcyear{font-size:22px;font-weight:600;margin:26px 0 4px}
+.arcmonth{font-size:15px;font-weight:600;color:var(--text-2);margin:16px 0 6px}
+.arclist{list-style:none;margin:0;padding:0}
+.arcrow{padding:9px 0;border-top:1px solid var(--border);display:flex;gap:10px;align-items:baseline}
+.arcrow:first-child{border-top:none}
+.arcrow .ad{font-weight:500} .arcrow .ac{font-size:13px;color:var(--text-3);margin-left:auto}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="crumb"><a href="../index.html">홈</a> · 예측 모델링</div>
+<header class="mast"><div class="mast-l"><div class="eyebrow">CATEGORY</div><h1 class="mast-title">예측 모델링</h1></div><button id="tbtn" class="themebtn" type="button">🌓 테마</button></header>
+<div class="catdesc">예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</div>
+<div class="otherk"><b>다른 주제:</b> <a href="../category/ai-agent.html">AI Agent</a><a href="../category/llm-foundation-model.html">LLM / Foundation Model</a><a href="../category/deep-learning.html">Deep Learning</a><a href="../category/causal-inference.html">인과추론</a><a href="../category/mlops.html">MLOps / ML Engineering</a><a href="../category/practice.html">실무 사례 · 노하우</a><a href="../category/industry-application.html">산업 적용 사례</a></div>
+<div class="tfilter"><button class="on" data-tag="" type="button">전체</button><button data-tag="tabular" type="button">#tabular</button><button data-tag="XAI" type="button">#XAI</button><button data-tag="anomaly" type="button">#anomaly</button><button data-tag="timeseries" type="button">#timeseries</button><button data-tag="imbalanced" type="button">#imbalanced</button><button data-tag="clustering" type="button">#clustering</button><button data-tag="feature-selection" type="button">#feature-selection</button></div>
+<main class="main"><ul class="clist"><li class="crow" data-tags=""><span class="cdate">07/17</span><span class="cbadge">✍️ 블로그</span><span class="ctitle">Apple 연구, 함수의 위치불변 속성 — 테스팅에서는 분포와 동치지만 검증에서는 관계 깨짐</span><span class="clede">함수의 위치불변(대칭) 속성은 각 값이 나타나는 위치와 무관하게 값들의 빈도만으로 정의되는 속성이다.</span><span class="clinks"><a href="https://machinelearning.apple.com/research/location-invariant-functions" target="_blank" rel="noopener">원문 →</a><a href="../news/2026/07/17.html#04a956338a62">그날 브리핑 ↗</a></span></li><li class="crow" data-tags=""><span class="cdate">07/17</span><span class="cbadge">✍️ 블로그</span><span class="ctitle">Apple, 분포 속성 검증용 대화형 증명 시스템 제안 — bounded-depth 회로로 결정 가능한 속성 다뤄</span><span class="clede">신뢰할 수 없는 분석가 Bob이 미지의 분포에 대한 분석 결과를 주장할 때, 소수의 샘플만 가진 Alice가 이를 직접 분석하는 것보다 적은 자원으로 검증할 수 있는지를 다룬다.</span><span class="clinks"><a href="https://machinelearning.apple.com/research/interactive-proofs-distribution-properties" target="_blank" rel="noopener">원문 →</a><a href="../news/2026/07/17.html#a3fb695dd3ee">그날 브리핑 ↗</a></span></li><li class="crow" data-tags="imbalanced"><span class="cdate">07/17</span><span class="cbadge">📄 논문</span><span class="ctitle">AffectFlow-DINO, ABAW 11회 챌린지서 얼굴 감정 멀티태스크 P_MTL 1.177 달성 — 베이스라인 0.45 대비 대폭 향상</span><span class="ctag">#imbalanced</span><span class="clede">AffectFlow-DINO는 얼굴 표정의 본질적 모호성을 모델링하기 위해 결정론적 구조에 조건부 rectified-flow 헤드를 추가한 멀티태스크 학습 시스템이다.</span><span class="clinks"><a href="https://arxiv.org/abs/2607.13250" target="_blank" rel="noopener">원문 →</a><a href="../news/2026/07/17.html#7214f32d2a60">그날 브리핑 ↗</a></span></li><li class="crow" data-tags="reasoning evaluation"><span class="cdate">07/16</span><span class="cbadge">✍️ 블로그</span><span class="ctitle">NVIDIA Nemotron 추론 챌린지, 5,000명 넘는 Kaggler가 참가해 추론 정확도 개선 기법 검증</span><span class="ctag">#reasoning</span><span class="ctag">#evaluation</span><span class="clede">NVIDIA는 Nemotron Model Reasoning Challenge를 통해 동일한 오픈 모델, 벤치마크, 인프라, 평가 조건 하에서 추론 정확도를 높이는 기법을 탐구하는 대회를 진행했다.</span><span class="clinks"><a href="https://developer.nvidia.com/blog/lessons-from-the-leaderboard-what-5000-kagglers-taught-us-about-improving-ai-reasoning/" target="_blank" rel="noopener">원문 →</a><a href="../news/2026/07/16.html#b9d297a11510">그날 브리핑 ↗</a></span></li><li class="crow" data-tags="tabular ads"><span class="cdate">07/16</span><span class="cbadge">✍️ 블로그</span><span class="ctitle">Meta, 광고 딥퍼널 최적화용 &#x27;Hierarchical Interest Representation&#x27; 소개 — 수십억 상호작용으로 학습한 계층적 관심 임베딩</span><span class="ctag">#tabular</span><span class="ctag">#ads</span><span class="clede">Meta는 사용자, 광고주, 상품 등 광고 생태계 전체를 아우르는 상위 표현 레이어인 Hierarchical Interest Representation을 연구하고 있다.</span><span class="clinks"><a href="https://engineering.fb.com/2026/07/15/ai-research/exploring-hierarchical-interest-representation-for-meta-ads-deep-funnel-optimization/" target="_blank" rel="noopener">원문 →</a><a href="../news/2026/07/16.html#08ffed92e1d6">그날 브리핑 ↗</a></span></li><li class="crow" data-tags="anomaly"><span class="cdate">07/16</span><span class="cbadge">✍️ 블로그</span><span class="ctitle">NVIDIA, 가이드 생성모델로 극단적 사건 확률 추정 — 브루트포스 몬테카를로 대체 시도</span><span class="ctag">#anomaly</span><span class="clede">과학·공학·금융 분야의 주요 리스크는 저확률·고영향 사건에서 비롯되는 경우가 많다.</span><span class="clinks"><a href="https://developer.nvidia.com/blog/extreme-event-likelihoods-with-guided-generative-models/" target="_blank" rel="noopener">원문 →</a><a href="../news/2026/07/16.html#25874e240fdb">그날 브리핑 ↗</a></span></li></ul></main>
+</div>
+<script>
+(function(){var r=document.documentElement,k="dsb-theme",s=localStorage.getItem(k);
+if(s)r.dataset.theme=s;var b=document.getElementById('tbtn');if(b)b.addEventListener('click',function(){
+var cur=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+var n=cur==='dark'?'light':'dark';r.dataset.theme=n;localStorage.setItem(k,n);});})();
+
+(function(){var btns=document.querySelectorAll('.tfilter button');if(!btns.length)return;
+var rows=document.querySelectorAll('.crow');
+btns.forEach(function(b){b.addEventListener('click',function(){
+btns.forEach(function(x){x.classList.remove('on');});b.classList.add('on');
+var t=b.dataset.tag;rows.forEach(function(r){
+var tags=(r.dataset.tags||'').split(' ');
+r.style.display=(!t||tags.indexOf(t)>=0)?'':'none';});});});})();
+</script>
+</body>
+</html>

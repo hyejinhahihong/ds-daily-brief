@@ -17,7 +17,6 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from datetime import date
 from pathlib import Path
 
 for _stream in (sys.stdout, sys.stderr):
@@ -28,7 +27,7 @@ for _stream in (sys.stdout, sys.stderr):
 
 import yaml
 
-from .config import ROOT, load_dotenv
+from .config import ROOT, load_dotenv, today_kst_iso
 from .dedup import filter_unseen, load_seen, prune, save_seen, update_seen
 from .models import Item
 from .rank import rank_items, stub_rank
@@ -151,7 +150,7 @@ def main() -> None:
     cfg = yaml.safe_load(CATEGORIES.read_text(encoding="utf-8"))
     categories = cfg["categories"]
     total_max = cfg.get("total_max", 16)
-    run_date = date.today().isoformat()
+    run_date = today_kst_iso()
 
     # collect (or load)
     if args.from_json:

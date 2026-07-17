@@ -17,6 +17,7 @@ from urllib.parse import parse_qsl, urlencode, urlparse, urlunparse
 import feedparser
 import httpx
 
+from ..config import now_kst
 from ..models import TIER_MULTIPLIER, Item
 
 # Honest feed-reader UA. Measured better than a spoofed browser UA: the
@@ -75,7 +76,7 @@ def domain(url: str) -> str:
 
 
 def now_iso() -> str:
-    return datetime.now(timezone.utc).isoformat()
+    return now_kst().isoformat()  # collected_at — KST (SPEC §7.2)
 
 
 # --------------------------------------------------------------------------
@@ -102,9 +103,11 @@ def set_window_since(dt: Optional[datetime]) -> None:
 
 
 def window_cutoff(days: int = WINDOW_DAYS) -> datetime:
+    # 롤링 창 = "지금 - N일". 순간(instant)이라 UTC/KST 표현이 같은 시점이지만,
+    # KST-aware 로 통일(피드 published_at 은 UTC-aware 파싱 → aware 비교 정상, SPEC §7.2).
     if _WINDOW_SINCE is not None:
         return _WINDOW_SINCE
-    return datetime.now(timezone.utc) - timedelta(days=days)
+    return now_kst() - timedelta(days=days)
 
 
 def within_window(dt: Optional[datetime], days: int = WINDOW_DAYS) -> bool:

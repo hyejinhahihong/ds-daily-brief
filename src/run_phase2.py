@@ -12,7 +12,6 @@ from __future__ import annotations
 import argparse
 import json
 import sys
-from datetime import date
 from pathlib import Path
 
 for _stream in (sys.stdout, sys.stderr):
@@ -23,7 +22,7 @@ for _stream in (sys.stdout, sys.stderr):
 
 import yaml
 
-from .config import GROUNDING_MIN_CHARS, ROOT, load_dotenv
+from .config import GROUNDING_MIN_CHARS, ROOT, load_dotenv, today_kst_iso
 from .dedup import filter_unseen, load_seen
 from .models import Item
 from .rank import rank_items
@@ -147,7 +146,7 @@ def main() -> None:
     cfg = yaml.safe_load(CATEGORIES.read_text(encoding="utf-8"))
     categories = cfg["categories"]
     total_max = cfg.get("total_max", 16)
-    run_date = date.today().isoformat()
+    run_date = today_kst_iso()
 
     # 렌더 전용: 저장된 집필 결과로 HTML만 다시 만든다 (레이아웃 반복용, 무비용).
     if args.render_only:

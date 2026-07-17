@@ -364,6 +364,37 @@ news               74   2.86  2.50
 
 ---
 
+## UTC/KST 날짜 버그 (2026-07-17 실측·수정)
+
+- **증상**: 2026-07-17(금) 06:30 KST 자동 실행이 `/news/2026/07/16.html`에 덮어씀. 라벨이 하루 밀림.
+- **원인**: **GitHub Actions 러너 타임존은 UTC.** cron `30 21 * * 0-4` = UTC 목 21:30 = KST 금 06:30인데,
+  코드가 naive `date.today()`를 써서 UTC 기준 07-16 을 반환 → 매일 "어제 날짜"로 저장.
+- **원칙 (추가): "Actions 러너는 UTC다. 모든 날짜는 KST로 계산한다."** `src/config.py`에 `KST=ZoneInfo("Asia/Seoul")`,
+  `now_kst()`/`today_kst_iso()` 헬퍼. 날짜라벨을 만드는 naive `date.today()`를 전부 교체(run_daily·dedup·
+  run_phase1/2·run_collect), 절대시각(generated_at·collected_at·수집창)도 KST-aware 로 통일. **외부 피드/기사
+  published_at 파싱만 원 소스 tz(UTC 가정) 유지** — 그건 남의 데이터라 우리 tz로 바꾸면 안 된다.
+- **이중 안전장치**: 워크플로 잡에 `env: TZ: Asia/Seoul`. 커밋 메시지 날짜도 KST(`date` 직접).
+- **함정**: Windows/일부 환경은 시스템 tz DB 가 없어 `ZoneInfo("Asia/Seoul")`가 `ZoneInfoNotFoundError`.
+  → `tzdata` 의존성 추가(pyproject). ubuntu 러너는 시스템 tz 있어도, 이식성 위해 명시.
+- **기존 파일 정리**: git 커밋 시각(UTC)으로 정체 판별 — 4898c84(07-16 11:55 UTC=20:55 KST)=수동 dispatch=진짜
+  07-16(16건), cf7edd7(07-16 22:30 UTC=07-17 07:30 KST)=cron=실제 07-17(14건, 버그로 07-16 라벨). 겹침 0.
+  → cf7edd7 을 `published/2026-07-17.json`(run_date 교정)으로, 4898c84 를 `published/2026-07-16.json`으로
+  복구 후 build_site 재생성. **날조 아님 — git 기록된 실제 데이터의 라벨만 교정.**
+
+## Phase 4 — 아카이브·카테고리 누적 (2026-07-17)
+
+- **소스 = `data/published/*.json`, 재집필 금지.** `src/build_site.py`가 JSON만 읽어 전 페이지 재렌더($0).
+  발행된 텍스트를 재사용 → 스키마 바뀌어도 과거 유실 없음(published 가 영속 원본).
+- **카테고리 누적은 리스트, 전문 아님.** 레퍼런스(salighten topics/*)는 15일치 40건 전문을 한 페이지에 담아
+  **1년이면 못 쓴다.** 우리는 리스트(날짜·배지·title_ko·요약 첫문장·원문·그날 앵커) + 태그 칩 필터(클라이언트
+  JS, 서브태그 있는 예측·인과만). 전문은 일별 페이지에만.
+- **상대경로 필수.** GitHub 프로젝트 Pages 는 `/<repo>/` 하위 → 절대 `/category/`가 깨진다. 페이지 깊이별
+  prefix(일별 `../../../`, 카테고리 `../`, 루트 ``). **index 는 복사가 아니라 최신 일별을 루트 prefix 로 재렌더**
+  (깊이가 달라 링크가 다름).
+- 일별 섹션 헤더 `[주제별 전체 보기 ↗]`(그동안 비활성)를 category 페이지로 연결.
+
+---
+
 ## 작업 방식 (사용자 선호)
 
 - **선택지 + 트레이드오프 제시 → 사용자가 판단.** 대신 정하지 말 것.

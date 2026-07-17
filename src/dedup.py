@@ -9,10 +9,10 @@ reused from collectors.base for consistency.
 from __future__ import annotations
 
 import json
-from datetime import date, datetime, timedelta
+from datetime import datetime, timedelta
 from pathlib import Path
 
-from .config import ROOT
+from .config import ROOT, now_kst
 from .models import Item
 
 SEEN_PATH = ROOT / "data" / "seen.json"
@@ -50,7 +50,7 @@ def update_seen(seen: dict[str, dict], ranked: list[Item], run_date: str) -> dic
 
 
 def prune(seen: dict[str, dict], days: int = RETENTION_DAYS) -> dict[str, dict]:
-    cutoff = date.today() - timedelta(days=days)
+    cutoff = now_kst().date() - timedelta(days=days)
     kept: dict[str, dict] = {}
     for h, rec in seen.items():
         fs = rec.get("first_seen")

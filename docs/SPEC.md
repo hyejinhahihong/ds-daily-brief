@@ -446,12 +446,19 @@ final_score = base_score × lane_weight × tier_multiplier
 /category/mlops.html
 /category/practice.html
 /category/industry-application.html
-/archive.html                      전체 아카이브
+/archive.html                      전체 아카이브 (연>월>일 계층)
 /weekly/YYYY-Www.html              주간 롤업 (금요일)
 /feed.xml                          RSS
+/data/published/YYYY-MM-DD.json    발행 원본 (SPEC §8 전문 + schema_version) ← 아래 생성 소스
 /data/seen.json
 /data/preferences.md
 ```
+
+- **생성 소스 = `data/published/*.json`.** `src/build_site.py`가 이 JSON들만 읽어 index/일별/archive/
+  category 를 **재렌더(LLM 0, $0)**. **재집필·재랭킹 금지** — 발행된 텍스트를 그대로 재사용한다.
+- **링크는 상대경로.** GitHub 프로젝트 Pages 는 `/<repo>/` 하위라 절대경로 `/category/`가 깨진다.
+  일별(깊이 3)=`../../../`, 카테고리(깊이 1)=`../`, 루트(index/archive)=``.
+- **index = 최신 일별을 루트 경로로 재렌더**(복사 아님 — 깊이가 달라 상대경로가 다름).
 
 ### 5.2 index.html
 
@@ -528,6 +535,14 @@ on:
 
 - KST 07:00 도착 목표. GH Actions는 부하 시 5~15분 지연이 흔하므로 30분 여유.
 - 주말 스킵 → 비용 30% 절감
+
+**타임존 (필수).** **Actions 러너는 UTC다. 모든 날짜는 KST(Asia/Seoul)로 계산한다.**
+naive `date.today()`/`datetime.now()`를 쓰면 KST 06:30 실행이 UTC 전날로 찍혀 파일이 하루 밀린다
+(실측 버그: 2026-07-17 06:30 실행이 `/news/2026/07/16.html`에 덮어씀). 조치:
+- 코드: `src/config.py`의 `now_kst()`/`today_kst_iso()`(ZoneInfo("Asia/Seoul"))로 날짜·파일명·마스트헤드·
+  first_seen·발송본문·수집창을 전부 계산. (외부 피드/기사 published_at 파싱만 원 소스 tz 유지)
+- 워크플로: 잡에 `env: TZ: Asia/Seoul` (이중 안전장치). 커밋 메시지 날짜도 KST.
+- 의존성: `tzdata`(Windows 로컬 등 시스템 tz DB 없는 환경 대비).
 
 ### 7.3 비용
 

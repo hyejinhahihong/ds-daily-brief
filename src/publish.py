@@ -17,10 +17,9 @@ Two jobs, both cheap and lossless:
 from __future__ import annotations
 
 import json
-from datetime import datetime, timezone
 from pathlib import Path
 
-from .config import ROOT, SCHEMA_VERSION
+from .config import ROOT, SCHEMA_VERSION, now_kst
 from .models import Item
 
 PUBLISHED_DIR = ROOT / "data" / "published"
@@ -32,7 +31,7 @@ def save_published(items: list[Item], run_date: str) -> Path:
     payload = {
         "schema_version": SCHEMA_VERSION,
         "run_date": run_date,
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "generated_at": now_kst().isoformat(),
         "count": len(items),
         "items": [it.model_dump() for it in items],
     }

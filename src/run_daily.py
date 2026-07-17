@@ -21,7 +21,6 @@ from __future__ import annotations
 import argparse
 import os
 import sys
-from datetime import date
 from pathlib import Path
 
 for _stream in (sys.stdout, sys.stderr):
@@ -32,12 +31,12 @@ for _stream in (sys.stdout, sys.stderr):
 
 import yaml
 
-from .config import DAILY_BUDGET_USD, ROOT, load_dotenv
+from .build_site import build as build_site
+from .config import DAILY_BUDGET_USD, ROOT, load_dotenv, today_kst_iso
 from .dedup import filter_unseen, load_seen, prune, save_seen, update_seen
 from .deliver import telegram
-from .publish import build_index, save_published
+from .publish import save_published
 from .rank import rank_items
-from .render import render_daily
 from .run_phase1 import CATEGORIES, PREFERENCES, load_items_from_json
 from .select import compute_final_scores, select
 from .write import write_items
@@ -71,7 +70,7 @@ def main() -> None:
     cfg = yaml.safe_load(CATEGORIES.read_text(encoding="utf-8"))
     categories = cfg["categories"]
     total_max = cfg.get("total_max", 16)
-    run_date = date.today().isoformat()
+    run_date = today_kst_iso()  # KST 기준 (SPEC §7.2) — Actions UTC 러너 날짜 밀림 방지
 
     # 1) collect
     if args.from_json:
@@ -103,17 +102,12 @@ def main() -> None:
     total_cost = rank_tk.cost_usd + write_tk.cost_usd
     print(f"[daily] 집필 완료 ${write_tk.cost_usd:.4f} · 합계 ${total_cost:.4f}")
 
-    # 6) render + save daily HTML
-    html = render_daily(chosen, categories, run_date)
-    out = ROOT / "news" / run_date[:4] / run_date[5:7] / f"{run_date[8:10]}.html"
-    out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(html, encoding="utf-8")
-    print(f"[daily] 렌더: {out}")
-
-    # 7) publish durable JSON (schema-versioned) + 8) index copy
+    # 6) publish durable JSON (schema-versioned) — build_site 의 소스
     pub = save_published(chosen, run_date)
-    idx = build_index(html)
-    print(f"[daily] 발행 저장: {pub}  ·  index: {idx}")
+    # 7) 전체 사이트 재생성 (일별 + index + archive + category, published 소스, $0)
+    build_site(verbose=False)
+    out = ROOT / "news" / run_date[:4] / run_date[5:7] / f"{run_date[8:10]}.html"
+    print(f"[daily] 발행 저장: {pub}  ·  사이트 재생성(일별/index/archive/category)")
 
     # 9) persist seen.json (production dedup) — dry-run 은 건너뜀
     if args.dry_run:

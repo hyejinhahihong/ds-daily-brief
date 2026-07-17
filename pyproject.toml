@@ -9,6 +9,7 @@ dependencies = [
     "pydantic>=2.7",
     "pyyaml>=6.0",
     "anthropic>=0.40",
+    "tzdata>=2026.3",
 ]
 
 # 애플리케이션 프로젝트 — 패키지로 빌드/설치하지 않음. uv run 으로 실행.
