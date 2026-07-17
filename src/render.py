@@ -80,6 +80,8 @@ strong{font-weight:600;color:var(--text)}
 .mast-date{font-size:14px;color:var(--text-2);margin-top:8px}
 .themebtn{flex:none;background:var(--bg-subtle);border:1px solid var(--border);color:var(--text-2);
   border-radius:20px;padding:5px 12px;font-size:13px;cursor:pointer;font-family:inherit}
+.topnav{margin-top:11px;display:flex;gap:16px;font-size:13px}
+.topnav a{color:var(--text-2);font-weight:500} .topnav a:hover{color:var(--accent)}
 @media (min-width:640px){.mast-title{font-size:31px}}
 
 /* --- TODAY'S TOP 3 --- */
@@ -401,7 +403,7 @@ def render_daily(items: list[Item], categories: list[dict], run_date: str,
         f'{_esc(_CAT_DESC.get(c["id"], ""))}</li>'
         for c in categories
     )
-    topics_html = (f'<footer class="topics"><h2>다루는 주제</h2>'
+    topics_html = (f'<footer class="topics" id="topics"><h2>다루는 주제</h2>'
                    f'<ul>{topic_lis}</ul></footer>')
 
     return f"""<!doctype html>
@@ -420,6 +422,8 @@ def render_daily(items: list[Item], categories: list[dict], run_date: str,
       <div class="eyebrow">DAILY BRIEFING</div>
       <h1 class="mast-title">AI &amp; ML News Letter</h1>
       <div class="mast-date">{date_line}</div>
+      <nav class="topnav"><a href="{prefix}archive.html">📅 지난 브리핑</a>
+        <a href="#topics">🗂 주제별 보기</a></nav>
     </div>
     <button id="tbtn" class="themebtn" type="button">🌓 테마</button>
   </header>
@@ -553,7 +557,8 @@ def render_category(cid: str, name: str, entries: list[tuple[str, Item]],
 
     return (_page_head(f"{name} · AI & ML News Letter", _CSS_LIST) +
             f'<body>\n<div class="page">\n'
-            f'<div class="crumb"><a href="{prefix}index.html">홈</a> · {_esc(name)}</div>\n'
+            f'<div class="crumb"><a href="{prefix}index.html">홈</a> · '
+            f'<a href="{prefix}archive.html">아카이브</a> · {_esc(name)}</div>\n'
             f'{_mast("CATEGORY", name)}\n'
             f'<div class="catdesc">{_esc(desc)}</div>\n'
             f'{other_html}\n{filt}\n'
