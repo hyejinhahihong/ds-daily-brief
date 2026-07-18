@@ -472,6 +472,26 @@ news               74   2.86  2.50
   없음(최신 moonshotai=Kimi-K2.7) → **라이브 재수집으로도 kimi-k3 pipeline PASS 는 이 환경에선 불가.**
   작업 7 게이트 판정 시 이 갭을 별도 논의 필요(리콜 경로는 reachability 로 이미 입증됨).
 
+### 케이스 정리 + 전환 결정 (2026-07-18)
+
+- **결정 1 — 케이스는 실존 데이터로만 만든다.** kimi-k3 **pipeline** 케이스 은퇴 → 실존 **deepseek-v4**
+  (DeepSeek-V4-Pro/Flash-DSpark, 레인 9 likes 488/200)로 교체. 이유: 실제 HF 에 "Kimi K3" 자체가 없어
+  (가상 모델) pipeline PASS 원리적 불가. **가상 시나리오는 reachability 로 검증하고 pipeline 케이스로
+  만들지 않는다.** kimi-k3-reach(reachability)는 REACH_OK 로 "소스 도달"을 이미 증명 → 유지. deepseek-v4
+  pipeline 은 수집창을 사건일로 맞춰야(replay `--since` 추가) 작동 → 전 파이프라인 PASS 는 작업 7 랭킹 런.
+- **결정 2 — AWS News 블로그 추가 안 함(확정).** "SQS turns 20" 류 비-ML 대량 발행으로 레인 1 오염. ML
+  블로그 추가로 aws-fde 는 이미 REACH_OK. reachability 는 도메인 단위라 통과 표시되지만 실수집 노이즈가
+  이득을 넘는다. (도메인 단위 REACH_OK 의 한계를 감수 — 실제 FDE 기업 발표를 못 담을 수 있으나, 노이즈보다 낫다.)
+- **결정 3 — 작업 3(웹서치 소스) 하지 않음.** 케이스 검증은 "소스 공백이 있나"를 확인하는 도구였고 답이
+  나왔다(있었고 3건 메웠다). 레인 9개 + 방금 3개 보강 + 실운영 데이터 며칠치도 없음 → 지금 소스를 더
+  얹는 건 "문제없는데 약을 더 먹는 격". 필요하면 실운영 며칠 뒤 사용자가 재판단.
+- **감사 결과 — 날짜 버그·Phase 4(archive/category)는 이미 완료(재작업 없음).** 전수 감사(2026-07-18):
+  ① naive `date.today()`/`datetime.now()` 잔존 0(전부 now_kst/today_kst_iso), 워크플로 `TZ: Asia/Seoul`,
+  일별 마스트헤드 날짜가 경로와 일치("2026/07/18(토)"), published run_date 정확(16/17/18), published/seen
+  git-tracked·커밋됨. ② archive.html(연>월>일·건수·최신순)·category×8(리스트+태그칩 예측/인과)·index "다루는
+  주제" 8블록·일별→"주제별 전체 보기 ↗" 링크 전부 존재(build_site.py, render_archive/category). → 커밋
+  a1e38f4(날짜)·5c647b8(nav)·"Phase 4 아카이브" 섹션에서 이미 처리됨. **원 지시는 미완으로 기술됐으나 실상 완료.**
+
 - **선택지 + 트레이드오프 제시 → 사용자가 판단.** 대신 정하지 말 것.
 - 표·구조화된 포맷 선호. 다만 **한 번에 30개 항목을 던지면 과부하.**
   실제로 그래서 한 번 막혔고, "지금 정할 3가지"로 줄여서 뚫렸다.

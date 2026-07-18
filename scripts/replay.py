@@ -35,6 +35,7 @@ for _stream in (sys.stdout, sys.stderr):
 
 import yaml  # noqa: E402
 
+from src.collectors.base import set_window_since  # noqa: E402
 from src.config import load_dotenv  # noqa: E402
 from src.dedup import filter_unseen, load_seen  # noqa: E402
 from src.models import Item  # noqa: E402
@@ -60,9 +61,15 @@ def _matches(it: Item, needles: list[str]) -> bool:
 # ---------------------------------------------------------------------------
 # pipeline: run stages for run_date, trace where each case dropped
 # ---------------------------------------------------------------------------
-def run_pipeline(run_date, from_json, do_rank, apply_seen):
+def run_pipeline(run_date, from_json, do_rank, apply_seen, since=None):
     """Return ({stage: [Item]}, computed_stages) after running the pipeline."""
     cfg_src = yaml.safe_load(SOURCES_PATH.read_text(encoding="utf-8"))
+
+    # 과거 사건 replay 시 수집 창을 사건일로 맞춘다(라이브 3일 창은 오늘 기준이라 과거를 못 담음).
+    if since and not from_json:
+        from datetime import datetime, timezone
+        set_window_since(datetime.fromisoformat(since).replace(tzinfo=timezone.utc))
+        print(f"[replay] 수집 창 since={since} 로 고정")
 
     if from_json:
         collect = load_items_from_json(from_json)
@@ -162,6 +169,7 @@ def main() -> None:
     ap.add_argument("--from-json", type=Path, help="라이브 수집 대신 raw 스냅샷 로드 (pipeline)")
     ap.add_argument("--rank", action="store_true", help="Haiku 랭킹+선별까지 실행 (비용 발생)")
     ap.add_argument("--seen", action="store_true", help="seen.json dedup 적용 (기본 미적용)")
+    ap.add_argument("--since", help="수집 창 시작일 고정 YYYY-MM-DD (과거 사건 pipeline replay용)")
     args = ap.parse_args()
     run_date = args.date
 
@@ -176,7 +184,7 @@ def main() -> None:
     )
     stages, computed = ({}, [])
     if need_pipeline:
-        stages, computed = run_pipeline(run_date, args.from_json, args.rank, args.seen)
+        stages, computed = run_pipeline(run_date, args.from_json, args.rank, args.seen, args.since)
 
     rows = []  # (id, type, status, note, extra)
     fails = 0

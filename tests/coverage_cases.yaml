@@ -15,13 +15,17 @@
 # "type 에 맞는 검증 수단 없음"(예: pipeline 인데 그 날짜 스냅샷/실행이 없음)일 때만.
 
 cases:
-  - id: kimi-k3
+  - id: deepseek-v4
     type: pipeline
-    replay_date: 2026-07-16
-    must_contain_any: ["Kimi K3", "Moonshot"]
+    replay_date: 2026-06-27
+    must_contain_any: ["DeepSeek-V4"]
     expect_category: llm-foundation-model
     expect_in_output: true
-    note: "현재 유일한 pipeline 게이트. Phase 4 완료 판정 기준."
+    note: |
+      kimi-k3 pipeline 은퇴 대체(실존 모델). 실제 HF 에 "Kimi K3" 는 없다(최신 Kimi-K2.7) → 가상
+      시나리오라 pipeline PASS 원리적 불가 → 실존 DeepSeek-V4-Pro/Flash-DSpark(레인 9, likes 488/200)로 교체.
+      검증: replay.py 2026-06-27 --since 2026-06-25 --rank (수집창을 사건일로 맞춤). collect 도달은 작업 2
+      실측에서 확인됨(레인 9 화이트리스트+임계치 통과). 전 파이프라인 PASS 는 작업 7 랭킹 런에서.
 
   - id: kimi-k3-reach
     type: reachability
