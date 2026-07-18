@@ -427,6 +427,26 @@ news               74   2.86  2.50
   어워드 식별엔 `Outstanding Paper` 만 유효.** → 사용자 결정 필요: (a) icml 사건일이 07-16 근처면 케이스 date 교정
   후 재현, (b) 3일 창 원칙상 07-10 사건은 07-10~07-13 런에서만 포착 가능 = 웹서치(작업 3)로도 창 밖은 못 잡음을 수용.
 
+### 작업 1.5 — 케이스 type 2종 분리 (2026-07-18, 완료)
+
+- **판정.** kimi-k3 FAIL@collect 재현 확정 → **Phase 4 게이트 통과, 작업 2 진행 조건 충족.** 나머지 SKIP 3건은
+  하네스 결함이 아니라 **케이스 설계 오류**(재현 가능일 미확인). icml 은 (b) 채택 — 단 사건일이 07-10 도 아니다:
+  **원 소스 = `blog.icml.cc/2026/07/05/announcing-the-icml-2026-awards/` (07-05)**, 학회 07-06~11 COEX.
+  07-08(aifront)·07-10(faq.com.tw)·07-11(medium)은 전부 2차 보도.
+- **핵심 통찰: 스냅샷은 07-16 부터라 그 이전 사건은 pipeline replay 원천 불가. 그러나 "우리 소스 목록이 이 사건에
+  도달 가능한가"는 스냅샷 없이 지금 물을 수 있고, 그게 수집 커버리지의 본질이다.** → 케이스를 두 type 으로 분리:
+  - `type: pipeline` — collect→…→select 재실행, 탈락 단계 판정. 07-16 이후 사건만. (현재 kimi-k3 하나 = 게이트)
+  - `type: reachability` — config 기준 도달 가능성. 스냅샷·랭킹 불필요. `REACH_OK / REACH_FAIL / NOT_CONFIGURED`.
+    REACH_FAIL 은 "설정됐으나 라이브 미반환" — 최근 사건에서만 검증 가능(과거 사건은 라이브 확인 불가)이라 예약.
+  - SKIP 은 "창 밖"이 아니라 "type 에 맞는 검증 수단 없음"(pipeline 인데 그 날짜 실행 아님)일 때만.
+- **baseline (2026-07-16 실행).** 작업 2·3 의 출발점:
+  - kimi-k3(pipeline) FAIL@collect · google-tabfm(reach) REACH_OK(research.google 설정됨)
+  - **kimi-k3-reach / icml / aws-fde-1b = NOT_CONFIGURED** — 정상. 레인 0(HF)·학회 채널·CNBC 미설정 상태의 baseline.
+    작업 3 없이 aws-fde-1b 가 통과하면 오히려 오류(CNBC 는 피드로 구조적 미도달, 웹서치 전용 케이스).
+- **replay.py 변경 불가피.** 지시 헤더는 "코드 변경 없음"이었으나, reachability type 을 처리해 NOT_CONFIGURED 를
+  내려면 replay 수정이 필수(새 yaml 을 옛 로직으론 판정 불가). 구체 지시(=기대 baseline)를 기준으로 반영.
+- **작업 7 보고에 케이스 표 추가**: `| id | type | 작업1.5 baseline | 작업7 결과 |`. 전부 PASS/REACH_OK 여야 Phase 4 완료.
+
 - **선택지 + 트레이드오프 제시 → 사용자가 판단.** 대신 정하지 말 것.
 - 표·구조화된 포맷 선호. 다만 **한 번에 30개 항목을 던지면 과부하.**
   실제로 그래서 한 번 막혔고, "지금 정할 3가지"로 줄여서 뚫렸다.
