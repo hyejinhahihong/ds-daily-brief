@@ -447,6 +447,31 @@ news               74   2.86  2.50
   내려면 replay 수정이 필수(새 yaml 을 옛 로직으론 판정 불가). 구체 지시(=기대 baseline)를 기준으로 반영.
 - **작업 7 보고에 케이스 표 추가**: `| id | type | 작업1.5 baseline | 작업7 결과 |`. 전부 PASS/REACH_OK 여야 Phase 4 완료.
 
+### 작업 2 — 소스 추가 (2026-07-18, 완료)
+
+- **레인 번호 원칙 (사용자 확정).** "레인 8" 지시는 국문 보조가 이미 8인 걸 놓친 것. **레인 9로 신설.**
+  → 원칙 추가: **레인 번호는 등록 순서일 뿐 우선순위가 아니다. 우선순위는 lane_weight 가 유일하게 정한다.
+  번호 정렬용 재번호는 하지 않는다**(config·코드 다수 참조 + seen.json lane 값 의미 흔들림).
+- **작업 원칙 추가 (사용자 확정).** "헤더의 범위 제한과 본문의 구체 지시(기대 결과)가 충돌하면 구체 지시가
+  이긴다. 단 벗어난 사실을 보고할 것." (작업 1.5 replay.py 수정 건에서 확립.)
+- **레인 9 = 모델 릴리스 (HF Hub), weight 0.8, tier 1.** 레인 7(GitHub, 0.4)과 분리 — 릴리스 성격이
+  달라(버그픽스 아님) weight 를 따로 줘야 한다. firehose 방지 2단 필터(org 화이트리스트 + likes/dl 임계치
+  + 파생 이름 패턴). **실측 0.5/일**(목표 0~5 충족). nvidia NVFP4 재포장·deepseek block7 draft 누출 →
+  이름 패턴 보강(nvfp4/bf16/dflash/block7). google/tabfm(376 likes)이 실재로 잡힘 = 레인 9 가 TabFM 도달.
+- **레인 2 확장(새 레인 아님, weight 0.85 유지).** arXiv comment 는 수락 논문만 잡고 학회 이벤트(수상작·
+  통계·키노트)는 구조적 미포착 → 공식 채널 `blog.icml.cc/neurips.cc/iclr.cc` 추가(content_type=news 오버라이드).
+  **KDD 제외**(kdd.org/feed 404). icml 피드 첫 항목이 정확히 "Announcing the ICML 2026 Awards".
+- **AWS = 원 소스로(SPEC 원칙 7).** cnbc.com/ciodive.com(tier4 받아쓰기) 추가 안 함. 레인 1에 **AWS ML 블로그**
+  추가(News 블로그는 "SQS turns 20" 류 비-ML 대량 발행이라 레인1 오염 → 제외). aws-fde-1b 케이스를 원 소스
+  `aws.amazon.com` 로 교정. **판단 필요 잔여**: FDE 같은 *기업/조직* 발표는 News 블로그에 실릴 수 있어 ML
+  블로그만으론 실제 수집엔 못 닿을 수 있음(reachability 는 도메인 단위라 REACH_OK). News 블로그 추가는 노이즈
+  트레이드오프 → 사용자 판단 보류.
+- **케이스 재판정 (baseline → 작업 2).** reachability 4건: kimi-k3-reach·icml·aws-fde-1b **NOT_CONFIGURED→REACH_OK**,
+  google-tabfm REACH_OK 유지. **pipeline kimi-k3 은 FAIL 유지** — 고정 raw(07-16) 기준이라 소스 추가로 안 변함.
+  ⚠ **시뮬레이션 갭**: 환경 시각(07-18)이 실제 HF 데이터(최신 ~07-14)보다 앞서고 실제 HF 에 "Kimi K3" 자체가
+  없음(최신 moonshotai=Kimi-K2.7) → **라이브 재수집으로도 kimi-k3 pipeline PASS 는 이 환경에선 불가.**
+  작업 7 게이트 판정 시 이 갭을 별도 논의 필요(리콜 경로는 reachability 로 이미 입증됨).
+
 - **선택지 + 트레이드오프 제시 → 사용자가 판단.** 대신 정하지 말 것.
 - 표·구조화된 포맷 선호. 다만 **한 번에 30개 항목을 던지면 과부하.**
   실제로 그래서 한 번 막혔고, "지금 정할 3가지"로 줄여서 뚫렸다.

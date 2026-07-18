@@ -61,7 +61,7 @@ def report_cost(rank_tk, write_tk) -> None:
 
 
 _LANE_NAMES = {1: "빅테크리서치", 2: "학회논문", 3: "큐레이션", 4: "arXiv일반",
-               5: "실무블로그", 6: "AI미디어", 7: "GitHub", 8: "국문보조"}
+               5: "실무블로그", 6: "AI미디어", 7: "GitHub", 8: "국문보조", 9: "모델릴리스"}
 
 
 def report_routing(chosen, ranked, routing: dict, categories) -> None:

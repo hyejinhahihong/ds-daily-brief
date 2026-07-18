@@ -36,7 +36,7 @@ from .select import compute_final_scores, select
 CATEGORIES = ROOT / "config" / "categories.yaml"
 PREFERENCES = ROOT / "data" / "preferences.md"
 LANE_NAMES = {1: "빅테크리서치", 2: "학회논문", 3: "큐레이션", 4: "arXiv일반",
-              5: "실무블로그", 6: "AI미디어", 7: "GitHub", 8: "국문보조"}
+              5: "실무블로그", 6: "AI미디어", 7: "GitHub", 8: "국문보조", 9: "모델릴리스"}
 
 
 def load_items_from_json(path: Path) -> list[Item]:

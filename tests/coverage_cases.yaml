@@ -48,7 +48,8 @@ cases:
   - id: aws-fde-1b
     type: reachability
     date: 2026-06-30
-    expect_source_any: ["cnbc.com", "ciodive.com"]
+    expect_source_any: ["aws.amazon.com"]
     note: |
-      CNBC는 lane6_feeds에 없다 → 피드로는 구조적 도달 불가.
-      작업 3(웹서치) 전용 검증 케이스. 작업 3 없이 통과하면 그게 오히려 오류다.
+      원 소스로 교정(작업 2 가드 3). AWS가 $1B FDE 조직을 발표했으면 원 소스는
+      aws.amazon.com/blogs 다. CNBC·CIO Dive 는 tier 4 받아쓰기 → 추가 안 함(SPEC 원칙 7,
+      레인 6 미디어는 base 중앙 2.25로 정당 탈락). 레인 1에 AWS ML 블로그 추가로 REACH_OK.

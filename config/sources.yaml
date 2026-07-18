@@ -15,6 +15,9 @@ lanes:
   6: { name: "AI 미디어",           lane_weight: 0.55, source_tier: 4, content_type: news,    method: rss }
   7: { name: "GitHub Releases",     lane_weight: 0.4,  source_tier: 1, content_type: release, method: github }
   8: { name: "국문 보조",           lane_weight: 0.6,  source_tier: 1, content_type: blog,    method: rss }
+  9: { name: "모델 릴리스",         lane_weight: 0.8,  source_tier: 1, content_type: release, method: hf_api }
+# 레인 번호는 등록 순서일 뿐 우선순위가 아니다 — 우선순위는 lane_weight 가 유일하게 정한다
+# (레인 7=0.4 꼴찌, 레인 1=1.0 1위). 그래서 레인 9 가 뒤 번호인 건 문제가 아니다 (SPEC §3.1).
 
 # ---- 레인 1: 빅테크 리서치 블로그 (SPEC §3.2) ----
 lane1_feeds:
@@ -24,6 +27,9 @@ lane1_feeds:
   - { name: "Meta Engineering",         url: "https://engineering.fb.com/feed/" }
   - { name: "Microsoft Research Blog",  url: "https://www.microsoft.com/en-us/research/feed/" }
   - { name: "Amazon Science Blog",      url: "https://www.amazon.science/index.rss" }
+  # AWS 원 소스(SPEC 원칙 7). FDE·서비스 발표의 원 소스 = aws.amazon.com/blogs. ML 블로그만 채택:
+  # News 블로그(blogs/aws)는 첫 항목이 "SQS turns 20" 류 비-ML 대량 발행이라 레인1(리서치) 오염.
+  - { name: "AWS Machine Learning Blog", url: "https://aws.amazon.com/blogs/machine-learning/feed/" }
   - { name: "Apple ML Research",        url: "https://machinelearning.apple.com/rss.xml" }
   - { name: "NVIDIA Developer Blog",    url: "https://developer.nvidia.com/blog/feed" }
   - { name: "OpenAI News",              url: "https://openai.com/news/rss.xml" }
@@ -161,6 +167,33 @@ arxiv:
     clustering:
       - clustering
       - representation learning for tabular
+
+# ---- 레인 2 확장: 학회 공식 채널 (SPEC §3.3) ----
+# arXiv comment 파싱은 "수락 논문"만 잡고 학회 자체 이벤트(수상작·제출 통계·키노트)는 구조적으로 못 잡는다.
+# (실측: 2026-07-16 raw 의 "ICML 2026" 9건 전부 venue 태그, 어워드 발표는 0건.)
+# lane=2·weight 0.85·tier 1 그대로, content_type 만 news 로 오버라이드(논문이 아니라 발표문).
+# KDD 공식 블로그: RSS 미제공(kdd.org/feed 404) → 제외.
+lane2_official_feeds:
+  - { name: "ICML Blog",    url: "https://blog.icml.cc/feed/",    content_type: news }
+  - { name: "NeurIPS Blog", url: "https://blog.neurips.cc/feed/", content_type: news }
+  - { name: "ICLR Blog",    url: "https://blog.iclr.cc/feed/",    content_type: news }
+
+# ---- 레인 9: 모델 릴리스 (SPEC §3.9.1) — HuggingFace Hub, org 화이트리스트 + 임계치로 firehose 억제 ----
+# 목표 물량 일 0~5건. 초과 시 필터(임계치/제외패턴)가 느슨한 것 → 튜닝 대상.
+lane9_hf:
+  endpoint: "https://huggingface.co/api/models"   # 결정적 경로 (레인 1 블로그에 비의존)
+  orgs: [moonshotai, deepseek-ai, Qwen, google, google-research, meta-llama,
+         microsoft, openai, mistralai, amazon, Salesforce, ibm-granite,
+         PriorLabs, Datadog, nvidia, apple]
+  per_org_limit: 50          # createdAt desc 상위 N → 3일 창으로 다시 필터
+  min_likes: 20              # likes OR downloads 하한 (둘 중 하나만 넘으면 통과)
+  min_downloads: 1000
+  # 파생(파인튜닝/양자화/포맷 변환/draft) 이름 패턴 — 원 릴리스만 남긴다.
+  # 실측(2026-07-18): nvidia 가 타 랩 모델을 NVFP4/BF16 으로 재포장, deepseek 가 draft(block7)를
+  # 대량 업로드 → 아래 포맷·precision·draft 마커로 컷. (SPEC §3.9.1 실측 기록)
+  exclude_name_patterns: [gguf, awq, gptq, bnb-4bit, "-4bit", "-8bit", int4, int8,
+                          "-mlx", "-onnx", exl2, "-quantized",
+                          nvfp4, fp4, fp8, "-bf16", "-fp16", dflash, block7, "-ttt"]
 
 # ---- 레인 7: GitHub Releases (SPEC §3.8) ----
 lane7_repos:

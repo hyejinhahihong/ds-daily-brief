@@ -23,7 +23,7 @@ class Item(BaseModel):
     url_hash: str
     title: str                      # 원문 제목
     source_domain: str
-    lane: int                       # 1~7 (+8 국문 보조), SPEC §3.1
+    lane: int                       # 1~7 (+8 국문 보조, +9 모델 릴리스), SPEC §3.1
     lane_weight: float              # 0.4~1.0, SPEC §3.1
     source_tier: int                # 1~5 원본성, SPEC §3.1.1
     tier_multiplier: float          # 1.0~0.5

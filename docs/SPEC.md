@@ -182,8 +182,14 @@ WHAT'S DIFFERENT
 | **5** | 실무 블로그 | **0.6** | RSS | DL, 예측, MLOps |
 | **6** | AI 미디어 | **0.55** | RSS + 웹서치 | Agent, LLM/FM, 산업적용 |
 | **7** | GitHub Releases | **0.4** | GitHub API, 메이저만 | 예측, 인과, MLOps |
+| **9** | 모델 릴리스 | **0.8** | HuggingFace Hub API, org 화이트리스트+임계치 | LLM/FM, 예측(tabular/timeseries FM) |
 
 *(+ 국문 보조 레인 — §3.9)*
+
+> **레인 번호 ≠ 우선순위.** 우선순위는 `lane_weight` 가 유일하게 정한다(레인 1=1.0 최상, 레인 7=0.4 최하).
+> 레인 9(모델 릴리스, 0.8)가 8(국문 보조, 0.6)보다 뒷번호지만 우선순위는 더 높다 — 번호는 등록 순서일 뿐.
+> **번호 정렬을 위한 재번호는 하지 않는다**(config·코드 다수 참조 + seen.json lane 값 의미 흔들림, Phase 4 작업 2).
+> 레인 8·9 는 §3.1 표에 정식 등재되나, 레인 7 이 마지막 "주 레인"이라 관용적으로 "7종"으로 부른다.
 
 **커뮤니티(HN / r/MachineLearning)는 제외.**
 
@@ -265,7 +271,9 @@ causal:
 "이 논문이 어느 학회에 수락됐나"만 잡는다. **학회 자체 이벤트(수상작 발표·제출 통계·키노트)는
 구조적으로 못 잡는다.** 실측: 2026-07-16 raw(295건)에 `ICML 2026` 문자열이 9건 있었으나 전부
 수락-논문 venue 태그였고, ICML 2026 어워드 발표(원 소스 `blog.icml.cc/2026/07/05/...`)는 0건.
-→ **레인 2에 학회 공식 채널(blog.icml.cc, NeurIPS/ICLR 공식 블로그)을 tier 1 로 추가**(작업 2).
+→ **레인 2에 학회 공식 채널 추가(작업 2 완료).** `lane2_official_feeds`(RSS, lane=2·weight 0.85·tier 1,
+   `content_type: news` 오버라이드). 진단 결과: **blog.icml.cc / blog.neurips.cc / blog.iclr.cc 채택**
+   (icml 피드 첫 항목이 정확히 "Announcing the ICML 2026 Awards"), **KDD 제외**(kdd.org/feed 404).
    원 소스는 피드가 잡아야 한다 — 웹서치는 2차 매체만 데려온다(작업 6 설계 근거).
 
 ### 3.4 레인 3 — 큐레이션 뉴스레터 (RSS)
@@ -378,6 +386,24 @@ repos:
 **보조 레인.** 매일 찾지 않고 RSS로 나오면 줍는다.
 - 대상: 네이버 D2, 카카오, 토스, 당근, 우아한형제들, LG AI연구원, SKT, 삼성SDS
 - 제외: 국내 IT 언론(영어 원문 번역 전재가 많아 중복 유발)
+
+### 3.9.1 레인 9 — 모델 릴리스 (HuggingFace Hub) *(Phase 4 작업 2)*
+
+**왜.** 모델 릴리스(Kimi K3, TabFM, Chronos, TimesFM …)는 예외 없이 HF Hub 에 뜬다 →
+"빅테크가 블로그를 썼는가"(레인 1)에 의존하지 않는 **결정적 경로**. 레인 7(GitHub 릴리스)과
+합치지 않는다 — 레인 7 이 0.4 인 건 "대부분 버그픽스"라서고, 모델 공개는 성격이 달라
+사용자 관심사(tabular/timeseries 파운데이션 모델)와 직결된다. **lane_weight 0.8, source_tier 1(원 소스).**
+
+**firehose 방지 (필수).** HF 는 하루 수백 개(대부분 파인튜닝/양자화 파생)라 그대로 붙이면 arXiv
+firehose 재현. 2단 필터(`config/sources.yaml` `lane9_hf`):
+- (a) **org 화이트리스트** — 프론티어 랩 16곳(moonshotai, deepseek-ai, Qwen, google, meta-llama,
+  microsoft, openai, mistralai, PriorLabs(TabPFN), nvidia, apple …).
+- (b) **likes/downloads 임계치**(20 / 1000, OR) + **파생 이름 패턴 제외**(GGUF, AWQ, NVFP4, BF16,
+  DFlash, block7 …). 3일 롤링 창(§3.10) 동일.
+
+**목표 물량 0~5건/일.** 실측(2026-07-18, 창 06-27~07-14, 18일): 8건 ≈ **0.5/일** — 전부 정상
+플래그십(google/tabfm, DeepSeek-V4, Leanstral, Nemotron-Audex, GELab-Zero). 초기 필터가 느슨해
+nvidia 의 타 랩 모델 NVFP4 재포장·deepseek draft(block7)가 새어 이름 패턴을 보강함. 초과 시 재튜닝.
 
 ### 3.10 수집 창
 

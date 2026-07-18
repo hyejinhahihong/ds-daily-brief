@@ -30,6 +30,7 @@ from .collectors.anthropic_news import collect_anthropic
 from .collectors.arxiv import ArxivResult, collect_arxiv
 from .collectors.base import FeedStatus, collect_rss_feed, set_window_since, window_cutoff
 from .collectors.github import collect_github
+from .collectors.huggingface import collect_hf
 from .config import now_kst, today_kst_iso
 from .models import Item
 
@@ -63,6 +64,19 @@ def collect_all(cfg: dict) -> tuple[list[Item], list[FeedStatus], ArxivResult]:
     anth_items, anth_status = collect_anthropic(_lane_conf(lanes, 1))
     items.extend(anth_items)
     diags.append(anth_status)
+
+    # Lane 2 확장: 학회 공식 채널 (RSS, content_type=news 오버라이드) — Phase 4 작업 2
+    conf2 = _lane_conf(lanes, 2)
+    for feed in cfg.get("lane2_official_feeds", []):
+        feed_items, status = collect_rss_feed(feed, conf2)
+        items.extend(feed_items)
+        diags.append(status)
+
+    # Lane 9: 모델 릴리스 (HuggingFace Hub API) — Phase 4 작업 2
+    if cfg.get("lane9_hf"):
+        hf_items, hf_diags = collect_hf(_lane_conf(lanes, 9), cfg["lane9_hf"])
+        items.extend(hf_items)
+        diags.extend(hf_diags)
 
     # Lanes 2 & 4: arXiv (paged, keyword-filtered, HF split) — 작업 2
     ax = cfg["arxiv"]
