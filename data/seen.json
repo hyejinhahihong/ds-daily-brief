@@ -4174,5 +4174,164 @@
     "source_tier": 1,
     "first_seen": "2026-07-18",
     "tags": []
+  },
+  "eec40c7c66916fb1790ae6d57ef51722a346e1ac": {
+    "url": "https://aws.amazon.com/blogs/machine-learning/transform-your-sales-organization-with-amazon-quick-your-new-agentic-ai-teammate/",
+    "title": "Transform your sales organization with Amazon Quick: your new agentic AI teammate",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-07-19",
+    "tags": [
+      "tool-use",
+      "enterprise"
+    ]
+  },
+  "1ae0179b59249f5e3356068cb67db7ff4a509365": {
+    "url": "https://aws.amazon.com/blogs/machine-learning/introducing-mobile-layout-for-amazon-quick-dashboards/",
+    "title": "Introducing Mobile Layout for Amazon Quick dashboards",
+    "category": "practice",
+    "source_tier": 1,
+    "first_seen": "2026-07-19",
+    "tags": []
+  },
+  "4bba2e8a087deb8fe92aab941e5f91ca008ea841": {
+    "url": "https://aws.amazon.com/blogs/machine-learning/how-smartsheet-built-a-remote-mcp-server-on-aws/",
+    "title": "How Smartsheet built a remote MCP server on AWS",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-07-19",
+    "tags": [
+      "mcp",
+      "tool-use"
+    ]
+  },
+  "8238a33131aa2218e86bdb997dc19d93fd12afad": {
+    "url": "https://aws.amazon.com/blogs/machine-learning/build-enterprise-search-for-agents-with-amazon-bedrock-managed-knowledge-base/",
+    "title": "Build enterprise search for agents with Amazon Bedrock Managed Knowledge Base",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-07-19",
+    "tags": [
+      "rag",
+      "tool-use"
+    ]
+  },
+  "66955fe170882e1a9b9e9a4e9e9233077734ec14": {
+    "url": "https://aws.amazon.com/blogs/machine-learning/introducing-grok-on-amazon-bedrock/",
+    "title": "Introducing Grok on Amazon Bedrock",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-07-19",
+    "tags": [
+      "model-release"
+    ]
+  },
+  "6ddc6db69f95126a8b755a0955ea7e01abcd397a": {
+    "url": "https://towardsdatascience.com/many-companies-use-ai-few-know-how-to-build-an-ai-native-enterprise-data-platform/",
+    "title": "Many Companies Use AI. Few Know How to Build an AI-Native Enterprise Data Platform.",
+    "category": "mlops",
+    "source_tier": 3,
+    "first_seen": "2026-07-19",
+    "tags": [
+      "data-platform",
+      "enterprise"
+    ]
+  },
+  "06664bc210f8b1645bf86d9ce0fd02ceeebe0c59": {
+    "url": "https://towardsdatascience.com/loop-engineering-with-adaptive-pdf-parsing-start-cheap-pay-for-a-heavier-parser-only-when-the-page-needs-it/",
+    "title": "Loop Engineering with Adaptive PDF Parsing: Start Cheap, Pay for a Heavier Parser Only When the Page Needs It",
+    "category": "predictive-modeling",
+    "source_tier": 3,
+    "first_seen": "2026-07-19",
+    "tags": [
+      "feature-selection"
+    ]
+  },
+  "651514afe5fe8e54cd5129fbc33efeab88bd80cb": {
+    "url": "https://towardsdatascience.com/how-to-improve-customer-retention-in-digital-banking/",
+    "title": "How to Improve Customer Retention in FinTech",
+    "category": "predictive-modeling",
+    "source_tier": 3,
+    "first_seen": "2026-07-19",
+    "tags": []
+  },
+  "c117aaa6a558ca9feb4e4a771a0a72d613041bd5": {
+    "url": "https://www.kdnuggets.com/kdnuggets-weekly-roundup-2026-07-13",
+    "title": "KDnuggets Weekly Roundup: Week of July 13, 2026",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-07-19",
+    "tags": []
+  },
+  "28c7ee44d88bdbf23ee25ecf0e088f68b623602b": {
+    "url": "https://magazine.sebastianraschka.com/p/controlling-reasoning-effort-in-llms",
+    "title": "Controlling Reasoning Effort in LLMs",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-07-19",
+    "tags": [
+      "prompting",
+      "inference"
+    ]
+  },
+  "c60035e6bb3c677d0bd6f14a4d7b43febcc00db6": {
+    "url": "https://techcrunch.com/2026/07/18/kimi-threat-or-menace/",
+    "title": "Kimi: Threat or menace?",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-07-19",
+    "tags": []
+  },
+  "3a54b06e9c8224ab978d65ea1b05a1d2ed437846": {
+    "url": "https://techcrunch.com/2026/07/17/neil-rimer-thinks-the-ai-money-is-coming-back-out/",
+    "title": "Neil Rimer thinks the AI money is coming back out",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-07-19",
+    "tags": []
+  },
+  "01582b84f95050bc70a9065d88002f29d74ce6fe": {
+    "url": "https://arstechnica.com/ai/2026/07/will-ai-fix-prior-authorization-or-make-it-worse/",
+    "title": "Will AI fix prior authorization—or make it worse?",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-19",
+    "tags": [
+      "healthcare"
+    ]
+  },
+  "eaafd90b87153d1eb06a96b1093ca6753b5a2753": {
+    "url": "https://www.wired.com/story/security-news-this-week-your-period-tracker-is-probably-spying-on-you/",
+    "title": "Your Period Tracker Is (Probably) Spying on You",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-07-19",
+    "tags": []
+  },
+  "80b9a759b33e27b1f5ef8c3441b58fc90d231f20": {
+    "url": "https://www.wired.com/story/how-googles-new-gemini-rates-work-and-how-to-track-your-usage/",
+    "title": "How Google’s New Gemini Rates Work and How to Track Your Usage",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-07-19",
+    "tags": []
+  },
+  "3e245e93a424dcc99789f6c9b00a57821525b65e": {
+    "url": "https://www.wired.com/story/prompt-injection-attacks-are-thwarting-ai-hacking-agents/",
+    "title": "Prompt Injection Attacks Are Thwarting AI Hacking Agents",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-07-19",
+    "tags": []
+  },
+  "576275bb37df2f207d82050cabc7dfe9721e8fd9": {
+    "url": "https://github.com/lightgbm-org/LightGBM/releases/tag/v4.7.0",
+    "title": "microsoft/LightGBM v4.7.0",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-19",
+    "tags": [
+      "tabular"
+    ]
   }
 }
