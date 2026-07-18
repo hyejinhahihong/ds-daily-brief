@@ -1,0 +1,39 @@
+# 커버리지 회귀 케이스 — Phase 4 작업 1 (SPEC §9 Phase 4 · §12).
+#
+# "이게 오늘 이 분야의 메인 사건인가" 축의 부재로 놓친 사건들을 고정한다.
+# 케이스는 카테고리별로 분산시킨다 — 회귀는 특정 진영/소스 현상이 아니라 축의 부재다.
+#
+# 필드:
+#   id                고유 식별자
+#   date              사건 발생일 (YYYY-MM-DD). 수집 창(§3.10, 3일 롤링) 판정 기준.
+#   must_contain_any  제목/초록/URL 중 하나라도 이 문자열을 포함하면 매칭 (대소문자 무시)
+#   expect_category   기대 카테고리 (config/categories.yaml id)
+#   expect_in_output  True = 그날 브리핑에 실렸어야 함 (미출력이면 FAIL)
+#
+# scripts/replay.py 가 특정 날짜로 파이프라인을 재실행해 케이스별 PASS/FAIL 과
+# 탈락 단계(collect/dedup/rank/select)를 출력한다.
+
+cases:
+  - id: kimi-k3
+    date: 2026-07-16
+    must_contain_any: ["Kimi K3", "Moonshot"]
+    expect_category: llm-foundation-model
+    expect_in_output: true
+
+  - id: google-tabfm
+    date: 2026-06-30
+    must_contain_any: ["TabFM"]
+    expect_category: predictive-modeling
+    expect_in_output: true
+
+  - id: icml-2026-awards
+    date: 2026-07-10
+    must_contain_any: ["ICML 2026", "Outstanding Paper"]
+    expect_category: deep-learning
+    expect_in_output: true
+
+  - id: aws-fde-1b
+    date: 2026-06-30
+    must_contain_any: ["Forward Deployed", "FDE"]
+    expect_category: practice
+    expect_in_output: true

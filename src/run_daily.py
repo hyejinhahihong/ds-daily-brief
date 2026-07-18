@@ -39,6 +39,7 @@ from .publish import save_published
 from .rank import rank_items
 from .run_phase1 import CATEGORIES, PREFERENCES, load_items_from_json
 from .select import compute_final_scores, select
+from .snapshot import save_stage
 from .write import write_items
 
 SOURCES = ROOT / "config" / "sources.yaml"
@@ -80,20 +81,24 @@ def main() -> None:
         print("[daily] 수집 중...")
         raw = _collect_fresh()
         print(f"[daily] 수집 {len(raw)}건")
+    save_stage("collect", raw, run_date)  # 단계별 스냅샷 (Phase 4 작업 1, 사후 진단용)
 
     # 2) dedup (seen.json)
     seen = load_seen()
     new = filter_unseen(raw, seen)
+    save_stage("dedup", new, run_date)
     print(f"[daily] seen 필터: {len(raw)}건 → 신규 {len(new)}건")
 
     # 3) rank (budget-guarded internally, SPEC §7.3)
     prefs = PREFERENCES.read_text(encoding="utf-8") if PREFERENCES.exists() else ""
     rank_tk = rank_items(new, preferences=prefs)
+    save_stage("rank", new, run_date)  # base_score/category 부여된 상태
     print(f"[daily] 랭킹 완료 ${rank_tk.cost_usd:.4f} (호출 {rank_tk.calls})")
 
     # 4) select
     compute_final_scores(new)
     chosen = select(new, categories, total_max)
+    save_stage("select", chosen, run_date)
     print(f"[daily] 선별 {len(chosen)}건")
 
     # 5) write (budget = 남은 예산; SPEC §7.3 폭주 방지)
