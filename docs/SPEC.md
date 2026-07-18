@@ -529,12 +529,13 @@ final_score = base_score × lane_weight × tier_multiplier
 ```yaml
 on:
   schedule:
-    - cron: '30 21 * * 0-4'   # UTC 21:30 = KST 익일 06:30, 평일만
+    - cron: '30 21 * * *'    # UTC 21:30 = KST 익일 06:30, 매일(주말 포함)
   workflow_dispatch:           # 수동 실행 지원
 ```
 
 - KST 07:00 도착 목표. GH Actions는 부하 시 5~15분 지연이 흔하므로 30분 여유.
-- 주말 스킵 → 비용 30% 절감
+- **매일 발송(주말 포함).** 사용자 요청(2026-07-18)으로 평일 한정에서 전환. 근거·트레이드오프는 DECISIONS 참조.
+- 월 실행 ~30회(구 평일 22회). §7.3 비용의 "22회" 월 환산은 30회 기준으로 비례 재계산할 것.
 
 **타임존 (필수).** **Actions 러너는 UTC다. 모든 날짜는 KST(Asia/Seoul)로 계산한다.**
 naive `date.today()`/`datetime.now()`를 쓰면 KST 06:30 실행이 UTC 전날로 찍혀 파일이 하루 밀린다

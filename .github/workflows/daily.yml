@@ -1,10 +1,10 @@
 name: daily-brief
 
-# SPEC §7.2 — UTC 21:30 = KST 익일 06:30, 평일만(UTC 일~목 = KST 월~금).
+# SPEC §7.2 — UTC 21:30 = KST 익일 06:30, 매일(주말 포함).
 # GH Actions 는 부하 시 5~15분 지연이 흔해 06:30 목표로 30분 여유(07:00 도착).
 on:
   schedule:
-    - cron: '30 21 * * 0-4'
+    - cron: '30 21 * * *'
   workflow_dispatch:        # 수동 실행 (3-e 정지 지점: 먼저 이걸로 1회 돌려 텔레그램 도착 확인)
 
 # 생성물(news/·index.html·data/published/·data/seen.json)을 레포에 커밋-백 →
