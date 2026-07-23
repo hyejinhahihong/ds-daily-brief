@@ -7557,5 +7557,1108 @@
     "source_tier": 1,
     "first_seen": "2026-07-23",
     "tags": []
+  },
+  "1228e1f214d1254ba2e0807df27c1177f047706c": {
+    "url": "https://aws.amazon.com/blogs/machine-learning/evaluating-ai-agents-a-production-blueprint-with-strands-and-agentcore/",
+    "title": "Evaluating AI Agents: A production blueprint with Strands and AgentCore",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "agent-evaluation",
+      "production"
+    ]
+  },
+  "4d882ee5fa24a20b4dba1f1745df12bcd147d851": {
+    "url": "https://aws.amazon.com/blogs/machine-learning/building-trade-assistant-how-jefferies-optimized-front-office-trading-operations-with-ai/",
+    "title": "Building trade assistant: How Jefferies optimized front office trading operations with AI",
+    "category": "industry-application",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "trading",
+      "front-office"
+    ]
+  },
+  "c619b4ca1eb793ecd1125b7f405d160d38fb3a5c": {
+    "url": "https://aws.amazon.com/blogs/machine-learning/building-multi-region-visualizations-with-highcharts-in-amazon-quick/",
+    "title": "Building multi-Region visualizations with Highcharts in Amazon Quick",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "0bfe488029bee9006f72342c052a4f73da46bf04": {
+    "url": "https://aws.amazon.com/blogs/machine-learning/detecting-silent-agent-failures-with-amazon-bedrock-agentcore-optimization/",
+    "title": "Detecting silent agent failures with Amazon Bedrock AgentCore optimization",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "agent-monitoring",
+      "bedrock"
+    ]
+  },
+  "47e074aa5f1d2aee52d994adc7a413b3e9c04dbd": {
+    "url": "https://aws.amazon.com/blogs/machine-learning/agentic-retrieval-for-amazon-bedrock-managed-knowledge-base/",
+    "title": "Agentic retrieval for Amazon Bedrock Managed Knowledge Base",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "rag",
+      "retrieval"
+    ]
+  },
+  "9b00ea11ac8405b281b5d24d58761aac11d8847a": {
+    "url": "https://developer.nvidia.com/blog/debugging-ray-tracing-applications-using-nvidia-optix-toolkit/",
+    "title": "Debugging Ray Tracing Applications Using NVIDIA OptiX Toolkit",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "87e06d9f8aa56787623537c363def8e0f6f4829f": {
+    "url": "https://developer.nvidia.com/blog/start-customizing-nvidia-nemotron-3-nano-with-prime-intellect-lab-in-minutes/",
+    "title": "Start Customizing NVIDIA Nemotron 3 Nano with Prime Intellect Lab in Minutes",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "model-customization"
+    ]
+  },
+  "7569338ee0d35289de5fa0da2edc1227182b6ccd": {
+    "url": "https://openai.com/index/health-in-chatgpt",
+    "title": "Launching Health in ChatGPT",
+    "category": "industry-application",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "healthcare"
+    ]
+  },
+  "ce627deb992812dab28841a5cefd4963cd5314f8": {
+    "url": "https://openai.com/index/ntt-data",
+    "title": "NTT DATA Group cuts incident analysis to 30 minutes with Codex",
+    "category": "industry-application",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "incident-analysis",
+      "ops"
+    ]
+  },
+  "ed8f565a53270ba09a187a3c4ef8c19287dd65f3": {
+    "url": "https://tldr.tech/ai/2026-07-23",
+    "title": "Cursor Router 🔀, OpenAI Presence 🤖, AMD + Anthropic deal 🤝🏻",
+    "category": "llm-foundation-model",
+    "source_tier": 2,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "routing",
+      "deployment"
+    ]
+  },
+  "37c9890bc32e7cee73233632c06a3e0ba488e007": {
+    "url": "https://huggingface.co/blog/nunchaku-diffusers",
+    "title": "Bringing Nunchaku 4-bit Diffusion Inference to Diffusers",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "quantization",
+      "inference"
+    ]
+  },
+  "aa15a22cdb9ad4b9123a0eea6852a80c15019b26": {
+    "url": "https://www.oreilly.com/radar/you-probably-wont-read-this-articleand-thats-ok/",
+    "title": "You Probably Won’t Read This Article…and That’s OK",
+    "category": "practice",
+    "source_tier": 2,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "5a364892ad3cfbacc3aa65ce03458f098d1922ce": {
+    "url": "https://www.oreilly.com/radar/the-meter-was-always-running/",
+    "title": "The Meter Was Always Running",
+    "category": "practice",
+    "source_tier": 2,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "7cdb8613ba29c99c35de2d2acd2bbf56e931015b": {
+    "url": "https://towardsdatascience.com/when-data-science-makes-us-sad-the-story-of-an-overbooked-flight/",
+    "title": "When Data Science Makes Us Sad: The Story of an Overbooked Flight",
+    "category": "predictive-modeling",
+    "source_tier": 3,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "case-study"
+    ]
+  },
+  "f5dfcbec3a3a04409a5c1674aa92e7e91410171a": {
+    "url": "https://towardsdatascience.com/most-rag-hallucinations-are-extraction-errors-seven-patterns-for-a-typed-generation-contract/",
+    "title": "Most RAG Hallucinations Are Extraction Errors: Seven Patterns for a Typed Generation Contract",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "rag",
+      "hallucination",
+      "prompt-engineering"
+    ]
+  },
+  "e2bfce5a80a40611685f6d84009a20c8a4e0c47f": {
+    "url": "https://towardsdatascience.com/lessons-learned-after-8-5-years-of-ml/",
+    "title": "Lessons Learned After 8.5 Years of ML",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "e0ddc55a1f5d673a5fe07c58531e4886c7603c9d": {
+    "url": "https://towardsdatascience.com/why-adding-more-ai-agents-made-our-system-slower/",
+    "title": "Why Adding More AI Agents Made Our System Slower",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "a24ca2b11643d01cc612202353b47abcdf6fe15c": {
+    "url": "https://www.kdnuggets.com/getting-started-with-omnivoice-studio",
+    "title": "Getting Started with OmniVoice-Studio",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "e9944adabf0c18ae20b7ee17f8f50d74f0f17518": {
+    "url": "https://www.kdnuggets.com/7-best-claude-code-alternatives-for-cli-agentic-coding",
+    "title": "7 Best Claude Code Alternatives for CLI Agentic Coding",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "49f9b975853ce975aa38dd2860434d3d65d8329a": {
+    "url": "https://machinelearningmastery.com/an-introduction-to-loop-engineering/",
+    "title": "An Introduction to Loop Engineering",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "0db19cd914677cdceb662777ca3d55ba852493a7": {
+    "url": "https://www.analyticsvidhya.com/blog/2026/07/prompt-compression-techniques-guide/",
+    "title": "Prompt Compression Techniques: How to Reduce LLM Costs Without Losing Important Context",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "d0e7b90da3ca386a2951cfd323e953ca9a900369": {
+    "url": "https://www.technologyreview.com/2026/07/23/1140765/supercooled-kidneys-have-been-transplanted-into-pigs-in-a-landmark-achievement/",
+    "title": "Supercooled kidneys have been transplanted into pigs in a “landmark achievement”",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "06cb8d2562b2c0406d9182a15a45f2c5c736c97d": {
+    "url": "https://www.technologyreview.com/2026/07/23/1140753/the-download-energy-transmission-and-us-threats-chinese-ai/",
+    "title": "The Download: energy transmission and US threats against Chinese AI",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "d26781887c5c21650d82f456366ece52bce68fe9": {
+    "url": "https://www.technologyreview.com/2026/07/23/1140346/how-ai-helps-scientists-design-the-next-generation-of-medicines/",
+    "title": "How AI helps scientists design the next generation of medicines",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "6cc189ddbe8d2e9a5535bf4955b308ca6881b1ed": {
+    "url": "https://www.technologyreview.com/2026/07/23/1140739/power-line-grid-chpe/",
+    "title": "The power line that could reshape New York’s grid is hitting snags",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "4f8a35ea4e6f7ffe9ac8c14d8a3d59c80ff15650": {
+    "url": "https://spectrum.ieee.org/nasa-ai-satellite-image-analysis",
+    "title": "NASA Puts Google’s Gemma Large Language Model in Orbit",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "b4d4584e10a95e95887fc798f566e47dc7c374fe": {
+    "url": "https://techcrunch.com/2026/07/23/amd-takes-on-nvidia-with-its-helios-ai-rack-scale-system/",
+    "title": "AMD takes on Nvidia with its Helios AI rack-scale system",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "c6a17a386bdb27271d23d06c2d4d5f9445dc8578": {
+    "url": "https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/",
+    "title": "Anthropic updates Claude voice mode with more capable models",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "84bd7cfa0701efb0daabaac75b9d26c86cc33480": {
+    "url": "https://techcrunch.com/2026/07/23/aegisai-founded-by-former-google-security-execs-lands-36m-to-stop-ai-driven-spear-phishing/",
+    "title": "AegisAI, founded by former Google security execs, lands $36M to stop AI-driven spear phishing",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "00359069d44fdf5108709b73a16c0e058b9d74ae": {
+    "url": "https://techcrunch.com/2026/07/23/runway-bets-on-ai-model-routing-as-generative-media-gets-crowded/",
+    "title": "Runway launches AI model router as generative media gets crowded",
+    "category": "mlops",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "03ca48c266f77a574897b26784e77f92e2e4c021": {
+    "url": "https://techcrunch.com/2026/07/23/openai-makes-chatgpt-health-available-to-all-u-s-users/",
+    "title": "OpenAI makes ChatGPT Health available to all US users",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "3790e5420a1974f120a36006f9fdb06f8982222d": {
+    "url": "https://techcrunch.com/2026/07/23/meta-launched-a-new-ai-optimism-ad-set-to-a-song-about-human-extinction/",
+    "title": "Meta launched a new AI optimism ad set to a song about human extinction",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "d15a0dad264d18d84b7bd8c8c3beea1645773fb4": {
+    "url": "https://techcrunch.com/2026/07/23/nvidia-is-sending-gpus-to-the-moon/",
+    "title": "Nvidia is sending GPUs to the moon",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "d9ffdf3634eb5912e594f6f3618118a94d741933": {
+    "url": "https://techcrunch.com/2026/07/23/ai-chip-startup-etched-defies-skeptics-hits-10-3b-valuation-from-big-name-investors/",
+    "title": "AI chip startup Etched defies skeptics, hits $10.3B valuation from big-name investors",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "085548e5aa0002381212d3e3e9d55a3b740f6bd5": {
+    "url": "https://techcrunch.com/2026/07/23/google-closes-in-on-another-billion-user-product-with-gemini/",
+    "title": "Google’s Gemini nears billion-user milestone",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "1f97c93f772d588ecd19dcfb5235aae958810b77": {
+    "url": "https://techcrunch.com/2026/07/23/experts-say-exploiting-anthropics-fable-isnt-how-kimi-k3-got-so-good/",
+    "title": "Experts say exploiting Anthropic’s Fable isn’t how Kimi K3 got so good",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "a3f620aa6a10ed3faf2bd954aecbb0bf013f47bb": {
+    "url": "https://techcrunch.com/2026/07/22/servicenow-bets-40m-on-indian-firm-businessnext-at-700m-valuation-to-deepen-banking-ai-push/",
+    "title": "ServiceNow bets $40 million on Indian banking software specialist to expand its financial services push",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "2b0ee14bcadb36d9b13cd6e2c50bed1e960de5df": {
+    "url": "https://techcrunch.com/2026/07/22/after-shocking-quarter-ibm-insists-that-ai-isnt-killing-the-mainframe/",
+    "title": "After shocking quarter, IBM insists that AI isn’t killing the mainframe",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "7de634e01d3b0f130b1d6711b758de0b33229a68": {
+    "url": "https://arstechnica.com/gadgets/2026/07/microsoft-responds-to-lg-monitors-installing-mcafee-ads-on-windows/",
+    "title": "Microsoft responds to LG monitors installing McAfee ads on Windows",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "ddc4180c9f2c6b0e7fcc1aaf2247eaf9b016f269": {
+    "url": "https://arstechnica.com/health/2026/07/fda-reports-new-outbreak-of-explosive-diarrhea-with-72-cases-identified/",
+    "title": "FDA reports new outbreak of explosive diarrhea with 72 cases identified",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "2f96ca922bd086e58e6b9a09dde25d3dfafefca2": {
+    "url": "https://arstechnica.com/gadgets/2026/07/google-now-lets-you-log-into-your-account-with-a-selfie/",
+    "title": "Forgot your Google password? Now you can log in with a selfie.",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "0b843e577a7e8d34c1abbbb3078a89bffde232f4": {
+    "url": "https://arstechnica.com/tech-policy/2026/07/ai-kill-switch-act-would-let-trump-admin-order-shutdown-of-rogue-ai-systems/",
+    "title": "AI Kill Switch Act would let Trump admin order shutdown of rogue AI systems",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "1bf843a9b00f38ce3c2f28da85cdb39a9ec1b863": {
+    "url": "https://arstechnica.com/culture/2026/07/final-coyote-vs-acme-trailer-drops-at-sdcc/",
+    "title": "Final Coyote vs. Acme trailer drops at SDCC",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "2e525e08f368dae60305b2a03447ce15ae2224cc": {
+    "url": "https://arstechnica.com/health/2026/07/woman-loses-vision-in-one-eye-after-uti-bacteria-evolves-to-invade-her-brain/",
+    "title": "A woman got a UTI. Two years later, the bacteria had evolved, invaded her brain.",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "8302af858a72ed6a7909d579cf2066b5eb477f4c": {
+    "url": "https://arstechnica.com/tech-policy/2026/07/google-hit-with-1-billion-in-fines-as-eu-braces-for-trump-battle/",
+    "title": "Google hit with $1 billion in fines as EU braces for Trump battle",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "ecf5785173092784232d5e3c540f1854bd12ad19": {
+    "url": "https://arstechnica.com/gaming/2026/07/the-playstation-game-disc-was-dying-long-before-sony-pulled-the-plug/",
+    "title": "Sony's decision to ditch discs was practically inevitable, data shows",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "3cafe2ee039e8f5963487f5de3002520b169bb68": {
+    "url": "https://arstechnica.com/google/2026/07/google-just-had-its-first-negative-cash-flow-quarter-ever-due-to-massive-ai-spending/",
+    "title": "Google just had its first negative cash flow quarter due to massive AI spending",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "2568e67aa59be85d85a564b5d1961ee0a6139310": {
+    "url": "https://arstechnica.com/ai/2026/07/ai-arms-race-in-line-for-a-reckoning-after-openai-hacking-incident/",
+    "title": "AI arms race in line for a reckoning after OpenAI hacking incident",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "ffaaab2c42891548476d28c1d86d39506c539328": {
+    "url": "https://arstechnica.com/science/2026/07/white-house-report-says-trump-can-usher-in-a-new-golden-age-of-science/",
+    "title": "White House report says Trump can usher in a \"new golden age\" of science",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "5b73e27c4e8ab4820751a07b5be5901b9d12fadc": {
+    "url": "https://arstechnica.com/gadgets/2026/07/i-wanted-a-clock-that-never-needed-setting-things-escalated/",
+    "title": "I wanted a clock that never needed setting. Things escalated.",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "3d99d45c2d387cccd44fff587117204b9f482e44": {
+    "url": "https://arstechnica.com/science/2026/07/orcas-team-up-to-ram-sunfish-until-they-explode/",
+    "title": "Watch orcas ram a sunfish so hard it explodes",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "065a50fb5e19ba18a35d9499c0504c4ed85d5c8e": {
+    "url": "https://arstechnica.com/cars/2026/07/teslas-revenues-are-up-but-profits-squeezed-as-musk-spends-on-ai/",
+    "title": "Sales were up at Tesla but so were costs and spending",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "370a8e9aca6aff06cd45cbb41808d2d3d44d7cb3": {
+    "url": "https://www.wired.com/story/meta-david-bowie-apocalypse-ad-is-optimistic-actually/",
+    "title": "Meta’s New Feel-Good AI Ad Uses a Song About the World Ending",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "41c1ccd378732e34cab681904e4b677c849b1c0d": {
+    "url": "https://www.wired.com/story/the-beloved-jibo-robot-is-being-resurrected-as-an-ai-wearable/",
+    "title": "Remember Jibo? Its Successor Is a Wearable That Turns Your Life Into AI Slop",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "7aa0fe6f10d416b9b009ef307b13cb35ddbf3947": {
+    "url": "https://medium.com/daangn/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%94%EB%93%9C%EC%99%80-%EB%B0%B1%EC%97%94%EB%93%9C%EB%A5%BC-%ED%95%9C-%ED%8C%80%EC%9C%BC%EB%A1%9C-%ED%95%A9%EC%B9%98%EB%A9%B4-%EC%96%B4%EB%96%A4-%EC%9D%BC%EC%9D%B4-%EC%9D%BC%EC%96%B4%EB%82%A0%EA%B9%8C-f8b32edb2eb1?source=rss----4505f82a2dbd---4",
+    "title": "프론트엔드와 백엔드를 한 팀으로 합치면 어떤 일이 일어날까?",
+    "category": "practice",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "35c8a6c1c932629a5b0d69f85a4d12369930aec7": {
+    "url": "https://huggingface.co/microsoft/Mage-Flow-Base",
+    "title": "microsoft/Mage-Flow-Base",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "fd5e6bd104daac56b7216ff2bab330514e687b4e": {
+    "url": "https://arxiv.org/abs/2607.19914v1",
+    "title": "Long-Term Sequential Decision Making under Risk",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "timeseries"
+    ]
+  },
+  "c9b451ed48105941b0cc8b0ead68209cf4ab814d": {
+    "url": "https://arxiv.org/abs/2607.19806v1",
+    "title": "OPIUM: Mitigating Steering Externalities and Over-Refusal via Dual Objective Latent Optimization",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "bfb04b413db6df7e4278d84e768839f0dc2f54c9": {
+    "url": "https://arxiv.org/abs/2607.19802v1",
+    "title": "Zero-Observation User Reactivation with Gap-Driven Dimensional Gating",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "clustering"
+    ]
+  },
+  "d2680a4c069ad15422b64c4b5a9ffe8347834ff7": {
+    "url": "https://arxiv.org/abs/2607.19739v1",
+    "title": "Personalized Recommendation Tool Learning via Autonomous Language Agents",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "7a2bdfd8a9bb929c42ff2c20915a1eeff8c3a489": {
+    "url": "https://arxiv.org/abs/2607.19704v1",
+    "title": "Efficient Clustering with Provable Guardrails for LLM Inference at Scale",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "e31ce7ad334a5cd2b2d58fceeb8f41a93a63dab3": {
+    "url": "https://arxiv.org/abs/2607.19459v1",
+    "title": "Strong Gravitational Lensing Posterior Sampling in Pixel-Space Using Diffusion Models and Recurrent Inference Machines",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "aeaaf7a7dfaa4665026d18afbf5b1ebf014e218b": {
+    "url": "https://arxiv.org/abs/2607.19449v1",
+    "title": "Guardrails as Scapegoats: Auditing Unfaithful Safety Refusals in Tool-Augmented LLM Agents",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "7d8ef02851ce2117944f69b5764d49852191264c": {
+    "url": "https://arxiv.org/abs/2607.20377v1",
+    "title": "Statevector-Referenced Geometry Survival of a Four-Qubit ZZ Quantum Kernel on IBM Quantum Hardware: A Fixed-Subset Diagnostic Across Three Execution Configurations",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "0ca3ce79537aad976aefd640c133e8994165f4bd": {
+    "url": "https://arxiv.org/abs/2607.20323v1",
+    "title": "Multi-modal transformer for signal classification in nanopore blockade experiments",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "timeseries"
+    ]
+  },
+  "df1692f3641eb5c7fd9537b5ee6c41aad578ca92": {
+    "url": "https://arxiv.org/abs/2607.20309v1",
+    "title": "Adaptive deep nonparametric regression from dependent data under covariate shift",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "timeseries"
+    ]
+  },
+  "2fd27841dc57935319b716f42882d6d747d6e23e": {
+    "url": "https://arxiv.org/abs/2607.20302v1",
+    "title": "Classical Hardware Acceleration of Quantum Autoencoders for Real-Time Anomaly Detection in Collider Experiments",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "anomaly"
+    ]
+  },
+  "67a7630c428950de954d1f1c9e54b66ba937a1c6": {
+    "url": "https://arxiv.org/abs/2607.20277v1",
+    "title": "Interpretable Fuzzy Rule-Based Regression Extension for Ex-Fuzzy Library",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "tabular"
+    ]
+  },
+  "cffa435ce1122a9d373b7e29136ce40441fbc5d8": {
+    "url": "https://arxiv.org/abs/2607.20230v1",
+    "title": "PIER: Physics-Informed Environmental Retrieval for Time-Series Modeling",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "timeseries"
+    ]
+  },
+  "9980320889cb29990e9729af48c4a2d4f524e02f": {
+    "url": "https://arxiv.org/abs/2607.20173v1",
+    "title": "Instance Hardness-Based Relevance for Imbalanced Regression",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "imbalanced"
+    ]
+  },
+  "690864470a81aed844ccc9e7e7d7d18df8fc12a0": {
+    "url": "https://arxiv.org/abs/2607.20156v1",
+    "title": "Identifying Treatment and Spillover Effects with Control-Based and Forecast-Based Counterfactuals",
+    "category": "causal-inference",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "did"
+    ]
+  },
+  "cdeeb2f430312f06d7628ea25c64533a7be7fbb6": {
+    "url": "https://arxiv.org/abs/2607.20140v1",
+    "title": "CURED: Creating, Understanding, and Repairing Errors Demonstrator",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "tabular",
+      "XAI"
+    ]
+  },
+  "2cb45e4e67bb4e16d06bcf83086b8ca6822b328e": {
+    "url": "https://arxiv.org/abs/2607.20065v1",
+    "title": "TRUST-ESD: A Risk-Calibrated and Governance-Aware AI Framework for Enterprise Strategic Decision Support Under Uncertainty",
+    "category": "causal-inference",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "causal-llm"
+    ]
+  },
+  "a31536692574df842f6540f548cc077d767123b7": {
+    "url": "https://arxiv.org/abs/2607.20058v1",
+    "title": "Reading and Steering Representations of Materials-Science Mechanisms in an Open-Weight Language Model",
+    "category": "causal-inference",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "causal-discovery"
+    ]
+  },
+  "0267c3ef990648ba852c5f8f2c8838e060f3722e": {
+    "url": "https://arxiv.org/abs/2607.20027v1",
+    "title": "Zero-Shot Heart Rate Variability Forecasting from Consumer Wearables Using Time Series Foundation Models",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "timeseries"
+    ]
+  },
+  "de36fb6e27760ae67efbd8d221c832b52416b822": {
+    "url": "https://arxiv.org/abs/2607.20011v1",
+    "title": "Drift-Aware RL-based Wavelet Denoising for Network-Traffic Anomaly Detection",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "anomaly"
+    ]
+  },
+  "550e36ded85ad4c05e993fb8d763bb447c9d4cf2": {
+    "url": "https://arxiv.org/abs/2607.20002v1",
+    "title": "Post-Training in Time Series Foundation Models: A Unifying Framework",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "timeseries"
+    ]
+  },
+  "30242258c650ee9ca84325b9ac53207cd9431268": {
+    "url": "https://arxiv.org/abs/2607.19974v1",
+    "title": "Time Series Network Utilization KPI Forecasting Using Advanced AI/ML Models",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "timeseries",
+      "tabular"
+    ]
+  },
+  "77aceead7726765e2c9ca6cb7996ee9359e91086": {
+    "url": "https://arxiv.org/abs/2607.19956v1",
+    "title": "When Does Knowledge Distillation Hurt? Reliability-Aware Distillation for Low-Resource Language Summarization",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "7a57de9331896ab8014531615541f0b5ba150ace": {
+    "url": "https://arxiv.org/abs/2607.19925v1",
+    "title": "Efficient difference-in-differences estimation under partial interference with incremental propensity score policies",
+    "category": "causal-inference",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "did",
+      "psm-ipw"
+    ]
+  },
+  "267c5349909219b19ea9633767a4e71e6f0dc6f6": {
+    "url": "https://arxiv.org/abs/2607.19908v1",
+    "title": "Treatment Geometry and Causal Identification with Earth Observation Data",
+    "category": "causal-inference",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "causal-discovery"
+    ]
+  },
+  "c281101c986a06f75fe708859a2ce73aff3ff8de": {
+    "url": "https://arxiv.org/abs/2607.19902v1",
+    "title": "Nonlinear Bias-Compensated Adaptive Filter and Its Application for Time-Series Prediction",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "timeseries"
+    ]
+  },
+  "a9d78587defdd0c2d5e7f39c279afe5b6e763914": {
+    "url": "https://arxiv.org/abs/2607.19899v1",
+    "title": "Harnessing Disagreement: Detecting Correlated Agreement Blindness in Multi-Agent Triage",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "5bf7a4c66e3afd5d71721a7c0f13aa12e7d62ed7": {
+    "url": "https://arxiv.org/abs/2607.19866v1",
+    "title": "Local Causal Structure Learning in the Presence of Latent Variables and Selection Bias",
+    "category": "causal-inference",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "causal-discovery"
+    ]
+  },
+  "cf191f5c523f860512930ec566a09fd79a7dba51": {
+    "url": "https://arxiv.org/abs/2607.19854v1",
+    "title": "Asymptotically Optimal Regret for Reinforcement Learning without Horizon Dependence",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "8827910d17bcd722b7925ac64c74435e5c3f24df": {
+    "url": "https://arxiv.org/abs/2607.19847v1",
+    "title": "Auto-Fill: Learning to Predict Missing Values Accurately with Specialist Language Models",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "tabular"
+    ]
+  },
+  "8bff7b9b8bdd186fc51fa80dcd8fb98cc6fc8c3d": {
+    "url": "https://arxiv.org/abs/2607.19768v1",
+    "title": "AlphaRoute: Large Language Models as Semantic Optimizers for Multi-Objective Routing",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "2fa3dac52710d6f97e226c118b5027eb549369af": {
+    "url": "https://arxiv.org/abs/2607.19692v1",
+    "title": "Data-Poisoning Audits for Causal Effect Estimation",
+    "category": "causal-inference",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "causal-discovery"
+    ]
+  },
+  "d023e9260471f2d8fd3885a49a6569ec7a3e5956": {
+    "url": "https://arxiv.org/abs/2607.19689v1",
+    "title": "Optimal Recalibration of an Online Predictor",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "imbalanced"
+    ]
+  },
+  "53accebbcc3e19c13d266ebdc01663b4947a3b47": {
+    "url": "https://arxiv.org/abs/2607.19659v1",
+    "title": "Expert-Guided Forecast Editing for Time-Series Foundation Models",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "timeseries"
+    ]
+  },
+  "49a29400bd8ea1203edcb5d9124f040ee0f5a106": {
+    "url": "https://arxiv.org/abs/2607.19644v1",
+    "title": "A Fixed-Effects Causal Forest for Staggered Adoption, with an Application to Medicaid Expansion",
+    "category": "causal-inference",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "causal-forest",
+      "did"
+    ]
+  },
+  "00d897c1d77bf847d4c665c7c71efc8feba8f8be": {
+    "url": "https://arxiv.org/abs/2607.19627v1",
+    "title": "GAUGER: Generalized Regression Adjustment via Graph-Weighted Exposure-Level Residualization for Design-Based Inference Under Interference",
+    "category": "causal-inference",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "causal-inference"
+    ]
+  },
+  "8860ee1891fe3edfe15a7e0d335c77dbcc8ab3c2": {
+    "url": "https://arxiv.org/abs/2607.19620v1",
+    "title": "SCPP: A Unified Python Library for Soft Clustering",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "clustering"
+    ]
+  },
+  "6b6486ca5b03454c48d7e723141b28b7d9ef4180": {
+    "url": "https://arxiv.org/abs/2607.19597v1",
+    "title": "A Deep Learning Framework for Predicting Solar EUV Irradiance During Significant Flares",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "timeseries"
+    ]
+  },
+  "8b9fbe364e43a686c76c55497877c7d7bf3c43c9": {
+    "url": "https://arxiv.org/abs/2607.19548v1",
+    "title": "Agent-Centric Animal Pose Forecasting",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "timeseries"
+    ]
+  },
+  "92a852725b260e6880dc41718bed22c914ba36a1": {
+    "url": "https://arxiv.org/abs/2607.19528v1",
+    "title": "D3VL: Understanding Driving Scenes from 3D Time Series Data and Video with Language Models",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "timeseries"
+    ]
+  },
+  "0088ea3560e95fb572f2d6d1fc991bbad6ef91de": {
+    "url": "https://arxiv.org/abs/2607.19524v1",
+    "title": "SynPre-FL: Synthetic data-driven pretraining integrated Federated Learning training framework",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "tabular",
+      "imbalanced",
+      "xai"
+    ]
+  },
+  "db826b72ca69d8faf8ee4b2a6ddac1ef6f849a18": {
+    "url": "https://arxiv.org/abs/2607.19516v1",
+    "title": "Evidence Synthesis in Probabilistic Extreme Event Attribution: From Attribution Measures to Model Parameters",
+    "category": "causal-inference",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "causal-inference"
+    ]
+  },
+  "4d469b4e433d8e9631b848323a8ce7a1b1618349": {
+    "url": "https://arxiv.org/abs/2607.19506v1",
+    "title": "Hybrid LLM-Guided Search for Quantum Reservoir Architecture Design",
+    "category": "causal-inference",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "causal-inference"
+    ]
+  },
+  "adbd399edb40bb26ecd2a4da1a4ed85408fbace3": {
+    "url": "https://arxiv.org/abs/2607.19455v1",
+    "title": "Generating Bearing Vibration Signals at User-Specified Fault Probabilities Using PR-GAN and Counterfactual Methods",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "anomaly",
+      "timeseries"
+    ]
+  },
+  "2ae7c55b44b4bccce3324bbeda20fc368a664ca6": {
+    "url": "https://arxiv.org/abs/2607.19444v1",
+    "title": "Marine Engine Fault Dataset: Open-Access Data under Controlled Reference and Fault Scenario Conditions",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "anomaly",
+      "timeseries"
+    ]
+  },
+  "f1c4fa11affe89937cfcd089b7a8386c102181ea": {
+    "url": "https://arxiv.org/abs/2607.19442v1",
+    "title": "Unlearning as Distribution Restoration: A Controlled Counterfactual Study, a Validated Selective Screen, and the Limits of Oracle-Free Certification",
+    "category": "causal-inference",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "causal-inference"
+    ]
+  },
+  "663aea2d4d57bac333d3e66affbe540fd5a9b3ab": {
+    "url": "https://arxiv.org/abs/2607.19433v1",
+    "title": "The Chronos Vulnerability: A Taxonomy of Temporal Persistence and Memory-Based Deception in Agentic AI",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "a47a0943ae3df2e17a40cb65a2ccd2967bc5752d": {
+    "url": "https://arxiv.org/abs/2607.20092",
+    "title": "ENTRAP-VL: A Taxonomic Probe for Dual Contextual Entrainment in Vision-Language Models",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "3aa9697fcff933371de8aa86269ce8abf92168d6": {
+    "url": "https://arxiv.org/abs/2607.18149",
+    "title": "Differentiable Logic Gate Networks for Low-Latency EEG Classification on Edge Devices",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "36ca1c0e6dbdcebb6f460f6a757fd6a505d5954d": {
+    "url": "https://arxiv.org/abs/2607.18789",
+    "title": "Moving Alphabet: A Controlled Study of Training Data for Text-to-Video Generation",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "48c2c7e6c82f97a0a5e26d75d248aa12c7de2886": {
+    "url": "https://arxiv.org/abs/2607.17699",
+    "title": "SLAM in Low-Light Environments: Project Report",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "614b61028d0479f6fc6c397861159f2595f55093": {
+    "url": "https://arxiv.org/abs/2607.19865",
+    "title": "DocOps: A Verifiable Benchmark for Autonomous Agents in Complex Document Operations",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "076c2426b6fc14bba4cdcbcac8b8890903e1f484": {
+    "url": "https://arxiv.org/abs/2607.19604",
+    "title": "Scaling Laws for Hypernetwork-Based Knowledge Injection in Large Language Models",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "4bf6336bd6ca1921a3228a3feed4562c03d9ca67": {
+    "url": "https://arxiv.org/abs/2607.16165",
+    "title": "An Exam for Active Observers",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "be2beaf801c03e247406cefbebaf9ac3c5191f55": {
+    "url": "https://arxiv.org/abs/2607.20379",
+    "title": "Train the Model, Not the Reader: Decodability Supervision for Verifiable Activation Explanations",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "XAI"
+    ]
+  },
+  "9f6dbe9fa5cb6e9ea778d61b691199222f5959f6": {
+    "url": "https://arxiv.org/abs/2607.16190",
+    "title": "FVAttn: Adaptive Sparse Attention with Runtime Load Balancing for Video Generation",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "f83ef18279f1e5f5114e31322915ed3b6dc62573": {
+    "url": "https://arxiv.org/abs/2607.19790",
+    "title": "Trace: A Taxonomy-Guided Environment for Multidomain Visual Reasoning",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "99d394c0cffb7be1ab89f3403b911bc856c596ef": {
+    "url": "https://arxiv.org/abs/2607.10169",
+    "title": "Beyond Euclidean Clipping: Overcoming Exploration Collapse in LLM RL via Riemannian Isometric Policy Optimization",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "b8e1c4be6c859ba3295f5d0fa2eb396d40a9490f": {
+    "url": "https://arxiv.org/abs/2607.20368",
+    "title": "Self Gradient Forcing: Native Long Video Extrapolation",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "cfd73b6f0859c6002a9506d4be4f60fc011a6e8a": {
+    "url": "https://arxiv.org/abs/2607.13429",
+    "title": "Generalizable VLA Finetuning via Representation Anchoring and Language-Action Alignment",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "e922ec63faac2930046516e7c255d6efd316ab81": {
+    "url": "https://arxiv.org/abs/2607.19747",
+    "title": "Beyond Relevance-Centric Retrieval: Rubric-Oriented Document Set Selection and Ranking",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "f3a6e320a9c12b25313dbf14ed9ba2f4c7d36590": {
+    "url": "https://arxiv.org/abs/2607.20145",
+    "title": "SLAI T-Rex: Full-Parameter Post-training of the DeepSeek-V4 Family on Ascend SuperPOD",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "1db2b7900fff77d983cb063d3235fab0951b1df6": {
+    "url": "https://arxiv.org/abs/2607.19691",
+    "title": "SLPO: Scaling Latent Reasoning via a Surrogate Policy",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "3f7cddc170dd0ed9e8d335badbf8cd2abecd392e": {
+    "url": "https://arxiv.org/abs/2607.19942",
+    "title": "G-MAD: A Game-Based Data Generation Framework for Multi-View RGB-T Aerial Object Detection",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "a3ca637377aca7b222de0b9b1a7df9bfb3e9ff9c": {
+    "url": "https://arxiv.org/abs/2607.20207",
+    "title": "SeededGrasp: Language-Guided Grasping in Complex Scenes with Multiple Embodiments",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "tool-use",
+      "embodiment"
+    ]
+  },
+  "0b063410c8b7cb148fa07c44540c675d941f59aa": {
+    "url": "https://arxiv.org/abs/2607.20417",
+    "title": "ATSplat: Compact Feed-forward 3D Gaussian Splatting with Adaptive Token Expansion",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": []
+  },
+  "0f070ea150baac1e0235a9a134305517d9c89a9b": {
+    "url": "https://arxiv.org/abs/2607.20058",
+    "title": "Reading and Steering Representations of Materials-Science Mechanisms in an Open-Weight Language Model",
+    "category": "causal-inference",
+    "source_tier": 1,
+    "first_seen": "2026-07-24",
+    "tags": [
+      "causal-discovery",
+      "causal-llm"
+    ]
   }
 }
