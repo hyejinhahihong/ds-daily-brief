@@ -9638,5 +9638,146 @@
     "source_tier": 1,
     "first_seen": "2026-07-25",
     "tags": []
+  },
+  "20dd6a96184cb3c74d6fa6608b02176526f37704": {
+    "url": "https://towardsdatascience.com/optimizing-vector-search-on-disk-vs-in-memory-ann-indexes-when-ram-gets-too-expensive/",
+    "title": "How to Optimize Vector Search When RAM Gets Too Expensive: On-Disk vs. In-Memory ANN Indexes",
+    "category": "mlops",
+    "source_tier": 3,
+    "first_seen": "2026-07-26",
+    "tags": [
+      "serving",
+      "feature-store"
+    ]
+  },
+  "1188f3f5e5ec43fdd159dea09be0da844d87ac49": {
+    "url": "https://towardsdatascience.com/the-fluid-simulator-that-doesnt-solve-the-fluid-equations/",
+    "title": "The Fluid Simulator That Doesn’t Solve the Fluid Equations",
+    "category": "deep-learning",
+    "source_tier": 3,
+    "first_seen": "2026-07-26",
+    "tags": []
+  },
+  "36fc9b6f92f93102b1182f75c72805d53166deaf": {
+    "url": "https://www.kdnuggets.com/kdnuggets-weekly-roundup-2026-07-20",
+    "title": "KDnuggets Weekly Roundup: Week of July 20, 2026",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-07-26",
+    "tags": []
+  },
+  "941c889d5cd6acbaac06ff015e9a6b27c0ab0b33": {
+    "url": "https://www.analyticsvidhya.com/blog/2026/07/guide-to-ai-red-teaming/",
+    "title": "A Complete Guide to AI Red-Teaming (With Garak Tutorial)",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-07-26",
+    "tags": [
+      "alignment"
+    ]
+  },
+  "2040a4e41a8d6335eeea401bcf8ac0b552098e98": {
+    "url": "https://techcrunch.com/2026/07/25/librarians-are-hosting-viral-avoiding-ai-workshops-for-people-who-are-fed-up-with-big-tech/",
+    "title": "Librarians are hosting viral ‘Avoiding AI’ workshops for people who are fed up with Big Tech",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-07-26",
+    "tags": []
+  },
+  "ff3761b962cfb686e8b924d8b5181ddddcbc2ad1": {
+    "url": "https://techcrunch.com/2026/07/25/one-fallen-power-line-exposed-a-growing-ai-data-center-problem-heres-how-to-fix-it/",
+    "title": "One fallen power line exposed a growing AI data center problem. Here’s how to fix it.",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-07-26",
+    "tags": []
+  },
+  "68eaa3a9fab147c2df1528cf97334eb025bd3a33": {
+    "url": "https://techcrunch.com/2026/07/24/i-tried-out-openais-new-ai-keypad-which-will-be-fun-for-coders-and-slightly-mystifying-to-everyone-else/",
+    "title": "I tried out OpenAI’s new AI keypad — which will be fun for some coders and slightly mystifying to everyone else",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-07-26",
+    "tags": []
+  },
+  "5c26666d114087545985871fcdd0295764b797ef": {
+    "url": "https://techcrunch.com/2026/07/24/prentis-new-ai-lab-co-founded-by-reid-hoffman-mark-pincus-in-talks-to-raise-100m/",
+    "title": "Prentis, new AI lab co-founded by Reid Hoffman, Mark Pincus in talks to raise $100M",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-07-26",
+    "tags": []
+  },
+  "f6bf645a87c3dd9a681ed143836abc8450167c56": {
+    "url": "https://arstechnica.com/culture/2026/07/sdcc-teaser-gives-us-our-first-good-look-at-blade-runner-2099/",
+    "title": "SDCC teaser gives us our first good look at Blade Runner 2099",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-07-26",
+    "tags": []
+  },
+  "22e18dbe34c5aed7dda8f96617dd9ea42e2454a7": {
+    "url": "https://arstechnica.com/space/2026/07/spacex-eyes-tower-catch-for-next-starship-after-auspicious-end-to-13th-flight/",
+    "title": "SpaceX eyes tower catch for next Starship after auspicious end to 13th flight",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-07-26",
+    "tags": []
+  },
+  "e020c2527d72684ef8459db0246665ef911c0400": {
+    "url": "https://arstechnica.com/culture/2026/07/with-help-from-data-art-museums-are-reframing-the-visitor-experience/",
+    "title": "With help from data, art museums are reframing the visitor experience",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-07-26",
+    "tags": [
+      "XAI"
+    ]
+  },
+  "171f0991c3c19f68f7b3cfdc07ec61d6d7abd9ec": {
+    "url": "https://arstechnica.com/tech-policy/2026/07/big-tech-accused-of-stonewalling-european-social-media-researchers/",
+    "title": "Big Tech accused of stonewalling European social media researchers",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-07-26",
+    "tags": []
+  },
+  "2af908505965728bab8f7583ff28ade98755c7e0": {
+    "url": "https://arstechnica.com/space/2026/07/wildfire-forces-evacuation-of-nasas-deep-space-network-complex-in-spain/",
+    "title": "Wildfire forces evacuation of NASA's Deep Space Network complex in Spain",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-07-26",
+    "tags": []
+  },
+  "06e6c8eaee862788f2b854076435a7f095c0387b": {
+    "url": "https://arstechnica.com/tech-policy/2026/07/after-court-loss-paramount-agrees-to-delay-warner-bros-merger-until-trial/",
+    "title": "Paramount/WBD merger delayed for months as states' lawsuit moves toward trial",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-07-26",
+    "tags": []
+  },
+  "ae11fc1f8d973741623e85ff3b31fa4ec9c36485": {
+    "url": "https://www.wired.com/story/security-news-this-week-the-openai-models-that-hacked-hugging-face-were-active-on-the-internet-for-days/",
+    "title": "The OpenAI Models That Hacked Hugging Face Were ‘Active on the Internet’ for Days",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-07-26",
+    "tags": [
+      "alignment"
+    ]
+  },
+  "9602dd05c9bd976be441327781f8a47265634ca9": {
+    "url": "https://arxiv.org/abs/2607.21557",
+    "title": "OpenForgeRL: Train Harness-native Agents in Any Environment",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-07-26",
+    "tags": [
+      "agent-training",
+      "reinforcement-learning",
+      "environment-agnostic"
+    ]
   }
 }

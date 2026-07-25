@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI &amp; ML News Letter · 07/26</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --accent:#5DB8A6; --accent-hover:#479B8B; --accent-weak:#E8F4F1;
+  --focus-ring:rgba(93,184,166,.5);
+  --bg:#FAF9F5; --bg-subtle:#F0EEE6; --border:#E7E3D9;
+  --text:#1F1E1D; --text-2:#6B6862; --text-3:#A39E94;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}}
+:root[data-theme="dark"]{
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover);text-decoration:underline}
+strong{font-weight:600;color:var(--text)}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px;border-radius:3px}
+
+/* 모바일 우선 단일 컬럼 (<1200px). 덩어리 중앙 정렬은 margin:0 auto. */
+.page{max-width:760px;margin:0 auto;padding:20px 18px 40px}
+
+/* --- 마스트헤드 (뉴스레터 제호) --- */
+.mast{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+  padding-bottom:14px;border-bottom:2px solid var(--text);margin-bottom:24px}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--accent);
+  text-transform:uppercase;margin:0 0 6px}
+.mast-title{font-size:26px;font-weight:600;margin:0;letter-spacing:-.01em;line-height:1.15}
+.mast-date{font-size:14px;color:var(--text-2);margin-top:8px}
+.themebtn{flex:none;background:var(--bg-subtle);border:1px solid var(--border);color:var(--text-2);
+  border-radius:20px;padding:5px 12px;font-size:13px;cursor:pointer;font-family:inherit}
+.topnav{margin-top:11px;display:flex;gap:16px;font-size:13px}
+.topnav a{color:var(--text-2);font-weight:500} .topnav a:hover{color:var(--accent)}
+@media (min-width:640px){.mast-title{font-size:31px}}
+
+/* --- TODAY'S TOP 3 --- */
+.top3{background:var(--accent-weak);border-radius:12px;padding:14px 18px;margin-bottom:24px}
+.top3 h2{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--accent);margin:0 0 8px}
+.top3 ol{margin:0;padding:0;list-style:none}
+.top3 li{padding:4px 0 4px 22px;position:relative;font-size:15px;color:var(--text)}
+.top3 li::before{content:"\2605";position:absolute;left:0;color:var(--accent);font-size:12px;top:7px}
+.top3 .t3cat{color:var(--text-2);font-size:12px;margin-right:5px}
+.top3 a{color:var(--text)} .top3 a:hover{color:var(--accent-hover)}
+
+/* --- 목차 (TOC) --- */
+.toc{margin-bottom:26px}
+.toc h2{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--text-2);margin:0 0 8px}
+.toc ul{margin:0;padding:0;list-style:none}
+.toc li{padding:6px 0;border-top:1px solid var(--border)}
+.toc li:first-child{border-top:none}
+.toc .r{display:flex;gap:6px;align-items:baseline;font-size:14px}
+.toc .nm{font-weight:500;color:var(--text)} .toc a:hover .nm{color:var(--accent)}
+.toc .cnt{color:var(--text-3);font-size:12px}
+.toc .lead{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  font-size:12px;color:var(--text-2);margin-top:2px;line-height:1.4}
+.toc li.active .nm{color:var(--accent)}
+.toc li.active{border-left:2px solid var(--accent);padding-left:8px;margin-left:-10px}
+
+/* --- 섹션 --- */
+.sec{margin:0 0 34px;scroll-margin-top:14px}
+.sec-h{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:0 0 2px;padding-top:6px}
+.sec-h .nm{font-size:20px;font-weight:600}
+.sec-h .cnt{font-size:13px;color:var(--text-3)}
+.sec-h .all{font-size:12px;color:var(--text-3);margin-left:auto}
+.sec-h .all span{color:var(--text-2)}
+.sec-h .exp{font-size:12px;background:none;border:1px solid var(--border);color:var(--text-2);
+  border-radius:14px;padding:2px 10px;cursor:pointer;font-family:inherit}
+.sec-desc{font-size:13px;color:var(--text-2);margin:0 0 8px}
+.sec-empty{font-size:14px;color:var(--text-3);padding:4px 0 6px}
+.backtop{display:inline-block;font-size:12px;color:var(--text-3);margin-top:6px}
+
+/* --- 아이템 (아코디언) — 거터(번호) + 단일 콘텐츠 컬럼 (DESIGN §3 v4). 좌측 정렬선 1개. --- */
+.item{border-bottom:1px solid var(--border);--gutter:28px}
+.item>summary{list-style:none;cursor:pointer;padding:16px 26px 16px 0;position:relative;
+  display:grid;grid-template-columns:var(--gutter) 1fr;align-items:start}
+.item>summary::-webkit-details-marker{display:none}
+.item>summary::after{content:"\25B8";position:absolute;right:2px;top:16px;color:var(--text-3);
+  font-size:13px;transition:transform .15s;display:inline-block}
+.item[open]>summary::after{transform:rotate(90deg)}
+.num{font-size:13px;color:var(--text-3);font-variant-numeric:tabular-nums;font-weight:500;padding-top:3px}
+.t3star{color:var(--accent);font-size:11px;margin-right:2px}
+.body-col{min-width:0}
+.it-title{display:block;font-size:18px;font-weight:600;color:var(--text);line-height:1.4}
+.item>summary:hover .it-title{color:var(--accent)}
+.it-sub{display:block;font-size:13px;color:var(--text-2);margin-top:3px;line-height:1.35}
+.it-meta{display:block;font-size:13px;color:var(--text-2);margin-top:6px}
+.it-lede{display:block;font-size:15px;color:var(--text-2);margin-top:7px;line-height:1.5}
+.item[open] .it-lede{color:var(--text)}
+/* 접힘 본문도 콘텐츠 컬럼에 정렬 (거터만큼 들여씀) */
+.it-body{padding:0 0 20px var(--gutter)}
+.it-body p{margin:0 0 10px}
+@media (min-width:900px){.item{--gutter:40px}}
+.slot-l{font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--text-2);margin:14px 0 2px}
+.tags{margin-top:10px}
+.tag{display:inline-block;font-size:12px;color:var(--text-2);background:var(--bg-subtle);
+  border:1px solid var(--border);border-radius:12px;padding:1px 9px;margin:0 5px 5px 0}
+.prev{font-size:13px;color:var(--text-3);margin-top:8px}
+.src-cta{display:inline-block;margin-top:12px;font-size:14px;font-weight:500;color:var(--accent)}
+.weak{color:var(--accent);font-size:12px;border:1px solid var(--accent);border-radius:5px;
+  padding:0 6px;margin-left:6px}
+
+/* --- "다루는 주제" 푸터 --- */
+.topics{margin-top:36px;padding-top:22px;border-top:2px solid var(--text)}
+.topics h2{font-size:15px;font-weight:600;margin:0 0 12px}
+.topics ul{margin:0;padding:0;list-style:none}
+.topics li{padding:7px 0;border-top:1px solid var(--border);font-size:13px;color:var(--text-2)}
+.topics li:first-child{border-top:none}
+.topics .tnm{font-weight:600;color:var(--accent);margin-right:6px}
+
+/* --- 데스크톱 (≥1200px): 좌측 sticky TOC(260) + 본문(720), 덩어리 중앙 정렬 --- */
+@media (min-width:1200px){
+  /* max-width = 260+44+720 그리드(1024) + 좌우 padding(18*2). box-sizing:border-box
+     라 padding 을 포함해야 본문 720 이 찌그러지지 않는다. */
+  .page{max-width:1060px;display:grid;grid-template-columns:260px minmax(0,720px);
+    column-gap:44px;justify-content:center;align-items:start;padding-top:28px}
+  .mast{grid-column:1/3}
+  .toc{grid-column:1;grid-row:2/999;position:sticky;top:24px;margin:0;align-self:start}
+  .top3,.main{grid-column:2}
+  .topics{grid-column:1/3}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="mast">
+    <div class="mast-l">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1 class="mast-title">AI &amp; ML News Letter</h1>
+      <div class="mast-date">2026 / 07 / 26 (일) · 9건</div>
+      <nav class="topnav"><a href="../../../archive.html">📅 지난 브리핑</a>
+        <a href="#topics">🗂 주제별 보기</a></nav>
+    </div>
+    <button id="tbtn" class="themebtn" type="button">🌓 테마</button>
+  </header>
+  <section class="top3"><h2>TODAY'S TOP 3</h2><ol><li><a href="#9602dd05c9bd"><span class="t3cat">[AI Agent]</span>OpenForgeRL: Train Harness-native Agents in Any Environment</a></li><li><a href="#20dd6a96184c"><span class="t3cat">[MLOps / ML Engineering]</span>RAM 비용 부담될 때 벡터 검색 최적화 — HNSW·SPANN·DiskANN의 온디스크 vs 인메모리 트레이드오프</a></li><li><a href="#941c889d5cd6"><span class="t3cat">[LLM / Foundation Model]</span>AI 레드팀 완전 가이드 — McKinsey AI 플랫폼, SQL 인젝션으로 2시간 만에 뚫려</a></li></ol></section>
+  <nav class="toc" id="toc"><h2>오늘의 목차</h2><ul><li data-cat="ai-agent"><a href="#ai-agent"><span class="r"><span class="nm">AI Agent</span><span class="cnt">1</span></span><span class="lead">OpenForgeRL, 하네스 기반 에이전트 end-to-end RL 학습 프레임워크 공개 — GUI서 대형 모델 능가</span></a></li><li data-cat="llm-foundation-model"><a href="#llm-foundation-model"><span class="r"><span class="nm">LLM / Foundation Model</span><span class="cnt">2</span></span><span class="lead">AI 레드팀 완전 가이드 — McKinsey AI 플랫폼, SQL 인젝션으로 2시간 만에 뚫려</span></a></li><li data-cat="deep-learning"><a href="#deep-learning"><span class="r"><span class="nm">Deep Learning</span><span class="cnt">1</span></span><span class="lead">유체 방정식 없이 카르만 소용돌이 재현 — Lattice Boltzmann Method, C++로 구현해 슈퍼컴퓨터서 실행</span></a></li><li data-cat="predictive-modeling"><a href="#predictive-modeling"><span class="r"><span class="nm">예측 모델링</span><span class="cnt">1</span></span><span class="lead">미술관, 데이터 기반으로 관람 경험 재설계 — 방문객 이해 위한 큐레이션 시도 확산</span></a></li><li data-cat="mlops"><a href="#mlops"><span class="r"><span class="nm">MLOps / ML Engineering</span><span class="cnt">1</span></span><span class="lead">RAM 비용 부담될 때 벡터 검색 최적화 — HNSW·SPANN·DiskANN의 온디스크 vs 인메모리 트레이드오프</span></a></li><li data-cat="practice"><a href="#practice"><span class="r"><span class="nm">실무 사례 · 노하우</span><span class="cnt">3</span></span><span class="lead">TechCrunch, OpenAI &#x27;피지컬 AI 키패드&#x27; 체험기 공개 — 일부 코더엔 재미, 대다수엔 낯설어</span></a></li></ul></nav>
+  <main class="main"><section class="sec" id="ai-agent"><div class="sec-h"><span class="nm">AI Agent</span><span class="cnt">1건</span><span class="all"><a href="../../../category/ai-agent.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="ai-agent">전체 펼치기</button></div><div class="sec-desc">AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</div><details class="item" id="9602dd05c9bd" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">OpenForgeRL: Train Harness-native Agents in Any Environment</span><span class="it-sub">OpenForgeRL, 하네스 기반 에이전트 end-to-end RL 학습 프레임워크 공개 — GUI서 대형 모델 능가</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">OpenForgeRL은 Claude Code, Codex, OpenClaw 같은 복잡한 추론 하네스를 사용하는 에이전트를 실제 하네스와 환경에서 end-to-end로 학습시키는 오픈소스 프레임워크다.</span></span></summary><div class="it-body"><p>하네스의 모델 호출을 가로채 학습 데이터로 기록하는 경량 프록시와, 각 롤아웃을 독립 컨테이너에서 실행하는 쿠버네티스 오케스트레이터를 결합해 학습과 추론을 분리했다. 수백~수천 개의 태스크만으로 학습한 OpenForgeClaw는 ClawEval에서 pass^3 31.7, pass@3 55.9, QwenClawBench에서 33.7을 기록했고, OpenForgeGUI는 OSWorld-Verified 37.7, Online-Mind2Web 63.0, WebVoyager 72.3을 달성했다. 두 모델 모두 비슷한 크기의 오픈 베이스라인을 거의 모든 벤치마크에서 능가했으며, GUI 환경에서는 <strong>몇 배 더 큰 모델과 대등하거나 이를 상회</strong>했다. 하네스 종류와 RL이 에이전트 행동에 미치는 영향도 분석해, RL이 자기검증·툴 커버리지·다단계 계획 완수 등 신뢰성은 개선하지만 오류 복구 능력은 여전히 약하다는 점을 확인했다.</p><div class="slot-l">WHY IT MATTERS</div><p>기존 SFT/RL 스택은 상태를 갖는 다중 프로세스 하네스 추론을 표현하지 못해 실전 배포용 에이전트를 원본 환경에서 직접 학습·연구하기 어려웠는데, 이 프레임워크는 그 격차를 메워 연구자가 실제 사용되는 하네스와 환경에서 바로 개선 작업을 할 수 있게 한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 방식은 학습 인프라가 하네스의 상태 유지형 멀티프로세스 추론을 직접 다루지 못했던 것과 달리, OpenForgeRL은 프록시로 모델 호출을 기록하고 <strong>컨테이너 단위 롤아웃</strong>으로 학습과 추론을 분리해 임의의 하네스·환경 조합에 대규모로 적용할 수 있다.</p><div class="tags"><span class="tag">#agent-training</span><span class="tag">#reinforcement-learning</span><span class="tag">#environment-agnostic</span></div><a class="src-cta" href="https://arxiv.org/abs/2607.21557" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="llm-foundation-model"><div class="sec-h"><span class="nm">LLM / Foundation Model</span><span class="cnt">2건</span><span class="all"><a href="../../../category/llm-foundation-model.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="llm-foundation-model">전체 펼치기</button></div><div class="sec-desc">LLM·파운데이션 모델 — 사전학습·정렬·추론</div><details class="item" id="941c889d5cd6" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">AI 레드팀 완전 가이드 — McKinsey AI 플랫폼, SQL 인젝션으로 2시간 만에 뚫려</span><span class="it-sub">A Complete Guide to AI Red-Teaming (With Garak Tutorial)</span><span class="it-meta">✍️ 블로그 · analyticsvidhya.com</span><span class="it-lede">이 블로그는 AI 레드팀(red-teaming)의 개념과 필요성을 다루며, Garak 툴 튜토리얼을 포함한다.</span></span></summary><div class="it-body"><p>도입부 사례로 자율 AI 에이전트가 오래된 SQL 인젝션 취약점만으로 McKinsey의 내부 AI 플랫폼을 침해한 사건을 소개한다. 이 공격은 자격증명이나 사람의 개입 없이 <strong>2시간도 안 되어</strong> 프로덕션 시스템까지 도달했고, 수백만 건의 채팅 메시지와 수십만 개의 파일이 노출됐다. 이를 근거로 기존의 AI 보안 가정이 더 이상 유효하지 않다고 지적한다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI 시스템이 자율적으로 취약점을 찾아 공격에 활용할 수 있음을 보여주는 실제 사례로, DS/AI 실무자에게 프로덕션 배포 전 보안 점검의 중요성을 환기시킨다.</p><div class="tags"><span class="tag">#alignment</span></div><a class="src-cta" href="https://www.analyticsvidhya.com/blog/2026/07/guide-to-ai-red-teaming/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="ae11fc1f8d97"><summary><span class="num">02</span><span class="body-col"><span class="it-title">OpenAI 모델 기반 해커, Hugging Face 공격 후 며칠간 &#x27;온라인 활동&#x27; 지속 확인</span><span class="it-sub">The OpenAI Models That Hacked Hugging Face Were ‘Active on the Internet’ for Days</span><span class="it-meta">📰 뉴스 · wired.com</span><span class="it-lede">OpenAI 모델을 활용한 해커들이 Hugging Face를 공격한 뒤 <strong>수일간 인터넷상에서 활동을 계속</strong>한 것으로 나타났다.</span></span></summary><div class="it-body"><p>이 사건은 러시아 해커의 미국 핵과학자 이메일 탈취 시도, 미 국무부의 사기범 입국 금지 조치 등과 함께 보도됐다. 구체적인 공격 방식이나 피해 규모에 대한 세부 내용은 원문에서 다뤄지지 않았다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI 모델이 해킹 도구로 활용되고 공격 이후에도 장기간 활동이 지속됐다는 점은 <strong>AI 기반 사이버 위협의 지속성과 탐지 어려움</strong>을 시사한다.</p><div class="tags"><span class="tag">#alignment</span></div><a class="src-cta" href="https://www.wired.com/story/security-news-this-week-the-openai-models-that-hacked-hugging-face-were-active-on-the-internet-for-days/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="deep-learning"><div class="sec-h"><span class="nm">Deep Learning</span><span class="cnt">1건</span><span class="all"><a href="../../../category/deep-learning.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="deep-learning">전체 펼치기</button></div><div class="sec-desc">딥러닝 — 아키텍처·학습기법 자체</div><details class="item" id="1188f3f5e5ec"><summary><span class="num">01</span><span class="body-col"><span class="it-title">유체 방정식 없이 카르만 소용돌이 재현 — Lattice Boltzmann Method, C++로 구현해 슈퍼컴퓨터서 실행</span><span class="it-sub">The Fluid Simulator That Doesn’t Solve the Fluid Equations</span><span class="it-meta">✍️ 블로그 · towardsdatascience.com</span><span class="it-lede">저자는 유체 방정식을 직접 풀지 않고도 카르만 소용돌이 거리(Kármán vortex street)를 생성하는 시뮬레이션을 만들었다.</span></span></summary><div class="it-body"><p>이를 위해 사용한 방법은 <strong>Lattice Boltzmann Method</strong>로, 전통적인 나비에-스토크스 방정식 풀이 대신 격자 위 입자 분포의 충돌과 이동 과정을 통해 유체 거동을 재현한다. 이 방법을 기본 원리부터 유도한 뒤 C++로 직접 구현하고, 슈퍼컴퓨터에서 실행해 결과를 확인했다.</p><div class="slot-l">WHY IT MATTERS</div><p>복잡한 편미분방정식을 직접 풀지 않고도 물리 현상을 시뮬레이션할 수 있는 대안적 접근을 보여줘, 계산 유체역학뿐 아니라 물리 기반 시뮬레이션을 다루는 DS/AI 실무자에게 새로운 관점을 제공한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 나비에-스토크스 방정식을 직접 이산화해 푸는 전통적 CFD 방식과 달리, <strong>Lattice Boltzmann Method</strong>는 미시적 입자 분포 함수의 격자 기반 갱신을 통해 거시적 유체 흐름을 간접적으로 재현한다.</p><a class="src-cta" href="https://towardsdatascience.com/the-fluid-simulator-that-doesnt-solve-the-fluid-equations/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="predictive-modeling"><div class="sec-h"><span class="nm">예측 모델링</span><span class="cnt">1건</span><span class="all"><a href="../../../category/predictive-modeling.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="predictive-modeling">전체 펼치기</button></div><div class="sec-desc">예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</div><details class="item" id="e020c2527d72"><summary><span class="num">01</span><span class="body-col"><span class="it-title">미술관, 데이터 기반으로 관람 경험 재설계 — 방문객 이해 위한 큐레이션 시도 확산</span><span class="it-sub">With help from data, art museums are reframing the visitor experience</span><span class="it-meta">📰 뉴스 · arstechnica.com</span><span class="it-lede">기사는 미술관들이 데이터를 활용해 관람객 경험을 재구성하려는 흐름을 다룬다.</span></span></summary><div class="it-body"><p>뉴욕에 거주하는 25세 ICU 간호사 지오반니 칸터의 사례를 통해, 예술에 익숙한 사람과 그렇지 않은 사람 사이의 미술 감상 방식 차이를 보여준다. 칸터는 화가 부모와 예술가 친척들 덕분에 어릴 때부터 갤러리 방문에 노출된 반면, 많은 젊은 세대는 학교 견학이나 가족 방문 정도로 예술 경험이 제한적이다. 이런 배경 차이 때문에 미술관 자체의 전시·안내 방식이 관람객의 예술 이해에 더 중요한 역할을 하게 된다는 점을 지적한다.</p><div class="slot-l">WHY IT MATTERS</div><p>예술 접근성과 교육 배경의 격차를 데이터와 설계로 보완하려는 시도는, <strong>XAI</strong>처럼 전문 지식이 없는 사용자에게 정보를 어떻게 전달할지 고민하는 문제와 맞닿아 있다.</p><div class="tags"><span class="tag">#XAI</span></div><a class="src-cta" href="https://arstechnica.com/culture/2026/07/with-help-from-data-art-museums-are-reframing-the-visitor-experience/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="causal-inference"><div class="sec-h"><span class="nm">인과추론</span></div><div class="sec-desc">인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="mlops"><div class="sec-h"><span class="nm">MLOps / ML Engineering</span><span class="cnt">1건</span><span class="all"><a href="../../../category/mlops.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="mlops">전체 펼치기</button></div><div class="sec-desc">MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</div><details class="item" id="20dd6a96184c" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">RAM 비용 부담될 때 벡터 검색 최적화 — HNSW·SPANN·DiskANN의 온디스크 vs 인메모리 트레이드오프</span><span class="it-sub">How to Optimize Vector Search When RAM Gets Too Expensive: On-Disk vs. In-Memory ANN Indexes</span><span class="it-meta">✍️ 블로그 · towardsdatascience.com</span><span class="it-lede">이 글은 벡터 검색 인프라를 비용 효율적으로 설계하는 방법을 다룬다.</span></span></summary><div class="it-body"><p><strong>HNSW, SPANN, DiskANN</strong> 세 가지 ANN(근사 최근접 이웃) 인덱스 방식을 비교하며 지연 시간과 저장 비용 간의 트레이드오프를 분석한다. RAM 비용이 부담스러울 때 인메모리 대신 온디스크 인덱스를 선택하는 아키텍처 전략을 설명한다.</p><div class="slot-l">WHY IT MATTERS</div><p>벡터 검색 시스템 규모가 커질수록 RAM 비용이 급격히 늘어나는데, 인덱스 선택에 따라 <strong>비용과 지연 시간</strong>을 크게 조절할 수 있어 실무 인프라 설계에 직접적인 영향을 준다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존에 널리 쓰이는 <strong>인메모리 HNSW</strong> 대비, 온디스크 기반인 SPANN과 DiskANN이 저장 비용을 낮추면서도 검색 성능을 유지하는 대안으로 비교된다.</p><div class="tags"><span class="tag">#serving</span><span class="tag">#feature-store</span></div><a class="src-cta" href="https://towardsdatascience.com/optimizing-vector-search-on-disk-vs-in-memory-ann-indexes-when-ram-gets-too-expensive/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="practice"><div class="sec-h"><span class="nm">실무 사례 · 노하우</span><span class="cnt">3건</span><span class="all"><a href="../../../category/practice.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="practice">전체 펼치기</button></div><div class="sec-desc">실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</div><details class="item" id="68eaa3a9fab1"><summary><span class="num">01</span><span class="body-col"><span class="it-title">TechCrunch, OpenAI &#x27;피지컬 AI 키패드&#x27; 체험기 공개 — 일부 코더엔 재미, 대다수엔 낯설어</span><span class="it-sub">I tried out OpenAI’s new AI keypad — which will be fun for some coders and slightly mystifying to everyone else</span><span class="it-meta">📰 뉴스 · techcrunch.com</span><span class="it-lede">TechCrunch 기자가 OpenAI가 새로 내놓은 AI 키패드를 직접 사용해본 후기를 전했다.</span></span></summary><div class="it-body"><p>이 키패드는 일부 코더들에게는 재미있는 도구가 될 수 있지만, 그 외 대다수 사용자에게는 다소 생소하고 이해하기 어려운 물건이라는 평가다. 구체적인 기능이나 작동 방식에 대한 세부 설명은 제공되지 않았다.</p><div class="slot-l">WHY IT MATTERS</div><p>OpenAI가 소프트웨어를 넘어 <strong>하드웨어 주변기기</strong> 영역까지 실험을 확장하고 있다는 점에서, AI 도구가 일상 작업 환경에 어떻게 침투하는지 살펴볼 수 있는 사례다.</p><a class="src-cta" href="https://techcrunch.com/2026/07/24/i-tried-out-openais-new-ai-keypad-which-will-be-fun-for-coders-and-slightly-mystifying-to-everyone-else/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="36fc9b6f92f9"><summary><span class="num">02</span><span class="body-col"><span class="it-title">KDnuggets 위클리 — MCP 서버 5선·AI 뉴스레터 10선·Kaggle 5일 무료 에이전틱 AI 강좌 소개</span><span class="it-sub">KDnuggets Weekly Roundup: Week of July 20, 2026</span><span class="it-meta">✍️ 블로그 · kdnuggets.com</span><span class="it-lede">KDnuggets의 주간 요약 게시물로, 에이전틱 개발에 유용한 <strong>MCP 서버 상위 5개</strong>를 소개하고, AI 트렌드를 따라잡을 수 있는 뉴스레터 10종을 정리했다.</span></span></summary><div class="it-body"><p>또한 Kaggle과 Google이 공동 제공하는 5일짜리 무료 에이전틱 AI 강좌 소식과, GraphEval을 이용한 언어모델 환각 평가 방법을 다룬 글도 포함되어 있다.</p><div class="slot-l">WHY IT MATTERS</div><p>에이전틱 AI 개발과 평가에 필요한 도구·학습 자료·환각 탐지 기법을 한 번에 훑어볼 수 있어 실무자가 빠르게 트렌드를 파악하는 데 유용하다.</p><a class="src-cta" href="https://www.kdnuggets.com/kdnuggets-weekly-roundup-2026-07-20" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="ff3761b962cf"><summary><span class="num">03</span><span class="body-col"><span class="it-title">버지니아 정전 사고로 드러난 AI 데이터센터 취약점, 전력망 대응 실패 원인은</span><span class="it-sub">One fallen power line exposed a growing AI data center problem. Here’s how to fix it.</span><span class="it-meta">📰 뉴스 · techcrunch.com</span><span class="it-lede">버지니아 북부에서 발생한 송전선 사고로 인해 데이터센터들이 전력망 교란에 제대로 대응하지 못하는 문제가 드러났다.</span></span></summary><div class="it-body"><p>이 사건은 아슬아슬하게 대규모 정전을 피했지만, 데이터센터의 전력망 대응 체계에 구조적 결함이 있음을 보여줬다. 원문은 이 문제의 원인과 해결 방안을 다룬다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI 붐으로 데이터센터의 전력 수요가 급증하는 가운데, <strong>전력망 안정성 문제</strong>는 AI 인프라 확장의 숨은 리스크로 부상하고 있다.</p><a class="src-cta" href="https://techcrunch.com/2026/07/25/one-fallen-power-line-exposed-a-growing-ai-data-center-problem-heres-how-to-fix-it/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="industry-application"><div class="sec-h"><span class="nm">산업 적용 사례</span></div><div class="sec-desc">산업 적용 사례 — 산업 현장의 AI/ML 적용</div><div class="sec-empty">금일 신규 없음</div></section></main>
+  <footer class="topics" id="topics"><h2>다루는 주제</h2><ul><li><a class="tnm" href="../../../category/ai-agent.html">AI Agent</a>AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</li><li><a class="tnm" href="../../../category/llm-foundation-model.html">LLM / Foundation Model</a>LLM·파운데이션 모델 — 사전학습·정렬·추론</li><li><a class="tnm" href="../../../category/deep-learning.html">Deep Learning</a>딥러닝 — 아키텍처·학습기법 자체</li><li><a class="tnm" href="../../../category/predictive-modeling.html">예측 모델링</a>예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</li><li><a class="tnm" href="../../../category/causal-inference.html">인과추론</a>인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</li><li><a class="tnm" href="../../../category/mlops.html">MLOps / ML Engineering</a>MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</li><li><a class="tnm" href="../../../category/practice.html">실무 사례 · 노하우</a>실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</li><li><a class="tnm" href="../../../category/industry-application.html">산업 적용 사례</a>산업 적용 사례 — 산업 현장의 AI/ML 적용</li></ul></footer>
+</div>
+<script>
+(function(){
+var r=document.documentElement,k="dsb-theme",s=localStorage.getItem(k);
+if(s)r.dataset.theme=s;
+document.getElementById('tbtn').addEventListener('click',function(){
+  var cur=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  var n=cur==='dark'?'light':'dark';r.dataset.theme=n;localStorage.setItem(k,n);});
+// 섹션 전체 펼치기/접기
+document.querySelectorAll('.exp').forEach(function(b){b.addEventListener('click',function(){
+  var sec=document.getElementById(b.dataset.sec);
+  var ds=sec.querySelectorAll('details.item'),open=b.dataset.state!=='open';
+  ds.forEach(function(d){d.open=open;});
+  b.dataset.state=open?'open':'closed';b.textContent=open?'전체 접기':'전체 펼치기';});});
+// 스크롤 위치 카테고리 TOC 활성 (데스크톱 사이드 TOC)
+var links={};document.querySelectorAll('.toc li[data-cat]').forEach(function(li){links[li.dataset.cat]=li;});
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){Object.values(links).forEach(function(l){l.classList.remove('active');});
+    if(links[e.target.id])links[e.target.id].classList.add('active');}});},
+  {rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('section.sec').forEach(function(s){obs.observe(s);});
+})();
+</script>
+</body>
+</html>
