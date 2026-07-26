@@ -9779,5 +9779,77 @@
       "reinforcement-learning",
       "environment-agnostic"
     ]
+  },
+  "145a468a10291f21410a58d972f36d8c93db7589": {
+    "url": "https://www.amazon.science/news/amazon-is-investing-in-the-lean-focused-research-organization",
+    "title": "Amazon is investing in the Lean Focused Research Organization",
+    "category": "practice",
+    "source_tier": 1,
+    "first_seen": "2026-07-27",
+    "tags": []
+  },
+  "ce24cc112da217492eaf09458da7f04fae3e4d39": {
+    "url": "https://towardsdatascience.com/how-to-efficiently-prompt-claude-code/",
+    "title": "How to Efficiently Prompt Claude Code",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-07-27",
+    "tags": []
+  },
+  "ec154cc4ab43fac7f4dbaf1d3ddafac65eb5c7ad": {
+    "url": "https://towardsdatascience.com/giving-an-llm-agent-a-browser/",
+    "title": "How to Give an LLM Agent a Browser",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-07-27",
+    "tags": []
+  },
+  "6a61388eae15a402427fcace034f856845ef34b2": {
+    "url": "https://www.analyticsvidhya.com/blog/2026/07/data-science-case-study/",
+    "title": "Cracking the Data Science Case Study Interview",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-07-27",
+    "tags": []
+  },
+  "faef43bde7d1c1cb77814aee955f0654463a7626": {
+    "url": "https://spectrum.ieee.org/ai-in-robotics",
+    "title": "Optical Tech Would Update a Robot’s AI on the Fly",
+    "category": "deep-learning",
+    "source_tier": 4,
+    "first_seen": "2026-07-27",
+    "tags": []
+  },
+  "cd03ad1bc0498f21fbe7f88bf17a67e92e021baf": {
+    "url": "https://techcrunch.com/2026/07/26/making-sense-of-the-panic-over-chinese-ai/",
+    "title": "Making sense of the panic over Chinese AI",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-07-27",
+    "tags": []
+  },
+  "8fa0d5fa5bb953d4e8e8012bb5610c02de9f1b00": {
+    "url": "https://techcrunch.com/2026/07/26/hugging-face-ceo-calls-for-radical-transparency-after-unprecedented-openai-hack/",
+    "title": "Hugging Face CEO calls for ‘radical transparency’ after ‘unprecedented’ OpenAI hack",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-07-27",
+    "tags": []
+  },
+  "cc99244836a184e712d09ff12febb5f333385aa4": {
+    "url": "https://techcrunch.com/2026/07/25/the-running-list-major-tech-layoffs-in-2026-where-employers-cited-ai/",
+    "title": "Monday.com is the latest tech company to blame AI for layoffs — here are 20 others",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-07-27",
+    "tags": []
+  },
+  "524eb835090b100b033b565201d9539b9aa6bf54": {
+    "url": "https://arstechnica.com/culture/2026/07/first-teaser-for-apple-tvs-neuromancer-debuts-at-sdcc/",
+    "title": "First teaser for Apple TV's Neuromancer debuts at SDCC",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-07-27",
+    "tags": []
   }
 }
