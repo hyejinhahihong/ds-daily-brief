@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI &amp; ML News Letter · 07/29</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --accent:#5DB8A6; --accent-hover:#479B8B; --accent-weak:#E8F4F1;
+  --focus-ring:rgba(93,184,166,.5);
+  --bg:#FAF9F5; --bg-subtle:#F0EEE6; --border:#E7E3D9;
+  --text:#1F1E1D; --text-2:#6B6862; --text-3:#A39E94;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}}
+:root[data-theme="dark"]{
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover);text-decoration:underline}
+strong{font-weight:600;color:var(--text)}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px;border-radius:3px}
+
+/* 모바일 우선 단일 컬럼 (<1200px). 덩어리 중앙 정렬은 margin:0 auto. */
+.page{max-width:760px;margin:0 auto;padding:20px 18px 40px}
+
+/* --- 마스트헤드 (뉴스레터 제호) --- */
+.mast{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+  padding-bottom:14px;border-bottom:2px solid var(--text);margin-bottom:24px}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--accent);
+  text-transform:uppercase;margin:0 0 6px}
+.mast-title{font-size:26px;font-weight:600;margin:0;letter-spacing:-.01em;line-height:1.15}
+.mast-date{font-size:14px;color:var(--text-2);margin-top:8px}
+.themebtn{flex:none;background:var(--bg-subtle);border:1px solid var(--border);color:var(--text-2);
+  border-radius:20px;padding:5px 12px;font-size:13px;cursor:pointer;font-family:inherit}
+.topnav{margin-top:11px;display:flex;gap:16px;font-size:13px}
+.topnav a{color:var(--text-2);font-weight:500} .topnav a:hover{color:var(--accent)}
+@media (min-width:640px){.mast-title{font-size:31px}}
+
+/* --- TODAY'S TOP 3 --- */
+.top3{background:var(--accent-weak);border-radius:12px;padding:14px 18px;margin-bottom:24px}
+.top3 h2{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--accent);margin:0 0 8px}
+.top3 ol{margin:0;padding:0;list-style:none}
+.top3 li{padding:4px 0 4px 22px;position:relative;font-size:15px;color:var(--text)}
+.top3 li::before{content:"\2605";position:absolute;left:0;color:var(--accent);font-size:12px;top:7px}
+.top3 .t3cat{color:var(--text-2);font-size:12px;margin-right:5px}
+.top3 a{color:var(--text)} .top3 a:hover{color:var(--accent-hover)}
+
+/* --- 목차 (TOC) --- */
+.toc{margin-bottom:26px}
+.toc h2{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--text-2);margin:0 0 8px}
+.toc ul{margin:0;padding:0;list-style:none}
+.toc li{padding:6px 0;border-top:1px solid var(--border)}
+.toc li:first-child{border-top:none}
+.toc .r{display:flex;gap:6px;align-items:baseline;font-size:14px}
+.toc .nm{font-weight:500;color:var(--text)} .toc a:hover .nm{color:var(--accent)}
+.toc .cnt{color:var(--text-3);font-size:12px}
+.toc .lead{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  font-size:12px;color:var(--text-2);margin-top:2px;line-height:1.4}
+.toc li.active .nm{color:var(--accent)}
+.toc li.active{border-left:2px solid var(--accent);padding-left:8px;margin-left:-10px}
+
+/* --- 섹션 --- */
+.sec{margin:0 0 34px;scroll-margin-top:14px}
+.sec-h{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:0 0 2px;padding-top:6px}
+.sec-h .nm{font-size:20px;font-weight:600}
+.sec-h .cnt{font-size:13px;color:var(--text-3)}
+.sec-h .all{font-size:12px;color:var(--text-3);margin-left:auto}
+.sec-h .all span{color:var(--text-2)}
+.sec-h .exp{font-size:12px;background:none;border:1px solid var(--border);color:var(--text-2);
+  border-radius:14px;padding:2px 10px;cursor:pointer;font-family:inherit}
+.sec-desc{font-size:13px;color:var(--text-2);margin:0 0 8px}
+.sec-empty{font-size:14px;color:var(--text-3);padding:4px 0 6px}
+.backtop{display:inline-block;font-size:12px;color:var(--text-3);margin-top:6px}
+
+/* --- 아이템 (아코디언) — 거터(번호) + 단일 콘텐츠 컬럼 (DESIGN §3 v4). 좌측 정렬선 1개. --- */
+.item{border-bottom:1px solid var(--border);--gutter:28px}
+.item>summary{list-style:none;cursor:pointer;padding:16px 26px 16px 0;position:relative;
+  display:grid;grid-template-columns:var(--gutter) 1fr;align-items:start}
+.item>summary::-webkit-details-marker{display:none}
+.item>summary::after{content:"\25B8";position:absolute;right:2px;top:16px;color:var(--text-3);
+  font-size:13px;transition:transform .15s;display:inline-block}
+.item[open]>summary::after{transform:rotate(90deg)}
+.num{font-size:13px;color:var(--text-3);font-variant-numeric:tabular-nums;font-weight:500;padding-top:3px}
+.t3star{color:var(--accent);font-size:11px;margin-right:2px}
+.body-col{min-width:0}
+.it-title{display:block;font-size:18px;font-weight:600;color:var(--text);line-height:1.4}
+.item>summary:hover .it-title{color:var(--accent)}
+.it-sub{display:block;font-size:13px;color:var(--text-2);margin-top:3px;line-height:1.35}
+.it-meta{display:block;font-size:13px;color:var(--text-2);margin-top:6px}
+.it-lede{display:block;font-size:15px;color:var(--text-2);margin-top:7px;line-height:1.5}
+.item[open] .it-lede{color:var(--text)}
+/* 접힘 본문도 콘텐츠 컬럼에 정렬 (거터만큼 들여씀) */
+.it-body{padding:0 0 20px var(--gutter)}
+.it-body p{margin:0 0 10px}
+@media (min-width:900px){.item{--gutter:40px}}
+.slot-l{font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--text-2);margin:14px 0 2px}
+.tags{margin-top:10px}
+.tag{display:inline-block;font-size:12px;color:var(--text-2);background:var(--bg-subtle);
+  border:1px solid var(--border);border-radius:12px;padding:1px 9px;margin:0 5px 5px 0}
+.prev{font-size:13px;color:var(--text-3);margin-top:8px}
+.src-cta{display:inline-block;margin-top:12px;font-size:14px;font-weight:500;color:var(--accent)}
+.weak{color:var(--accent);font-size:12px;border:1px solid var(--accent);border-radius:5px;
+  padding:0 6px;margin-left:6px}
+
+/* --- "다루는 주제" 푸터 --- */
+.topics{margin-top:36px;padding-top:22px;border-top:2px solid var(--text)}
+.topics h2{font-size:15px;font-weight:600;margin:0 0 12px}
+.topics ul{margin:0;padding:0;list-style:none}
+.topics li{padding:7px 0;border-top:1px solid var(--border);font-size:13px;color:var(--text-2)}
+.topics li:first-child{border-top:none}
+.topics .tnm{font-weight:600;color:var(--accent);margin-right:6px}
+
+/* --- 데스크톱 (≥1200px): 좌측 sticky TOC(260) + 본문(720), 덩어리 중앙 정렬 --- */
+@media (min-width:1200px){
+  /* max-width = 260+44+720 그리드(1024) + 좌우 padding(18*2). box-sizing:border-box
+     라 padding 을 포함해야 본문 720 이 찌그러지지 않는다. */
+  .page{max-width:1060px;display:grid;grid-template-columns:260px minmax(0,720px);
+    column-gap:44px;justify-content:center;align-items:start;padding-top:28px}
+  .mast{grid-column:1/3}
+  .toc{grid-column:1;grid-row:2/999;position:sticky;top:24px;margin:0;align-self:start}
+  .top3,.main{grid-column:2}
+  .topics{grid-column:1/3}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="mast">
+    <div class="mast-l">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1 class="mast-title">AI &amp; ML News Letter</h1>
+      <div class="mast-date">2026 / 07 / 29 (수) · 16건</div>
+      <nav class="topnav"><a href="../../../archive.html">📅 지난 브리핑</a>
+        <a href="#topics">🗂 주제별 보기</a></nav>
+    </div>
+    <button id="tbtn" class="themebtn" type="button">🌓 테마</button>
+  </header>
+  <section class="top3"><h2>TODAY'S TOP 3</h2><ol><li><a href="#62c0de22e0f7"><span class="t3cat">[MLOps / ML Engineering]</span>Airbnb, &#x27;Eval-Driven Development&#x27; 공개 — LLM 평가를 소프트웨어 테스트처럼 설계 원칙化</a></li><li><a href="#df22037e3e0f"><span class="t3cat">[AI Agent]</span>OpenAI 필드 리포트 — 에이전틱 AI 코딩 도구, 유전체학 등 과학 컴퓨팅 소프트웨어 개발 가속</a></li><li><a href="#4249db1a6208"><span class="t3cat">[AI Agent]</span>AWS AgentCore Gateway, MCP 2026-07-28 스펙 지원 — 세션 제거로 완전 무상태 프로토콜 전환</a></li></ol></section>
+  <nav class="toc" id="toc"><h2>오늘의 목차</h2><ul><li data-cat="ai-agent"><a href="#ai-agent"><span class="r"><span class="nm">AI Agent</span><span class="cnt">2</span></span><span class="lead">OpenAI 필드 리포트 — 에이전틱 AI 코딩 도구, 유전체학 등 과학 컴퓨팅 소프트웨어 개발 가속</span></a></li><li data-cat="llm-foundation-model"><a href="#llm-foundation-model"><span class="r"><span class="nm">LLM / Foundation Model</span><span class="cnt">2</span></span><span class="lead">Active RAG 검색 시점 결정, 정확도만으론 못 믿는다 — 예산 기준 평가로 재조명</span></a></li><li data-cat="deep-learning"><a href="#deep-learning"><span class="r"><span class="nm">Deep Learning</span><span class="cnt">3</span></span><span class="lead">쿨롱 입자 모델로 커널 정렬 학습 — 선형 어텐션 복잡도 유지하며 정확도·보정·강건성 개선</span></a></li><li data-cat="predictive-modeling"><a href="#predictive-modeling"><span class="r"><span class="nm">예측 모델링</span><span class="cnt">2</span></span><span class="lead">TEmBed-T 공개 — 테이블 임베딩 다차원 벤치마크, 단일 모델은 모든 태스크서 우위 없어</span></a></li><li data-cat="causal-inference"><a href="#causal-inference"><span class="r"><span class="nm">인과추론</span><span class="cnt">3</span></span><span class="lead">PerturbPFN, PFN 기반 합성 사전학습으로 미지 타깃 약물 섭동 예측·타깃 식별·구조 발견 동시 수행</span></a></li><li data-cat="mlops"><a href="#mlops"><span class="r"><span class="nm">MLOps / ML Engineering</span><span class="cnt">2</span></span><span class="lead">Airbnb, &#x27;Eval-Driven Development&#x27; 공개 — LLM 평가를 소프트웨어 테스트처럼 설계 원칙化</span></a></li><li data-cat="practice"><a href="#practice"><span class="r"><span class="nm">실무 사례 · 노하우</span><span class="cnt">1</span></span><span class="lead">UT Austin AET, AI 시대 코딩 교육 대안 모색 — 탐지 대신 &#x27;스튜디오 모델&#x27;로 학습 과정 가시화</span></a></li><li data-cat="industry-application"><a href="#industry-application"><span class="r"><span class="nm">산업 적용 사례</span><span class="cnt">1</span></span><span class="lead">NVIDIA, 헬스케어 로봇용 GPU 네이티브 의료 물리 시뮬레이션 소개 — 임상 데이터 부족 문제 해결 모색</span></a></li></ul></nav>
+  <main class="main"><section class="sec" id="ai-agent"><div class="sec-h"><span class="nm">AI Agent</span><span class="cnt">2건</span><span class="all"><a href="../../../category/ai-agent.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="ai-agent">전체 펼치기</button></div><div class="sec-desc">AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</div><details class="item" id="df22037e3e0f" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">OpenAI 필드 리포트 — 에이전틱 AI 코딩 도구, 유전체학 등 과학 컴퓨팅 소프트웨어 개발 가속</span><span class="it-sub">Scientific computing in the age of agentic AI</span><span class="it-meta">✍️ 블로그 · openai.com</span><span class="it-lede">OpenAI가 공개한 새로운 필드 리포트는 과학자들이 AI 코딩 에이전트를 활용해 과학 컴퓨팅 소프트웨어를 현대화하는 사례를 다룬다.</span></span></summary><div class="it-body"><p>이 에이전트들은 소프트웨어 개발 속도를 높이고 유전체학을 비롯한 여러 과학 분야의 연구 발견을 가속화하는 데 활용된다. 보고서는 실제 연구 현장에서의 적용 사례를 통해 이러한 흐름을 보여준다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI 코딩 에이전트가 연구 인프라 구축과 유지보수라는 실무적 병목을 해소해 <strong>과학 연구의 생산성</strong>을 실질적으로 끌어올릴 수 있음을 시사한다.</p><div class="tags"><span class="tag">#agentic-workflow</span></div><a class="src-cta" href="https://openai.com/index/scientific-computing-agentic-ai" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="4249db1a6208" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>02</span><span class="body-col"><span class="it-title">AWS AgentCore Gateway, MCP 2026-07-28 스펙 지원 — 세션 제거로 완전 무상태 프로토콜 전환</span><span class="it-sub">How AgentCore Gateway supports the MCP 2026-07-28 spec</span><span class="it-meta">✍️ 블로그 · aws.amazon.com</span><span class="it-lede">MCP 2026-07-28 스펙은 프로토콜 출시 이후 가장 큰 변화로, initialize 핸드셰이크와 Mcp-Session-Id 세션을 제거해 <strong>완전한 무상태(stateless) 프로토콜</strong>로 전환된다.</span></span></summary><div class="it-body"><p>이제 프로토콜 버전, 클라이언트 정보, 기능이 각 요청의 _meta 파라미터에 포함되어 단일 도구 호출이 자체 완결적으로 처리되고 어떤 서버 인스턴스로도 라우팅될 수 있다. 이와 함께 거버넌스 확장 시스템, OAuth 2.0/OpenID Connect 기반 인가 강화, 향후 호환성 붕괴를 막는 기능 수명주기 정책이 도입됐다. Amazon Bedrock AgentCore의 AgentCore Gateway는 UpdateGateway 호출로 지원 버전 목록을 설정해 오늘부터 새 프로토콜을 opt-in 방식으로 사용할 수 있으며, 기존 클라이언트는 영향 없이 그대로 동작한다.</p><div class="slot-l">WHY IT MATTERS</div><p>세션 기반 아키텍처는 로드밸런서 sticky session이나 공유 세션 스토어가 필요해 엔터프라이즈 규모 확장에 걸림돌이었는데, 무상태화로 원격 MCP 서버가 <strong>표준 HTTPS 엔드포인트처럼 수평 확장</strong>이 가능해진다. 에이전트/도구 개발자는 프로토콜 버전 관리와 하위 호환성 전략을 미리 이해해야 마이그레이션 리스크를 줄일 수 있다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 MCP 프로토콜은 initialize/initialized 핸드셰이크와 Mcp-Session-Id로 클라이언트를 특정 서버에 고정시켰던 반면, 2026-07-28 스펙은 이를 제거하고 매 요청에 버전·기능 정보를 담아 세션 없이 어떤 서버로도 라우팅 가능하게 바뀐 것이 핵심 차이다.</p><div class="tags"><span class="tag">#tool-use</span><span class="tag">#mcp</span></div><a class="src-cta" href="https://aws.amazon.com/blogs/machine-learning/how-agentcore-gateway-supports-the-mcp-2026-07-28-spec/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="llm-foundation-model"><div class="sec-h"><span class="nm">LLM / Foundation Model</span><span class="cnt">2건</span><span class="all"><a href="../../../category/llm-foundation-model.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="llm-foundation-model">전체 펼치기</button></div><div class="sec-desc">LLM·파운데이션 모델 — 사전학습·정렬·추론</div><details class="item" id="e59858f8c726"><summary><span class="num">01</span><span class="body-col"><span class="it-title">When Should Active RAG Retrieve? A Budget-Aware Evaluation of Utility, Calibration, and Cost</span><span class="it-sub">Active RAG 검색 시점 결정, 정확도만으론 못 믿는다 — 예산 기준 평가로 재조명</span><span class="it-meta">📄 논문 · arxiv.org · KDD 2026</span><span class="it-lede">Active RAG는 생성 중 외부 지식 검색 여부를 판단하는 예산 민감형 시스템인데, 기존 평가는 같은 &#x27;50% 사용률 예산&#x27;을 주장해도 실제 held-out 사용률이 달라 정확도 비교가 왜곡될 수 있다.</span></span></summary><div class="it-body"><p>이 연구는 검색의 가치를 무검색 답변 대비 한계 정확도 변화로 정의하는 유틸리티 추정 관점을 제안하고, 트리거 점수의 순위 매김 능력·과거 데이터로 보정한 임계값의 미래 예산 충족 여부·트리거 계산 비용을 분리해 평가한다. 이를 위해 정확한 top-k 유틸리티 프론티어, 배포 가능한 임계값 프론티어, 보수적 예산 프론티어, 피해 감사, 비용 분해 방법을 제시한다. 다중 홉 QA 데이터셋과 오픈 인스트럭션 모델 실험에서 <strong>검색으로 인한 성능 저하가 무시할 수 없는 수준</strong>이고, 라우터 순위는 데이터셋과 예산에 따라 바뀌며, 단순한 불확실성이나 검색 점수 기반 방법이 학습된 유틸리티 라우터와 견줄 만한 경우가 많았다.</p><div class="slot-l">WHY IT MATTERS</div><p>검색 여부를 결정하는 라우팅 정책의 성능을 정확도 하나로만 비교하면 실제로는 예산 설정 차이 때문에 우열이 뒤바뀔 수 있다는 점을 지적해, RAG 시스템 벤치마킹 방식 자체에 대한 재고를 요구한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>단일 정확도 지표로 비교하던 기존 Active RAG 평가 관행 대비, 유틸리티 프론티어·임계값 전이 오차·피해율·비용 분해를 함께 보고하도록 요구하는 다차원 평가 프레임워크를 제시한다.</p><a class="src-cta" href="https://arxiv.org/abs/2607.24010v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="85dd02699b25"><summary><span class="num">02</span><span class="body-col"><span class="it-title">Hugging Face, CPU 장문맥 추론용 LFM2.5-Encoders 공개</span><span class="it-sub">LFM2.5-Encoders for Fast Long-Context Inference on CPU</span><span class="it-meta">📰 뉴스 · huggingface.co<span class="weak">원문 근거 부족</span></span><span class="it-lede">LFM2.5-Encoders라는 이름의 인코더가 CPU 환경에서 긴 컨텍스트를 빠르게 처리하기 위한 목적으로 공개된 것으로 보인다.</span></span></summary><div class="it-body"><div class="slot-l">WHY IT MATTERS</div><p>CPU에서의 추론 최적화는 GPU 없이 배포해야 하는 환경에서 비용과 지연 시간을 줄이는 데 중요하다.</p><div class="tags"><span class="tag">#inference-optimization</span><span class="tag">#context</span></div><a class="src-cta" href="https://huggingface.co/blog/LiquidAI/lfm2-5-encoders" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="deep-learning"><div class="sec-h"><span class="nm">Deep Learning</span><span class="cnt">3건</span><span class="all"><a href="../../../category/deep-learning.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="deep-learning">전체 펼치기</button></div><div class="sec-desc">딥러닝 — 아키텍처·학습기법 자체</div><details class="item" id="e9a0ee9088d9"><summary><span class="num">01</span><span class="body-col"><span class="it-title">A Coulomb Particle Model for Learning Kernel Attention in Transformers</span><span class="it-sub">쿨롱 입자 모델로 커널 정렬 학습 — 선형 어텐션 복잡도 유지하며 정확도·보정·강건성 개선</span><span class="it-meta">📄 논문 · arxiv.org · ICML 2026</span><span class="it-lede">이 논문은 랜덤 특징 기반 커널 근사에서 특징 분포 선택이 성능을 좌우한다는 문제에서 출발해, 입자 기반 방법으로 이 분포를 직접 학습하는 방법을 제안한다.</span></span></summary><div class="it-body"><p>커널-타겟 정렬을 최적화하면서 Riesz/Coulomb 반발 포텐셜로 입자를 정규화해, 다양하고 태스크에 적응적인 랜덤 특징을 얻는다. 이 해밀토니안 시스템은 McKean-Vlasov 방정식을 통한 평균장 기술이 가능하다. 선형화된 Transformer 어텐션에 적용해 먼저 양의 랜덤 특징 맵을 정렬 단계에서 학습한 뒤, 커널을 고정하고 나머지 파라미터를 교차 엔트로피로 학습하는 2단계 절차를 사용한다. 합성 분류 및 문장 수준 벤치마크 실험에서 <strong>선형 어텐션의 계산 복잡도를 유지하면서</strong> 여러 특징 맵에 대해 정확도, 보정, 강건성이 개선됨을 보였다.</p><div class="slot-l">WHY IT MATTERS</div><p>선형 어텐션의 효율성을 희생하지 않고 성능을 끌어올릴 수 있다면, 대규모 시퀀스 처리가 필요한 실무 모델에서 계산 비용 절감과 성능 확보를 동시에 노릴 수 있다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 랜덤 특징 방법이 고정된 또는 임의의 특징 분포를 사용하는 것과 달리, 이 방법은 <strong>쿨롱 반발 포텐셜 기반 입자 최적화</strong>로 커널-타겟 정렬을 학습해 태스크에 맞는 특징 분포를 얻는다는 점이 다르다.</p><a class="src-cta" href="https://arxiv.org/abs/2607.23869v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="92e866603de3"><summary><span class="num">02</span><span class="body-col"><span class="it-title">OlmoEarth 플랫폼 공개 — 지구 규모 지리공간 추론 서비스</span><span class="it-sub">The OlmoEarth Platform: Geospatial inference at planetary scale</span><span class="it-meta">📰 뉴스 · huggingface.co<span class="weak">원문 근거 부족</span></span><span class="it-lede">OlmoEarth라는 플랫폼이 지구 규모의 지리공간 추론을 제공한다는 내용이 소개되었다.</span></span></summary><div class="it-body"><p>구체적인 방법이나 성능에 대한 정보는 제공되지 않았다.</p><div class="slot-l">WHY IT MATTERS</div><p>위성·지리공간 데이터 분석에 관심 있는 개발자라면 관련 동향을 참고할 만하다.</p><a class="src-cta" href="https://huggingface.co/blog/allenai/olmoearth-infrastructure" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="2b440ab2fe63"><summary><span class="num">03</span><span class="body-col"><span class="it-title">Apple, AFM 3 Core Advanced 기반 Siri Expressive Voices — Decoupled Temporal-Depth Diffusion Transformer로 온디바이스 오디오 합성 구현</span><span class="it-sub">Memory Efficient Audio Synthesis with Decoupled Temporal Depth Diffusion Transformers</span><span class="it-meta">✍️ 블로그 · machinelearning.apple.com</span><span class="it-lede">Apple은 시맨틱 오디오 토큰을 고품질 오디오로 변환하는 디토크나이저 아키텍처를 공개했다.</span></span></summary><div class="it-body"><p>이 디토크나이저는 Apple Matrix Coprocessor(AMX)의 제한된 연산·메모리 예산 안에서 동작하도록 설계됐으며, Siri Expressive Voices의 실시간 온디바이스 음성 합성을 지원한다. 핵심은 시맨틱 토큰을 잔차 벡터 양자화(RVQ) 표현으로 변환하는 <strong>세 요소로 구성된 스트리밍 방식</strong>의 설계다. 이 구조는 파운데이션 모델인 AFM 3 Core Advanced가 생성한 토큰을 실시간으로 처리해 표현력 있는 음성을 만들어낸다.</p><div class="slot-l">WHY IT MATTERS</div><p>온디바이스에서 저메모리·저연산으로 고품질 음성 합성을 구현하는 것은 서버 의존 없는 실시간 음성 비서 경험을 가능하게 하는 핵심 과제다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존의 통합된 시간-깊이(diffusion) 처리 방식과 달리, <strong>temporal과 depth 처리를 분리(decoupled)</strong>한 diffusion transformer 구조로 AMX의 제한된 메모리 예산에 최적화했다.</p><a class="src-cta" href="https://machinelearning.apple.com/research/audio-synthesis-diffusion-transformers" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="predictive-modeling"><div class="sec-h"><span class="nm">예측 모델링</span><span class="cnt">2건</span><span class="all"><a href="../../../category/predictive-modeling.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="predictive-modeling">전체 펼치기</button></div><div class="sec-desc">예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</div><details class="item" id="50ae79248acb"><summary><span class="num">01</span><span class="body-col"><span class="it-title">TEmBed-T: A Multi-Dimensional Benchmark for Table-Level Embeddings</span><span class="it-sub">TEmBed-T 공개 — 테이블 임베딩 다차원 벤치마크, 단일 모델은 모든 태스크서 우위 없어</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">이 논문은 테이블 검색, 데이터 레이크 탐색, 테이블 분류 등에 쓰이는 테이블 수준 임베딩을 여러 과제에 걸쳐 체계적으로 평가하는 방법을 제안한다.</span></span></summary><div class="it-body"><p>기존 TEmBed 테스트베드가 검색이라는 단일 태스크에만 국한되어 있던 한계를 보완해, 테이블 임베딩의 여러 상호보완적 속성을 함께 측정하도록 확장했다. TEmBed 모델 풀을 대상으로 한 실증 분석 결과, <strong>모든 과제에서 두루 우수한 단일 모델은 존재하지 않는다</strong>는 점이 확인됐다. 이는 테이블 임베딩 품질을 검색 성능만으로 환원해 평가할 수 없음을 보여준다.</p><div class="slot-l">WHY IT MATTERS</div><p>테이블 임베딩 모델을 특정 벤치마크(검색) 성능만 보고 선택하면 다른 다운스트림 과제에서 성능이 떨어질 수 있어, 실제 활용 시 태스크별 검증이 필요함을 시사한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>검색 과제 하나에만 국한됐던 <strong>기존 TEmBed</strong> 대비, 다차원 속성을 함께 평가하도록 테이블 수준 커버리지를 확장한 것이 차이점이다.</p><div class="tags"><span class="tag">#tabular</span></div><a class="src-cta" href="https://arxiv.org/abs/2607.24130v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="da774f1cdef3"><summary><span class="num">02</span><span class="body-col"><span class="it-title">Impute On-Demand: Adaptive Correlated Time Series Imputation for Changing Environments</span><span class="it-sub">AdaCTSi 제안 — IoT 센서 결측치 보간, 5개 벤치마크서 MAE 평균 33.1% 감소</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">IoT 환경에서 발생하는 상관 시계열(CTS) 데이터는 결측치가 많지만 기존 보간 기법은 센서 고장이나 자원 변화 같은 환경 변화에 취약하다.</span></span></summary><div class="it-body"><p>AdaCTSi는 One-shot Temporal Convolutional Network와 Learned Time-Sensor Index Table을 결합해 시공간 특징을 센서별 임베딩으로 분리, 가변적인 센서 구성에 적응할 수 있게 한다. Sparse Spatial Attention으로 동적 공간 상관관계를 효율적으로 추출하고, Correlation-Weighted Sensor Selection으로 유용한 센서만 선택해 충분한 공간 맥락을 확보한다. 교통·대기질·궤적 데이터를 포함한 5개 벤치마크와 12개 베이스라인 대상 실험에서 <strong>MAE를 평균 33.1% 감소</strong>시켰으며, 단일 학습 모델로 센서 부분집합 및 자원 적응형 추론이 가능하고 MCU 같은 상용 장치에도 배포 가능한 경량 구조를 갖췄다.</p><div class="slot-l">WHY IT MATTERS</div><p>센서 고장이나 자원 제약이 흔한 실제 IoT 환경에서는 정확도만 높은 정적 모델보다 변화에 유연하게 대응하는 보간기가 실용적 가치가 크다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 CTS 보간 방법들이 고정된 센서 구성과 정적 아키텍처를 전제로 하는 것과 달리, AdaCTSi는 센서별 임베딩 분리와 동적 센서 선택을 통해 <strong>가변 센서 부분집합과 자원 조건에 적응</strong>할 수 있다는 점이 다르다.</p><div class="tags"><span class="tag">#timeseries</span></div><a class="src-cta" href="https://arxiv.org/abs/2607.23503v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="causal-inference"><div class="sec-h"><span class="nm">인과추론</span><span class="cnt">3건</span><span class="all"><a href="../../../category/causal-inference.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="causal-inference">전체 펼치기</button></div><div class="sec-desc">인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</div><details class="item" id="4f60d18b3c51"><summary><span class="num">01</span><span class="body-col"><span class="it-title">PerturbPFN: Probing the Limits of Synthetic Priors in Drug Perturbation Modelling</span><span class="it-sub">PerturbPFN, PFN 기반 합성 사전학습으로 미지 타깃 약물 섭동 예측·타깃 식별·구조 발견 동시 수행</span><span class="it-meta">📄 논문 · arxiv.org · ICML</span><span class="it-lede">PerturbPFN은 타깃이 알려지지 않은 화학적 섭동에 대한 세포 반응 예측을 위해 계층적 합성 구조 사전(prior)을 활용하는 PFN 스타일 상시(amortized) 모델이다.</span></span></summary><div class="it-body"><p>고차원 발현 반응을 직접 회귀하는 대신 잠재 시스템 그래프, 희소한 원자적 개입 타깃, 개입 강도를 추론한 뒤 SCM 디코더로 그 효과를 전파한다. 생물학적으로 동기화된 그래프·발현 시뮬레이터로 생성한 합성 에피소드만으로 학습되어, 테스트 시점 그래디언트 업데이트 없이 구조화된 인컨텍스트 학습이 가능하다. 실제 단일세포 섭동 데이터와 합성 벤치마크 모두에서 효과 예측, 타깃 식별, 조절 구조 발견을 평가한 결과, <strong>낮은 추론 비용</strong>으로 경쟁력 있는 성능을 보이면서 타깃·강도·시스템 구조에 대한 해석 가능한 중간 추정치를 제공했다.</p><div class="slot-l">WHY IT MATTERS</div><p>신약 개발에서 미지의 작용 기전을 가진 화합물의 세포 반응을 사전 실험 없이 예측할 수 있다면 대규모 화합물 스크리닝 비용을 크게 줄일 수 있어, 이러한 상시 학습 접근은 인과 발견과 신약 설계를 잇는 실용적 방법론으로 주목할 만하다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존의 특화된(specialized) 섭동 예측 베이스라인이 고차원 발현을 직접 회귀하는 것과 달리, PerturbPFN은 합성 사전 데이터로 미리 학습된 인컨텍스트 추론을 통해 <strong>타깃·강도·구조를 해석 가능하게 추정</strong>하면서 테스트 시점 그래디언트 업데이트 없이 낮은 추론 비용을 달성한다는 점에서 다르다.</p><div class="tags"><span class="tag">#causal-discovery</span></div><a class="src-cta" href="https://arxiv.org/abs/2607.23447v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="f982fa03018f"><summary><span class="num">02</span><span class="body-col"><span class="it-title">Inference on counterfactual distributions using martingale posteriors</span><span class="it-sub">평균효과 넘어 반사실 분포 전체 추정 — 마팅게일 사후분포로 인과효과 불확실성 정량화</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">이 논문은 평균처치효과만으로는 놓치기 쉬운 효과 분포의 세부 특성을 포착하기 위해, 반사실적 결과의 전체 분포를 추정하는 방법론을 제안한다.</span></span></summary><div class="it-body"><p>Fong et al.(2023)의 마팅게일 사후분포 프레임워크를 기반으로 밀도함수, 분포함수, 분위수 등 다양한 목표량에 대한 인식론적 불확실성을 일관되게 정량화한다. 예측 재귀 과정이 디리클레 과정 혼합모형이라는 비모수 모델에 기반하므로 <strong>제한적인 모수적 가정 없이도 견고</strong>하며 계산 속도도 빠르다. 조건부·주변 반사실 분포 모두에 적용 가능하고 도구변수 설정으로도 확장되며, 아연 로젠지의 감기 지속기간 효과, 비타민 A 보충이 소아 생존율에 미치는 영향(일방향 불순응 포함), 직업훈련 효과 등 실제 데이터로 검증했다.</p><div class="slot-l">WHY IT MATTERS</div><p>인과추론에서 평균효과만 보고하면 이질적 처치효과나 분포의 꼬리 특성 같은 중요한 정보를 놓칠 수 있어, 정책 결정이나 개인 맞춤형 개입 설계에 한계가 있다. 이 방법은 <strong>불확실성을 체계적으로 정량화</strong>하면서 분포 전체를 다루므로 실증 인과분석의 해석력을 크게 높일 수 있다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존의 평균처치효과 중심 인과추론이나 모수적 가정에 의존하는 분포 추정 방식과 달리, 비모수 디리클레 과정 혼합모형 기반의 마팅게일 사후분포를 사용해 반사실 분포 전체에 대한 불확실성을 유연하게 추정한다.</p><div class="tags"><span class="tag">#causal-inference</span></div><a class="src-cta" href="https://arxiv.org/abs/2607.24143v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="a1dc426dd753"><summary><span class="num">03</span><span class="body-col"><span class="it-title">Every Client Is an Environment: Federated De-confounding for Spatio-Temporal Forecasting</span><span class="it-sub">연합학습 시공간 예측에서 클라이언트를 인과적 환경으로 재해석 — 전역 프로토타입 코드북으로 교란 제거</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">이 논문은 연합학습 기반 시공간 예측(STF)에서 클라이언트 간 이질성을 단순 최적화 문제가 아니라 서로 다른 환경적 조건에서 비롯된 것으로 재해석한다.</span></span></summary><div class="it-body"><p>저자들은 각 클라이언트를 <strong>서로 다른 인과적 환경으로 취급</strong>하는 새로운 연합 de-confounding 프레임워크를 제안하며, 클라이언트 이질성을 분산된 환경적 증거로 활용해 공유 환경 패턴을 담는 전역 프로토타입 코드북을 학습한다. 평균 교란 강도에 선형적으로 제어되는 이론적 연합 de-confounding 상한도 도출했다. 실험 결과 제안 방법은 연합 베이스라인들을 일관되게 능가하며, 전이 가능하고 해석 가능하며 통신 효율적인 환경 표현을 제공한다.</p><div class="slot-l">WHY IT MATTERS</div><p>기존 개인화 기법은 각 클라이언트의 환경별 예측 패턴을 그대로 학습해 환경 변화에 취약한데, 이 접근은 클라이언트 이질성 자체를 동일한 시공간 시스템에 대한 보완적 관측치로 활용해 <strong>일반화 가능한 환경 표현</strong>을 얻는다는 점에서 연합 시계열 예측 연구에 시사점이 크다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 연합 STF 방법들이 클라이언트 이질성을 개인화로 완화해야 할 최적화 장애물로 다룬 것과 달리, 이 방법은 이질성을 <strong>인과적 환경 증거</strong>로 취급해 de-confounding에 활용한다는 점이 다르다.</p><div class="tags"><span class="tag">#did</span><span class="tag">#timeseries</span></div><a class="src-cta" href="https://arxiv.org/abs/2607.24218v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="mlops"><div class="sec-h"><span class="nm">MLOps / ML Engineering</span><span class="cnt">2건</span><span class="all"><a href="../../../category/mlops.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="mlops">전체 펼치기</button></div><div class="sec-desc">MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</div><details class="item" id="62c0de22e0f7" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">Airbnb, &#x27;Eval-Driven Development&#x27; 공개 — LLM 평가를 소프트웨어 테스트처럼 설계 원칙化</span><span class="it-sub">Eval-driven development: Lessons from evaluating GenAI at scale</span><span class="it-meta">✍️ 블로그 · medium.com</span><span class="it-lede">Airbnb는 리뷰 하이라이트, AI 고객지원 등 다수의 LLM 기반 제품을 운영하며 평가(evaluation)를 부수적 작업이 아닌 핵심 엔지니어링 과제로 다룬다.</span></span></summary><div class="it-body"><p>핵심 원칙은 데이터를 직접 읽고 실패 유형을 찾아 분류한 뒤 평가지표로 만드는 것이며, 이를 공식화한 것이 <strong>eval-driven development(EDD)</strong>다. EDD는 목표와 출시 기준을 사전에 정의하고, 실제 관찰된 오류를 기반으로 지표를 만들며, <strong>3~5개의 정교한 LLM-as-judge 평가자</strong>가 20~30개의 잡음 많은 평가자보다 낫다고 강조한다. 팀별로 평가 기준은 다르지만 공통 인프라와 원칙을 인프라 팀이 지원하는 구조다.</p><div class="slot-l">WHY IT MATTERS</div><p>LLM 출력의 비결정성과 &#x27;정답&#x27;의 주관성 때문에 전통적 테스트 방식이 통하지 않는데, 대규모 제품에서 실제로 검증된 평가 방법론이라는 점에서 실무 참고 가치가 크다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존의 범용 &#x27;도움 정도&#x27; 단일 지표 방식 대비, 실패 사례에서 도출한 소수의 정교한 LLM-as-judge 평가자를 사용하는 방식을 제안한다.</p><div class="tags"><span class="tag">#evaluation</span><span class="tag">#experiment-tracking</span></div><a class="src-cta" href="https://medium.com/airbnb-engineering/eval-driven-development-lessons-from-evaluating-genai-at-scale-e817e5ae5788?source=rss----53c7c27702d5---4" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="d8096641555a"><summary><span class="num">02</span><span class="body-col"><span class="it-title">애플 실리콘에서 로컬 LLM 5종 실측 — 벽전력 기준 kWh당 $0.31로 실제 구동 비용 측정</span><span class="it-sub">How Much Does a Local LLM Actually Cost to Run? I Measured Every Watt on Apple Silicon</span><span class="it-meta">✍️ 블로그 · towardsdatascience.com</span><span class="it-lede">저자는 Apple Silicon 환경에서 5개의 로컬 LLM을 지속적으로 생성 구동하며 실제 콘센트 전력 소비량을 측정했다.</span></span></summary><div class="it-body"><p>전기요금은 <strong>$0.31/kWh</strong> 기준으로 계산해 모델별 실제 구동 비용을 산출했다. 이전에 RTX-3090에서 측정했던 결과와 비교했을 때 예상했던 경향이 애플 실리콘에서 더 크게 나타나는 것으로 확인됐다.</p><div class="slot-l">WHY IT MATTERS</div><p>로컬 LLM 배포를 검토하는 실무자에게는 클라우드 API 비용과 온프레미스 하드웨어 전력 비용을 비교할 실측 데이터가 드물기 때문에 유용하다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 RTX-3090 기준 측정 대비 애플 실리콘에서는 같은 경향이 <strong>더 크게</strong> 나타났다는 점이 다르다.</p><div class="tags"><span class="tag">#deployment</span><span class="tag">#monitoring</span></div><a class="src-cta" href="https://towardsdatascience.com/how-much-does-a-local-llm-actually-cost-to-run-i-measured-every-watt-on-apple-silicon/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="practice"><div class="sec-h"><span class="nm">실무 사례 · 노하우</span><span class="cnt">1건</span><span class="all"><a href="../../../category/practice.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="practice">전체 펼치기</button></div><div class="sec-desc">실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</div><details class="item" id="cfa95c955beb"><summary><span class="num">01</span><span class="body-col"><span class="it-title">UT Austin AET, AI 시대 코딩 교육 대안 모색 — 탐지 대신 &#x27;스튜디오 모델&#x27;로 학습 과정 가시화</span><span class="it-sub">Teaching Coding When AI Can Write the Code</span><span class="it-meta">📰 뉴스 · oreilly.com</span><span class="it-lede">AI가 코드를 대신 작성하면서, 완성된 프로그램만으로는 학생의 사고 과정을 알기 어려워졌다는 문제의식에서 출발한 글이다.</span></span></summary><div class="it-body"><p>필자는 AI 탐지기가 근본 해법이 될 수 없다고 지적하며, <strong>스탠퍼드 연구에서 TOEFL 에세이의 61.22%가 AI 생성으로 오탐된 사례</strong>와 OpenAI가 자체 AI Text Classifier를 2023년 폐기한 사례를 근거로 든다. 대신 텍사스대 오스틴 AET(예술·엔터테인먼트 기술) 학과의 크리에이티브 코딩 수업에서는 미술 교육의 스튜디오 모델을 빌려와, 스케치·초안·비평·리허설처럼 진행 중인 과정을 수업 중에 공개하고 논의하게 한다. 이를 통해 최종 결과물이 아니라 시행착오와 수정 과정 자체를 평가 대상으로 삼는다.</p><div class="slot-l">WHY IT MATTERS</div><p>생성형 AI로 코드 작성이 쉬워질수록 결과물만으로 학습 여부를 판단하는 기존 평가 방식이 무력화되는데, 이는 코딩 교육뿐 아니라 과제 기반 평가 전반에 적용되는 구조적 문제다. <strong>탐지 기술에 의존하기보다 학습 과정을 드러내는 방향으로 평가 설계를 바꿔야 한다</strong>는 시사점은 DS/AI 교육 현장에도 직접적으로 유효하다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존의 AI 탐지기·감시 도구·잠금 브라우저 등 &#x27;적발&#x27; 중심 대응과 달리, 이 접근은 미술 교육의 <strong>스튜디오 모델</strong>(스케치, 비평, 공개 리허설)을 코딩 수업에 도입해 과정 자체를 가시화하는 방식이라는 점이 다르다.</p><a class="src-cta" href="https://www.oreilly.com/radar/teaching-coding-when-ai-can-write-the-code/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="industry-application"><div class="sec-h"><span class="nm">산업 적용 사례</span><span class="cnt">1건</span><span class="all"><a href="../../../category/industry-application.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="industry-application">전체 펼치기</button></div><div class="sec-desc">산업 적용 사례 — 산업 현장의 AI/ML 적용</div><details class="item" id="1695386461b6"><summary><span class="num">01</span><span class="body-col"><span class="it-title">NVIDIA, 헬스케어 로봇용 GPU 네이티브 의료 물리 시뮬레이션 소개 — 임상 데이터 부족 문제 해결 모색</span><span class="it-sub">Developing Healthcare Robotics with GPU-Native Medical Physics Simulation</span><span class="it-meta">✍️ 블로그 · developer.nvidia.com</span><span class="it-lede">헬스케어 로봇공학은 자율주행이나 산업용 로봇과 달리 인터넷 규모의 데이터 수집이나 무제한 실세계 실험이 불가능하다.</span></span></summary><div class="it-body"><p>모든 시연에는 전문 장비, 임상 전문성, 환자나 실험실 환경 접근이 필요하기 때문이다. 이 글은 이로 인해 개발자가 겪는 세 가지 근본적 과제 중 첫 번째로 <strong>데이터 격차</strong> 문제를 지적하며, 현대적 로봇 정책 학습에 필요한 데이터 확보의 어려움을 설명한다. NVIDIA는 이를 해결하기 위한 방안으로 GPU 네이티브 의료 물리 시뮬레이션을 제시한다.</p><div class="slot-l">WHY IT MATTERS</div><p>임상 데이터 수집의 근본적 제약은 헬스케어 로봇 정책 학습을 가로막는 핵심 병목이므로, 시뮬레이션 기반 대안이 실제 배포 가능한 로봇을 개발하는 데 중요한 돌파구가 될 수 있다.</p><a class="src-cta" href="https://developer.nvidia.com/blog/developing-healthcare-robotics-with-gpu-native-medical-physics-simulation/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section></main>
+  <footer class="topics" id="topics"><h2>다루는 주제</h2><ul><li><a class="tnm" href="../../../category/ai-agent.html">AI Agent</a>AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</li><li><a class="tnm" href="../../../category/llm-foundation-model.html">LLM / Foundation Model</a>LLM·파운데이션 모델 — 사전학습·정렬·추론</li><li><a class="tnm" href="../../../category/deep-learning.html">Deep Learning</a>딥러닝 — 아키텍처·학습기법 자체</li><li><a class="tnm" href="../../../category/predictive-modeling.html">예측 모델링</a>예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</li><li><a class="tnm" href="../../../category/causal-inference.html">인과추론</a>인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</li><li><a class="tnm" href="../../../category/mlops.html">MLOps / ML Engineering</a>MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</li><li><a class="tnm" href="../../../category/practice.html">실무 사례 · 노하우</a>실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</li><li><a class="tnm" href="../../../category/industry-application.html">산업 적용 사례</a>산업 적용 사례 — 산업 현장의 AI/ML 적용</li></ul></footer>
+</div>
+<script>
+(function(){
+var r=document.documentElement,k="dsb-theme",s=localStorage.getItem(k);
+if(s)r.dataset.theme=s;
+document.getElementById('tbtn').addEventListener('click',function(){
+  var cur=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  var n=cur==='dark'?'light':'dark';r.dataset.theme=n;localStorage.setItem(k,n);});
+// 섹션 전체 펼치기/접기
+document.querySelectorAll('.exp').forEach(function(b){b.addEventListener('click',function(){
+  var sec=document.getElementById(b.dataset.sec);
+  var ds=sec.querySelectorAll('details.item'),open=b.dataset.state!=='open';
+  ds.forEach(function(d){d.open=open;});
+  b.dataset.state=open?'open':'closed';b.textContent=open?'전체 접기':'전체 펼치기';});});
+// 스크롤 위치 카테고리 TOC 활성 (데스크톱 사이드 TOC)
+var links={};document.querySelectorAll('.toc li[data-cat]').forEach(function(li){links[li.dataset.cat]=li;});
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){Object.values(links).forEach(function(l){l.classList.remove('active');});
+    if(links[e.target.id])links[e.target.id].classList.add('active');}});},
+  {rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('section.sec').forEach(function(s){obs.observe(s);});
+})();
+</script>
+</body>
+</html>
