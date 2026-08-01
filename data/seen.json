@@ -15651,5 +15651,165 @@
     "source_tier": 1,
     "first_seen": "2026-08-01",
     "tags": []
+  },
+  "6d58997b466ca59f729e755e523db112666f9bfc": {
+    "url": "https://openai.com/index/ten-advances-in-mathematics",
+    "title": "Ten advances in mathematics and theoretical computer science",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-08-02",
+    "tags": []
+  },
+  "e45eb8a45c71b48462e8e530ef5d60cab7519035": {
+    "url": "https://towardsdatascience.com/coding-agents-dont-need-bigger-context-windows-they-need-a-context-compiler/",
+    "title": "Coding Agents Don’t Need Bigger Context Windows — They Need a Context Compiler",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-08-02",
+    "tags": []
+  },
+  "04ee6e9a0b99a8739100b5e7e55ad90e20e35da5": {
+    "url": "https://towardsdatascience.com/put-the-agent-inside-the-workflow/",
+    "title": "Put the Agent Inside the Workflow",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-08-02",
+    "tags": []
+  },
+  "b6d8db7a95fc1259f4a78bb6d4d4ad9e53107794": {
+    "url": "https://www.kdnuggets.com/kdnuggets-weekly-roundup-2026-07-27",
+    "title": "KDnuggets Weekly Roundup: Build and Deploy Your First Autonomous Agent • 7 Machine Learning Algorithms That Still Matter",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-08-02",
+    "tags": []
+  },
+  "309f27c15587341d30462d13bf5c203bead26ce8": {
+    "url": "https://www.analyticsvidhya.com/blog/2026/08/lancedb-vector-database/",
+    "title": "LanceDB Vector Database Guide: Features, Python Demo",
+    "category": "mlops",
+    "source_tier": 3,
+    "first_seen": "2026-08-02",
+    "tags": []
+  },
+  "fb0636aa3da726af93ec6b095ae07bf18c5e420e": {
+    "url": "https://spectrum.ieee.org/risk",
+    "title": "Fridays With Bob",
+    "category": "deep-learning",
+    "source_tier": 4,
+    "first_seen": "2026-08-02",
+    "tags": []
+  },
+  "9bb4cc8e0aeca105067988aad92168bc53525da1": {
+    "url": "https://techcrunch.com/2026/08/01/judge-denies-xais-request-to-block-minnesota-ban-on-nudify-apps/",
+    "title": "Judge denies xAI’s request to block Minnesota ban on ‘nudify’ apps",
+    "category": "deep-learning",
+    "source_tier": 4,
+    "first_seen": "2026-08-02",
+    "tags": []
+  },
+  "faffeeac24fbeb6cb9ea2dd7ca813105cb86f467": {
+    "url": "https://techcrunch.com/2026/08/01/youtuber-hank-green-says-his-ai-usage-is-not-healthy/",
+    "title": "YouTuber Hank Green says his AI usage is ‘not healthy’",
+    "category": "deep-learning",
+    "source_tier": 4,
+    "first_seen": "2026-08-02",
+    "tags": []
+  },
+  "ba0eb6022ed8437ec938a89a9cf98b69c6ee88b0": {
+    "url": "https://techcrunch.com/2026/08/01/sam-altman-is-still-making-the-case-for-parenting-via-chatgpt/",
+    "title": "Sam Altman is still making the case for parenting via ChatGPT",
+    "category": "deep-learning",
+    "source_tier": 4,
+    "first_seen": "2026-08-02",
+    "tags": []
+  },
+  "a151ac981abc45df41feabb0e2c14d76f148892c": {
+    "url": "https://techcrunch.com/2026/08/01/this-9-key-physically-locks-your-most-addictive-apps/",
+    "title": "This $9 key physically locks your most addictive apps",
+    "category": "deep-learning",
+    "source_tier": 4,
+    "first_seen": "2026-08-02",
+    "tags": []
+  },
+  "ac16dfe35be63552d7f0f1b1fe2738b6c89943a5": {
+    "url": "https://techcrunch.com/2026/07/31/openai-reportedly-finds-evidence-that-more-of-its-agents-ran-amok/",
+    "title": "OpenAI reportedly finds evidence that more of its agents ran amok",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-08-02",
+    "tags": []
+  },
+  "5b2f83e4dde9d9a428d61aa5702f2d86b390493c": {
+    "url": "https://arstechnica.com/space/2026/08/heres-how-engineers-plan-to-save-the-satellite-sent-to-save-nasas-swift-mission/",
+    "title": "Here's how engineers plan to save the satellite sent to save NASA's Swift mission",
+    "category": "deep-learning",
+    "source_tier": 4,
+    "first_seen": "2026-08-02",
+    "tags": []
+  },
+  "cbe6f6bdaf9f4551d941c4ff1509a96352ae69c6": {
+    "url": "https://arstechnica.com/culture/2026/08/review-yes-were-still-arguing-about-nolans-the-odyssey/",
+    "title": "Review: Yes, we're still arguing about Nolan's The Odyssey",
+    "category": "deep-learning",
+    "source_tier": 4,
+    "first_seen": "2026-08-02",
+    "tags": []
+  },
+  "6a094c69e03c327bf3f575d275f1a4a8966d993f": {
+    "url": "https://arstechnica.com/ai/2026/08/reddit-ceo-on-ai-overviews-were-still-looking-for-that-win-win/",
+    "title": "As Reddit stock falls, CEO questions value of Google's AI Overviews",
+    "category": "deep-learning",
+    "source_tier": 4,
+    "first_seen": "2026-08-02",
+    "tags": []
+  },
+  "1bbe379f2daaf2ae69eee585115cb357210fbd9e": {
+    "url": "https://arstechnica.com/tech-policy/2026/08/after-noise-complaints-judge-orders-waymo-to-stop-overnight-charging-in-santa-monica/",
+    "title": "After noise complaints, judge orders Waymo to stop overnight charging in Santa Monica",
+    "category": "deep-learning",
+    "source_tier": 4,
+    "first_seen": "2026-08-02",
+    "tags": []
+  },
+  "0bed5397efd842d4e1742feeda091d5de4f1ce9f": {
+    "url": "https://arstechnica.com/security/2026/08/defcons-new-badge-is-a-security-key-you-can-see-inside/",
+    "title": "Defcon's new badge is a security key you can see inside",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-02",
+    "tags": []
+  },
+  "89e583db1d20dd97d6492ac4c5748f71742f9bcb": {
+    "url": "https://arstechnica.com/science/2026/08/how-fruit-flies-chase-invisible-ribbons-of-smell-to-get-to-their-source/",
+    "title": "How fruit flies chase invisible ribbons of smell to get to their source",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-02",
+    "tags": []
+  },
+  "b1e078db36d30b303c9690db889daddaa4f66180": {
+    "url": "https://www.wired.com/story/security-news-this-week-7-states-water-systems-hit-by-cyberattacks-likely-tied-to-iran/",
+    "title": "7 States’ Water Systems Hit by Cyberattacks Likely Tied to Iran",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-02",
+    "tags": []
+  },
+  "3a4ce24f08d360ec4f36d03b9e5bc68151fb2b5c": {
+    "url": "https://www.wired.com/story/openai-anthropic-ai-hacking-sprees-illegal/",
+    "title": "The OpenAI and Anthropic AI Hacking Sprees Are a Messy New Legal Frontier",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-02",
+    "tags": []
+  },
+  "527e932ae5dc08033dca2045c1e1a9fc4958e5d4": {
+    "url": "https://blog.neurips.cc/2026/07/31/neurips-newsletter-july-2026/",
+    "title": "NeurIPS Newsletter – July 2026",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-08-02",
+    "tags": []
   }
 }
