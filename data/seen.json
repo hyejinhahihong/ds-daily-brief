@@ -15811,5 +15811,54 @@
     "source_tier": 1,
     "first_seen": "2026-08-02",
     "tags": []
+  },
+  "72fa44c9f2bc394f4d64ff94a2d070d1827d2090": {
+    "url": "https://towardsdatascience.com/how-to-apply-coding-agents-to-non-programming-tasks/",
+    "title": "How to Apply Coding Agents to Non-Programming Tasks",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-08-03",
+    "tags": [
+      "tool-use",
+      "agentic-workflow"
+    ]
+  },
+  "469e5aa114ab5d986a92a8321fee96cc57f3d005": {
+    "url": "https://towardsdatascience.com/i-replaced-a-15-minute-booking-process-with-a-langgraph-ai-agent/",
+    "title": "I Replaced a 15-Minute Booking Process with a LangGraph AI Agent",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-08-03",
+    "tags": [
+      "agentic-workflow",
+      "langgraph"
+    ]
+  },
+  "8394a468294533f9f7082a83e8e3f4460b5183e5": {
+    "url": "https://www.analyticsvidhya.com/blog/2026/08/agentic-misalignment-explained/",
+    "title": "Agentic Misalignment Explained: When AI Agents Go Rogue",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-08-03",
+    "tags": [
+      "alignment",
+      "safety"
+    ]
+  },
+  "d3dbdca28ee06a2be98cf520682059c631d247a2": {
+    "url": "https://techcrunch.com/2026/08/02/sam-altman-and-ais-decel-debate/",
+    "title": "Sam Altman and AI’s decel debate",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-08-03",
+    "tags": []
+  },
+  "ebe3ebae28701e3e43633d2bc908477e72e737fe": {
+    "url": "https://www.wired.com/story/europeans-are-about-to-find-out-how-entrenched-ai-is-in-their-daily-lives/",
+    "title": "Europeans Are About to Find Out How Entrenched AI Is in Their Daily Lives",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-03",
+    "tags": []
   }
 }
