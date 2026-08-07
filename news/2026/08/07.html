@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI &amp; ML News Letter · 08/07</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --accent:#5DB8A6; --accent-hover:#479B8B; --accent-weak:#E8F4F1;
+  --focus-ring:rgba(93,184,166,.5);
+  --bg:#FAF9F5; --bg-subtle:#F0EEE6; --border:#E7E3D9;
+  --text:#1F1E1D; --text-2:#6B6862; --text-3:#A39E94;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}}
+:root[data-theme="dark"]{
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover);text-decoration:underline}
+strong{font-weight:600;color:var(--text)}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px;border-radius:3px}
+
+/* 모바일 우선 단일 컬럼 (<1200px). 덩어리 중앙 정렬은 margin:0 auto. */
+.page{max-width:760px;margin:0 auto;padding:20px 18px 40px}
+
+/* --- 마스트헤드 (뉴스레터 제호) --- */
+.mast{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+  padding-bottom:14px;border-bottom:2px solid var(--text);margin-bottom:24px}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--accent);
+  text-transform:uppercase;margin:0 0 6px}
+.mast-title{font-size:26px;font-weight:600;margin:0;letter-spacing:-.01em;line-height:1.15}
+.mast-date{font-size:14px;color:var(--text-2);margin-top:8px}
+.themebtn{flex:none;background:var(--bg-subtle);border:1px solid var(--border);color:var(--text-2);
+  border-radius:20px;padding:5px 12px;font-size:13px;cursor:pointer;font-family:inherit}
+.topnav{margin-top:11px;display:flex;gap:16px;font-size:13px}
+.topnav a{color:var(--text-2);font-weight:500} .topnav a:hover{color:var(--accent)}
+@media (min-width:640px){.mast-title{font-size:31px}}
+
+/* --- TODAY'S TOP 3 --- */
+.top3{background:var(--accent-weak);border-radius:12px;padding:14px 18px;margin-bottom:24px}
+.top3 h2{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--accent);margin:0 0 8px}
+.top3 ol{margin:0;padding:0;list-style:none}
+.top3 li{padding:4px 0 4px 22px;position:relative;font-size:15px;color:var(--text)}
+.top3 li::before{content:"\2605";position:absolute;left:0;color:var(--accent);font-size:12px;top:7px}
+.top3 .t3cat{color:var(--text-2);font-size:12px;margin-right:5px}
+.top3 a{color:var(--text)} .top3 a:hover{color:var(--accent-hover)}
+
+/* --- 목차 (TOC) --- */
+.toc{margin-bottom:26px}
+.toc h2{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--text-2);margin:0 0 8px}
+.toc ul{margin:0;padding:0;list-style:none}
+.toc li{padding:6px 0;border-top:1px solid var(--border)}
+.toc li:first-child{border-top:none}
+.toc .r{display:flex;gap:6px;align-items:baseline;font-size:14px}
+.toc .nm{font-weight:500;color:var(--text)} .toc a:hover .nm{color:var(--accent)}
+.toc .cnt{color:var(--text-3);font-size:12px}
+.toc .lead{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  font-size:12px;color:var(--text-2);margin-top:2px;line-height:1.4}
+.toc li.active .nm{color:var(--accent)}
+.toc li.active{border-left:2px solid var(--accent);padding-left:8px;margin-left:-10px}
+
+/* --- 섹션 --- */
+.sec{margin:0 0 34px;scroll-margin-top:14px}
+.sec-h{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:0 0 2px;padding-top:6px}
+.sec-h .nm{font-size:20px;font-weight:600}
+.sec-h .cnt{font-size:13px;color:var(--text-3)}
+.sec-h .all{font-size:12px;color:var(--text-3);margin-left:auto}
+.sec-h .all span{color:var(--text-2)}
+.sec-h .exp{font-size:12px;background:none;border:1px solid var(--border);color:var(--text-2);
+  border-radius:14px;padding:2px 10px;cursor:pointer;font-family:inherit}
+.sec-desc{font-size:13px;color:var(--text-2);margin:0 0 8px}
+.sec-empty{font-size:14px;color:var(--text-3);padding:4px 0 6px}
+.backtop{display:inline-block;font-size:12px;color:var(--text-3);margin-top:6px}
+
+/* --- 아이템 (아코디언) — 거터(번호) + 단일 콘텐츠 컬럼 (DESIGN §3 v4). 좌측 정렬선 1개. --- */
+.item{border-bottom:1px solid var(--border);--gutter:28px}
+.item>summary{list-style:none;cursor:pointer;padding:16px 26px 16px 0;position:relative;
+  display:grid;grid-template-columns:var(--gutter) 1fr;align-items:start}
+.item>summary::-webkit-details-marker{display:none}
+.item>summary::after{content:"\25B8";position:absolute;right:2px;top:16px;color:var(--text-3);
+  font-size:13px;transition:transform .15s;display:inline-block}
+.item[open]>summary::after{transform:rotate(90deg)}
+.num{font-size:13px;color:var(--text-3);font-variant-numeric:tabular-nums;font-weight:500;padding-top:3px}
+.t3star{color:var(--accent);font-size:11px;margin-right:2px}
+.body-col{min-width:0}
+.it-title{display:block;font-size:18px;font-weight:600;color:var(--text);line-height:1.4}
+.item>summary:hover .it-title{color:var(--accent)}
+.it-sub{display:block;font-size:13px;color:var(--text-2);margin-top:3px;line-height:1.35}
+.it-meta{display:block;font-size:13px;color:var(--text-2);margin-top:6px}
+.it-lede{display:block;font-size:15px;color:var(--text-2);margin-top:7px;line-height:1.5}
+.item[open] .it-lede{color:var(--text)}
+/* 접힘 본문도 콘텐츠 컬럼에 정렬 (거터만큼 들여씀) */
+.it-body{padding:0 0 20px var(--gutter)}
+.it-body p{margin:0 0 10px}
+@media (min-width:900px){.item{--gutter:40px}}
+.slot-l{font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--text-2);margin:14px 0 2px}
+.tags{margin-top:10px}
+.tag{display:inline-block;font-size:12px;color:var(--text-2);background:var(--bg-subtle);
+  border:1px solid var(--border);border-radius:12px;padding:1px 9px;margin:0 5px 5px 0}
+.prev{font-size:13px;color:var(--text-3);margin-top:8px}
+.src-cta{display:inline-block;margin-top:12px;font-size:14px;font-weight:500;color:var(--accent)}
+.weak{color:var(--accent);font-size:12px;border:1px solid var(--accent);border-radius:5px;
+  padding:0 6px;margin-left:6px}
+
+/* --- "다루는 주제" 푸터 --- */
+.topics{margin-top:36px;padding-top:22px;border-top:2px solid var(--text)}
+.topics h2{font-size:15px;font-weight:600;margin:0 0 12px}
+.topics ul{margin:0;padding:0;list-style:none}
+.topics li{padding:7px 0;border-top:1px solid var(--border);font-size:13px;color:var(--text-2)}
+.topics li:first-child{border-top:none}
+.topics .tnm{font-weight:600;color:var(--accent);margin-right:6px}
+
+/* --- 데스크톱 (≥1200px): 좌측 sticky TOC(260) + 본문(720), 덩어리 중앙 정렬 --- */
+@media (min-width:1200px){
+  /* max-width = 260+44+720 그리드(1024) + 좌우 padding(18*2). box-sizing:border-box
+     라 padding 을 포함해야 본문 720 이 찌그러지지 않는다. */
+  .page{max-width:1060px;display:grid;grid-template-columns:260px minmax(0,720px);
+    column-gap:44px;justify-content:center;align-items:start;padding-top:28px}
+  .mast{grid-column:1/3}
+  .toc{grid-column:1;grid-row:2/999;position:sticky;top:24px;margin:0;align-self:start}
+  .top3,.main{grid-column:2}
+  .topics{grid-column:1/3}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="mast">
+    <div class="mast-l">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1 class="mast-title">AI &amp; ML News Letter</h1>
+      <div class="mast-date">2026 / 08 / 07 (금) · 16건</div>
+      <nav class="topnav"><a href="../../../archive.html">📅 지난 브리핑</a>
+        <a href="#topics">🗂 주제별 보기</a></nav>
+    </div>
+    <button id="tbtn" class="themebtn" type="button">🌓 테마</button>
+  </header>
+  <section class="top3"><h2>TODAY'S TOP 3</h2><ol><li><a href="#5e4f5ec97a0d"><span class="t3cat">[AI Agent]</span>AWS, Bedrock AgentCore에 Dogwood 기반 &#x27;시간적 정책&#x27; 도입 — 에이전트 행동 시퀀스·비용·속도 통제</a></li><li><a href="#f349870eb8e2"><span class="t3cat">[AI Agent]</span>AWS Bedrock AgentCore, 세션 이력 기반 &#x27;Temporal Policies&#x27;로 AI 에이전트 도구 호출 인가 통제</a></li><li><a href="#cd738b4ca159"><span class="t3cat">[Deep Learning]</span>Apple, 저랭크 잔차 증류로 사전학습 가중치 &#x27;잠금&#x27; 기법 공개 — 무단 파인튜닝 방어 시도</a></li></ol></section>
+  <nav class="toc" id="toc"><h2>오늘의 목차</h2><ul><li data-cat="ai-agent"><a href="#ai-agent"><span class="r"><span class="nm">AI Agent</span><span class="cnt">2</span></span><span class="lead">AWS, Bedrock AgentCore에 Dogwood 기반 &#x27;시간적 정책&#x27; 도입 — 에이전트 행동 시퀀스·비용·속도 통제</span></a></li><li data-cat="llm-foundation-model"><a href="#llm-foundation-model"><span class="r"><span class="nm">LLM / Foundation Model</span><span class="cnt">2</span></span><span class="lead">Apple, DeepAmbigQA 공개 — 동명이인·다중 개체 얽힌 모호한 멀티홉 질문으로 LLM 답변 완전성 평가</span></a></li><li data-cat="deep-learning"><a href="#deep-learning"><span class="r"><span class="nm">Deep Learning</span><span class="cnt">3</span></span><span class="lead">Apple, 저랭크 잔차 증류로 사전학습 가중치 &#x27;잠금&#x27; 기법 공개 — 무단 파인튜닝 방어 시도</span></a></li><li data-cat="predictive-modeling"><a href="#predictive-modeling"><span class="r"><span class="nm">예측 모델링</span><span class="cnt">3</span></span><span class="lead">CoCoEvolve, 차트·표·코드 3중 표현 일치성 학습으로 6개 변환 과제 성능 개선</span></a></li><li data-cat="mlops"><a href="#mlops"><span class="r"><span class="nm">MLOps / ML Engineering</span><span class="cnt">2</span></span><span class="lead">AWS, Codex+Bedrock 사용량 가시화 — OpenTelemetry·CloudWatch로 팀별·비용센터별 추적, 중앙 프록시 없이 구현</span></a></li><li data-cat="practice"><a href="#practice"><span class="r"><span class="nm">실무 사례 · 노하우</span><span class="cnt">2</span></span><span class="lead">Anthropic, Claude Code 40만 세션 분석 — 성공 여부로 검증한 3가지 사용 원칙</span></a></li><li data-cat="industry-application"><a href="#industry-application"><span class="r"><span class="nm">산업 적용 사례</span><span class="cnt">2</span></span><span class="lead">OpenAI, ChatGPT 활용 실태 데이터 &#x27;Signals&#x27; 공개 — 국가별 채택·사용 행태 분석</span></a></li></ul></nav>
+  <main class="main"><section class="sec" id="ai-agent"><div class="sec-h"><span class="nm">AI Agent</span><span class="cnt">2건</span><span class="all"><a href="../../../category/ai-agent.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="ai-agent">전체 펼치기</button></div><div class="sec-desc">AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</div><details class="item" id="5e4f5ec97a0d" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">AWS, Bedrock AgentCore에 Dogwood 기반 &#x27;시간적 정책&#x27; 도입 — 에이전트 행동 시퀀스·비용·속도 통제</span><span class="it-sub">Control agent behaviors and cost beyond a single action: new capabilities in Amazon Bedrock AgentCore</span><span class="it-meta">✍️ 블로그 · aws.amazon.com</span><span class="it-lede">AWS는 Amazon Bedrock AgentCore에 신규 기능으로 temporal policies와 게이트웨이 레이트 리미팅을 추가했다.</span></span></summary><div class="it-body"><p>기존 정책은 각 액션을 개별적으로 상태 없이(stateless) 판단했지만, 새 기능은 세션 내 이전 행동 시퀀스를 함께 고려해 호출을 허용하거나 차단한다. 이를 통해 이전 호출 결과와 다른 계좌로의 송금, 개별 한도 이하로 쪼갠 반복 구매, 토큰 예산을 초과하는 야간 재시도 같은 패턴형 위험을 막을 수 있다. 이 기능은 AI 에이전트 전용으로 새로 만든 오픈소스 정책 언어 <strong>Dogwood</strong>가 구동하며, 모든 트래픽이 지나는 AgentCore 게이트웨이 레벨에서 일관되게 적용된다.</p><div class="slot-l">WHY IT MATTERS</div><p>McKinsey 조사에 따르면 조직의 약 <strong>80%가 AI 에이전트의 위험 행동을 경험</strong>했으며, 보안·신뢰 문제가 에이전트 확산의 최대 걸림돌로 꼽힌다. 개별 호출 단위 승인만으로는 전체 행동 패턴에 숨은 위험을 잡아낼 수 없어, 시퀀스 기반 통제는 엔터프라이즈 에이전트 채택 속도를 좌우할 핵심 요소가 된다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 AgentCore 정책이 각 요청을 독립적으로, 상태 없이 판단하던 것과 달리, temporal policies는 세션 내 누적된 행동 이력을 참조해 순서·합계·승인 여부를 판단한다는 점이 다르다.</p><a class="src-cta" href="https://aws.amazon.com/blogs/machine-learning/control-agent-behaviors-and-cost-beyond-a-single-action-new-capabilities-in-amazon-bedrock-agentcore/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="f349870eb8e2" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>02</span><span class="body-col"><span class="it-title">AWS Bedrock AgentCore, 세션 이력 기반 &#x27;Temporal Policies&#x27;로 AI 에이전트 도구 호출 인가 통제</span><span class="it-sub">Securing AI agents with temporal policies in Amazon Bedrock AgentCore</span><span class="it-meta">✍️ 블로그 · aws.amazon.com</span><span class="it-lede">AI 에이전트는 런타임에 어떤 도구를 어떤 순서와 인자로 호출할지 스스로 결정하기 때문에, 개별 호출만 보는 기존의 상태 비저장(stateless) 접근 제어로는 충분하지 않다.</span></span></summary><div class="it-body"><p>예를 들어 에이전트가 계좌번호를 환각으로 지어내 송금 도구에 전달하거나, 누적 거래 한도를 넘어선 반복 거래를 실행하거나, 같은 보험 청구를 수초 안에 승인·거부 모두 하는 경우 개별 호출은 정책을 통과하지만 전체 흐름(trajectory)에서 문제가 드러난다. Amazon Bedrock AgentCore의 <strong>temporal policies</strong>는 AgentCore Gateway 경계에서 실행되며 현재 요청을 이전 이벤트 이력과 함께 평가해 인가 여부를 결정한다. 에이전트 코드 외부에서 동작하므로 프롬프트 조작이나 코드 버그와 무관하게 에이전트가 우회할 수 없다. 워크플로 순서 강제, 도구 간 데이터 위조 방지, 세션당 누적 금액 한도 설정, 고위험 작업에 대한 사람 승인 요구, 사람 개입 없을 때 권한 자동 축소 등에 활용할 수 있다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI 에이전트가 실제 업무에 배포되면서 개별 도구 호출 단위 검증만으로는 막을 수 없는 다단계 공격이나 오작동이 늘고 있어, 세션 전체 흐름을 보는 인가 체계가 실무적으로 중요해진다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 AgentCore Policy의 상태 비저장(stateless) 규칙이 개별 요청 단위로만 허용 여부를 판단한 것과 달리, temporal policies는 <strong>에이전트의 이전 행동 이력(trajectory)</strong>을 함께 평가해 게이트웨이 경계에서 우회 불가능한 방식으로 인가를 결정한다.</p><a class="src-cta" href="https://aws.amazon.com/blogs/machine-learning/securing-ai-agents-with-temporal-policies-in-amazon-bedrock-agentcore/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="llm-foundation-model"><div class="sec-h"><span class="nm">LLM / Foundation Model</span><span class="cnt">2건</span><span class="all"><a href="../../../category/llm-foundation-model.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="llm-foundation-model">전체 펼치기</button></div><div class="sec-desc">LLM·파운데이션 모델 — 사전학습·정렬·추론</div><details class="item" id="6e3edb7cb7b0"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Apple, DeepAmbigQA 공개 — 동명이인·다중 개체 얽힌 모호한 멀티홉 질문으로 LLM 답변 완전성 평가</span><span class="it-sub">DeepAmbigQA: Ambiguous Multi-hop Questions for Benchmarking LLM Answer Completeness</span><span class="it-meta">✍️ 블로그 · machinelearning.apple.com</span><span class="it-lede">이 블로그는 검색 도구를 결합한 LLM이 복잡한 개방형 질문에 완전한 답변 집합을 제시하는 데 어려움을 겪는 문제를 다룬다.</span></span></summary><div class="it-body"><p>예로 든 “영화 Heat에 출연한 배우 중 아카데미상을 받은 사람은?”과 같은 질문은 동명의 여러 영화를 구분하고, 많은 배우에 걸쳐 근거를 수집·통합하는 추론을 동시에 요구한다. 기존 QA 벤치마크는 이 두 가지 난제를 함께 평가하지 않는다는 문제의식에서, 저자들은 <strong>DEEPAMBIGQAGEN</strong>이라는 자동 데이터 생성 파이프라인을 도입해 이런 유형의 QA 데이터를 구축한다.</p><div class="slot-l">WHY IT MATTERS</div><p>검색 결합 LLM의 실제 활용에서는 단일 정답이 아니라 조건을 만족하는 모든 답을 빠짐없이 찾아내는 능력이 중요한데, 이 벤치마크는 그런 답변 완전성을 직접 측정할 수 있는 도구를 제공한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 QA 벤치마크가 동명 개체 구분이나 다중 개체에 걸친 증거 통합 중 한쪽만 다루는 것과 달리, <strong>DeepAmbigQA는 두 난제를 동시에</strong> 요구하는 질문을 생성한다는 점이 다르다.</p><a class="src-cta" href="https://machinelearning.apple.com/research/deepambigqa-multihop-questions" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="7e537444b5bb"><summary><span class="num">02</span><span class="body-col"><span class="it-title">The Personalization Mirage: How LLMs Fabricate User Profiles, and Why Self-Monitoring Misleads</span><span class="it-sub">MirageBench 공개 — LLM 12개 전부 34~49% &#x27;과잉추론&#x27;, 자가진단 신뢰도는 순위와 역상관(ρ=-0.60)</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">연구진은 개인화 LLM이 근거 없이 사용자 속성을 지어내는 &#x27;과잉추론(over-inference, OI)&#x27; 현상을 측정하기 위해 MirageBench를 제안했다.</span></span></summary><div class="it-body"><p>150개 페르소나, 6개 개인화 과제, 4단계 충실도 분류체계와 143616건의 판정 클레임으로 7개 계열 12개 모델을 평가했다. 그 결과 <strong>모든 12개 모델이 34~49%의 클레임에서 과잉추론</strong>을 보였으며 어떤 모델도 이를 피하지 못했다. 특히 모델 자신의 과잉추론 자가평가는 실제 판정 결과와 순위가 오히려 반대로 나타나는 &#x27;Self-Monitoring Inversion&#x27;(ρ=-0.60)이 확인됐다. 반면 동일 모델 내에서 자체 클레임을 상대 평가하는 자가감사는 어느 정도 유효했다(AUROC 0.58~0.83).</p><div class="slot-l">WHY IT MATTERS</div><p>기억 기반 개인화 LLM이 이미 널리 배포되고 있는 상황에서, 모델이 스스로 보고하는 신뢰도가 모델 간 비교에는 오히려 오도할 수 있음을 보여준다. 이는 개인화 시스템 신뢰성 검증에 <strong>외부 판정</strong> 체계가 필요하다는 근거를 제시한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 개인화 평가가 주로 모델 자체 출력이나 자가보고 신뢰도에 의존했던 것과 달리, 이 연구는 독립적인 judge 모델과 인간 주석자 검증(Cohen&#x27;s kappa 0.863~0.900)을 통한 외부 검증 체계를 도입해 자가진단의 한계를 직접 대조했다.</p><div class="tags"><span class="tag">#personalization</span><span class="tag">#llm-evaluation</span><span class="tag">#hallucination</span></div><a class="src-cta" href="https://arxiv.org/abs/2608.04570" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="deep-learning"><div class="sec-h"><span class="nm">Deep Learning</span><span class="cnt">3건</span><span class="all"><a href="../../../category/deep-learning.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="deep-learning">전체 펼치기</button></div><div class="sec-desc">딥러닝 — 아키텍처·학습기법 자체</div><details class="item" id="cd738b4ca159" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">Apple, 저랭크 잔차 증류로 사전학습 가중치 &#x27;잠금&#x27; 기법 공개 — 무단 파인튜닝 방어 시도</span><span class="it-sub">Locking Pretrained Weights via Deep Low-Rank Residual Distillation</span><span class="it-meta">✍️ 블로그 · machinelearning.apple.com</span><span class="it-lede">공개 가중치 언어 모델은 하드웨어·소프트웨어 전반에서 활용도가 높고 체크포인트 재사용, 파인튜닝, 재배포 등 개방형 연구를 촉진한다.</span></span></summary><div class="it-body"><p>하지만 이러한 자유가 무단 용도로의 가중치 변형을 허용해 부작용을 낳을 수 있다는 우려도 존재한다. 이 글은 사전학습된 가중치를 특정 방향으로의 적응(파인튜닝)에 저항하도록 &#x27;잠그는&#x27; 방법을 다룬다. 핵심 아이디어는 <strong>깊은 저랭크 잔차 증류</strong>를 통해 모델이 원치 않는 방식으로 재학습되는 것을 어렵게 만드는 것이다. 다만 적응적 공격자가 존재할 수 있어 이러한 방어가 근본적으로 쉽지 않다고 지적한다.</p><div class="slot-l">WHY IT MATTERS</div><p>공개 가중치 모델의 오남용 방지는 모델 배포 정책과 안전성 측면에서 중요한 실무 이슈이며, 이 연구는 가중치 수준에서 접근하는 새로운 방어 축을 제시한다.</p><a class="src-cta" href="https://machinelearning.apple.com/research/locking-pretrained-weights" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="f5f908b6ffe4"><summary><span class="num">02</span><span class="body-col"><span class="it-title">구글 딥마인드, 사이클론 예보에서 AI 모델 &#x27;WeatherNext&#x27; 성과 발표</span><span class="it-sub">WeatherNext: AI model achieves breakthrough in forecasting cyclones</span><span class="it-meta">✍️ 블로그 · deepmind.google<span class="weak">원문 근거 부족</span></span><span class="it-lede">딥마인드가 WeatherNext라는 AI 기상 예보 모델이 사이클론(태풍) 예측에서 성과를 냈다고 소개했다.</span></span></summary><div class="it-body"><p>원문 초록이 제공되지 않아 구체적인 방법이나 수치는 확인할 수 없다.</p><div class="slot-l">WHY IT MATTERS</div><p>기상 예측에 AI를 적용하는 사례로, 후속 정보 공개 시 재해 대응 및 예보 정확도 개선에 참고할 만하다.</p><a class="src-cta" href="https://deepmind.google/blog/weathernext-ai-model-achieves-breakthrough-in-forecasting-cyclones/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="2d7a0c935798"><summary><span class="num">03</span><span class="body-col"><span class="it-title">When Teachers Mislead: Spurious-Signal-Aware On-Policy Distillation</span><span class="it-sub">SA-OPD, 교사 모델의 &#x27;가짜 신호&#x27; 걸러내는 온폴리시 증류 제안 — LLM·VLM서 기존 선택적 OPD 능가</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">온폴리시 증류(OPD)는 학생 모델이 생성한 궤적에 교사의 토큰 단위 신호를 밀도 있게 감독하는 방식이다.</span></span></summary><div class="it-body"><p>이 논문은 교사의 토큰 판단이 실제 입력이 아니라 언어적 편향, 형식적 관습, 정형화된 추론 패턴에 의해 좌우될 수 있음을 지적하며, 이를 &#x27;스퓨리어스 신호&#x27;로 정의한다. 이런 신호는 큰 그래디언트를 유발하면서도 과제 성능 향상에는 기여하지 않는다. 저자들은 입력 의존도를 추정하는 경량 프록시를 도입해, 입력 의존도가 낮으면서 증류 발산이 큰 토큰만 선별적으로 걸러내는 SA-OPD를 제안한다. LLM과 VLM 실험 모두에서 <strong>SA-OPD는 기존 Vanilla OPD 및 경쟁 선택적 방법들을 일관되게 능가</strong>했다.</p><div class="slot-l">WHY IT MATTERS</div><p>교사-학생 증류에서 신호의 &#x27;신뢰도&#x27;나 &#x27;학습 가능성&#x27;만 보던 기존 관점에 &#x27;입력 근거성&#x27;이라는 새로운 축을 제시해, 증류 신호 선택 연구 전반에 시사점을 준다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 선택적 OPD 방법들이 신호의 확신도, 정보량, 학습 가능성에 기반해 우선순위를 매긴 것과 달리, SA-OPD는 <strong>입력 의존도(input-groundedness)</strong>와 발산 크기를 동시에 고려해 스퓨리어스 업데이트를 걸러낸다는 점이 다르다.</p><div class="tags"><span class="tag">#distillation</span><span class="tag">#spurious-signals</span></div><a class="src-cta" href="https://arxiv.org/abs/2608.03632" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="predictive-modeling"><div class="sec-h"><span class="nm">예측 모델링</span><span class="cnt">3건</span><span class="all"><a href="../../../category/predictive-modeling.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="predictive-modeling">전체 펼치기</button></div><div class="sec-desc">예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</div><details class="item" id="78492923cbb4"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Consistency-Driven Co-Evolution for Self-Supervised Cross-Representation Learning</span><span class="it-sub">CoCoEvolve, 차트·표·코드 3중 표현 일치성 학습으로 6개 변환 과제 성능 개선</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">차트 이미지, 표 형태 데이터, 시각화 코드 간의 상호 변환은 하나의 입력에 여러 정답이 존재하는 일대다 문제이며, 감독 신호가 모호하고 비용이 크다는 문제가 있다.</span></span></summary><div class="it-body"><p>CoCoEvolve는 이를 명시적인 <strong>일대일 대응</strong>으로 재정의하고, 추가 주석 없이 표현 간 일치도를 최적화 신호로 사용한다. 학습 단계에서는 차트-표-코드 순환 구조로 공진화를 수행하는 CoCoEvolve@Train을, 추론 단계에서는 동일한 일치성 목표를 적용하는 CoCoEvolve@Test를 제안한다. 6가지 상호 표현 과제를 포괄하는 평가 스위트 CoCoEvolve@Eval도 함께 제시하며, 4개 벤치마크에서 학습 시점과 추론 시점 모두 성능이 향상됐다.</p><div class="slot-l">WHY IT MATTERS</div><p>차트·표·코드는 데이터 분석 워크플로우 전반에서 서로 변환되는 핵심 표현 형태인데, 이들 간 일관성을 별도 주석 없이 확보할 수 있다면 멀티모달 데이터 이해 시스템 구축 비용을 크게 줄일 수 있다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 접근이 차트-표-코드 변환을 과제별 목적함수에 의존한 <strong>일대다 매핑 문제</strong>로 취급했던 것과 달리, CoCoEvolve는 일대일 대응을 정의하고 표현 간 일치도 자체를 감독 신호로 사용하며 추론 시점 최적화까지 확장한다.</p><div class="tags"><span class="tag">#tabular</span></div><a class="src-cta" href="https://arxiv.org/abs/2608.04926" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="783ea4fcc130"><summary><span class="num">02</span><span class="body-col"><span class="it-title">TriGlue: a Biology-Inspired Generative Model for Generating Molecular Glue-Induced Ternary Complex</span><span class="it-sub">TriGlue, 분자 접착제 유도 삼중복합체 생성 AI 공개 — 인터페이스 예측+플로우 매칭 결합</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">분자 접착제(molecular glue)는 E3 유비퀴틴 리가아제와 표적 단백질 간 삼중복합체 형성을 유도해 표적 단백질을 분해하는 치료 전략이지만, 이를 위한 전산 설계는 아직 미개척 분야다.</span></span></summary><div class="it-body"><p>연구진은 분자 접착제 설계를 삼중복합체 생성 문제로 재정의하고, 생물학적 작용 기전에서 영감을 받은 생성 프레임워크 <strong>TriGlue</strong>를 제안했다. TriGlue는 결합되지 않은 단량체 구조로부터 기하학적으로 제약된 단백질-단백질 인터페이스를 예측하는 SE(3)-equivariant 모듈과, 이 인터페이스 정보를 조건으로 분자 접착제와 복합체 조립에 필요한 강체 변환을 동시에 생성하는 플로우 매칭 네트워크의 두 단계로 구성된다. 실험 결과 TriGlue는 화학적으로 타당한 분자와 그럴듯한 삼중복합체를 생성함을 확인했다.</p><div class="slot-l">WHY IT MATTERS</div><p>표적 단백질 분해제(TPD) 설계는 미지의 단백질-단백질 인터페이스와 리간드 생성을 동시에 다뤄야 하는 난제였는데, 이를 자동화할 수 있다면 신약 후보 발굴 속도를 크게 높일 수 있다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 구조 기반 신약 설계가 알려진 결합 포켓을 전제로 하는 것과 달리, TriGlue는 인터페이스 자체가 미지수인 상황에서 인터페이스 추정과 복합체 생성을 결합해 처리한다.</p><a class="src-cta" href="https://arxiv.org/abs/2607.22143" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="3e3ac8d4caec"><summary><span class="num">03</span><span class="body-col"><span class="it-title">DeepMind, 저해상도 기상 데이터로 허리케인 경로·강도 예측하는 WeatherNext 오픈소스 공개</span><span class="it-sub">DeepMind Says Its AI Can Predict Hurricanes Earlier Than Everyone Else</span><span class="it-meta">📰 뉴스 · wired.com</span><span class="it-lede">DeepMind가 개발한 WeatherNext 모델은 낮은 해상도의 기상 데이터만으로도 허리케인의 경로와 강도를 정확히 예측할 수 있다.</span></span></summary><div class="it-body"><p>이 모델은 오픈소스로 공개될 예정이다. 흥미로운 점은 연구자들 스스로도 이 모델이 <strong>어떻게</strong> 그런 예측을 해내는지 아직 완전히 이해하지 못하고 있다는 것이다.</p><div class="slot-l">WHY IT MATTERS</div><p>허리케인은 예측이 어렵고 피해가 큰 자연재해인데, 저해상도 데이터로도 높은 정확도를 내는 모델이 오픈소스로 풀리면 기상 예측 연구와 재난 대응 인프라 전반에 파급 효과가 클 수 있다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 기상 예측 모델들은 고해상도 데이터를 요구하는 것과 달리, WeatherNext는 <strong>저해상도 데이터</strong>로도 정확한 경로·강도 예측이 가능하다는 점이 다르다.</p><div class="tags"><span class="tag">#timeseries</span></div><a class="src-cta" href="https://www.wired.com/story/deepmind-ai-model-can-predict-hurricanes-earlier/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="causal-inference"><div class="sec-h"><span class="nm">인과추론</span></div><div class="sec-desc">인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="mlops"><div class="sec-h"><span class="nm">MLOps / ML Engineering</span><span class="cnt">2건</span><span class="all"><a href="../../../category/mlops.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="mlops">전체 펼치기</button></div><div class="sec-desc">MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</div><details class="item" id="911adb32349a"><summary><span class="num">01</span><span class="body-col"><span class="it-title">AWS, Codex+Bedrock 사용량 가시화 — OpenTelemetry·CloudWatch로 팀별·비용센터별 추적, 중앙 프록시 없이 구현</span><span class="it-sub">Build visibility for Codex on Amazon Bedrock with OpenTelemetry and Amazon CloudWatch</span><span class="it-meta">✍️ 블로그 · aws.amazon.com</span><span class="it-lede">이 글은 Amazon Bedrock에서 OpenAI 모델을 사용하는 Codex 코딩 에이전트의 사용량을 OpenTelemetry와 Amazon CloudWatch로 관측하는 방법을 소개한다.</span></span></summary><div class="it-body"><p>각 개발자 워크스테이션에서 로컬 OTel 수집기가 Codex의 메트릭을 받아 조직 정보를 덧붙인 뒤 SigV4로 서명해 CloudWatch OTLP 엔드포인트로 전송하는 구조다. 별도의 중앙 프록시나 ECS 서비스, 로드밸런서, VPC, 공개 수집 엔드포인트 없이 <strong>CloudWatch 대시보드</strong>만 생성된다. 이 대시보드는 활성 사용자, 대화 턴, API 요청, 토큰 사용량을 24시간 롤링 기준으로 사용자·부서·팀·비용센터·모델별로 보여준다. 다만 토큰 사용량은 청구 원장이 아니므로 실제 비용 파악에는 IAM principal 기반 <strong>AWS Cost and Usage Reports (CUR) 2.0</strong>을 사용해야 한다고 강조한다.</p><div class="slot-l">WHY IT MATTERS</div><p>코딩 에이전트를 조직 전체로 확산시키는 단계에서는 단순한 도구 성능보다 도입 현황 파악, 소비 관리, 책임 있는 접근 확장이 리더십의 핵심 과제가 되는데, 이 패턴은 그 의사결정에 필요한 신호를 제공한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>모델 요청 경로에 중앙 프록시를 추가하지 않고 개발자가 Codex를 계속 로컬에서 사용하는 점이, 별도 인프라(ECS 서비스·로드밸런서·VPC·공개 엔드포인트)를 두는 기존 중앙집중형 관측 방식과 다르다.</p><a class="src-cta" href="https://aws.amazon.com/blogs/machine-learning/build-visibility-for-codex-on-amazon-bedrock-with-opentelemetry-and-amazon-cloudwatch/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="07ac22ae3b85"><summary><span class="num">02</span><span class="body-col"><span class="it-title">AWS, AgentCore Gateway에 AI 트래픽용 속도 제한 기능 추가 — 사용자별 RPS·TPM·CPS 제어 지원</span><span class="it-sub">Configure rate limits for AI traffic on AgentCore gateway</span><span class="it-meta">✍️ 블로그 · aws.amazon.com</span><span class="it-lede">Amazon Bedrock AgentCore gateway가 AI 트래픽에 대한 속도 제한(rate limiting) 기능을 새로 지원한다.</span></span></summary><div class="it-body"><p>요청 속도(RPS/RPM), 토큰 속도(TPM), 연결 속도(CPS) 세 가지 지표를 지원하며, 토큰 제한은 추론 타겟에만 적용되고 요청 전후 실제 토큰 사용량을 반영해 조정된다. OAuth 또는 IAM 기반 규칙으로 사용자별 제한을 정의할 수 있으며, AgentCore Identity와 Policy를 통해 그룹별 역할 기반 접근 제어(RBAC)와 결합해 운용할 수 있다. 예시로 Basic·Advanced·Beta 세 사용자 그룹에 서로 다른 제한을 적용해 신규 모델을 단계적으로 검증하는 구성을 소개한다.</p><div class="slot-l">WHY IT MATTERS</div><p>여러 팀이 하나의 게이트웨이로 LLM, 에이전트, MCP 서버를 공유할 때 <strong>트래픽 폭주로 다운스트림 서비스가 무너지는 것을 방지</strong>할 수 있어 실제 운영 환경에서 중요한 안전장치다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 단순 요청 수 기반 제한과 달리 <strong>토큰 사용량(TPM)과 연결 유지 시간(CPS)까지 세분화</strong>해 스트리밍 추론 호출이나 장시간 연결을 별도로 통제할 수 있다.</p><a class="src-cta" href="https://aws.amazon.com/blogs/machine-learning/configure-rate-limits-for-ai-traffic-on-agentcore-gateway/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="practice"><div class="sec-h"><span class="nm">실무 사례 · 노하우</span><span class="cnt">2건</span><span class="all"><a href="../../../category/practice.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="practice">전체 펼치기</button></div><div class="sec-desc">실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</div><details class="item" id="bfedf32c8300"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Anthropic, Claude Code 40만 세션 분석 — 성공 여부로 검증한 3가지 사용 원칙</span><span class="it-sub">Claude Code Best Practices: 3 Lessons from 400,000 Sessions</span><span class="it-meta">✍️ 블로그 · analyticsvidhya.com</span><span class="it-lede">이 글은 Claude Code 사용법이 개인 취향 문제라는 통념을 다룬다.</span></span></summary><div class="it-body"><p>Anthropic이 <strong>23만 5천 명 이상의 사용자, 약 40만 개 세션</strong>을 테스트 통과, 커밋 완료, 사용자 확인 등 실제 성공 지표와 대조해 분석했다. 이를 통해 plan 모드 사용 여부나 CLAUDE.md 길이 같은 선택이 단순한 취향이 아니라 성공률과 연관된다는 점을 보여준다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI 코딩 도구 사용법을 주관적 선호가 아닌 <strong>실제 성공 데이터</strong>로 검증한 사례로, 실무에서 어떤 설정과 워크플로우가 실질적으로 결과를 개선하는지 판단하는 근거를 제공한다.</p><a class="src-cta" href="https://www.analyticsvidhya.com/blog/2026/08/claude-code-best-practices-analysis/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="de8afe1e7d8e"><summary><span class="num">02</span><span class="body-col"><span class="it-title">2026년 AI 엔지니어를 위한 필수 툴킷 6가지 — 프로덕션급 자율 시스템 구축 가이드</span><span class="it-sub">The Minimal AI Engineer Toolkit for 2026</span><span class="it-meta">✍️ 블로그 · kdnuggets.com</span><span class="it-lede">이 블로그는 2026년 AI 엔지니어가 프로덕션 수준의 <strong>자율 시스템</strong>을 구축하고 배포하는 데 필요한 6가지 핵심 도구를 소개한다.</span></span></summary><div class="it-body"><p>구체적인 도구명이나 각 도구의 기능은 원문 초록에 명시되어 있지 않다.</p><div class="slot-l">WHY IT MATTERS</div><p>실무 AI 엔지니어링 환경이 실험 단계를 넘어 자율 시스템의 실제 배포로 옮겨가는 흐름을 반영하며, 최소한의 도구 스택을 파악하는 데 참고가 될 수 있다.</p><a class="src-cta" href="https://www.kdnuggets.com/the-minimal-ai-engineer-toolkit-for-2026" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="industry-application"><div class="sec-h"><span class="nm">산업 적용 사례</span><span class="cnt">2건</span><span class="all"><a href="../../../category/industry-application.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="industry-application">전체 펼치기</button></div><div class="sec-desc">산업 적용 사례 — 산업 현장의 AI/ML 적용</div><details class="item" id="fea9ae47ebf2"><summary><span class="num">01</span><span class="body-col"><span class="it-title">OpenAI, ChatGPT 활용 실태 데이터 &#x27;Signals&#x27; 공개 — 국가별 채택·사용 행태 분석</span><span class="it-sub">From asking to doing: How the world is putting ChatGPT to work</span><span class="it-meta">✍️ 블로그 · openai.com</span><span class="it-lede">OpenAI가 전 세계 사람들이 ChatGPT를 어떻게 사용하는지 보여주는 새로운 데이터인 Signals를 공개했다.</span></span></summary><div class="it-body"><p>이 데이터는 국가별 채택 수준과 사용 추세, 시간에 따른 행동 변화 양상을 포함한다. 초록에서는 구체적인 수치나 사례는 제시되지 않고, 데이터의 존재와 범위만 언급되었다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI 도구가 단순 질의응답을 넘어 실제 업무 수행 방식으로 확산되는 흐름을 파악할 수 있어, <strong>국가별 채택 격차</strong>와 사용 행태 변화를 추적하는 데 참고할 수 있다.</p><a class="src-cta" href="https://openai.com/index/how-the-world-is-putting-chatgpt-to-work" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="6da5f2d271da"><summary><span class="num">02</span><span class="body-col"><span class="it-title">OpenAI, 美심리학회(APA)와 협력 — 청소년 정신건강 위한 AI 안전 가이드라인 공동 개발</span><span class="it-sub">Working with the American Psychological Association on youth mental health and AI</span><span class="it-meta">✍️ 블로그 · openai.com</span><span class="it-lede">OpenAI가 미국심리학회(APA)와 협력해 청소년 정신건강과 관련된 AI 사용에 대한 근거 기반 가이드라인과 자료를 마련한다고 밝혔다.</span></span></summary><div class="it-body"><p>이번 협력은 책임 있는 AI 사용을 위한 안전장치 마련을 목표로 한다. 구체적인 방법론이나 수치는 공개되지 않았다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI 챗봇이 청소년의 정신건강 상담 도구로 활용되는 사례가 늘면서, <strong>전문 심리학 기관과의 협업</strong>을 통한 안전 기준 마련이 업계 전반의 규범이 될 수 있다.</p><a class="src-cta" href="https://openai.com/index/openai-and-apa-partner-to-advance-responsible-ai" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section></main>
+  <footer class="topics" id="topics"><h2>다루는 주제</h2><ul><li><a class="tnm" href="../../../category/ai-agent.html">AI Agent</a>AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</li><li><a class="tnm" href="../../../category/llm-foundation-model.html">LLM / Foundation Model</a>LLM·파운데이션 모델 — 사전학습·정렬·추론</li><li><a class="tnm" href="../../../category/deep-learning.html">Deep Learning</a>딥러닝 — 아키텍처·학습기법 자체</li><li><a class="tnm" href="../../../category/predictive-modeling.html">예측 모델링</a>예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</li><li><a class="tnm" href="../../../category/causal-inference.html">인과추론</a>인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</li><li><a class="tnm" href="../../../category/mlops.html">MLOps / ML Engineering</a>MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</li><li><a class="tnm" href="../../../category/practice.html">실무 사례 · 노하우</a>실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</li><li><a class="tnm" href="../../../category/industry-application.html">산업 적용 사례</a>산업 적용 사례 — 산업 현장의 AI/ML 적용</li></ul></footer>
+</div>
+<script>
+(function(){
+var r=document.documentElement,k="dsb-theme",s=localStorage.getItem(k);
+if(s)r.dataset.theme=s;
+document.getElementById('tbtn').addEventListener('click',function(){
+  var cur=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  var n=cur==='dark'?'light':'dark';r.dataset.theme=n;localStorage.setItem(k,n);});
+// 섹션 전체 펼치기/접기
+document.querySelectorAll('.exp').forEach(function(b){b.addEventListener('click',function(){
+  var sec=document.getElementById(b.dataset.sec);
+  var ds=sec.querySelectorAll('details.item'),open=b.dataset.state!=='open';
+  ds.forEach(function(d){d.open=open;});
+  b.dataset.state=open?'open':'closed';b.textContent=open?'전체 접기':'전체 펼치기';});});
+// 스크롤 위치 카테고리 TOC 활성 (데스크톱 사이드 TOC)
+var links={};document.querySelectorAll('.toc li[data-cat]').forEach(function(li){links[li.dataset.cat]=li;});
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){Object.values(links).forEach(function(l){l.classList.remove('active');});
+    if(links[e.target.id])links[e.target.id].classList.add('active');}});},
+  {rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('section.sec').forEach(function(s){obs.observe(s);});
+})();
+</script>
+</body>
+</html>
