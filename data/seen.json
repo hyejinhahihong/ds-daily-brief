@@ -21443,5 +21443,85 @@
     "source_tier": 1,
     "first_seen": "2026-08-09",
     "tags": []
+  },
+  "cb533d06a20319d3775b48ba77a9821016bf739e": {
+    "url": "https://towardsdatascience.com/i-thought-loading-data-was-the-finish-line-it-was-the-starting-point/",
+    "title": "I Thought Loading Data Was the Finish Line. It Was the Starting Point.",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-08-10",
+    "tags": []
+  },
+  "35ab51a13323408c6b1be09dcc882b7a6a244281": {
+    "url": "https://towardsdatascience.com/structured-output-with-local-llms/",
+    "title": "How to Implement Structured Output with Local LLMs",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-08-10",
+    "tags": []
+  },
+  "cb5b8c811bfd07ece1e4b3ad75de865ed92212e9": {
+    "url": "https://www.analyticsvidhya.com/blog/2026/08/best-claude-marketing-skills/",
+    "title": "Top 5 Claude Skills for Marketing",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-08-10",
+    "tags": []
+  },
+  "c57ef703537a0a97bfc0a2ecef26852040c51e6d": {
+    "url": "https://techcrunch.com/2026/08/09/embattled-hedge-fund-situational-awareness-invests-400m-in-chip-startup-source-foundry/",
+    "title": "Embattled hedge fund Situational Awareness invests $400M in chip startup Source Foundry",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-10",
+    "tags": []
+  },
+  "53f6c1811ec1a3a7e6426076af7decef97346843": {
+    "url": "https://techcrunch.com/2026/08/09/anthropic-is-turning-claude-codes-auto-mode-on-by-default/",
+    "title": "Anthropic is turning Claude Code’s auto mode on by default",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-08-10",
+    "tags": []
+  },
+  "70ac8307a80aa8208702c25657231d3ff1b3ff9b": {
+    "url": "https://techcrunch.com/2026/08/09/historian-jill-lepore-says-the-tech-industry-is-led-by-bad-readers-who-are-undermining-democracy/",
+    "title": "Historian Jill Lepore says Silicon Valley misreads science fiction and undermines democracy",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-08-10",
+    "tags": []
+  },
+  "4c5b2bdf1256d5c54844b1ede8b390747ebbdadc": {
+    "url": "https://techcrunch.com/2026/08/09/the-ai-safety-test-is-becoming-a-safety-risk/",
+    "title": "The AI safety test is becoming a safety risk",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-08-10",
+    "tags": []
+  },
+  "9171673c4401edbf5fc757020c320db8ce83967d": {
+    "url": "https://arstechnica.com/science/2026/08/mount-toba-eruption-doesnt-seem-like-it-could-nearly-kill-our-species/",
+    "title": "Mount Toba eruption doesn't seem like it could nearly kill our species",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-10",
+    "tags": []
+  },
+  "a6b33877e85c0a0b11fc68257bb119a34cad6e23": {
+    "url": "https://www.wired.com/story/meetily-lets-you-transcribe-and-summarize-meetings-without-a-subscription-heres-how/",
+    "title": "Meetily Lets You Transcribe and Summarize Meetings Without a Subscription—Here’s How",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-08-10",
+    "tags": []
+  },
+  "db9c79caccc316244fa4c694eee89455a13e6d03": {
+    "url": "https://www.wired.com/story/ai-billionaires-are-pledging-their-wealth-good-or-bad/",
+    "title": "These AI Barons Are Ready to Give Away Their Fortunes",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-08-10",
+    "tags": []
   }
 }
