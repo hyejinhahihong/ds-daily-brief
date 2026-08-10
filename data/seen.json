@@ -21523,5 +21523,742 @@
     "source_tier": 4,
     "first_seen": "2026-08-10",
     "tags": []
+  },
+  "9a083cf5eaaeb00b4929fb45b14b8ac6d174fc96": {
+    "url": "https://www.amazon.science/news/aws-trainium-frontier-competition-co-design-models-and-kernels-on-purpose-built-ai-chips",
+    "title": "AWS Trainium Frontier competition: Co-design models and kernels on purpose-built AI chips",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": [
+      "hardware",
+      "kernel-optimization"
+    ]
+  },
+  "8aa462ac0b5ed827e8a2d21d69d6d3c5c7d86a72": {
+    "url": "https://aws.amazon.com/blogs/machine-learning/run-interactive-ides-on-amazon-eks-with-sagemaker-ai-to-power-up-your-ai-workflows/",
+    "title": "Run interactive IDEs on Amazon EKS with SageMaker AI to power up your AI workflows",
+    "category": "mlops",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": [
+      "deployment",
+      "infrastructure"
+    ]
+  },
+  "96ef180873b61c72aa69aaa65f7dc39444dbdd68": {
+    "url": "https://aws.amazon.com/blogs/machine-learning/how-nops-shipped-finops-agents-75-faster-with-amazon-bedrock-agentcore/",
+    "title": "How nOps shipped FinOps agents 75% faster with Amazon Bedrock AgentCore",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": [
+      "agent-development",
+      "tool-use"
+    ]
+  },
+  "3c37851974744995f8a3fa47ee478e67a3ee3dd6": {
+    "url": "https://developer.nvidia.com/blog/run-local-agentic-ai-workflows-with-metas-muse-glimmer-on-nvidia/",
+    "title": "Run Local Agentic AI Workflows with Meta’s Muse Glimmer on NVIDIA",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": [
+      "agentic-workflow",
+      "local-deployment"
+    ]
+  },
+  "61282b7420ed067525c1f91d92b2480700145654": {
+    "url": "https://openai.com/index/responsible-ai-infrastructure-texas",
+    "title": "OpenAI’s letter to Governor Abbott on responsible AI infrastructure in Texas",
+    "category": "industry-application",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "c7b962b1d9efaa2a9e74cd90c9ed8a5b0f0b1e1b": {
+    "url": "https://openai.com/index/model-ml",
+    "title": "Model ML completes finance work more efficiently with GPT-5.6 Sol",
+    "category": "industry-application",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": [
+      "finance"
+    ]
+  },
+  "7a678e9a26d7e264e59b07c8d89347737c8a5e1c": {
+    "url": "https://openai.com/index/building-an-ai-native-finance-function",
+    "title": "What building an AI-native finance function taught me",
+    "category": "practice",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": [
+      "finance",
+      "workflow"
+    ]
+  },
+  "3a8585570cab21df194c4115cce4c90cdf272f31": {
+    "url": "https://openai.com/index/expanding-daybreak-as-the-cyber-defense-window-narrows",
+    "title": "Expanding Daybreak as the Cyber Defense Window Narrows",
+    "category": "industry-application",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": [
+      "cybersecurity"
+    ]
+  },
+  "7f776d7829d07edef8a9ed148664107425911d12": {
+    "url": "https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands",
+    "title": "Putting frontier cyber models in more trusted hands",
+    "category": "industry-application",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": [
+      "cybersecurity"
+    ]
+  },
+  "ee449db47d8dff1954b2914888b612d67e7116d2": {
+    "url": "https://openai.com/index/premium-seats-chatgpt-business",
+    "title": "Premium seats are coming to ChatGPT Business",
+    "category": "industry-application",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "7e5d0780adc687a8c4e16ada2dc57576c6850288": {
+    "url": "https://tldr.tech/ai/2026-08-10",
+    "title": "OpenAI Astra pause 🚨, Claude Code cross-session 🤖, how Cursor Router works 🔀",
+    "category": "ai-agent",
+    "source_tier": 2,
+    "first_seen": "2026-08-11",
+    "tags": [
+      "agentic-workflow",
+      "multi-tool"
+    ]
+  },
+  "e5b664a37aa39848f2818dc3bf1d6e3bf5ae4443": {
+    "url": "https://huggingface.co/blog/nvidia/magpie-tts-multilingual-voice-agents",
+    "title": "Build Low-Latency Multilingual Voice Agents: Open Weights & Full Deployment Control with NVIDIA Magpie TTS",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": [
+      "multimodal",
+      "inference"
+    ]
+  },
+  "90d59cd2b4ce1933b4c75746022d4773a125443c": {
+    "url": "https://huggingface.co/blog/MultiverseComputingCAI/efficient-knowledge-distillation",
+    "title": "Making Knowledge Distillation Cheap Enough to Run at Scale",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": [
+      "model-compression",
+      "knowledge-distillation"
+    ]
+  },
+  "0da6fb777e3347c6f9ba25cb75baf75a2db14983": {
+    "url": "https://huggingface.co/blog/muse-glimmer",
+    "title": "Meta is back with Muse Glimmer: local, agentic, multimodal, and open source",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": [
+      "multimodal",
+      "local-deployment",
+      "open-source"
+    ]
+  },
+  "0f3ab12299ecdef003d2c1ca51d3ae87af98eef7": {
+    "url": "https://www.oreilly.com/radar/zero-to-agent-in-30-minutes-build-a-youtube-analytics-agent-with-vicki-reyzelman/",
+    "title": "Zero to Agent in 30 Minutes: Build a YouTube Analytics Agent with Vicki Reyzelman",
+    "category": "ai-agent",
+    "source_tier": 2,
+    "first_seen": "2026-08-11",
+    "tags": [
+      "agentic-workflow",
+      "tutorial"
+    ]
+  },
+  "8aba70b13b7e1082895d37e11c4a0f4684882ad6": {
+    "url": "https://www.oreilly.com/radar/the-base-is-under-attack/",
+    "title": "The Base Is Under Attack",
+    "category": "practice",
+    "source_tier": 2,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "0e04261342b4ba838bc67d2980a8f6dcd03f2259": {
+    "url": "https://www.oreilly.com/radar/why-open-source-matters-for-ai/",
+    "title": "Why Open Source Matters for AI",
+    "category": "practice",
+    "source_tier": 2,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "41eebb0db9b1120bccae126e05126585b57b758a": {
+    "url": "https://towardsdatascience.com/how-to-effectively-deploy-code-with-claude-code/",
+    "title": "How to Effectively Deploy Code With Claude Code",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "23abe9e8143a5f639b53c5c9ceae042f5b7f6757": {
+    "url": "https://towardsdatascience.com/building-an-agent-ready-data-warehouse-what-traditional-architectures-do-wrong/",
+    "title": "Building an Agent-Ready Data Warehouse: What Traditional Architectures Do Wrong",
+    "category": "mlops",
+    "source_tier": 3,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "096326c33fc044dd29fecbc8d9a6354337c7dfae": {
+    "url": "https://towardsdatascience.com/variational-autoencoders-vaes-explained-from-theory-to-elbo-and-the-reparameterization-trick/",
+    "title": "Variational Autoencoders (VAEs) Explained: From Theory to ELBO and the Reparameterization Trick",
+    "category": "deep-learning",
+    "source_tier": 3,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "3fc861d12653865cf40b9a8b080a8274346ae138": {
+    "url": "https://towardsdatascience.com/spp-net-paper-walkthrough-breaking-the-fixed-size-constraint/",
+    "title": "SPP-Net Paper Walkthrough: Breaking the Fixed-Size Constraint",
+    "category": "deep-learning",
+    "source_tier": 3,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "7392039e3e00fb399b6635f2dbc92353854db829": {
+    "url": "https://www.kdnuggets.com/new-free-ebook-understanding-agentic-ai-an-executive-briefing",
+    "title": "New Free eBook: Understanding Agentic AI, an Executive Briefing",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "30db210e9fe4bafbf5b650d718d6da0a131ea9be": {
+    "url": "https://www.kdnuggets.com/specification-engineering-the-new-skill-after-prompt-engineering",
+    "title": "Specification Engineering: The New Skill After Prompt Engineering",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "1b25e1f9baf1b8afb9c6781661ca225c3b28a691": {
+    "url": "https://www.kdnuggets.com/top-10-ai-influencers-of-2026",
+    "title": "Top 10 AI Influencers of 2026",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "b76dc3ca4a2d7b0f33d7e285499f7a4d07798533": {
+    "url": "https://machinelearningmastery.com/prompt-caching-vs-fine-tuning-a-cost-and-latency-decision-framework/",
+    "title": "Prompt Caching vs. Fine-Tuning: A Cost and Latency Decision Framework",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "e4e976e25867a8db793ac3255b857a382eace56d": {
+    "url": "https://www.analyticsvidhya.com/blog/2026/08/how-to-install-claude-code/",
+    "title": "How to Install Claude Code: A Step-by-Step Guide",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "7086c01c2229445ae4e0ae15947e37e09b09aae6": {
+    "url": "https://www.technologyreview.com/2026/08/10/1141597/ai-professors-are-negotiating-the-new-realities-of-academic-research/",
+    "title": "AI professors are negotiating the new realities of academic research",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "1beae221fd622d14dd63825db9363e4fa75322af": {
+    "url": "https://www.technologyreview.com/2026/08/10/1141526/the-download-ai-agents-science-censorship-industrial-complex/",
+    "title": "The Download: AI agents for science, and the “censorship-industrial complex”",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "31a653a3cd9368ab3d15858eb40036fc86528ef9": {
+    "url": "https://www.technologyreview.com/2026/08/10/1141384/ai-agents-for-science/",
+    "title": "AI for science needs reasoning, not just data",
+    "category": "causal-inference",
+    "source_tier": 4,
+    "first_seen": "2026-08-11",
+    "tags": [
+      "causal-llm"
+    ]
+  },
+  "be5444e70a003243b9b56c0f24c67fedfddef331": {
+    "url": "https://www.technologyreview.com/2026/08/10/1141511/these-startups-are-chasing-the-next-big-thing-in-llms/",
+    "title": "These startups are chasing the next big thing in LLMs",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "19c9a264700aeb9875824ee6cd5cc4a5ba9ba6f6": {
+    "url": "https://techcrunch.com/2026/08/10/mark-zuckerbergs-ai-manifesto-is-exactly-why-people-dont-like-ai/",
+    "title": "Mark Zuckerberg’s AI manifesto is exactly why people don’t like AI",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "be74b2447caf2b946fbefd070fa51633aaaa18dc": {
+    "url": "https://techcrunch.com/2026/08/10/tech-industry-is-buzzing-after-a-claude-agent-hacked-into-a-gym/",
+    "title": "Tech industry is buzzing after a Claude agent hacked into a gym",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "945000ec303ee7a54587c6128bfe60678fb918a6": {
+    "url": "https://techcrunch.com/2026/08/10/metas-new-glimmer-ai-model-offers-a-hint-at-zuckerbergs-personal-intelligence-vision/",
+    "title": "Meta’s new Glimmer AI model offers a hint at Zuckerberg’s personal intelligence vision",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "f813d0c6a6d3c2e1445639b8511614dfe2adb1c4": {
+    "url": "https://techcrunch.com/2026/08/10/discovered-materials-is-playing-ai-whack-a-mole-to-hunt-cooler-chips/",
+    "title": "Discovered Materials is playing AI whack-a-mole to hunt cooler chips",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "847c90e2a68ffd719fc7b6d0a3ea9bb17ba32f40": {
+    "url": "https://arstechnica.com/cars/2026/08/has-ford-got-cheap-car-fever-allegedly-a-25k-crossover-is-on-the-way/",
+    "title": "Has Ford got cheap car fever? A $25K crossover is supposedly on the way.",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "60a4686cd1cc908adf42cf4742306c55b16cda46": {
+    "url": "https://arstechnica.com/health/2026/08/taylor-farms-recalls-jalapeno-products-for-salmonella-amid-cyclospora-outbreak/",
+    "title": "Taylor Farms recalls jalapeño products for Salmonella amid Cyclospora outbreak",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "98fea449d7850c4f69a58db261a59b2397820cdd": {
+    "url": "https://arstechnica.com/gaming/2026/08/valve-slowly-expands-steamos-support-on-non-valve-hardware/",
+    "title": "Valve slowly expands SteamOS support on non-Valve hardware",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "9aaa88d6d6c24daeb6b9a6501339cec00cc0c095": {
+    "url": "https://arstechnica.com/gadgets/2026/08/third-party-app-stores-are-rolling-out-in-google-play-but-theres-only-one-right-now/",
+    "title": "Following Epic loss, Google has started hosting rival app stores in the Play Store",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "0135d537ce3f25bbcaa293895b9945310cab3ece": {
+    "url": "https://arstechnica.com/space/2026/08/one-of-chinas-workhorse-rockets-just-exploded-in-flight/",
+    "title": "One of China's workhorse rockets just exploded in flight",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "be33e98f2c33f8eda7cab90b750decd735a7f871": {
+    "url": "https://arstechnica.com/science/2026/08/dogs-can-tell-if-youre-scared-or-sad/",
+    "title": "Dogs can tell if you're scared or sad",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "7ff7a849911dcd73229a13045c236a6aa30b50d0": {
+    "url": "https://arstechnica.com/cars/2026/08/2026-subaru-outback-limited-review-boxy-outside-almost-premium-inside/",
+    "title": "2026 Subaru Outback review: Great interior, refined drive, divisive looks",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "6678b7ab8c3ebbe354db3b48a2a70ef9e94fc42e": {
+    "url": "https://arstechnica.com/security/2026/08/a-researcher-bought-noreply-net-companies-started-sending-him-secrets/",
+    "title": "A researcher bought noreply.net. Companies started sending him secrets.",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "96d56da9835fd2181bf218909774d6245121af09": {
+    "url": "https://arstechnica.com/science/2026/08/peer-review-is-overwhelmed-can-it-survive-in-the-ai-era/",
+    "title": "Peer review is overwhelmed—can it survive in the AI era?",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "f6fd06a28893d68d650e0e8b829b5e821ddd208c": {
+    "url": "https://www.wired.com/story/the-ai-slop-backlash-is-actually-having-an-impact/",
+    "title": "The AI Slop Backlash Is Actually Having an Impact",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "6951f0edb326b153deb667d6a2a0a737ef47e385": {
+    "url": "https://www.wired.com/story/the-rise-of-the-1-am-job-interview/",
+    "title": "The Rise of the 1 am Job Interview",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "6c51c93f8ef41694b9032ea0a4345c2573617454": {
+    "url": "https://d2.naver.com/helloworld/7337586",
+    "title": "우리 팀만의 vLLM 플러그인 만들기 2편 - 모델 변환부터 배포까지 AI-native로 자동화하기",
+    "category": "mlops",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": [
+      "serving",
+      "deployment"
+    ]
+  },
+  "2c19c0c368abbf97de70171c5d235f798dc068a8": {
+    "url": "https://d2.naver.com/helloworld/0525182",
+    "title": "우리 팀만의 vLLM 플러그인 만들기 1편 - 검색 AI 모델 서빙 성능 극대화하기",
+    "category": "mlops",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": [
+      "serving",
+      "deployment"
+    ]
+  },
+  "35947838846e337bb7ad31ed12f686a9806b0637": {
+    "url": "https://toss.tech/article/52209",
+    "title": "모노리포 희망편, 절망의 리포가 희망의 리포로 부활하기까지 걸린 1년",
+    "category": "practice",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "b1a425c286fa966177d6d4b60df54404345237c4": {
+    "url": "https://blog.icml.cc/2026/08/10/what-the-icml-2026-communications-chairs-were-up-to/",
+    "title": "What the ICML 2026 Communications Chairs Were Up To",
+    "category": "practice",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "ba53d79a65a594dd3b90aed738c737ec46181d65": {
+    "url": "https://blog.neurips.cc/2026/08/10/announcing-the-neurips-2026-workshops/",
+    "title": "Announcing the NeurIPS 2026 Workshops",
+    "category": "practice",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "1c2d34bc30e0fb6a89d94f55a228e6cfb35f6b7f": {
+    "url": "https://arxiv.org/abs/2608.04302",
+    "title": "CLIP-CC-Bench: Evaluating Paragraph-Level Video Descriptions in Video-Language Models",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": [
+      "evaluation",
+      "benchmark"
+    ]
+  },
+  "cacc4ea93dd2d4ca01fd53bfb2028faeaeb89f03": {
+    "url": "https://arxiv.org/abs/2607.26178",
+    "title": "DuplexGen: Adaptive Synthesis of Human-AI Turn-Taking Dialogues",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": [
+      "multi-agent"
+    ]
+  },
+  "3260393b54f2e6f05505f3f088fc78dc2b6e1fc2": {
+    "url": "https://arxiv.org/abs/2607.27945",
+    "title": "Complementary Matrix-Gated QKAN Fast-Weight Programmers for Quantum Dynamics Forecasting",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": [
+      "timeseries"
+    ]
+  },
+  "af73011e2a5a8e4e84d383b37b37426cff131d1e": {
+    "url": "https://arxiv.org/abs/2608.04205",
+    "title": "MatrAIx: Simulating the World with 8.3 Billion Persona Agents",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": [
+      "multi-agent",
+      "simulation"
+    ]
+  },
+  "344af1b69a0b6ecc49689a58883dc66cac055671": {
+    "url": "https://arxiv.org/abs/2608.06113",
+    "title": "DCAS: Decoupling CLI Agent Scaffolding to Internalize Planning across Scaffolds",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": [
+      "tool-use",
+      "planning"
+    ]
+  },
+  "873fdac80759d776cc237a48803819884dad375b": {
+    "url": "https://arxiv.org/abs/2608.06865",
+    "title": "Multi-Agent Forensic Reasoning for Generalizable Deepfake Video Detection",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": [
+      "multi-agent"
+    ]
+  },
+  "48fe33f79afa7542d2906794b557cbb3edf0ac40": {
+    "url": "https://arxiv.org/abs/2608.04569",
+    "title": "Relevant but Incomplete: Referential Dangling as a Paradigm-Level Failure Mode in Hard Prompt Compression",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": [
+      "prompting",
+      "reliability"
+    ]
+  },
+  "3ff0961d19b9db9f4c64d1468502cc1cedc92ebe": {
+    "url": "https://arxiv.org/abs/2608.05224",
+    "title": "Small Foundation Models of Human Cognition and Behaviour",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "79cd0dab7477daf51ce5af1f70149f8c024bd33a": {
+    "url": "https://arxiv.org/abs/2608.04314",
+    "title": "Adversarial Attacks for Good: A Survey of Proactive Protection across the Visual Content Lifecycle",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "eda5c49907a2abf7db9766ce7725bd8c9a9d894a": {
+    "url": "https://arxiv.org/abs/2607.23379",
+    "title": "When Activation Oracles Learn Not to Read: Concept-Specific Blind Spots in Fine-Tuned Oracles",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "799b96824fb4007d9cdf010741b1023047ea10b1": {
+    "url": "https://arxiv.org/abs/2608.01310",
+    "title": "FATE: Frame-Level Audio-Visual Temporal Embedding",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "35b83ca4c2d0138ac0981517b727676cc8be8e1a": {
+    "url": "https://arxiv.org/abs/2608.03796",
+    "title": "Efficient Knowledge Distillation for LLMs: Offline Top-K Logits and a Fused Chunked KL Loss",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "55d3ba20db29a811985b1d3ce9ed281b8232cc32": {
+    "url": "https://arxiv.org/abs/2608.06013",
+    "title": "OneEmo: A Unified Multimodal Reasoning Model for Emotion Perception, Understanding, and Interaction",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "b9c84fd33e457110027c46946049e1c9a58eade3": {
+    "url": "https://arxiv.org/abs/2608.06756",
+    "title": "Capek 0.5: An Execution-Centric Vision-Language Model for Embodied Intelligence",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "956b383c4236e3ebeb49dbd6383632d4ae0c9147": {
+    "url": "https://arxiv.org/abs/2603.18846",
+    "title": "Towards Interpretable Foundation Models for Retinal Fundus Images",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": [
+      "XAI"
+    ]
+  },
+  "a2f985c169006483510394a4f424f4c2af988545": {
+    "url": "https://arxiv.org/abs/2608.07341",
+    "title": "Zero Gap Is Not Restoration: Stratified Per-Question Probability Evaluation and Step-wise Mitigation of Benchmark Contamination",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "28e3da2dbbd3e1e45fe139b9eaf92dc656d59feb": {
+    "url": "https://arxiv.org/abs/2608.03571",
+    "title": "Beyond Simply Environment Scaling: Designing Effective Environment Distributions for Multimodal Agent Learning",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "1bdd57a315d8a385eb084a60d6b4cc3d8d698e3f": {
+    "url": "https://arxiv.org/abs/2608.03573",
+    "title": "SFT Conflicts, RL Coexists: A Theoretical and Empirical Analysis of Multi-Task Learning for LLMs",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "cc0acaf80b754246111fad2544a1b1b27ea20720": {
+    "url": "https://arxiv.org/abs/2608.06501",
+    "title": "Can MLLMs Decode the Creative Leap? Introducing C4 for Cross-Concept Understanding",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "82fe29a83b00ab347b6ed8627b8c4a63d2c82407": {
+    "url": "https://arxiv.org/abs/2608.06485",
+    "title": "Do AI Personas Grow? Analyzing and Benchmarking Personality Evolution in LLM Agents After Life Events",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "9259802b2d1ea16de5dbca9beb5139b5085f351c": {
+    "url": "https://arxiv.org/abs/2608.02831",
+    "title": "Reinforcement Learning with Evolving Rubrics as Rewards for Audio Reasoning",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "93837b677bf119822ab835c05609a2ae1428d905": {
+    "url": "https://arxiv.org/abs/2606.00152",
+    "title": "PrivacyPeek: Auditing What LLM-Based Agents Acquire, Not Just What They Say",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "9b69436d367ea6b6163d9daea5e1a54dba6095c2": {
+    "url": "https://arxiv.org/abs/2608.00675",
+    "title": "Round-Trip Consistency: Bidirectional Diffusion Models Can Predict Their Own Rollout Errors",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "e0217bab80603ff3be67459dd8130784da39e413": {
+    "url": "https://arxiv.org/abs/2608.07051",
+    "title": "YOLO-PEFT: Parameter-Efficient Fine-Tuning on YOLO Family",
+    "category": "mlops",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "7271d73c9e7aa31d0325ab1e3ac1715328d06bb5": {
+    "url": "https://arxiv.org/abs/2608.05219",
+    "title": "When Privileged Guidance Misaligns: State-Matched Routing and Contextualized Self-Distillation for Multi-Turn Agents",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "691c5d0c607ca02d115602bb8424afec12abb05a": {
+    "url": "https://arxiv.org/abs/2608.07468",
+    "title": "SimWAM: A Simple World Action Model for End-to-End Autonomous Driving",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "76c13da69043919ab758bf7342a2a8e12fc1ef1c": {
+    "url": "https://arxiv.org/abs/2608.05597",
+    "title": "Uncertainty-Aware World Model for Aerial Image-Goal Navigation",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "2ec2d6ecfe0eaf2cec126848398e5c871caae47d": {
+    "url": "https://arxiv.org/abs/2608.02148",
+    "title": "Douyin Multimodal Embedding Model Technical Report",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "dd26997522fd12474f755b15dc803d131296d5d3": {
+    "url": "https://arxiv.org/abs/2608.05703",
+    "title": "StreamArena: Toward Continuous, Interactive, and Long-Horizon Agentic Streaming Video Understanding",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "246e16f0a6ae66bafa00ff26ed4bdea4d57d273b": {
+    "url": "https://arxiv.org/abs/2608.06714",
+    "title": "The Optimizer Is the Agent: Reasoning-Driven Search across Prompts, Programs, and ML Workflows",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "3f56f9131e0144543733ccdb70df807f3a65418f": {
+    "url": "https://arxiv.org/abs/2608.06640",
+    "title": "Characterizing the Quality Profile of AI-Generated C++ in Production",
+    "category": "mlops",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "0313b3dfa13de08c52351c7d794a728076939bb9": {
+    "url": "https://arxiv.org/abs/2608.07110",
+    "title": "Modular TTT: Rethinking Test-Time Training as Composable Modules",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "6ec7b28b39f4863410ed42ffa814b4fed60f826c": {
+    "url": "https://arxiv.org/abs/2608.07222",
+    "title": "Skaling: Chinchilla's Exponents Meet Kaplan's Coupling",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
+  },
+  "eb35c43020d1a5bbcb18990e0a5589060a5da5b2": {
+    "url": "https://arxiv.org/abs/2608.07408",
+    "title": "Addressable Memory for Video World Models",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-08-11",
+    "tags": []
   }
 }
