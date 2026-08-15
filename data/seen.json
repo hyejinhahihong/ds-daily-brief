@@ -27545,5 +27545,103 @@
     "source_tier": 1,
     "first_seen": "2026-08-15",
     "tags": []
+  },
+  "34ef31bc103bad8c8863789a6077c802468ee97a": {
+    "url": "https://towardsdatascience.com/mathematical-experiments-are-becoming-abundant-through-human-machine-teaming/",
+    "title": "Mathematical Experiments Are Becoming Abundant Through Human-Machine Teaming",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-08-16",
+    "tags": []
+  },
+  "f12525c67eb6889dae34776498cbde53d719226e": {
+    "url": "https://towardsdatascience.com/how-to-shine-in-the-vibe-coding-era-as-a-data-scientist/",
+    "title": "How to Shine as a Data Scientist in the Vibe Coding Era",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-08-16",
+    "tags": []
+  },
+  "53ddef6230f10e588c9ea09ce7e78e9d5da1aa9d": {
+    "url": "https://magazine.sebastianraschka.com/p/ai-detector-from-scratch",
+    "title": "Building an AI Text Detector From Scratch",
+    "category": "predictive-modeling",
+    "source_tier": 3,
+    "first_seen": "2026-08-16",
+    "tags": [
+      "tabular"
+    ]
+  },
+  "102868d2675eb2f6cdd6f593fedde79a73c8d3a5": {
+    "url": "https://www.analyticsvidhya.com/blog/2026/08/how-to-install-codex-cli/",
+    "title": "How to Install Codex CLI: A Step-by-Step Guide",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-08-16",
+    "tags": []
+  },
+  "d8cebe97b9a5af389a07ecaf91f1e4e5dcdd82b4": {
+    "url": "https://techcrunch.com/2026/08/15/woman-claims-her-stepfather-used-grok-to-transform-childhood-photo-into-explicit-imagery/",
+    "title": "Woman claims her stepfather used Grok to transform childhood photo into explicit imagery",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-08-16",
+    "tags": []
+  },
+  "7086513972fc7e6b31be2cd2f71e8c25a024b27d": {
+    "url": "https://techcrunch.com/2026/08/15/anthropic-shares-more-details-about-how-claudes-new-watermarks-will-work/",
+    "title": "Anthropic shares more details about how Claude’s new watermarks will work",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-08-16",
+    "tags": []
+  },
+  "04418f82cc0c36b2d99e9e47fbff9a39807f1b42": {
+    "url": "https://techcrunch.com/2026/08/15/spacex-officially-closes-its-cursor-acquisition/",
+    "title": "SpaceX officially closes its Cursor acquisition",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-08-16",
+    "tags": []
+  },
+  "d7045a642f545e954d1be909d71a31a79ac5f9d9": {
+    "url": "https://arstechnica.com/space/2026/08/ukraine-strikes-major-russian-rocket-factory-with-cruise-missiles/",
+    "title": "Ukraine strikes major Russian rocket factory with cruise missiles",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-08-16",
+    "tags": []
+  },
+  "52c6e5cd90b9a2bb535c00961746f361f8adf068": {
+    "url": "https://arstechnica.com/science/2026/08/so-much-solar-digging-into-the-list-of-every-us-power-plant-that-went-online-this-year/",
+    "title": "So much solar: Digging into the list of every US power plant that went online this year",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-08-16",
+    "tags": []
+  },
+  "acb0ed233ab1b1dc486f7d5f889f75961d722558": {
+    "url": "https://www.wired.com/story/amazon-uses-your-twitch-content-to-train-its-ai-how-to-opt-out/",
+    "title": "Amazon Can Use Your Twitch Content to Train Its AI—Unless You Opt Out",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-08-16",
+    "tags": []
+  },
+  "3ac431fd441e260c95647b0f1e6d17f4fee901a7": {
+    "url": "https://arxiv.org/abs/2608.02870",
+    "title": "Maglev: Sliding Recurrent Memory",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-08-16",
+    "tags": []
+  },
+  "49a1b0bf6021327e5c46f80b1496f77a09e20b52": {
+    "url": "https://arxiv.org/abs/2608.08020",
+    "title": "Thought-Level Beam Search for Reasoning",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-08-16",
+    "tags": []
   }
 }
