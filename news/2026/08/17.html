@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI &amp; ML News Letter · 08/17</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --accent:#5DB8A6; --accent-hover:#479B8B; --accent-weak:#E8F4F1;
+  --focus-ring:rgba(93,184,166,.5);
+  --bg:#FAF9F5; --bg-subtle:#F0EEE6; --border:#E7E3D9;
+  --text:#1F1E1D; --text-2:#6B6862; --text-3:#A39E94;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}}
+:root[data-theme="dark"]{
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover);text-decoration:underline}
+strong{font-weight:600;color:var(--text)}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px;border-radius:3px}
+
+/* 모바일 우선 단일 컬럼 (<1200px). 덩어리 중앙 정렬은 margin:0 auto. */
+.page{max-width:760px;margin:0 auto;padding:20px 18px 40px}
+
+/* --- 마스트헤드 (뉴스레터 제호) --- */
+.mast{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+  padding-bottom:14px;border-bottom:2px solid var(--text);margin-bottom:24px}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--accent);
+  text-transform:uppercase;margin:0 0 6px}
+.mast-title{font-size:26px;font-weight:600;margin:0;letter-spacing:-.01em;line-height:1.15}
+.mast-date{font-size:14px;color:var(--text-2);margin-top:8px}
+.themebtn{flex:none;background:var(--bg-subtle);border:1px solid var(--border);color:var(--text-2);
+  border-radius:20px;padding:5px 12px;font-size:13px;cursor:pointer;font-family:inherit}
+.topnav{margin-top:11px;display:flex;gap:16px;font-size:13px}
+.topnav a{color:var(--text-2);font-weight:500} .topnav a:hover{color:var(--accent)}
+@media (min-width:640px){.mast-title{font-size:31px}}
+
+/* --- TODAY'S TOP 3 --- */
+.top3{background:var(--accent-weak);border-radius:12px;padding:14px 18px;margin-bottom:24px}
+.top3 h2{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--accent);margin:0 0 8px}
+.top3 ol{margin:0;padding:0;list-style:none}
+.top3 li{padding:4px 0 4px 22px;position:relative;font-size:15px;color:var(--text)}
+.top3 li::before{content:"\2605";position:absolute;left:0;color:var(--accent);font-size:12px;top:7px}
+.top3 .t3cat{color:var(--text-2);font-size:12px;margin-right:5px}
+.top3 a{color:var(--text)} .top3 a:hover{color:var(--accent-hover)}
+
+/* --- 목차 (TOC) --- */
+.toc{margin-bottom:26px}
+.toc h2{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--text-2);margin:0 0 8px}
+.toc ul{margin:0;padding:0;list-style:none}
+.toc li{padding:6px 0;border-top:1px solid var(--border)}
+.toc li:first-child{border-top:none}
+.toc .r{display:flex;gap:6px;align-items:baseline;font-size:14px}
+.toc .nm{font-weight:500;color:var(--text)} .toc a:hover .nm{color:var(--accent)}
+.toc .cnt{color:var(--text-3);font-size:12px}
+.toc .lead{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  font-size:12px;color:var(--text-2);margin-top:2px;line-height:1.4}
+.toc li.active .nm{color:var(--accent)}
+.toc li.active{border-left:2px solid var(--accent);padding-left:8px;margin-left:-10px}
+
+/* --- 섹션 --- */
+.sec{margin:0 0 34px;scroll-margin-top:14px}
+.sec-h{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:0 0 2px;padding-top:6px}
+.sec-h .nm{font-size:20px;font-weight:600}
+.sec-h .cnt{font-size:13px;color:var(--text-3)}
+.sec-h .all{font-size:12px;color:var(--text-3);margin-left:auto}
+.sec-h .all span{color:var(--text-2)}
+.sec-h .exp{font-size:12px;background:none;border:1px solid var(--border);color:var(--text-2);
+  border-radius:14px;padding:2px 10px;cursor:pointer;font-family:inherit}
+.sec-desc{font-size:13px;color:var(--text-2);margin:0 0 8px}
+.sec-empty{font-size:14px;color:var(--text-3);padding:4px 0 6px}
+.backtop{display:inline-block;font-size:12px;color:var(--text-3);margin-top:6px}
+
+/* --- 아이템 (아코디언) — 거터(번호) + 단일 콘텐츠 컬럼 (DESIGN §3 v4). 좌측 정렬선 1개. --- */
+.item{border-bottom:1px solid var(--border);--gutter:28px}
+.item>summary{list-style:none;cursor:pointer;padding:16px 26px 16px 0;position:relative;
+  display:grid;grid-template-columns:var(--gutter) 1fr;align-items:start}
+.item>summary::-webkit-details-marker{display:none}
+.item>summary::after{content:"\25B8";position:absolute;right:2px;top:16px;color:var(--text-3);
+  font-size:13px;transition:transform .15s;display:inline-block}
+.item[open]>summary::after{transform:rotate(90deg)}
+.num{font-size:13px;color:var(--text-3);font-variant-numeric:tabular-nums;font-weight:500;padding-top:3px}
+.t3star{color:var(--accent);font-size:11px;margin-right:2px}
+.body-col{min-width:0}
+.it-title{display:block;font-size:18px;font-weight:600;color:var(--text);line-height:1.4}
+.item>summary:hover .it-title{color:var(--accent)}
+.it-sub{display:block;font-size:13px;color:var(--text-2);margin-top:3px;line-height:1.35}
+.it-meta{display:block;font-size:13px;color:var(--text-2);margin-top:6px}
+.it-lede{display:block;font-size:15px;color:var(--text-2);margin-top:7px;line-height:1.5}
+.item[open] .it-lede{color:var(--text)}
+/* 접힘 본문도 콘텐츠 컬럼에 정렬 (거터만큼 들여씀) */
+.it-body{padding:0 0 20px var(--gutter)}
+.it-body p{margin:0 0 10px}
+@media (min-width:900px){.item{--gutter:40px}}
+.slot-l{font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--text-2);margin:14px 0 2px}
+.tags{margin-top:10px}
+.tag{display:inline-block;font-size:12px;color:var(--text-2);background:var(--bg-subtle);
+  border:1px solid var(--border);border-radius:12px;padding:1px 9px;margin:0 5px 5px 0}
+.prev{font-size:13px;color:var(--text-3);margin-top:8px}
+.src-cta{display:inline-block;margin-top:12px;font-size:14px;font-weight:500;color:var(--accent)}
+.weak{color:var(--accent);font-size:12px;border:1px solid var(--accent);border-radius:5px;
+  padding:0 6px;margin-left:6px}
+
+/* --- "다루는 주제" 푸터 --- */
+.topics{margin-top:36px;padding-top:22px;border-top:2px solid var(--text)}
+.topics h2{font-size:15px;font-weight:600;margin:0 0 12px}
+.topics ul{margin:0;padding:0;list-style:none}
+.topics li{padding:7px 0;border-top:1px solid var(--border);font-size:13px;color:var(--text-2)}
+.topics li:first-child{border-top:none}
+.topics .tnm{font-weight:600;color:var(--accent);margin-right:6px}
+
+/* --- 데스크톱 (≥1200px): 좌측 sticky TOC(260) + 본문(720), 덩어리 중앙 정렬 --- */
+@media (min-width:1200px){
+  /* max-width = 260+44+720 그리드(1024) + 좌우 padding(18*2). box-sizing:border-box
+     라 padding 을 포함해야 본문 720 이 찌그러지지 않는다. */
+  .page{max-width:1060px;display:grid;grid-template-columns:260px minmax(0,720px);
+    column-gap:44px;justify-content:center;align-items:start;padding-top:28px}
+  .mast{grid-column:1/3}
+  .toc{grid-column:1;grid-row:2/999;position:sticky;top:24px;margin:0;align-self:start}
+  .top3,.main{grid-column:2}
+  .topics{grid-column:1/3}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="mast">
+    <div class="mast-l">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1 class="mast-title">AI &amp; ML News Letter</h1>
+      <div class="mast-date">2026 / 08 / 17 (월) · 6건</div>
+      <nav class="topnav"><a href="../../../archive.html">📅 지난 브리핑</a>
+        <a href="#topics">🗂 주제별 보기</a></nav>
+    </div>
+    <button id="tbtn" class="themebtn" type="button">🌓 테마</button>
+  </header>
+  <section class="top3"><h2>TODAY'S TOP 3</h2><ol><li><a href="#3df40f7a201f"><span class="t3cat">[LLM / Foundation Model]</span>NVIDIA, 경쟁 코딩 특화 텍스트 생성 모델 &#x27;Nemotron-Labs-Teacher-Competition-Coding&#x27; 공개</a></li><li><a href="#1853d42df9cb"><span class="t3cat">[LLM / Foundation Model]</span>NVIDIA, 텍스트 생성용 티처 모델 &#x27;Nemotron-Labs-Teacher-Chat&#x27; 공개 — 다운로드 1128건</a></li><li><a href="#0f94fe162557"><span class="t3cat">[실무 사례 · 노하우]</span>&quot;RAG는 기억하지 않는다&quot; — 추측 대신 지식 축적하는 영속 지식 레이어 설계, Azure로 구현</a></li></ol></section>
+  <nav class="toc" id="toc"><h2>오늘의 목차</h2><ul><li data-cat="llm-foundation-model"><a href="#llm-foundation-model"><span class="r"><span class="nm">LLM / Foundation Model</span><span class="cnt">2</span></span><span class="lead">NVIDIA, 경쟁 코딩 특화 텍스트 생성 모델 &#x27;Nemotron-Labs-Teacher-Competition-Coding&#x27; 공개</span></a></li><li data-cat="mlops"><a href="#mlops"><span class="r"><span class="nm">MLOps / ML Engineering</span><span class="cnt">1</span></span><span class="lead">Quack으로 3대의 원격 DuckDB 서버에서 SQL 동시 실행하기 — 소규모 실험 사례</span></a></li><li data-cat="practice"><a href="#practice"><span class="r"><span class="nm">실무 사례 · 노하우</span><span class="cnt">1</span></span><span class="lead">&quot;RAG는 기억하지 않는다&quot; — 추측 대신 지식 축적하는 영속 지식 레이어 설계, Azure로 구현</span></a></li><li data-cat="industry-application"><a href="#industry-application"><span class="r"><span class="nm">산업 적용 사례</span><span class="cnt">2</span></span><span class="lead">스트라이프, AI 게이트웨이 스타트업 OpenRouter 70억 달러 이상에 인수 추진</span></a></li></ul></nav>
+  <main class="main"><section class="sec" id="ai-agent"><div class="sec-h"><span class="nm">AI Agent</span></div><div class="sec-desc">AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="llm-foundation-model"><div class="sec-h"><span class="nm">LLM / Foundation Model</span><span class="cnt">2건</span><span class="all"><a href="../../../category/llm-foundation-model.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="llm-foundation-model">전체 펼치기</button></div><div class="sec-desc">LLM·파운데이션 모델 — 사전학습·정렬·추론</div><details class="item" id="3df40f7a201f" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">NVIDIA, 경쟁 코딩 특화 텍스트 생성 모델 &#x27;Nemotron-Labs-Teacher-Competition-Coding&#x27; 공개</span><span class="it-sub">nvidia/NVIDIA-Nemotron-Labs-Teacher-Competition-Coding</span><span class="it-meta">📦 릴리스 · huggingface.co</span><span class="it-lede">NVIDIA가 HuggingFace에 텍스트 생성 파이프라인을 지원하는 &#x27;NVIDIA-Nemotron-Labs-Teacher-Competition-Coding&#x27; 모델을 공개했다.</span></span></summary><div class="it-body"><p>현재 다운로드 수는 <strong>1231회</strong>, 좋아요는 4개를 기록하고 있다. 모델명으로 미루어 경쟁 프로그래밍 문제 풀이나 코드 생성을 위한 교사(teacher) 모델로 추정된다.</p><div class="slot-l">WHY IT MATTERS</div><p>NVIDIA의 Nemotron 계열 모델 라인업 확장 동향을 보여주는 사례로, 코딩 특화 LLM 개발 흐름을 파악하는 데 참고가 된다.</p><a class="src-cta" href="https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-Teacher-Competition-Coding" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="1853d42df9cb" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>02</span><span class="body-col"><span class="it-title">NVIDIA, 텍스트 생성용 티처 모델 &#x27;Nemotron-Labs-Teacher-Chat&#x27; 공개 — 다운로드 1128건</span><span class="it-sub">nvidia/NVIDIA-Nemotron-Labs-Teacher-Chat</span><span class="it-meta">📦 릴리스 · huggingface.co</span><span class="it-lede">NVIDIA가 HuggingFace에 NVIDIA-Nemotron-Labs-Teacher-Chat 모델을 공개했다.</span></span></summary><div class="it-body"><p>이 모델은 text-generation 파이프라인을 지원한다. 현재까지 <strong>다운로드 1128건</strong>을 기록했으며 좋아요 수는 0건이다.</p><div class="slot-l">WHY IT MATTERS</div><p>Nemotron 계열의 &#x27;티처(teacher)&#x27; 명칭은 지식 증류나 합성 데이터 생성용으로 활용될 가능성을 시사해, 소형 모델 학습 파이프라인을 구축하는 개발자에게 참고가 될 수 있다.</p><a class="src-cta" href="https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-Teacher-Chat" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="deep-learning"><div class="sec-h"><span class="nm">Deep Learning</span></div><div class="sec-desc">딥러닝 — 아키텍처·학습기법 자체</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="predictive-modeling"><div class="sec-h"><span class="nm">예측 모델링</span></div><div class="sec-desc">예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="causal-inference"><div class="sec-h"><span class="nm">인과추론</span></div><div class="sec-desc">인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="mlops"><div class="sec-h"><span class="nm">MLOps / ML Engineering</span><span class="cnt">1건</span><span class="all"><a href="../../../category/mlops.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="mlops">전체 펼치기</button></div><div class="sec-desc">MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</div><details class="item" id="1b742f0d91f2"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Quack으로 3대의 원격 DuckDB 서버에서 SQL 동시 실행하기 — 소규모 실험 사례</span><span class="it-sub">Running SQL Concurrently Across Three Remote DuckDB Servers with Quack</span><span class="it-meta">✍️ 블로그 · towardsdatascience.com</span><span class="it-lede">이 글은 Quack이라는 도구를 사용해 원격에 있는 <strong>세 대의 DuckDB 서버</strong>에서 SQL 쿼리를 동시에 실행하는 소규모 실험을 다룬다.</span></span></summary><div class="it-body"><p>원격 SQL 실행 구조를 직접 구성하고 테스트한 과정을 공유하는 블로그 포스트다. Towards Data Science에 게재되었다.</p><div class="slot-l">WHY IT MATTERS</div><p>단일 로컬 DuckDB를 넘어 여러 원격 서버로 쿼리를 분산 실행하는 방식은 소규모 분산 분석 워크플로를 구축하려는 데이터 엔지니어에게 실용적인 참고가 될 수 있다.</p><a class="src-cta" href="https://towardsdatascience.com/running-sql-concurrently-across-three-remote-duckdb-servers-with-quack/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="practice"><div class="sec-h"><span class="nm">실무 사례 · 노하우</span><span class="cnt">1건</span><span class="all"><a href="../../../category/practice.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="practice">전체 펼치기</button></div><div class="sec-desc">실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</div><details class="item" id="0f94fe162557" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">&quot;RAG는 기억하지 않는다&quot; — 추측 대신 지식 축적하는 영속 지식 레이어 설계, Azure로 구현</span><span class="it-sub">Designing a Persistent Knowledge Layer That Refuses to Guess</span><span class="it-meta">✍️ 블로그 · towardsdatascience.com</span><span class="it-lede">이 글은 RAG(검색 증강 생성)가 매번 검색만 할 뿐 이해를 축적하지 못한다는 한계를 지적하고, 애플리케이션이 지식을 지속적으로 쌓아가는 <strong>영속 지식 레이어</strong>를 설계하는 벤더 중립적 청사진을 제시한다.</span></span></summary><div class="it-body"><p>Microsoft Foundry, Azure AI Search, Cosmos DB, FastAPI를 활용한 Azure 네이티브 구현 예시를 제공하며, 이를 부동산 보험(property-insurance) 데이터에 적용한 사례를 다룬다.</p><div class="slot-l">WHY IT MATTERS</div><p>단순 검색-생성 파이프라인을 넘어 시스템이 답을 추측하지 않고 축적된 지식에 근거해 응답하도록 만드는 설계는 신뢰성 높은 엔터프라이즈 AI 애플리케이션 구축에 실용적 참고가 된다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 RAG가 매 질의마다 문서를 재검색하는 방식인 반면, 이 접근은 검색 결과를 누적·유지하는 지식 레이어를 별도로 두어 시스템이 점진적으로 이해를 쌓아가도록 한다는 점이 다르다.</p><a class="src-cta" href="https://towardsdatascience.com/designing-a-persistent-knowledge-layer-that-refuses-to-guess/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="industry-application"><div class="sec-h"><span class="nm">산업 적용 사례</span><span class="cnt">2건</span><span class="all"><a href="../../../category/industry-application.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="industry-application">전체 펼치기</button></div><div class="sec-desc">산업 적용 사례 — 산업 현장의 AI/ML 적용</div><details class="item" id="943d4b7d862e"><summary><span class="num">01</span><span class="body-col"><span class="it-title">스트라이프, AI 게이트웨이 스타트업 OpenRouter 70억 달러 이상에 인수 추진</span><span class="it-sub">Stripe will reportedly acquire AI gateway startup OpenRouter for $7B+</span><span class="it-meta">📰 뉴스 · techcrunch.com<span class="weak">원문 근거 부족</span></span><span class="it-lede">스트라이프가 AI 게이트웨이 스타트업 OpenRouter를 <strong>70억 달러 이상</strong>에 인수할 예정이라고 보도됐다.</span></span></summary><div class="it-body"><p>OpenRouter CEO는 자사를 &#x27;AI 업계의 스트라이프&#x27;라고 소개한 바 있다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI 인프라 기업에 대한 대형 인수합병 소식으로, AI 게이트웨이 시장의 성장 가능성을 시사한다.</p><a class="src-cta" href="https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="f77bec8eea30"><summary><span class="num">02</span><span class="body-col"><span class="it-title">에이전틱 AI 확산에 CPU 수요 폭증 — AWS &quot;CPU 사이클 아껴라&quot; 지침, 인텔·AMD도 병목 확인</span><span class="it-sub">The CPU Comeback Is Upon Us</span><span class="it-meta">📰 뉴스 · spectrum.ieee.org</span><span class="it-lede">AWS는 AI 워크로드로 인한 CPU 서버 대기시간 급증에 대응해 엔지니어들에게 CPU 사이클 절약을 지시했다.</span></span></summary><div class="it-body"><p>그동안 GPU와 메모리가 AI 붐의 중심이었지만, 자율적으로 하위 에이전트를 호출하는 에이전틱 AI 확산으로 2026년 들어 CPU 수요가 급증했다는 분석이다. 인텔과 AMD 연구진에 따르면 도구 호출, API 실행, 결과 취합 같은 에이전틱 작업 단계는 대부분 CPU에서 처리되며, <strong>AMD 테스트에서는 에이전틱 파이프라인 8단계 중 7단계가 전적으로 CPU에서 실행</strong>된다. 인텔 연구팀은 GPU 추론 중 CPU가, CPU 도구 호출 중 GPU가 유휴 상태가 되는 비효율을 발견하고 스케줄링 최적화로 지속 부하 시 지연시간을 <strong>최대 1.8배</strong> 줄이는 방안을 제시했다.</p><div class="slot-l">WHY IT MATTERS</div><p>GPU 중심으로 짜인 AI 인프라 투자 전략이 에이전틱 AI 확산에 따라 CPU 병목이라는 새로운 제약에 부딪히고 있어, 클라우드·데이터센터 설계 전반의 재점검이 필요함을 시사한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존에는 LLM 추론이 GPU 병목의 핵심으로 여겨졌던 것과 달리, 이번 사례들은 도구 호출·안전 가드레일 처리 등 에이전틱 워크로드의 상당 부분이 CPU에서 실행되며 GPU와 CPU가 서로 번갈아 유휴 상태에 놓이는 새로운 비효율 패턴을 지적한다.</p><a class="src-cta" href="https://spectrum.ieee.org/ai-cpu-comeback" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section></main>
+  <footer class="topics" id="topics"><h2>다루는 주제</h2><ul><li><a class="tnm" href="../../../category/ai-agent.html">AI Agent</a>AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</li><li><a class="tnm" href="../../../category/llm-foundation-model.html">LLM / Foundation Model</a>LLM·파운데이션 모델 — 사전학습·정렬·추론</li><li><a class="tnm" href="../../../category/deep-learning.html">Deep Learning</a>딥러닝 — 아키텍처·학습기법 자체</li><li><a class="tnm" href="../../../category/predictive-modeling.html">예측 모델링</a>예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</li><li><a class="tnm" href="../../../category/causal-inference.html">인과추론</a>인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</li><li><a class="tnm" href="../../../category/mlops.html">MLOps / ML Engineering</a>MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</li><li><a class="tnm" href="../../../category/practice.html">실무 사례 · 노하우</a>실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</li><li><a class="tnm" href="../../../category/industry-application.html">산업 적용 사례</a>산업 적용 사례 — 산업 현장의 AI/ML 적용</li></ul></footer>
+</div>
+<script>
+(function(){
+var r=document.documentElement,k="dsb-theme",s=localStorage.getItem(k);
+if(s)r.dataset.theme=s;
+document.getElementById('tbtn').addEventListener('click',function(){
+  var cur=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  var n=cur==='dark'?'light':'dark';r.dataset.theme=n;localStorage.setItem(k,n);});
+// 섹션 전체 펼치기/접기
+document.querySelectorAll('.exp').forEach(function(b){b.addEventListener('click',function(){
+  var sec=document.getElementById(b.dataset.sec);
+  var ds=sec.querySelectorAll('details.item'),open=b.dataset.state!=='open';
+  ds.forEach(function(d){d.open=open;});
+  b.dataset.state=open?'open':'closed';b.textContent=open?'전체 접기':'전체 펼치기';});});
+// 스크롤 위치 카테고리 TOC 활성 (데스크톱 사이드 TOC)
+var links={};document.querySelectorAll('.toc li[data-cat]').forEach(function(li){links[li.dataset.cat]=li;});
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){Object.values(links).forEach(function(l){l.classList.remove('active');});
+    if(links[e.target.id])links[e.target.id].classList.add('active');}});},
+  {rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('section.sec').forEach(function(s){obs.observe(s);});
+})();
+</script>
+</body>
+</html>

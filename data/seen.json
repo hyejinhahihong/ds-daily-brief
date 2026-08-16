@@ -27643,5 +27643,93 @@
     "source_tier": 1,
     "first_seen": "2026-08-16",
     "tags": []
+  },
+  "0f94fe1625573936d836bde63c7e8a898a921b68": {
+    "url": "https://towardsdatascience.com/designing-a-persistent-knowledge-layer-that-refuses-to-guess/",
+    "title": "Designing a Persistent Knowledge Layer That Refuses to Guess",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-08-17",
+    "tags": []
+  },
+  "1b742f0d91f20eeadf6a02119484645617fe5ae2": {
+    "url": "https://towardsdatascience.com/running-sql-concurrently-across-three-remote-duckdb-servers-with-quack/",
+    "title": "Running SQL Concurrently Across Three Remote DuckDB Servers with Quack",
+    "category": "mlops",
+    "source_tier": 3,
+    "first_seen": "2026-08-17",
+    "tags": []
+  },
+  "f77bec8eea30aa27b96fe6918e2bee954cdaa52e": {
+    "url": "https://spectrum.ieee.org/ai-cpu-comeback",
+    "title": "The CPU Comeback Is Upon Us",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-17",
+    "tags": []
+  },
+  "943d4b7d862e9ee3501f18bf63c3fa8081948226": {
+    "url": "https://techcrunch.com/2026/08/16/stripe-will-reportedly-acquire-ai-gateway-startup-openrouter-for-7b/",
+    "title": "Stripe will reportedly acquire AI gateway startup OpenRouter for $7B+",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-17",
+    "tags": []
+  },
+  "25e650ae358e19b6c9bfd76c7d2e447e78e504cb": {
+    "url": "https://techcrunch.com/2026/08/16/why-people-arent-buying-mark-zuckerbergs-ai-future/",
+    "title": "Why people aren’t buying Mark Zuckerberg’s AI future",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-17",
+    "tags": []
+  },
+  "d6cf8a00384c7939ba4f391455ac4bec8ab619fd": {
+    "url": "https://techcrunch.com/2026/08/16/anthropic-ceo-says-ai-backlash-is-fundamentally-a-crisis-of-trust/",
+    "title": "Anthropic CEO says AI backlash is ‘fundamentally a crisis of trust’",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-17",
+    "tags": []
+  },
+  "39a79363c580ed617dbf69b55377625cb88725bf": {
+    "url": "https://arstechnica.com/science/2026/08/wildfire-smoke-now-bigger-prenatal-threat-than-human-sources-of-air-pollution/",
+    "title": "Wildfire smoke now bigger prenatal threat than human sources of air pollution",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-17",
+    "tags": []
+  },
+  "8cc65ac6ea36a06df87127e3731371e6709753be": {
+    "url": "https://arstechnica.com/culture/2026/08/visionquest-trailer-kicks-off-disneys-d23-fan-event/",
+    "title": "VisionQuest trailer kicks off Disney's D23 fan event",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-17",
+    "tags": []
+  },
+  "1853d42df9cb15a19cbe453eb5afd8a509d37df7": {
+    "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-Teacher-Chat",
+    "title": "nvidia/NVIDIA-Nemotron-Labs-Teacher-Chat",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-08-17",
+    "tags": []
+  },
+  "3df40f7a201f75ec6ae7932ffed935e24f09d4f6": {
+    "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-Teacher-Competition-Coding",
+    "title": "nvidia/NVIDIA-Nemotron-Labs-Teacher-Competition-Coding",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-08-17",
+    "tags": []
+  },
+  "0d3bf798f5b6cf13f782a5f676fe9e1b5a576644": {
+    "url": "https://huggingface.co/nvidia/NVIDIA-Nemotron-Labs-Teacher-STEM",
+    "title": "nvidia/NVIDIA-Nemotron-Labs-Teacher-STEM",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-08-17",
+    "tags": []
   }
 }
