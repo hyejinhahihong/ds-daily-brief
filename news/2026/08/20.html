@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI &amp; ML News Letter · 08/20</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --accent:#5DB8A6; --accent-hover:#479B8B; --accent-weak:#E8F4F1;
+  --focus-ring:rgba(93,184,166,.5);
+  --bg:#FAF9F5; --bg-subtle:#F0EEE6; --border:#E7E3D9;
+  --text:#1F1E1D; --text-2:#6B6862; --text-3:#A39E94;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}}
+:root[data-theme="dark"]{
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover);text-decoration:underline}
+strong{font-weight:600;color:var(--text)}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px;border-radius:3px}
+
+/* 모바일 우선 단일 컬럼 (<1200px). 덩어리 중앙 정렬은 margin:0 auto. */
+.page{max-width:760px;margin:0 auto;padding:20px 18px 40px}
+
+/* --- 마스트헤드 (뉴스레터 제호) --- */
+.mast{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+  padding-bottom:14px;border-bottom:2px solid var(--text);margin-bottom:24px}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--accent);
+  text-transform:uppercase;margin:0 0 6px}
+.mast-title{font-size:26px;font-weight:600;margin:0;letter-spacing:-.01em;line-height:1.15}
+.mast-date{font-size:14px;color:var(--text-2);margin-top:8px}
+.themebtn{flex:none;background:var(--bg-subtle);border:1px solid var(--border);color:var(--text-2);
+  border-radius:20px;padding:5px 12px;font-size:13px;cursor:pointer;font-family:inherit}
+.topnav{margin-top:11px;display:flex;gap:16px;font-size:13px}
+.topnav a{color:var(--text-2);font-weight:500} .topnav a:hover{color:var(--accent)}
+@media (min-width:640px){.mast-title{font-size:31px}}
+
+/* --- TODAY'S TOP 3 --- */
+.top3{background:var(--accent-weak);border-radius:12px;padding:14px 18px;margin-bottom:24px}
+.top3 h2{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--accent);margin:0 0 8px}
+.top3 ol{margin:0;padding:0;list-style:none}
+.top3 li{padding:4px 0 4px 22px;position:relative;font-size:15px;color:var(--text)}
+.top3 li::before{content:"\2605";position:absolute;left:0;color:var(--accent);font-size:12px;top:7px}
+.top3 .t3cat{color:var(--text-2);font-size:12px;margin-right:5px}
+.top3 a{color:var(--text)} .top3 a:hover{color:var(--accent-hover)}
+
+/* --- 목차 (TOC) --- */
+.toc{margin-bottom:26px}
+.toc h2{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--text-2);margin:0 0 8px}
+.toc ul{margin:0;padding:0;list-style:none}
+.toc li{padding:6px 0;border-top:1px solid var(--border)}
+.toc li:first-child{border-top:none}
+.toc .r{display:flex;gap:6px;align-items:baseline;font-size:14px}
+.toc .nm{font-weight:500;color:var(--text)} .toc a:hover .nm{color:var(--accent)}
+.toc .cnt{color:var(--text-3);font-size:12px}
+.toc .lead{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  font-size:12px;color:var(--text-2);margin-top:2px;line-height:1.4}
+.toc li.active .nm{color:var(--accent)}
+.toc li.active{border-left:2px solid var(--accent);padding-left:8px;margin-left:-10px}
+
+/* --- 섹션 --- */
+.sec{margin:0 0 34px;scroll-margin-top:14px}
+.sec-h{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:0 0 2px;padding-top:6px}
+.sec-h .nm{font-size:20px;font-weight:600}
+.sec-h .cnt{font-size:13px;color:var(--text-3)}
+.sec-h .all{font-size:12px;color:var(--text-3);margin-left:auto}
+.sec-h .all span{color:var(--text-2)}
+.sec-h .exp{font-size:12px;background:none;border:1px solid var(--border);color:var(--text-2);
+  border-radius:14px;padding:2px 10px;cursor:pointer;font-family:inherit}
+.sec-desc{font-size:13px;color:var(--text-2);margin:0 0 8px}
+.sec-empty{font-size:14px;color:var(--text-3);padding:4px 0 6px}
+.backtop{display:inline-block;font-size:12px;color:var(--text-3);margin-top:6px}
+
+/* --- 아이템 (아코디언) — 거터(번호) + 단일 콘텐츠 컬럼 (DESIGN §3 v4). 좌측 정렬선 1개. --- */
+.item{border-bottom:1px solid var(--border);--gutter:28px}
+.item>summary{list-style:none;cursor:pointer;padding:16px 26px 16px 0;position:relative;
+  display:grid;grid-template-columns:var(--gutter) 1fr;align-items:start}
+.item>summary::-webkit-details-marker{display:none}
+.item>summary::after{content:"\25B8";position:absolute;right:2px;top:16px;color:var(--text-3);
+  font-size:13px;transition:transform .15s;display:inline-block}
+.item[open]>summary::after{transform:rotate(90deg)}
+.num{font-size:13px;color:var(--text-3);font-variant-numeric:tabular-nums;font-weight:500;padding-top:3px}
+.t3star{color:var(--accent);font-size:11px;margin-right:2px}
+.body-col{min-width:0}
+.it-title{display:block;font-size:18px;font-weight:600;color:var(--text);line-height:1.4}
+.item>summary:hover .it-title{color:var(--accent)}
+.it-sub{display:block;font-size:13px;color:var(--text-2);margin-top:3px;line-height:1.35}
+.it-meta{display:block;font-size:13px;color:var(--text-2);margin-top:6px}
+.it-lede{display:block;font-size:15px;color:var(--text-2);margin-top:7px;line-height:1.5}
+.item[open] .it-lede{color:var(--text)}
+/* 접힘 본문도 콘텐츠 컬럼에 정렬 (거터만큼 들여씀) */
+.it-body{padding:0 0 20px var(--gutter)}
+.it-body p{margin:0 0 10px}
+@media (min-width:900px){.item{--gutter:40px}}
+.slot-l{font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--text-2);margin:14px 0 2px}
+.tags{margin-top:10px}
+.tag{display:inline-block;font-size:12px;color:var(--text-2);background:var(--bg-subtle);
+  border:1px solid var(--border);border-radius:12px;padding:1px 9px;margin:0 5px 5px 0}
+.prev{font-size:13px;color:var(--text-3);margin-top:8px}
+.src-cta{display:inline-block;margin-top:12px;font-size:14px;font-weight:500;color:var(--accent)}
+.weak{color:var(--accent);font-size:12px;border:1px solid var(--accent);border-radius:5px;
+  padding:0 6px;margin-left:6px}
+
+/* --- "다루는 주제" 푸터 --- */
+.topics{margin-top:36px;padding-top:22px;border-top:2px solid var(--text)}
+.topics h2{font-size:15px;font-weight:600;margin:0 0 12px}
+.topics ul{margin:0;padding:0;list-style:none}
+.topics li{padding:7px 0;border-top:1px solid var(--border);font-size:13px;color:var(--text-2)}
+.topics li:first-child{border-top:none}
+.topics .tnm{font-weight:600;color:var(--accent);margin-right:6px}
+
+/* --- 데스크톱 (≥1200px): 좌측 sticky TOC(260) + 본문(720), 덩어리 중앙 정렬 --- */
+@media (min-width:1200px){
+  /* max-width = 260+44+720 그리드(1024) + 좌우 padding(18*2). box-sizing:border-box
+     라 padding 을 포함해야 본문 720 이 찌그러지지 않는다. */
+  .page{max-width:1060px;display:grid;grid-template-columns:260px minmax(0,720px);
+    column-gap:44px;justify-content:center;align-items:start;padding-top:28px}
+  .mast{grid-column:1/3}
+  .toc{grid-column:1;grid-row:2/999;position:sticky;top:24px;margin:0;align-self:start}
+  .top3,.main{grid-column:2}
+  .topics{grid-column:1/3}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="mast">
+    <div class="mast-l">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1 class="mast-title">AI &amp; ML News Letter</h1>
+      <div class="mast-date">2026 / 08 / 20 (목) · 16건</div>
+      <nav class="topnav"><a href="../../../archive.html">📅 지난 브리핑</a>
+        <a href="#topics">🗂 주제별 보기</a></nav>
+    </div>
+    <button id="tbtn" class="themebtn" type="button">🌓 테마</button>
+  </header>
+  <section class="top3"><h2>TODAY'S TOP 3</h2><ol><li><a href="#b5484cf993d8"><span class="t3cat">[AI Agent]</span>Fanatics Betting and Gaming, AWS 기반 멀티에이전트 고객지원 시스템 구축 — 주별 규제 대응·초당 40건 급증 처리</a></li><li><a href="#0bd236f720ab"><span class="t3cat">[예측 모델링]</span>Airbnb 예측팀, 코로나 이후 편향 대응기 — &#x27;재학습&#x27;을 재적합·재설계·유지 3단계로 분해</a></li><li><a href="#790a27874455"><span class="t3cat">[산업 적용 사례]</span>NVIDIA, Cosmos 3 Edge 공개 — 4B 옴니모델로 온디바이스 로봇 제어용 월드모델 학습 지원</a></li></ol></section>
+  <nav class="toc" id="toc"><h2>오늘의 목차</h2><ul><li data-cat="ai-agent"><a href="#ai-agent"><span class="r"><span class="nm">AI Agent</span><span class="cnt">2</span></span><span class="lead">Fanatics Betting and Gaming, AWS 기반 멀티에이전트 고객지원 시스템 구축 — 주별 규제 대응·초당 40건 급증 처리</span></a></li><li data-cat="llm-foundation-model"><a href="#llm-foundation-model"><span class="r"><span class="nm">LLM / Foundation Model</span><span class="cnt">2</span></span><span class="lead">Apple, LLM의 &#x27;인간 같은 행동&#x27; 3차원 분석 — 발현 빈도·영향·통제 가능성을 21,000개 사례로 검증</span></a></li><li data-cat="deep-learning"><a href="#deep-learning"><span class="r"><span class="nm">Deep Learning</span><span class="cnt">1</span></span><span class="lead">FAR 파이프라인, 조합론 논문 5,245편서 문제 발굴해 유명 미해결 추측 77건 저자 검토 성공</span></a></li><li data-cat="predictive-modeling"><a href="#predictive-modeling"><span class="r"><span class="nm">예측 모델링</span><span class="cnt">3</span></span><span class="lead">Airbnb 예측팀, 코로나 이후 편향 대응기 — &#x27;재학습&#x27;을 재적합·재설계·유지 3단계로 분해</span></a></li><li data-cat="causal-inference"><a href="#causal-inference"><span class="r"><span class="nm">인과추론</span><span class="cnt">3</span></span><span class="lead">RCT-관찰연구 결합 새 프레임워크, 사후분포 드리프트·은닉교란 동시 대응해 표적집단 효과 추정 — ACTG 175-WIHS 검증</span></a></li><li data-cat="mlops"><a href="#mlops"><span class="r"><span class="nm">MLOps / ML Engineering</span><span class="cnt">2</span></span><span class="lead">AWS, ITSM 티켓서 지식 채굴하는 KnowledgeForge 공개 — Bedrock·S3 Vectors로 KB 생성·정제 자동화</span></a></li><li data-cat="practice"><a href="#practice"><span class="r"><span class="nm">실무 사례 · 노하우</span><span class="cnt">1</span></span><span class="lead">NVIDIA, ChatGPT Work로 반복 업무 줄이고 성공적 워크플로우 전사 확산</span></a></li><li data-cat="industry-application"><a href="#industry-application"><span class="r"><span class="nm">산업 적용 사례</span><span class="cnt">2</span></span><span class="lead">NVIDIA, Cosmos 3 Edge 공개 — 4B 옴니모델로 온디바이스 로봇 제어용 월드모델 학습 지원</span></a></li></ul></nav>
+  <main class="main"><section class="sec" id="ai-agent"><div class="sec-h"><span class="nm">AI Agent</span><span class="cnt">2건</span><span class="all"><a href="../../../category/ai-agent.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="ai-agent">전체 펼치기</button></div><div class="sec-desc">AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</div><details class="item" id="b5484cf993d8" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">Fanatics Betting and Gaming, AWS 기반 멀티에이전트 고객지원 시스템 구축 — 주별 규제 대응·초당 40건 급증 처리</span><span class="it-sub">How Fanatics Betting and Gaming built a multi-agent customer support system</span><span class="it-meta">✍️ 블로그 · aws.amazon.com</span><span class="it-lede">Fanatics Betting and Gaming(FBG)은 스포츠 베팅 특성상 주마다 다른 입출금 한도·규제와 실시간 응답 요구를 해결하기 위해 AWS 기반 멀티에이전트 고객지원 시스템을 구축했다.</span></span></summary><div class="it-body"><p>기존 의사결정 트리 기반 챗봇은 이런 복잡성을 감당하지 못해 고객 불만과 상담 비용 증가를 초래했다. 이 시스템은 단일 챗봇 대신 오케스트레이터 패턴으로 여러 전문 에이전트가 계정 문제, 주별 규정, 책임 도박 등 영역별 작업을 처리하도록 설계됐다. 기존에 운영하던 Amazon EKS 컨테이너 플랫폼 위에 각 에이전트를 독립적으로 배포·확장했으며, <strong>Amazon Bedrock</strong>을 통해 여러 파운데이션 모델을 작업별로 선택·교체할 수 있게 했다. 대형 스포츠 이벤트 중 <strong>2분당 40건 이상</strong>으로 급증하는 문의량에도 즉각 확장 가능하도록 설계됐다.</p><div class="slot-l">WHY IT MATTERS</div><p>규제가 주마다 다르고 실시간 위험 감지(문제 도박)까지 요구되는 고위험 도메인에서 멀티에이전트 아키텍처가 어떻게 정확성과 컴플라이언스를 동시에 확보하는지 보여주는 실전 사례다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p><strong>기존의 단일 의사결정 트리 챗봇</strong> 대비, 오케스트레이터가 전문화된 서브 에이전트와 도구를 조율하는 구조로 다양한 문의 유형과 주별 규정 차이를 처리한다는 점이 다르다.</p><div class="tags"><span class="tag">#multi-agent</span><span class="tag">#orchestration</span></div><a class="src-cta" href="https://aws.amazon.com/blogs/machine-learning/how-fanatics-betting-and-gaming-built-a-multi-agent-customer-support-system/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="837115c51674"><summary><span class="num">02</span><span class="body-col"><span class="it-title">NVIDIA, SkillEvaluator 공개 — AI 에이전트용 &#x27;Skills&#x27;가 도구 탐색·토큰 낭비 줄이는지 측정</span><span class="it-sub">Evaluating AI Agent Skill Performance with NVIDIA SkillEvaluator</span><span class="it-meta">✍️ 블로그 · developer.nvidia.com</span><span class="it-lede">AI 에이전트는 모델 성능이 좋고 NVIDIA 라이브러리 문서가 잘 갖춰져 있어도, 적절한 도구를 찾느라 불필요한 단계를 거치거나 막다른 시도에 토큰을 낭비하고 특수 작업에서 어려움을 겪을 수 있다.</span></span></summary><div class="it-body"><p>이를 해결하기 위해 &#x27;Skills&#x27;라는 개념을 제시하는데, 이는 에이전트가 의도에서 해결책으로 더 빠르게 나아가도록 지침, 예시, 도구 사용 가이드를 패키징한 것이다. NVIDIA는 이러한 Skills가 실제로 에이전트 성능을 개선하는지 측정하기 위해 <strong>SkillEvaluator</strong>라는 평가 도구를 소개한다.</p><div class="slot-l">WHY IT MATTERS</div><p>에이전트에게 무엇을 제공하느냐(컨텍스트 설계)가 모델 자체 성능만큼 중요하다는 점을 보여주며, 이를 정량적으로 검증할 방법이 필요한 실무자에게 유용한 시사점을 준다.</p><div class="tags"><span class="tag">#tool-use</span><span class="tag">#evaluation</span></div><a class="src-cta" href="https://developer.nvidia.com/blog/evaluating-ai-agent-skill-performance-with-nvidia-skillevaluator/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="llm-foundation-model"><div class="sec-h"><span class="nm">LLM / Foundation Model</span><span class="cnt">2건</span><span class="all"><a href="../../../category/llm-foundation-model.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="llm-foundation-model">전체 펼치기</button></div><div class="sec-desc">LLM·파운데이션 모델 — 사전학습·정렬·추론</div><details class="item" id="158bcae25968"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Apple, LLM의 &#x27;인간 같은 행동&#x27; 3차원 분석 — 발현 빈도·영향·통제 가능성을 21,000개 사례로 검증</span><span class="it-sub">Examining Human-Like Behaviors in LLMs: A Multi-Dimensional Analysis of Model Behaviors, User Factors, and System Prompts</span><span class="it-meta">✍️ 블로그 · machinelearning.apple.com</span><span class="it-lede">이 연구는 LLM이 감정 표현, 관계 형성, 요청 거부 등 다양한 인간과 유사한 행동을 보이는 현상을 다룬다.</span></span></summary><div class="it-body"><p>저자들은 이러한 행동이 언제, 어떤 형태로 나타나야 하는지에 대한 실증적 근거가 부족하다는 문제를 지적한다. 이를 위해 <strong>LLM-as-a-judge</strong>와 사람 평가를 결합해 인간 같은 행동의 발생 빈도, 잠재적 영향, 통제 가능성을 다차원적으로 분석했다. 분석은 총 21,000건의 사례를 대상으로 수행되었다.</p><div class="slot-l">WHY IT MATTERS</div><p>모델이 사용자와 감정적 유대나 경계 설정을 어떻게 다루는지는 안전성과 사용자 신뢰에 직결되는 문제이므로, 이를 체계적으로 측정하는 방법론은 정렬(alignment) 설계에 실질적 기준을 제공한다.</p><div class="tags"><span class="tag">#prompting</span><span class="tag">#alignment</span></div><a class="src-cta" href="https://machinelearning.apple.com/research/human-like-behaviors-llms" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="22e214c52569"><summary><span class="num">02</span><span class="body-col"><span class="it-title">LFM2.5, 양자화 인식 증류로 만든 Q4_0 체크포인트 공개</span><span class="it-sub">LFM2.5 Q4\_0 Checkpoints from Quantization-Aware Distillation</span><span class="it-meta">📰 뉴스 · huggingface.co<span class="weak">원문 근거 부족</span></span><span class="it-lede">LFM2.5 모델의 <strong>Q4_0 양자화 체크포인트</strong>가 quantization-aware distillation 방식으로 공개되었다는 소식이다.</span></span></summary><div class="it-body"><p>구체적인 성능 수치나 세부 방법론은 원문에 제시되어 있지 않다.</p><div class="slot-l">WHY IT MATTERS</div><p>경량화된 양자화 체크포인트는 온디바이스나 저사양 환경에서의 LLM 배포에 관심 있는 개발자에게 유용할 수 있다.</p><div class="tags"><span class="tag">#model-release</span></div><a class="src-cta" href="https://huggingface.co/blog/LiquidAI/qad" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="deep-learning"><div class="sec-h"><span class="nm">Deep Learning</span><span class="cnt">1건</span><span class="all"><a href="../../../category/deep-learning.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="deep-learning">전체 펼치기</button></div><div class="sec-desc">딥러닝 — 아키텍처·학습기법 자체</div><details class="item" id="93e6bad5feea"><summary><span class="num">01</span><span class="body-col"><span class="it-title">The Problem Is the Problem: Towards Scalable Mathematical Discovery</span><span class="it-sub">FAR 파이프라인, 조합론 논문 5,245편서 문제 발굴해 유명 미해결 추측 77건 저자 검토 성공</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">이 연구는 AI 기반 수학 연구에서 병목이 되는 &#x27;문제 선정&#x27;과 &#x27;결과 검토&#x27; 단계를 자동화하는 Find, Attempt, and Recommend(FAR) 파이프라인을 제안한다.</span></span></summary><div class="it-body"><p>전문가가 연구 방향만 제시하면 시스템이 방대한 문헌에서 후보 문제를 탐색하고 필터링해 인간의 검토 부담을 줄인다. 조합론 분야 파일럿 실험에서 5,245편의 논문으로부터 6,453개의 후보 추측·미해결 문제를 추출하고, 이 중 4,717개를 잘 정의되고 여전히 미해결인 것으로 필터링했다. 이후 추론 및 자동 심사 단계를 거쳐 598개의 잠재적 해결안을 도출하고 <strong>77개 항목을 저자팀 검토용으로 선정</strong>했으며, Davies-Jenssen-Perkins-Roberts, Erdős-Straus 등 유명 추측 관련 흥미로운 발견을 다수 확인했다.</p><div class="slot-l">WHY IT MATTERS</div><p>프론티어 모델의 추론 능력과 전문가 검토라는 두 희소 자원을 효율적으로 배분하는 문제는 AI가 실제 연구 수준의 수학 발견에 기여하기 위한 핵심 과제이며, 이 접근은 AI-인간 협업 연구의 확장 가능한 새로운 모델을 제시한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 워크플로우가 인간이 사전에 단일 문제를 선정하고 이후 결과물을 검토하는 방식이었다면, FAR은 인간이 관심 있는 <strong>연구 방향</strong>만 제시하면 시스템이 문헌 전체에서 후보 문제를 검색·필터링하는 검색·추천 시스템 방식으로 전환했다는 점이 다르다.</p><a class="src-cta" href="https://arxiv.org/abs/2608.16977" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="predictive-modeling"><div class="sec-h"><span class="nm">예측 모델링</span><span class="cnt">3건</span><span class="all"><a href="../../../category/predictive-modeling.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="predictive-modeling">전체 펼치기</button></div><div class="sec-desc">예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</div><details class="item" id="0bd236f720ab" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">Airbnb 예측팀, 코로나 이후 편향 대응기 — &#x27;재학습&#x27;을 재적합·재설계·유지 3단계로 분해</span><span class="it-sub">How we knew COVID was over (and what our models had to unlearn)</span><span class="it-meta">✍️ 블로그 · medium.com</span><span class="it-lede">Airbnb Forecasting Data Science팀은 수요·예약·취소 등 수천 개 마켓에 대한 예측을 지속적으로 제공하며, 다른 팀들이 이 예측 위에 의사결정을 쌓기 때문에 작은 편향도 누적된 비용을 유발한다.</span></span></summary><div class="it-body"><p>한 예측이 몇 분기 동안 같은 방향으로 실제값과 어긋났고, 정기 갱신 후에도 편향이 지속되자 팀은 단순히 전체 재학습을 하기보다 편향의 원인을 먼저 파악하고자 했다. 이를 계기로 팀은 &#x27;재학습&#x27;이라는 하나의 단어를 <strong>재적합(refitting), 재설계(respecifying), 유지(holding)</strong>라는 세 가지 서로 다른 결정으로 구분하는 원칙을 정립했다. 재적합은 같은 모델 구조에 최신 데이터만 반영하는 저비용 옵션이지만 무비용은 아니며, 재설계는 특징이나 구조 자체를 바꾸는 더 큰 개입으로 실질적 개선이 일어나는 지점이고, 유지는 이상 신호를 보고도 의도적으로 모델을 그대로 두는, 가장 용기가 필요한 선택이다.</p><div class="slot-l">WHY IT MATTERS</div><p>프로덕션 예측 모델은 실험실 지표가 아니라 다른 팀의 실제 의사결정에 직결되므로, 드리프트 대응을 &#x27;재학습&#x27;이라는 뭉뚱그린 개념 대신 명확한 의사결정 체계로 나누는 것이 리스크 관리 관점에서 중요하다는 시사점을 준다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존에는 예측이 어긋나면 관행적으로 전체 재학습(재적합)을 수행했던 것과 달리, 이 팀은 편향의 원인을 먼저 규명한 뒤 재적합·재설계·유지 중 상황에 맞는 결정을 선택하는 방식을 취했다.</p><div class="tags"><span class="tag">#timeseries</span></div><a class="src-cta" href="https://medium.com/airbnb-engineering/how-we-knew-covid-was-over-and-what-our-models-had-to-unlearn-c606b9bdb0ab?source=rss----53c7c27702d5---4" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="edf8f3fe2ea8"><summary><span class="num">02</span><span class="body-col"><span class="it-title">Conformal Prediction for Molecular Properties under Label Shift</span><span class="it-sub">라벨 시프트 대응 conformal prediction — 재학습 없이 분자 특성 예측구간 산출, 신약개발 신뢰성 강화</span><span class="it-meta">📄 논문 · arxiv.org · NeurIPS 2025</span><span class="it-lede">이 논문은 신약 개발에서 용해도, 효능, 독성 등 분자 특성 예측 시 발생하는 라벨 분포 이동(label shift) 문제를 다룬다.</span></span></summary><div class="it-body"><p>기존 점 추정 방식은 실험 조건이 학습 데이터와 달라지면 신뢰성이 떨어지고, 단일값만 제공해 실험 설계에 실질적 도움을 주지 못한다는 한계가 있다. 저자들은 conformal score에 <strong>한계 라벨 확률 비율</strong>로 가중치를 부여하는 방법을 제안하여, 재학습 없이 통계적으로 타당한 예측구간을 생성한다. 이를 통해 특성 분포가 변해도 견고한 불확실성 정량화가 가능해진다.</p><div class="slot-l">WHY IT MATTERS</div><p>정확도뿐 아니라 실행 가능한 신뢰도 지표를 제공함으로써 규제기관이 요구하는 투명성과 불확실성 보고 기준에 부합하며, 수십억 달러 규모의 신약 개발 파이프라인에서 더 신뢰할 수 있는 의사결정을 지원한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존의 점 추정 기반 예측 모델과 달리, 라벨 분포 이동 상황에서도 <strong>재학습 없이</strong> 통계적으로 엄밀한 예측구간을 제공하는 conformal prediction 가중치 기법이라는 점이 다르다.</p><div class="tags"><span class="tag">#tabular</span></div><a class="src-cta" href="https://arxiv.org/abs/2608.17678v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="c66e76d66123"><summary><span class="num">03</span><span class="body-col"><span class="it-title">Understanding the Surprising Generalization Properties of Tabular Foundation Models</span><span class="it-sub">단 하나의 실제 테이블만으로도 TFM 강력 전이 가능 — 열 개수가 인스턴스 수보다 중요</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">이 논문은 Tabular Foundation Models(TFM)가 방대한 합성 데이터나 대규모 실제 데이터셋 없이도 <strong>단 하나의 실제 테이블에 대한 자기지도 사전학습만으로 놀랍도록 강한 전이 성능</strong>을 낼 수 있음을 보인다.</span></span></summary><div class="it-body"><p>테이블은 다운스트림 작업과 무관하게 전반적으로 유용하거나 전반적으로 부실한 경향을 보였으며, 유용성을 가장 잘 예측하는 요인은 인스턴스 수가 아니라 <strong>피처(열) 개수</strong>였다. 이를 바탕으로 사전학습에서 과제(task)의 수와 품질이 핵심이라는 과제 중심 해석을 제시하고, 데이터셋 단위 필터링·중복 제거는 효과가 없는 반면 열 단위의 세밀한 전처리는 성능을 일관되게 개선함을 보였다. 마지막으로 TFM의 문맥 내 일반화가 본질적으로 검색(retrieval) 기반이며, 좋은 모델은 주어진 문맥에서 관련 예시를 식별하고 잘 집계하는 모델이라는 새로운 관점을 제안한다.</p><div class="slot-l">WHY IT MATTERS</div><p>TFM의 내부 작동 원리는 아직 잘 연구되지 않았는데, 이 연구는 사전학습 데이터 구성과 모델 설계를 어떻게 개선해야 할지에 대한 구체적 지침(과제 중심, 열 단위 전처리, 검색 기반 관점)을 제공한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 TFM들이 방대한 합성 코퍼스나 대규모 실제 데이터셋 수집에 의존한 것과 달리, 이 연구는 <strong>단일 실제 테이블</strong>만으로도 강한 전이가 가능함을 보이고 데이터셋 단위가 아닌 열 단위 전처리가 성능 개선의 핵심임을 밝혔다.</p><div class="tags"><span class="tag">#tabular</span></div><a class="src-cta" href="https://arxiv.org/abs/2608.17957v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="causal-inference"><div class="sec-h"><span class="nm">인과추론</span><span class="cnt">3건</span><span class="all"><a href="../../../category/causal-inference.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="causal-inference">전체 펼치기</button></div><div class="sec-desc">인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</div><details class="item" id="806d333c625a"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Transporting Trial Evidence Under Posterior Drift and Possible Hidden Confounding</span><span class="it-sub">RCT-관찰연구 결합 새 프레임워크, 사후분포 드리프트·은닉교란 동시 대응해 표적집단 효과 추정 — ACTG 175-WIHS 검증</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">이 논문은 무작위시험(RCT)의 내적 타당성과 관찰연구의 표적집단 대표성을 결합해 평균처치효과를 추정하는 강건한 사후분포 드리프트(posterior-drift) 프레임워크를 제안한다.</span></span></summary><div class="it-body"><p>관찰연구의 조건부 잠재결과 회귀를 RCT 값에 &#x27;출처별 드리프트&#x27;를 더한 형태로 표현하여, 정확한 조건부효과 전이성(transportability) 가정이 실패해도 대응 가능하게 한다. 은닉교란 가능성을 반영하기 위해 일반화 성향점수에 민감도 모수를 적용한 <strong>Rosenbaum형 불확실성 집합</strong>을 구성하고, 최소최대(minimax) 최악위험 기준으로 드리프트를 추정한다. 효율성, 균일 집중, 근사최적성 보장을 이론적으로 도출했으며, ACTG 175–WIHS 데이터 적용과 시뮬레이션에서 기존 정확 전이성 분석보다 더 신중하고 해석 가능한 추정치를 얻었다.</p><div class="slot-l">WHY IT MATTERS</div><p>RCT와 관찰연구를 결합해 인과추론을 하는 실무에서 흔히 가정되는 &#x27;조건부효과가 그대로 전이된다&#x27;는 전제와 &#x27;숨은 교란이 없다&#x27;는 전제를 동시에 완화할 수 있어, 정책·의학 분야의 외적타당성 확장 연구에 실용적 함의가 크다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>조건부효과가 완전히 전이된다고 가정하는 <strong>기존 정확 전이성(exact-transportability) 분석</strong> 대비, 드리프트와 은닉교란을 명시적으로 모델링해 더 보수적이고 해석 가능한 추정치를 제공한다.</p><div class="tags"><span class="tag">#did</span></div><a class="src-cta" href="https://arxiv.org/abs/2608.17999v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="2035ab456620"><summary><span class="num">02</span><span class="body-col"><span class="it-title">Causal Local States: Scalable Simultaneous Causal Network Inference and Forecasting for Dynamical Systems</span><span class="it-sub">CLS 프레임워크 공개 — 인과 네트워크 추론과 시계열 예측을 동시에, 노드별 최소 이웃 선택으로 이종 시스템도 정확 복원</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">이 논문은 관측 데이터로부터 근사적인 Granger 인과 상호작용 네트워크를 추론하면서 동시에 시스템 동역학을 예측하는 프레임워크인 causal local states(CLS)를 제안한다.</span></span></summary><div class="it-body"><p>각 노드마다 독립적으로 예측 모델이 해당 노드를 거의 최적으로 예측할 수 있는 <strong>최소한의 이웃 집합</strong>을 선택하고, 이렇게 얻어진 이웃 관계들을 결합해 전체 시스템의 예측을 수행한다. 이는 단일 전역 하이퍼파라미터(인과 임계값이나 고정 이웃 크기)에 의존하던 기존 접근과 달리, 노드별로 다른 이웃 크기를 허용해 이종 시스템의 구조를 복원할 수 있게 한다. 난이도가 증가하는 세 가지 벤치마크에서 CLS는 실제 네트워크와 높은 일치도로 구조를 복원했으며, 실제 네트워크가 주어진 모델과 대등한 수준의 예측 성능을 달성했다.</p><div class="slot-l">WHY IT MATTERS</div><p>블랙박스 예측 모델과 예측 무관 인과 구조 발견이라는 두 흐름을 통합해, <strong>설명 가능하면서도 확장 가능한</strong> 복잡계 예측으로 나아가는 방향을 제시한다는 점에서 의미가 있다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>단일 전역 인과 임계값이나 고정 이웃 크기를 사용하는 기존 결합형 접근 대비, 노드별로 독립적인 최소 이웃 집합을 선택함으로써 이종적인 시스템 구조도 복원할 수 있다는 점이 다르다.</p><div class="tags"><span class="tag">#causal-discovery</span></div><a class="src-cta" href="https://arxiv.org/abs/2608.17452v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="088d7cb8142d"><summary><span class="num">03</span><span class="body-col"><span class="it-title">Collective Counterfactual Planning: Coordination, Consent, and Verification under Representational Constraints</span><span class="it-sub">‘집단 반사실 계획(CCP)’ 모델 제안 — 표상 기하 제약이 팀 목표 달성과 검증 가능성을 동시에 제한한다는 증명</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">이 논문은 여러 에이전트가 각자 공통 과제 공간의 부분공간으로만 상태를 인지하고 행동을 승인·검증하는 상황을 formal하게 모델링한 Collective Counterfactual Planning(CCP)을 제안한다.</span></span></summary><div class="it-body"><p>각 행동에 필요한 실행 연합과 함께 개념화·동의·과제 관련 검증 자격이라는 세 가지 표상적 게이트가 목표 달성 여부를 결정한다. 저자들은 Collective Counterfactual Solvability(CCS) 문제를 정의해 기하학적 가능성, 실행 가능한 달성, 검증된 완료를 구분한다. 핵심 결과는 이중성으로, 반복적 교차 에이전트 릴레이는 개별 계획의 단순 결합으로는 풀 수 없는 해를 열어줄 수 있지만, 팀 전체에 <strong>인식되지 않는 부분공간</strong>에 본질적으로 의존하는 목표 요건은 우연히 달성되더라도 검증 불가능해 정당하게 완료로 인정될 수 없다. 또한 4단계 유한 지평 완전 탐색 방식이 정확한 표상 하에서는 완전성을 갖지만, 제한된 구현에서는 반환된 계획에 대해서만 건전성이 유지된다.</p><div class="slot-l">WHY IT MATTERS</div><p>팀 단위 AI 에이전트 협업이나 다중 에이전트 시스템에서 각 구성원이 전체 상태를 관찰하지 못하는 상황이 흔해지는 만큼, 목표 달성 여부를 어떻게 &#x27;정당하게&#x27; 검증할 수 있는지에 대한 이론적 근거를 제공한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존의 개별 에이전트 계획을 단순 취합하는 one-shot pooling 방식과 달리, 반복적 교차 에이전트 릴레이(iterated relay)를 통해서만 풀리는 해가 존재함을 보이고, 이를 검증 가능성의 한계와 함께 formal하게 구분한 점이 다르다.</p><div class="tags"><span class="tag">#causal-discovery</span></div><a class="src-cta" href="https://arxiv.org/abs/2608.17932v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="mlops"><div class="sec-h"><span class="nm">MLOps / ML Engineering</span><span class="cnt">2건</span><span class="all"><a href="../../../category/mlops.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="mlops">전체 펼치기</button></div><div class="sec-desc">MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</div><details class="item" id="4680cdb31015"><summary><span class="num">01</span><span class="body-col"><span class="it-title">AWS, ITSM 티켓서 지식 채굴하는 KnowledgeForge 공개 — Bedrock·S3 Vectors로 KB 생성·정제 자동화</span><span class="it-sub">KnowledgeForge: mining gold from the ITSM ticket graveyard</span><span class="it-meta">✍️ 블로그 · aws.amazon.com</span><span class="it-lede">KnowledgeForge는 해결된 IT 서비스 관리(ITSM) 티켓에 묻힌 지식을 채굴해 지식베이스(KB) 문서로 만드는 AWS 솔루션이다.</span></span></summary><div class="it-body"><p>생성 서브시스템은 관련 티켓을 클러스터링해 신규 KB 문서와 근본원인분석 문서를 작성하고, 큐레이션 서브시스템은 기존·신규 문서를 유형 분류, 중복 제거, 품질 평가, 취약 콘텐츠 재작성의 4단계로 정제한다. <strong>Amazon Bedrock</strong>(생성·개선), <strong>Amazon S3 Vectors</strong>(중복 탐지), AWS Step Functions(오케스트레이션)를 핵심 구성요소로 사용하며, 최종 결과물은 ServiceNow를 통해 지식관리자가 검토·승인한다. 큐레이션 단계에서 모든 문서를 벡터화해 저장하고 생성 단계가 이를 재사용함으로써 순환 구조(closed loop)를 완성한다.</p><div class="slot-l">WHY IT MATTERS</div><p>기업 IT 지원팀이 매달 처리하는 수천 건의 티켓에 담긴 증상·원인·해결책 지식이 사장되는 문제와, KB가 중복·구식 콘텐츠로 오염되는 문제를 동시에 해결하려는 시도로, <strong>대규모 생성형 AI 문서 처리 파이프라인</strong> 구축 시 재사용 가능한 패턴을 제공한다는 점에서 실무적 참고 가치가 크다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존에는 티켓 해결 지식이 티켓 이력에 갇혀 KB로 이어지지 못했던 반면, KnowledgeForge는 생성과 큐레이션을 벡터 임베딩으로 연결한 폐쇄루프 구조를 통해 신규 문서 작성과 기존 KB 정제를 하나의 파이프라인으로 통합한 점이 다르다.</p><div class="tags"><span class="tag">#pipeline</span><span class="tag">#feature-engineering</span></div><a class="src-cta" href="https://aws.amazon.com/blogs/machine-learning/knowledgeforge-mining-gold-from-the-itsm-ticket-graveyard/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="3499f3019777"><summary><span class="num">02</span><span class="body-col"><span class="it-title">NVIDIA FLARE로 VLM 연합학습 워크플로 구축 — 데이터 중앙화 없이 기관 간 멀티모달 모델 학습</span><span class="it-sub">Building Federated Multimodal AI Workflows with NVIDIA FLARE</span><span class="it-meta">✍️ 블로그 · developer.nvidia.com</span><span class="it-lede">비전-언어 모델(VLM)은 시각 질의응답, 캡셔닝, 이미지-텍스트 추론 등을 지원하지만, 학습에 필요한 데이터가 여러 기관에 분산되어 있어 원본 데이터를 중앙화할 수 없는 경우가 많다.</span></span></summary><div class="it-body"><p>NVIDIA FLARE는 이런 데이터-로컬 사이트 간 학습을 조율하는 연합학습(federated learning) 방식을 제공한다. 이 블로그는 FLARE를 활용해 멀티모달 AI 워크플로를 구축하는 방법을 다룬다.</p><div class="slot-l">WHY IT MATTERS</div><p>의료·금융 등 데이터를 외부로 반출할 수 없는 산업에서 <strong>VLM을 기관 간 협업으로 학습</strong>시킬 수 있는 실용적 경로를 제시한다는 점에서 MLOps 실무자에게 의미가 있다.</p><div class="tags"><span class="tag">#deployment</span><span class="tag">#monitoring</span></div><a class="src-cta" href="https://developer.nvidia.com/blog/building-federated-multimodal-ai-workflows-with-nvidia-flare/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="practice"><div class="sec-h"><span class="nm">실무 사례 · 노하우</span><span class="cnt">1건</span><span class="all"><a href="../../../category/practice.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="practice">전체 펼치기</button></div><div class="sec-desc">실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</div><details class="item" id="dfcf73efa3a6"><summary><span class="num">01</span><span class="body-col"><span class="it-title">NVIDIA, ChatGPT Work로 반복 업무 줄이고 성공적 워크플로우 전사 확산</span><span class="it-sub">How NVIDIA scales expertise with ChatGPT Work</span><span class="it-meta">✍️ 블로그 · openai.com</span><span class="it-lede">NVIDIA 팀들은 ChatGPT Work를 도입해 수작업 업무를 줄이고 있다.</span></span></summary><div class="it-body"><p>여러 팀에 흩어진 빠르게 변화하는 정보와 신호를 연결하는 데 활용한다. 특정 팀에서 성공한 업무 방식을 전사적으로 확장하는 용도로도 사용한다.</p><div class="slot-l">WHY IT MATTERS</div><p>대형 하드웨어·AI 기업이 실제 사내 업무에 챗봇형 도구를 어떻게 적용하는지 보여주는 사례로, <strong>기업용 AI 도입 패턴</strong>을 참고할 수 있다.</p><a class="src-cta" href="https://openai.com/index/nvidia/chatgpt-work" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="industry-application"><div class="sec-h"><span class="nm">산업 적용 사례</span><span class="cnt">2건</span><span class="all"><a href="../../../category/industry-application.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="industry-application">전체 펼치기</button></div><div class="sec-desc">산업 적용 사례 — 산업 현장의 AI/ML 적용</div><details class="item" id="790a27874455" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">NVIDIA, Cosmos 3 Edge 공개 — 4B 옴니모델로 온디바이스 로봇 제어용 월드모델 학습 지원</span><span class="it-sub">Post-Train NVIDIA Cosmos 3 Edge for On-Device Robot Control</span><span class="it-meta">✍️ 블로그 · developer.nvidia.com</span><span class="it-lede">NVIDIA가 로봇의 온보드 컴퓨팅 환경에서 실행 가능한 월드모델 기반 정책을 위해 Cosmos 3 Edge를 공개했다.</span></span></summary><div class="it-body"><p>Cosmos 3 Edge는 <strong>4B 규모의 옴니모델</strong>로, 2B 크기의 NVIDIA Nemotron 기반 추론기를 포함한 Cosmos 3 패밀리의 일원이다. 월드모델은 물리적 상호작용 학습의 기반을 제공하지만 모델 크기 때문에 온디바이스 배포가 어려웠는데, 이 문제를 해결하는 것을 목표로 한다.</p><div class="slot-l">WHY IT MATTERS</div><p>로봇이 센서, 환경, 작업에 맞춰 적응하면서도 제한된 온보드 하드웨어에서 동작해야 하는 것은 실제 로봇 배포의 핵심 제약이며, 경량 월드모델은 이런 제약을 완화할 수 있다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 대형 월드모델 대비 <strong>4B 규모로 경량화</strong>해 온디바이스 배포를 가능하게 한 점이 차별점이다.</p><a class="src-cta" href="https://developer.nvidia.com/blog/post-train-nvidia-cosmos-3-edge-for-on-device-robot-control/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="9ac0643f2427"><summary><span class="num">02</span><span class="body-col"><span class="it-title">Replit, GPT-5.6 Luna 기반 &#x27;Free Mode&#x27; 출시 — 토큰 비용 걱정 없이 소프트웨어 제작 지원</span><span class="it-sub">Replit expands access to software creation with GPT-5.6 Luna</span><span class="it-meta">✍️ 블로그 · openai.com</span><span class="it-lede">Replit이 GPT-5.6 Luna 모델을 기반으로 한 Free Mode를 도입했다.</span></span></summary><div class="it-body"><p>이 모드를 통해 사용자는 토큰 비용에 대한 부담 없이 아이디어를 실제 작동하는 소프트웨어로 구현할 수 있다. 누구나 접근 가능하도록 소프트웨어 제작 문턱을 낮추는 것이 핵심 목표다.</p><div class="slot-l">WHY IT MATTERS</div><p>코딩 경험이 부족한 사용자도 비용 부담 없이 소프트웨어를 만들 수 있게 되면서 <strong>개발 진입장벽</strong>이 낮아지는 흐름을 보여준다.</p><a class="src-cta" href="https://openai.com/index/replit" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section></main>
+  <footer class="topics" id="topics"><h2>다루는 주제</h2><ul><li><a class="tnm" href="../../../category/ai-agent.html">AI Agent</a>AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</li><li><a class="tnm" href="../../../category/llm-foundation-model.html">LLM / Foundation Model</a>LLM·파운데이션 모델 — 사전학습·정렬·추론</li><li><a class="tnm" href="../../../category/deep-learning.html">Deep Learning</a>딥러닝 — 아키텍처·학습기법 자체</li><li><a class="tnm" href="../../../category/predictive-modeling.html">예측 모델링</a>예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</li><li><a class="tnm" href="../../../category/causal-inference.html">인과추론</a>인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</li><li><a class="tnm" href="../../../category/mlops.html">MLOps / ML Engineering</a>MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</li><li><a class="tnm" href="../../../category/practice.html">실무 사례 · 노하우</a>실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</li><li><a class="tnm" href="../../../category/industry-application.html">산업 적용 사례</a>산업 적용 사례 — 산업 현장의 AI/ML 적용</li></ul></footer>
+</div>
+<script>
+(function(){
+var r=document.documentElement,k="dsb-theme",s=localStorage.getItem(k);
+if(s)r.dataset.theme=s;
+document.getElementById('tbtn').addEventListener('click',function(){
+  var cur=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  var n=cur==='dark'?'light':'dark';r.dataset.theme=n;localStorage.setItem(k,n);});
+// 섹션 전체 펼치기/접기
+document.querySelectorAll('.exp').forEach(function(b){b.addEventListener('click',function(){
+  var sec=document.getElementById(b.dataset.sec);
+  var ds=sec.querySelectorAll('details.item'),open=b.dataset.state!=='open';
+  ds.forEach(function(d){d.open=open;});
+  b.dataset.state=open?'open':'closed';b.textContent=open?'전체 접기':'전체 펼치기';});});
+// 스크롤 위치 카테고리 TOC 활성 (데스크톱 사이드 TOC)
+var links={};document.querySelectorAll('.toc li[data-cat]').forEach(function(li){links[li.dataset.cat]=li;});
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){Object.values(links).forEach(function(l){l.classList.remove('active');});
+    if(links[e.target.id])links[e.target.id].classList.add('active');}});},
+  {rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('section.sec').forEach(function(s){obs.observe(s);});
+})();
+</script>
+</body>
+</html>
