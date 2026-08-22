@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI &amp; ML News Letter · 08/23</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --accent:#5DB8A6; --accent-hover:#479B8B; --accent-weak:#E8F4F1;
+  --focus-ring:rgba(93,184,166,.5);
+  --bg:#FAF9F5; --bg-subtle:#F0EEE6; --border:#E7E3D9;
+  --text:#1F1E1D; --text-2:#6B6862; --text-3:#A39E94;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}}
+:root[data-theme="dark"]{
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover);text-decoration:underline}
+strong{font-weight:600;color:var(--text)}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px;border-radius:3px}
+
+/* 모바일 우선 단일 컬럼 (<1200px). 덩어리 중앙 정렬은 margin:0 auto. */
+.page{max-width:760px;margin:0 auto;padding:20px 18px 40px}
+
+/* --- 마스트헤드 (뉴스레터 제호) --- */
+.mast{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+  padding-bottom:14px;border-bottom:2px solid var(--text);margin-bottom:24px}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--accent);
+  text-transform:uppercase;margin:0 0 6px}
+.mast-title{font-size:26px;font-weight:600;margin:0;letter-spacing:-.01em;line-height:1.15}
+.mast-date{font-size:14px;color:var(--text-2);margin-top:8px}
+.themebtn{flex:none;background:var(--bg-subtle);border:1px solid var(--border);color:var(--text-2);
+  border-radius:20px;padding:5px 12px;font-size:13px;cursor:pointer;font-family:inherit}
+.topnav{margin-top:11px;display:flex;gap:16px;font-size:13px}
+.topnav a{color:var(--text-2);font-weight:500} .topnav a:hover{color:var(--accent)}
+@media (min-width:640px){.mast-title{font-size:31px}}
+
+/* --- TODAY'S TOP 3 --- */
+.top3{background:var(--accent-weak);border-radius:12px;padding:14px 18px;margin-bottom:24px}
+.top3 h2{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--accent);margin:0 0 8px}
+.top3 ol{margin:0;padding:0;list-style:none}
+.top3 li{padding:4px 0 4px 22px;position:relative;font-size:15px;color:var(--text)}
+.top3 li::before{content:"\2605";position:absolute;left:0;color:var(--accent);font-size:12px;top:7px}
+.top3 .t3cat{color:var(--text-2);font-size:12px;margin-right:5px}
+.top3 a{color:var(--text)} .top3 a:hover{color:var(--accent-hover)}
+
+/* --- 목차 (TOC) --- */
+.toc{margin-bottom:26px}
+.toc h2{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--text-2);margin:0 0 8px}
+.toc ul{margin:0;padding:0;list-style:none}
+.toc li{padding:6px 0;border-top:1px solid var(--border)}
+.toc li:first-child{border-top:none}
+.toc .r{display:flex;gap:6px;align-items:baseline;font-size:14px}
+.toc .nm{font-weight:500;color:var(--text)} .toc a:hover .nm{color:var(--accent)}
+.toc .cnt{color:var(--text-3);font-size:12px}
+.toc .lead{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  font-size:12px;color:var(--text-2);margin-top:2px;line-height:1.4}
+.toc li.active .nm{color:var(--accent)}
+.toc li.active{border-left:2px solid var(--accent);padding-left:8px;margin-left:-10px}
+
+/* --- 섹션 --- */
+.sec{margin:0 0 34px;scroll-margin-top:14px}
+.sec-h{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:0 0 2px;padding-top:6px}
+.sec-h .nm{font-size:20px;font-weight:600}
+.sec-h .cnt{font-size:13px;color:var(--text-3)}
+.sec-h .all{font-size:12px;color:var(--text-3);margin-left:auto}
+.sec-h .all span{color:var(--text-2)}
+.sec-h .exp{font-size:12px;background:none;border:1px solid var(--border);color:var(--text-2);
+  border-radius:14px;padding:2px 10px;cursor:pointer;font-family:inherit}
+.sec-desc{font-size:13px;color:var(--text-2);margin:0 0 8px}
+.sec-empty{font-size:14px;color:var(--text-3);padding:4px 0 6px}
+.backtop{display:inline-block;font-size:12px;color:var(--text-3);margin-top:6px}
+
+/* --- 아이템 (아코디언) — 거터(번호) + 단일 콘텐츠 컬럼 (DESIGN §3 v4). 좌측 정렬선 1개. --- */
+.item{border-bottom:1px solid var(--border);--gutter:28px}
+.item>summary{list-style:none;cursor:pointer;padding:16px 26px 16px 0;position:relative;
+  display:grid;grid-template-columns:var(--gutter) 1fr;align-items:start}
+.item>summary::-webkit-details-marker{display:none}
+.item>summary::after{content:"\25B8";position:absolute;right:2px;top:16px;color:var(--text-3);
+  font-size:13px;transition:transform .15s;display:inline-block}
+.item[open]>summary::after{transform:rotate(90deg)}
+.num{font-size:13px;color:var(--text-3);font-variant-numeric:tabular-nums;font-weight:500;padding-top:3px}
+.t3star{color:var(--accent);font-size:11px;margin-right:2px}
+.body-col{min-width:0}
+.it-title{display:block;font-size:18px;font-weight:600;color:var(--text);line-height:1.4}
+.item>summary:hover .it-title{color:var(--accent)}
+.it-sub{display:block;font-size:13px;color:var(--text-2);margin-top:3px;line-height:1.35}
+.it-meta{display:block;font-size:13px;color:var(--text-2);margin-top:6px}
+.it-lede{display:block;font-size:15px;color:var(--text-2);margin-top:7px;line-height:1.5}
+.item[open] .it-lede{color:var(--text)}
+/* 접힘 본문도 콘텐츠 컬럼에 정렬 (거터만큼 들여씀) */
+.it-body{padding:0 0 20px var(--gutter)}
+.it-body p{margin:0 0 10px}
+@media (min-width:900px){.item{--gutter:40px}}
+.slot-l{font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--text-2);margin:14px 0 2px}
+.tags{margin-top:10px}
+.tag{display:inline-block;font-size:12px;color:var(--text-2);background:var(--bg-subtle);
+  border:1px solid var(--border);border-radius:12px;padding:1px 9px;margin:0 5px 5px 0}
+.prev{font-size:13px;color:var(--text-3);margin-top:8px}
+.src-cta{display:inline-block;margin-top:12px;font-size:14px;font-weight:500;color:var(--accent)}
+.weak{color:var(--accent);font-size:12px;border:1px solid var(--accent);border-radius:5px;
+  padding:0 6px;margin-left:6px}
+
+/* --- "다루는 주제" 푸터 --- */
+.topics{margin-top:36px;padding-top:22px;border-top:2px solid var(--text)}
+.topics h2{font-size:15px;font-weight:600;margin:0 0 12px}
+.topics ul{margin:0;padding:0;list-style:none}
+.topics li{padding:7px 0;border-top:1px solid var(--border);font-size:13px;color:var(--text-2)}
+.topics li:first-child{border-top:none}
+.topics .tnm{font-weight:600;color:var(--accent);margin-right:6px}
+
+/* --- 데스크톱 (≥1200px): 좌측 sticky TOC(260) + 본문(720), 덩어리 중앙 정렬 --- */
+@media (min-width:1200px){
+  /* max-width = 260+44+720 그리드(1024) + 좌우 padding(18*2). box-sizing:border-box
+     라 padding 을 포함해야 본문 720 이 찌그러지지 않는다. */
+  .page{max-width:1060px;display:grid;grid-template-columns:260px minmax(0,720px);
+    column-gap:44px;justify-content:center;align-items:start;padding-top:28px}
+  .mast{grid-column:1/3}
+  .toc{grid-column:1;grid-row:2/999;position:sticky;top:24px;margin:0;align-self:start}
+  .top3,.main{grid-column:2}
+  .topics{grid-column:1/3}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="mast">
+    <div class="mast-l">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1 class="mast-title">AI &amp; ML News Letter</h1>
+      <div class="mast-date">2026 / 08 / 23 (일) · 11건</div>
+      <nav class="topnav"><a href="../../../archive.html">📅 지난 브리핑</a>
+        <a href="#topics">🗂 주제별 보기</a></nav>
+    </div>
+    <button id="tbtn" class="themebtn" type="button">🌓 테마</button>
+  </header>
+  <section class="top3"><h2>TODAY'S TOP 3</h2><ol><li><a href="#4921307b2bcd"><span class="t3cat">[AI Agent]</span>FlowEvo: Self-Evolving Agents through the Co-Evolution of Workflows and Executable Skills</a></li><li><a href="#8023e7fcc270"><span class="t3cat">[AI Agent]</span>LangGraph AI 에이전트, 데모에서 실제 예약 데이터를 다루는 백엔드로 전환</a></li><li><a href="#499bb8eb36c1"><span class="t3cat">[Deep Learning]</span>SigLip을 LoRA로 파인튜닝해 라벨 부족 문제 해결 — 그러나 항상 정답은 아니다</a></li></ol></section>
+  <nav class="toc" id="toc"><h2>오늘의 목차</h2><ul><li data-cat="ai-agent"><a href="#ai-agent"><span class="r"><span class="nm">AI Agent</span><span class="cnt">2</span></span><span class="lead">FlowEvo, 워크플로우·스킬 공진화로 ALFWorld 85.6% 달성 — 최강 베이스라인 대비 26.4점↑, 토큰은 1/3</span></a></li><li data-cat="llm-foundation-model"><a href="#llm-foundation-model"><span class="r"><span class="nm">LLM / Foundation Model</span><span class="cnt">2</span></span><span class="lead">서로 무관한 PDF 폴더도 &#x27;중첩 목차 있는 긴 문서&#x27; 하나로 취급하는 멀티문서 RAG 기법</span></a></li><li data-cat="deep-learning"><a href="#deep-learning"><span class="r"><span class="nm">Deep Learning</span><span class="cnt">1</span></span><span class="lead">SigLip을 LoRA로 파인튜닝해 라벨 부족 문제 해결 — 그러나 항상 정답은 아니다</span></a></li><li data-cat="predictive-modeling"><a href="#predictive-modeling"><span class="r"><span class="nm">예측 모델링</span><span class="cnt">3</span></span><span class="lead">동면 유도한 생쥐, 시냅스 절반 이상 사라져도 기억은 유지 — Science 연구</span></a></li><li data-cat="mlops"><a href="#mlops"><span class="r"><span class="nm">MLOps / ML Engineering</span><span class="cnt">1</span></span><span class="lead">Nvidia, 데이터센터 개발사 Cloverleaf와 파트너십 체결 — AI 인프라 투자 확대</span></a></li><li data-cat="industry-application"><a href="#industry-application"><span class="r"><span class="nm">산업 적용 사례</span><span class="cnt">2</span></span><span class="lead">중국 AI 붐의 숨은 거점 — 네이멍구, 저렴한 전력·부지로 데이터센터 허브 부상</span></a></li></ul></nav>
+  <main class="main"><section class="sec" id="ai-agent"><div class="sec-h"><span class="nm">AI Agent</span><span class="cnt">2건</span><span class="all"><a href="../../../category/ai-agent.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="ai-agent">전체 펼치기</button></div><div class="sec-desc">AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</div><details class="item" id="4921307b2bcd" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">FlowEvo: Self-Evolving Agents through the Co-Evolution of Workflows and Executable Skills</span><span class="it-sub">FlowEvo, 워크플로우·스킬 공진화로 ALFWorld 85.6% 달성 — 최강 베이스라인 대비 26.4점↑, 토큰은 1/3</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">FlowEvo는 추론 시점에서 워크플로우와 실행 가능한 스킬이 함께 진화하는 훈련 불필요 프레임워크다.</span></span></summary><div class="it-body"><p>성공적인 워크플로우를 호출 가능한 스킬로 컴파일해 영구 저장소에 보관하고, 검색된 스킬을 직접 실행하거나 새 워크플로우 구성의 맥락으로 재활용한다. 각 스킬의 다운스트림 유용성을 추적해 부정적 전이를 일으키는 스킬은 억제한다. GPT-4o-mini를 백본으로 ALFWorld, HumanEval, MBPP, GSM8K, MATH-500 전체 표준 분할에서 8개 베이스라인 중 <strong>최고 정확도</strong>를 기록했으며, ALFWorld에서는 <strong>85.6%</strong>로 최강 베이스라인 대비 26.4점 높으면서 토큰 사용량은 약 1/3에 그쳤다. 7B~671B 파라미터 규모의 10개 기반 모델에서 ExpeL 대비 50개 모델-데이터셋 비교 중 49개에서 앞섰다.</p><div class="slot-l">WHY IT MATTERS</div><p>에이전트가 한 번 발견한 절차를 버리지 않고 재사용 가능한 지식으로 축적한다는 점은 반복 작업이 많은 실제 배포 환경에서 비용과 성능 양쪽에 실질적 이득을 줄 수 있다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>오프라인으로 조립되는 기존 스킬 라이브러리와 달리, FlowEvo는 에이전트 자신의 워크플로우로부터 추론 중에 스킬이 성장하고 부정적 전이를 일으키는 스킬을 스스로 억제한다는 점에서 구별된다.</p><a class="src-cta" href="https://arxiv.org/abs/2607.21596" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="8023e7fcc270" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>02</span><span class="body-col"><span class="it-title">LangGraph AI 에이전트, 데모에서 실제 예약 데이터를 다루는 백엔드로 전환</span><span class="it-sub">Building a Proper Backend for My LangGraph AI Agent</span><span class="it-meta">✍️ 블로그 · towardsdatascience.com</span><span class="it-lede">이 글은 데모용 LangGraph 에이전트를 실제 예약 데이터를 안정적으로 유지·관리할 수 있는 시스템으로 발전시키는 과정을 다룬다.</span></span></summary><div class="it-body"><p>단순 프로토타입 수준을 넘어 실제 운영 환경에 맞는 백엔드 구조를 구축하는 데 초점을 맞춘다. Towards Data Science에 게재된 블로그 글이다.</p><div class="slot-l">WHY IT MATTERS</div><p>많은 AI 에이전트 프로젝트가 <strong>데모 단계에서 실제 서비스로 전환</strong>할 때 겪는 인프라 문제를 다루고 있어, 실무 배포를 고민하는 개발자에게 참고가 된다.</p><div class="tags"><span class="tag">#orchestration</span><span class="tag">#deployment</span></div><a class="src-cta" href="https://towardsdatascience.com/building-a-proper-backend-for-my-langgraph-ai-agent/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="llm-foundation-model"><div class="sec-h"><span class="nm">LLM / Foundation Model</span><span class="cnt">2건</span><span class="all"><a href="../../../category/llm-foundation-model.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="llm-foundation-model">전체 펼치기</button></div><div class="sec-desc">LLM·파운데이션 모델 — 사전학습·정렬·추론</div><details class="item" id="15663b461b26"><summary><span class="num">01</span><span class="body-col"><span class="it-title">서로 무관한 PDF 폴더도 &#x27;중첩 목차 있는 긴 문서&#x27; 하나로 취급하는 멀티문서 RAG 기법</span><span class="it-sub">Multi-Document RAG: A Folder of Unrelated PDFs Is One Long Document with a Nested Outline</span><span class="it-meta">✍️ 블로그 · towardsdatascience.com</span><span class="it-lede">이 글은 공통 필드가 없어 별도 인덱스를 만들 수 없는, 서로 관련 없는 PDF 여러 개를 다루는 RAG 방식을 설명한다.</span></span></summary><div class="it-body"><p>각 파일마다 한 줄 요약과 자체 목차(table of contents)를 부여하고, 폴더 전체를 마치 <strong>중첩된 아웃라인을 가진 하나의 긴 문서</strong>처럼 구성한다. 검색 시에는 이 구조를 따라 두 단계 깊이로 내려가며 관련 부분을 찾는 방식으로 라우팅한다.</p><div class="slot-l">WHY IT MATTERS</div><p>기업 문서들은 형식과 주제가 제각각이라 공유 스키마 기반 인덱싱이 어려운데, 이런 비정형 문서 집합에 실용적으로 적용 가능한 RAG 설계 패턴을 제시한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>공통 필드를 전제로 한 기존 인덱스 구축 방식 대신, 파일별 요약과 목차 구조를 이용해 검색을 계층적으로 라우팅한다는 점이 다르다.</p><div class="tags"><span class="tag">#RAG</span></div><a class="src-cta" href="https://towardsdatascience.com/multi-document-rag-a-folder-of-unrelated-pdfs-is-one-long-document-with-a-nested-outline/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="df5399c7f9d2"><summary><span class="num">02</span><span class="body-col"><span class="it-title">Claude 워터마킹 해설 — Sebastian Raschka, 52장 슬라이드·48분 영상으로 LLM 텍스트 워터마크 원리 공개</span><span class="it-sub">How Claude Watermarks AI-Generated Text</span><span class="it-meta">✍️ 블로그 · magazine.sebastianraschka.com</span><span class="it-lede">Anthropic이 Claude 모델 출력에 텍스트 워터마킹을 도입한다고 발표하자, 저자는 이를 설명하는 소셜미디어 게시물을 올렸고 큰 반응을 얻었다.</span></span></summary><div class="it-body"><p>이에 저자는 원래 <strong>10장 슬라이드</strong>로 짧게 만들 계획이었으나, 세부 내용을 추가하며 결국 <strong>52장 슬라이드와 48분 분량의 강의 영상</strong>으로 확장해 워터마킹 메커니즘을 상세히 설명했다. 글 대신 영상과 대본, 슬라이드 링크, 유튜브 버전을 함께 제공하는 방식을 택했다. 이 워터마킹 기법은 LLM의 샘플링 과정이 내부적으로 어떻게 작동하는지를 이해하는 좋은 사례로도 소개된다.</p><div class="slot-l">WHY IT MATTERS</div><p>많은 사람이 LLM을 사용하고 인터넷에서 LLM이 생성한 텍스트를 소비하는 상황에서, 워터마킹이 텍스트 품질에 미치는 영향과 실효성에 대한 우려가 존재하므로 그 작동 원리를 이해하는 것이 판단의 근거가 된다.</p><div class="tags"><span class="tag">#alignment</span></div><a class="src-cta" href="https://magazine.sebastianraschka.com/p/claude-watermarking" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="deep-learning"><div class="sec-h"><span class="nm">Deep Learning</span><span class="cnt">1건</span><span class="all"><a href="../../../category/deep-learning.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="deep-learning">전체 펼치기</button></div><div class="sec-desc">딥러닝 — 아키텍처·학습기법 자체</div><details class="item" id="499bb8eb36c1" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">SigLip을 LoRA로 파인튜닝해 라벨 부족 문제 해결 — 그러나 항상 정답은 아니다</span><span class="it-sub">Why We Fine-Tuned SigLip (And Why That’s Not Always the Right Call)</span><span class="it-meta">✍️ 블로그 · towardsdatascience.com</span><span class="it-lede">이 블로그는 이미지-텍스트 모델 SigLip을 LoRA 방식으로 파인튜닝해 데이터 <strong>under-labeling(라벨 부족)</strong> 문제를 해결한 경험을 다룬다.</span></span></summary><div class="it-body"><p>저자들은 파인튜닝이 실제로 문제를 해결했다고 설명하면서도, 이것이 모든 상황에 맞는 선택은 아니라고 강조한다. 파인튜닝을 할지 말지 결정할 때 고려해야 할 세 가지 질문을 제시한다.</p><div class="slot-l">WHY IT MATTERS</div><p>파인튜닝 여부를 판단하는 실용적 체크리스트를 제공해, 무작정 모델을 커스터마이징하기 전에 비용 대비 효과를 따져보게 돕는다.</p><a class="src-cta" href="https://towardsdatascience.com/why-we-fine-tuned-siglip-and-why-thats-not-always-the-right-call/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="predictive-modeling"><div class="sec-h"><span class="nm">예측 모델링</span><span class="cnt">3건</span><span class="all"><a href="../../../category/predictive-modeling.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="predictive-modeling">전체 펼치기</button></div><div class="sec-desc">예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</div><details class="item" id="e1b26bfdab83"><summary><span class="num">01</span><span class="body-col"><span class="it-title">동면 유도한 생쥐, 시냅스 절반 이상 사라져도 기억은 유지 — Science 연구</span><span class="it-sub">Putting mice into hibernation causes a major loss of synapses</span><span class="it-meta">📰 뉴스 · arstechnica.com</span><span class="it-lede">연구팀은 생쥐에게 동면과 유사한 상태를 인위적으로 유도해 시냅스 배열이 어떻게 변화하는지 관찰했다.</span></span></summary><div class="it-body"><p>그 결과 <strong>시냅스의 절반 이상이 사라졌음에도</strong> 생쥐는 기존 기억을 유지하는 것으로 나타났다. 동면을 촉발하는 신경 회로는 포유류 전반에 보존되어 있으며, 실제로 동면하지 않는 생쥐에도 존재한다. 연구팀은 시상하부의 Q뉴런을 활성화하는 기법을 이용해 이 회로를 인위적으로 작동시켰다.</p><div class="slot-l">WHY IT MATTERS</div><p>기억이 시냅스 연결의 물리적 강화로 저장된다는 기존 가설과 달리, 시냅스가 대규모로 소실되어도 기억이 보존된다는 결과는 기억 저장의 신경학적 메커니즘을 재고하게 만든다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기억이 지속적으로 변화하는 시냅스 연결 위에 저장된다는 <strong>기존 가설</strong> 대비, 시냅스가 절반 이상 사라져도 기억이 유지된다는 점에서 기억의 물리적 기반에 대한 통념과 대비된다.</p><a class="src-cta" href="https://arstechnica.com/science/2026/08/memories-stick-around-even-after-half-the-synapses-are-gone/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="38d700fc3380"><summary><span class="num">02</span><span class="body-col"><span class="it-title">Penn State, 천둥소리로 지진파 이미징 성공 — 광섬유 케이블로 캠퍼스 지하 지형 복원</span><span class="it-sub">Thunder + fiber-optic cabling used for seismic imaging</span><span class="it-meta">📰 뉴스 · arstechnica.com</span><span class="it-lede">지구 내부 구조는 주로 지진파 관측으로 파악하며, 자연 지진이나 인공 폭발을 이용해 데이터를 얻어왔다.</span></span></summary><div class="it-body"><p>Penn State 연구팀은 천둥이 지각 상부에 에너지를 전달해 만드는 <strong>&#x27;천둥지진(thunderquake)&#x27;</strong>을 활용하는 방법을 제시했다. 다만 이 신호는 물리적으로 매우 복잡해 해석이 어려웠는데, 연구팀은 이를 분석할 수 있는 모델을 새로 구축했다. 이 모델과 광섬유 케이블을 이용해 실제로 캠퍼스 지하 지형을 복원하는 데 성공했다.</p><div class="slot-l">WHY IT MATTERS</div><p>지진이나 인공 폭발 없이도 흔한 자연 현상인 천둥을 지진파 이미징 자원으로 활용할 수 있다면, 지하 구조 탐사의 데이터 확보 방식이 크게 확장될 수 있다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존에는 자연 지진을 기다리거나 폭발물로 인공 진동을 발생시켜야 했지만, 이번 연구는 <strong>천둥이라는 흔한 기상 현상</strong>을 새로운 지진파 신호원으로 활용했다는 점이 다르다.</p><a class="src-cta" href="https://arstechnica.com/science/2026/08/researchers-use-thunderquakes-to-study-structure-of-earths-surface/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="b3aa4c59d3f4"><summary><span class="num">03</span><span class="body-col"><span class="it-title">美 트럼프 행정부, &#x27;2001 로드리스 룰&#x27; 폐지 추진 — 남은 5% 무도로 야생지·톤개스 국유림 위협</span><span class="it-sub">Dismantling the Roadless Rule threatens to disrupt wildlife and water in US</span><span class="it-meta">📰 뉴스 · arstechnica.com</span><span class="it-lede">미국 본토 48개 주에는 420만 마일 이상의 공공도로가 뻗어 있어 도로 없는 원시 지역은 전체 국토의 <strong>약 5%</strong>에 불과하다.</span></span></summary><div class="it-body"><p>트럼프 행정부는 이 마지막 무도로 지역을 보호해온 2001년 로드리스 룰의 폐지를 추진하고 있다. 이 규정이 사라지면 알래스카 남동부 톤개스 국유림처럼 독수리, 곰, 연어 등이 서식하는 오래된 해안림 지역도 개발 위협에 노출된다.</p><div class="slot-l">WHY IT MATTERS</div><p>도로 건설은 서식지 분절과 수질 오염을 유발해 야생동물과 생태계에 광범위한 영향을 미치므로, 정책 변화가 환경 데이터와 예측 모델링에 반영해야 할 실질적 변수가 된다.</p><a class="src-cta" href="https://arstechnica.com/science/2026/08/dismantling-the-roadless-rule-threatens-to-disrupt-wildlife-and-water-in-us/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="causal-inference"><div class="sec-h"><span class="nm">인과추론</span></div><div class="sec-desc">인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="mlops"><div class="sec-h"><span class="nm">MLOps / ML Engineering</span><span class="cnt">1건</span><span class="all"><a href="../../../category/mlops.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="mlops">전체 펼치기</button></div><div class="sec-desc">MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</div><details class="item" id="568c94c0a090"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Nvidia, 데이터센터 개발사 Cloverleaf와 파트너십 체결 — AI 인프라 투자 확대</span><span class="it-sub">Nvidia partners with data center developer Cloverleaf</span><span class="it-meta">📰 뉴스 · techcrunch.com</span><span class="it-lede">Nvidia가 데이터센터 개발사 Cloverleaf와 파트너십을 맺고 데이터센터 개발에 자금을 투입한다.</span></span></summary><div class="it-body"><p>이는 AI 데이터센터가 Nvidia에 막대한 매출을 안겨주는 상황과 맞물려 진행되는 투자다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI 인프라 수요와 GPU 판매가 서로를 강화하는 <strong>순환 구조</strong>를 보여주는 사례로, Nvidia의 데이터센터 밸류체인 장악력을 가늠할 수 있다.</p><a class="src-cta" href="https://techcrunch.com/2026/08/21/nvidia-partners-with-data-center-developer-cloverleaf/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="practice"><div class="sec-h"><span class="nm">실무 사례 · 노하우</span></div><div class="sec-desc">실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="industry-application"><div class="sec-h"><span class="nm">산업 적용 사례</span><span class="cnt">2건</span><span class="all"><a href="../../../category/industry-application.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="industry-application">전체 펼치기</button></div><div class="sec-desc">산업 적용 사례 — 산업 현장의 AI/ML 적용</div><details class="item" id="1004b08ee743"><summary><span class="num">01</span><span class="body-col"><span class="it-title">중국 AI 붐의 숨은 거점 — 네이멍구, 저렴한 전력·부지로 데이터센터 허브 부상</span><span class="it-sub">The Unlikely Place at the Center of China’s AI Boom</span><span class="it-meta">📰 뉴스 · wired.com</span><span class="it-lede">중국 네이멍구 지역의 한 도시가 중국 AI 붐의 핵심 거점으로 떠오르고 있다.</span></span></summary><div class="it-body"><p><strong>저렴한 에너지 비용, 풍부한 토지, 베이징과의 지리적 근접성</strong>이 이 지역을 데이터센터 건설의 요지로 만들었다. 이런 요인들 덕분에 예상치 못했던 변방 도시가 중국 AI 인프라의 중심지로 성장했다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI 산업 확장에 따라 데이터센터 입지 요건(전력, 부지, 접근성)이 지역 경제와 인프라 투자 흐름을 좌우하는 핵심 변수로 부상하고 있음을 보여준다.</p><a class="src-cta" href="https://www.wired.com/story/the-unlikely-place-at-the-center-of-chinas-ai-boom/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="228776db97b4"><summary><span class="num">02</span><span class="body-col"><span class="it-title">뉴욕 임대차 소송: Compass, 맨해튼 매물 80% 독점하며 Zillow 미등록으로 &#x27;가짜 공급 부족&#x27; 조장 의혹</span><span class="it-sub">Hidden Zillow listings created fake supply shock, raising NYC rents, lawsuit says</span><span class="it-meta">📰 뉴스 · arstechnica.com</span><span class="it-lede">뉴욕시 세입자 2명이 부동산 중개업체 Compass를 상대로 집단소송을 제기했다.</span></span></summary><div class="it-body"><p>원고 측은 Compass가 Zillow 같은 무료 플랫폼에 매물을 올리지 않는 보이콧을 벌이면서 임대 매물을 대거 비공개 처리해 인위적인 공급 부족을 만들었다고 주장한다. 소송에 따르면 Compass는 지난 10여 년간 다수의 중개업체를 인수해 <strong>맨해튼 임대 매물의 80% 이상</strong>을 통제하는 독점적 지위를 갖게 됐다. 원고들은 이 독점력을 바탕으로 Compass가 맨해튼 임대료의 상당 부분을 사실상 좌우할 수 있으며, 다른 플랫폼의 가격까지 조작하려 한다고 주장했다.</p><div class="slot-l">WHY IT MATTERS</div><p>부동산 중개 플랫폼의 매물 비공개 전략이 실제 임대료 상승과 시장 왜곡으로 이어질 수 있다는 점에서, 데이터 독점이 소비자 가격에 미치는 영향을 보여주는 사례다.</p><a class="src-cta" href="https://arstechnica.com/tech-policy/2026/08/class-action-accuses-brokers-of-hiding-zillow-listings-driving-up-nyc-rents/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section></main>
+  <footer class="topics" id="topics"><h2>다루는 주제</h2><ul><li><a class="tnm" href="../../../category/ai-agent.html">AI Agent</a>AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</li><li><a class="tnm" href="../../../category/llm-foundation-model.html">LLM / Foundation Model</a>LLM·파운데이션 모델 — 사전학습·정렬·추론</li><li><a class="tnm" href="../../../category/deep-learning.html">Deep Learning</a>딥러닝 — 아키텍처·학습기법 자체</li><li><a class="tnm" href="../../../category/predictive-modeling.html">예측 모델링</a>예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</li><li><a class="tnm" href="../../../category/causal-inference.html">인과추론</a>인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</li><li><a class="tnm" href="../../../category/mlops.html">MLOps / ML Engineering</a>MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</li><li><a class="tnm" href="../../../category/practice.html">실무 사례 · 노하우</a>실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</li><li><a class="tnm" href="../../../category/industry-application.html">산업 적용 사례</a>산업 적용 사례 — 산업 현장의 AI/ML 적용</li></ul></footer>
+</div>
+<script>
+(function(){
+var r=document.documentElement,k="dsb-theme",s=localStorage.getItem(k);
+if(s)r.dataset.theme=s;
+document.getElementById('tbtn').addEventListener('click',function(){
+  var cur=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  var n=cur==='dark'?'light':'dark';r.dataset.theme=n;localStorage.setItem(k,n);});
+// 섹션 전체 펼치기/접기
+document.querySelectorAll('.exp').forEach(function(b){b.addEventListener('click',function(){
+  var sec=document.getElementById(b.dataset.sec);
+  var ds=sec.querySelectorAll('details.item'),open=b.dataset.state!=='open';
+  ds.forEach(function(d){d.open=open;});
+  b.dataset.state=open?'open':'closed';b.textContent=open?'전체 접기':'전체 펼치기';});});
+// 스크롤 위치 카테고리 TOC 활성 (데스크톱 사이드 TOC)
+var links={};document.querySelectorAll('.toc li[data-cat]').forEach(function(li){links[li.dataset.cat]=li;});
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){Object.values(links).forEach(function(l){l.classList.remove('active');});
+    if(links[e.target.id])links[e.target.id].classList.add('active');}});},
+  {rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('section.sec').forEach(function(s){obs.observe(s);});
+})();
+</script>
+</body>
+</html>

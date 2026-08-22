@@ -33355,5 +33355,156 @@
     "source_tier": 1,
     "first_seen": "2026-08-22",
     "tags": []
+  },
+  "8023e7fcc2707a32a5959dcddd1d3eb5e81a1095": {
+    "url": "https://towardsdatascience.com/building-a-proper-backend-for-my-langgraph-ai-agent/",
+    "title": "Building a Proper Backend for My LangGraph AI Agent",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-08-23",
+    "tags": [
+      "orchestration",
+      "deployment"
+    ]
+  },
+  "15663b461b26155e33d094a650d2fdcb94e880cf": {
+    "url": "https://towardsdatascience.com/multi-document-rag-a-folder-of-unrelated-pdfs-is-one-long-document-with-a-nested-outline/",
+    "title": "Multi-Document RAG: A Folder of Unrelated PDFs Is One Long Document with a Nested Outline",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-08-23",
+    "tags": [
+      "RAG"
+    ]
+  },
+  "499bb8eb36c121dc3d032db6da3d3bbd9eefe5b4": {
+    "url": "https://towardsdatascience.com/why-we-fine-tuned-siglip-and-why-thats-not-always-the-right-call/",
+    "title": "Why We Fine-Tuned SigLip (And Why That’s Not Always the Right Call)",
+    "category": "deep-learning",
+    "source_tier": 3,
+    "first_seen": "2026-08-23",
+    "tags": []
+  },
+  "df5399c7f9d2448ea3e533409c9f720c164c8730": {
+    "url": "https://magazine.sebastianraschka.com/p/claude-watermarking",
+    "title": "How Claude Watermarks AI-Generated Text",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-08-23",
+    "tags": [
+      "alignment"
+    ]
+  },
+  "3f89c1dedf003b64d8311c7a663e8f1a39963e84": {
+    "url": "https://www.analyticsvidhya.com/blog/2026/08/top-agentic-ai-research-papers/",
+    "title": "Top 5 Agentic AI Research Papers of 2026",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-08-23",
+    "tags": []
+  },
+  "ca1bb3e81f45e80ca5f60a13587d5bd311530182": {
+    "url": "https://techcrunch.com/2026/08/22/harvards-699-startup-bootcamp-offers-ai-avatars-of-its-instructors/",
+    "title": "Harvard’s $699 startup bootcamp offers AI avatars of its instructors",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-23",
+    "tags": []
+  },
+  "683931e34e4d9cf385236e1080b746eb4b3f6df0": {
+    "url": "https://techcrunch.com/2026/08/22/inherent-founded-by-deepmind-alumni-says-its-ai-teammate-just-outperformed-anthropic-and-openai-at-replicating-research/",
+    "title": "Inherent, founded by DeepMind alumni, says its AI ‘teammate’ just outperformed Anthropic and OpenAI at replicating research",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-08-23",
+    "tags": []
+  },
+  "897fc0b9ac4740bc1dc8a784d0378b74182a2676": {
+    "url": "https://techcrunch.com/2026/08/22/openai-says-california-should-strengthen-its-ai-safety-bill/",
+    "title": "OpenAI says California should strengthen its AI safety bill",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-08-23",
+    "tags": []
+  },
+  "f814008d85fbd8c130a01b158c476bc20a70ac78": {
+    "url": "https://techcrunch.com/2026/08/22/frontier-ai-labs-still-wont-say-how-theyd-contain-a-rogue-model/",
+    "title": "Frontier AI labs still won’t say how they’d contain a rogue model",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-08-23",
+    "tags": []
+  },
+  "c3928314b15f8ce4d23494feeb9ec8ad49d04c01": {
+    "url": "https://techcrunch.com/2026/08/21/anthropics-opus-4-6-is-a-smut-machine/",
+    "title": "Anthropic’s Opus 4.6 is a smut-machine",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-08-23",
+    "tags": []
+  },
+  "568c94c0a09090c4200a8d82bd0996eccf3406aa": {
+    "url": "https://techcrunch.com/2026/08/21/nvidia-partners-with-data-center-developer-cloverleaf/",
+    "title": "Nvidia partners with data center developer Cloverleaf",
+    "category": "mlops",
+    "source_tier": 4,
+    "first_seen": "2026-08-23",
+    "tags": []
+  },
+  "e1b26bfdab83f9284ac78e044ef3024f50916ecc": {
+    "url": "https://arstechnica.com/science/2026/08/memories-stick-around-even-after-half-the-synapses-are-gone/",
+    "title": "Putting mice into hibernation causes a major loss of synapses",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-23",
+    "tags": []
+  },
+  "b3aa4c59d3f415bc6ac518e411120ab96733b166": {
+    "url": "https://arstechnica.com/science/2026/08/dismantling-the-roadless-rule-threatens-to-disrupt-wildlife-and-water-in-us/",
+    "title": "Dismantling the Roadless Rule threatens to disrupt wildlife and water in US",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-23",
+    "tags": []
+  },
+  "d8c91124dda98326ae3203f4d846469ab4f314d8": {
+    "url": "https://arstechnica.com/space/2026/08/trump-admin-calls-for-more-spaceports-to-handle-surge-in-launches/",
+    "title": "Trump's space transportation policy calls for new spaceport on federal land",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-23",
+    "tags": []
+  },
+  "38d700fc3380c18cbaf4499909bc387e4e3fcc39": {
+    "url": "https://arstechnica.com/science/2026/08/researchers-use-thunderquakes-to-study-structure-of-earths-surface/",
+    "title": "Thunder + fiber-optic cabling used for seismic imaging",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-23",
+    "tags": []
+  },
+  "228776db97b435cd81b9b8460bb6c46c0972625b": {
+    "url": "https://arstechnica.com/tech-policy/2026/08/class-action-accuses-brokers-of-hiding-zillow-listings-driving-up-nyc-rents/",
+    "title": "Hidden Zillow listings created fake supply shock, raising NYC rents, lawsuit says",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-23",
+    "tags": []
+  },
+  "1004b08ee743a4fb6d254a14b9ef4a816ea9342e": {
+    "url": "https://www.wired.com/story/the-unlikely-place-at-the-center-of-chinas-ai-boom/",
+    "title": "The Unlikely Place at the Center of China’s AI Boom",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-23",
+    "tags": []
+  },
+  "4921307b2bcdec44814eb548e893ec1abfd06491": {
+    "url": "https://arxiv.org/abs/2607.21596",
+    "title": "FlowEvo: Self-Evolving Agents through the Co-Evolution of Workflows and Executable Skills",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-08-23",
+    "tags": []
   }
 }
