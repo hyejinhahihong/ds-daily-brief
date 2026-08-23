@@ -33506,5 +33506,87 @@
     "source_tier": 1,
     "first_seen": "2026-08-23",
     "tags": []
+  },
+  "b1590426caea5e55039292605b665fd48bec6681": {
+    "url": "https://towardsdatascience.com/a-first-look-at-survival-analysis-and-the-cox-model/",
+    "title": "Survival Analysis and the Cox Proportional Hazards Model: A Beginner-Friendly Guide",
+    "category": "predictive-modeling",
+    "source_tier": 3,
+    "first_seen": "2026-08-24",
+    "tags": [
+      "timeseries"
+    ]
+  },
+  "7535bb04bf4c923eb2559fac09af0b98954accc8": {
+    "url": "https://towardsdatascience.com/parse-the-folder-not-just-the-pdfs-the-relational-tables-rag-needs-on-a-case-file/",
+    "title": "Parse the Folder, Not Just the PDFs: The Relational Tables RAG Needs on a Case File",
+    "category": "mlops",
+    "source_tier": 3,
+    "first_seen": "2026-08-24",
+    "tags": []
+  },
+  "02de9861d8fe624ead8ce2707bf154083ad4b7f9": {
+    "url": "https://towardsdatascience.com/bug-detection-blind-spots-in-ai-coding-harnesses-gstack-and-beyond/",
+    "title": "Bug Detection Blind Spots in AI Coding Harnesses (GStack and Beyond)",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-08-24",
+    "tags": []
+  },
+  "21e537c19fb26dd718ea8c8328b563f073bffac8": {
+    "url": "https://www.analyticsvidhya.com/blog/2026/08/spec-driven-development-claude-code/",
+    "title": "Spec-Driven Development with Claude Code: Writing Bulletproof Specs",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-08-24",
+    "tags": []
+  },
+  "055017b0a06036dc3a91c7e91247075d0fb74739": {
+    "url": "https://techcrunch.com/2026/08/23/whos-behind-the-new-stealth-model-ox-alpha/",
+    "title": "Who’s behind the new ‘stealth model’ Ox Alpha?",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-08-24",
+    "tags": []
+  },
+  "5781c024565a9e9e81f5c4b51908e56e557ab63f": {
+    "url": "https://techcrunch.com/2026/08/23/linkdazes-smart-calendar-is-built-to-run-a-household-not-just-track-a-schedule/",
+    "title": "Linkdaze’s smart calendar is built to run a household, not just track a schedule",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-24",
+    "tags": []
+  },
+  "3fff31f0ded01f70bdb76151bfcd702017ccbff7": {
+    "url": "https://techcrunch.com/2026/08/23/flock-ceo-calls-for-compromise-as-surveillance-company-faces-growing-backlash/",
+    "title": "Flock CEO calls for ‘compromise’ as surveillance company faces growing backlash",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-08-24",
+    "tags": []
+  },
+  "8dafa127b694766cddf306eb42fd73a6aec2afdd": {
+    "url": "https://techcrunch.com/2026/08/23/is-it-legal-to-train-ai-models-on-copyrighted-books-its-complicated/",
+    "title": "Is it legal to train AI models on copyrighted books? It’s complicated",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-08-24",
+    "tags": []
+  },
+  "7678b1aa1618950f0a495547dc763eae1ba62371": {
+    "url": "https://arstechnica.com/space/2026/08/due-to-need-for-absolute-success-china-delays-critical-moon-launch-to-2027/",
+    "title": "Due to need for 'absolute success,' China delays critical Moon launch to 2027",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-24",
+    "tags": []
+  },
+  "310ca5c96147c035dd934bb41b5b5a12248dd10f": {
+    "url": "https://arstechnica.com/science/2026/08/volcanoes-that-made-history/",
+    "title": "Volcanoes that made history",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-24",
+    "tags": []
   }
 }
