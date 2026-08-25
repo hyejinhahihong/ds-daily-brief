@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI &amp; ML News Letter · 08/26</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --accent:#5DB8A6; --accent-hover:#479B8B; --accent-weak:#E8F4F1;
+  --focus-ring:rgba(93,184,166,.5);
+  --bg:#FAF9F5; --bg-subtle:#F0EEE6; --border:#E7E3D9;
+  --text:#1F1E1D; --text-2:#6B6862; --text-3:#A39E94;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}}
+:root[data-theme="dark"]{
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover);text-decoration:underline}
+strong{font-weight:600;color:var(--text)}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px;border-radius:3px}
+
+/* 모바일 우선 단일 컬럼 (<1200px). 덩어리 중앙 정렬은 margin:0 auto. */
+.page{max-width:760px;margin:0 auto;padding:20px 18px 40px}
+
+/* --- 마스트헤드 (뉴스레터 제호) --- */
+.mast{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+  padding-bottom:14px;border-bottom:2px solid var(--text);margin-bottom:24px}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--accent);
+  text-transform:uppercase;margin:0 0 6px}
+.mast-title{font-size:26px;font-weight:600;margin:0;letter-spacing:-.01em;line-height:1.15}
+.mast-date{font-size:14px;color:var(--text-2);margin-top:8px}
+.themebtn{flex:none;background:var(--bg-subtle);border:1px solid var(--border);color:var(--text-2);
+  border-radius:20px;padding:5px 12px;font-size:13px;cursor:pointer;font-family:inherit}
+.topnav{margin-top:11px;display:flex;gap:16px;font-size:13px}
+.topnav a{color:var(--text-2);font-weight:500} .topnav a:hover{color:var(--accent)}
+@media (min-width:640px){.mast-title{font-size:31px}}
+
+/* --- TODAY'S TOP 3 --- */
+.top3{background:var(--accent-weak);border-radius:12px;padding:14px 18px;margin-bottom:24px}
+.top3 h2{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--accent);margin:0 0 8px}
+.top3 ol{margin:0;padding:0;list-style:none}
+.top3 li{padding:4px 0 4px 22px;position:relative;font-size:15px;color:var(--text)}
+.top3 li::before{content:"\2605";position:absolute;left:0;color:var(--accent);font-size:12px;top:7px}
+.top3 .t3cat{color:var(--text-2);font-size:12px;margin-right:5px}
+.top3 a{color:var(--text)} .top3 a:hover{color:var(--accent-hover)}
+
+/* --- 목차 (TOC) --- */
+.toc{margin-bottom:26px}
+.toc h2{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--text-2);margin:0 0 8px}
+.toc ul{margin:0;padding:0;list-style:none}
+.toc li{padding:6px 0;border-top:1px solid var(--border)}
+.toc li:first-child{border-top:none}
+.toc .r{display:flex;gap:6px;align-items:baseline;font-size:14px}
+.toc .nm{font-weight:500;color:var(--text)} .toc a:hover .nm{color:var(--accent)}
+.toc .cnt{color:var(--text-3);font-size:12px}
+.toc .lead{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  font-size:12px;color:var(--text-2);margin-top:2px;line-height:1.4}
+.toc li.active .nm{color:var(--accent)}
+.toc li.active{border-left:2px solid var(--accent);padding-left:8px;margin-left:-10px}
+
+/* --- 섹션 --- */
+.sec{margin:0 0 34px;scroll-margin-top:14px}
+.sec-h{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:0 0 2px;padding-top:6px}
+.sec-h .nm{font-size:20px;font-weight:600}
+.sec-h .cnt{font-size:13px;color:var(--text-3)}
+.sec-h .all{font-size:12px;color:var(--text-3);margin-left:auto}
+.sec-h .all span{color:var(--text-2)}
+.sec-h .exp{font-size:12px;background:none;border:1px solid var(--border);color:var(--text-2);
+  border-radius:14px;padding:2px 10px;cursor:pointer;font-family:inherit}
+.sec-desc{font-size:13px;color:var(--text-2);margin:0 0 8px}
+.sec-empty{font-size:14px;color:var(--text-3);padding:4px 0 6px}
+.backtop{display:inline-block;font-size:12px;color:var(--text-3);margin-top:6px}
+
+/* --- 아이템 (아코디언) — 거터(번호) + 단일 콘텐츠 컬럼 (DESIGN §3 v4). 좌측 정렬선 1개. --- */
+.item{border-bottom:1px solid var(--border);--gutter:28px}
+.item>summary{list-style:none;cursor:pointer;padding:16px 26px 16px 0;position:relative;
+  display:grid;grid-template-columns:var(--gutter) 1fr;align-items:start}
+.item>summary::-webkit-details-marker{display:none}
+.item>summary::after{content:"\25B8";position:absolute;right:2px;top:16px;color:var(--text-3);
+  font-size:13px;transition:transform .15s;display:inline-block}
+.item[open]>summary::after{transform:rotate(90deg)}
+.num{font-size:13px;color:var(--text-3);font-variant-numeric:tabular-nums;font-weight:500;padding-top:3px}
+.t3star{color:var(--accent);font-size:11px;margin-right:2px}
+.body-col{min-width:0}
+.it-title{display:block;font-size:18px;font-weight:600;color:var(--text);line-height:1.4}
+.item>summary:hover .it-title{color:var(--accent)}
+.it-sub{display:block;font-size:13px;color:var(--text-2);margin-top:3px;line-height:1.35}
+.it-meta{display:block;font-size:13px;color:var(--text-2);margin-top:6px}
+.it-lede{display:block;font-size:15px;color:var(--text-2);margin-top:7px;line-height:1.5}
+.item[open] .it-lede{color:var(--text)}
+/* 접힘 본문도 콘텐츠 컬럼에 정렬 (거터만큼 들여씀) */
+.it-body{padding:0 0 20px var(--gutter)}
+.it-body p{margin:0 0 10px}
+@media (min-width:900px){.item{--gutter:40px}}
+.slot-l{font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--text-2);margin:14px 0 2px}
+.tags{margin-top:10px}
+.tag{display:inline-block;font-size:12px;color:var(--text-2);background:var(--bg-subtle);
+  border:1px solid var(--border);border-radius:12px;padding:1px 9px;margin:0 5px 5px 0}
+.prev{font-size:13px;color:var(--text-3);margin-top:8px}
+.src-cta{display:inline-block;margin-top:12px;font-size:14px;font-weight:500;color:var(--accent)}
+.weak{color:var(--accent);font-size:12px;border:1px solid var(--accent);border-radius:5px;
+  padding:0 6px;margin-left:6px}
+
+/* --- "다루는 주제" 푸터 --- */
+.topics{margin-top:36px;padding-top:22px;border-top:2px solid var(--text)}
+.topics h2{font-size:15px;font-weight:600;margin:0 0 12px}
+.topics ul{margin:0;padding:0;list-style:none}
+.topics li{padding:7px 0;border-top:1px solid var(--border);font-size:13px;color:var(--text-2)}
+.topics li:first-child{border-top:none}
+.topics .tnm{font-weight:600;color:var(--accent);margin-right:6px}
+
+/* --- 데스크톱 (≥1200px): 좌측 sticky TOC(260) + 본문(720), 덩어리 중앙 정렬 --- */
+@media (min-width:1200px){
+  /* max-width = 260+44+720 그리드(1024) + 좌우 padding(18*2). box-sizing:border-box
+     라 padding 을 포함해야 본문 720 이 찌그러지지 않는다. */
+  .page{max-width:1060px;display:grid;grid-template-columns:260px minmax(0,720px);
+    column-gap:44px;justify-content:center;align-items:start;padding-top:28px}
+  .mast{grid-column:1/3}
+  .toc{grid-column:1;grid-row:2/999;position:sticky;top:24px;margin:0;align-self:start}
+  .top3,.main{grid-column:2}
+  .topics{grid-column:1/3}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="mast">
+    <div class="mast-l">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1 class="mast-title">AI &amp; ML News Letter</h1>
+      <div class="mast-date">2026 / 08 / 26 (수) · 16건</div>
+      <nav class="topnav"><a href="../../../archive.html">📅 지난 브리핑</a>
+        <a href="#topics">🗂 주제별 보기</a></nav>
+    </div>
+    <button id="tbtn" class="themebtn" type="button">🌓 테마</button>
+  </header>
+  <section class="top3"><h2>TODAY'S TOP 3</h2><ol><li><a href="#ee1892e32838"><span class="t3cat">[AI Agent]</span>AWS, Amazon OpenSearch Service에 MCP Apps 도입 — IDE 채팅창에서 트레이스·서비스맵 바로 검증</a></li><li><a href="#9ad99bb5f40a"><span class="t3cat">[Deep Learning]</span>OpenAI 자체 추론칩 &#x27;Jalapeño&#x27; 첫 결과 공개 — 처리량↑ 지연↓ 전력효율 업계 최고 수준</a></li><li><a href="#e96c70acbdbe"><span class="t3cat">[Deep Learning]</span>Apple, STARFlow2 공개 — 정규화 흐름과 언어모델 통합해 텍스트-이미지 생성 구조적 비대칭 해소</a></li></ol></section>
+  <nav class="toc" id="toc"><h2>오늘의 목차</h2><ul><li data-cat="ai-agent"><a href="#ai-agent"><span class="r"><span class="nm">AI Agent</span><span class="cnt">2</span></span><span class="lead">AWS, Amazon OpenSearch Service에 MCP Apps 도입 — IDE 채팅창에서 트레이스·서비스맵 바로 검증</span></a></li><li data-cat="llm-foundation-model"><a href="#llm-foundation-model"><span class="r"><span class="nm">LLM / Foundation Model</span><span class="cnt">2</span></span><span class="lead">IBM, Granite 4.2 LLM 공개 — 구축 방식 소개</span></a></li><li data-cat="deep-learning"><a href="#deep-learning"><span class="r"><span class="nm">Deep Learning</span><span class="cnt">3</span></span><span class="lead">OpenAI 자체 추론칩 &#x27;Jalapeño&#x27; 첫 결과 공개 — 처리량↑ 지연↓ 전력효율 업계 최고 수준</span></a></li><li data-cat="predictive-modeling"><a href="#predictive-modeling"><span class="r"><span class="nm">예측 모델링</span><span class="cnt">1</span></span><span class="lead">표 형태 데이터 없이도? TabPFN v3, MNIST·언어식별·Tiny ImageNet서 미세조정 없이 준수한 정확도</span></a></li><li data-cat="causal-inference"><a href="#causal-inference"><span class="r"><span class="nm">인과추론</span><span class="cnt">3</span></span><span class="lead">미배포 관측 프로토콜의 반사실적 가치, 무한 데이터로도 식별 불가능할 수 있어 — Sleep-EDF·Long-Term AF 검증</span></a></li><li data-cat="mlops"><a href="#mlops"><span class="r"><span class="nm">MLOps / ML Engineering</span><span class="cnt">2</span></span><span class="lead">산업 모니터링용 시계열 파운데이션모델, 경량 베이스라인에 밀려 — C-MAPSS서 TCN-AE가 MOMENT 완승</span></a></li><li data-cat="practice"><a href="#practice"><span class="r"><span class="nm">실무 사례 · 노하우</span><span class="cnt">1</span></span><span class="lead">Anthropic, AI가 사용자 웰빙에 미치는 영향 연구에 500만 달러 지원 프로그램 출범</span></a></li><li data-cat="industry-application"><a href="#industry-application"><span class="r"><span class="nm">산업 적용 사례</span><span class="cnt">2</span></span><span class="lead">AWS, Amazon Quick Desktop와 FSx for ONTAP 연동 — 주간 보고서 작성시간 수시간에서 수분으로 단축</span></a></li></ul></nav>
+  <main class="main"><section class="sec" id="ai-agent"><div class="sec-h"><span class="nm">AI Agent</span><span class="cnt">2건</span><span class="all"><a href="../../../category/ai-agent.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="ai-agent">전체 펼치기</button></div><div class="sec-desc">AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</div><details class="item" id="ee1892e32838" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">AWS, Amazon OpenSearch Service에 MCP Apps 도입 — IDE 채팅창에서 트레이스·서비스맵 바로 검증</span><span class="it-sub">Agentic observability with Amazon OpenSearch Service MCP Apps</span><span class="it-meta">✍️ 블로그 · aws.amazon.com</span><span class="it-lede">관측 에이전트는 로그와 트레이스를 빠르게 조회해 근본 원인 가설을 제시하지만, 사용자는 이를 검증하기 위해 별도 브라우저 탭을 열고 대시보드를 직접 탐색해야 했다.</span></span></summary><div class="it-body"><p>Amazon OpenSearch Service의 MCP Apps는 Model Context Protocol을 확장해 도구 호출 응답에 텍스트 설명과 함께 트레이스 워터폴, 서비스 토폴로지 같은 <strong>인터랙티브 시각화</strong>를 IDE 채팅창 안에 함께 렌더링한다. 시각화는 대시보드와 동일한 데이터 소스에 대해 코드를 실행해 생성되므로 AI의 해석이 아닌 결정론적 쿼리 결과를 그대로 보여준다. 로컬 MCP 서버가 에이전틱 IDE와 OpenSearch UI 애플리케이션 사이의 보안 브리지 역할을 하며 관측 도구들을 노출한다.</p><div class="slot-l">WHY IT MATTERS</div><p>에이전트가 답을 빠르게 내놓아도 사용자가 별도 도구로 옮겨가 수동 검증하는 과정이 병목이 되어 자동화의 속도 이점을 상쇄해왔는데, 이는 로컬 에이전틱 관측 체계를 운영하는 조직의 주된 부담이었다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존에는 에이전트의 텍스트 응답을 검증하려면 별도 관측 UI에 로그인해 쿼리를 재실행해야 했지만, MCP Apps는 <strong>동일한 대화 스레드 안에서</strong> 실제 대시보드와 같은 데이터 소스 기반의 결정론적 시각화를 함께 제공한다는 점이 다르다.</p><div class="tags"><span class="tag">#orchestration</span><span class="tag">#agentic-workflow</span></div><a class="src-cta" href="https://aws.amazon.com/blogs/machine-learning/agentic-observability-with-amazon-opensearch-service-mcp-apps/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="9fc77a42cff0"><summary><span class="num">02</span><span class="body-col"><span class="it-title">The Interaction Tax: When Communication Erases Diversity in Multi-Agent Teams</span><span class="it-sub">멀티에이전트 LLM, 서로의 답 그대로 공유하면 다양성 붕괴 — 11개 최적화 과제서 &#x27;독립 제안&#x27;이 더 우수</span><span class="it-meta">📄 논문 · arxiv.org · ICML 2026</span><span class="it-lede">이 논문은 멀티에이전트 LLM 상호작용이 성능을 높이는지 낮추는지에 대한 상반된 기존 연구 결과를 재검토한다.</span></span></summary><div class="it-body"><p>저자들은 에이전트가 서로의 완전한 출력을 그대로 읽을 경우 한 라운드 만에 제안이 수렴해, 여러 모델을 쓰는 이유였던 <strong>다양성이 사라진다</strong>고 지적하며 이를 &#x27;상호작용 세금(interaction tax)&#x27;이라 명명한다. 동일 예산 조건에서 11개의 검증자 채점 최적화 과제로 실험한 결과, 전체 해답을 공유하는 상호작용은 약한 기본 전략이었고 독립적 제안 생성이 이 수렴 붕괴를 피했다. 전체 해답 공유는 에이전트가 처음 본 해답 근처에 머물게 만들 뿐이며, 비평(critique)은 위반 규칙을 LLM이 쉽게 찾아 고칠 수 있을 때만 도움이 되었다.</p><div class="slot-l">WHY IT MATTERS</div><p>디베이트, 비평 루프, mixture-of-agents 등 멀티에이전트 기법을 도입할 때 에이전트 수보다 <strong>어떤 정보를 언제 교환하는지</strong>가 성능을 좌우한다는 점을 보여준다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존의 디베이트(Du et al., 2024), 비평 루프(Chen et al., 2025), mixture-of-agents(Wang et al., 2025) 연구가 상호작용의 이점을 보고한 것과 달리, 이 논문은 전체 해답 공유형 상호작용이 오히려 다양성을 없애 성능을 해칠 수 있음을 보이고 독립 제안 생성을 대안으로 제시한다.</p><a class="src-cta" href="https://arxiv.org/abs/2608.23541v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="llm-foundation-model"><div class="sec-h"><span class="nm">LLM / Foundation Model</span><span class="cnt">2건</span><span class="all"><a href="../../../category/llm-foundation-model.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="llm-foundation-model">전체 펼치기</button></div><div class="sec-desc">LLM·파운데이션 모델 — 사전학습·정렬·추론</div><details class="item" id="74043a2c13e4"><summary><span class="num">01</span><span class="body-col"><span class="it-title">IBM, Granite 4.2 LLM 공개 — 구축 방식 소개</span><span class="it-sub">Granite 4.2 LLMs: How They&#x27;re Built</span><span class="it-meta">📰 뉴스 · huggingface.co<span class="weak">원문 근거 부족</span></span><span class="it-lede">IBM의 Granite 4.2 LLM 시리즈가 어떻게 구축되었는지에 대한 내용을 다룬 자료이나, 구체적인 원문 초록은 제공되지 않았다.</span></span></summary><div class="it-body"><div class="slot-l">WHY IT MATTERS</div><p>Granite 계열은 기업용 LLM으로 주목받고 있어 관련 소식은 참고할 가치가 있다.</p><a class="src-cta" href="https://huggingface.co/blog/ibm-granite/granite-4-2" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="34dcc7c9c7fe"><summary><span class="num">02</span><span class="body-col"><span class="it-title">TileMix: Tile-Centric Mixed-Precision Attention for LLM Inference Acceleration</span><span class="it-sub">TileMix, 타일 단위 혼합정밀도 어텐션으로 LLM 프리필 가속 — INT8 정확도 손실 복구하며 FP16 대비 처리량 향상</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">TileMix는 긴 문맥 프리필에서 발생하는 밀집 셀프어텐션의 연산·메모리 부담을 줄이기 위해, 어텐션 행렬을 하드웨어에 맞춘 스코어 타일로 나누고 각 타일 그룹의 정밀도(FP16 또는 INT8)를 라우팅하는 커널이다.</span></span></summary><div class="it-body"><p>라우팅 결정은 비트마스크로 압축되며, 두 정밀도 경로 모두 공유된 온라인 소프트맥스 상태를 갱신한다. 인접 키 타일들을 하나의 라우팅 비트로 묶는 확장 가능한 정밀도 그룹핑을 통해 긴 문맥에서도 하드웨어 정합 연산 타일과 압축된 메타데이터를 유지한다. <strong>훈련 없이</strong> 모든 유효 타일 그룹을 라우팅해 밀집 토큰 연결성을 보존하며, GQA·가변 길이 배치·INT8 KV 캐시를 지원한다. LongEval, LV-Eval, A100 프리필 벤치마크에서 LLaMA, Qwen, Vicuna 모델에 대해 균일 INT8 대비 손실된 장문 품질을 회복하면서 <strong>FP16 대비 프리필 처리량을 향상</strong>시켰다.</p><div class="slot-l">WHY IT MATTERS</div><p>긴 문맥 LLM 서비스에서 정밀도-효율 트레이드오프를 모델별로 조절 가능한 프론티어로 제시해, 배포 환경에 맞춰 정확도와 속도를 유연하게 선택할 수 있게 한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존의 균일 저정밀도 경로나 토큰 상호작용 선택 방식과 달리, 하드웨어 정합 스코어 타일 단위로 공간적 정밀도 라우팅을 밀집 어텐션 커널 내부에 통합한 점이 다르다.</p><div class="tags"><span class="tag">#inference</span><span class="tag">#optimization</span></div><a class="src-cta" href="https://arxiv.org/abs/2608.17336" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="deep-learning"><div class="sec-h"><span class="nm">Deep Learning</span><span class="cnt">3건</span><span class="all"><a href="../../../category/deep-learning.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="deep-learning">전체 펼치기</button></div><div class="sec-desc">딥러닝 — 아키텍처·학습기법 자체</div><details class="item" id="9ad99bb5f40a" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">OpenAI 자체 추론칩 &#x27;Jalapeño&#x27; 첫 결과 공개 — 처리량↑ 지연↓ 전력효율 업계 최고 수준</span><span class="it-sub">Jalapeño’s first results show industry-leading speed and efficiency in AI inference</span><span class="it-meta">✍️ 블로그 · openai.com</span><span class="it-lede">OpenAI가 자체 설계한 AI 추론 전용 칩 Jalapeño의 첫 성능 결과를 공개했다.</span></span></summary><div class="it-body"><p>이 칩은 최신 모델을 대상으로 <strong>더 높은 처리량과 더 낮은 지연시간</strong>을 동시에 달성했다고 밝혔다. 또한 기존 방식보다 전력 효율이 개선되어 더 적은 에너지로 추론을 수행할 수 있다고 설명했다.</p><div class="slot-l">WHY IT MATTERS</div><p>추론 비용과 전력 소비는 대규모 AI 서비스 운영의 핵심 제약인데, OpenAI가 직접 하드웨어까지 최적화에 나섰다는 점에서 향후 AI 인프라 경쟁 구도에 영향을 줄 수 있다.</p><a class="src-cta" href="https://openai.com/index/jalapeno-first-results" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="e96c70acbdbe" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>02</span><span class="body-col"><span class="it-title">Apple, STARFlow2 공개 — 정규화 흐름과 언어모델 통합해 텍스트-이미지 생성 구조적 비대칭 해소</span><span class="it-sub">STARFlow2: Bridging Language Models and Normalizing Flows for Unified Multimodal Generation</span><span class="it-meta">✍️ 블로그 · machinelearning.apple.com</span><span class="it-lede">STARFlow2는 텍스트와 이미지를 함께 이해·생성하는 통합 멀티모달 모델로, 기존 방식들이 겪는 구조적 문제를 해결하려 한다.</span></span></summary><div class="it-body"><p>기존 접근법은 이산 토큰화로 시각 품질을 희생하거나, 인과적 텍스트 생성과 확산 기반 디노이징을 결합해 구조적 비대칭을 만들거나, 생성용으로 재학습하면서 사전학습된 이해 능력을 저하시키는 문제를 가진다. 저자들은 <strong>자기회귀적 정규화 흐름이 곧 자기회귀 Transformer</strong>라는 점에 주목했으며, LLM과 동일한 인과 마스크, KV-캐시 메커니즘, 좌우 순차 구조를 공유한다고 설명한다. 이러한 구조적 동질성 덕분에 언어모델과 정규화 흐름을 자연스럽게 결합할 수 있다는 것이 핵심 관찰이다.</p><div class="slot-l">WHY IT MATTERS</div><p>텍스트와 이미지 생성을 하나의 모델 안에서 구조적 손상 없이 통합하려는 시도는 멀티모달 AI의 근본적 난제 중 하나로, 이 접근이 성공하면 이해와 생성 성능을 동시에 유지하는 모델 설계 방향에 영향을 줄 수 있다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존의 이산 토큰화 기반 방식이나 인과적 텍스트 생성에 확산 디노이징을 결합한 방식 대비, <strong>자기회귀 정규화 흐름을 LLM과 동일한 Transformer 구조로 재해석</strong>해 비대칭 없이 통합했다는 점이 다르다.</p><a class="src-cta" href="https://machinelearning.apple.com/research/starflow2-multimodal-generation" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="f6b26e55a489"><summary><span class="num">03</span><span class="body-col"><span class="it-title">양자화 인식 힐링(Quantization-Aware Healing) 기법, 4비트 압축 모델이 원본 풀프리시전 모델보다 우수한 성능 기록</span><span class="it-sub">Quantization-Aware Healing: a compressed, 4-bit model that outperforms its full-precision original</span><span class="it-meta">📰 뉴스 · huggingface.co<span class="weak">원문 근거 부족</span></span><span class="it-lede">4비트로 압축된 모델이 원본 풀프리시전 모델보다 더 나은 성능을 보였다는 소식이다.</span></span></summary><div class="it-body"><p>이는 &#x27;Quantization-Aware Healing&#x27;이라는 기법을 통해 이루어졌다.</p><div class="slot-l">WHY IT MATTERS</div><p>모델 경량화와 성능 유지가 동시에 가능하다면 온디바이스·저비용 추론 환경에 큰 영향을 줄 수 있다.</p><a class="src-cta" href="https://huggingface.co/blog/MultiverseComputingCAI/quantization-aware-healing" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="predictive-modeling"><div class="sec-h"><span class="nm">예측 모델링</span><span class="cnt">1건</span><span class="all"><a href="../../../category/predictive-modeling.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="predictive-modeling">전체 펼치기</button></div><div class="sec-desc">예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</div><details class="item" id="c02947ecc006"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Tabular foundation models for non-tabular tasks</span><span class="it-sub">표 형태 데이터 없이도? TabPFN v3, MNIST·언어식별·Tiny ImageNet서 미세조정 없이 준수한 정확도</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">이 논문은 표 형태(tabular) 데이터를 위해 만들어진 사전학습 모델 TabPFN v3가 원래 표 데이터가 아닌 과제에도 적용될 수 있는지 검증한다.</span></span></summary><div class="it-body"><p>MNIST 손글씨 인식, 프랑스어·독일어 단어의 언어 식별, Tiny ImageNet 이미지 분류라는 세 가지 비표형 분류 문제를 각각 테이블의 행으로 표현하고, 누락된 레이블 예측 문제로 재구성했다. 별도의 추가 학습이나 파인튜닝 없이 컨텍스트로 제공되는 샘플 수에 따른 성능을 측정했다. 이미지의 공간 구조나 텍스트의 순차 구조에 대한 명시적 접근 없이도, TabPFN v3는 일부 경우 해당 과제에 특화된 모델과 <strong>비교 가능한 정확도</strong>를 보였다.</p><div class="slot-l">WHY IT MATTERS</div><p>표 데이터 전용으로 설계된 파운데이션 모델이 구조적 정보 없이도 이미지·텍스트 과제에 통할 수 있다면, 데이터 표현 방식에 얽매이지 않는 범용 소수샷 학습 도구로서의 잠재력을 시사한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>이미지의 공간 구조나 텍스트의 순차 구조를 활용하는 CNN이나 시퀀스 모델과 달리, TabPFN v3는 이런 구조 정보를 전혀 사용하지 않고 단순히 테이블 형태로 변환된 데이터만으로 추론과 유사한 성능을 낸다는 점이 다르다.</p><div class="tags"><span class="tag">#tabular</span></div><a class="src-cta" href="https://arxiv.org/abs/2608.22594v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="causal-inference"><div class="sec-h"><span class="nm">인과추론</span><span class="cnt">3건</span><span class="all"><a href="../../../category/causal-inference.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="causal-inference">전체 펼치기</button></div><div class="sec-desc">인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</div><details class="item" id="7b8fcfe982ae"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Counterfactual Evaluation of Temporal Observation Protocols</span><span class="it-sub">미배포 관측 프로토콜의 반사실적 가치, 무한 데이터로도 식별 불가능할 수 있어 — Sleep-EDF·Long-Term AF 검증</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">이 논문은 실제로 배치되지 않은 대안 관측 프로토콜이 특정 궤적 목표에 대해 갖는 예측 가치(베이즈 최적 예측기의 population R²)를 기존 데이터로 판단할 수 있는지 연구한다.</span></span></summary><div class="it-body"><p>저자들은 서로 다른 잠재 공분산 구조가 동일한 벤치마크 측정-목표 분포를 만들어내면서도 동일 대안에 다른 가치를 부여할 수 있어, <strong>무한한 벤치마크 데이터로도 이 가치가 식별되지 않을 수 있음</strong>을 보인다. 이를 위해 대안의 가치를 바꾸는 잠재 모호성만을 다루는 가치 특정적 식별 이론을 제시하고, 선형 목표에서는 보이지 않는 공분산 방향이 비식별성을 입증하는 반면 표적화된 측정은 전체 잠재 공분산을 복원하지 않고도 식별을 회복할 수 있음을 보이며, 정확한 순열 구성을 통해 비선형 집계 목표로 결과를 확장한다. 유한한 조밀 보정 데이터에서는 균일 오차 한계로 프로토콜 선택 후회와 구별 가능한 가치 격차를 제어하고, 비용 제약 하 목표 인식 관측 설계를 뒷받침한다.</p><div class="slot-l">WHY IT MATTERS</div><p>새로운 센서·측정 프로토콜 배치를 결정하기 전에 기존 관측 데이터만으로 그 가치를 평가하려는 시도는 흔하지만, 이 연구는 그런 반사실적 평가가 근본적으로 비식별적일 수 있음을 보여줘 인과추론·실험설계 실무에 경고를 준다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 벤치마크 기반 평가는 관측된 측정-목표 분포만 맞으면 대안 프로토콜 비교가 가능하다고 가정하는데, 이 논문은 <strong>동일한 관측 분포에서도 서로 다른 잠재 공분산이 다른 프로토콜 가치를 내놓을 수 있음</strong>을 증명해 그 가정이 무너짐을 보인다.</p><div class="tags"><span class="tag">#causal-discovery</span></div><a class="src-cta" href="https://arxiv.org/abs/2608.22221v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="1946dfaa959b"><summary><span class="num">02</span><span class="body-col"><span class="it-title">Evaluating the effects of policy interventions subject to early adoption: A case study of prescription drug monitoring programs and opioid dispensing</span><span class="it-sub">조기 도입 편향 보정한 SCM 제안 — PDMP 정책의 오피오이드 처방 효과 재추정, 통계적 유의성은 없어</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">처방약 모니터링 프로그램(PDMP)처럼 의무화 전 자율 도입 기간이 있는 정책은 의무 시행 이전부터 결과가 변하는 &#x27;조기 도입&#x27; 현상을 보이며, 이는 synthetic control method(SCM)의 무예측(no-anticipation) 가정을 위반해 효과 추정치를 편향시킨다.</span></span></summary><div class="it-body"><p>저자들은 잠재적 결과 프레임워크에서 전체 정책 효과를 조기 도입 효과와 의무화 효과로 분해하고, 사전-의무 데이터에 상호작용 고정효과 모형을 적합해 조기 도입 효과를 먼저 추정한 뒤 결과를 잔차화하고 SCM을 적용하는 <strong>2단계 절차</strong>를 제안한다. 시뮬레이션 결과 조기 도입과 잠재요인이 상관된 상황에서도 기존 SCM 대비 편향이 줄고 불확실성 추정이 개선됐다. 이 방법을 주(state) 단위 PDMP 정책과 1인당 오피오이드 처방량에 적용한 결과, PDMP 도입 및 의무화 이후 처방량 감소가 나타났으나 추정치는 부정확하고 <strong>통계적으로 유의하지 않았다</strong>.</p><div class="slot-l">WHY IT MATTERS</div><p>단계적으로 시행되는 정책(자율 도입 후 의무화)의 인과효과 평가는 공중보건·규제 정책 연구에서 흔한 상황이므로, 조기 도입 편향을 다루지 않으면 정책 효과가 과대·과소평가될 위험이 있다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 synthetic control method가 가정하는 무예측(no-anticipation) 조건이 위반되는 상황을 명시적으로 모형화해, 조기 도입 효과를 먼저 제거한 후 SCM을 적용하는 2단계 절차라는 점이 다르다.</p><div class="tags"><span class="tag">#did</span></div><a class="src-cta" href="https://arxiv.org/abs/2608.23472v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="51ab153e5db0"><summary><span class="num">03</span><span class="body-col"><span class="it-title">Joint Causal Structure and Cluster Discovery Using Variational Inference</span><span class="it-sub">변분추론으로 잠재 클러스터와 인과구조 동시 추론 — 뇌영상·기후 데이터에서 검증</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">이 논문은 개별 변수가 아닌 변수 그룹(클러스터) 간 인과관계를 다루는 문제를 다룬다.</span></span></summary><div class="it-body"><p>기존 방법들은 클러스터 정보가 미리 주어졌다고 가정하지만, 실제로는 클러스터와 그 사이의 인과구조 모두 <strong>잠재적(latent)</strong>이라는 점에 착안했다. 저자들은 카테고리 분포와 베르누이 분포 기반 변분분포를 사용해 클러스터와 그래프 구조에 대한 근사 사후분포를 동시에 학습하는 방법을 제안한다. 변분 하한을 유도하고 이를 통해 변분 파라미터와 모델 파라미터를 추정하며, 합성 데이터와 실제 데이터(뇌영상, 기후 등)에서 효과성을 검증했다.</p><div class="slot-l">WHY IT MATTERS</div><p>뇌영상이나 기후 모델링처럼 개별 변수보다 변수 그룹 단위의 해석이 더 의미 있는 도메인에서, 클러스터 정보를 사전에 알 필요 없이 데이터로부터 자동으로 발견할 수 있다는 점이 실용적 가치를 준다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>클러스터 구조를 사전 지식으로 가정하는 <strong>기존 그룹 기반 인과발견 방법</strong>과 달리, 클러스터와 인과구조를 변분추론으로 동시에 잠재변수로서 추론한다는 점이 다르다.</p><div class="tags"><span class="tag">#causal-discovery</span></div><a class="src-cta" href="https://arxiv.org/abs/2608.22212v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="mlops"><div class="sec-h"><span class="nm">MLOps / ML Engineering</span><span class="cnt">2건</span><span class="all"><a href="../../../category/mlops.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="mlops">전체 펼치기</button></div><div class="sec-desc">MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</div><details class="item" id="8a6650e97bb9"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Do Time-Series Foundation Models Pay Off for Industrial Monitoring? A Cost-Aware Empirical Study</span><span class="it-sub">산업 모니터링용 시계열 파운데이션모델, 경량 베이스라인에 밀려 — C-MAPSS서 TCN-AE가 MOMENT 완승</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">이 연구는 시계열 파운데이션모델(TSFM)이 산업 모니터링에 실제로 배포 가치가 있는지 비용을 고려해 실증 평가했다.</span></span></summary><div class="it-body"><p>C-MAPSS 열화 위험 예측, MIMII 이상음 탐지, BDG2 예측 잔차 진단 세 가지 설정에서 고전적 원클래스 방법, 경량 오토인코더, MOMENT-small, Chronos-T5, TimesFM 2.5 등을 비교했다. 100개 C-MAPSS 엔진 평가에서 <strong>TCN-AE는 AUROC/AUPRC 0.9570/0.8960</strong>을 기록해 MOMENT의 0.7310/0.3080을 크게 앞섰고, MIMII 펌프 평가에서도 OCSVM이 MOMENT를 능가했다. BDG2에서는 TimesFM 2.5가 가장 낮은 예측 오차를 보였으나 AUPRC는 TSFM과 경량 잔차 모델 간 유사했으며, MOMENT는 지연시간·VRAM·모델 크기 면에서 TCN-AE보다 비용이 컸다.</p><div class="slot-l">WHY IT MATTERS</div><p>제로샷 파운데이션모델을 무비판적으로 도입하기보다, 과제별로 경량 모델과 비용·성능을 함께 비교 검증해야 한다는 실무적 근거를 제공한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존에 TSFM의 재사용 가능한 표현과 제로샷 예측 성능을 전제로 한 낙관적 기대와 달리, 이 연구는 <strong>경량 베이스라인(TCN-AE, OCSVM)이 동결·제로샷 TSFM보다 우수</strong>할 수 있음을 프로토콜 기반 실험으로 보인다.</p><a class="src-cta" href="https://arxiv.org/abs/2608.22968v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="09273004fe1f"><summary><span class="num">02</span><span class="body-col"><span class="it-title">NVIDIA Dynamo, Shadow Engine Recovery 공개 — LLM 엔진 장애 시 수분 걸리던 콜드 리스타트를 초 단위로 단축</span><span class="it-sub">Restore LLM Inference Capacity in Seconds with Shadow Engine Recovery in NVIDIA Dynamo</span><span class="it-meta">✍️ 블로그 · developer.nvidia.com</span><span class="it-lede">LLM 추론 엔진 프로세스가 실패하면 기존에는 스토리지에서 HBM으로 가중치를 다시 로드하고 커널 컴파일, CUDA 그래프 캡처까지 수행하는 콜드 리스타트가 필요했다.</span></span></summary><div class="it-body"><p>대형 모델의 경우 이 초기화 과정에 수 분이 걸리며, 그 사이 살아남은 워커들이 밀려드는 트래픽을 대신 처리해야 했다. NVIDIA Dynamo는 프리뷰 기능으로 <strong>shadow engine recovery</strong>를 제공해 이런 장애 발생 시 복구 시간을 초 단위로 줄인다.</p><div class="slot-l">WHY IT MATTERS</div><p>LLM 서빙 환경에서 엔진 장애는 불가피하며, 복구 지연은 곧 서비스 가용성 저하와 트래픽 과부하로 이어지므로 MLOps 담당자에게는 복구 속도 자체가 SLA와 직결되는 문제다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존의 표준 콜드 리스타트 방식(가중치 재로드·커널 컴파일·CUDA 그래프 재캡처)에 걸리던 수 분의 초기화 시간을 shadow engine recovery로 대체해 대폭 단축한다.</p><div class="tags"><span class="tag">#serving</span><span class="tag">#deployment</span></div><a class="src-cta" href="https://developer.nvidia.com/blog/restore-llm-inference-capacity-in-seconds-with-shadow-engine-recovery-in-nvidia-dynamo/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="practice"><div class="sec-h"><span class="nm">실무 사례 · 노하우</span><span class="cnt">1건</span><span class="all"><a href="../../../category/practice.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="practice">전체 펼치기</button></div><div class="sec-desc">실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</div><details class="item" id="e27a749f1c8d"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Anthropic, AI가 사용자 웰빙에 미치는 영향 연구에 500만 달러 지원 프로그램 출범</span><span class="it-sub">Funding better evaluations of AI’s impact on wellbeing</span><span class="it-meta">✍️ 블로그 · anthropic.com</span><span class="it-lede">Anthropic이 AI의 웰빙 영향을 평가하는 독립적 연구를 지원하기 위해 <strong>500만 달러 규모의 지원 프로그램</strong>을 시작한다고 발표했다.</span></span></summary><div class="it-body"><p>이 프로그램은 AI 사용이 사용자의 심리적, 정서적 상태에 미치는 영향을 평가하는 연구에 자금을 제공하는 것을 목표로 한다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI 챗봇 사용이 확산되면서 정신건강과 웰빙에 미치는 영향에 대한 우려가 커지고 있어, 이를 객관적으로 평가할 연구 기반 마련이 업계 전반에 중요한 신호가 될 수 있다.</p><a class="src-cta" href="https://www.anthropic.com/news/wellbeing-research-grants" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="industry-application"><div class="sec-h"><span class="nm">산업 적용 사례</span><span class="cnt">2건</span><span class="all"><a href="../../../category/industry-application.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="industry-application">전체 펼치기</button></div><div class="sec-desc">산업 적용 사례 — 산업 현장의 AI/ML 적용</div><details class="item" id="013130c69ddb"><summary><span class="num">01</span><span class="body-col"><span class="it-title">AWS, Amazon Quick Desktop와 FSx for ONTAP 연동 — 주간 보고서 작성시간 수시간에서 수분으로 단축</span><span class="it-sub">Governed reports with Amazon Quick Desktop and Amazon FSx for NetApp ONTAP</span><span class="it-meta">✍️ 블로그 · aws.amazon.com</span><span class="it-lede">Amazon Quick Desktop은 FSx for NetApp ONTAP에 저장된 파일을 기반으로 거버넌스가 적용된 AI 보고 워크플로를 제공한다.</span></span></summary><div class="it-body"><p>S3 액세스 포인트로 승인된 보고 폴더에만 읽기 권한을 부여하고, 이를 knowledge base로 구성해 &#x27;Weekly Business Reporting Assistant&#x27; 스킬이 질의응답, 보고서·덱·PDF 생성, Slack 요약 초안 작성을 수행한다. 원본 문서는 기존 스토리지·접근 통제 하에 FSx for ONTAP에 그대로 유지되며, Slack 게시 전에는 사람이 검토·승인하는 절차가 남는다. 스킬은 재사용 가능한 트리거 문구 기반 워크플로로, 소스 수집·출력 형식·인용 방식을 사전 정의해 매주 반복 사용할 수 있다.</p><div class="slot-l">WHY IT MATTERS</div><p>현업 팀이 매주 문서를 재해석하고 지표를 재포맷해 Slack에 옮기는 수작업을 줄이면서도, <strong>출처 신뢰성과 접근 통제</strong>를 유지할 수 있는 구조라는 점에서 기업용 AI 보고 자동화 도입 사례로 참고할 만하다.</p><a class="src-cta" href="https://aws.amazon.com/blogs/machine-learning/governed-reports-with-amazon-quick-desktop-and-amazon-fsx-for-netapp-ontap/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="5079bf4894c8"><summary><span class="num">02</span><span class="body-col"><span class="it-title">AI, 방사선과 의사 대체 아니라 업무 방식 재편 — FDA 승인 의료AI기기 1,400개 중 75%가 영상의학용</span><span class="it-sub">AI won’t replace radiologists, but it will dramatically change their jobs</span><span class="it-meta">📰 뉴스 · arstechnica.com</span><span class="it-lede">2016년 제프리 힌턴은 방사선과 의사가 5년 내 AI로 대체될 것이라 예측했지만, 실제로는 향후 30년간 방사선과 인력이 <strong>26% 이상 증가</strong>할 전망이다.</span></span></summary><div class="it-body"><p>다만 방사선과는 의료 AI 도입의 최전선으로 자리잡았으며, 2026년 초 기준 FDA가 승인한 AI 의료기기 1,400여 개 중 약 4분의 3이 영상의학 분야에 집중돼 있다. 일부 AI는 판독 보고서 작성을 돕거나 긴급 소견을 알려 의사의 효율을 높이고, 다른 AI는 인간 눈으로 보기 어려운 이상을 찾아내 인간 성능을 뛰어넘기도 한다. 실제로 43건의 임상시험을 분석한 결과 <strong>AI 보조 대장내시경이 일반 대장내시경보다 더 많은 폴립을 발견</strong>한 것으로 나타났다.</p><div class="slot-l">WHY IT MATTERS</div><p>방사선과는 전문가 의사결정 시스템 도입의 시험대로, 다른 의료 분야나 전문직 전반에서 AI가 인간을 대체하기보다 협업 도구로 자리잡는 방식을 가늠할 수 있는 선례가 된다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>힌턴의 대체 예측과 달리, 실제로는 AI가 방사선과 의사의 업무를 보조·강화하는 방향으로 자리잡았다는 점이 기존 예상과 다르다.</p><a class="src-cta" href="https://arstechnica.com/health/2026/08/ai-wont-replace-radiologists-but-it-will-dramatically-change-their-jobs/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section></main>
+  <footer class="topics" id="topics"><h2>다루는 주제</h2><ul><li><a class="tnm" href="../../../category/ai-agent.html">AI Agent</a>AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</li><li><a class="tnm" href="../../../category/llm-foundation-model.html">LLM / Foundation Model</a>LLM·파운데이션 모델 — 사전학습·정렬·추론</li><li><a class="tnm" href="../../../category/deep-learning.html">Deep Learning</a>딥러닝 — 아키텍처·학습기법 자체</li><li><a class="tnm" href="../../../category/predictive-modeling.html">예측 모델링</a>예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</li><li><a class="tnm" href="../../../category/causal-inference.html">인과추론</a>인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</li><li><a class="tnm" href="../../../category/mlops.html">MLOps / ML Engineering</a>MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</li><li><a class="tnm" href="../../../category/practice.html">실무 사례 · 노하우</a>실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</li><li><a class="tnm" href="../../../category/industry-application.html">산업 적용 사례</a>산업 적용 사례 — 산업 현장의 AI/ML 적용</li></ul></footer>
+</div>
+<script>
+(function(){
+var r=document.documentElement,k="dsb-theme",s=localStorage.getItem(k);
+if(s)r.dataset.theme=s;
+document.getElementById('tbtn').addEventListener('click',function(){
+  var cur=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  var n=cur==='dark'?'light':'dark';r.dataset.theme=n;localStorage.setItem(k,n);});
+// 섹션 전체 펼치기/접기
+document.querySelectorAll('.exp').forEach(function(b){b.addEventListener('click',function(){
+  var sec=document.getElementById(b.dataset.sec);
+  var ds=sec.querySelectorAll('details.item'),open=b.dataset.state!=='open';
+  ds.forEach(function(d){d.open=open;});
+  b.dataset.state=open?'open':'closed';b.textContent=open?'전체 접기':'전체 펼치기';});});
+// 스크롤 위치 카테고리 TOC 활성 (데스크톱 사이드 TOC)
+var links={};document.querySelectorAll('.toc li[data-cat]').forEach(function(li){links[li.dataset.cat]=li;});
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){Object.values(links).forEach(function(l){l.classList.remove('active');});
+    if(links[e.target.id])links[e.target.id].classList.add('active');}});},
+  {rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('section.sec').forEach(function(s){obs.observe(s);});
+})();
+</script>
+</body>
+</html>
