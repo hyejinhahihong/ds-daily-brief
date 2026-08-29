@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI &amp; ML News Letter · 08/30</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --accent:#5DB8A6; --accent-hover:#479B8B; --accent-weak:#E8F4F1;
+  --focus-ring:rgba(93,184,166,.5);
+  --bg:#FAF9F5; --bg-subtle:#F0EEE6; --border:#E7E3D9;
+  --text:#1F1E1D; --text-2:#6B6862; --text-3:#A39E94;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}}
+:root[data-theme="dark"]{
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover);text-decoration:underline}
+strong{font-weight:600;color:var(--text)}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px;border-radius:3px}
+
+/* 모바일 우선 단일 컬럼 (<1200px). 덩어리 중앙 정렬은 margin:0 auto. */
+.page{max-width:760px;margin:0 auto;padding:20px 18px 40px}
+
+/* --- 마스트헤드 (뉴스레터 제호) --- */
+.mast{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+  padding-bottom:14px;border-bottom:2px solid var(--text);margin-bottom:24px}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--accent);
+  text-transform:uppercase;margin:0 0 6px}
+.mast-title{font-size:26px;font-weight:600;margin:0;letter-spacing:-.01em;line-height:1.15}
+.mast-date{font-size:14px;color:var(--text-2);margin-top:8px}
+.themebtn{flex:none;background:var(--bg-subtle);border:1px solid var(--border);color:var(--text-2);
+  border-radius:20px;padding:5px 12px;font-size:13px;cursor:pointer;font-family:inherit}
+.topnav{margin-top:11px;display:flex;gap:16px;font-size:13px}
+.topnav a{color:var(--text-2);font-weight:500} .topnav a:hover{color:var(--accent)}
+@media (min-width:640px){.mast-title{font-size:31px}}
+
+/* --- TODAY'S TOP 3 --- */
+.top3{background:var(--accent-weak);border-radius:12px;padding:14px 18px;margin-bottom:24px}
+.top3 h2{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--accent);margin:0 0 8px}
+.top3 ol{margin:0;padding:0;list-style:none}
+.top3 li{padding:4px 0 4px 22px;position:relative;font-size:15px;color:var(--text)}
+.top3 li::before{content:"\2605";position:absolute;left:0;color:var(--accent);font-size:12px;top:7px}
+.top3 .t3cat{color:var(--text-2);font-size:12px;margin-right:5px}
+.top3 a{color:var(--text)} .top3 a:hover{color:var(--accent-hover)}
+
+/* --- 목차 (TOC) --- */
+.toc{margin-bottom:26px}
+.toc h2{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--text-2);margin:0 0 8px}
+.toc ul{margin:0;padding:0;list-style:none}
+.toc li{padding:6px 0;border-top:1px solid var(--border)}
+.toc li:first-child{border-top:none}
+.toc .r{display:flex;gap:6px;align-items:baseline;font-size:14px}
+.toc .nm{font-weight:500;color:var(--text)} .toc a:hover .nm{color:var(--accent)}
+.toc .cnt{color:var(--text-3);font-size:12px}
+.toc .lead{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  font-size:12px;color:var(--text-2);margin-top:2px;line-height:1.4}
+.toc li.active .nm{color:var(--accent)}
+.toc li.active{border-left:2px solid var(--accent);padding-left:8px;margin-left:-10px}
+
+/* --- 섹션 --- */
+.sec{margin:0 0 34px;scroll-margin-top:14px}
+.sec-h{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:0 0 2px;padding-top:6px}
+.sec-h .nm{font-size:20px;font-weight:600}
+.sec-h .cnt{font-size:13px;color:var(--text-3)}
+.sec-h .all{font-size:12px;color:var(--text-3);margin-left:auto}
+.sec-h .all span{color:var(--text-2)}
+.sec-h .exp{font-size:12px;background:none;border:1px solid var(--border);color:var(--text-2);
+  border-radius:14px;padding:2px 10px;cursor:pointer;font-family:inherit}
+.sec-desc{font-size:13px;color:var(--text-2);margin:0 0 8px}
+.sec-empty{font-size:14px;color:var(--text-3);padding:4px 0 6px}
+.backtop{display:inline-block;font-size:12px;color:var(--text-3);margin-top:6px}
+
+/* --- 아이템 (아코디언) — 거터(번호) + 단일 콘텐츠 컬럼 (DESIGN §3 v4). 좌측 정렬선 1개. --- */
+.item{border-bottom:1px solid var(--border);--gutter:28px}
+.item>summary{list-style:none;cursor:pointer;padding:16px 26px 16px 0;position:relative;
+  display:grid;grid-template-columns:var(--gutter) 1fr;align-items:start}
+.item>summary::-webkit-details-marker{display:none}
+.item>summary::after{content:"\25B8";position:absolute;right:2px;top:16px;color:var(--text-3);
+  font-size:13px;transition:transform .15s;display:inline-block}
+.item[open]>summary::after{transform:rotate(90deg)}
+.num{font-size:13px;color:var(--text-3);font-variant-numeric:tabular-nums;font-weight:500;padding-top:3px}
+.t3star{color:var(--accent);font-size:11px;margin-right:2px}
+.body-col{min-width:0}
+.it-title{display:block;font-size:18px;font-weight:600;color:var(--text);line-height:1.4}
+.item>summary:hover .it-title{color:var(--accent)}
+.it-sub{display:block;font-size:13px;color:var(--text-2);margin-top:3px;line-height:1.35}
+.it-meta{display:block;font-size:13px;color:var(--text-2);margin-top:6px}
+.it-lede{display:block;font-size:15px;color:var(--text-2);margin-top:7px;line-height:1.5}
+.item[open] .it-lede{color:var(--text)}
+/* 접힘 본문도 콘텐츠 컬럼에 정렬 (거터만큼 들여씀) */
+.it-body{padding:0 0 20px var(--gutter)}
+.it-body p{margin:0 0 10px}
+@media (min-width:900px){.item{--gutter:40px}}
+.slot-l{font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--text-2);margin:14px 0 2px}
+.tags{margin-top:10px}
+.tag{display:inline-block;font-size:12px;color:var(--text-2);background:var(--bg-subtle);
+  border:1px solid var(--border);border-radius:12px;padding:1px 9px;margin:0 5px 5px 0}
+.prev{font-size:13px;color:var(--text-3);margin-top:8px}
+.src-cta{display:inline-block;margin-top:12px;font-size:14px;font-weight:500;color:var(--accent)}
+.weak{color:var(--accent);font-size:12px;border:1px solid var(--accent);border-radius:5px;
+  padding:0 6px;margin-left:6px}
+
+/* --- "다루는 주제" 푸터 --- */
+.topics{margin-top:36px;padding-top:22px;border-top:2px solid var(--text)}
+.topics h2{font-size:15px;font-weight:600;margin:0 0 12px}
+.topics ul{margin:0;padding:0;list-style:none}
+.topics li{padding:7px 0;border-top:1px solid var(--border);font-size:13px;color:var(--text-2)}
+.topics li:first-child{border-top:none}
+.topics .tnm{font-weight:600;color:var(--accent);margin-right:6px}
+
+/* --- 데스크톱 (≥1200px): 좌측 sticky TOC(260) + 본문(720), 덩어리 중앙 정렬 --- */
+@media (min-width:1200px){
+  /* max-width = 260+44+720 그리드(1024) + 좌우 padding(18*2). box-sizing:border-box
+     라 padding 을 포함해야 본문 720 이 찌그러지지 않는다. */
+  .page{max-width:1060px;display:grid;grid-template-columns:260px minmax(0,720px);
+    column-gap:44px;justify-content:center;align-items:start;padding-top:28px}
+  .mast{grid-column:1/3}
+  .toc{grid-column:1;grid-row:2/999;position:sticky;top:24px;margin:0;align-self:start}
+  .top3,.main{grid-column:2}
+  .topics{grid-column:1/3}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="mast">
+    <div class="mast-l">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1 class="mast-title">AI &amp; ML News Letter</h1>
+      <div class="mast-date">2026 / 08 / 30 (일) · 6건</div>
+      <nav class="topnav"><a href="../../../archive.html">📅 지난 브리핑</a>
+        <a href="#topics">🗂 주제별 보기</a></nav>
+    </div>
+    <button id="tbtn" class="themebtn" type="button">🌓 테마</button>
+  </header>
+  <section class="top3"><h2>TODAY'S TOP 3</h2><ol><li><a href="#d2a02fefc907"><span class="t3cat">[LLM / Foundation Model]</span>RAG 만능론 경계 — 분류·텍스트 매칭·표 읽기·OCR 정제엔 더 저렴한 NLP 기법 따로 있다</a></li><li><a href="#ef7b23236af4"><span class="t3cat">[실무 사례 · 노하우]</span>Claude Code vs Codex — 코딩 에이전트, 언제 무엇을 써야 할까</a></li><li><a href="#b2b7c304c4b8"><span class="t3cat">[실무 사례 · 노하우]</span>2026년 데이터 과학자를 위한 Claude 스킬 4가지, 지금 워크플로에 추가해야 하는 이유</a></li></ol></section>
+  <nav class="toc" id="toc"><h2>오늘의 목차</h2><ul><li data-cat="llm-foundation-model"><a href="#llm-foundation-model"><span class="r"><span class="nm">LLM / Foundation Model</span><span class="cnt">1</span></span><span class="lead">RAG 만능론 경계 — 분류·텍스트 매칭·표 읽기·OCR 정제엔 더 저렴한 NLP 기법 따로 있다</span></a></li><li data-cat="practice"><a href="#practice"><span class="r"><span class="nm">실무 사례 · 노하우</span><span class="cnt">3</span></span><span class="lead">Claude Code vs Codex — 코딩 에이전트, 언제 무엇을 써야 할까</span></a></li><li data-cat="industry-application"><a href="#industry-application"><span class="r"><span class="nm">산업 적용 사례</span><span class="cnt">2</span></span><span class="lead">Nvidia AI 경쟁력의 중심, GPU 넘어 데이터센터 &#x27;트래픽 제어&#x27;로 이동</span></a></li></ul></nav>
+  <main class="main"><section class="sec" id="ai-agent"><div class="sec-h"><span class="nm">AI Agent</span></div><div class="sec-desc">AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="llm-foundation-model"><div class="sec-h"><span class="nm">LLM / Foundation Model</span><span class="cnt">1건</span><span class="all"><a href="../../../category/llm-foundation-model.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="llm-foundation-model">전체 펼치기</button></div><div class="sec-desc">LLM·파운데이션 모델 — 사전학습·정렬·추론</div><details class="item" id="d2a02fefc907" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">RAG 만능론 경계 — 분류·텍스트 매칭·표 읽기·OCR 정제엔 더 저렴한 NLP 기법 따로 있다</span><span class="it-sub">RAG Is Not the Whole Toolkit: The NLP Techniques Real Problems Still Need</span><span class="it-meta">✍️ 블로그 · towardsdatascience.com</span><span class="it-lede">이 글은 RAG가 검색 기반 질의응답이라는 한 가지 유형의 문제만 해결한다고 지적한다.</span></span></summary><div class="it-body"><p>요청 분류, 자유 텍스트를 참조 목록에 매칭, 표 데이터 읽기, OCR 노이즈 정제 같은 작업들은 각각 더 저렴하고 적합한 기존 기법이 이미 존재한다는 것이다. 핵심은 어떤 문제에 어떤 도구를 써야 하는지 판단하는 엔지니어링 역량이라고 강조한다. 엔터프라이즈 문서 인텔리전스 시리즈의 한 편으로 다뤄진다.</p><div class="slot-l">WHY IT MATTERS</div><p>LLM·RAG 열풍 속에서 모든 문제를 RAG로 풀려는 시도가 늘고 있는데, 이는 비용과 성능 면에서 비효율적일 수 있음을 상기시킨다. 실무자는 <strong>문제 유형별 적정 기법 선택</strong>이 시스템 설계의 핵심 역량임을 재확인할 필요가 있다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>RAG 중심 접근 대비, 분류·매칭·표 파싱·OCR 정제 등에는 <strong>전통적인 NLP 기법</strong>이 더 저렴하고 적합하다는 점을 대비시킨다.</p><a class="src-cta" href="https://towardsdatascience.com/rag-is-not-the-whole-toolkit-the-nlp-techniques-real-problems-still-need/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="deep-learning"><div class="sec-h"><span class="nm">Deep Learning</span></div><div class="sec-desc">딥러닝 — 아키텍처·학습기법 자체</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="predictive-modeling"><div class="sec-h"><span class="nm">예측 모델링</span></div><div class="sec-desc">예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="causal-inference"><div class="sec-h"><span class="nm">인과추론</span></div><div class="sec-desc">인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="mlops"><div class="sec-h"><span class="nm">MLOps / ML Engineering</span></div><div class="sec-desc">MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="practice"><div class="sec-h"><span class="nm">실무 사례 · 노하우</span><span class="cnt">3건</span><span class="all"><a href="../../../category/practice.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="practice">전체 펼치기</button></div><div class="sec-desc">실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</div><details class="item" id="ef7b23236af4" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">Claude Code vs Codex — 코딩 에이전트, 언제 무엇을 써야 할까</span><span class="it-sub">When to Use Claude Code and When to Use Codex</span><span class="it-meta">✍️ 블로그 · towardsdatascience.com</span><span class="it-lede">이 글은 Claude Code와 Codex라는 두 코딩 에이전트를 비교하며 각각이 더 적합한 상황을 안내한다.</span></span></summary><div class="it-body"><p>초록에는 구체적인 벤치마크나 수치가 제시되지 않고, 어떤 도구가 어떤 상황에서 나은지 알아보라는 취지만 담겨 있다.</p><div class="slot-l">WHY IT MATTERS</div><p>코딩 에이전트를 실무에 도입할 때 <strong>도구 선택 기준</strong>을 아는 것은 생산성에 직결되는 문제라 DS/AI 실무자에게 실질적으로 유용하다.</p><a class="src-cta" href="https://towardsdatascience.com/when-to-use-claude-code-and-when-to-use-codex/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="b2b7c304c4b8" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>02</span><span class="body-col"><span class="it-title">2026년 데이터 과학자를 위한 Claude 스킬 4가지, 지금 워크플로에 추가해야 하는 이유</span><span class="it-sub">4 Claude Skills Every Data Scientist Needs in 2026</span><span class="it-meta">✍️ 블로그 · towardsdatascience.com</span><span class="it-lede">이 글은 데이터 과학자가 2026년 업무에 도입할 만한 4가지 Claude 스킬을 소개한다.</span></span></summary><div class="it-body"><p>저자는 이러한 스킬을 지금 익혀두지 않으면 업무 흐름에서 뒤처질 수 있다고 언급한다. 초록에는 구체적인 스킬 이름이나 사용법 세부사항은 제시되지 않는다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI 도구가 데이터 과학 워크플로에 빠르게 통합되는 상황에서 <strong>Claude 기반 스킬</strong>을 조기에 익히는 것이 실무 경쟁력과 직결될 수 있다.</p><a class="src-cta" href="https://towardsdatascience.com/4-claude-skills-every-data-scientist-needs-in-2026/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="0ac737a33753"><summary><span class="num">03</span><span class="body-col"><span class="it-title">개인용 PC에서 챗봇 직접 돌리기 — 로컬 LLM 설치로 데이터 프라이버시 지키는 법</span><span class="it-sub">How to Run a Chatbot on Your Own Computer</span><span class="it-meta">📰 뉴스 · wired.com</span><span class="it-lede">이 기사는 개인 컴퓨터에 대형 언어 모델(LLM)을 설치해 로컬에서 실행하는 방법을 소개한다.</span></span></summary><div class="it-body"><p>클라우드 기반 챗봇 대신 자신의 하드웨어에서 모델을 구동하면 데이터를 외부 서버로 전송하지 않아도 된다는 점이 핵심이다. 이를 통해 개인정보를 노출하지 않으면서도 유용한 디지털 비서를 사용할 수 있다는 것이 기사의 주요 내용이다.</p><div class="slot-l">WHY IT MATTERS</div><p>클라우드 서비스에 데이터를 맡기기 꺼려하는 사용자에게 <strong>로컬 실행</strong>은 프라이버시와 편의성을 동시에 확보할 수 있는 실질적 대안이 된다.</p><a class="src-cta" href="https://www.wired.com/story/how-to-run-your-own-local-llm/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="industry-application"><div class="sec-h"><span class="nm">산업 적용 사례</span><span class="cnt">2건</span><span class="all"><a href="../../../category/industry-application.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="industry-application">전체 펼치기</button></div><div class="sec-desc">산업 적용 사례 — 산업 현장의 AI/ML 적용</div><details class="item" id="9764c79bea7c"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Nvidia AI 경쟁력의 중심, GPU 넘어 데이터센터 &#x27;트래픽 제어&#x27;로 이동</span><span class="it-sub">Nvidia’s AI advantage is moving beyond the GPU</span><span class="it-meta">📰 뉴스 · techcrunch.com</span><span class="it-lede">차세대 데이터센터 시스템은 단순히 프로세서 연산 능력을 늘리는 대신 더 똑똑한 트래픽 제어를 통해 효율을 높이고 있다.</span></span></summary><div class="it-body"><p>이는 Nvidia의 AI 경쟁력 원천이 GPU 자체를 넘어서고 있음을 보여준다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI 인프라 경쟁이 <strong>단순 연산 성능 경쟁에서 시스템·네트워크 최적화 경쟁</strong>으로 옮겨가고 있음을 시사한다.</p><a class="src-cta" href="https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="2555789944ab"><summary><span class="num">02</span><span class="body-col"><span class="it-title">a16z 4조원 바이오 펀드 떠난 Vijay Pande, AI 네이티브 소형펀드 VZVC 창업 이유</span><span class="it-sub">“We’re not doing 30 bets a year”: Vijay Pande on betting small after running $4 billion at a16z</span><span class="it-meta">📰 뉴스 · techcrunch.com</span><span class="it-lede">Vijay Pande는 약 <strong>4조원 규모</strong>였던 a16z의 바이오테크 투자 부문을 떠나 훨씬 규모가 작은 AI 네이티브 펀드 VZVC를 설립했다.</span></span></summary><div class="it-body"><p>그는 생물학이 &#x27;발견의 과학&#x27;에서 &#x27;공학의 과학&#x27;으로 전환되고 있다고 설명한다. 임상시험은 여전히 비용이 매우 크다는 점을 지적하며, 폐쇄적으로 독점된 데이터셋이 아니라 <strong>개방되고 공유되는 데이터셋</strong>이 AI가 의학을 실질적으로 바꿀 수 있는 핵심 조건이라고 주장한다.</p><div class="slot-l">WHY IT MATTERS</div><p>대형 펀드에서 소규모 베팅으로 전환한 배경은 AI 시대 바이오 투자 전략이 어떻게 재편되는지를 보여주는 사례다. 데이터 개방성에 대한 그의 주장은 AI·바이오 융합 분야에서 데이터 접근성이 기술 발전의 실질적 병목임을 시사한다.</p><a class="src-cta" href="https://techcrunch.com/2026/08/29/were-not-doing-30-bets-a-year-vijay-pande-on-betting-small-after-running-4-billion-at-a16z/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section></main>
+  <footer class="topics" id="topics"><h2>다루는 주제</h2><ul><li><a class="tnm" href="../../../category/ai-agent.html">AI Agent</a>AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</li><li><a class="tnm" href="../../../category/llm-foundation-model.html">LLM / Foundation Model</a>LLM·파운데이션 모델 — 사전학습·정렬·추론</li><li><a class="tnm" href="../../../category/deep-learning.html">Deep Learning</a>딥러닝 — 아키텍처·학습기법 자체</li><li><a class="tnm" href="../../../category/predictive-modeling.html">예측 모델링</a>예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</li><li><a class="tnm" href="../../../category/causal-inference.html">인과추론</a>인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</li><li><a class="tnm" href="../../../category/mlops.html">MLOps / ML Engineering</a>MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</li><li><a class="tnm" href="../../../category/practice.html">실무 사례 · 노하우</a>실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</li><li><a class="tnm" href="../../../category/industry-application.html">산업 적용 사례</a>산업 적용 사례 — 산업 현장의 AI/ML 적용</li></ul></footer>
+</div>
+<script>
+(function(){
+var r=document.documentElement,k="dsb-theme",s=localStorage.getItem(k);
+if(s)r.dataset.theme=s;
+document.getElementById('tbtn').addEventListener('click',function(){
+  var cur=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  var n=cur==='dark'?'light':'dark';r.dataset.theme=n;localStorage.setItem(k,n);});
+// 섹션 전체 펼치기/접기
+document.querySelectorAll('.exp').forEach(function(b){b.addEventListener('click',function(){
+  var sec=document.getElementById(b.dataset.sec);
+  var ds=sec.querySelectorAll('details.item'),open=b.dataset.state!=='open';
+  ds.forEach(function(d){d.open=open;});
+  b.dataset.state=open?'open':'closed';b.textContent=open?'전체 접기':'전체 펼치기';});});
+// 스크롤 위치 카테고리 TOC 활성 (데스크톱 사이드 TOC)
+var links={};document.querySelectorAll('.toc li[data-cat]').forEach(function(li){links[li.dataset.cat]=li;});
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){Object.values(links).forEach(function(l){l.classList.remove('active');});
+    if(links[e.target.id])links[e.target.id].classList.add('active');}});},
+  {rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('section.sec').forEach(function(s){obs.observe(s);});
+})();
+</script>
+</body>
+</html>

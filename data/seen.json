@@ -39581,5 +39581,77 @@
     "source_tier": 1,
     "first_seen": "2026-08-29",
     "tags": []
+  },
+  "b2b7c304c4b8195e7e315f8c69b8c7708ab6fe36": {
+    "url": "https://towardsdatascience.com/4-claude-skills-every-data-scientist-needs-in-2026/",
+    "title": "4 Claude Skills Every Data Scientist Needs in 2026",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-08-30",
+    "tags": []
+  },
+  "ef7b23236af4c5d610bc06485e48f7d27442d382": {
+    "url": "https://towardsdatascience.com/when-to-use-claude-code-and-when-to-use-codex/",
+    "title": "When to Use Claude Code and When to Use Codex",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-08-30",
+    "tags": []
+  },
+  "d2a02fefc907d5df414d86021bfb70d99c97b2a5": {
+    "url": "https://towardsdatascience.com/rag-is-not-the-whole-toolkit-the-nlp-techniques-real-problems-still-need/",
+    "title": "RAG Is Not the Whole Toolkit: The NLP Techniques Real Problems Still Need",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-08-30",
+    "tags": []
+  },
+  "4d9cf7893a2e0f3b29a9fa8b8c75cf5590b420cd": {
+    "url": "https://techcrunch.com/2026/08/29/sony-music-warner-sue-anthropic-alleging-a-brazen-campaign-of-intellectual-property-theft/",
+    "title": "Sony Music, Warner sue Anthropic, alleging a “brazen campaign” of intellectual property theft",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-30",
+    "tags": []
+  },
+  "2555789944ab224dcaeebe1545840e842c725f3d": {
+    "url": "https://techcrunch.com/2026/08/29/were-not-doing-30-bets-a-year-vijay-pande-on-betting-small-after-running-4-billion-at-a16z/",
+    "title": "“We’re not doing 30 bets a year”: Vijay Pande on betting small after running $4 billion at a16z",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-30",
+    "tags": []
+  },
+  "9764c79bea7cd185edda2c5535617d25b11f0392": {
+    "url": "https://techcrunch.com/2026/08/29/nvidias-ai-advantage-is-moving-beyond-the-gpu/",
+    "title": "Nvidia’s AI advantage is moving beyond the GPU",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-30",
+    "tags": []
+  },
+  "52836256a884cc03d61faad7e8ca3564959831a7": {
+    "url": "https://arstechnica.com/tech-policy/2026/08/i-asked-100-companies-for-my-data-some-deleted-it-instead/",
+    "title": "I asked 100 companies for my data. Some deleted it instead.",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-08-30",
+    "tags": []
+  },
+  "5fad945b73f6ff98c0358a51b25f2f2d9b404ef6": {
+    "url": "https://www.wired.com/story/security-news-this-week-the-cybersecurity-apocalypse-is-coming-in-months-ai-giants-warn/",
+    "title": "The Cybersecurity Apocalypse Is Coming in ‘Months,’ AI Giants Warn",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-08-30",
+    "tags": []
+  },
+  "0ac737a33753e0d5d51f9263518b2faf461d67d2": {
+    "url": "https://www.wired.com/story/how-to-run-your-own-local-llm/",
+    "title": "How to Run a Chatbot on Your Own Computer",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-08-30",
+    "tags": []
   }
 }
