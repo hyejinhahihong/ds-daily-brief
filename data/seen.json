@@ -39183,5 +39183,403 @@
     "source_tier": 1,
     "first_seen": "2026-08-28",
     "tags": []
+  },
+  "5bb97e1f7200e8e1453542d2c7101ffcfc9ecaeb": {
+    "url": "https://aws.amazon.com/blogs/machine-learning/batch-write-and-discover-records-in-amazon-sagemaker-feature-store/",
+    "title": "Batch write and discover records in Amazon SageMaker Feature Store",
+    "category": "mlops",
+    "source_tier": 1,
+    "first_seen": "2026-08-29",
+    "tags": [
+      "feature-store"
+    ]
+  },
+  "9a8c31ff0e05583fed3202853e132fe9570d1f07": {
+    "url": "https://aws.amazon.com/blogs/machine-learning/how-decathlon-runs-demand-forecasting-at-scale-with-chronos-2/",
+    "title": "How Decathlon runs demand forecasting at scale with Chronos-2",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-08-29",
+    "tags": [
+      "timeseries"
+    ]
+  },
+  "e9800e79c07e37641028b58ba13d6c23add18dc7": {
+    "url": "https://aws.amazon.com/blogs/machine-learning/spreading-the-load-how-salesforce-met-multi-az-ha-with-sagemaker-inference-components/",
+    "title": "Spreading the load: How Salesforce met Multi-AZ HA with SageMaker Inference Components",
+    "category": "mlops",
+    "source_tier": 1,
+    "first_seen": "2026-08-29",
+    "tags": [
+      "serving",
+      "deployment"
+    ]
+  },
+  "d6230534a0df6537a8979dde43773eb0a6f05448": {
+    "url": "https://machinelearning.apple.com/research/llms-not-consistently-bayesian",
+    "title": "LLMs Are Not (Consistently) Bayesian: Quantifying Internal (In)consistencies of LLMs’ Probabilistic Beliefs",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "0665947866370996c6b5d714b40351add4cebbf5": {
+    "url": "https://machinelearning.apple.com/research/agent-seer-synthesizing-scenarios",
+    "title": "Agent Seer: Synthesizing Scenarios from Specification Understanding",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "503090151ea568b4217f14b99369370224f6f0b3": {
+    "url": "https://developer.nvidia.com/blog/deploy-an-open-model-from-checkpoint-to-inference-in-two-commands-with-nvidia-tensorrt-model-connect/",
+    "title": "Deploy an Open Model from Checkpoint to Inference in Two Commands with NVIDIA TensorRT Model Connect",
+    "category": "mlops",
+    "source_tier": 1,
+    "first_seen": "2026-08-29",
+    "tags": [
+      "serving",
+      "deployment"
+    ]
+  },
+  "092c8de02e8b135ec330a69dfe0e592abd521d97": {
+    "url": "https://openai.com/index/our-decision-on-cursor-following-its-acquisition-by-spacex",
+    "title": "Our decision on Cursor following its acquisition by SpaceX",
+    "category": "practice",
+    "source_tier": 1,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "0b00c80d502cc3ab98e0f64ac864e5a386422b64": {
+    "url": "https://openai.com/index/supporting-next-generation-ai-startups-thailand",
+    "title": "Supporting Thailand’s next generation of AI startups",
+    "category": "practice",
+    "source_tier": 1,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "39fc3b3a1624491562bfd5264abce50ce9a1316b": {
+    "url": "https://netflixtechblog.com/maps-netflixs-multimodal-asset-personalization-at-scale-32f96320785e?source=rss----2615bd06b42e---4",
+    "title": "MAPS: Netflix’s Multimodal Asset Personalization at Scale",
+    "category": "industry-application",
+    "source_tier": 1,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "f26d102543337e4bd392ecec981a448c1fbfbf14": {
+    "url": "https://tldr.tech/ai/2026-08-28",
+    "title": "Gemini Omni 1.1 🎬, Cohere Parse 📄, Codex persistent mode 👨‍💻",
+    "category": "llm-foundation-model",
+    "source_tier": 2,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "b0b2c2da12a5bc4520ab6807aa5bac3ea5efd4c6": {
+    "url": "https://huggingface.co/blog/open-asr-leaderboard-global-south",
+    "title": "The Open ASR Leaderboard Adds Its First Global South Language",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "ee78f4612c8fa5736e8eb58f9463bb970ca15a90": {
+    "url": "https://www.oreilly.com/radar/this-week-in-ai-the-guardrails-are-getting-tested/",
+    "title": "This Week in AI: The Guardrails Are Getting Tested",
+    "category": "practice",
+    "source_tier": 2,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "3246e3c59bd4617119deb23b892ae0ec7f43584c": {
+    "url": "https://www.oreilly.com/radar/tokens-arent-dollars/",
+    "title": "Tokens Aren’t Dollars",
+    "category": "practice",
+    "source_tier": 2,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "28039105260218459eb4e5fb53f1c33d638d3ed6": {
+    "url": "https://towardsdatascience.com/human-in-the-loop-without-killing-throughput/",
+    "title": "Human-in-the-Loop Without Killing Throughput",
+    "category": "mlops",
+    "source_tier": 3,
+    "first_seen": "2026-08-29",
+    "tags": [
+      "serving",
+      "deployment"
+    ]
+  },
+  "f53e6302fc0921223e2b163a193fb3cffd0da297": {
+    "url": "https://towardsdatascience.com/from-one-agent-to-a-team-understanding-codex-subagents/",
+    "title": "From One Agent to a Team: Understanding Codex Subagents",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "431498b6d40eebc5c0ce8e3c5078190d5e3d2b13": {
+    "url": "https://towardsdatascience.com/connecting-my-langgraph-ai-agent-to-postgres/",
+    "title": "Connecting My LangGraph AI Agent to Postgres",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-08-29",
+    "tags": [
+      "tool-use",
+      "orchestration"
+    ]
+  },
+  "20a159f135f70e77625d05c06f80495c968c6f64": {
+    "url": "https://towardsdatascience.com/why-claude-code-time-estimates-are-poor/",
+    "title": "Why Claude Code Time Estimates Are Poor",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-08-29",
+    "tags": [
+      "reliability",
+      "llm-evaluation"
+    ]
+  },
+  "88f00fb8abf7918714cac4947a75efa9098f2821": {
+    "url": "https://www.kdnuggets.com/the-local-ai-stack-for-productive-slms",
+    "title": "The Local AI Stack for Productive SLMs",
+    "category": "deep-learning",
+    "source_tier": 3,
+    "first_seen": "2026-08-29",
+    "tags": [
+      "model-optimization",
+      "inference"
+    ]
+  },
+  "620b2f10d94decd876d70cad049acad0208b9ba5": {
+    "url": "https://www.kdnuggets.com/quantization-and-pruning-methods-to-make-your-llm-leaner",
+    "title": "Quantization and Pruning Methods to Make Your LLM Leaner",
+    "category": "deep-learning",
+    "source_tier": 3,
+    "first_seen": "2026-08-29",
+    "tags": [
+      "model-optimization",
+      "llm-compression"
+    ]
+  },
+  "70c02ae244359953de07f70e459b92b58da93ed5": {
+    "url": "https://machinelearningmastery.com/interpretable-text-classification-probing-scikit-llm-embedding-spaces/",
+    "title": "Interpretable Text Classification: Probing Scikit-LLM Embedding Spaces",
+    "category": "predictive-modeling",
+    "source_tier": 3,
+    "first_seen": "2026-08-29",
+    "tags": [
+      "XAI",
+      "feature-selection"
+    ]
+  },
+  "423257916e654dbb304b480b3359ca79d49f8f49": {
+    "url": "https://www.technologyreview.com/2026/08/28/1143113/the-download-antiaging-drug-joining-virtual-power-plants/",
+    "title": "The Download: a secretive antiaging drug and joining virtual power plants",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "d2c6c0a2f6a7e4be3ec6fc56149a38ea91a3aced": {
+    "url": "https://www.technologyreview.com/2026/08/28/1142956/how-to-sign-up-for-a-virtual-power-plant-and-decide-whether-you-should/",
+    "title": "How to sign up for a virtual power plant—and decide whether you should",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "1546804b7d315afab1f419ddcc38edf7fd6356d5": {
+    "url": "https://techcrunch.com/2026/08/28/neocloud-lambda-secures-1b-in-debt-to-buy-more-chips/",
+    "title": "Neocloud Lambda secures $1B in debt to buy more chips",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "c3673eed547430a812c246021431e9d46e141b17": {
+    "url": "https://techcrunch.com/2026/08/28/an-anthropic-researcher-just-gave-us-a-peek-at-self-improving-ai/",
+    "title": "An Anthropic researcher just gave us a peek at self-improving AI",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-08-29",
+    "tags": [
+      "alignment"
+    ]
+  },
+  "565a1470c585042382dfb0510655dfc4e5f6e378": {
+    "url": "https://techcrunch.com/2026/08/28/open-weight-ai-companies-are-the-valleys-hottest-acquisition-targets/",
+    "title": "Open-weight AI companies are the Valley’s hottest acquisition targets",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "d62db5e9a1ea4a6dca9902b4e49e3c7da1f2ef2c": {
+    "url": "https://techcrunch.com/2026/08/28/anthropic-gets-its-first-court-win-over-the-pentagons-supply-chain-risk-label/",
+    "title": "Anthropic gets its first court win over the Pentagon’s supply-chain risk label",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "b8d3f0cb5de26b4c3addfadea3484bd6205e2a6a": {
+    "url": "https://techcrunch.com/2026/08/28/meta-executive-leaves-for-openai-as-the-social-media-giant-faces-growing-scrutiny-in-india/",
+    "title": "Meta executive leaves for OpenAI as the social media giant faces growing scrutiny in India",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "f18186bd52aaa40ec06412f6f4285a8bc76a084c": {
+    "url": "https://arstechnica.com/tech-policy/2026/08/kalshi-cant-evade-nevada-gambling-laws-by-calling-bets-swaps-court-rules/",
+    "title": "Court rules Kalshi sports bets aren't \"swaps,\" just gambling with a different name",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "398370179395d3106f61ca837bae95577adbe4f7": {
+    "url": "https://arstechnica.com/tech-policy/2026/08/cities-terminate-flock-contracts-at-record-pace-in-august/",
+    "title": "Cities terminate Flock contracts at record pace in August",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "f35852de6deee08c3c1b811a679d67e96f41ad31": {
+    "url": "https://arstechnica.com/health/2026/08/rfk-jr-has-lied-to-the-senate-lawmakers-call-for-criminal-probe-ouster/",
+    "title": "\"RFK Jr. has lied to the Senate\": Lawmakers call for criminal probe, ouster",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "64c4f15140686fbeb0295044f31ddd5458eaaac2": {
+    "url": "https://arstechnica.com/tech-policy/2026/08/trump-blacklisting-of-woke-anthropic-deemed-illegal-by-federal-judge/",
+    "title": "Trump blacklisting of \"woke\" Anthropic deemed illegal by federal judge",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "03579e24c1209532f708903e2882952d19c1f4c8": {
+    "url": "https://arstechnica.com/space/2026/08/trump-calls-for-creation-of-a-space-academy-to-train-future-nasa-leaders/",
+    "title": "Here's what we know about the \"space academy\" Trump just announced",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "bcfef2c7a67560ba6414e9c262a568f00081c4b7": {
+    "url": "https://arstechnica.com/gadgets/2026/08/apple-one-and-apple-tv-subscription-prices-increase-by-up-to-20-percent/",
+    "title": "Apple One and Apple TV subscription prices increase by up to 20 percent",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "3ce15eba4f71300ffe91428b090c4218aeaa39d5": {
+    "url": "https://arstechnica.com/culture/2026/08/our-10-favorite-scenes-from-t2-judgment-day/",
+    "title": "Our 10 favorite scenes from T2: Judgment Day",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "f17dc0d6839f687cedb4d6f68ac87e4a8a8f909c": {
+    "url": "https://arstechnica.com/tech-policy/2026/08/meta-tweaks-ai-glasses-to-block-some-creepy-recordings-but-privacy-risks-remain/",
+    "title": "Meta makes AI glasses slightly less creepy with limit on nonconsensual recording",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "a3d034cf7b7fb46803fbec64e978d087c1eb08d4": {
+    "url": "https://arstechnica.com/security/2026/08/authorities-arrest-2-alleged-members-of-prolific-hacking-group-teampcp/",
+    "title": "Authorities arrest 2 alleged members of prolific hacking group TeamPCP",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "ecabce4a1870002d506cf7dad16a330d294a3536": {
+    "url": "https://arstechnica.com/space/2026/08/rocket-report-europe-splashes-some-cash-on-launch-startups-pallas-1-nears-debut/",
+    "title": "Rocket Report: Europe splashes some cash on launch startups; Pallas-1 nears debut",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "25b49f06929960180efa297bd4f5e0ded346899f": {
+    "url": "https://www.wired.com/story/ai-has-human-doctors-asking-whats-left-for-us/",
+    "title": "AI Has Human Doctors Asking: What’s Left for Us?",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "58f3ab1ee314e8e4f5cbe41682c563748c583fe3": {
+    "url": "https://www.wired.com/story/he-scraped-art-from-cara-for-ai-now-he-is-collaborating-on-a-tool-to-help-them/",
+    "title": "He Scraped All of Their Art for AI. Now He’s Collaborating on a Tool to Help Them",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "1288bfcd2df365fc9605424fcae759d9070dcc7a": {
+    "url": "https://www.wired.com/story/inside-metas-experiments-with-data-center-robots/",
+    "title": "Inside Meta’s Push to Put Robots to Work in Data Centers",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "5dc2d1c075c73d498a867540d0260f088267a93d": {
+    "url": "https://toss.tech/article/qa_hotfix",
+    "title": "1%가 겪은 버그 고쳐야할까요?",
+    "category": "mlops",
+    "source_tier": 1,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "fc57148d6b346092afda172bc62a7d107e2c29cc": {
+    "url": "https://arxiv.org/abs/2608.23943",
+    "title": "Luce: Relightable Gaussians for 3D Asset Generation",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "337bb8010fa693fb225aae7a98710fd60cba15ae": {
+    "url": "https://arxiv.org/abs/2608.27455",
+    "title": "CritICL: Inference-Time Weak-to-Strong Generalization from Small Language Model Failure Modes",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "184735c974a496d6392e5e30a46aec475135cdb0": {
+    "url": "https://arxiv.org/abs/2608.25798",
+    "title": "TacForcing: Streaming Action Generation with Execution-Time Tactile Feedback",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "5e1e3d9b62997ffac2e0f477e2a1b0c587a7d23d": {
+    "url": "https://arxiv.org/abs/2608.19269",
+    "title": "What Does an Evaluation License? A Commit-Bound Census of Claim-Relative Inference in Inspect Evals",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-08-29",
+    "tags": []
+  },
+  "55467baa0d40be5157bf319f68485fe6813fc560": {
+    "url": "https://arxiv.org/abs/2608.27123",
+    "title": "EditaLive! Unified Character Video Editing for Live Streaming",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-08-29",
+    "tags": []
   }
 }
