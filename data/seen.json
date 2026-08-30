@@ -39653,5 +39653,85 @@
     "source_tier": 4,
     "first_seen": "2026-08-30",
     "tags": []
+  },
+  "fe6c1f410e555b6732cd08e5e9fa274a143f7fdf": {
+    "url": "https://towardsdatascience.com/8-tips-for-writing-effective-agent-instructions/",
+    "title": "8 Tips for Writing Effective Agent Instructions",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-08-31",
+    "tags": []
+  },
+  "3391bc68ebea20e7486c136df6e803978ae0e6f5": {
+    "url": "https://towardsdatascience.com/context-engineering-is-changing-heres-what-it-means-for-data-scientists/",
+    "title": "Context Engineering Is Changing. Here’s What It Means for Data Scientists",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-08-31",
+    "tags": []
+  },
+  "0e99664573d4b17fbba2519a2f4216664f68154f": {
+    "url": "https://towardsdatascience.com/noisy-text-in-rag-typos-ocr-and-the-gap-classical-spell-check-leaves/",
+    "title": "Noisy Text in RAG: Typos, OCR, and the Gap Classical Spell-Check Leaves",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-08-31",
+    "tags": []
+  },
+  "a26796fcc143927b1e682d60d8191643333a479f": {
+    "url": "https://www.analyticsvidhya.com/blog/2026/08/free-ai-automation-courses-with-certificates/",
+    "title": "Top 7 Free AI Automation Courses with Certificates",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-08-31",
+    "tags": []
+  },
+  "1e0d2ad7cf6cc67acdf2bcc67b4e1aab4595e43a": {
+    "url": "https://techcrunch.com/2026/08/30/musks-faster-path-to-more-gas-turbines-comes-with-pollution-problem/",
+    "title": "Musk’s faster path to more gas turbines comes with pollution problem",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-31",
+    "tags": []
+  },
+  "8cafc050dee18618e41c1b4a8ed224e3e1d7bae0": {
+    "url": "https://techcrunch.com/2026/08/30/caterpillar-is-bringing-to-ai-deployment-what-it-learned-from-automating-mining/",
+    "title": "Caterpillar is bringing to AI deployment what it learned from automating mining",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-31",
+    "tags": []
+  },
+  "ac5ababfb0d0ba23b64755f9a084259e59040e59": {
+    "url": "https://arstechnica.com/gaming/2026/08/a-12tb-steam-teraleak-spills-more-than-a-decade-of-lost-pc-gaming-history/",
+    "title": "A 12TB Steam “teraleak” spills more than a decade of lost PC gaming history",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-31",
+    "tags": []
+  },
+  "6878fa0617cc6824e0cd1806a4cc0e0f58e286d1": {
+    "url": "https://arstechnica.com/space/2026/08/why-it-matters-that-president-trump-just-dialed-into-a-nasa-news-conference/",
+    "title": "Why it matters that President Trump just dialed into a NASA news conference",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-31",
+    "tags": []
+  },
+  "2295fda68b4afe33614c3c0efaeb4486aaa70153": {
+    "url": "https://arstechnica.com/ai/2026/08/inside-metas-push-to-put-robots-to-work-in-data-centers/",
+    "title": "Inside Meta’s push to put robots to work in data centers",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-08-31",
+    "tags": []
+  },
+  "ea263f10911b6ab736990da0ba91e850701a9378": {
+    "url": "https://www.wired.com/story/why-the-hottest-new-wearables-want-to-be-ignored/",
+    "title": "Why the Hottest New Wearables Want to Be Ignored",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-08-31",
+    "tags": []
   }
 }
