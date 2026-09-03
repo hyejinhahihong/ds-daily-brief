@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI &amp; ML News Letter · 09/04</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --accent:#5DB8A6; --accent-hover:#479B8B; --accent-weak:#E8F4F1;
+  --focus-ring:rgba(93,184,166,.5);
+  --bg:#FAF9F5; --bg-subtle:#F0EEE6; --border:#E7E3D9;
+  --text:#1F1E1D; --text-2:#6B6862; --text-3:#A39E94;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}}
+:root[data-theme="dark"]{
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover);text-decoration:underline}
+strong{font-weight:600;color:var(--text)}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px;border-radius:3px}
+
+/* 모바일 우선 단일 컬럼 (<1200px). 덩어리 중앙 정렬은 margin:0 auto. */
+.page{max-width:760px;margin:0 auto;padding:20px 18px 40px}
+
+/* --- 마스트헤드 (뉴스레터 제호) --- */
+.mast{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+  padding-bottom:14px;border-bottom:2px solid var(--text);margin-bottom:24px}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--accent);
+  text-transform:uppercase;margin:0 0 6px}
+.mast-title{font-size:26px;font-weight:600;margin:0;letter-spacing:-.01em;line-height:1.15}
+.mast-date{font-size:14px;color:var(--text-2);margin-top:8px}
+.themebtn{flex:none;background:var(--bg-subtle);border:1px solid var(--border);color:var(--text-2);
+  border-radius:20px;padding:5px 12px;font-size:13px;cursor:pointer;font-family:inherit}
+.topnav{margin-top:11px;display:flex;gap:16px;font-size:13px}
+.topnav a{color:var(--text-2);font-weight:500} .topnav a:hover{color:var(--accent)}
+@media (min-width:640px){.mast-title{font-size:31px}}
+
+/* --- TODAY'S TOP 3 --- */
+.top3{background:var(--accent-weak);border-radius:12px;padding:14px 18px;margin-bottom:24px}
+.top3 h2{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--accent);margin:0 0 8px}
+.top3 ol{margin:0;padding:0;list-style:none}
+.top3 li{padding:4px 0 4px 22px;position:relative;font-size:15px;color:var(--text)}
+.top3 li::before{content:"\2605";position:absolute;left:0;color:var(--accent);font-size:12px;top:7px}
+.top3 .t3cat{color:var(--text-2);font-size:12px;margin-right:5px}
+.top3 a{color:var(--text)} .top3 a:hover{color:var(--accent-hover)}
+
+/* --- 목차 (TOC) --- */
+.toc{margin-bottom:26px}
+.toc h2{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--text-2);margin:0 0 8px}
+.toc ul{margin:0;padding:0;list-style:none}
+.toc li{padding:6px 0;border-top:1px solid var(--border)}
+.toc li:first-child{border-top:none}
+.toc .r{display:flex;gap:6px;align-items:baseline;font-size:14px}
+.toc .nm{font-weight:500;color:var(--text)} .toc a:hover .nm{color:var(--accent)}
+.toc .cnt{color:var(--text-3);font-size:12px}
+.toc .lead{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  font-size:12px;color:var(--text-2);margin-top:2px;line-height:1.4}
+.toc li.active .nm{color:var(--accent)}
+.toc li.active{border-left:2px solid var(--accent);padding-left:8px;margin-left:-10px}
+
+/* --- 섹션 --- */
+.sec{margin:0 0 34px;scroll-margin-top:14px}
+.sec-h{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:0 0 2px;padding-top:6px}
+.sec-h .nm{font-size:20px;font-weight:600}
+.sec-h .cnt{font-size:13px;color:var(--text-3)}
+.sec-h .all{font-size:12px;color:var(--text-3);margin-left:auto}
+.sec-h .all span{color:var(--text-2)}
+.sec-h .exp{font-size:12px;background:none;border:1px solid var(--border);color:var(--text-2);
+  border-radius:14px;padding:2px 10px;cursor:pointer;font-family:inherit}
+.sec-desc{font-size:13px;color:var(--text-2);margin:0 0 8px}
+.sec-empty{font-size:14px;color:var(--text-3);padding:4px 0 6px}
+.backtop{display:inline-block;font-size:12px;color:var(--text-3);margin-top:6px}
+
+/* --- 아이템 (아코디언) — 거터(번호) + 단일 콘텐츠 컬럼 (DESIGN §3 v4). 좌측 정렬선 1개. --- */
+.item{border-bottom:1px solid var(--border);--gutter:28px}
+.item>summary{list-style:none;cursor:pointer;padding:16px 26px 16px 0;position:relative;
+  display:grid;grid-template-columns:var(--gutter) 1fr;align-items:start}
+.item>summary::-webkit-details-marker{display:none}
+.item>summary::after{content:"\25B8";position:absolute;right:2px;top:16px;color:var(--text-3);
+  font-size:13px;transition:transform .15s;display:inline-block}
+.item[open]>summary::after{transform:rotate(90deg)}
+.num{font-size:13px;color:var(--text-3);font-variant-numeric:tabular-nums;font-weight:500;padding-top:3px}
+.t3star{color:var(--accent);font-size:11px;margin-right:2px}
+.body-col{min-width:0}
+.it-title{display:block;font-size:18px;font-weight:600;color:var(--text);line-height:1.4}
+.item>summary:hover .it-title{color:var(--accent)}
+.it-sub{display:block;font-size:13px;color:var(--text-2);margin-top:3px;line-height:1.35}
+.it-meta{display:block;font-size:13px;color:var(--text-2);margin-top:6px}
+.it-lede{display:block;font-size:15px;color:var(--text-2);margin-top:7px;line-height:1.5}
+.item[open] .it-lede{color:var(--text)}
+/* 접힘 본문도 콘텐츠 컬럼에 정렬 (거터만큼 들여씀) */
+.it-body{padding:0 0 20px var(--gutter)}
+.it-body p{margin:0 0 10px}
+@media (min-width:900px){.item{--gutter:40px}}
+.slot-l{font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--text-2);margin:14px 0 2px}
+.tags{margin-top:10px}
+.tag{display:inline-block;font-size:12px;color:var(--text-2);background:var(--bg-subtle);
+  border:1px solid var(--border);border-radius:12px;padding:1px 9px;margin:0 5px 5px 0}
+.prev{font-size:13px;color:var(--text-3);margin-top:8px}
+.src-cta{display:inline-block;margin-top:12px;font-size:14px;font-weight:500;color:var(--accent)}
+.weak{color:var(--accent);font-size:12px;border:1px solid var(--accent);border-radius:5px;
+  padding:0 6px;margin-left:6px}
+
+/* --- "다루는 주제" 푸터 --- */
+.topics{margin-top:36px;padding-top:22px;border-top:2px solid var(--text)}
+.topics h2{font-size:15px;font-weight:600;margin:0 0 12px}
+.topics ul{margin:0;padding:0;list-style:none}
+.topics li{padding:7px 0;border-top:1px solid var(--border);font-size:13px;color:var(--text-2)}
+.topics li:first-child{border-top:none}
+.topics .tnm{font-weight:600;color:var(--accent);margin-right:6px}
+
+/* --- 데스크톱 (≥1200px): 좌측 sticky TOC(260) + 본문(720), 덩어리 중앙 정렬 --- */
+@media (min-width:1200px){
+  /* max-width = 260+44+720 그리드(1024) + 좌우 padding(18*2). box-sizing:border-box
+     라 padding 을 포함해야 본문 720 이 찌그러지지 않는다. */
+  .page{max-width:1060px;display:grid;grid-template-columns:260px minmax(0,720px);
+    column-gap:44px;justify-content:center;align-items:start;padding-top:28px}
+  .mast{grid-column:1/3}
+  .toc{grid-column:1;grid-row:2/999;position:sticky;top:24px;margin:0;align-self:start}
+  .top3,.main{grid-column:2}
+  .topics{grid-column:1/3}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="mast">
+    <div class="mast-l">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1 class="mast-title">AI &amp; ML News Letter</h1>
+      <div class="mast-date">2026 / 09 / 04 (금) · 16건</div>
+      <nav class="topnav"><a href="../../../archive.html">📅 지난 브리핑</a>
+        <a href="#topics">🗂 주제별 보기</a></nav>
+    </div>
+    <button id="tbtn" class="themebtn" type="button">🌓 테마</button>
+  </header>
+  <section class="top3"><h2>TODAY'S TOP 3</h2><ol><li><a href="#d75554c78e0f"><span class="t3cat">[예측 모델링]</span>Google DeepMind, 신규 전 지구 기상 예측 AI 모델 &#x27;WeatherNext 3&#x27; 공개</a></li><li><a href="#89eea1f43233"><span class="t3cat">[예측 모델링]</span>Do Tabular Foundation Models Know Physics? Contamination, Units, and the Deterministic Limit</a></li><li><a href="#44a6c9acd9ce"><span class="t3cat">[실무 사례 · 노하우]</span>Spotify, &#x27;Portal&#x27;로 Claude Code 토큰 사용량 90% 절감 — I/O 병목 최적화가 핵심</a></li></ol></section>
+  <nav class="toc" id="toc"><h2>오늘의 목차</h2><ul><li data-cat="ai-agent"><a href="#ai-agent"><span class="r"><span class="nm">AI Agent</span><span class="cnt">2</span></span><span class="lead">CAPTURE, 개인화 LLM 에이전트 메모리 오염 방지 — 승률 71.5%, 오염 성공률 11.5%로 억제</span></a></li><li data-cat="llm-foundation-model"><a href="#llm-foundation-model"><span class="r"><span class="nm">LLM / Foundation Model</span><span class="cnt">2</span></span><span class="lead">350M 모델, GRPO 100스텝만으로 구조화 출력 성능 개선</span></a></li><li data-cat="deep-learning"><a href="#deep-learning"><span class="r"><span class="nm">Deep Learning</span><span class="cnt">2</span></span><span class="lead">XMerge, LLM 레이어 제거 압축법 제안 — k=4 최대 압축서 7개 백본 중 6개서 CORE·MMLU 1위</span></a></li><li data-cat="predictive-modeling"><a href="#predictive-modeling"><span class="r"><span class="nm">예측 모델링</span><span class="cnt">3</span></span><span class="lead">Google DeepMind, 신규 전 지구 기상 예측 AI 모델 &#x27;WeatherNext 3&#x27; 공개</span></a></li><li data-cat="causal-inference"><a href="#causal-inference"><span class="r"><span class="nm">인과추론</span><span class="cnt">2</span></span><span class="lead">COSTA: 네트워크-시간적 간섭 하 실험설계, 공분산 최적화로 RMSE 대폭 감소</span></a></li><li data-cat="mlops"><a href="#mlops"><span class="r"><span class="nm">MLOps / ML Engineering</span><span class="cnt">2</span></span><span class="lead">Meta, ZippyDB 프록시 ZGateway 도입 — 커넥션 폭증·재부팅 루프 장애 원천 차단</span></a></li><li data-cat="practice"><a href="#practice"><span class="r"><span class="nm">실무 사례 · 노하우</span><span class="cnt">1</span></span><span class="lead">Spotify, &#x27;Portal&#x27;로 Claude Code 토큰 사용량 90% 절감 — I/O 병목 최적화가 핵심</span></a></li><li data-cat="industry-application"><a href="#industry-application"><span class="r"><span class="nm">산업 적용 사례</span><span class="cnt">2</span></span><span class="lead">Playco, GPT-6 Astra로 게임 프로토타입 제작 — 그레이박스 1개서 3종 파생, 수동 수정 50% 감소</span></a></li></ul></nav>
+  <main class="main"><section class="sec" id="ai-agent"><div class="sec-h"><span class="nm">AI Agent</span><span class="cnt">2건</span><span class="all"><a href="../../../category/ai-agent.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="ai-agent">전체 펼치기</button></div><div class="sec-desc">AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</div><details class="item" id="ea65aa11e635"><summary><span class="num">01</span><span class="body-col"><span class="it-title">CAPTURE: Disentangling Preference Drift from Memory Poisoning in Personalized LLM Agents</span><span class="it-sub">CAPTURE, 개인화 LLM 에이전트 메모리 오염 방지 — 승률 71.5%, 오염 성공률 11.5%로 억제</span><span class="it-meta">📄 논문 · arxiv.org · ICLR 2027</span><span class="it-lede">개인화 언어 에이전트는 장기 메모리로 사용자에 적응하지만, 이 메모리가 새로운 정보와 충돌할 때 진짜 선호 변화와 임시적 맥락 변화, 모호성, 악의적 메모리 오염을 구분해야 하는 문제가 있다.</span></span></summary><div class="it-body"><p>저자들은 이를 잠재 사용자 상태에 대한 연속시간 부분관측 결정과정으로 정식화하고, 최신성과 출처만 보는 규칙으로는 부족함을 보인다. CAPTURE는 신경망 미분방정식 기반 신념 추적기, 다중 시간축 메모리 원장, 불확실성 기반 확인 요청, 인용된 메모리에 대한 반사실 검증을 결합한다. 96명 사용자의 480개 held-out 에피소드에서 CAPTURE는 <strong>71.5% 승률</strong>을 기록했으며, 동일하게 감독학습된 베이스라인(69.3%)과 최강 휴리스틱 베이스라인(66.1%)을 앞섰다. 고정 정책 공격의 성공률을 <strong>11.5%</strong>로 제한하면서도 진짜 선호 업데이트의 83.5%는 수용했지만, 공개된 가중치에 접근 가능한 적응형 공격자에게는 성공률이 24.7%까지 올라 적응성-보안성 간 트레이드오프가 드러났다.</p><div class="slot-l">WHY IT MATTERS</div><p>메모리 증강 LLM 에이전트가 확산되면서 저장된 선호를 조작하는 메모리 오염 공격이 실질적 위협이 되는데, 이는 개인화 시스템 설계 시 보안을 정면으로 고려해야 함을 시사한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>최신성과 출처 기반의 기존 휴리스틱 규칙 대비, 선호의 진위 자체를 명시적으로 모델링해 개인화와 견고성을 동시에 개선한다는 점이 다르다.</p><a class="src-cta" href="https://arxiv.org/abs/2609.02265v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="70e852983b34"><summary><span class="num">02</span><span class="body-col"><span class="it-title">AWS, Bedrock AgentCore로 AI-DLC 구현 사례 공개 — SQL 스키마→ER 다이어그램 자동 생성과 멀티에이전트 코드 보안 분석</span><span class="it-sub">AI-driven development lifecycle using Amazon Bedrock AgentCore</span><span class="it-meta">✍️ 블로그 · aws.amazon.com</span><span class="it-lede">AWS는 Amazon Bedrock AgentCore와 Kiro 등 코딩 에이전트를 활용한 AI-Driven Development Lifecycle(AI-DLC) 구축 단계의 두 가지 레퍼런스 구현을 소개한다.</span></span></summary><div class="it-body"><p>첫 번째는 AgentCore 런타임을 이용해 SQL 스키마의 DDL을 분석하고 <strong>Mermaid ER 다이어그램</strong>을 자동 생성해 S3에 저장하는 이벤트 기반 서버리스 시스템으로, 테이블·제약조건·외래키 등 메타데이터만 읽고 실제 데이터는 다루지 않는다. 두 번째는 AgentCore Gateway와 AgentCore memory, 외부 도구 연동을 결합한 멀티에이전트 아키텍처로 CI/CD 파이프라인에 올라온 코드를 분석해 보안 평가, CVE 점검, 정책 준수 리포트를 생성한다. 두 구현 모두 사람이 핵심 결정을 검토하는 human-in-the-loop 거버넌스를 유지하면서 반복 작업을 AI가 처리하는 구조를 보여준다. GitHub 저장소에 전체 배포 방법이 함께 제공된다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI가 아키텍처 제안부터 코드 생성, 배포 산출물까지 담당하되 인간이 기술적 판단을 실시간으로 승인하는 구조를 실제 코드 패턴으로 제시해, 개념적 프레임워크와 실무 구현 사이의 간극을 메우려는 시도라는 점에서 참고할 가치가 있다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존에는 ER 다이어그램 작성과 코드 보안 점검이 수작업이나 별도 도구로 이루어져 스키마 변경 시 문서가 쉽게 오래되는 문제가 있었으나, 이 구현은 <strong>AgentCore 런타임·Gateway·memory</strong>를 조합해 모듈화된 에이전트 워크플로우로 자동화한다는 점이 다르다.</p><a class="src-cta" href="https://aws.amazon.com/blogs/machine-learning/ai-driven-development-lifecycle-using-amazon-bedrock-agentcore/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="llm-foundation-model"><div class="sec-h"><span class="nm">LLM / Foundation Model</span><span class="cnt">2건</span><span class="all"><a href="../../../category/llm-foundation-model.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="llm-foundation-model">전체 펼치기</button></div><div class="sec-desc">LLM·파운데이션 모델 — 사전학습·정렬·추론</div><details class="item" id="45020768fad9"><summary><span class="num">01</span><span class="body-col"><span class="it-title">350M 모델, GRPO 100스텝만으로 구조화 출력 성능 개선</span><span class="it-sub">Fine-tuning a 350M Model for Better Structured Outputs in 100 GRPO Steps</span><span class="it-meta">📰 뉴스 · huggingface.co<span class="weak">원문 근거 부족</span></span><span class="it-lede">350M 규모 모델을 GRPO 방식으로 100스텝 미세조정하여 구조화된 출력 생성 성능을 개선했다는 소식이다.</span></span></summary><div class="it-body"><div class="slot-l">WHY IT MATTERS</div><p>작은 모델과 적은 학습 스텝으로도 구조화 출력 개선이 가능하다면 저비용 파인튜닝 사례로 참고할 만하다.</p><div class="tags"><span class="tag">#fine-tuning</span><span class="tag">#structured-output</span></div><a class="src-cta" href="https://huggingface.co/blog/grpo-with-trl-ifstruct" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="2e155b11d809"><summary><span class="num">02</span><span class="body-col"><span class="it-title">OpenAI GPT-6 Astra 안전성 보고 — Preparedness Framework 사이버보안 항목서 &#x27;심각(Critical)&#x27; 수준 최초 도달</span><span class="it-sub">Safety overview: GPT-6 Astra</span><span class="it-meta">✍️ 블로그 · openai.com</span><span class="it-lede">OpenAI가 GPT-6 Astra의 안전성 개요를 공개했다.</span></span></summary><div class="it-body"><p>GPT-6 Astra는 현재 가장 광범위하게 배포된 최고 성능 모델이며, 회사의 Preparedness Framework 기준 <strong>사이버보안 역량에서 Critical 등급에 도달한 첫 모델</strong>이다.</p><div class="slot-l">WHY IT MATTERS</div><p>사이버보안 역량이 Critical 등급에 이르렀다는 것은 모델이 악용될 경우의 잠재적 위험이 이전 세대보다 크게 높아졌음을 의미해, 배포 정책과 안전장치 설계에 직접적인 영향을 준다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 GPT 모델들이 Preparedness Framework의 낮은 위험 등급에 머물렀던 것과 달리, GPT-6 Astra는 <strong>사이버보안 카테고리에서 최초로 Critical 수준</strong>에 도달했다는 점이 다르다.</p><div class="tags"><span class="tag">#safety</span><span class="tag">#alignment</span></div><a class="src-cta" href="https://openai.com/index/safety-overview-gpt-6-astra" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="deep-learning"><div class="sec-h"><span class="nm">Deep Learning</span><span class="cnt">2건</span><span class="all"><a href="../../../category/deep-learning.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="deep-learning">전체 펼치기</button></div><div class="sec-desc">딥러닝 — 아키텍처·학습기법 자체</div><details class="item" id="e03363443ce1"><summary><span class="num">01</span><span class="body-col"><span class="it-title">XMerge: Cross-Axis Selection and Reconstructive Layer Merging for LLM Depth Compression</span><span class="it-sub">XMerge, LLM 레이어 제거 압축법 제안 — k=4 최대 압축서 7개 백본 중 6개서 CORE·MMLU 1위</span><span class="it-meta">📄 논문 · arxiv.org · NeurIPS 2026</span><span class="it-lede">XMerge는 트랜스포머 레이어 전체를 제거하는 깊이 압축 기법으로, 크기·각도 변화가 작은 블록을 고르는 cross-axis selection과 인접 블록을 재학습해 원래 두 블록 출력을 재현하는 local boundary reconstruction 두 요소로 구성된다.</span></span></summary><div class="it-body"><p>태스크 라벨이나 종단간 파인튜닝 없이 아키텍처 변경이나 추가 추론 파라미터 없이 작동한다. Llama·Qwen 7개 백본(0.5B~8B)과 5개 기존 베이스라인, 3단계 레이어 축소 수준에서 평가한 결과, 가장 공격적인 제거(k=4)에서 <strong>CORE와 MMLU 모두 7개 중 6개 백본에서 1위</strong>를 기록했다. 14개 (모델, 환경) 조합 전체에서 성능이 붕괴하지 않은 유일한 방법이었으며, ablation 결과 local reconstruction이 성능 향상의 대부분을 담당했다.</p><div class="slot-l">WHY IT MATTERS</div><p>레이어 제거 기반 압축은 표준 서빙 구조를 유지할 수 있지만 모델별로 품질 손실이 예측 불가능했는데, 이를 안정적으로 줄이는 방법은 실제 추론 비용 절감에 직결된다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 5개 공개 베이스라인 대비 가장 공격적인 압축 수준(k=4)에서 우위가 가장 크고, <strong>성능 붕괴 없이</strong> zero-shot·in-context 환경 모두에서 top-2를 유지한 점이 차별점이다.</p><a class="src-cta" href="https://arxiv.org/abs/2609.02083v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="3c18ddd9e44b"><summary><span class="num">02</span><span class="body-col"><span class="it-title">FlashKAN: B-Spline KANs via Truncated Power Form</span><span class="it-sub">FlashKAN, B-스플라인 KAN 순전파를 truncated power form으로 재구성해 GPU 커널 하나로 압축</span><span class="it-meta">📄 논문 · arxiv.org · ICLR 2027</span><span class="it-lede">KAN은 노드가 아닌 엣지에 학습 가능한 B-스플라인 활성화를 두는데, 기존 Cox-de Boor 재귀 방식은 차수 k의 스플라인마다 k번의 순차 연산이 필요해 순전파 시간의 <strong>90% 이상</strong>을 차지한다.</span></span></summary><div class="it-body"><p>FlashKAN은 이 재귀 대신 균일 3차 B-스플라인을 이동된 매듭 위치에서의 5개 (x)_+^3 항으로 표현하는 근사이론의 고전적 결과인 truncated power form을 사용한다. torch.compile로 융합된 구현을 통해 재귀, 스팬 탐색, scatter-gather 연산을 모두 제거하고 단일 GPU 커널로 압축했으며, 정규화된 입력을 [0, k+1]로 클램핑하는 bounded-coordinate 안정화 기법으로 파괴적 상쇄 문제를 방지했다. pip install flashkan으로 설치 가능한 오픈소스 패키지로, 기존 KAN 레이어의 드롭인 대체품으로 제공된다.</p><div class="slot-l">WHY IT MATTERS</div><p>KAN의 실용성을 가로막던 핵심 병목인 순전파 연산 비용을 근본적으로 재설계해 해결한 사례로, KAN 기반 모델의 실제 배포 가능성을 높인다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p><strong>기존 Cox-de Boor 재귀</strong> 방식이 파괴적 상쇄 문제 때문에 채택되어 온 것과 달리, FlashKAN은 truncated power form과 bounded-coordinate 클램핑으로 재귀 없이도 수치 안정성을 확보했다.</p><a class="src-cta" href="https://arxiv.org/abs/2609.01956v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="predictive-modeling"><div class="sec-h"><span class="nm">예측 모델링</span><span class="cnt">3건</span><span class="all"><a href="../../../category/predictive-modeling.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="predictive-modeling">전체 펼치기</button></div><div class="sec-desc">예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</div><details class="item" id="d75554c78e0f" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">Google DeepMind, 신규 전 지구 기상 예측 AI 모델 &#x27;WeatherNext 3&#x27; 공개</span><span class="it-sub">Introducing WeatherNext 3, our most advanced and accurate global weather AI model</span><span class="it-meta">✍️ 블로그 · deepmind.google<span class="weak">원문 근거 부족</span></span><span class="it-lede">Google DeepMind가 새로운 전 지구 기상 예측 AI 모델 WeatherNext 3를 공개했다는 내용의 블로그 글이다.</span></span></summary><div class="it-body"><p>원문 초록이 제공되지 않아 세부 방법이나 성능 수치는 확인할 수 없다.</p><div class="slot-l">WHY IT MATTERS</div><p>기상 예측 AI 모델의 신규 버전 출시 소식으로, 관련 분야 동향 파악에 참고할 만하다.</p><div class="tags"><span class="tag">#timeseries</span></div><a class="src-cta" href="https://deepmind.google/blog/introducing-weathernext-3-our-most-advanced-and-accurate-global-weather-ai-model/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="89eea1f43233" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>02</span><span class="body-col"><span class="it-title">Do Tabular Foundation Models Know Physics? Contamination, Units, and the Deterministic Limit</span><span class="it-sub">표 기반 파운데이션 모델, 물리를 아는가 — TabPFN-3 등 4종, 316개 물리 방정식서 6개 베이스라인 압도하지만 단위·무결정성 못 다뤄</span><span class="it-meta">📄 논문 · arxiv.org · NeurIPS 2026</span><span class="it-lede">연구진은 TabPFN-3, TabICLv2, TabDPT, Real-TabPFN-2.5 등 4개 표 기반 파운데이션 모델(TFM)을 6개 베이스라인과 함께 316개 물리 방정식에서 샘플링한 데이터셋으로, 도메인 내외 조건에서 평가했다.</span></span></summary><div class="it-body"><p>TFM은 별도 튜닝 없이도, 그리고 튜닝 후에도 베이스라인을 <strong>압도하는</strong> 성능을 보였다. 그러나 이 모델들의 사전분포(prior)는 잡음이 없는 결정론적 메커니즘도, 물리 단위도 표현하지 못한다는 것을 보였다. 이 때문에 TFM은 물리 현상을 보간(interpolate)할 수는 있지만 아직 진정한 물리 모델로 작동하지는 못한다.</p><div class="slot-l">WHY IT MATTERS</div><p>TFM이 베이지안 사전분포를 통해 물리 법칙 비슷한 패턴을 암묵적으로 학습했는지는 이 모델들을 과학 데이터에 적용할 때 신뢰성의 근본 한계를 가른다. <strong>단위와 결정론적 메커니즘을 표현하지 못한다는 사실</strong>은 TFM을 실제 물리 모델링에 쓸 때 주의해야 할 지점을 명확히 짚어준다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 연구가 TFM의 표 데이터 예측 성능 자체를 검증한 것과 달리, 이 논문은 TFM의 <strong>베이지안 사전분포</strong>가 물리적 단위와 무잡음 결정론적 메커니즘을 표현할 수 있는지를 직접 검증했다는 점에서 다르다.</p><div class="tags"><span class="tag">#tabular</span></div><a class="src-cta" href="https://arxiv.org/abs/2609.02766v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="d0233605c78a"><summary><span class="num">03</span><span class="body-col"><span class="it-title">Google, 소수 집단 유전체 예측 위한 전이학습 연구 소개</span><span class="it-sub">Transfer learning for genomic prediction in underrepresented populations</span><span class="it-meta">✍️ 블로그 · research.google<span class="weak">원문 근거 부족</span></span><span class="it-lede">구글이 유전체 예측(genomic prediction) 분야에서 대표성이 낮은 집단을 위한 전이학습 연구를 다룬 블로그 글을 공개했다.</span></span></summary><div class="it-body"><p>제공된 원문 내용이 매우 제한적이어서 구체적 방법이나 수치는 확인되지 않는다.</p><div class="slot-l">WHY IT MATTERS</div><p>유전체 데이터 기반 예측 모델이 특정 집단에 편중된 데이터로 학습되는 문제는 공정성과 정확도 모두에 영향을 미칠 수 있다.</p><div class="tags"><span class="tag">#tabular</span></div><a class="src-cta" href="https://research.google/blog/transfer-learning-for-genomic-prediction-in-underrepresented-populations/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="causal-inference"><div class="sec-h"><span class="nm">인과추론</span><span class="cnt">2건</span><span class="all"><a href="../../../category/causal-inference.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="causal-inference">전체 펼치기</button></div><div class="sec-desc">인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</div><details class="item" id="61be496705f1"><summary><span class="num">01</span><span class="body-col"><span class="it-title">COSTA: Covariance-Optimized Design and Causal Inference under Network-Temporal Interference</span><span class="it-sub">COSTA: 네트워크-시간적 간섭 하 실험설계, 공분산 최적화로 RMSE 대폭 감소</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">이 논문은 시간에 따라 관찰되는 네트워크 실험에서 발생하는 스필오버, 시간적 이월 효과, 설계로 인한 의존성을 다루기 위해 COSTA라는 결합 베르누이 설계를 제안한다.</span></span></summary><div class="it-body"><p>처리 마진과 비음 선형 네트워크-시간 노출 모델 하에서 Horvitz-Thompson 편향이 할당 절단의 음의 기대 가중치와 정확히 일치함을 보이고, 이를 바탕으로 할당 공분산을 직접 최적화하는 MSE 상한을 도출한다. 확장을 위해 네트워크와 시간 노출 연산자를 모사하면서도 유효한 베르누이 마진을 유지하는 임계 가우시안 크로네커 파라미터화를 도입한다. 또한 설계된 처리 의존성과 간섭 유발 결과 의존성의 결합 효과에 대한 추론 이론을 개발하고, RetailRocket과 MovieLens 반합성 실험을 통해 <strong>RMSE의 상당한 감소</strong>와 잘 보정된 설계 중심 구간을 확인했다.</p><div class="slot-l">WHY IT MATTERS</div><p>네트워크 효과와 시간적 이월이 동시에 존재하는 실험(예: 마켓플레이스, 추천시스템 A/B 테스트)에서 편향과 분산을 함께 통제할 수 있는 실질적 설계 도구를 제공한다는 점에서 실무 인과추론 연구자에게 중요하다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존의 개별 처리 마진만 고정하는 무작위 배정 방식과 달리, COSTA는 <strong>할당 공분산 자체를 직접 최적화</strong>하여 네트워크-시간적 노출 구조에 맞춘 편향-분산 트레이드오프를 설계 단계에서 조절한다.</p><div class="tags"><span class="tag">#did</span></div><a class="src-cta" href="https://arxiv.org/abs/2609.02032v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="286e0d95f3c6"><summary><span class="num">02</span><span class="body-col"><span class="it-title">GenCAR: Generative Counterfactual Alignment with Risk-Controlled Selection for Out-of-Distribution Recommendation</span><span class="it-sub">GenCAR, 분포외 추천서 반사실적 후보 생성하며 proxy-label FDR까지 통제 — 벤치마크 전반 회복률 향상</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">이 연구는 분포 변화(OOD) 상황에서 추천 후보 집합의 proxy-label 허위 발견율(FDR)을 통제하지 못하는 기존 방법의 한계를 지적하며, 이를 α-Valid Counterfactual Recommendation(α-VCR) 문제로 정식화한다.</span></span></summary><div class="it-body"><p>제안하는 GenCAR은 안정적 선호 표현은 고정하고 환경 요인에만 개입해 반사실적 후보를 생성하며, 오프라인 대형언어모델의 제안을 선호 앵커와 신뢰 반경 필터링으로 검증한다. 이후 conformal p-value 기반 Benjamini-Hochberg 선택으로 후보 집합을 걸러낸다. 이론적으로는 조건부 반사실적 근사 오차의 상한을 제시하고, 교환가능성과 양의 회귀 의존성 하에서 <strong>유한 샘플 기반 FDR 통제</strong>를 증명했으며, 임의의 의존성에서는 Benjamini-Yekutieli 보장을 제공한다. 다양한 벤치마크 실험에서 실제 허위 발견 비율을 검증하고 OOD 후보 회복 성능이 일관되게 향상됨을 보였다.</p><div class="slot-l">WHY IT MATTERS</div><p>추천 시스템이 분포 변화 상황에서 위험을 통제하며 후보를 늘리는 것은 실서비스 신뢰도와 직결되는 문제로, 통계적 보장 없이 반사실적 후보를 확장하면 잘못된 추천 노출 위험이 커진다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 OOD 추천 방법들이 랭킹 개선이나 반사실적 후보 구성에 집중하며 <strong>proxy-label FDR을 통제하지 않은 것</strong>과 달리, GenCAR은 conformal p-value와 Benjamini-Hochberg/Yekutieli 절차를 결합해 분포 무관하게 FDR을 보장한다.</p><div class="tags"><span class="tag">#causal-discovery</span><span class="tag">#uplift</span></div><a class="src-cta" href="https://arxiv.org/abs/2609.02162v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="mlops"><div class="sec-h"><span class="nm">MLOps / ML Engineering</span><span class="cnt">2건</span><span class="all"><a href="../../../category/mlops.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="mlops">전체 펼치기</button></div><div class="sec-desc">MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</div><details class="item" id="805f4bd19094"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Meta, ZippyDB 프록시 ZGateway 도입 — 커넥션 폭증·재부팅 루프 장애 원천 차단</span><span class="it-sub">ZGateway: Learnings from Putting a Proxy in Front of ZippyDB</span><span class="it-meta">✍️ 블로그 · engineering.fb.com</span><span class="it-lede">Meta는 초당 수십억 건을 처리하는 키밸류 스토어 ZippyDB 앞에 ZGateway라는 프록시를 도입해 클라이언트 트래픽을 통합했다.</span></span></summary><div class="it-body"><p>기존에는 백만 대 이상의 클라이언트가 수십만 대의 DB 호스트에 직접 연결해 <strong>다대다 TLS 커넥션 메시</strong>가 형성됐고, 클라이언트가 재시작하거나 배포가 롤아웃될 때마다 커넥션 재연결 폭주가 발생해 파일 디스크립터 고갈과 OOM으로 호스트가 크래시하는 사례가 있었다. ZGateway는 이 메시를 두 개의 제한된 홉으로 축소하고, 어드미션 컨트롤·로드밸런싱·리전 간 복원력·운영 기능을 한 곳에서 관리 가능하게 했다. 실제로 라우팅 버그로 모든 클라이언트가 샤드별 커넥션을 열어 파일 디스크립터 한계를 넘고 재부팅 루프에 빠진 사건도 ZGateway가 있으면 프록시 계층에서 차단할 수 있다고 설명한다.</p><div class="slot-l">WHY IT MATTERS</div><p>수백만 대 규모의 이질적 클라이언트 플릿을 직접 제어할 수 없는 상황에서, 프록시 계층은 백엔드 운영 팀이 커넥션 풀링·재시도·라우팅 같은 공통 로직을 한 곳에서 안전하게 개선할 수 있는 통제점을 제공한다는 점에서 대규모 분산 시스템 설계자에게 참고가 된다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>클라이언트가 각자 커넥션 풀링과 장애 복구를 관리하던 <strong>직접 접근 방식</strong> 대비, ZGateway는 프록시가 다대다 커넥션 메시를 두 개의 제한된 홉으로 collapse시켜 클라이언트 확장과 DB 통합이 서로 다른 속도로 진행되어도 결합을 끊어낸다.</p><a class="src-cta" href="https://engineering.fb.com/2026/09/03/core-infra/zgateway-proxy-zippydb-meta/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="b1c014de8738"><summary><span class="num">02</span><span class="body-col"><span class="it-title">Improving Evaluation Realism with Inference-Time Compute and Deployment Scaffolds</span><span class="it-sub">평가 인지 문제 해결 — critique refinement와 DISH 결합, 정렬 평가의 배포 유사도 최대 향상</span><span class="it-meta">📄 논문 · arxiv.org · NeurIPS 2026</span><span class="it-lede">모델이 테스트 상황과 실제 배포 상황을 구분해내는 &#x27;평가 인지&#x27; 문제는 정렬 평가의 신뢰도를 약화시킨다.</span></span></summary><div class="it-body"><p>이를 해결하기 위해 두 가지 기법을 제시하는데, 첫째는 시뮬레이터가 여러 후보 행동을 생성한 뒤 타겟 모델의 피드백을 받아 더 배포처럼 보이도록 정교화하는 <strong>critique refinement</strong>이고, 둘째는 코딩 환경에서 시뮬레이션과 실제 배포 간 격차를 줄이는 에이전트 하네스인 DISH(Deployment-Imitating SWE-Agent Harness)이다. 여러 타겟 모델에 대해 실험한 결과 두 기법을 함께 적용했을 때 각각 단독 적용보다 더 큰 현실성 개선을 보였다. 이는 추가 추론 연산을 단순히 감사(audit) 시간을 늘리는 것보다 더 효과적으로 활용한다는 것을 보여준다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI 안전성 평가에서 모델이 테스트임을 감지하고 다르게 행동하면 평가 결과 자체가 무의미해질 수 있어, 이런 회피를 줄이는 방법은 실제 위험 평가의 타당성을 높이는 핵심 과제다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>단순히 평가 시간을 늘려 현실성을 높이는 기존 접근 대비, 추론 시점 연산을 후보 행동 정교화와 배포 환경 모방 하네스에 투입해 <strong>더 효율적으로 배포와의 격차를 줄인다</strong>는 점이 다르다.</p><a class="src-cta" href="https://arxiv.org/abs/2609.02302v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="practice"><div class="sec-h"><span class="nm">실무 사례 · 노하우</span><span class="cnt">1건</span><span class="all"><a href="../../../category/practice.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="practice">전체 펼치기</button></div><div class="sec-desc">실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</div><details class="item" id="44a6c9acd9ce" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">Spotify, &#x27;Portal&#x27;로 Claude Code 토큰 사용량 90% 절감 — I/O 병목 최적화가 핵심</span><span class="it-sub">Portal by Spotify cut my Claude Code token usage by 90%</span><span class="it-meta">✍️ 블로그 · engineering.atspotify.com</span><span class="it-lede">Spotify 엔지니어링 블로그는 AI 코딩 에이전트 Claude Code를 사용할 때 실제 작업의 대부분이 &#x27;사고&#x27;가 아니라 <strong>I/O 처리</strong>라는 점을 지적한다.</span></span></summary><div class="it-body"><p>Portal by Spotify라는 도구를 통해 이 I/O 과정을 개선함으로써 토큰 사용량을 <strong>90% 절감</strong>했다고 밝힌다. 구체적인 최적화 방식보다는 문제의 본질, 즉 에이전트 작업에서 입출력 오버헤드가 토큰 소비의 주요 원인이라는 관찰에 초점을 맞춘 글이다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI 코딩 에이전트의 비용 절감은 모델 자체의 성능 개선보다 주변 I/O 아키텍처 개선에서 더 큰 효과를 낼 수 있음을 보여주는 실무 사례다.</p><div class="tags"><span class="tag">#optimization</span><span class="tag">#tool-use</span></div><a class="src-cta" href="https://engineering.atspotify.com/2026/9/portal-by-spotify-cut-my-claude-code-token-usage-by-90/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="industry-application"><div class="sec-h"><span class="nm">산업 적용 사례</span><span class="cnt">2건</span><span class="all"><a href="../../../category/industry-application.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="industry-application">전체 펼치기</button></div><div class="sec-desc">산업 적용 사례 — 산업 현장의 AI/ML 적용</div><details class="item" id="7a45b185cff5"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Playco, GPT-6 Astra로 게임 프로토타입 제작 — 그레이박스 1개서 3종 파생, 수동 수정 50% 감소</span><span class="it-sub">Playco cut manual fixes 50% prototyping games with GPT-6 Astra</span><span class="it-meta">✍️ 블로그 · openai.com</span><span class="it-lede">게임사 Playco가 OpenAI의 GPT-6 Astra 모델을 활용해 하나의 그레이박스(greybox) 기반 프로토타입에서 세 가지 테마별 게임 프로토타입을 제작했다.</span></span></summary><div class="it-body"><p>이전 모델 사용 시와 비교해 <strong>수동 수정 작업이 50% 줄었다</strong>고 보고했다. 초록에는 구체적인 제작 과정이나 추가 지표는 언급되지 않았다.</p><div class="slot-l">WHY IT MATTERS</div><p>게임 개발처럼 반복적인 프로토타이핑 작업에서 AI 모델이 실질적인 인력 절감 효과를 보여준 사례로, 산업 현장 적용 사례를 통해 모델 성능을 가늠할 수 있다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>이전 모델 대비 수동 수정이 50% 줄었다는 비교가 제시되지만, 이전 모델의 명칭이나 구체적 방식은 초록에 나와 있지 않다.</p><a class="src-cta" href="https://openai.com/index/playco-game-prototyping-with-astra" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="e8f14c149e9d"><summary><span class="num">02</span><span class="body-col"><span class="it-title">An Empirical Study on Zero-Data Bootstrapping for Conversational Recommender Systems</span><span class="it-sub">대화 데이터 없이 CRS 구축 — 리뷰·메타데이터로 합성 대화 생성, 실증 연구로 효과 입증</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">이 연구는 대화형 추천시스템(CRS)을 도메인 대화 데이터 없이 구축하는 방법을 실증적으로 분석한다.</span></span></summary><div class="it-body"><p>아이템 리뷰, 메타데이터, 사용자-아이템 상호작용 등 비대화 신호로부터 합성 대화 학습 데이터를 생성하고, Jensen-Shannon 다양성과 Fisher information 두 가지 정보이론적 선택 전략을 도메인, 모델 구조, 데이터셋, 파인튜닝 방식 전반에서 비교했다. 결과적으로 <strong>도메인 기반 합성 데이터가 제로샷 프롬프팅과 단순 합성 기법을 일관되게 능가</strong>했으며, 능동 선택 전략이 무작위 샘플링보다 데이터 효율이 높았다. 메타데이터와 협업 필터링 신호 모두 선택 품질을 높였고, 저자원 환경에서는 합성 데이터가 희소한 실제 대화 데이터를 보완하거나 대체할 수 있었다.</p><div class="slot-l">WHY IT MATTERS</div><p>신규 도메인마다 비용이 큰 대화 데이터를 수집하지 않고도 CRS를 구축할 수 있는 실용적 경로를 제시한다는 점에서, 데이터 확보가 어려운 산업 현장의 추천시스템 개발자에게 의미가 크다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존의 제로샷 프롬프팅이나 단순 합성 데이터 생성 방식 대비, 정보이론적 선택 전략(Jensen-Shannon, Fisher information)을 적용해 데이터 효율성과 선택 품질을 높였다는 점이 다르다.</p><a class="src-cta" href="https://arxiv.org/abs/2504.15476" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section></main>
+  <footer class="topics" id="topics"><h2>다루는 주제</h2><ul><li><a class="tnm" href="../../../category/ai-agent.html">AI Agent</a>AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</li><li><a class="tnm" href="../../../category/llm-foundation-model.html">LLM / Foundation Model</a>LLM·파운데이션 모델 — 사전학습·정렬·추론</li><li><a class="tnm" href="../../../category/deep-learning.html">Deep Learning</a>딥러닝 — 아키텍처·학습기법 자체</li><li><a class="tnm" href="../../../category/predictive-modeling.html">예측 모델링</a>예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</li><li><a class="tnm" href="../../../category/causal-inference.html">인과추론</a>인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</li><li><a class="tnm" href="../../../category/mlops.html">MLOps / ML Engineering</a>MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</li><li><a class="tnm" href="../../../category/practice.html">실무 사례 · 노하우</a>실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</li><li><a class="tnm" href="../../../category/industry-application.html">산업 적용 사례</a>산업 적용 사례 — 산업 현장의 AI/ML 적용</li></ul></footer>
+</div>
+<script>
+(function(){
+var r=document.documentElement,k="dsb-theme",s=localStorage.getItem(k);
+if(s)r.dataset.theme=s;
+document.getElementById('tbtn').addEventListener('click',function(){
+  var cur=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  var n=cur==='dark'?'light':'dark';r.dataset.theme=n;localStorage.setItem(k,n);});
+// 섹션 전체 펼치기/접기
+document.querySelectorAll('.exp').forEach(function(b){b.addEventListener('click',function(){
+  var sec=document.getElementById(b.dataset.sec);
+  var ds=sec.querySelectorAll('details.item'),open=b.dataset.state!=='open';
+  ds.forEach(function(d){d.open=open;});
+  b.dataset.state=open?'open':'closed';b.textContent=open?'전체 접기':'전체 펼치기';});});
+// 스크롤 위치 카테고리 TOC 활성 (데스크톱 사이드 TOC)
+var links={};document.querySelectorAll('.toc li[data-cat]').forEach(function(li){links[li.dataset.cat]=li;});
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){Object.values(links).forEach(function(l){l.classList.remove('active');});
+    if(links[e.target.id])links[e.target.id].classList.add('active');}});},
+  {rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('section.sec').forEach(function(s){obs.observe(s);});
+})();
+</script>
+</body>
+</html>
