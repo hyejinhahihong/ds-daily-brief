@@ -45636,5 +45636,133 @@
       "experiment-tracking",
       "deployment"
     ]
+  },
+  "0f3b76bc480d3619c3aaf50d3bb915575c29f5aa": {
+    "url": "https://openai.com/index/gpt-6-astra",
+    "title": "GPT-6 Astra: A new generation of intelligence",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-09-06",
+    "tags": []
+  },
+  "7da1a9d2a7cfb06a2e467ce569f90eb61e96f757": {
+    "url": "https://towardsdatascience.com/why-transformers-need-positional-encoding-for-time-series-a-visual-guide/",
+    "title": "Why Transformers Need Positional Encoding For Time Series: A Visual Guide",
+    "category": "deep-learning",
+    "source_tier": 3,
+    "first_seen": "2026-09-06",
+    "tags": []
+  },
+  "08124ed8bdb36460645b4e3600f70b051d89f4a3": {
+    "url": "https://towardsdatascience.com/dynamical-system-transfer-learning-with-reduced-order-models/",
+    "title": "Dynamical System Transfer Learning with Reduced Order Models",
+    "category": "deep-learning",
+    "source_tier": 3,
+    "first_seen": "2026-09-06",
+    "tags": []
+  },
+  "d12509200e14beb186b479d49ed5e01f258e06d2": {
+    "url": "https://www.analyticsvidhya.com/blog/2026/09/gpt-6-astra-explained/",
+    "title": "GPT-6 Astra: What’s Actually New in OpenAI’s New Frontier Model",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-09-06",
+    "tags": []
+  },
+  "1d3d4d76fcdcf8069778e79dd84a32be9b5936cd": {
+    "url": "https://techcrunch.com/2026/09/05/seattle-times-and-newsday-are-the-latest-publications-to-sue-openai-and-microsoft/",
+    "title": "Seattle Times and Newsday are the latest publications to sue OpenAI and Microsoft",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-09-06",
+    "tags": []
+  },
+  "05d8db6c17072c895eb003bdd1cfc7f22a79dfed": {
+    "url": "https://techcrunch.com/2026/09/05/hikers-rescued-after-using-google-gemini-for-planning/",
+    "title": "Hikers rescued after using Google Gemini for planning",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-09-06",
+    "tags": []
+  },
+  "1cb48b3f41519359a35494381fdef58c00e39297": {
+    "url": "https://techcrunch.com/2026/09/05/openai-confirms-wiki-incident-says-its-working-on-a-framework-for-more-disclosure/",
+    "title": "OpenAI confirms ‘wiki incident,’ says it’s ‘working on a framework’ for more disclosure",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-09-06",
+    "tags": []
+  },
+  "d7b2d01e2750bd0a685b7a3fb2331a026d963aa4": {
+    "url": "https://techcrunch.com/2026/09/04/xdof-just-three-months-out-of-stealth-is-in-talks-for-a-series-b-at-a-1-2b-valuation/",
+    "title": "XDOF, just three months out of stealth, is in talks for a Series B at a $1.2B valuation",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-09-06",
+    "tags": []
+  },
+  "fe3e9affeeaab43ce95185a9dcecbda45f08e8f3": {
+    "url": "https://techcrunch.com/2026/09/04/openais-rogue-agents-keep-escaping-with-no-formal-process-to-investigate-them/",
+    "title": "OpenAI’s rogue agents keep escaping, with no formal process to investigate them",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-09-06",
+    "tags": []
+  },
+  "261d4ea31809b2e02381e58dedb1505705413f1c": {
+    "url": "https://arstechnica.com/cars/2026/09/teslas-cybercab-has-been-deployed-and-its-already-under-investigation/",
+    "title": "Tesla’s Cybercab has been deployed, and it’s already under investigation",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-09-06",
+    "tags": []
+  },
+  "e602fec47f8b04fe43462236cd4327725c399bb7": {
+    "url": "https://arstechnica.com/space/2026/09/after-8-years-europes-bepicolombo-mission-is-on-final-approach-to-mercury/",
+    "title": "After 8 years, Europe's BepiColombo mission is on final approach to Mercury",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-09-06",
+    "tags": []
+  },
+  "b7783d569ea3f57438661194c2b993f2ceb1cc8b": {
+    "url": "https://arstechnica.com/security/2026/09/openai-agents-discussed-ways-to-escape-their-sandbox-on-public-wiki/",
+    "title": "OpenAI agents discussed ways to escape their sandbox on public wiki",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-09-06",
+    "tags": []
+  },
+  "f21ca7313d294404dd4bc9d6ead3afeb6c44f767": {
+    "url": "https://www.wired.com/story/security-news-this-week-openai-agents-hacked-another-website/",
+    "title": "OpenAI Agents Hacked Another Website",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-09-06",
+    "tags": []
+  },
+  "1af94936fe63940131dc8d1a31a63351d5fab55b": {
+    "url": "https://blog.neurips.cc/2026/09/05/neurips-newsletter-august-2026/",
+    "title": "NeurIPS Newsletter – August 2026",
+    "category": "practice",
+    "source_tier": 1,
+    "first_seen": "2026-09-06",
+    "tags": []
+  },
+  "abf15244a1c26dbdf7f652d47543f0340452ff31": {
+    "url": "https://arxiv.org/abs/2609.03199",
+    "title": "RoboTok: An Internet-Scale Data Engine for Human Demonstration Retrieval and Dexterous Manipulation Learning",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-09-06",
+    "tags": []
+  },
+  "7b6eba8b05c7651cfb19d62b6150f1ca8b6d8e17": {
+    "url": "https://arxiv.org/abs/2609.02887",
+    "title": "A Common Measure of Communication for Speech Brain-Computer Interfaces",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-09-06",
+    "tags": []
   }
 }
