@@ -45764,5 +45764,88 @@
     "source_tier": 1,
     "first_seen": "2026-09-06",
     "tags": []
+  },
+  "a8e8f9dc895a026b51bbe8a83b4fa897c6604f10": {
+    "url": "https://openai.com/index/an-alien-mind",
+    "title": "An Alien Mind",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-09-07",
+    "tags": []
+  },
+  "19672c4832d4c9bc0fd35c9ad6b6596c81afa104": {
+    "url": "https://openai.com/index/research-acceleration-view-inside-openai",
+    "title": "Research acceleration: The view inside OpenAI",
+    "category": "mlops",
+    "source_tier": 1,
+    "first_seen": "2026-09-07",
+    "tags": []
+  },
+  "6a7bdea8e7a13aff69e12aa6836bfbf5784c9620": {
+    "url": "https://towardsdatascience.com/text-watermarking-in-python-catch-whoever-copies-your-writing/",
+    "title": "Text Watermarking in Python: Catch Whoever Copies Your Writing",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-09-07",
+    "tags": []
+  },
+  "3933689d3551823b68ee4de004dd390ee0279565": {
+    "url": "https://towardsdatascience.com/linear-discriminant-analysis-lda-in-real-life-dimensionality-reduction-in-a-real-estate-dataset/",
+    "title": "Linear Discriminant Analysis (LDA) in Real-Life: Dimensionality Reduction in a Real-Estate Dataset",
+    "category": "predictive-modeling",
+    "source_tier": 3,
+    "first_seen": "2026-09-07",
+    "tags": [
+      "tabular",
+      "feature-selection"
+    ]
+  },
+  "c552c9e7d810d778b2c146410fa9955824be91a5": {
+    "url": "https://techcrunch.com/2026/09/06/authors-push-back-as-publishers-and-agents-seek-share-of-anthropic-settlement/",
+    "title": "Authors push back as publishers and agents make claims on Anthropic settlement",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-09-07",
+    "tags": []
+  },
+  "102c9d67ffb9589fd0890250fea2c5185fbc9bd1": {
+    "url": "https://techcrunch.com/2026/09/06/travis-kalanicks-atoms-might-be-getting-into-the-robotaxi-business/",
+    "title": "Travis Kalanick’s Atoms might be getting into the robotaxi business",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-09-07",
+    "tags": []
+  },
+  "6dfb5d4496c6e1a5d42445fcc764254ce840eb16": {
+    "url": "https://arstechnica.com/space/2026/09/german-company-becomes-first-in-europe-to-launch-fully-commercial-orbital-rocket/",
+    "title": "German company becomes first in Europe to launch fully commercial orbital rocket",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-09-07",
+    "tags": []
+  },
+  "310c6fb250e5f4c36083046577e5305dc7152065": {
+    "url": "https://arstechnica.com/science/2026/09/farmed-salmon-may-not-be-as-nutritious-as-it-once-was-new-research-suggests/",
+    "title": "Farmed salmon may not be as nutritious as it once was, new research suggests",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-09-07",
+    "tags": []
+  },
+  "33d99a24495ea1b4e8f42fe24ef33aaf053513fb": {
+    "url": "https://www.wired.com/story/my-brief-summer-fling-with-siri-ai/",
+    "title": "My Brief Summer Fling With Siri AI",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-09-07",
+    "tags": []
+  },
+  "128dff58f4910ec093ccb6a3e6380d3a9307bc4e": {
+    "url": "https://www.wired.com/story/why-china-is-still-the-bogeyman-for-data-center-enthusiasts/",
+    "title": "Why China Is the Bogeyman Data Center Enthusiasts Just Can't Quit",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-09-07",
+    "tags": []
   }
 }
