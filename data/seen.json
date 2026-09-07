@@ -45847,5 +45847,367 @@
     "source_tier": 4,
     "first_seen": "2026-09-07",
     "tags": []
+  },
+  "e02ae19def6b6f7c4df88746637a074f37e339ba": {
+    "url": "https://openai.com/index/supporting-independent-journalism-in-ukraine",
+    "title": "Supporting independent journalism in Ukraine",
+    "category": "practice",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": []
+  },
+  "9209c29d15bdf1fd74a51b60d8dc270c77349a49": {
+    "url": "https://lastweekin.ai/p/last-week-in-ai-343-gpt-6-openais",
+    "title": "Last Week in AI #343 - GPT-6, OpenAI’s agents chatted on a wiki, Fable 5.1",
+    "category": "llm-foundation-model",
+    "source_tier": 2,
+    "first_seen": "2026-09-08",
+    "tags": []
+  },
+  "063fd7bcfc30f3a9679f5898129bd79a0ad864cf": {
+    "url": "https://tldr.tech/ai/2026-09-07",
+    "title": "Claude proves Fermat 🧮, automated AI researcher 🔬, Z1 efficiency chip ⚡",
+    "category": "llm-foundation-model",
+    "source_tier": 2,
+    "first_seen": "2026-09-08",
+    "tags": []
+  },
+  "60cb69845e917cc81880207600f87a65cfbc0428": {
+    "url": "https://towardsdatascience.com/i-vibe-coded-an-app-in-just-two-hours-and-regretted-it-the-next-day/",
+    "title": "I Vibe-Coded an App in Just Two Hours (And Regretted It the Next Day)",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-09-08",
+    "tags": []
+  },
+  "378b5d980ad8182dae22a256c18a74201336a9ad": {
+    "url": "https://towardsdatascience.com/why-most-multi-agent-systems-fail-even-when-evaluation-passes/",
+    "title": "Why Most Multi-Agent Systems Fail Even When Evaluation Passes",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-09-08",
+    "tags": []
+  },
+  "9fedd478eb905130f12bac390b026d735daf0ef8": {
+    "url": "https://www.analyticsvidhya.com/blog/2026/09/grok-bot-automation-tutorial/",
+    "title": "Getting Started with Grok Bot",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-09-08",
+    "tags": []
+  },
+  "5b72f8a848e2981f73158be732a1e6817aba300e": {
+    "url": "https://www.technologyreview.com/2026/09/07/1143592/the-download-underground-hydrogen-search-rogue-openai-agents/",
+    "title": "The Download: the hunt for underground hydrogen and more rogue OpenAI agents",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-08",
+    "tags": []
+  },
+  "375e038f05f3a7093b3d03d123f73c1b6f8bcf8e": {
+    "url": "https://techcrunch.com/2026/09/07/artificial-intelligence-definition-glossary-hallucinations-guide-to-common-ai-terms/",
+    "title": "Opaque recurrence, and other AI terms that you should probably know",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-08",
+    "tags": []
+  },
+  "7e83c438bbee43e0024992448c916a290a33180a": {
+    "url": "https://arstechnica.com/features/2026/09/the-ai-data-center-boom-is-causing-new-accountability-problems/",
+    "title": "The complex corporate web behind a $3.2 billion AI data center",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-08",
+    "tags": []
+  },
+  "818717a7113eb93ef96d4ed22769267b5e396189": {
+    "url": "https://www.wired.com/story/whispering-complaints-into-your-phone-may-be-the-future-of-customer-feedback/",
+    "title": "Whispering Complaints Into Your Phone May Be the Future of Customer Feedback",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-08",
+    "tags": []
+  },
+  "39bb1a53d170127f0635a1f30c758cbe65aa4c73": {
+    "url": "https://tech.kakao.com/posts/834",
+    "title": "카카오, if(kakao)26 컨퍼런스 개최... 모든 연결에 지능을",
+    "category": "practice",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": []
+  },
+  "098166227226dec4ad8b768e6ddcb11059490ff2": {
+    "url": "https://toss.tech/article/technical-writing-2-eng",
+    "title": "2. Beyond Our Expertise",
+    "category": "practice",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": []
+  },
+  "963a2e7334fab1abf7c44bc3c62ee9f0043db168": {
+    "url": "https://toss.tech/article/technical-writing-1-eng",
+    "title": "1. Creating a Role That Didn’t Exist Before",
+    "category": "practice",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": []
+  },
+  "dbf925cd9db28ff8d8145277c596e906d5a8f523": {
+    "url": "https://toss.tech/article/toss-frontend-ai-docs-eng",
+    "title": "How Documents Find Developers at Toss",
+    "category": "practice",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": []
+  },
+  "35fee70156297ed658b27c73e28a5d3dd103b895": {
+    "url": "https://arxiv.org/abs/2609.04444",
+    "title": "HarvestBench: Measuring Whether LLM Agents Will Pay to Avoid Killing Animals",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": []
+  },
+  "ce355ed725f85dc6c34c2a8fea3485bd7d575be8": {
+    "url": "https://arxiv.org/abs/2609.00365",
+    "title": "Dr. Claw: An AI Scientist Workspace for Vibe Research",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": [
+      "agentic-workflow"
+    ]
+  },
+  "451e34cf7e7f01916b085a8158ef5dc72317aec5": {
+    "url": "https://arxiv.org/abs/2609.04720",
+    "title": "Knowing What Not to Answer: Selective Non-Compliance in Vision-Language Models",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": [
+      "alignment",
+      "safety"
+    ]
+  },
+  "08684e7398e6b7c147d0bdb4a9955f4fde000b4a": {
+    "url": "https://arxiv.org/abs/2609.04714",
+    "title": "Refuse without Refusal: A Structural Analysis of Safety-Tuning Responses for Reducing False Refusals in Language Models",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": [
+      "alignment",
+      "safety"
+    ]
+  },
+  "a11f2b0371c7b0746e33ee9f5d1df073a4a2b2ed": {
+    "url": "https://arxiv.org/abs/2609.03231",
+    "title": "The 2026 PNPL Competition: Word Classification and Efficient Cross-Subject Generalisation in LibriBrain100",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": [
+      "feature-selection"
+    ]
+  },
+  "581f5e9d4cc3f4bded0f7ac703032d2312d9e691": {
+    "url": "https://arxiv.org/abs/2609.05415",
+    "title": "UniMate: One Unified Model to Animate Diverse Skeletons",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": [
+      "generative-model"
+    ]
+  },
+  "46bb4c0335ef03624d4594569001c20008b6623e": {
+    "url": "https://arxiv.org/abs/2609.04190",
+    "title": "One Editor, Many Edits: A Unified Training-Free Framework for Diverse Video Editing",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": [
+      "generative-model",
+      "video"
+    ]
+  },
+  "bbb12c2122de2e3e6e16553ddabed830c0897b73": {
+    "url": "https://arxiv.org/abs/2609.04753",
+    "title": "Beneath the Surface of Chains-of-Thought: A Mechanistic Interpretation of Reasoning Operations in LLMs",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": [
+      "interpretability",
+      "reasoning"
+    ]
+  },
+  "cfcb2d8704532753764957fdfb5e38267e3aaee3": {
+    "url": "https://arxiv.org/abs/2609.04242",
+    "title": "Training-Free Speech-Centric Omni Understanding with Frozen VLMs",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": [
+      "multimodal"
+    ]
+  },
+  "91586fad12583bb9ba8a58c047be77a5f1ec8192": {
+    "url": "https://arxiv.org/abs/2609.02750",
+    "title": "Bilevel Coordinated Reflection: A Game-Theoretic Approach to Multi-Agent LLM Systems",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": [
+      "multi-agent",
+      "orchestration"
+    ]
+  },
+  "61384f9c261ad6f8e793cdb499386f0a4ab70754": {
+    "url": "https://arxiv.org/abs/2609.03586",
+    "title": "The Attention Triangle in Audio-Video Models",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": [
+      "multimodal",
+      "attention"
+    ]
+  },
+  "5e416de1481d1db96f399d0f2495529d59742972": {
+    "url": "https://arxiv.org/abs/2608.05879",
+    "title": "To See a World in a Living Context: Unified Indoor-Outdoor Urban World Generation",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": [
+      "generative-model",
+      "3d"
+    ]
+  },
+  "11c7904c47ef575ee8c996013127f3c7b3da61bf": {
+    "url": "https://arxiv.org/abs/2609.04611",
+    "title": "τ^τ-Bench: An Environment for End-To-End, Realistic Agent Construction",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": [
+      "agentic-workflow",
+      "benchmark"
+    ]
+  },
+  "3b1e27fab018386204f2ee9f20bfd2bce0f0071f": {
+    "url": "https://arxiv.org/abs/2609.00581",
+    "title": "Enoki: Efficient Multi-Level Hallucination Detection",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": [
+      "reliability",
+      "hallucination"
+    ]
+  },
+  "c0572c77c0500c8a788ad8b5cdaf633dcfecf3df": {
+    "url": "https://arxiv.org/abs/2609.02780",
+    "title": "ShallowStream: Index Shallow then Answer Deep for Streaming Video Understanding",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": [
+      "video",
+      "efficiency"
+    ]
+  },
+  "15cdabfa0d66666cb11551233192cbeb936aec1c": {
+    "url": "https://arxiv.org/abs/2609.04369",
+    "title": "AdaptVPR: Route-Aware Hard Positive Generation for Robust Visual Place Recognition",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": [
+      "vision"
+    ]
+  },
+  "6df4959dd35ff37102945180b7703adbe8dc4f09": {
+    "url": "https://arxiv.org/abs/2609.05258",
+    "title": "Ask Before You Optimize: Dynamic Pre-Formulation Clarification for Interactive Optimization",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": [
+      "feature-selection"
+    ]
+  },
+  "973397ce6b8bb44d28565693f5686a984a242d1c": {
+    "url": "https://arxiv.org/abs/2609.04250",
+    "title": "Motion-Omni: End-to-End Joint Speech and Full-Body Motion for Spoken Dialogue",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": []
+  },
+  "d66727b3f0859cba8dbe68f5f88d7bdf50290cc8": {
+    "url": "https://arxiv.org/abs/2609.04061",
+    "title": "When Models Edit Too Much: On the Fidelity of Minimal Code Edits",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": []
+  },
+  "0b6e4d35a0103b8143756208a83461f246d05fb3": {
+    "url": "https://arxiv.org/abs/2609.04523",
+    "title": "MaxKernel: Agentic Kernel Generation for TPUs",
+    "category": "mlops",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": []
+  },
+  "05a40843b5ead0e9ac8f381dccc20d6cd59c036c": {
+    "url": "https://arxiv.org/abs/2609.05295",
+    "title": "RISE: Recursive Improvement via Self-Extrapolating Policy Distillation",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": []
+  },
+  "cef141093982113c106a6853bc58edfc8f147a53": {
+    "url": "https://arxiv.org/abs/2609.04490",
+    "title": "When Quantization Breaks Memory: Recurrent-State Write-Back in Low-Precision Temporal Inference",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": []
+  },
+  "0bf2eaff14afdcb2056c1bf35db64ef859bb2d7c": {
+    "url": "https://arxiv.org/abs/2609.05275",
+    "title": "Don't Drop Dropout: Optimizing Layer Sparsity for Efficient LLM Training and Inference",
+    "category": "mlops",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": []
+  },
+  "af557b6862d3074d900820c82c183d6ace13be3e": {
+    "url": "https://arxiv.org/abs/2609.05416",
+    "title": "WorldSculpt: Generating Compositional Worlds from Grounded Videos",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": []
+  },
+  "27584c87db4978a27ebdd8f7cd04cb5c5b37191b": {
+    "url": "https://arxiv.org/abs/2609.00444",
+    "title": "Group Adaptive Clipping Policy Optimization",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": []
+  },
+  "4d568355b3362baae523c2cfa7d5fdc5a898d87f": {
+    "url": "https://arxiv.org/abs/2609.04304",
+    "title": "Iris: Climbing to the Search Frontier",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-09-08",
+    "tags": []
   }
 }
