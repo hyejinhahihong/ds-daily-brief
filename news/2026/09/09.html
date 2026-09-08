@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI &amp; ML News Letter · 09/09</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --accent:#5DB8A6; --accent-hover:#479B8B; --accent-weak:#E8F4F1;
+  --focus-ring:rgba(93,184,166,.5);
+  --bg:#FAF9F5; --bg-subtle:#F0EEE6; --border:#E7E3D9;
+  --text:#1F1E1D; --text-2:#6B6862; --text-3:#A39E94;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}}
+:root[data-theme="dark"]{
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover);text-decoration:underline}
+strong{font-weight:600;color:var(--text)}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px;border-radius:3px}
+
+/* 모바일 우선 단일 컬럼 (<1200px). 덩어리 중앙 정렬은 margin:0 auto. */
+.page{max-width:760px;margin:0 auto;padding:20px 18px 40px}
+
+/* --- 마스트헤드 (뉴스레터 제호) --- */
+.mast{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+  padding-bottom:14px;border-bottom:2px solid var(--text);margin-bottom:24px}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--accent);
+  text-transform:uppercase;margin:0 0 6px}
+.mast-title{font-size:26px;font-weight:600;margin:0;letter-spacing:-.01em;line-height:1.15}
+.mast-date{font-size:14px;color:var(--text-2);margin-top:8px}
+.themebtn{flex:none;background:var(--bg-subtle);border:1px solid var(--border);color:var(--text-2);
+  border-radius:20px;padding:5px 12px;font-size:13px;cursor:pointer;font-family:inherit}
+.topnav{margin-top:11px;display:flex;gap:16px;font-size:13px}
+.topnav a{color:var(--text-2);font-weight:500} .topnav a:hover{color:var(--accent)}
+@media (min-width:640px){.mast-title{font-size:31px}}
+
+/* --- TODAY'S TOP 3 --- */
+.top3{background:var(--accent-weak);border-radius:12px;padding:14px 18px;margin-bottom:24px}
+.top3 h2{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--accent);margin:0 0 8px}
+.top3 ol{margin:0;padding:0;list-style:none}
+.top3 li{padding:4px 0 4px 22px;position:relative;font-size:15px;color:var(--text)}
+.top3 li::before{content:"\2605";position:absolute;left:0;color:var(--accent);font-size:12px;top:7px}
+.top3 .t3cat{color:var(--text-2);font-size:12px;margin-right:5px}
+.top3 a{color:var(--text)} .top3 a:hover{color:var(--accent-hover)}
+
+/* --- 목차 (TOC) --- */
+.toc{margin-bottom:26px}
+.toc h2{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--text-2);margin:0 0 8px}
+.toc ul{margin:0;padding:0;list-style:none}
+.toc li{padding:6px 0;border-top:1px solid var(--border)}
+.toc li:first-child{border-top:none}
+.toc .r{display:flex;gap:6px;align-items:baseline;font-size:14px}
+.toc .nm{font-weight:500;color:var(--text)} .toc a:hover .nm{color:var(--accent)}
+.toc .cnt{color:var(--text-3);font-size:12px}
+.toc .lead{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  font-size:12px;color:var(--text-2);margin-top:2px;line-height:1.4}
+.toc li.active .nm{color:var(--accent)}
+.toc li.active{border-left:2px solid var(--accent);padding-left:8px;margin-left:-10px}
+
+/* --- 섹션 --- */
+.sec{margin:0 0 34px;scroll-margin-top:14px}
+.sec-h{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:0 0 2px;padding-top:6px}
+.sec-h .nm{font-size:20px;font-weight:600}
+.sec-h .cnt{font-size:13px;color:var(--text-3)}
+.sec-h .all{font-size:12px;color:var(--text-3);margin-left:auto}
+.sec-h .all span{color:var(--text-2)}
+.sec-h .exp{font-size:12px;background:none;border:1px solid var(--border);color:var(--text-2);
+  border-radius:14px;padding:2px 10px;cursor:pointer;font-family:inherit}
+.sec-desc{font-size:13px;color:var(--text-2);margin:0 0 8px}
+.sec-empty{font-size:14px;color:var(--text-3);padding:4px 0 6px}
+.backtop{display:inline-block;font-size:12px;color:var(--text-3);margin-top:6px}
+
+/* --- 아이템 (아코디언) — 거터(번호) + 단일 콘텐츠 컬럼 (DESIGN §3 v4). 좌측 정렬선 1개. --- */
+.item{border-bottom:1px solid var(--border);--gutter:28px}
+.item>summary{list-style:none;cursor:pointer;padding:16px 26px 16px 0;position:relative;
+  display:grid;grid-template-columns:var(--gutter) 1fr;align-items:start}
+.item>summary::-webkit-details-marker{display:none}
+.item>summary::after{content:"\25B8";position:absolute;right:2px;top:16px;color:var(--text-3);
+  font-size:13px;transition:transform .15s;display:inline-block}
+.item[open]>summary::after{transform:rotate(90deg)}
+.num{font-size:13px;color:var(--text-3);font-variant-numeric:tabular-nums;font-weight:500;padding-top:3px}
+.t3star{color:var(--accent);font-size:11px;margin-right:2px}
+.body-col{min-width:0}
+.it-title{display:block;font-size:18px;font-weight:600;color:var(--text);line-height:1.4}
+.item>summary:hover .it-title{color:var(--accent)}
+.it-sub{display:block;font-size:13px;color:var(--text-2);margin-top:3px;line-height:1.35}
+.it-meta{display:block;font-size:13px;color:var(--text-2);margin-top:6px}
+.it-lede{display:block;font-size:15px;color:var(--text-2);margin-top:7px;line-height:1.5}
+.item[open] .it-lede{color:var(--text)}
+/* 접힘 본문도 콘텐츠 컬럼에 정렬 (거터만큼 들여씀) */
+.it-body{padding:0 0 20px var(--gutter)}
+.it-body p{margin:0 0 10px}
+@media (min-width:900px){.item{--gutter:40px}}
+.slot-l{font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--text-2);margin:14px 0 2px}
+.tags{margin-top:10px}
+.tag{display:inline-block;font-size:12px;color:var(--text-2);background:var(--bg-subtle);
+  border:1px solid var(--border);border-radius:12px;padding:1px 9px;margin:0 5px 5px 0}
+.prev{font-size:13px;color:var(--text-3);margin-top:8px}
+.src-cta{display:inline-block;margin-top:12px;font-size:14px;font-weight:500;color:var(--accent)}
+.weak{color:var(--accent);font-size:12px;border:1px solid var(--accent);border-radius:5px;
+  padding:0 6px;margin-left:6px}
+
+/* --- "다루는 주제" 푸터 --- */
+.topics{margin-top:36px;padding-top:22px;border-top:2px solid var(--text)}
+.topics h2{font-size:15px;font-weight:600;margin:0 0 12px}
+.topics ul{margin:0;padding:0;list-style:none}
+.topics li{padding:7px 0;border-top:1px solid var(--border);font-size:13px;color:var(--text-2)}
+.topics li:first-child{border-top:none}
+.topics .tnm{font-weight:600;color:var(--accent);margin-right:6px}
+
+/* --- 데스크톱 (≥1200px): 좌측 sticky TOC(260) + 본문(720), 덩어리 중앙 정렬 --- */
+@media (min-width:1200px){
+  /* max-width = 260+44+720 그리드(1024) + 좌우 padding(18*2). box-sizing:border-box
+     라 padding 을 포함해야 본문 720 이 찌그러지지 않는다. */
+  .page{max-width:1060px;display:grid;grid-template-columns:260px minmax(0,720px);
+    column-gap:44px;justify-content:center;align-items:start;padding-top:28px}
+  .mast{grid-column:1/3}
+  .toc{grid-column:1;grid-row:2/999;position:sticky;top:24px;margin:0;align-self:start}
+  .top3,.main{grid-column:2}
+  .topics{grid-column:1/3}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="mast">
+    <div class="mast-l">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1 class="mast-title">AI &amp; ML News Letter</h1>
+      <div class="mast-date">2026 / 09 / 09 (수) · 16건</div>
+      <nav class="topnav"><a href="../../../archive.html">📅 지난 브리핑</a>
+        <a href="#topics">🗂 주제별 보기</a></nav>
+    </div>
+    <button id="tbtn" class="themebtn" type="button">🌓 테마</button>
+  </header>
+  <section class="top3"><h2>TODAY'S TOP 3</h2><ol><li><a href="#f7dd334d631a"><span class="t3cat">[예측 모델링]</span>DeepMind, AlphaGenome Atlas 공개 — 인간 게놈 내 **90억 개** 단일 염기 변이의 분자적 영향 지도화</a></li><li><a href="#ea4fb0092920"><span class="t3cat">[AI Agent]</span>HPE Zerto, Amazon Bedrock 기반 에이전틱 트러블슈팅 시스템 구축 — 온프레미스 배포로 재해복구 자연어 진단 지원</a></li><li><a href="#6cb336b85809"><span class="t3cat">[예측 모델링]</span>Spotify, 베이지안 A/B 테스트 도입하지 않는 이유 설명 — 개념 오해부터 정리</a></li></ol></section>
+  <nav class="toc" id="toc"><h2>오늘의 목차</h2><ul><li data-cat="ai-agent"><a href="#ai-agent"><span class="r"><span class="nm">AI Agent</span><span class="cnt">2</span></span><span class="lead">HPE Zerto, Amazon Bedrock 기반 에이전틱 트러블슈팅 시스템 구축 — 온프레미스 배포로 재해복구 자연어 진단 지원</span></a></li><li data-cat="llm-foundation-model"><a href="#llm-foundation-model"><span class="r"><span class="nm">LLM / Foundation Model</span><span class="cnt">2</span></span><span class="lead">AWS, SageMaker G7(Blackwell) vs G5·G6 벤치마크 — 30B MoE 모델서 GPU 절반으로 가격 대비 성능 우위</span></a></li><li data-cat="deep-learning"><a href="#deep-learning"><span class="r"><span class="nm">Deep Learning</span><span class="cnt">3</span></span><span class="lead">Pathway, 뇌 구조 모방한 BDH 아키텍처 발표 — SageMaker HyperPod로 학습, 체인오브소트 없이 잠재공간 추론</span></a></li><li data-cat="predictive-modeling"><a href="#predictive-modeling"><span class="r"><span class="nm">예측 모델링</span><span class="cnt">3</span></span><span class="lead">DeepMind, AlphaGenome Atlas 공개 — 인간 게놈 내 **90억 개** 단일 염기 변이의 분자적 영향 지도화</span></a></li><li data-cat="causal-inference"><a href="#causal-inference"><span class="r"><span class="nm">인과추론</span><span class="cnt">1</span></span><span class="lead">인과추론도 파운데이션 모델 시대로 — CFM, 재학습 없이 in-context 학습으로 처치 효과 추정</span></a></li><li data-cat="mlops"><a href="#mlops"><span class="r"><span class="nm">MLOps / ML Engineering</span><span class="cnt">2</span></span><span class="lead">AWS, MLflow-SageMaker 모델 레지스트리 크로스어카운트 거버넌스 구조 2편 공개 — 허브앤스포크·하이브리드 패턴 지원</span></a></li><li data-cat="practice"><a href="#practice"><span class="r"><span class="nm">실무 사례 · 노하우</span><span class="cnt">1</span></span><span class="lead">토스뱅크, Coding Agent 규칙 준수율 개선 — Hook 기반 pfmls-stylepack로 &#x27;방금 쓴 코드&#x27;에 즉시 피드백</span></a></li><li data-cat="industry-application"><a href="#industry-application"><span class="r"><span class="nm">산업 적용 사례</span><span class="cnt">2</span></span><span class="lead">DiDi, Amazon Bedrock로 콜센터 QA 자체 구축 — 의도 정확도 38%→86%, 준수도 90%↑</span></a></li></ul></nav>
+  <main class="main"><section class="sec" id="ai-agent"><div class="sec-h"><span class="nm">AI Agent</span><span class="cnt">2건</span><span class="all"><a href="../../../category/ai-agent.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="ai-agent">전체 펼치기</button></div><div class="sec-desc">AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</div><details class="item" id="ea4fb0092920" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">HPE Zerto, Amazon Bedrock 기반 에이전틱 트러블슈팅 시스템 구축 — 온프레미스 배포로 재해복구 자연어 진단 지원</span><span class="it-sub">How HPE Zerto built an agentic troubleshooting system with Amazon Bedrock</span><span class="it-meta">✍️ 블로그 · aws.amazon.com</span><span class="it-lede">HPE Zerto는 하이브리드·멀티클라우드 환경의 데이터 보호 및 재해복구 운영을 돕기 위해 Amazon Bedrock 기반 에이전틱 트러블슈팅 시스템을 개발했다.</span></span></summary><div class="it-body"><p>이 시스템은 Zerto 제품 내 온프레미스 환경에 파드 형태로 배포되어 기존 UI에서 자연어로 상호작용하며, 운영 신호와 환경 컨텍스트, 제품 지식에 안전하게 접근한다. <strong>Amazon Bedrock</strong>을 선택한 이유는 보안·거버넌스, 다중 파운데이션 모델 선택 유연성, 가드레일·관측성·지식 검색 등 AWS 서비스와의 운영 통합성 때문이다. Amazon Bedrock Guardrails로 프롬프트와 출력이 회사 정책 및 컴퓨트 보안 요구사항에 부합하도록 콘텐츠 보안을 강제한다.</p><div class="slot-l">WHY IT MATTERS</div><p>재해복구·사이버 복원력 분야처럼 지연 비용이 큰 운영 환경에서 파편화된 알림·문서를 자연어 질의로 통합해 빠른 의사결정을 지원하는 실사례로, 엔터프라이즈 온프레미스 AI 에이전트 배포 아키텍처의 참고 모델이 된다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존에는 운영자가 대시보드, 보고서, 지식 소스를 수동으로 오가며 정보를 취합해야 했으나, 이 시스템은 라이브 환경 상태에 근거해 추론·행동·응답까지 수행하는 에이전틱 방식으로 지원 티켓 생성 없이 즉시 문제를 해결한다.</p><a class="src-cta" href="https://aws.amazon.com/blogs/machine-learning/how-hpe-zerto-built-an-agentic-troubleshooting-system-with-amazon-bedrock/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="20af789d1862"><summary><span class="num">02</span><span class="body-col"><span class="it-title">AWS, Bedrock AgentCore+GitHub Actions로 에이전트 CI/CD 품질 게이트 구축 — 회귀 시 PR 차단</span><span class="it-sub">Automated agent evaluation with Amazon Bedrock AgentCore and GitHub Actions</span><span class="it-meta">✍️ 블로그 · aws.amazon.com</span><span class="it-lede">이 블로그는 Amazon Bedrock AgentCore runtime에 배포된 에이전트를 GitHub Actions로 자동 평가하고, 점수가 하락하면 PR을 차단하는 CI/CD 파이프라인 구축법을 설명한다.</span></span></summary><div class="it-body"><p>Strands 에이전트가 역할 기반 접근 제어(RBAC)를 가진 MCP 서버에 OAuth로 연결되며, 공유 Cognito 풀이 M2M과 사용자 인증 흐름을 모두 처리한다. CDK로 인프라를 구성하고 <strong>AgentCore Evaluate API</strong>로 LLM을 심판 삼아 도움됨, 정확성, 도구 선택 정확도 등을 평가한다. 평가 점수가 임계값(예: 1.0 만점에 0.8)을 넘지 못하면 머지가 차단되는 품질 게이트를 구현한다.</p><div class="slot-l">WHY IT MATTERS</div><p>프롬프트 변경이나 모델 교체 시 에이전트 성능 저하를 사람이 놓치기 쉬운데, <strong>자동화된 품질 게이트</strong>는 프로덕션 배포 전 PR 단계에서 이를 잡아낸다는 점에서 실무 적용 가치가 크다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 수동 테스트와 달리, CI 파이프라인이 OAuth로 보호된 MCP 서버에 사용자 컨텍스트 없이 <strong>M2M client_credentials 인증</strong>으로 접근해 자동 평가를 수행하는 3계층 인증 패턴을 제시한다.</p><a class="src-cta" href="https://aws.amazon.com/blogs/machine-learning/automated-agent-evaluation-with-amazon-bedrock-agentcore-and-github-actions/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="llm-foundation-model"><div class="sec-h"><span class="nm">LLM / Foundation Model</span><span class="cnt">2건</span><span class="all"><a href="../../../category/llm-foundation-model.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="llm-foundation-model">전체 펼치기</button></div><div class="sec-desc">LLM·파운데이션 모델 — 사전학습·정렬·추론</div><details class="item" id="b759b5a26762"><summary><span class="num">01</span><span class="body-col"><span class="it-title">AWS, SageMaker G7(Blackwell) vs G5·G6 벤치마크 — 30B MoE 모델서 GPU 절반으로 가격 대비 성능 우위</span><span class="it-sub">Benchmarking small LLM inference on SageMaker AI: G7 vs G5 and G6</span><span class="it-meta">✍️ 블로그 · aws.amazon.com</span><span class="it-lede">AWS는 SageMaker AI Inference에서 Qwen3-Coder-30B와 NVIDIA Nemotron-3-Nano-30B 두 개의 30B급 MoE 모델을 대상으로 G5(A10G), G6/G6e(L4, L40S), G7(Blackwell RTX PRO 4500) 인스턴스를 비교 벤치마크했다.</span></span></summary><div class="it-body"><p>G5와 G6는 GPU 4개·96GB 메모리 구성인 반면 G7은 GPU 2개·64GB로 절반의 하드웨어만 사용한다. 코딩 어시스턴트 사례는 DJL LMI 컨테이너로 직접 벤치마크했고, 엔터프라이즈 어시스턴트 사례는 vLLM 기반 SageMaker Generative AI Inference Recommendations 기능으로 자동 벤치마킹·구성 선택을 수행했다. 그 결과 <strong>G7이 더 적은 GPU 수와 메모리로도 처리량, 지연시간, 토큰당 비용에서 개선</strong>을 보여줬다.</p><div class="slot-l">WHY IT MATTERS</div><p>동일 30B급 MoE 모델을 여러 GPU 세대·서빙 스택에서 비교한 실측 데이터는 실제 배포 시 인스턴스 선택 의사결정에 바로 활용할 수 있는 근거를 제공한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 G5·G6 세대 대비 G7은 GPU 개수와 총 메모리를 절반으로 줄이면서도 가격 대비 성능이 우수함을 보여준 점이 다르다.</p><a class="src-cta" href="https://aws.amazon.com/blogs/machine-learning/benchmarking-small-llm-inference-on-sagemaker-ai-g7-vs-g5-and-g6/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="9205beb84558"><summary><span class="num">02</span><span class="body-col"><span class="it-title">Privacy Failure in Split-LLM Training, The Returned Gradient Nullifies the Decoys</span><span class="it-sub">Split-LLM 학습, 역전파 그래디언트가 디코이 마스킹 무력화 — 4096/4096 실제 행 전수 식별</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">두 노드로 분리된 LLM 학습 시스템에서, 신뢰 노드(TLN)가 비공개 손실을 이용해 그래디언트를 클라우드 노드(UCN)로 되돌려줄 때 디코이 행의 그래디언트가 정확히 0이 되어 실제 행이 그대로 드러나는 취약점을 발견했다.</span></span></summary><div class="it-body"><p>사전에 정한 프로토콜로 검증한 결과 9개 시드 전 구간에서 프레임당 4,096개 행 전부가 식별되었고, 셔플 대조군에서는 누출이 전혀 검출되지 않았다. 프레임 내용에 대한 공격으로는 상수 추측 기준 대비 <strong>100개 토큰당 약 1개</strong>를 추가로 복원했으며(+0.65~1.50%p), 모델 품질을 예산 내로 유지하는 설정에서도 동일한 결과가 재현되었다. 순방향 채널 프라이버시 검사와 품질 검사는 통과했지만 반환 그래디언트를 포함하면 동일 검사에서 실패했다. 각 행의 그래디언트에 클리핑과 노이즈를 적용하자 held-out 교차엔트로피 약 0.01 nats 비용으로 누출이 차단되었다.</p><div class="slot-l">WHY IT MATTERS</div><p>기존 프라이버시 평가가 순방향 채널만 검증하고 <strong>역방향 그래디언트 채널을 누락</strong>하면 통과 판정 자체가 무의미해질 수 있음을 보여주는 사례로, split-training 시스템의 보안 감사 범위 재설계가 필요함을 시사한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 split-LLM 프라이버시 검증이 순방향(활성화) 채널의 디코이 삽입 여부만 확인했던 것과 달리, 이 연구는 반환되는 손실 그래디언트 채널까지 포함해 검증했을 때 동일 시스템이 실패함을 사전 등록된 프로토콜(주입 강도 실험, 셔플 대조군, 사전 임계값)로 입증했다.</p><a class="src-cta" href="https://arxiv.org/abs/2609.04382" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="deep-learning"><div class="sec-h"><span class="nm">Deep Learning</span><span class="cnt">3건</span><span class="all"><a href="../../../category/deep-learning.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="deep-learning">전체 펼치기</button></div><div class="sec-desc">딥러닝 — 아키텍처·학습기법 자체</div><details class="item" id="30a555d0f8ec"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Pathway, 뇌 구조 모방한 BDH 아키텍처 발표 — SageMaker HyperPod로 학습, 체인오브소트 없이 잠재공간 추론</span><span class="it-sub">Pathway’s brain-inspired architecture development on Amazon SageMaker HyperPod</span><span class="it-meta">✍️ 블로그 · aws.amazon.com</span><span class="it-lede">Pathway는 트랜스포머 대신 뇌의 뉴런 연결 방식을 모사한 <strong>BDH(Dragon Hatchling)</strong> 아키텍처를 공개했다.</span></span></summary><div class="it-body"><p>이 모델은 텍스트 형태의 중간 추론 과정을 생성하지 않고 잠재공간에서 반복 계산을 통해 추론을 수행하며, 테스트 시점 가중치 업데이트 없이 문맥 안에서 상태를 조정한다. BDH-CQ 변형은 재귀적 잠재 상태 내부에서 반복 계산을 수행해 추론 중 내부 메모리를 갱신하고 후보 답만 디코딩하며, 별도의 파인튜닝이나 재학습이 필요 없다. Pathway는 PyTorch와 통합된 이 아키텍처를 <strong>Amazon SageMaker HyperPod</strong>를 활용해 확장 학습했다.</p><div class="slot-l">WHY IT MATTERS</div><p>트랜스포머는 고정 컨텍스트 윈도우, 늘어나는 KV 캐시, catastrophic forgetting 등 구조적 한계로 긴 시간에 걸친 일관된 추론과 지식 갱신에 취약한데, BDH는 이런 한계를 근본적으로 다른 아키텍처로 우회하려는 시도라는 점에서 주목할 만하다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>체인오브소트처럼 토큰을 순차 생성해 다시 입력하는 기존 트랜스포머 추론 방식과 달리, BDH는 텍스트 추론 흔적을 생성하지 않고 잠재공간에서 직접 반복 계산으로 답을 도출한다.</p><a class="src-cta" href="https://aws.amazon.com/blogs/machine-learning/pathways-brain-inspired-architecture-development-on-amazon-sagemaker-hyperpod/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="144be06df190"><summary><span class="num">02</span><span class="body-col"><span class="it-title">ENEAS: Embedding-guided Neural Ensemble for Adaptive Segmentation</span><span class="it-sub">ENEAS 공개 — SAM 3 넘어 텍스트 프롬프트 기반 인스턴스 추적·시맨틱 발견 통합, 시간적 환각·의미 오분류 해결</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">ENEAS는 텍스트 프롬프트만으로 인스턴스 추적과 개방형 개념 발견을 동시에 수행하는 통합 세그멘테이션 방법이다.</span></span></summary><div class="it-body"><p>SAM 3 같은 최신 파운데이션 모델도 겪는 <strong>시간적 환각, 공간적 파편화, 의미 오분류</strong> 문제(객체 이탈 시 부재를 보고하지 못하거나, 클로즈업에서 텍스처만 분할하거나, 조각상·그림·반사상 등 시각적으로 유사한 대상을 오인식하는 문제)를 해결한다. 추적을 위해 포인트 상호작용에 한정됐던 SeC 아키텍처에 텍스트 프롬프팅 어댑터를 추가하고 시간적 메모리를 활용해 대상이 사라졌다 다시 나타나도 드리프트 없이 유지한다. 발견을 위해서는 고속 시각 임베딩 매칭과 조건부 VLM 정제를 결합한 검증 계층을 두어 애매한 후보에만 의미 추론을 적용, 지연시간을 낮추면서 온톨로지 오류를 걸러낸다.</p><div class="slot-l">WHY IT MATTERS</div><p>3D 재구성처럼 오분류된 하나의 방해 요소가 전체 결과물을 훼손하는 작업에서, 시각적으로만 유사한 &#x27;가짜&#x27;와 실제 대상을 구분하는 능력은 대규모 비디오·이미지 라이브러리 처리의 신뢰도를 크게 좌우한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p><strong>SAM 3</strong> 등 기존 텍스트 프롬프트 세그멘테이션 모델 대비 시간적 환각과 온톨로지 오분류 문제를 명시적으로 해결하며, 포인트 상호작용에 국한됐던 SeC 아키텍처를 텍스트 프롬프트 방식으로 확장한 점이 차별점이다.</p><a class="src-cta" href="https://arxiv.org/abs/2609.03756" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="89bbdfee8976"><summary><span class="num">03</span><span class="body-col"><span class="it-title">NVIDIA, CUDA Rust 공식 지원 발표 — GPU 커널 작성에 두 갈래 트랙 제공, 2027년까지 성숙화 계획</span><span class="it-sub">Introducing CUDA Rust: Two Tracks for Writing GPU Kernels</span><span class="it-meta">✍️ 블로그 · developer.nvidia.com</span><span class="it-lede">NVIDIA는 2026년 9월 Rust를 통한 네이티브 GPU 프로그래밍을 공식 지원한다고 발표했다.</span></span></summary><div class="it-body"><p>기존 CUDA C++와 CUDA Python은 이미 성숙한 엔터프라이즈급 툴체인으로 자리잡고 있으며, NVIDIA는 CUDA Rust를 <strong>2027년 이후까지</strong> 지속적으로 성장·성숙시킬 계획이다. AI 시스템 계층은 추론 엔진, 서빙 인프라, 드라이버, 에이전트 런타임 등을 포괄하며, 모델과 기법이 바뀔 때마다 계속 변화하고 있다.</p><div class="slot-l">WHY IT MATTERS</div><p>GPU 커널 개발 언어 선택지가 넓어지면서, 메모리 안전성을 중시하는 시스템 프로그래밍 진영이 AI 인프라 스택에 더 깊이 관여할 수 있는 길이 열린다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 CUDA C++, CUDA Python 대비 Rust라는 새로운 언어 트랙을 GPU 커널 작성에 공식 추가한 것이 핵심 차이다.</p><a class="src-cta" href="https://developer.nvidia.com/blog/introducing-cuda-rust-two-tracks-for-writing-gpu-kernels/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="predictive-modeling"><div class="sec-h"><span class="nm">예측 모델링</span><span class="cnt">3건</span><span class="all"><a href="../../../category/predictive-modeling.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="predictive-modeling">전체 펼치기</button></div><div class="sec-desc">예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</div><details class="item" id="f7dd334d631a" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">DeepMind, AlphaGenome Atlas 공개 — 인간 게놈 내 **90억 개** 단일 염기 변이의 분자적 영향 지도화</span><span class="it-sub">AlphaGenome Atlas: A predictive map of every possible DNA letter change in the human genome</span><span class="it-meta">✍️ 블로그 · deepmind.google</span><span class="it-lede">AlphaGenome Atlas는 인간 게놈에서 가능한 모든 단일 문자 DNA 변이의 분자적 효과를 예측해 매핑한 지도이다.</span></span></summary><div class="it-body"><p>총 <strong>90억 개</strong>의 단일 염기 변이(SNV)를 대상으로 한다. 이를 통해 각 변이가 유전자 발현 등 분자 수준에 미치는 영향을 예측적으로 확인할 수 있다.</p><div class="slot-l">WHY IT MATTERS</div><p>게놈 전체 규모의 변이 영향을 사전에 예측할 수 있으면 질병 관련 변이 해석과 유전 연구의 우선순위 설정에 실질적으로 활용될 수 있다.</p><div class="tags"><span class="tag">#tabular</span></div><a class="src-cta" href="https://deepmind.google/blog/alphagenome-atlas-a-predictive-map-of-every-possible-dna-letter-change-in-the-human-genome/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="6cb336b85809" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>02</span><span class="body-col"><span class="it-title">Spotify, 베이지안 A/B 테스트 도입하지 않는 이유 설명 — 개념 오해부터 정리</span><span class="it-sub">Why Spotify Is Not Using Bayesian A/B Testing</span><span class="it-meta">✍️ 블로그 · engineering.atspotify.com</span><span class="it-lede">Spotify 엔지니어링 블로그가 베이지안 A/B 테스트가 무엇인지에 대한 오해를 바로잡는 글을 게재했다.</span></span></summary><div class="it-body"><p>이 글은 Spotify가 왜 자사 실험 플랫폼에서 베이지안 방식을 채택하지 않았는지를 설명하는 데 초점을 맞춘다. 초록만으로는 구체적 근거나 수치는 제시되지 않는다.</p><div class="slot-l">WHY IT MATTERS</div><p>A/B 테스트 방법론 선택은 대규모 실험 플랫폼을 운영하는 조직의 의사결정 신뢰성에 직결되는 문제라 <strong>빈도주의 대 베이지안</strong> 논쟁의 실무적 함의를 이해하는 데 참고할 만하다.</p><div class="tags"><span class="tag">#imbalanced</span></div><a class="src-cta" href="https://engineering.atspotify.com/2026/9/why-spotify-is-not-using-bayesian-a-b-testing/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="929400706879"><summary><span class="num">03</span><span class="body-col"><span class="it-title">Real-World Knowledge-Guided Change Data Synthesis for Remote Sensing</span><span class="it-sub">KnowChange, VLM 지식 기반 변화탐지 합성 데이터 생성 — 소규모 데이터로도 기존 합성셋 능가</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">KnowChange는 사전학습된 비전-언어 모델을 지식 소스로 활용해 변화 전 장면과 원하는 변화 유형으로부터 그럴듯한 변화 위치와 클래스 전이를 추론하는 변화 데이터 합성 프레임워크다.</span></span></summary><div class="it-body"><p>기존 방법들이 수작업 규칙과 미리 정의된 전이 설계에 의존해 다양한 변화 유형을 다루기 어려웠던 한계를 보완한다. 지식 기반 변화 시뮬레이션과 범용 합성 모델을 결합해 다양한 변화 유형을 하나의 통합 프레임워크에서 유연하게 합성할 수 있다. 실험 결과 <strong>KnowChange로 생성한 데이터</strong>는 소규모임에도 합성-실제 전이와 합성 데이터 증강 모두에서 기존 합성 데이터셋보다 일관되게 우수했다. 또한 이 지식 기반 시뮬레이션은 기존 합성 파이프라인에 손쉽게 통합되어 다운스트림 데이터 활용도를 높일 수 있다.</p><div class="slot-l">WHY IT MATTERS</div><p>원격탐사 변화탐지 모델 학습에 필요한 라벨링 비용을 줄이면서도 다양한 변화 유형을 반영한 학습 데이터를 확보할 수 있어, 데이터 부족 문제를 겪는 실무 응용에 실질적 도움이 된다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>수작업 규칙과 사전 정의된 전이 설계에 의존하던 <strong>기존 핸드크래프트 합성 방법</strong> 대비, VLM의 사전지식을 이용해 변화 위치와 클래스 전이를 유연하게 추론한다는 점이 다르다.</p><div class="tags"><span class="tag">#feature-selection</span></div><a class="src-cta" href="https://arxiv.org/abs/2608.24263" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="causal-inference"><div class="sec-h"><span class="nm">인과추론</span><span class="cnt">1건</span><span class="all"><a href="../../../category/causal-inference.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="causal-inference">전체 펼치기</button></div><div class="sec-desc">인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</div><details class="item" id="e5e469773788"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Causal Foundation Models</span><span class="it-sub">인과추론도 파운데이션 모델 시대로 — CFM, 재학습 없이 in-context 학습으로 처치 효과 추정</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">이 논문은 새로운 문제마다 인과 메커니즘 제안, 추정기 선택, 학습이라는 맞춤형 파이프라인이 필요했던 기존 인과추론 방식을 설명한다.</span></span></summary><div class="it-body"><p>반면 머신러닝 전반은 대규모로 한 번 사전학습한 뒤 새로운 과제에 적용하는 파운데이션 모델 패러다임으로 이동했다. 저자들은 이 패러다임을 인과추론에 도입한 <strong>인과 파운데이션 모델(CFM)</strong>을 소개하는데, CFM은 모델 업데이트 없이 in-context learning만으로 새로운 데이터셋에서 평균 처치 효과 같은 인과량을 추정한다. 논문은 인과추론과 머신러닝의 필요 배경을 정리한 뒤 CFM을 설명하며, 예제 코드와 Jupyter 노트북도 함께 제공한다.</p><div class="slot-l">WHY IT MATTERS</div><p>매번 새로 파이프라인을 구축해야 했던 인과추론 실무에 파운데이션 모델식 접근이 적용되면, 반복적인 모델링·학습 비용을 크게 줄일 수 있어 실무자와 연구자 모두에게 유용한 방향이다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 인과추론이 문제마다 메커니즘 설계와 추정기 학습을 새로 수행해야 했던 것과 달리, CFM은 <strong>사전학습된 모델을 재학습 없이 in-context learning으로 새 데이터셋에 바로 적용</strong>한다는 점이 다르다.</p><div class="tags"><span class="tag">#causal-discovery</span></div><a class="src-cta" href="https://arxiv.org/abs/2609.03003" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="mlops"><div class="sec-h"><span class="nm">MLOps / ML Engineering</span><span class="cnt">2건</span><span class="all"><a href="../../../category/mlops.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="mlops">전체 펼치기</button></div><div class="sec-desc">MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</div><details class="item" id="33d62c60220d"><summary><span class="num">01</span><span class="body-col"><span class="it-title">AWS, MLflow-SageMaker 모델 레지스트리 크로스어카운트 거버넌스 구조 2편 공개 — 허브앤스포크·하이브리드 패턴 지원</span><span class="it-sub">Govern models with MLflow and Amazon SageMaker AI Model Registry sync: Part 2</span><span class="it-meta">✍️ 블로그 · aws.amazon.com</span><span class="it-lede">AWS SageMaker AI와 MLflow 연동 시리즈 2편으로, 계정 간 모델 거버넌스 구성 방법을 다룬다.</span></span></summary><div class="it-body"><p>1편에서 소개한 단일 계정 내 IAM 조건 키 기반 역할 분리를 확장해, 개발 계정과 프로덕션 계정을 분리하는 대규모 조직용 두 가지 토폴로지를 제시한다. 첫 번째는 <strong>AWS RAM</strong>으로 하나의 MLflow 앱을 여러 개발 계정과 공유하는 허브앤스포크 패턴이고, 두 번째는 규제 환경을 위해 개발 계정을 거버넌스 허브로부터 완전히 격리하는 하이브리드 패턴이다. 데이터 과학자, 거버넌스 담당자, 관리자, 모델 소유자 네 가지 페르소나별 워크플로우로 구성되며, 승인된 모델이 CI/CD를 통해 엔드포인트로 배포되는 과정도 설명한다. 실습용 노트북과 CloudFormation 템플릿이 GitHub 저장소로 제공된다.</p><div class="slot-l">WHY IT MATTERS</div><p>여러 개발 계정과 중앙 거버넌스 계정을 운영하는 규제 산업 조직에게 실전 배포 가능한 참조 아키텍처를 제공한다는 점에서 실무 적용성이 높다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>1편의 단일 계정 내 <strong>IAM 조건 키</strong> 기반 역할 분리 대비, 계정 경계를 넘는 두 가지 크로스어카운트 거버넌스 패턴(허브앤스포크, 하이브리드)으로 확장한 것이 차이점이다.</p><a class="src-cta" href="https://aws.amazon.com/blogs/machine-learning/govern-models-with-mlflow-and-amazon-sagemaker-ai-model-registry-sync-part-2/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="1de701991cf4"><summary><span class="num">02</span><span class="body-col"><span class="it-title">AWS, MLflow-SageMaker 모델 레지스트리 동기화 강화 — 지표·계보·수명주기 승격까지 자동 전달</span><span class="it-sub">Govern models with MLflow and Amazon SageMaker AI Model Registry sync: Part 1</span><span class="it-meta">✍️ 블로그 · aws.amazon.com</span><span class="it-lede">AWS는 Managed MLflow와 SageMaker AI Model Registry 간 자동 동기화 기능을 개선해, 기존에는 전달되지 않던 <strong>학습 지표, 평가 결과, 계보(lineage) 정보</strong>까지 함께 넘기도록 했다.</span></span></summary><div class="it-body"><p>또한 MLflow에서 수행한 수명주기 단계 승격(스테이징→프로덕션)도 레지스트리에 반영되도록 지원한다. 동기화를 활성화하면 데이터 과학자가 MLflow에 등록한 모델마다 SageMaker Model Package Group과 버전이 자동 생성되며, 배포 가능한 추론 스펙과 계보 정보도 함께 전달된다. 이 기능은 MLflow 앱 생성·수정 시 model-registration-mode를 AutoModelRegistrationEnabled로 설정해 옵트인 방식으로 활성화한다. 이번 글은 2부작 중 1편으로, 단일 계정 내에서 IAM으로 데이터 과학자와 거버넌스 담당자 역할을 분리하는 방법을 다룬다.</p><div class="slot-l">WHY IT MATTERS</div><p>데이터 과학자는 실험 환경(MLflow)을 벗어나지 않고도 거버넌스 담당자가 프로덕션 후보 모델을 승인·감사할 수 있게 되어, 조직 내 모델 거버넌스와 실험 워크플로 사이의 단절을 줄여준다. 규제 산업처럼 모델 계보와 승인 이력이 필수인 조직에게는 수작업 없이 감사 대응력을 높일 수 있는 실질적 이점이다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 동기화는 모델을 레지스트리로 전달하되 <strong>지표·평가 결과·계보 정보 없이</strong> 단순 등록만 이루어져, 거버넌스 담당자가 검토를 위해 MLflow로 다시 이동해야 했던 것과 달리, 이번 개선은 이러한 컨텍스트와 수명주기 단계 승격까지 함께 전달한다.</p><a class="src-cta" href="https://aws.amazon.com/blogs/machine-learning/govern-models-with-mlflow-and-amazon-sagemaker-ai-model-registry-sync-part-1/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="practice"><div class="sec-h"><span class="nm">실무 사례 · 노하우</span><span class="cnt">1건</span><span class="all"><a href="../../../category/practice.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="practice">전체 펼치기</button></div><div class="sec-desc">실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</div><details class="item" id="28e21fee9720"><summary><span class="num">01</span><span class="body-col"><span class="it-title">토스뱅크, Coding Agent 규칙 준수율 개선 — Hook 기반 pfmls-stylepack로 &#x27;방금 쓴 코드&#x27;에 즉시 피드백</span><span class="it-sub">AI가 팀 규칙을 지키도록 하는 방법</span><span class="it-meta">✍️ 블로그 · toss.tech</span><span class="it-lede">토스뱅크는 Coding Agent가 팀 코드 스타일을 지키지 않는 문제를 겪었는데, AGENTS.md 같은 세션 시작 시 Global Instruction만으로는 세션이 길어질수록 규칙을 무시하는 <strong>Lost in the Middle</strong> 현상이 나타났다.</span></span></summary><div class="it-body"><p>이를 해결하기 위해 옛 Linter 피드백 루프처럼 &#x27;코드 작성 직후&#x27;에 규칙을 다시 주입하는 Hook 방식을 도입했다. 파일 작성 직후 코드 본문을 정규식·파일명 패턴으로 훑어 관련 규칙만 골라 에이전트에게 즉시 전달하는 플러그인 <strong>pfmls-stylepack</strong>을 만들었으며, AI로 관련성을 판정시키면 요청당 10초가 더 걸려 정규식 기반 매칭을 택했다. 실제로 Enum 분기 누락 같은 문제를 Hook이 감지해 에이전트가 즉시 수정하는 사례가 확인됐다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI 코딩 에이전트가 코드 작성을 대체하면서 팀 컨벤션 공유 방식 자체가 바뀌어야 한다는 실무적 시사점을 준다. 특히 긴 세션에서 지시가 희석되는 <strong>Lost in the Middle</strong> 문제는 Agent 활용 조직 전반이 공통으로 겪을 과제다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>세션 시작 시 한 번만 규칙을 넣는 기존 AGENTS.md 방식 대비, 파일 작성 직후마다 Hook으로 관련 규칙을 재주입해 반복 구간에도 컨벤션을 전달하는 점이 다르다.</p><a class="src-cta" href="https://toss.tech/article/52631" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="industry-application"><div class="sec-h"><span class="nm">산업 적용 사례</span><span class="cnt">2건</span><span class="all"><a href="../../../category/industry-application.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="industry-application">전체 펼치기</button></div><div class="sec-desc">산업 적용 사례 — 산업 현장의 AI/ML 적용</div><details class="item" id="48b00b79dcbf"><summary><span class="num">01</span><span class="body-col"><span class="it-title">DiDi, Amazon Bedrock로 콜센터 QA 자체 구축 — 의도 정확도 38%→86%, 준수도 90%↑</span><span class="it-sub">How DiDi built intelligent contact center QA with Amazon Bedrock</span><span class="it-meta">✍️ 블로그 · aws.amazon.com</span><span class="it-lede">DiDi 인터내셔널은 스페인어·포르투갈어 3개 사업(차량호출, 배달, 금융) 콜센터 QA를 불투명한 서드파티 솔루션에서 Amazon Bedrock 기반 자체 시스템으로 전환했다.</span></span></summary><div class="it-body"><p>시스템은 의도 검증, 준수도 평가, VOC(고객 목소리) 분석 세 파이프라인으로 구성된다. 프로덕션 검증 결과 <strong>의도 검증 정확도가 38%에서 86%로 개선</strong>되었고, 준수도 평가 정확도는 90%를 넘었으며, VOC 분석은 수 시간 걸리던 수작업 요약을 수 분으로 단축했다. 핵심 설계 원칙은 각 모델 호출에서 정확히 어떤 정보를 보여줄지 통제하는 &#x27;정밀한 컨텍스트 관리&#x27;다.</p><div class="slot-l">WHY IT MATTERS</div><p>기존 QA 판단의 추적 불가능성, 다국어·다사업 조합 복잡성, 기준 변경 대응 지연, 이상 징후 조기 탐지 부재 등 실제 운영 조직이 겪는 문제를 구체적으로 보여주는 사례로, 생성형 AI 기반 QA 자동화의 실무 적용 참고가 된다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 불투명한 서드파티 QA 솔루션은 추론 과정이 보이지 않고 감사 추적이 불가능했던 반면, Amazon Bedrock 기반 시스템은 모델에 구애받지 않는 단일 API 접근과 VPC 엔드포인트·암호화·IAM 등 자체 거버넌스 통제를 통해 투명성과 데이터 통제권을 확보했다.</p><a class="src-cta" href="https://aws.amazon.com/blogs/machine-learning/how-didi-built-intelligent-contact-center-qa-with-amazon-bedrock/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="9816f5beea82"><summary><span class="num">02</span><span class="body-col"><span class="it-title">1Password, Codex 도입으로 엔지니어링 생산성 21% 향상</span><span class="it-sub">1Password increases engineering productivity 21% with Codex</span><span class="it-meta">✍️ 블로그 · openai.com</span><span class="it-lede">1Password의 엔지니어들이 OpenAI의 Codex를 활용해 신규 기능과 내부 도구를 빠르게 구축하고 있다.</span></span></summary><div class="it-body"><p>보안 정책을 엄격히 준수하면서도 프로덕션 수준의 코드 품질에 도달했다고 밝혔다. 그 결과 엔지니어링 생산성이 <strong>21% 향상</strong>된 것으로 나타났다.</p><div class="slot-l">WHY IT MATTERS</div><p>보안 요구가 까다로운 기업 환경에서도 AI 코딩 도구가 실무 생산성에 실질적 효과를 낼 수 있음을 보여주는 사례다.</p><a class="src-cta" href="https://openai.com/index/1password" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section></main>
+  <footer class="topics" id="topics"><h2>다루는 주제</h2><ul><li><a class="tnm" href="../../../category/ai-agent.html">AI Agent</a>AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</li><li><a class="tnm" href="../../../category/llm-foundation-model.html">LLM / Foundation Model</a>LLM·파운데이션 모델 — 사전학습·정렬·추론</li><li><a class="tnm" href="../../../category/deep-learning.html">Deep Learning</a>딥러닝 — 아키텍처·학습기법 자체</li><li><a class="tnm" href="../../../category/predictive-modeling.html">예측 모델링</a>예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</li><li><a class="tnm" href="../../../category/causal-inference.html">인과추론</a>인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</li><li><a class="tnm" href="../../../category/mlops.html">MLOps / ML Engineering</a>MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</li><li><a class="tnm" href="../../../category/practice.html">실무 사례 · 노하우</a>실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</li><li><a class="tnm" href="../../../category/industry-application.html">산업 적용 사례</a>산업 적용 사례 — 산업 현장의 AI/ML 적용</li></ul></footer>
+</div>
+<script>
+(function(){
+var r=document.documentElement,k="dsb-theme",s=localStorage.getItem(k);
+if(s)r.dataset.theme=s;
+document.getElementById('tbtn').addEventListener('click',function(){
+  var cur=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  var n=cur==='dark'?'light':'dark';r.dataset.theme=n;localStorage.setItem(k,n);});
+// 섹션 전체 펼치기/접기
+document.querySelectorAll('.exp').forEach(function(b){b.addEventListener('click',function(){
+  var sec=document.getElementById(b.dataset.sec);
+  var ds=sec.querySelectorAll('details.item'),open=b.dataset.state!=='open';
+  ds.forEach(function(d){d.open=open;});
+  b.dataset.state=open?'open':'closed';b.textContent=open?'전체 접기':'전체 펼치기';});});
+// 스크롤 위치 카테고리 TOC 활성 (데스크톱 사이드 TOC)
+var links={};document.querySelectorAll('.toc li[data-cat]').forEach(function(li){links[li.dataset.cat]=li;});
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){Object.values(links).forEach(function(l){l.classList.remove('active');});
+    if(links[e.target.id])links[e.target.id].classList.add('active');}});},
+  {rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('section.sec').forEach(function(s){obs.observe(s);});
+})();
+</script>
+</body>
+</html>
