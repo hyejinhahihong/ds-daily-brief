@@ -49763,5 +49763,77 @@
       "world-models",
       "research-automation"
     ]
+  },
+  "12e9dd6851803557bf5ad9fd2920e7fa2e644576": {
+    "url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
+    "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-09-13",
+    "tags": []
+  },
+  "c3aa33826442d0f0cc3fa5d142dd086e756ace1e": {
+    "url": "https://openai.com/index/cognition-devin-testing-with-astra",
+    "title": "Cognition helps Devin test its own work with GPT‑6 Astra",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-09-13",
+    "tags": []
+  },
+  "f4d0fac9e7c3098c36d32c106d3e097818c6a24a": {
+    "url": "https://towardsdatascience.com/one-capital-letter-was-silently-breaking-my-ai-support-bot-and-it-wasnt-in-the-new-model/",
+    "title": "One Capital Letter Was Silently Breaking My AI Support Bot, and It Wasn't in the New Model",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-09-13",
+    "tags": []
+  },
+  "2e30128e87d4a70d2401d7649a2354bdc9d04c70": {
+    "url": "https://towardsdatascience.com/stop-managing-alarms-an-incident-first-blueprint-for-telecom-aiops/",
+    "title": "Stop Managing Alarms: An Incident-First Blueprint for Telecom AIOps",
+    "category": "mlops",
+    "source_tier": 3,
+    "first_seen": "2026-09-13",
+    "tags": []
+  },
+  "22407f1a50da6d6ab680e81cd57864edcc16b06c": {
+    "url": "https://techcrunch.com/2026/09/12/openais-sam-altman-says-it-would-be-ill-advised-to-go-public-in-2026/",
+    "title": "OpenAI’s Sam Altman says it would be ‘ill-advised’ to go public in 2026",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-13",
+    "tags": []
+  },
+  "725588a31c85fd87e0cdff3b0cca205239b9121e": {
+    "url": "https://techcrunch.com/2026/09/12/anthropic-ceo-outlines-plan-to-pace-the-frontier/",
+    "title": "Anthropic CEO outlines plan to slow AI development",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-13",
+    "tags": []
+  },
+  "f9ae5067e024ba65e1157ccac5ad26a0e26e272f": {
+    "url": "https://arstechnica.com/gadgets/2026/09/i-spent-4000-on-a-robot-dog-from-china/",
+    "title": "I spent $4,000 on a robot dog from China",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-13",
+    "tags": []
+  },
+  "4ccf3f8eb5965f9da7b92319c9805475e4ecdf1e": {
+    "url": "https://arstechnica.com/space/2026/09/some-satellite-companies-still-have-an-appetite-for-boutique-launch-services/",
+    "title": "Some satellite companies still have an appetite for boutique launch services",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-13",
+    "tags": []
+  },
+  "73af4f7c1bedd61e68cdb965a13f96dcc4aa349b": {
+    "url": "https://www.wired.com/story/security-news-this-week-from-hacks-to-bioweapons-claude-misuse-is-now-everywhere/",
+    "title": "From Hacks to Bioweapons, Claude Misuse Is Now Everywhere",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-13",
+    "tags": []
   }
 }
