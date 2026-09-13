@@ -49835,5 +49835,71 @@
     "source_tier": 4,
     "first_seen": "2026-09-13",
     "tags": []
+  },
+  "b38076b21b4d5588be07859c6d8116d3907832a9": {
+    "url": "https://towardsdatascience.com/your-model-isnt-done-until-someone-else-can-call-it/",
+    "title": "Your Model Isn't Done Until Someone Else Can Call It",
+    "category": "mlops",
+    "source_tier": 3,
+    "first_seen": "2026-09-14",
+    "tags": [
+      "deployment",
+      "serving",
+      "monitoring"
+    ]
+  },
+  "5e49ff1223d635ce3187986552507c611f5adb7c": {
+    "url": "https://towardsdatascience.com/your-ai-adoption-lift-is-a-selection-effect/",
+    "title": "Your AI Adoption Lift Is a Selection Effect",
+    "category": "causal-inference",
+    "source_tier": 3,
+    "first_seen": "2026-09-14",
+    "tags": [
+      "selection-bias",
+      "treatment-effect"
+    ]
+  },
+  "7da785bec37362566f09b4dcfb54919f7fe9cdc9": {
+    "url": "https://techcrunch.com/2026/09/13/whats-behind-the-ai-industrys-latest-warnings-of-doom/",
+    "title": "What’s behind the AI industry’s latest warnings of doom?",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-14",
+    "tags": []
+  },
+  "71d2a72b149de943bc1198fdc910fac043842a13": {
+    "url": "https://techcrunch.com/2026/09/13/obama-urges-democrats-to-have-a-clear-plan-for-ai-safeguards/",
+    "title": "Obama urges Democrats to have a ‘clear plan’ for AI safeguards",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-14",
+    "tags": []
+  },
+  "27b6062ffb3b1521cab1e4ce4a7a7f9c22265940": {
+    "url": "https://arstechnica.com/health/2026/09/unvaccinated-pennsylvania-woman-died-of-measles-complications-coroner-says/",
+    "title": "Unvaccinated Pennsylvania woman died of measles complications, coroner says",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-14",
+    "tags": []
+  },
+  "a45af9653ad99b6341dcb5a0fda18111da037d88": {
+    "url": "https://arstechnica.com/gadgets/2026/09/i-fixed-a-tractor-using-john-deeres-self-repair-service-farmers-arent-sold-on-it/",
+    "title": "I fixed a tractor using John Deere’s self-repair service. Farmers aren’t sold on it.",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-14",
+    "tags": []
+  },
+  "0e0f4f8b6a15dd5db83faf5f79512a8c9e5b33ac": {
+    "url": "https://www.wired.com/story/ai-agents-are-thirsty-for-power/",
+    "title": "AI Agents Are Thirsty for Power",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-09-14",
+    "tags": [
+      "autonomy",
+      "resource-management"
+    ]
   }
 }

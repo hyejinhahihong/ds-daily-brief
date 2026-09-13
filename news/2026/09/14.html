@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI &amp; ML News Letter · 09/14</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --accent:#5DB8A6; --accent-hover:#479B8B; --accent-weak:#E8F4F1;
+  --focus-ring:rgba(93,184,166,.5);
+  --bg:#FAF9F5; --bg-subtle:#F0EEE6; --border:#E7E3D9;
+  --text:#1F1E1D; --text-2:#6B6862; --text-3:#A39E94;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}}
+:root[data-theme="dark"]{
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover);text-decoration:underline}
+strong{font-weight:600;color:var(--text)}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px;border-radius:3px}
+
+/* 모바일 우선 단일 컬럼 (<1200px). 덩어리 중앙 정렬은 margin:0 auto. */
+.page{max-width:760px;margin:0 auto;padding:20px 18px 40px}
+
+/* --- 마스트헤드 (뉴스레터 제호) --- */
+.mast{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+  padding-bottom:14px;border-bottom:2px solid var(--text);margin-bottom:24px}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--accent);
+  text-transform:uppercase;margin:0 0 6px}
+.mast-title{font-size:26px;font-weight:600;margin:0;letter-spacing:-.01em;line-height:1.15}
+.mast-date{font-size:14px;color:var(--text-2);margin-top:8px}
+.themebtn{flex:none;background:var(--bg-subtle);border:1px solid var(--border);color:var(--text-2);
+  border-radius:20px;padding:5px 12px;font-size:13px;cursor:pointer;font-family:inherit}
+.topnav{margin-top:11px;display:flex;gap:16px;font-size:13px}
+.topnav a{color:var(--text-2);font-weight:500} .topnav a:hover{color:var(--accent)}
+@media (min-width:640px){.mast-title{font-size:31px}}
+
+/* --- TODAY'S TOP 3 --- */
+.top3{background:var(--accent-weak);border-radius:12px;padding:14px 18px;margin-bottom:24px}
+.top3 h2{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--accent);margin:0 0 8px}
+.top3 ol{margin:0;padding:0;list-style:none}
+.top3 li{padding:4px 0 4px 22px;position:relative;font-size:15px;color:var(--text)}
+.top3 li::before{content:"\2605";position:absolute;left:0;color:var(--accent);font-size:12px;top:7px}
+.top3 .t3cat{color:var(--text-2);font-size:12px;margin-right:5px}
+.top3 a{color:var(--text)} .top3 a:hover{color:var(--accent-hover)}
+
+/* --- 목차 (TOC) --- */
+.toc{margin-bottom:26px}
+.toc h2{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--text-2);margin:0 0 8px}
+.toc ul{margin:0;padding:0;list-style:none}
+.toc li{padding:6px 0;border-top:1px solid var(--border)}
+.toc li:first-child{border-top:none}
+.toc .r{display:flex;gap:6px;align-items:baseline;font-size:14px}
+.toc .nm{font-weight:500;color:var(--text)} .toc a:hover .nm{color:var(--accent)}
+.toc .cnt{color:var(--text-3);font-size:12px}
+.toc .lead{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  font-size:12px;color:var(--text-2);margin-top:2px;line-height:1.4}
+.toc li.active .nm{color:var(--accent)}
+.toc li.active{border-left:2px solid var(--accent);padding-left:8px;margin-left:-10px}
+
+/* --- 섹션 --- */
+.sec{margin:0 0 34px;scroll-margin-top:14px}
+.sec-h{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:0 0 2px;padding-top:6px}
+.sec-h .nm{font-size:20px;font-weight:600}
+.sec-h .cnt{font-size:13px;color:var(--text-3)}
+.sec-h .all{font-size:12px;color:var(--text-3);margin-left:auto}
+.sec-h .all span{color:var(--text-2)}
+.sec-h .exp{font-size:12px;background:none;border:1px solid var(--border);color:var(--text-2);
+  border-radius:14px;padding:2px 10px;cursor:pointer;font-family:inherit}
+.sec-desc{font-size:13px;color:var(--text-2);margin:0 0 8px}
+.sec-empty{font-size:14px;color:var(--text-3);padding:4px 0 6px}
+.backtop{display:inline-block;font-size:12px;color:var(--text-3);margin-top:6px}
+
+/* --- 아이템 (아코디언) — 거터(번호) + 단일 콘텐츠 컬럼 (DESIGN §3 v4). 좌측 정렬선 1개. --- */
+.item{border-bottom:1px solid var(--border);--gutter:28px}
+.item>summary{list-style:none;cursor:pointer;padding:16px 26px 16px 0;position:relative;
+  display:grid;grid-template-columns:var(--gutter) 1fr;align-items:start}
+.item>summary::-webkit-details-marker{display:none}
+.item>summary::after{content:"\25B8";position:absolute;right:2px;top:16px;color:var(--text-3);
+  font-size:13px;transition:transform .15s;display:inline-block}
+.item[open]>summary::after{transform:rotate(90deg)}
+.num{font-size:13px;color:var(--text-3);font-variant-numeric:tabular-nums;font-weight:500;padding-top:3px}
+.t3star{color:var(--accent);font-size:11px;margin-right:2px}
+.body-col{min-width:0}
+.it-title{display:block;font-size:18px;font-weight:600;color:var(--text);line-height:1.4}
+.item>summary:hover .it-title{color:var(--accent)}
+.it-sub{display:block;font-size:13px;color:var(--text-2);margin-top:3px;line-height:1.35}
+.it-meta{display:block;font-size:13px;color:var(--text-2);margin-top:6px}
+.it-lede{display:block;font-size:15px;color:var(--text-2);margin-top:7px;line-height:1.5}
+.item[open] .it-lede{color:var(--text)}
+/* 접힘 본문도 콘텐츠 컬럼에 정렬 (거터만큼 들여씀) */
+.it-body{padding:0 0 20px var(--gutter)}
+.it-body p{margin:0 0 10px}
+@media (min-width:900px){.item{--gutter:40px}}
+.slot-l{font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--text-2);margin:14px 0 2px}
+.tags{margin-top:10px}
+.tag{display:inline-block;font-size:12px;color:var(--text-2);background:var(--bg-subtle);
+  border:1px solid var(--border);border-radius:12px;padding:1px 9px;margin:0 5px 5px 0}
+.prev{font-size:13px;color:var(--text-3);margin-top:8px}
+.src-cta{display:inline-block;margin-top:12px;font-size:14px;font-weight:500;color:var(--accent)}
+.weak{color:var(--accent);font-size:12px;border:1px solid var(--accent);border-radius:5px;
+  padding:0 6px;margin-left:6px}
+
+/* --- "다루는 주제" 푸터 --- */
+.topics{margin-top:36px;padding-top:22px;border-top:2px solid var(--text)}
+.topics h2{font-size:15px;font-weight:600;margin:0 0 12px}
+.topics ul{margin:0;padding:0;list-style:none}
+.topics li{padding:7px 0;border-top:1px solid var(--border);font-size:13px;color:var(--text-2)}
+.topics li:first-child{border-top:none}
+.topics .tnm{font-weight:600;color:var(--accent);margin-right:6px}
+
+/* --- 데스크톱 (≥1200px): 좌측 sticky TOC(260) + 본문(720), 덩어리 중앙 정렬 --- */
+@media (min-width:1200px){
+  /* max-width = 260+44+720 그리드(1024) + 좌우 padding(18*2). box-sizing:border-box
+     라 padding 을 포함해야 본문 720 이 찌그러지지 않는다. */
+  .page{max-width:1060px;display:grid;grid-template-columns:260px minmax(0,720px);
+    column-gap:44px;justify-content:center;align-items:start;padding-top:28px}
+  .mast{grid-column:1/3}
+  .toc{grid-column:1;grid-row:2/999;position:sticky;top:24px;margin:0;align-self:start}
+  .top3,.main{grid-column:2}
+  .topics{grid-column:1/3}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="mast">
+    <div class="mast-l">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1 class="mast-title">AI &amp; ML News Letter</h1>
+      <div class="mast-date">2026 / 09 / 14 (월) · 6건</div>
+      <nav class="topnav"><a href="../../../archive.html">📅 지난 브리핑</a>
+        <a href="#topics">🗂 주제별 보기</a></nav>
+    </div>
+    <button id="tbtn" class="themebtn" type="button">🌓 테마</button>
+  </header>
+  <section class="top3"><h2>TODAY'S TOP 3</h2><ol><li><a href="#5e49ff1223d6"><span class="t3cat">[인과추론]</span>AI 도입 효과 측정, 무작위 배정 없이는 &#x27;선택 편향&#x27;을 인과효과로 착각한다</a></li><li><a href="#b38076b21b4d"><span class="t3cat">[MLOps / ML Engineering]</span>&quot;모델은 API로 호출 가능해야 완성&quot; — FastAPI로 이탈 예측 배포하며 겪은 실전 시행착오</a></li><li><a href="#0e0f4f8b6a15"><span class="t3cat">[AI Agent]</span>실리콘밸리, 챗봇 대신 자원 집약형 에이전트 AI로 전환 — 데이터센터 증설 가속</a></li></ol></section>
+  <nav class="toc" id="toc"><h2>오늘의 목차</h2><ul><li data-cat="ai-agent"><a href="#ai-agent"><span class="r"><span class="nm">AI Agent</span><span class="cnt">1</span></span><span class="lead">실리콘밸리, 챗봇 대신 자원 집약형 에이전트 AI로 전환 — 데이터센터 증설 가속</span></a></li><li data-cat="causal-inference"><a href="#causal-inference"><span class="r"><span class="nm">인과추론</span><span class="cnt">1</span></span><span class="lead">AI 도입 효과 측정, 무작위 배정 없이는 &#x27;선택 편향&#x27;을 인과효과로 착각한다</span></a></li><li data-cat="mlops"><a href="#mlops"><span class="r"><span class="nm">MLOps / ML Engineering</span><span class="cnt">1</span></span><span class="lead">&quot;모델은 API로 호출 가능해야 완성&quot; — FastAPI로 이탈 예측 배포하며 겪은 실전 시행착오</span></a></li><li data-cat="practice"><a href="#practice"><span class="r"><span class="nm">실무 사례 · 노하우</span><span class="cnt">3</span></span><span class="lead">AI 업계, &#x27;인류 실존적 위협&#x27; 경고 재점화 — TechCrunch 팟캐스트 Equity가 배경 논의</span></a></li></ul></nav>
+  <main class="main"><section class="sec" id="ai-agent"><div class="sec-h"><span class="nm">AI Agent</span><span class="cnt">1건</span><span class="all"><a href="../../../category/ai-agent.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="ai-agent">전체 펼치기</button></div><div class="sec-desc">AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</div><details class="item" id="0e0f4f8b6a15" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">실리콘밸리, 챗봇 대신 자원 집약형 에이전트 AI로 전환 — 데이터센터 증설 가속</span><span class="it-sub">AI Agents Are Thirsty for Power</span><span class="it-meta">📰 뉴스 · wired.com</span><span class="it-lede">실리콘밸리의 AI 투자 방향이 단순 챗봇 질의 응답에서 훨씬 더 많은 컴퓨팅 자원을 소모하는 <strong>에이전트형 AI</strong>로 옮겨가고 있다.</span></span></summary><div class="it-body"><p>이러한 흐름이 대규모 데이터센터 건설 붐을 이끄는 핵심 동력으로 작용하고 있다는 것이 기사의 요지다.</p><div class="slot-l">WHY IT MATTERS</div><p>에이전트 AI의 확산은 곧 전력·인프라 수요 급증을 의미하며, AI 산업의 성장이 에너지·환경 문제와 직결된다는 점을 보여준다.</p><div class="tags"><span class="tag">#autonomy</span><span class="tag">#resource-management</span></div><a class="src-cta" href="https://www.wired.com/story/ai-agents-are-thirsty-for-power/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="llm-foundation-model"><div class="sec-h"><span class="nm">LLM / Foundation Model</span></div><div class="sec-desc">LLM·파운데이션 모델 — 사전학습·정렬·추론</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="deep-learning"><div class="sec-h"><span class="nm">Deep Learning</span></div><div class="sec-desc">딥러닝 — 아키텍처·학습기법 자체</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="predictive-modeling"><div class="sec-h"><span class="nm">예측 모델링</span></div><div class="sec-desc">예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="causal-inference"><div class="sec-h"><span class="nm">인과추론</span><span class="cnt">1건</span><span class="all"><a href="../../../category/causal-inference.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="causal-inference">전체 펼치기</button></div><div class="sec-desc">인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</div><details class="item" id="5e49ff1223d6" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">AI 도입 효과 측정, 무작위 배정 없이는 &#x27;선택 편향&#x27;을 인과효과로 착각한다</span><span class="it-sub">Your AI Adoption Lift Is a Selection Effect</span><span class="it-meta">✍️ 블로그 · towardsdatascience.com</span><span class="it-lede">이 글은 옵트인 방식으로 도입된 AI 기능의 실제 효과를 추정하는 실무자용 가이드를 다룬다.</span></span></summary><div class="it-body"><p>핵심 문제는 사용자가 무작위로 배정되지 않고 스스로 기능 사용 여부를 선택한다는 점이다. 이런 경우 관찰된 &#x27;도입 후 성과 향상&#x27;은 AI 기능 자체의 효과가 아니라 애초에 성과가 좋았던 사용자가 더 많이 채택했기 때문일 수 있다. 즉 <strong>선택 편향</strong>이 처치 효과로 오인될 위험을 실무적으로 어떻게 다뤄야 하는지를 설명한다.</p><div class="slot-l">WHY IT MATTERS</div><p>많은 기업이 신규 AI 기능 도입 후 지표 개선을 성과로 홍보하지만, 무작위 실험 없이는 이것이 실제 인과 효과인지 확인할 수 없다. DS/AI 실무자가 흔히 저지르는 이 오류를 인지하는 것은 잘못된 의사결정을 막는 데 중요하다.</p><div class="tags"><span class="tag">#selection-bias</span><span class="tag">#treatment-effect</span></div><a class="src-cta" href="https://towardsdatascience.com/your-ai-adoption-lift-is-a-selection-effect/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="mlops"><div class="sec-h"><span class="nm">MLOps / ML Engineering</span><span class="cnt">1건</span><span class="all"><a href="../../../category/mlops.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="mlops">전체 펼치기</button></div><div class="sec-desc">MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</div><details class="item" id="b38076b21b4d" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">&quot;모델은 API로 호출 가능해야 완성&quot; — FastAPI로 이탈 예측 배포하며 겪은 실전 시행착오</span><span class="it-sub">Your Model Isn&#x27;t Done Until Someone Else Can Call It</span><span class="it-meta">✍️ 블로그 · towardsdatascience.com</span><span class="it-lede">이탈 예측(churn prediction) 모델을 FastAPI 엔드포인트로 배포하는 과정을 다룬 글이다.</span></span></summary><div class="it-body"><p>로컬에서 모델이 &#x27;작동한다&#x27;는 상태와 실제로 &#x27;서비스로 살아있는&#x27; 상태 사이에는 큰 간극이 있으며, 그 사이에서 여러 문제가 발생했다고 설명한다. 저자는 이러한 배포 과정에서 부딪힌 구체적인 문제들을 공유한다.</p><div class="slot-l">WHY IT MATTERS</div><p>모델 개발과 실제 서비스 배포 사이의 간극은 많은 데이터 과학자들이 간과하는 부분으로, <strong>MLOps 실무 경험</strong>을 공유하는 사례는 실전 배포를 앞둔 이들에게 실질적인 참고가 된다.</p><div class="tags"><span class="tag">#deployment</span><span class="tag">#serving</span><span class="tag">#monitoring</span></div><a class="src-cta" href="https://towardsdatascience.com/your-model-isnt-done-until-someone-else-can-call-it/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="practice"><div class="sec-h"><span class="nm">실무 사례 · 노하우</span><span class="cnt">3건</span><span class="all"><a href="../../../category/practice.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="practice">전체 펼치기</button></div><div class="sec-desc">실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</div><details class="item" id="7da785bec373"><summary><span class="num">01</span><span class="body-col"><span class="it-title">AI 업계, &#x27;인류 실존적 위협&#x27; 경고 재점화 — TechCrunch 팟캐스트 Equity가 배경 논의</span><span class="it-sub">What’s behind the AI industry’s latest warnings of doom?</span><span class="it-meta">📰 뉴스 · techcrunch.com</span><span class="it-lede">TechCrunch의 팟캐스트 Equity 에피소드에서 AI가 인류에게 실존적 위협이 되는지에 대한 업계 내 최근 논쟁을 다뤘다.</span></span></summary><div class="it-body"><p>이번 논의는 AI 업계 인사들이 잇따라 내놓은 경고성 발언들을 배경으로 한다. 구체적인 발언 내용이나 수치는 원문에 제시되지 않았다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI 위험성에 대한 업계 내부자들의 경고가 반복되는 현상 자체가 규제 논의와 여론 형성에 영향을 미치므로 그 배경을 이해하는 것이 중요하다.</p><a class="src-cta" href="https://techcrunch.com/2026/09/13/whats-behind-the-ai-industrys-latest-warnings-of-doom/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="71d2a72b149d"><summary><span class="num">02</span><span class="body-col"><span class="it-title">오바마, 민주당에 AI 안전장치 관련 &quot;명확한 계획&quot; 마련 촉구</span><span class="it-sub">Obama urges Democrats to have a ‘clear plan’ for AI safeguards</span><span class="it-meta">📰 뉴스 · techcrunch.com</span><span class="it-lede">오바마 전 대통령이 민주당이 인공지능을 &#x27;핵심 의제&#x27; 중 하나로 삼아야 한다고 발언했다.</span></span></summary><div class="it-body"><p>그는 AI 기술의 경제적 영향과 안전성 우려를 다룰 <strong>명확한 계획</strong>이 필요하다고 강조했다.</p><div class="slot-l">WHY IT MATTERS</div><p>주요 정치인의 발언은 AI 규제·정책 논의가 미국 정치권 의제로 본격 부상하고 있음을 보여준다.</p><a class="src-cta" href="https://techcrunch.com/2026/09/13/obama-urges-democrats-to-have-a-clear-plan-for-ai-safeguards/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="a45af9653ad9"><summary><span class="num">03</span><span class="body-col"><span class="it-title">John Deere &#x27;자가수리&#x27; 서비스 체험기 — 트랙터 센서 고장 직접 고쳐봤지만 농민들 반응은 회의적</span><span class="it-sub">I fixed a tractor using John Deere’s self-repair service. Farmers aren’t sold on it.</span><span class="it-meta">📰 뉴스 · arstechnica.com</span><span class="it-lede">기자가 John Deere 본사에서 5130ML 트랙터의 연료 내 수분 감지 센서 고장을 직접 진단하고 수리하는 과정을 체험했다.</span></span></summary><div class="it-body"><p>노트북을 트랙터에 연결하자 화면에 오류 알림이 뜨고, 소프트웨어가 해당 기계의 일련번호에 맞는 사용자 매뉴얼 안내와 이미지를 제공했다. 기자는 정비사나 농민이 아니었지만 이 자가수리 툴을 이용해 문제를 해결할 수 있었다. 다만 이런 자가수리 서비스에 대해 실제 농민들은 아직 확신을 갖지 못하고 있다고 전한다.</p><div class="slot-l">WHY IT MATTERS</div><p>농기계 제조사가 자가수리권 요구에 대응해 진단·수리 소프트웨어를 공개한 사례로, <strong>우측수리권(Right to Repair)</strong> 논쟁의 실질적 이행 사례를 보여준다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존에는 John Deere 장비 수리를 위해 공식 딜러망을 거쳐야 했지만, 이번 자가수리 서비스는 사용자가 직접 소프트웨어로 진단하고 매뉴얼을 참조해 수리할 수 있도록 한 점이 다르다.</p><a class="src-cta" href="https://arstechnica.com/gadgets/2026/09/i-fixed-a-tractor-using-john-deeres-self-repair-service-farmers-arent-sold-on-it/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="industry-application"><div class="sec-h"><span class="nm">산업 적용 사례</span></div><div class="sec-desc">산업 적용 사례 — 산업 현장의 AI/ML 적용</div><div class="sec-empty">금일 신규 없음</div></section></main>
+  <footer class="topics" id="topics"><h2>다루는 주제</h2><ul><li><a class="tnm" href="../../../category/ai-agent.html">AI Agent</a>AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</li><li><a class="tnm" href="../../../category/llm-foundation-model.html">LLM / Foundation Model</a>LLM·파운데이션 모델 — 사전학습·정렬·추론</li><li><a class="tnm" href="../../../category/deep-learning.html">Deep Learning</a>딥러닝 — 아키텍처·학습기법 자체</li><li><a class="tnm" href="../../../category/predictive-modeling.html">예측 모델링</a>예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</li><li><a class="tnm" href="../../../category/causal-inference.html">인과추론</a>인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</li><li><a class="tnm" href="../../../category/mlops.html">MLOps / ML Engineering</a>MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</li><li><a class="tnm" href="../../../category/practice.html">실무 사례 · 노하우</a>실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</li><li><a class="tnm" href="../../../category/industry-application.html">산업 적용 사례</a>산업 적용 사례 — 산업 현장의 AI/ML 적용</li></ul></footer>
+</div>
+<script>
+(function(){
+var r=document.documentElement,k="dsb-theme",s=localStorage.getItem(k);
+if(s)r.dataset.theme=s;
+document.getElementById('tbtn').addEventListener('click',function(){
+  var cur=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  var n=cur==='dark'?'light':'dark';r.dataset.theme=n;localStorage.setItem(k,n);});
+// 섹션 전체 펼치기/접기
+document.querySelectorAll('.exp').forEach(function(b){b.addEventListener('click',function(){
+  var sec=document.getElementById(b.dataset.sec);
+  var ds=sec.querySelectorAll('details.item'),open=b.dataset.state!=='open';
+  ds.forEach(function(d){d.open=open;});
+  b.dataset.state=open?'open':'closed';b.textContent=open?'전체 접기':'전체 펼치기';});});
+// 스크롤 위치 카테고리 TOC 활성 (데스크톱 사이드 TOC)
+var links={};document.querySelectorAll('.toc li[data-cat]').forEach(function(li){links[li.dataset.cat]=li;});
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){Object.values(links).forEach(function(l){l.classList.remove('active');});
+    if(links[e.target.id])links[e.target.id].classList.add('active');}});},
+  {rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('section.sec').forEach(function(s){obs.observe(s);});
+})();
+</script>
+</body>
+</html>
