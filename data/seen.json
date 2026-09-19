@@ -55612,5 +55612,143 @@
       "tool-use",
       "function-calling"
     ]
+  },
+  "559b0cf1119746d24724b9d0e19761800b6e48fa": {
+    "url": "https://openai.com/index/australian-youth-safety-blueprint",
+    "title": "Introducing the Australian Youth Safety Blueprint",
+    "category": "industry-application",
+    "source_tier": 1,
+    "first_seen": "2026-09-20",
+    "tags": []
+  },
+  "62419f8b96ff88257e5611d4ac6990972b82dd5e": {
+    "url": "https://towardsdatascience.com/one-vendor-four-spellings-how-deterministic-stages-beat-similarity-scores/",
+    "title": "One Vendor, Four Spellings: How Deterministic Stages Beat Similarity Scores",
+    "category": "predictive-modeling",
+    "source_tier": 3,
+    "first_seen": "2026-09-20",
+    "tags": [
+      "XAI"
+    ]
+  },
+  "532eee3932e90ee051aa655b5318eafd066c7c96": {
+    "url": "https://towardsdatascience.com/ai-made-me-5x-faster-it-also-made-me-5x-worse-at-my-job/",
+    "title": "AI Made Me 5x Faster. It Also Made Me 5x Worse at My Job.",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-09-20",
+    "tags": []
+  },
+  "3c7d411657a059ccc251ef954ce2fe5116d4e4ee": {
+    "url": "https://techcrunch.com/2026/09/19/flock-reportedly-tries-to-shrink-workforce-with-employee-buyouts/",
+    "title": "Flock reportedly tries to shrink workforce with employee buyouts",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-20",
+    "tags": []
+  },
+  "6cd029fa2ffee0bffbf4ec85e5732c48ede81176": {
+    "url": "https://techcrunch.com/2026/09/19/trump-suggests-rebranding-ai-with-a-new-name-says-hes-also-creating-an-ai-force/",
+    "title": "Trump says it’s time to rebrand AI with a new name — and he’s also creating an AI Force",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-20",
+    "tags": []
+  },
+  "0080ce44a56c36565513e098abb9c8c84b072d1e": {
+    "url": "https://techcrunch.com/2026/09/19/googles-gemini-is-the-latest-ai-model-to-hack-other-companies/",
+    "title": "Google’s Gemini is the latest AI model to hack other companies",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-09-20",
+    "tags": []
+  },
+  "86ab101ea267b8c468a8f88d16448292d1f17c2c": {
+    "url": "https://techcrunch.com/2026/09/19/petlibros-new-ai-powered-feeder-is-a-game-changer-for-multi-cat-homes/",
+    "title": "Petlibro’s new AI-powered feeder is a game changer for multi-cat homes",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-09-20",
+    "tags": []
+  },
+  "760403627546a39981b21caa40a07188b50dc923": {
+    "url": "https://techcrunch.com/2026/09/19/ai-safety-conversations-have-gotten-unbelievable/",
+    "title": "AI safety conversations have gotten unbelievable",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-20",
+    "tags": []
+  },
+  "e57b5ab9f3b7649030baa77ac4cad1b59ed90d7d": {
+    "url": "https://techcrunch.com/2026/09/19/prices-go-up-in-7-days-get-your-disrupt-ticket-now/",
+    "title": "Prices go up in 7 days. Get your Disrupt ticket now.",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-20",
+    "tags": []
+  },
+  "c8eff2dfdecd64680b0862d41520215984c1681e": {
+    "url": "https://techcrunch.com/2026/09/19/vals-backed-by-andreessen-horowitz-is-looking-to-become-the-gold-standard-for-ai-benchmarking/",
+    "title": "Vals, backed by Andreessen Horowitz, is looking to become the gold standard for AI benchmarking",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-09-20",
+    "tags": []
+  },
+  "7d23deb23af91746bb7f76ee212e96e04c00317e": {
+    "url": "https://techcrunch.com/2026/09/18/india-forces-caller-id-apps-to-feed-spam-reports-to-telcos/",
+    "title": "India forces caller-ID apps to feed spam reports to telcos",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-20",
+    "tags": []
+  },
+  "1e8dff1956a4d3d1fd87d7e2348a7cf561b21942": {
+    "url": "https://techcrunch.com/2026/09/18/tilly-norwoods-press-tour-is-going-about-as-well-as-youd-expect-for-an-ai/",
+    "title": "Tilly Norwood’s press tour is going about as well as you’d expect for an AI",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-20",
+    "tags": []
+  },
+  "6b2c5fbd650451c90dc0d99a79f437ab2e6fd6f9": {
+    "url": "https://arstechnica.com/science/2026/09/learning-another-language-may-be-one-of-the-best-ways-to-keep-your-brain-healthy/",
+    "title": "Learning another language may be one of the best ways to keep your brain healthy",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-09-20",
+    "tags": []
+  },
+  "2e82d59db2fe2f65bba7705f02a530895066ea92": {
+    "url": "https://arstechnica.com/science/2026/09/rings-around-a-tiny-body-have-changed-over-the-past-decade/",
+    "title": "Rings around a tiny body have changed over the past decade",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-09-20",
+    "tags": []
+  },
+  "4c84d6c5416df861d40c398ee6a59518726c2f88": {
+    "url": "https://www.wired.com/story/kernel-panic-ai-vulnerability-explosion/",
+    "title": "Forget the AI Slowdown—the Vulnerability Explosion Is Already Happening",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-20",
+    "tags": []
+  },
+  "c60031507b9a97f5d047257c22a934876e001aab": {
+    "url": "https://www.wired.com/story/mathematicians-cant-quit-ai/",
+    "title": "Mathematicians Hate AI. They Can’t Quit It",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-20",
+    "tags": []
+  },
+  "7cb1932760a3100a09353f5520b7f9051ac0793f": {
+    "url": "https://www.wired.com/story/join-the-wired-world-fair-in-miami-on-november-4/",
+    "title": "Join the WIRED World Fair in Miami on November 4",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-20",
+    "tags": []
   }
 }
