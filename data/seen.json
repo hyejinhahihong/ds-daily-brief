@@ -55750,5 +55750,111 @@
     "source_tier": 4,
     "first_seen": "2026-09-20",
     "tags": []
+  },
+  "7bedfd8d5ddfb3410da77c58e565665955d20a75": {
+    "url": "https://towardsdatascience.com/graphrag-a-practitioners-guide-to-6-advanced-architectural-patterns/",
+    "title": "GraphRAG: A Practitioner's Guide to 6 Advanced Architectural Patterns",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-09-21",
+    "tags": [
+      "rag"
+    ]
+  },
+  "96d1eacdc5f92862c0fdd753a8225fdd9faa8cf3": {
+    "url": "https://towardsdatascience.com/cbam-paper-walkthrough-the-double-attention-mechanism/",
+    "title": "CBAM Paper Walkthrough: The Double-Attention Mechanism",
+    "category": "deep-learning",
+    "source_tier": 3,
+    "first_seen": "2026-09-21",
+    "tags": []
+  },
+  "410fb4adc82cc992843477b94af6cbbba2abf5c7": {
+    "url": "https://techcrunch.com/2026/09/20/6-days-left-to-get-ahead-at-techcrunch-disrupt-2026/",
+    "title": "6 days left to save up to $200 to TechCrunch Disrupt 2026",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-21",
+    "tags": []
+  },
+  "caea4d57fd6196eab04b20c4b4aea99251c66a64": {
+    "url": "https://techcrunch.com/2026/09/20/world-model-companies-are-keeping-a-lot-of-secrets/",
+    "title": "World model companies are keeping a lot of secrets",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-09-21",
+    "tags": []
+  },
+  "773aac6433e130dd2be47ba3d3c3b5673418bc2e": {
+    "url": "https://techcrunch.com/2026/09/20/is-the-ai-industry-really-ready-to-slow-down/",
+    "title": "Is the AI industry really ready to slow down?",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-09-21",
+    "tags": []
+  },
+  "cac0b390599514e0f6156c368921db57b29a3d9c": {
+    "url": "https://techcrunch.com/2026/09/20/voccis-ring-adds-a-new-form-factor-to-meeting-note-taking/",
+    "title": "Vocci’s ring adds a new form factor to meeting note-taking",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-21",
+    "tags": []
+  },
+  "f4686059b250260c73fc871e129042194a97758a": {
+    "url": "https://techcrunch.com/2026/09/20/scrolled-wants-to-turn-textbooks-into-tiktok/",
+    "title": "ScrollEd wants to turn textbooks into TikTok",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-21",
+    "tags": []
+  },
+  "a1e749a7f8ab8d68ab3eda96b5d58cc5e7ff7093": {
+    "url": "https://arstechnica.com/security/2026/09/an-undercover-google-analyst-infiltrated-a-notorious-supply-chain-hacking-gang/",
+    "title": "An undercover Google analyst infiltrated a notorious supply-chain hacking gang",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-21",
+    "tags": []
+  },
+  "3f22b785bad84e36542fc520a5d48ee5a258fd2b": {
+    "url": "https://arstechnica.com/cars/2026/09/dont-call-it-an-suv-the-ferrari-purosangue-review/",
+    "title": "Don't call it an SUV: The Ferrari Purosangue review",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-21",
+    "tags": []
+  },
+  "c76e20d9149fa760d267b739de68258361a669a3": {
+    "url": "https://arstechnica.com/science/2026/09/t-rex-teeth-indicate-it-ran-as-warm-as-an-elephant/",
+    "title": "T. rex teeth indicate it ran as warm as an elephant",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-21",
+    "tags": []
+  },
+  "f63d315acbf5becd23b058962567889603bcddd8": {
+    "url": "https://www.wired.com/story/metas-muse-is-better-at-surveilling-than-helping-me/",
+    "title": "Meta's Muse Is Better at Surveilling Than Helping Me",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-09-21",
+    "tags": []
+  },
+  "acdaa28c5685edcfec337b59a9c0745bb58fef43": {
+    "url": "https://www.wired.com/story/donald-trump-versus-maga-on-data-centers/",
+    "title": "It’s Donald Trump Versus MAGA on Data Centers",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-21",
+    "tags": []
+  },
+  "1e91a14383e8d97d56a064664c91e5ad38160039": {
+    "url": "https://huggingface.co/Qwen/Qwen-Image-2.1-PE-I2I",
+    "title": "Qwen/Qwen-Image-2.1-PE-I2I",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-09-21",
+    "tags": []
   }
 }
