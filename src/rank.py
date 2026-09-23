@@ -138,6 +138,8 @@ def _clamp(x: float) -> float:
 
 def _item_line(idx: int, it: Item) -> str:
     parts = [f"[{idx}] {it.title}", f"src={it.source_domain}", f"type={it.content_type}"]
+    if it.abstract:
+        parts.append(f"abstract={it.abstract[:600]}")
     if it.venue:
         parts.append(f"venue={it.venue}")
     if it.tags:
