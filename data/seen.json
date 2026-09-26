@@ -61942,5 +61942,103 @@
       "mobile-agents",
       "orchestration"
     ]
+  },
+  "5f4a5bd8a4a674a11807dd0876a96848b4c564d7": {
+    "url": "https://towardsdatascience.com/ai-slop-is-now-in-your-training-dataset-i-tested-three-ways-to-spot-it/",
+    "title": "AI Slop Is Already in Your Training Dataset. I Tested Three Ways to Spot It.",
+    "category": "predictive-modeling",
+    "source_tier": 3,
+    "first_seen": "2026-09-27",
+    "tags": [
+      "XAI"
+    ]
+  },
+  "1ae28276d7a509eefc416b2f363379e8af43dc24": {
+    "url": "https://towardsdatascience.com/your-llm-has-a-curved-space-of-paragraphs/",
+    "title": "Your LLM Has a Curved Space of Paragraphs",
+    "category": "deep-learning",
+    "source_tier": 3,
+    "first_seen": "2026-09-27",
+    "tags": []
+  },
+  "68191dea1fc893e27beb9295ad10be90f6053fe5": {
+    "url": "https://www.analyticsvidhya.com/blog/2026/09/agentic-context-engineering/",
+    "title": "Agentic Context Engineering (ACE): Self-Improving Language Models",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-09-27",
+    "tags": []
+  },
+  "71b88d6b7195bace60f7799ffc42cb066d2a7d32": {
+    "url": "https://techcrunch.com/2026/09/26/insurers-claim-ai-is-already-increasing-healthcare-costs/",
+    "title": "Insurers claim AI is already increasing healthcare costs",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-09-27",
+    "tags": []
+  },
+  "dc5183e86bb57478a1d252bfc93c69cb5a27ef35": {
+    "url": "https://techcrunch.com/2026/09/26/i-created-an-interactive-digital-avatar-of-myself-and-you-can-talk-to-it/",
+    "title": "I created an interactive digital avatar of myself — and you can talk to it",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-09-27",
+    "tags": []
+  },
+  "fe937b84825f8022a1afef74267847d9d9930a7a": {
+    "url": "https://techcrunch.com/2026/09/25/at-meta-connect-the-companys-smart-glasses-were-everywhere/",
+    "title": "At Meta Connect, the company’s smart glasses were everywhere",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-09-27",
+    "tags": []
+  },
+  "e2adda6bbee7ba5faecb4a3d798aea8746d60335": {
+    "url": "https://arstechnica.com/cars/2026/09/teslas-big-electric-truck-faces-an-even-bigger-infrastructure-challenge/",
+    "title": "Tesla’s big electric truck faces an even bigger infrastructure challenge",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-09-27",
+    "tags": []
+  },
+  "266dc41c49dc06ecd89218149b1777a3682fcb09": {
+    "url": "https://arstechnica.com/health/2026/09/can-trump-ever-be-wrong-his-pick-to-lead-fda-refused-to-say/",
+    "title": "Can Trump ever be wrong? His pick to lead FDA refused to say.",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-09-27",
+    "tags": []
+  },
+  "26c3af8439861c7fccf4a2d97fa62eeb1e232a2c": {
+    "url": "https://arstechnica.com/tech-policy/2026/09/court-rules-trump-can-blacklist-anthropic-for-refusing-to-enable-claude-features/",
+    "title": "Court rules Pentagon can blacklist Anthropic for refusing to enable Claude features",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-09-27",
+    "tags": []
+  },
+  "be11f7d1d629dcf0a0e5b7ef245b31aba61c1f73": {
+    "url": "https://arstechnica.com/ai/2026/09/tesla-workers-balk-at-training-optimus-humanoid-robots-as-replacements/",
+    "title": "Tesla workers balk at training Optimus humanoid robots as replacements",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-09-27",
+    "tags": []
+  },
+  "b25ee381fa3139d4be61c38de09fd7b0b1a943ba": {
+    "url": "https://arstechnica.com/security/2026/09/google-ads-caught-delivering-convincing-scareware-ads-to-unsuspecting-users/",
+    "title": "Your uncle’s frozen Mac says it’s infected after viewing a Google ad. Now what?",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-09-27",
+    "tags": []
+  },
+  "435af0a8978de747c89f342fd9128e91a2d96143": {
+    "url": "https://www.wired.com/story/meta-muse-is-adults-only-why-does-it-look-like-a-cute-kids-toy/",
+    "title": "Meta’s Muse Is Adults-Only. Why Does It Look Like a Kids’ Toy?",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-09-27",
+    "tags": []
   }
 }
