@@ -62040,5 +62040,63 @@
     "source_tier": 4,
     "first_seen": "2026-09-27",
     "tags": []
+  },
+  "b5659709ffd8bfacbe4af86c23858c2a638facc6": {
+    "url": "https://towardsdatascience.com/graphrag-with-typesafe-jev-a-system-one-approach-to-scalable-knowledge-graphs/",
+    "title": "GraphRAG with TypeSafe Jev: A System One Approach to Scalable Knowledge Graphs",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-09-28",
+    "tags": [
+      "rag"
+    ]
+  },
+  "323c4682001ecf2594a5f1885274e072d05e6d35": {
+    "url": "https://towardsdatascience.com/good-architecture-deletes-the-signals-your-agent-depends-on/",
+    "title": "Good Architecture Deletes the Signals Your Agent Depends On",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-09-28",
+    "tags": []
+  },
+  "63f85032962dd035e0cf920422c778959b7cfa10": {
+    "url": "https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/",
+    "title": "Anthropic’s CEO is about to have dinner with President Trump",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-09-28",
+    "tags": []
+  },
+  "80032e73c06a7a2ae8731dcd62c6bc96a4de271d": {
+    "url": "https://techcrunch.com/2026/09/27/can-muse-overcome-metas-trust-issues/",
+    "title": "Can Muse overcome Meta’s trust issues?",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-09-28",
+    "tags": []
+  },
+  "39e6d83733f34b5b3da60c069adc5d5c47def3ac": {
+    "url": "https://techcrunch.com/2026/09/27/anthropics-dario-amodei-gets-the-snl-treatment/",
+    "title": "Anthropic’s Dario Amodei gets the SNL treatment",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-28",
+    "tags": []
+  },
+  "7777e457137428716744555f5f6b5cb99afd8a0c": {
+    "url": "https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india/",
+    "title": "Google tests buying from Walmart-owned Flipkart through Gemini and AI Mode in India",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-09-28",
+    "tags": []
+  },
+  "4e709fa953bde058d92275061d1ebe3040406ad3": {
+    "url": "https://arstechnica.com/tech-policy/2026/09/how-the-smithsonian-became-the-latest-front-in-trumps-culture-war/",
+    "title": "How the Smithsonian became the latest front in Trump’s culture war",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-09-28",
+    "tags": []
   }
 }

@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI &amp; ML News Letter · 09/28</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --accent:#5DB8A6; --accent-hover:#479B8B; --accent-weak:#E8F4F1;
+  --focus-ring:rgba(93,184,166,.5);
+  --bg:#FAF9F5; --bg-subtle:#F0EEE6; --border:#E7E3D9;
+  --text:#1F1E1D; --text-2:#6B6862; --text-3:#A39E94;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}}
+:root[data-theme="dark"]{
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover);text-decoration:underline}
+strong{font-weight:600;color:var(--text)}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px;border-radius:3px}
+
+/* 모바일 우선 단일 컬럼 (<1200px). 덩어리 중앙 정렬은 margin:0 auto. */
+.page{max-width:760px;margin:0 auto;padding:20px 18px 40px}
+
+/* --- 마스트헤드 (뉴스레터 제호) --- */
+.mast{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+  padding-bottom:14px;border-bottom:2px solid var(--text);margin-bottom:24px}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--accent);
+  text-transform:uppercase;margin:0 0 6px}
+.mast-title{font-size:26px;font-weight:600;margin:0;letter-spacing:-.01em;line-height:1.15}
+.mast-date{font-size:14px;color:var(--text-2);margin-top:8px}
+.themebtn{flex:none;background:var(--bg-subtle);border:1px solid var(--border);color:var(--text-2);
+  border-radius:20px;padding:5px 12px;font-size:13px;cursor:pointer;font-family:inherit}
+.topnav{margin-top:11px;display:flex;gap:16px;font-size:13px}
+.topnav a{color:var(--text-2);font-weight:500} .topnav a:hover{color:var(--accent)}
+@media (min-width:640px){.mast-title{font-size:31px}}
+
+/* --- TODAY'S TOP 3 --- */
+.top3{background:var(--accent-weak);border-radius:12px;padding:14px 18px;margin-bottom:24px}
+.top3 h2{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--accent);margin:0 0 8px}
+.top3 ol{margin:0;padding:0;list-style:none}
+.top3 li{padding:4px 0 4px 22px;position:relative;font-size:15px;color:var(--text)}
+.top3 li::before{content:"\2605";position:absolute;left:0;color:var(--accent);font-size:12px;top:7px}
+.top3 .t3cat{color:var(--text-2);font-size:12px;margin-right:5px}
+.top3 a{color:var(--text)} .top3 a:hover{color:var(--accent-hover)}
+
+/* --- 목차 (TOC) --- */
+.toc{margin-bottom:26px}
+.toc h2{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--text-2);margin:0 0 8px}
+.toc ul{margin:0;padding:0;list-style:none}
+.toc li{padding:6px 0;border-top:1px solid var(--border)}
+.toc li:first-child{border-top:none}
+.toc .r{display:flex;gap:6px;align-items:baseline;font-size:14px}
+.toc .nm{font-weight:500;color:var(--text)} .toc a:hover .nm{color:var(--accent)}
+.toc .cnt{color:var(--text-3);font-size:12px}
+.toc .lead{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  font-size:12px;color:var(--text-2);margin-top:2px;line-height:1.4}
+.toc li.active .nm{color:var(--accent)}
+.toc li.active{border-left:2px solid var(--accent);padding-left:8px;margin-left:-10px}
+
+/* --- 섹션 --- */
+.sec{margin:0 0 34px;scroll-margin-top:14px}
+.sec-h{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:0 0 2px;padding-top:6px}
+.sec-h .nm{font-size:20px;font-weight:600}
+.sec-h .cnt{font-size:13px;color:var(--text-3)}
+.sec-h .all{font-size:12px;color:var(--text-3);margin-left:auto}
+.sec-h .all span{color:var(--text-2)}
+.sec-h .exp{font-size:12px;background:none;border:1px solid var(--border);color:var(--text-2);
+  border-radius:14px;padding:2px 10px;cursor:pointer;font-family:inherit}
+.sec-desc{font-size:13px;color:var(--text-2);margin:0 0 8px}
+.sec-empty{font-size:14px;color:var(--text-3);padding:4px 0 6px}
+.backtop{display:inline-block;font-size:12px;color:var(--text-3);margin-top:6px}
+
+/* --- 아이템 (아코디언) — 거터(번호) + 단일 콘텐츠 컬럼 (DESIGN §3 v4). 좌측 정렬선 1개. --- */
+.item{border-bottom:1px solid var(--border);--gutter:28px}
+.item>summary{list-style:none;cursor:pointer;padding:16px 26px 16px 0;position:relative;
+  display:grid;grid-template-columns:var(--gutter) 1fr;align-items:start}
+.item>summary::-webkit-details-marker{display:none}
+.item>summary::after{content:"\25B8";position:absolute;right:2px;top:16px;color:var(--text-3);
+  font-size:13px;transition:transform .15s;display:inline-block}
+.item[open]>summary::after{transform:rotate(90deg)}
+.num{font-size:13px;color:var(--text-3);font-variant-numeric:tabular-nums;font-weight:500;padding-top:3px}
+.t3star{color:var(--accent);font-size:11px;margin-right:2px}
+.body-col{min-width:0}
+.it-title{display:block;font-size:18px;font-weight:600;color:var(--text);line-height:1.4}
+.item>summary:hover .it-title{color:var(--accent)}
+.it-sub{display:block;font-size:13px;color:var(--text-2);margin-top:3px;line-height:1.35}
+.it-meta{display:block;font-size:13px;color:var(--text-2);margin-top:6px}
+.it-lede{display:block;font-size:15px;color:var(--text-2);margin-top:7px;line-height:1.5}
+.item[open] .it-lede{color:var(--text)}
+/* 접힘 본문도 콘텐츠 컬럼에 정렬 (거터만큼 들여씀) */
+.it-body{padding:0 0 20px var(--gutter)}
+.it-body p{margin:0 0 10px}
+@media (min-width:900px){.item{--gutter:40px}}
+.slot-l{font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--text-2);margin:14px 0 2px}
+.tags{margin-top:10px}
+.tag{display:inline-block;font-size:12px;color:var(--text-2);background:var(--bg-subtle);
+  border:1px solid var(--border);border-radius:12px;padding:1px 9px;margin:0 5px 5px 0}
+.prev{font-size:13px;color:var(--text-3);margin-top:8px}
+.src-cta{display:inline-block;margin-top:12px;font-size:14px;font-weight:500;color:var(--accent)}
+.weak{color:var(--accent);font-size:12px;border:1px solid var(--accent);border-radius:5px;
+  padding:0 6px;margin-left:6px}
+
+/* --- "다루는 주제" 푸터 --- */
+.topics{margin-top:36px;padding-top:22px;border-top:2px solid var(--text)}
+.topics h2{font-size:15px;font-weight:600;margin:0 0 12px}
+.topics ul{margin:0;padding:0;list-style:none}
+.topics li{padding:7px 0;border-top:1px solid var(--border);font-size:13px;color:var(--text-2)}
+.topics li:first-child{border-top:none}
+.topics .tnm{font-weight:600;color:var(--accent);margin-right:6px}
+
+/* --- 데스크톱 (≥1200px): 좌측 sticky TOC(260) + 본문(720), 덩어리 중앙 정렬 --- */
+@media (min-width:1200px){
+  /* max-width = 260+44+720 그리드(1024) + 좌우 padding(18*2). box-sizing:border-box
+     라 padding 을 포함해야 본문 720 이 찌그러지지 않는다. */
+  .page{max-width:1060px;display:grid;grid-template-columns:260px minmax(0,720px);
+    column-gap:44px;justify-content:center;align-items:start;padding-top:28px}
+  .mast{grid-column:1/3}
+  .toc{grid-column:1;grid-row:2/999;position:sticky;top:24px;margin:0;align-self:start}
+  .top3,.main{grid-column:2}
+  .topics{grid-column:1/3}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="mast">
+    <div class="mast-l">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1 class="mast-title">AI &amp; ML News Letter</h1>
+      <div class="mast-date">2026 / 09 / 28 (월) · 7건</div>
+      <nav class="topnav"><a href="../../../archive.html">📅 지난 브리핑</a>
+        <a href="#topics">🗂 주제별 보기</a></nav>
+    </div>
+    <button id="tbtn" class="themebtn" type="button">🌓 테마</button>
+  </header>
+  <section class="top3"><h2>TODAY'S TOP 3</h2><ol><li><a href="#323c4682001e"><span class="t3cat">[AI Agent]</span>에이전트용 관측성 설계 — &#x27;좋은 아키텍처&#x27;가 도구가 의존하는 신호를 지운다</a></li><li><a href="#b5659709ffd8"><span class="t3cat">[LLM / Foundation Model]</span>TypeSafe Jev 도입한 GraphRAG — 고빈도 그래프 결정은 보정 모델, LLM은 추론·생성에 집중</a></li><li><a href="#7777e4571374"><span class="t3cat">[산업 적용 사례]</span>Google, 인도서 Gemini·AI Mode 통해 Flipkart 구매 테스트 — 10월 중 확대 예정</a></li></ol></section>
+  <nav class="toc" id="toc"><h2>오늘의 목차</h2><ul><li data-cat="ai-agent"><a href="#ai-agent"><span class="r"><span class="nm">AI Agent</span><span class="cnt">1</span></span><span class="lead">에이전트용 관측성 설계 — &#x27;좋은 아키텍처&#x27;가 도구가 의존하는 신호를 지운다</span></a></li><li data-cat="llm-foundation-model"><a href="#llm-foundation-model"><span class="r"><span class="nm">LLM / Foundation Model</span><span class="cnt">2</span></span><span class="lead">TypeSafe Jev 도입한 GraphRAG — 고빈도 그래프 결정은 보정 모델, LLM은 추론·생성에 집중</span></a></li><li data-cat="practice"><a href="#practice"><span class="r"><span class="nm">실무 사례 · 노하우</span><span class="cnt">2</span></span><span class="lead">Anthropic CEO 다리오 아모데이, SNL 패러디 소재 되다</span></a></li><li data-cat="industry-application"><a href="#industry-application"><span class="r"><span class="nm">산업 적용 사례</span><span class="cnt">2</span></span><span class="lead">Google, 인도서 Gemini·AI Mode 통해 Flipkart 구매 테스트 — 10월 중 확대 예정</span></a></li></ul></nav>
+  <main class="main"><section class="sec" id="ai-agent"><div class="sec-h"><span class="nm">AI Agent</span><span class="cnt">1건</span><span class="all"><a href="../../../category/ai-agent.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="ai-agent">전체 펼치기</button></div><div class="sec-desc">AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</div><details class="item" id="323c4682001e" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">에이전트용 관측성 설계 — &#x27;좋은 아키텍처&#x27;가 도구가 의존하는 신호를 지운다</span><span class="it-sub">Good Architecture Deletes the Signals Your Agent Depends On</span><span class="it-meta">✍️ 블로그 · towardsdatascience.com</span><span class="it-lede">저자는 시스템 경계(모듈 분리, 서비스 분할 등)를 명확히 그을수록 그 경계 너머로 전달되던 신호들이 사라진다고 지적한다.</span></span></summary><div class="it-body"><p>에이전트나 관측 도구가 문제를 진단할 때 활용하던 정보가 &#x27;좋은 아키텍처&#x27;라 불리는 구조적 설계 관행 자체에 의해 삭제된다는 것이다. 이는 검색이나 로깅을 더 잘하는 문제가 아니라, <strong>구조 자체의 문제</strong>라고 강조한다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI 에이전트가 시스템을 자동으로 진단·수정하려면 충분한 신호가 남아 있어야 하는데, 전통적으로 좋다고 여겨진 아키텍처 원칙이 오히려 그 신호를 없앨 수 있다는 점은 에이전트 친화적 설계를 고민하는 실무자에게 중요한 경고다.</p><a class="src-cta" href="https://towardsdatascience.com/good-architecture-deletes-the-signals-your-agent-depends-on/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="llm-foundation-model"><div class="sec-h"><span class="nm">LLM / Foundation Model</span><span class="cnt">2건</span><span class="all"><a href="../../../category/llm-foundation-model.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="llm-foundation-model">전체 펼치기</button></div><div class="sec-desc">LLM·파운데이션 모델 — 사전학습·정렬·추론</div><details class="item" id="b5659709ffd8" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">TypeSafe Jev 도입한 GraphRAG — 고빈도 그래프 결정은 보정 모델, LLM은 추론·생성에 집중</span><span class="it-sub">GraphRAG with TypeSafe Jev: A System One Approach to Scalable Knowledge Graphs</span><span class="it-meta">✍️ 블로그 · towardsdatascience.com</span><span class="it-lede">이 글은 GraphRAG 시스템에서 지식 그래프 관련 고빈도 의사결정을 <strong>보정된 결정 모델</strong>이 담당하고, LLM은 추론·종합·개방형 생성 같은 역할에 집중하도록 분리하는 접근을 소개한다.</span></span></summary><div class="it-body"><p>이를 &#x27;System One&#x27; 방식으로 명명해, 빠르고 반복적인 판단과 느리고 복잡한 추론을 구조적으로 나누는 아이디어를 제시한다. TypeSafe Jev라는 도구를 활용해 이러한 역할 분담을 구현한 사례를 다룬다.</p><div class="slot-l">WHY IT MATTERS</div><p>GraphRAG를 대규모로 운영할 때 모든 결정을 LLM에 맡기면 비용과 지연이 커지는데, <strong>역할 분리</strong> 전략은 이를 완화할 실용적 대안이 될 수 있다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존에 LLM이 그래프 탐색·결정까지 전담하던 방식 대비, 고빈도 결정을 별도의 보정 모델로 분리해 LLM 부담을 줄이는 구조라는 점이 다르다.</p><div class="tags"><span class="tag">#rag</span></div><a class="src-cta" href="https://towardsdatascience.com/graphrag-with-typesafe-jev-a-system-one-approach-to-scalable-knowledge-graphs/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="80032e73c06a"><summary><span class="num">02</span><span class="body-col"><span class="it-title">Meta 신규 AI &#x27;Muse&#x27; 공개, 관건은 기술이 아닌 &#x27;신뢰 회복&#x27;</span><span class="it-sub">Can Muse overcome Meta’s trust issues?</span><span class="it-meta">📰 뉴스 · techcrunch.com</span><span class="it-lede">Meta가 새로운 AI 관련 발표를 통해 OpenAI와 Anthropic의 이슈를 덮으며 주목을 끌었다.</span></span></summary><div class="it-body"><p>팟캐스트 Equity에서는 이 발표의 핵심으로 &#x27;Muse&#x27;라는 이름이 언급되었다. 다만 원문에서는 구체적인 기능이나 기술적 세부사항보다 Meta에 대한 신뢰 문제가 논의의 중심으로 다뤄졌다.</p><div class="slot-l">WHY IT MATTERS</div><p>빅테크의 AI 발표가 기술력만큼이나 <strong>기업 신뢰도</strong>에 좌우된다는 점을 보여주는 사례로, 경쟁사 발표 타이밍과 여론 형성 전략을 함께 살펴볼 필요가 있다.</p><a class="src-cta" href="https://techcrunch.com/2026/09/27/can-muse-overcome-metas-trust-issues/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="deep-learning"><div class="sec-h"><span class="nm">Deep Learning</span></div><div class="sec-desc">딥러닝 — 아키텍처·학습기법 자체</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="predictive-modeling"><div class="sec-h"><span class="nm">예측 모델링</span></div><div class="sec-desc">예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="causal-inference"><div class="sec-h"><span class="nm">인과추론</span></div><div class="sec-desc">인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="mlops"><div class="sec-h"><span class="nm">MLOps / ML Engineering</span></div><div class="sec-desc">MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="practice"><div class="sec-h"><span class="nm">실무 사례 · 노하우</span><span class="cnt">2건</span><span class="all"><a href="../../../category/practice.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="practice">전체 펼치기</button></div><div class="sec-desc">실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</div><details class="item" id="39e6d83733f3"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Anthropic CEO 다리오 아모데이, SNL 패러디 소재 되다</span><span class="it-sub">Anthropic’s Dario Amodei gets the SNL treatment</span><span class="it-meta">📰 뉴스 · techcrunch.com<span class="weak">원문 근거 부족</span></span><span class="it-lede">Anthropic의 CEO 다리오 아모데이가 미국 코미디 프로그램 SNL에서 패러디 대상이 되었다.</span></span></summary><div class="it-body"><p>관련 대사로 &quot;AI is the devil and I its maker&quot;라는 문구가 소개되었다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI 업계 리더가 대중문화에서 풍자 대상이 될 만큼 <strong>AI 기술의 사회적 존재감</strong>이 커졌음을 보여주는 사례다.</p><a class="src-cta" href="https://techcrunch.com/2026/09/27/anthropics-dario-amodei-gets-the-snl-treatment/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="4e709fa953bd"><summary><span class="num">02</span><span class="body-col"><span class="it-title">스미소니언 박물관, 백악관 162쪽 보고서로 &#x27;이념적 편향&#x27; 비판 받아 — 프랭클린 전시 등 논란</span><span class="it-sub">How the Smithsonian became the latest front in Trump’s culture war</span><span class="it-meta">📰 뉴스 · arstechnica.com</span><span class="it-lede">스미소니언 국립미국역사박물관이 2021년 개막한 &#x27;전기의 프랭클린&#x27; 전시는 벤저민 프랭클린이 노예를 소유했으며 전기 실험에 가족·친구뿐 아니라 노예나 계약 하인을 감전 실험에 동원했을 가능성을 언급했다.</span></span></summary><div class="it-body"><p>이 전시는 2025년 폐막했지만 온라인에서 여전히 열람 가능하다. 백악관은 7월 발표한 <strong>162쪽 보고서</strong>에서 이런 서술을 문제 삼아 박물관이 &#x27;이념적 포획&#x27;에 빠져 순수한 역사 교육에서 벗어나 정치적 행동주의로 변질됐다고 주장했다.</p><div class="slot-l">WHY IT MATTERS</div><p>공공 박물관의 역사 서술이 정치적 논쟁의 대상이 되는 사례로, 학술 기관의 편집 독립성과 정부 개입 사이의 긴장을 보여준다. DS/AI 실무자에게도 데이터·서사의 &#x27;객관성&#x27; 주장이 어떻게 정치적으로 재해석될 수 있는지 참고가 된다.</p><a class="src-cta" href="https://arstechnica.com/tech-policy/2026/09/how-the-smithsonian-became-the-latest-front-in-trumps-culture-war/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="industry-application"><div class="sec-h"><span class="nm">산업 적용 사례</span><span class="cnt">2건</span><span class="all"><a href="../../../category/industry-application.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="industry-application">전체 펼치기</button></div><div class="sec-desc">산업 적용 사례 — 산업 현장의 AI/ML 적용</div><details class="item" id="7777e4571374" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">Google, 인도서 Gemini·AI Mode 통해 Flipkart 구매 테스트 — 10월 중 확대 예정</span><span class="it-sub">Google tests buying from Walmart-owned Flipkart through Gemini and AI Mode in India</span><span class="it-meta">📰 뉴스 · techcrunch.com</span><span class="it-lede">Google이 인도에서 Gemini와 AI Mode를 통해 Walmart 소유의 Flipkart 상품을 구매할 수 있는 기능을 테스트하고 있다.</span></span></summary><div class="it-body"><p>이번 테스트는 <strong>일부 상품과 사용자로 한정된 제한적 범위</strong>로 진행된다. 회사는 10월 중 더 넓은 범위로 확대 적용할 계획이다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI 챗봇·어시스턴트가 검색을 넘어 실제 이커머스 거래를 중개하는 흐름을 보여주는 사례로, 대화형 AI가 쇼핑 플랫폼의 진입점이 될 가능성을 시사한다.</p><a class="src-cta" href="https://techcrunch.com/2026/09/26/google-tests-buying-from-walmart-owned-flipkart-through-gemini-and-ai-mode-in-india/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="63f85032962d"><summary><span class="num">02</span><span class="body-col"><span class="it-title">Anthropic CEO 다리오 아모데이, 트럼프 대통령과 첫 단독 만찬 예정</span><span class="it-sub">Anthropic’s CEO is about to have dinner with President Trump</span><span class="it-meta">📰 뉴스 · techcrunch.com<span class="weak">원문 근거 부족</span></span><span class="it-lede">Anthropic의 CEO 다리오 아모데이가 도널드 트럼프 대통령과 첫 단독 만찬을 가질 예정이다.</span></span></summary><div class="it-body"><div class="slot-l">WHY IT MATTERS</div><p>AI 업계 리더와 미국 행정부 간 관계가 향후 AI 정책 방향에 영향을 줄 수 있어 주목할 만하다.</p><a class="src-cta" href="https://techcrunch.com/2026/09/27/anthropics-ceo-is-about-to-have-dinner-with-president-trump/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section></main>
+  <footer class="topics" id="topics"><h2>다루는 주제</h2><ul><li><a class="tnm" href="../../../category/ai-agent.html">AI Agent</a>AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</li><li><a class="tnm" href="../../../category/llm-foundation-model.html">LLM / Foundation Model</a>LLM·파운데이션 모델 — 사전학습·정렬·추론</li><li><a class="tnm" href="../../../category/deep-learning.html">Deep Learning</a>딥러닝 — 아키텍처·학습기법 자체</li><li><a class="tnm" href="../../../category/predictive-modeling.html">예측 모델링</a>예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</li><li><a class="tnm" href="../../../category/causal-inference.html">인과추론</a>인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</li><li><a class="tnm" href="../../../category/mlops.html">MLOps / ML Engineering</a>MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</li><li><a class="tnm" href="../../../category/practice.html">실무 사례 · 노하우</a>실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</li><li><a class="tnm" href="../../../category/industry-application.html">산업 적용 사례</a>산업 적용 사례 — 산업 현장의 AI/ML 적용</li></ul></footer>
+</div>
+<script>
+(function(){
+var r=document.documentElement,k="dsb-theme",s=localStorage.getItem(k);
+if(s)r.dataset.theme=s;
+document.getElementById('tbtn').addEventListener('click',function(){
+  var cur=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  var n=cur==='dark'?'light':'dark';r.dataset.theme=n;localStorage.setItem(k,n);});
+// 섹션 전체 펼치기/접기
+document.querySelectorAll('.exp').forEach(function(b){b.addEventListener('click',function(){
+  var sec=document.getElementById(b.dataset.sec);
+  var ds=sec.querySelectorAll('details.item'),open=b.dataset.state!=='open';
+  ds.forEach(function(d){d.open=open;});
+  b.dataset.state=open?'open':'closed';b.textContent=open?'전체 접기':'전체 펼치기';});});
+// 스크롤 위치 카테고리 TOC 활성 (데스크톱 사이드 TOC)
+var links={};document.querySelectorAll('.toc li[data-cat]').forEach(function(li){links[li.dataset.cat]=li;});
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){Object.values(links).forEach(function(l){l.classList.remove('active');});
+    if(links[e.target.id])links[e.target.id].classList.add('active');}});},
+  {rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('section.sec').forEach(function(s){obs.observe(s);});
+})();
+</script>
+</body>
+</html>
