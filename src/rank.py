@@ -23,14 +23,21 @@ from .models import Item
 
 # base_score 판정 기준 (SPEC §4.2) + 라우팅 사다리 (SPEC §2.3 v4).
 _RANK_INSTRUCTIONS = """You are a filter/ranker for a personal DS/AI news brief.
-For each item, output base_score (0-10 float), a category, subtags, plus the routing
-rung you matched and whether you fell back to the default.
+For each item, output base_score (0-10 float), a category, subtags, a coverage_priority
+flag, plus the routing rung you matched and whether you fell back to the default.
 
 base_score criteria (SPEC §4.2), weigh in this order:
 1. Novelty — new vs. existing methods.
 2. Reproducibility — is code/model released.
 3. Tabular-data applicability — the user's core filter axis (favor it).
 4. Concreteness — numbers/experiments/cases (penalize marketing fluff).
+
+coverage_priority — set true ONLY when the article's central event is a newly public
+release or launch of an AI/ML model that warrants daily-brief coverage. Use the article
+evidence, not a known model-name list. Do NOT set it for commentary, tutorials, follow-up
+analysis, papers merely inspired by a model, routine version updates, or marketing claims
+without a concrete release. This flag protects a verified major launch from being displaced
+solely by source-lane weighting; it is not a score boost and must remain selective.
 
 Routing — a PRIORITY LADDER (SPEC §2.3). Evaluate top-down; the FIRST rung that
 matches decides the category. Set routing_rung to that rung number (1-8).
@@ -68,8 +75,8 @@ Subtags (only when the category matches; else []):
 - predictive-modeling: tabular, XAI, anomaly, timeseries, imbalanced, clustering, feature-selection
 - causal-inference: did, psm-ipw, uplift, double-ml, causal-forest, causal-discovery, causal-llm
 
-Return JSON: {"results": [{"index", "base_score", "category", "tags", "routing_rung",
-"routed_by_default"}...]} for every item."""
+Return JSON: {"results": [{"index", "base_score", "category", "tags", "coverage_priority",
+"routing_rung", "routed_by_default"}...]} for every item."""
 
 _SCHEMA = {
     "type": "object",
@@ -90,10 +97,11 @@ _SCHEMA = {
                         ],
                     },
                     "tags": {"type": "array", "items": {"type": "string"}},
+                    "coverage_priority": {"type": "boolean"},
                     "routing_rung": {"type": "integer"},  # 1~8 (범위는 코드에서 검증)
                     "routed_by_default": {"type": "boolean"},
                 },
-                "required": ["index", "base_score", "category", "tags",
+                "required": ["index", "base_score", "category", "tags", "coverage_priority",
                              "routing_rung", "routed_by_default"],
                 "additionalProperties": False,
             },
@@ -189,6 +197,7 @@ def rank_items(items: list[Item], preferences: str = "") -> BudgetTracker:
                 batch[i].base_score = _clamp(r.get("base_score", 0))
                 batch[i].category = r.get("category")
                 batch[i].tags = list(r.get("tags") or [])
+                batch[i].coverage_priority = bool(r.get("coverage_priority"))
                 tracker.routing[batch[i].url_hash] = {
                     "rung": r.get("routing_rung"),
                     "default": bool(r.get("routed_by_default")),

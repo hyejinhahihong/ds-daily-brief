@@ -30,7 +30,9 @@ def select(items: list[Item], categories: list[dict], total_max: int = 16) -> li
         if it.category in by_cat:
             by_cat[it.category].append(it)
     for lst in by_cat.values():
-        lst.sort(key=lambda it: it.final_score, reverse=True)
+        # A verified major model launch retains one category slot even when a
+        # lower source-lane multiplier would otherwise displace it.
+        lst.sort(key=lambda it: (it.coverage_priority, it.final_score), reverse=True)
 
     chosen: list[Item] = []
     taken: dict[str, int] = {c["id"]: 0 for c in categories}
@@ -47,7 +49,7 @@ def select(items: list[Item], categories: list[dict], total_max: int = 16) -> li
     for c in categories:
         cid = c["id"]
         pool.extend(by_cat[cid][taken[cid]: c["max"]])
-    pool.sort(key=lambda it: it.final_score, reverse=True)
+    pool.sort(key=lambda it: (it.coverage_priority, it.final_score), reverse=True)
 
     cap = {c["id"]: c["max"] for c in categories}
     for it in pool:

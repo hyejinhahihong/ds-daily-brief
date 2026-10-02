@@ -37,6 +37,9 @@ class Item(BaseModel):
     category: Optional[str] = None
     tags: list[str] = Field(default_factory=list)
     base_score: Optional[float] = None
+    # Major newly released model events receive a selection safeguard.  This is
+    # decided by the ranker from the article evidence, not by model-name rules.
+    coverage_priority: bool = False
     final_score: Optional[float] = None
 
     # --- written in Phase 2 (Sonnet, SPEC §2.4) ---
