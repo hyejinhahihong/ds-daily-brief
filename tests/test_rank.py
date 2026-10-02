@@ -68,6 +68,54 @@ class RankInputTests(unittest.TestCase):
 
         self.assertEqual([launch], chosen)
 
+    def test_major_launch_event_score_is_not_reduced_by_source_lane_weight(self):
+        launch = Item(
+            url="https://new-lab.example/model",
+            url_hash="d" * 40,
+            title="NewLab launches Frontier-1",
+            source_domain="new-lab.example",
+            lane=10,
+            lane_weight=0.55,
+            source_tier=4,
+            tier_multiplier=0.8,
+            content_type="news",
+            collected_at="2026-09-19T08:31:58+09:00",
+            category="llm-foundation-model",
+            base_score=3.0,
+            event_score=8.0,
+            coverage_priority=True,
+        )
+
+        compute_final_scores([launch])
+
+        self.assertEqual(8.0, launch.final_score)
+
+    def test_irrelevant_item_is_excluded_before_category_quota_selection(self):
+        irrelevant = Item(
+            url="https://example.com/consumer-news",
+            url_hash="e" * 40,
+            title="Unrelated consumer story",
+            source_domain="example.com",
+            lane=6,
+            lane_weight=0.55,
+            source_tier=4,
+            tier_multiplier=0.8,
+            content_type="news",
+            collected_at="2026-09-19T08:31:58+09:00",
+            category="llm-foundation-model",
+            base_score=10.0,
+            is_relevant=False,
+        )
+        compute_final_scores([irrelevant])
+
+        chosen = select(
+            [irrelevant],
+            [{"id": "llm-foundation-model", "min": 1, "max": 1}],
+            total_max=1,
+        )
+
+        self.assertEqual([], chosen)
+
 
 if __name__ == "__main__":
     unittest.main()

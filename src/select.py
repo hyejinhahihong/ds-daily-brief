@@ -14,17 +14,22 @@ from .models import Item
 
 
 def compute_final_scores(items: list[Item]) -> None:
-    """final_score for every ranked item (base_score present)."""
+    """Compute normal quality score, preserving verified major-event significance."""
     for it in items:
         if it.base_score is None:
             it.final_score = None
             continue
-        it.final_score = round(it.base_score * it.lane_weight * it.tier_multiplier, 3)
+        quality_score = it.base_score * it.lane_weight * it.tier_multiplier
+        # A major launch's importance is assessed independently from a discovery
+        # source's lane weight. Normal articles retain the existing formula.
+        if it.coverage_priority and it.event_score is not None:
+            quality_score = max(quality_score, it.event_score)
+        it.final_score = round(quality_score, 3)
 
 
 def select(items: list[Item], categories: list[dict], total_max: int = 16) -> list[Item]:
     """Return the chosen 12~16 items with is_top3 marked."""
-    ranked = [it for it in items if it.final_score is not None and it.category]
+    ranked = [it for it in items if it.is_relevant and it.final_score is not None and it.category]
     by_cat: dict[str, list[Item]] = {c["id"]: [] for c in categories}
     for it in ranked:
         if it.category in by_cat:

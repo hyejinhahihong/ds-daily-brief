@@ -16,6 +16,7 @@ lanes:
   7: { name: "GitHub Releases",     lane_weight: 0.4,  source_tier: 1, content_type: release, method: github }
   8: { name: "국문 보조",           lane_weight: 0.6,  source_tier: 1, content_type: blog,    method: rss }
   9: { name: "모델 릴리스",         lane_weight: 0.8,  source_tier: 1, content_type: release, method: hf_api }
+  10: { name: "모델 출시 발견",     lane_weight: 0.55, source_tier: 4, content_type: news,    method: rss }
 # 레인 번호는 등록 순서일 뿐 우선순위가 아니다 — 우선순위는 lane_weight 가 유일하게 정한다
 # (레인 7=0.4 꼴찌, 레인 1=1.0 1위). 그래서 레인 9 가 뒤 번호인 건 문제가 아니다 (SPEC §3.1).
 
@@ -73,6 +74,12 @@ lane6_feeds:
   - { name: "Ars Technica",             url: "https://feeds.arstechnica.com/arstechnica/index" }
   - { name: "Wired AI",                 url: "https://www.wired.com/feed/tag/ai/latest/rss" }
   # Semafor: 제외 확정 — 테크 전용 피드 없음. 전 사이트 rss.xml 은 레인6을 비테크 뉴스로 오염.
+
+# ---- 레인 10: 모델 출시 발견 — 기존 피드에 없는 신규 연구소/신규 모델을 넓게 포착 ----
+# Google News RSS는 '발견' 전용이다. 랭커가 DS/AI 직접 관련성으로 먼저 걸러내고,
+# 실제 대형 공개 모델 출시는 event_score/coverage_priority로 일반 출처 페널티를 받지 않는다.
+lane10_discovery_feeds:
+  - { name: "Model launch discovery", url: "https://news.google.com/rss/search?q=%28AI+model+OR+foundation+model%29+%28launch+OR+launches+OR+released+OR+release+OR+debut%29&hl=en-US&gl=US&ceid=US:en" }
 
 # ---- 레인 2 & 4: arXiv (SPEC §3.3 / §3.5) ----
 # 역할 분리: HF Daily Papers 는 LLM 편향이 커 DL / LLM·FM 를 담당하고,

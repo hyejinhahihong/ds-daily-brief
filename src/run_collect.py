@@ -50,10 +50,10 @@ def collect_all(cfg: dict) -> tuple[list[Item], list[FeedStatus], ArxivResult]:
     items: list[Item] = []
     diags: list[FeedStatus] = []
 
-    # RSS lanes: 1, 3, 5, 6, 8
+    # RSS lanes: 1, 3, 5, 6, 8, 10 (broad model-launch discovery)
     for lane_no, feed_key in [(1, "lane1_feeds"), (3, "lane3_feeds"),
                               (5, "lane5_feeds"), (6, "lane6_feeds"),
-                              (8, "lane8_feeds")]:
+                              (8, "lane8_feeds"), (10, "lane10_discovery_feeds")]:
         conf = _lane_conf(lanes, lane_no)
         for feed in cfg.get(feed_key, []):
             feed_items, status = collect_rss_feed(feed, conf)

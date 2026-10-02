@@ -37,6 +37,11 @@ class Item(BaseModel):
     category: Optional[str] = None
     tags: list[str] = Field(default_factory=list)
     base_score: Optional[float] = None
+    # Relevance is a hard gate: irrelevant material cannot fill a category slot.
+    is_relevant: bool = True
+    # Event significance is independent from source-lane weighting so discovery
+    # coverage does not demote a verified major public model launch.
+    event_score: Optional[float] = None
     # Major newly released model events receive a selection safeguard.  This is
     # decided by the ranker from the article evidence, not by model-name rules.
     coverage_priority: bool = False
