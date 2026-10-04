@@ -73361,5 +73361,243 @@
       "orchestration",
       "workflow-optimization"
     ]
+  },
+  "2fb2308e2c6b301730d8cbaa572f9bf0172ccc68": {
+    "url": "https://lastweekin.ai/p/lwiai-podcast-258-opus-55-sol-and",
+    "title": "LWiAI Podcast #258 - Opus 5.5, Sol and Luna, Muse, DeepSeek-V4.1-Flash, Xi",
+    "category": "llm-foundation-model",
+    "source_tier": 2,
+    "first_seen": "2026-10-04",
+    "tags": [
+      "model-release",
+      "benchmark"
+    ]
+  },
+  "89764eae00994ca8ac3f14f46dfe626a5f9aca4b": {
+    "url": "https://huggingface.co/blog/microsoft/thinkingbox",
+    "title": "The Agent Said It Was Done. The Database Disagreed.",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-10-04",
+    "tags": [
+      "tool-use",
+      "orchestration"
+    ]
+  },
+  "b7e9a28deeaf96be04fbc90e473eda600d2102be": {
+    "url": "https://towardsdatascience.com/measuring-the-creativity-potential-of-llm-agents/",
+    "title": "Measuring the Creativity Potential of LLM Agents",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-10-04",
+    "tags": [
+      "agent-capability",
+      "evaluation"
+    ]
+  },
+  "f7e1f6a71f81e096c3d5f06269c7709e753aa0f3": {
+    "url": "https://towardsdatascience.com/how-to-use-a-pinn-for-a-navier-stokes-inverse-problem/",
+    "title": "How to Use a PINN for a Navier-Stokes Inverse Problem",
+    "category": "deep-learning",
+    "source_tier": 3,
+    "first_seen": "2026-10-04",
+    "tags": [
+      "neural-ode",
+      "inverse-problem"
+    ]
+  },
+  "d442265d45586f0c44757e18d65ce306946b900b": {
+    "url": "https://techcrunch.com/2026/10/03/amazon-responds-to-data-center-backlash-says-it-no-longer-uses-ndas/",
+    "title": "Amazon responds to data center backlash, says it no longer uses NDAs",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-04",
+    "tags": []
+  },
+  "f143fce070e10faaa5ef865cec65fdaa7c95016b": {
+    "url": "https://techcrunch.com/2026/10/03/openai-safety-employee-resigns-claiming-the-companys-culture-is-broken/",
+    "title": "OpenAI safety employee resigns, claiming the company’s ‘culture is broken’",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-04",
+    "tags": []
+  },
+  "9a415d111d44405a79b67e4c2dd40c1054baf249": {
+    "url": "https://techcrunch.com/2026/10/03/all-the-ai-agents-that-can-live-in-your-text-messages/",
+    "title": "All the AI agents that can live in your text messages",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-10-04",
+    "tags": [
+      "agent-application",
+      "multi-agent"
+    ]
+  },
+  "2d915e86c2608ecf7dcc47858b36cc9749d1a62f": {
+    "url": "https://techcrunch.com/2026/10/02/meta-wants-you-to-build-your-own-muse-gadget/",
+    "title": "Meta wants your next gadget to be Muse-infused",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-10-04",
+    "tags": [
+      "agent-release",
+      "deployment"
+    ]
+  },
+  "0e65ede8101bb185c712a874c0c67544dcf115ad": {
+    "url": "https://arstechnica.com/space/2026/10/milt-windler-nasa-flight-director-who-helped-save-apollo-13-dies-at-94/",
+    "title": "Milt Windler, NASA flight director who helped save Apollo 13, dies at 94",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-10-04",
+    "tags": []
+  },
+  "fd447d5ccac23652fbaa0b09f725a4cd3b5b3e66": {
+    "url": "https://arstechnica.com/science/2026/10/the-dawn-of-the-age-of-the-exoskeleton/",
+    "title": "The dawn of the age of the exoskeleton",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-10-04",
+    "tags": []
+  },
+  "ef48f9156b3fa86cf494bb91f46864f97e3fa820": {
+    "url": "https://arstechnica.com/security/2026/10/apple-changes-full-disk-access-permissions-to-curb-abuse-from-ai-agents/",
+    "title": "Apple changes full-disk access permissions to curb abuse from AI agents",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-10-04",
+    "tags": [
+      "agent-security",
+      "privacy"
+    ]
+  },
+  "52d8e32b3411d5f5ce0a5e8dd13773215ed34410": {
+    "url": "https://www.wired.com/story/7-year-old-tv-now-100-dollars-more-expensive-thank-ai/",
+    "title": "The Nvidia Shield TV Is 7 Years Old. It Just Got a $100 Price Hike",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-04",
+    "tags": []
+  },
+  "0bb7da254e147a90508d79fcc42aed826d5f9009": {
+    "url": "https://www.wired.com/story/muse-creates-detailed-profiles-of-all-your-friends-and-family/",
+    "title": "Muse Creates Detailed Profiles of All Your Friends and Family",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-10-04",
+    "tags": [
+      "agent-deployment",
+      "privacy"
+    ]
+  },
+  "6fb833dd820791ae2969d905c97962552b5be432": {
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOcERNbHpKZXlWNWlYZEhpekFIMGxaU1NDdDNCMUtZdkZUU2V0ZUhyeWl2RmZ2VkZxNXFvZVYwRXpRTy02Ym5TZXFsV0FzSWNnZjF1R1VZOHhYVXdjRk16T0NLV0JLYmNvTmJZT3QwaEFnOUhhSFhQalRMWTVVSGtCTXlETkRHZjg0b2pMdE5lak13WEZG?oc=5",
+    "title": "Pewdiepie builds smaller, local AJAX AI model after OpenAI ban controversy - Interesting Engineering",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-04",
+    "tags": [
+      "model-release",
+      "local-model"
+    ]
+  },
+  "3acc1831f57ea35ed3036f2a7918adb4f059a8a7": {
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNXzhIUnNPaFVfR0U3TGVCM1AwRnY0Rk15UnVkM1Y5ajNPYUtXWE1mOE5OMjNNM1ZsN2czZS1iOUY5VVRkTnc3ZWhVVUdPUFZHTngtTFl0VjZjREpFbGRWV2VhV19ucVZhN2hra21IcFZISHNZcF81bHQ1Ti1kbnhhcll5a3dzNTl2aGpuZDhB?oc=5",
+    "title": "The latest AI news we announced in September 2026 - blog.google",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-04",
+    "tags": [
+      "announcement",
+      "model-release"
+    ]
+  },
+  "6f8660f7ff6cf57cabdf51a51cabafb2381ecc38": {
+    "url": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB4SldKWWgzNDExSThTZW9MRTQ5WHE3VFRZMl9oSjIzaVhuZEZaY1ZSUTFxZTJFaFpUanlncTQySUg5SlRGVnNkQXZ0S3IxLWJScXNkLXY2Z3Jzbk5WR0UwSFp0NmUxN3c?oc=5",
+    "title": "Introducing GPT-6 Sol and Luna - OpenAI",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-04",
+    "tags": []
+  },
+  "f5924ac2de55d418718ecae35681844ad62ac674": {
+    "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxPcGpNc3VKbDkzbUJfT1BIdmJ6ZnN2M0otdHdYMHpoaE53dlp5RnllN1lxTGVvNW81dXloLUY5Z095ZV9GdEwzOHRsRXBERUtlQUpoNGtyV0dQcE5GX0pUNEpOUkZWdExSRzNJOE1xVGpIM3FmRHpNVjZpUXhsUHJLWVBNSzk0bFdfZ0toYVRmRXVuM0lObWU3R1ZMenJEOGNfdDQ1YUhCZ3lTTGpDaW16UnlOVktEZktSMGd2cV9PUXU1anRSbmh6aGxGV3hRRUgwdWh6UXh0T2taTlNTR2RKdGVYcFA1OE00Wm5lMTBKTVpYZFdQcEU0MmlLWQ?oc=5",
+    "title": "AI Cardano Price Prediction: How Much Could ADA Be Worth by December 31 After a 25% Gain and the RealFi Launch? - 24/7 Wall St.",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-04",
+    "tags": []
+  },
+  "48638baa62ff9cf6eec452c2333978aae79f710d": {
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE81Y2JzNTBKSHZyUVVSalBVTnk4R2dIMS1sQVdpS2l0X3ZQZkRrM3Z1aDFjMFVBZkl4cHlZdWlucWRLT3lyLUJ4VU84RFNyOUt2ejZqUTNBanVKb1BWcHFjYjZBdlJQODV6TWowSk1RREo0bzd1?oc=5",
+    "title": "PewDiePie Launches Ajax: 9B AI Model, 2 OpenAI Bans [2026] - tech-insider.org",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-04",
+    "tags": []
+  },
+  "95f90a0c4d57c4a81c3db3ae5475a107e36c6fba": {
+    "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQa2t0NE4yM1NaR2QxcVFzWHI4M3Fmbll4Mkxobmhld25Ea0ZyOWI1V2JaUDViOE9Xc0tNZVpfdDlwUm5TNktwUDNHM3ZEbWZfUGNYbkdpQ2lHNl9uY0VoMmtfLXJXY1JFbzdMVGp0X1d3Y0o1QnhUaUJqdS1QTXBlZ1l5VzE3NXfSAYwBQVVfeXFMT1NEYkY1cnM5UzQ4R2NXU1VWZ3N1ZGhGMjFRUlBEY2ZmZXdiQkpDdzZCVWN5ci1MbmJ3SXVjUlpBN25oV2c4TkFXUXd4bTBHR0lCOFo3M0E5OUhjTnoyLUhySmo0WEtEYldCaWxoOVJ4TVBLb0ZadGxIcGhJMUxGZkdvLU5Zb1ZZNlpuUlg?oc=5",
+    "title": "FTC launches probe into OpenAI, Anthropic over model consumer risks - The Hill",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-04",
+    "tags": []
+  },
+  "e50becb1116893d0c0f8edd4f3e2a5b575ba7fd9": {
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPcDZybVkzdzlXSzJCYzJaR0djRWc0YTlpeEdXblZmdDZKZDk0U3kyMkNBcWRIR1M1ZHJpOG9tQ2pxTmNQQXF5R1NyOE5PU2FEZlBrRXZORHRwaXpSakF3VmRIanAtS1hMQkpBVUlOZ1R5bmFNU0FvY3pGOGwwR3hzanlfTFdBZHI4bzJfcGVnaVdObnk1UmdR0gGXAUFVX3lxTFBpelJRUU5jMDNJVktWSHExSjFPLWV5NFM2LWdEbmpTcE1pUklsQjBtNkpCbUU0cFJoZXIzMjVhVVJZQi0wQWg5TnktblMtekhtbHRDaE1mWEJXVzd5NHBJd0VwX1VWaG1LbDR5T2RNQjVDcnZIa1VzUzVVNERHeTFWTWdNNk11My1qOVlqMFNLZnpMY1lUX0E?oc=5",
+    "title": "Google launches new Argon AI model for Gemini 4 generation - Qazinform",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-04",
+    "tags": []
+  },
+  "3452b8b05f7bb85d193065cb4b810e6dc2c71858": {
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPdWNyOE5MT0l4VHZfOXc4c1JONWI5T2xDZ1F0VTdMUUhoRHpsRTVYd0VkUjNvVGN4S3RSQUYxd0FIUEM1X3Y4QUlZd1FaNU12SnBnYkxTQlpId0pjN1JkY085em5WSmoyRFlIdDdIQjFrNHUxaW5TZ3V6WnFtaG51VnVn?oc=5",
+    "title": "This Week's Top Five Stories in AI - aimagazine.com",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-04",
+    "tags": []
+  },
+  "3fb90fe644f034210912a0326c24213d6c3083f4": {
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBXb0htR2FUQzZ6a0pHWnNfR3hHT1RadDNzWDlpeVdid1QzdnRhaWJXZzZqT2xYalNFb0tXdF9mcTBYb0d5VllJOFhfckRMWGxSbjlVcDhJY0RxZi1qc0tRbXRVVVBYQlJDN2c2SzVtbXpDQmFYVUJmWg?oc=5",
+    "title": "Amodei Pacing Pledge Clashes With a 5-Model Launch Streak [2026] - shattered.io",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-04",
+    "tags": []
+  },
+  "fcf7d7aef520bfdc9486c4aa51c93122d23f828c": {
+    "url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE0wYzJGcXJLaXN4bmJKYVlfbmMweUYwaWxRMGFTeXgxU2dHOGZxbkZWMDBRT25rcWVEb0YzQlBBSXZXNkU4c3l4T0dQTHJzVWQ2aEdjZ1NldTM0d1lwRmVXYWFXNzc3QmZfMm52WGh6UXQ?oc=5",
+    "title": "OpenAI's Undeniable Resurgence and the Coming Liftoff of Personal AI Agents - Key Context by Tae Kim",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-10-04",
+    "tags": []
+  },
+  "7a5540bba43b3cf09a8f926d074d9295d8af74cc": {
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNUmpRemp0NVRLeENfVzctMXNuRHNjYlJFT3p2ODZCbjlvRnplVGppSTdlc3hNWWJmSzBGQnBEV3gzdFFSS3c4SzBlQW9qa0o4elg0U25Cc1hzME9TeHlfa2NCUHlTTkZaQW5fOGFMeHN3X2FacHJhZVRnZTZsbjlnMmJaWWVQSkFYUF9yUG9idXFXc3BMUXZ5cURzeDFEazFlZWNBWDQyb2FFVTBERXdnbWhJMEZHODFNNkpr?oc=5",
+    "title": "Cloudflare says its new Clef model means humans no longer need to be in the loop for AI agents - the-decoder.com",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-10-04",
+    "tags": []
+  },
+  "1f65a9ce454daa3ab3d5abc205a365d8593e3e4c": {
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNTGNoMkdqTS1qNU1tQnZWaXItVl83dHN0dFlIaFk4M0d5UjdYUnlpMmpHMnFjdDh5Q3F4VzF4SlJ4UlNlb2VOTnN4YmFZNGpiZWdwd0hPMmRmMnhocFZ3VVNOVF9QcDY4TlJWSHhIR0lRa3R1TWRDUm1ZQjBGTE9TRG5iVE5FYzc5cVEzcWFFaWc3d2cxTFJoMEM4VWNfcTl4eXVJOEI4UWIzMzVEUXNlbWxPU0lBdw?oc=5",
+    "title": "Alphabet: Gemini 4 Argon Launch Brings Alphabet Back to the Frontier Model Race - Morningstar",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-04",
+    "tags": []
+  },
+  "3dc4785767f081dcf546ce6e90a8495874400059": {
+    "url": "https://arxiv.org/abs/2609.22753",
+    "title": "Replacing Large Language Models with Jev Decision Models for Low-Latency Edge Service Orchestration",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-10-04",
+    "tags": []
   }
 }

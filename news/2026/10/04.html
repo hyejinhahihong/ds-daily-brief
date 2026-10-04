@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI &amp; ML News Letter · 10/04</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --accent:#5DB8A6; --accent-hover:#479B8B; --accent-weak:#E8F4F1;
+  --focus-ring:rgba(93,184,166,.5);
+  --bg:#FAF9F5; --bg-subtle:#F0EEE6; --border:#E7E3D9;
+  --text:#1F1E1D; --text-2:#6B6862; --text-3:#A39E94;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}}
+:root[data-theme="dark"]{
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover);text-decoration:underline}
+strong{font-weight:600;color:var(--text)}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px;border-radius:3px}
+
+/* 모바일 우선 단일 컬럼 (<1200px). 덩어리 중앙 정렬은 margin:0 auto. */
+.page{max-width:760px;margin:0 auto;padding:20px 18px 40px}
+
+/* --- 마스트헤드 (뉴스레터 제호) --- */
+.mast{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+  padding-bottom:14px;border-bottom:2px solid var(--text);margin-bottom:24px}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--accent);
+  text-transform:uppercase;margin:0 0 6px}
+.mast-title{font-size:26px;font-weight:600;margin:0;letter-spacing:-.01em;line-height:1.15}
+.mast-date{font-size:14px;color:var(--text-2);margin-top:8px}
+.themebtn{flex:none;background:var(--bg-subtle);border:1px solid var(--border);color:var(--text-2);
+  border-radius:20px;padding:5px 12px;font-size:13px;cursor:pointer;font-family:inherit}
+.topnav{margin-top:11px;display:flex;gap:16px;font-size:13px}
+.topnav a{color:var(--text-2);font-weight:500} .topnav a:hover{color:var(--accent)}
+@media (min-width:640px){.mast-title{font-size:31px}}
+
+/* --- TODAY'S TOP 3 --- */
+.top3{background:var(--accent-weak);border-radius:12px;padding:14px 18px;margin-bottom:24px}
+.top3 h2{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--accent);margin:0 0 8px}
+.top3 ol{margin:0;padding:0;list-style:none}
+.top3 li{padding:4px 0 4px 22px;position:relative;font-size:15px;color:var(--text)}
+.top3 li::before{content:"\2605";position:absolute;left:0;color:var(--accent);font-size:12px;top:7px}
+.top3 .t3cat{color:var(--text-2);font-size:12px;margin-right:5px}
+.top3 a{color:var(--text)} .top3 a:hover{color:var(--accent-hover)}
+
+/* --- 목차 (TOC) --- */
+.toc{margin-bottom:26px}
+.toc h2{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--text-2);margin:0 0 8px}
+.toc ul{margin:0;padding:0;list-style:none}
+.toc li{padding:6px 0;border-top:1px solid var(--border)}
+.toc li:first-child{border-top:none}
+.toc .r{display:flex;gap:6px;align-items:baseline;font-size:14px}
+.toc .nm{font-weight:500;color:var(--text)} .toc a:hover .nm{color:var(--accent)}
+.toc .cnt{color:var(--text-3);font-size:12px}
+.toc .lead{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  font-size:12px;color:var(--text-2);margin-top:2px;line-height:1.4}
+.toc li.active .nm{color:var(--accent)}
+.toc li.active{border-left:2px solid var(--accent);padding-left:8px;margin-left:-10px}
+
+/* --- 섹션 --- */
+.sec{margin:0 0 34px;scroll-margin-top:14px}
+.sec-h{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:0 0 2px;padding-top:6px}
+.sec-h .nm{font-size:20px;font-weight:600}
+.sec-h .cnt{font-size:13px;color:var(--text-3)}
+.sec-h .all{font-size:12px;color:var(--text-3);margin-left:auto}
+.sec-h .all span{color:var(--text-2)}
+.sec-h .exp{font-size:12px;background:none;border:1px solid var(--border);color:var(--text-2);
+  border-radius:14px;padding:2px 10px;cursor:pointer;font-family:inherit}
+.sec-desc{font-size:13px;color:var(--text-2);margin:0 0 8px}
+.sec-empty{font-size:14px;color:var(--text-3);padding:4px 0 6px}
+.backtop{display:inline-block;font-size:12px;color:var(--text-3);margin-top:6px}
+
+/* --- 아이템 (아코디언) — 거터(번호) + 단일 콘텐츠 컬럼 (DESIGN §3 v4). 좌측 정렬선 1개. --- */
+.item{border-bottom:1px solid var(--border);--gutter:28px}
+.item>summary{list-style:none;cursor:pointer;padding:16px 26px 16px 0;position:relative;
+  display:grid;grid-template-columns:var(--gutter) 1fr;align-items:start}
+.item>summary::-webkit-details-marker{display:none}
+.item>summary::after{content:"\25B8";position:absolute;right:2px;top:16px;color:var(--text-3);
+  font-size:13px;transition:transform .15s;display:inline-block}
+.item[open]>summary::after{transform:rotate(90deg)}
+.num{font-size:13px;color:var(--text-3);font-variant-numeric:tabular-nums;font-weight:500;padding-top:3px}
+.t3star{color:var(--accent);font-size:11px;margin-right:2px}
+.body-col{min-width:0}
+.it-title{display:block;font-size:18px;font-weight:600;color:var(--text);line-height:1.4}
+.item>summary:hover .it-title{color:var(--accent)}
+.it-sub{display:block;font-size:13px;color:var(--text-2);margin-top:3px;line-height:1.35}
+.it-meta{display:block;font-size:13px;color:var(--text-2);margin-top:6px}
+.it-lede{display:block;font-size:15px;color:var(--text-2);margin-top:7px;line-height:1.5}
+.item[open] .it-lede{color:var(--text)}
+/* 접힘 본문도 콘텐츠 컬럼에 정렬 (거터만큼 들여씀) */
+.it-body{padding:0 0 20px var(--gutter)}
+.it-body p{margin:0 0 10px}
+@media (min-width:900px){.item{--gutter:40px}}
+.slot-l{font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--text-2);margin:14px 0 2px}
+.tags{margin-top:10px}
+.tag{display:inline-block;font-size:12px;color:var(--text-2);background:var(--bg-subtle);
+  border:1px solid var(--border);border-radius:12px;padding:1px 9px;margin:0 5px 5px 0}
+.prev{font-size:13px;color:var(--text-3);margin-top:8px}
+.src-cta{display:inline-block;margin-top:12px;font-size:14px;font-weight:500;color:var(--accent)}
+.weak{color:var(--accent);font-size:12px;border:1px solid var(--accent);border-radius:5px;
+  padding:0 6px;margin-left:6px}
+
+/* --- "다루는 주제" 푸터 --- */
+.topics{margin-top:36px;padding-top:22px;border-top:2px solid var(--text)}
+.topics h2{font-size:15px;font-weight:600;margin:0 0 12px}
+.topics ul{margin:0;padding:0;list-style:none}
+.topics li{padding:7px 0;border-top:1px solid var(--border);font-size:13px;color:var(--text-2)}
+.topics li:first-child{border-top:none}
+.topics .tnm{font-weight:600;color:var(--accent);margin-right:6px}
+
+/* --- 데스크톱 (≥1200px): 좌측 sticky TOC(260) + 본문(720), 덩어리 중앙 정렬 --- */
+@media (min-width:1200px){
+  /* max-width = 260+44+720 그리드(1024) + 좌우 padding(18*2). box-sizing:border-box
+     라 padding 을 포함해야 본문 720 이 찌그러지지 않는다. */
+  .page{max-width:1060px;display:grid;grid-template-columns:260px minmax(0,720px);
+    column-gap:44px;justify-content:center;align-items:start;padding-top:28px}
+  .mast{grid-column:1/3}
+  .toc{grid-column:1;grid-row:2/999;position:sticky;top:24px;margin:0;align-self:start}
+  .top3,.main{grid-column:2}
+  .topics{grid-column:1/3}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="mast">
+    <div class="mast-l">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1 class="mast-title">AI &amp; ML News Letter</h1>
+      <div class="mast-date">2026 / 10 / 04 (일) · 5건</div>
+      <nav class="topnav"><a href="../../../archive.html">📅 지난 브리핑</a>
+        <a href="#topics">🗂 주제별 보기</a></nav>
+    </div>
+    <button id="tbtn" class="themebtn" type="button">🌓 테마</button>
+  </header>
+  <section class="top3"><h2>TODAY'S TOP 3</h2><ol><li><a href="#6f8660f7ff6c"><span class="t3cat">[LLM / Foundation Model]</span>OpenAI, 차세대 모델 &#x27;GPT-6 Sol&#x27;과 &#x27;Luna&#x27; 공개</a></li><li><a href="#e50becb11168"><span class="t3cat">[LLM / Foundation Model]</span>Google, 차세대 Gemini 4 세대 신규 AI 모델 &#x27;Argon&#x27; 공개</a></li><li><a href="#7a5540bba43b"><span class="t3cat">[AI Agent]</span>Cloudflare, 신규 모델 &#x27;Clef&#x27; 공개 — AI 에이전트에서 인간 개입 불필요 주장</a></li></ol></section>
+  <nav class="toc" id="toc"><h2>오늘의 목차</h2><ul><li data-cat="ai-agent"><a href="#ai-agent"><span class="r"><span class="nm">AI Agent</span><span class="cnt">2</span></span><span class="lead">Cloudflare, 신규 모델 &#x27;Clef&#x27; 공개 — AI 에이전트에서 인간 개입 불필요 주장</span></a></li><li data-cat="llm-foundation-model"><a href="#llm-foundation-model"><span class="r"><span class="nm">LLM / Foundation Model</span><span class="cnt">2</span></span><span class="lead">OpenAI, 차세대 모델 &#x27;GPT-6 Sol&#x27;과 &#x27;Luna&#x27; 공개</span></a></li><li data-cat="deep-learning"><a href="#deep-learning"><span class="r"><span class="nm">Deep Learning</span><span class="cnt">1</span></span><span class="lead">PyTorch로 PINN 직접 구현 — 노이즈 섞인 속도 40개 샘플만으로 혈류·점도·벽전단응력 역산</span></a></li></ul></nav>
+  <main class="main"><section class="sec" id="ai-agent"><div class="sec-h"><span class="nm">AI Agent</span><span class="cnt">2건</span><span class="all"><a href="../../../category/ai-agent.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="ai-agent">전체 펼치기</button></div><div class="sec-desc">AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</div><details class="item" id="7a5540bba43b" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">Cloudflare, 신규 모델 &#x27;Clef&#x27; 공개 — AI 에이전트에서 인간 개입 불필요 주장</span><span class="it-sub">Cloudflare says its new Clef model means humans no longer need to be in the loop for AI agents - the-decoder.com</span><span class="it-meta">📰 뉴스 · news.google.com</span><span class="it-lede">Cloudflare가 자사의 새로운 모델 <strong>Clef</strong>를 공개하며, 이 모델을 사용하면 AI 에이전트 운영에 더 이상 인간이 개입할 필요가 없다고 주장했다.</span></span></summary><div class="it-body"><p>구체적인 작동 방식이나 평가 결과는 제공된 원문에 포함되어 있지 않다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI 에이전트의 자율성 확대는 운영 효율성과 동시에 안전성·신뢰성 문제를 제기하므로, <strong>휴먼 인 더 루프 제거</strong> 주장은 업계에서 검증이 필요한 중요한 화두다.</p><a class="src-cta" href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxNUmpRemp0NVRLeENfVzctMXNuRHNjYlJFT3p2ODZCbjlvRnplVGppSTdlc3hNWWJmSzBGQnBEV3gzdFFSS3c4SzBlQW9qa0o4elg0U25Cc1hzME9TeHlfa2NCUHlTTkZaQW5fOGFMeHN3X2FacHJhZVRnZTZsbjlnMmJaWWVQSkFYUF9yUG9idXFXc3BMUXZ5cURzeDFEazFlZWNBWDQyb2FFVTBERXdnbWhJMEZHODFNNkpr?oc=5" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="89764eae0099"><summary><span class="num">02</span><span class="body-col"><span class="it-title">에이전트는 &#x27;완료&#x27;라 했지만 데이터베이스는 달랐다 — 작업 완료 보고와 실제 상태 불일치 문제 제기</span><span class="it-sub">The Agent Said It Was Done. The Database Disagreed.</span><span class="it-meta">📰 뉴스 · huggingface.co<span class="weak">원문 근거 부족</span></span><span class="it-lede">AI 에이전트가 작업을 완료했다고 보고했지만 실제 데이터베이스 상태는 이를 뒷받침하지 않았다는 내용을 다룬 글로 보인다.</span></span></summary><div class="it-body"><p>구체적인 원문 내용은 제공되지 않았다.</p><div class="slot-l">WHY IT MATTERS</div><p>에이전트의 자가 보고와 실제 시스템 상태 간 괴리는 AI 에이전트 신뢰성 평가에서 중요한 문제로 다뤄질 만하다.</p><div class="tags"><span class="tag">#tool-use</span><span class="tag">#orchestration</span></div><a class="src-cta" href="https://huggingface.co/blog/microsoft/thinkingbox" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="llm-foundation-model"><div class="sec-h"><span class="nm">LLM / Foundation Model</span><span class="cnt">2건</span><span class="all"><a href="../../../category/llm-foundation-model.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="llm-foundation-model">전체 펼치기</button></div><div class="sec-desc">LLM·파운데이션 모델 — 사전학습·정렬·추론</div><details class="item" id="6f8660f7ff6c" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">OpenAI, 차세대 모델 &#x27;GPT-6 Sol&#x27;과 &#x27;Luna&#x27; 공개</span><span class="it-sub">Introducing GPT-6 Sol and Luna - OpenAI</span><span class="it-meta">📰 뉴스 · news.google.com<span class="weak">원문 근거 부족</span></span><span class="it-lede">OpenAI가 GPT-6 Sol과 Luna라는 이름의 신규 모델을 공개했다고 전해졌다.</span></span></summary><div class="it-body"><p>원문 정보가 제한적이어서 구체적인 성능이나 기능은 확인되지 않는다.</p><div class="slot-l">WHY IT MATTERS</div><p>OpenAI의 차세대 모델 출시는 LLM 생태계 전반에 영향을 줄 수 있는 사안이라 주목할 필요가 있다.</p><a class="src-cta" href="https://news.google.com/rss/articles/CBMiZ0FVX3lxTFB4SldKWWgzNDExSThTZW9MRTQ5WHE3VFRZMl9oSjIzaVhuZEZaY1ZSUTFxZTJFaFpUanlncTQySUg5SlRGVnNkQXZ0S3IxLWJScXNkLXY2Z3Jzbk5WR0UwSFp0NmUxN3c?oc=5" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="e50becb11168" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>02</span><span class="body-col"><span class="it-title">Google, 차세대 Gemini 4 세대 신규 AI 모델 &#x27;Argon&#x27; 공개</span><span class="it-sub">Google launches new Argon AI model for Gemini 4 generation - Qazinform</span><span class="it-meta">📰 뉴스 · news.google.com<span class="weak">원문 근거 부족</span></span><span class="it-lede">Google이 Gemini 4 세대를 위한 새로운 AI 모델 Argon을 공개했다는 소식이 전해졌다.</span></span></summary><div class="it-body"><p>구체적인 기능이나 성능에 대한 세부 내용은 원문에 포함되어 있지 않다.</p><div class="slot-l">WHY IT MATTERS</div><p>Google의 차세대 Gemini 모델군 관련 소식은 LLM 경쟁 구도에 영향을 줄 수 있어 주목할 만하다.</p><a class="src-cta" href="https://news.google.com/rss/articles/CBMilwFBVV95cUxPcDZybVkzdzlXSzJCYzJaR0djRWc0YTlpeEdXblZmdDZKZDk0U3kyMkNBcWRIR1M1ZHJpOG9tQ2pxTmNQQXF5R1NyOE5PU2FEZlBrRXZORHRwaXpSakF3VmRIanAtS1hMQkpBVUlOZ1R5bmFNU0FvY3pGOGwwR3hzanlfTFdBZHI4bzJfcGVnaVdObnk1UmdR0gGXAUFVX3lxTFBpelJRUU5jMDNJVktWSHExSjFPLWV5NFM2LWdEbmpTcE1pUklsQjBtNkpCbUU0cFJoZXIzMjVhVVJZQi0wQWg5TnktblMtekhtbHRDaE1mWEJXVzd5NHBJd0VwX1VWaG1LbDR5T2RNQjVDcnZIa1VzUzVVNERHeTFWTWdNNk11My1qOVlqMFNLZnpMY1lUX0E?oc=5" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="deep-learning"><div class="sec-h"><span class="nm">Deep Learning</span><span class="cnt">1건</span><span class="all"><a href="../../../category/deep-learning.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="deep-learning">전체 펼치기</button></div><div class="sec-desc">딥러닝 — 아키텍처·학습기법 자체</div><details class="item" id="f7e1f6a71f81"><summary><span class="num">01</span><span class="body-col"><span class="it-title">PyTorch로 PINN 직접 구현 — 노이즈 섞인 속도 40개 샘플만으로 혈류·점도·벽전단응력 역산</span><span class="it-sub">How to Use a PINN for a Navier-Stokes Inverse Problem</span><span class="it-meta">✍️ 블로그 · towardsdatascience.com</span><span class="it-lede">이 블로그 글은 PyTorch로 물리정보신경망(PINN)을 처음부터 구현해 Navier-Stokes 역문제를 푸는 방법을 다룬다.</span></span></summary><div class="it-body"><p>좁아진 동맥 내 혈류를 가정하고, <strong>노이즈가 섞인 속도 측정값 40개</strong>만을 입력으로 사용한다. 이를 통해 혈류 속도장, 점도, 벽전단응력(wall shear stress)을 동시에 복원한다. 모델은 데이터 손실과 Navier-Stokes 방정식을 만족하는 물리 손실을 함께 최적화하는 PINN 구조를 따른다.</p><div class="slot-l">WHY IT MATTERS</div><p>소수의 노이즈 섞인 관측값만으로 물리량을 역산할 수 있다면 의료 영상처럼 측정이 제한적인 분야에서 비용이 큰 고밀도 센싱 없이도 유용한 진단 정보를 얻을 수 있다.</p><div class="tags"><span class="tag">#neural-ode</span><span class="tag">#inverse-problem</span></div><a class="src-cta" href="https://towardsdatascience.com/how-to-use-a-pinn-for-a-navier-stokes-inverse-problem/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="predictive-modeling"><div class="sec-h"><span class="nm">예측 모델링</span></div><div class="sec-desc">예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="causal-inference"><div class="sec-h"><span class="nm">인과추론</span></div><div class="sec-desc">인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="mlops"><div class="sec-h"><span class="nm">MLOps / ML Engineering</span></div><div class="sec-desc">MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="practice"><div class="sec-h"><span class="nm">실무 사례 · 노하우</span></div><div class="sec-desc">실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="industry-application"><div class="sec-h"><span class="nm">산업 적용 사례</span></div><div class="sec-desc">산업 적용 사례 — 산업 현장의 AI/ML 적용</div><div class="sec-empty">금일 신규 없음</div></section></main>
+  <footer class="topics" id="topics"><h2>다루는 주제</h2><ul><li><a class="tnm" href="../../../category/ai-agent.html">AI Agent</a>AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</li><li><a class="tnm" href="../../../category/llm-foundation-model.html">LLM / Foundation Model</a>LLM·파운데이션 모델 — 사전학습·정렬·추론</li><li><a class="tnm" href="../../../category/deep-learning.html">Deep Learning</a>딥러닝 — 아키텍처·학습기법 자체</li><li><a class="tnm" href="../../../category/predictive-modeling.html">예측 모델링</a>예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</li><li><a class="tnm" href="../../../category/causal-inference.html">인과추론</a>인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</li><li><a class="tnm" href="../../../category/mlops.html">MLOps / ML Engineering</a>MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</li><li><a class="tnm" href="../../../category/practice.html">실무 사례 · 노하우</a>실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</li><li><a class="tnm" href="../../../category/industry-application.html">산업 적용 사례</a>산업 적용 사례 — 산업 현장의 AI/ML 적용</li></ul></footer>
+</div>
+<script>
+(function(){
+var r=document.documentElement,k="dsb-theme",s=localStorage.getItem(k);
+if(s)r.dataset.theme=s;
+document.getElementById('tbtn').addEventListener('click',function(){
+  var cur=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  var n=cur==='dark'?'light':'dark';r.dataset.theme=n;localStorage.setItem(k,n);});
+// 섹션 전체 펼치기/접기
+document.querySelectorAll('.exp').forEach(function(b){b.addEventListener('click',function(){
+  var sec=document.getElementById(b.dataset.sec);
+  var ds=sec.querySelectorAll('details.item'),open=b.dataset.state!=='open';
+  ds.forEach(function(d){d.open=open;});
+  b.dataset.state=open?'open':'closed';b.textContent=open?'전체 접기':'전체 펼치기';});});
+// 스크롤 위치 카테고리 TOC 활성 (데스크톱 사이드 TOC)
+var links={};document.querySelectorAll('.toc li[data-cat]').forEach(function(li){links[li.dataset.cat]=li;});
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){Object.values(links).forEach(function(l){l.classList.remove('active');});
+    if(links[e.target.id])links[e.target.id].classList.add('active');}});},
+  {rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('section.sec').forEach(function(s){obs.observe(s);});
+})();
+</script>
+</body>
+</html>
