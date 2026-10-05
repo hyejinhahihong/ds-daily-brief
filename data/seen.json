@@ -73599,5 +73599,103 @@
     "source_tier": 1,
     "first_seen": "2026-10-04",
     "tags": []
+  },
+  "4dbec76dc0f9b1a96f32117ad27a81773c33b5c4": {
+    "url": "https://towardsdatascience.com/how-to-govern-ai-agents/",
+    "title": "How to Govern AI Agents",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-10-05",
+    "tags": [
+      "orchestration"
+    ]
+  },
+  "60af79d018e90efe69c5d2c79d22cfe72b6e101d": {
+    "url": "https://towardsdatascience.com/the-reversal-curse-why-a-language-model-that-knows-a-is-b-cant-tell-you-b-is-a/",
+    "title": "The Reversal Curse: Why a Language Model That Knows “A Is B” Can’t Tell You “B Is A”",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-10-05",
+    "tags": []
+  },
+  "71b92d7d124804e826ae9850830a356ceef5cc18": {
+    "url": "https://techcrunch.com/2026/10/04/google-froze-its-open-source-bug-bounty-program-due-to-a-significant-rise-in-ai-submissions/",
+    "title": "Google froze its open source bug bounty program due to a ‘significant rise’ in AI submissions",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-05",
+    "tags": []
+  },
+  "8a9c48729bde803bdfc072741c9d13f877f0ec04": {
+    "url": "https://techcrunch.com/2026/10/04/can-super-intelligence-and-a-non-binding-safety-pact-solve-ais-image-problem/",
+    "title": "Can ‘super intelligence’ and a non-binding safety pact solve AI’s image problem?",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-05",
+    "tags": []
+  },
+  "062c049b478a145e3674c13e4c79cc54dad00334": {
+    "url": "https://techcrunch.com/2026/10/04/trump-unveils-his-new-super-intelligence-force/",
+    "title": "Trump unveils his new Super Intelligence Force",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-05",
+    "tags": []
+  },
+  "5ee0482d54a3ef6434e4796bbc697ad62d3f08fa": {
+    "url": "https://arstechnica.com/science/2026/10/lions-and-cheetahs-and-chimps-oh-my-a-spotlight-on-africas-diverse-wildlife/",
+    "title": "Lions and cheetahs and chimps, oh my: a spotlight on Africa's diverse wildlife",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-10-05",
+    "tags": []
+  },
+  "5bd967742cbf28be006c8b6c4dd4324213ce7d5a": {
+    "url": "https://arstechnica.com/science/2026/10/all-hail-electrification-but-lets-talk-about-the-hard-part/",
+    "title": "All hail electrification. But let’s talk about the hard part.",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-10-05",
+    "tags": []
+  },
+  "d6e875c806503a1c1e32c4e0112576836cf821d1": {
+    "url": "https://www.wired.com/story/rural-data-centers-are-in-for-a-big-federal-tax-break/",
+    "title": "Rural Data Centers Are in for a Big Federal Tax Break",
+    "category": "mlops",
+    "source_tier": 4,
+    "first_seen": "2026-10-05",
+    "tags": []
+  },
+  "b4dfa2c9a2aa69c4f89963ed951d025c0aaff04b": {
+    "url": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5meUx1aTFnUHltcTFXRmNIWVhPbW9Nd0lZMXdQVlRuVFVNMW5xRG1QaFpnanA4YnpicU9VTnMwQlZuNzJ4M0lYV0haWnNsZjZGZzFnRkNfZkItbkg2a3BCZ1FEbHdqbEZHc0E?oc=5",
+    "title": "Scoop: A powerful new model from startup Reflection is set to shake up the AI race - Axios",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-05",
+    "tags": []
+  },
+  "955c1e090ce56bd05f8d1f3a25395c590e8f78cf": {
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNeDdUMl9IVDhvZDZCR0RHX3NTX0dqQ1J5a3UwdEd6MjZneTB3bWZzYlJMOFZuNmJGWkFQOHJWUHlyTjNPOGN1VVlCTVYxOWNZb3hzczdmM0pLMkxUMzdfM2NwN0dZcUd6T296TTA5V1JPQ0RvaFZIQXpqM1NGUkZXcFJtUXF1eUVQM1Q3dzBJbHh3LUlFaW91U013eFlEel9OZmo0?oc=5",
+    "title": "Nvidia-backed Reflection AI prepares first open-weight model launch - Dealroom",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-05",
+    "tags": []
+  },
+  "4429bd191b6b30421a0575ea8191af41242dff04": {
+    "url": "https://news.google.com/rss/articles/CBMie0FVX3lxTE56b0NKb2lxbXcxc3lwdkJVN05rTlNaa0JWaUQ3eHZnTEJvZ052Ql9ZcXJsLTZKS3dtdXpfdUg4eE1lYW0zc3BTMVVMeFEyUzA1RkN2YUE1OVRFY0ExQnVwWmN3N1E2NUpCcUxsZEVHM1JjSGw2dS1NR3h1aw?oc=5",
+    "title": "Germany Unveils Open AI Model for Public Sector - ForkLog",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-05",
+    "tags": []
+  },
+  "33148dae9eeaa23316d41d9aa19d65d998e1c8a3": {
+    "url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPMFhNUmVpUTFlZzlRUjIwNzNQUjg3OEd4UWE1VkVpNkswWjVKSkItMDhUZ2dyenp0dlI4aUx5ajNYcWlzVGVWaHY3ZEFMVVZSSVJJakM1VHBlTlhiMkVzbFdyRXNhWFc0MFRfd2U4SER4SHJVWlFDYkk4MERUR3p3TTkyeFYtZkpMbjZYTWxpTEFiOWROVUp3aXl6LUV3RkN1WnVN?oc=5",
+    "title": "‘This Matters’: Researchers Identify Thousands of New Tells in AI Writing - Gizmodo",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-05",
+    "tags": []
   }
 }
