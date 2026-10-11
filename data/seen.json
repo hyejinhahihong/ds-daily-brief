@@ -84162,5 +84162,192 @@
       "explainability",
       "feature-selection"
     ]
+  },
+  "5551ed0262321c3b2243b80a351346d9b71c96ca": {
+    "url": "https://towardsdatascience.com/how-can-ai-agents-read-untrusted-sources-safely/",
+    "title": "How Can AI Agents Read Untrusted Sources Safely?",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-10-11",
+    "tags": [
+      "safety",
+      "guardrails"
+    ]
+  },
+  "fa55969b5c56e35ecae29633f976dba08add9698": {
+    "url": "https://towardsdatascience.com/why-temperature-0-isnt-deterministic/",
+    "title": "Why Temperature 0 Isn't Deterministic",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-10-11",
+    "tags": [
+      "sampling",
+      "reliability"
+    ]
+  },
+  "2c9728d3318bed23628c85911ba40b59de81514d": {
+    "url": "https://techcrunch.com/2026/10/10/microsofts-satya-nadella-says-ai-models-need-an-emergency-brake/",
+    "title": "Microsoft’s Satya Nadella says AI models need an ‘emergency brake’",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-11",
+    "tags": [
+      "alignment",
+      "safety"
+    ]
+  },
+  "ac1984a6a99cfe3b964a065d2c4b31be39721b37": {
+    "url": "https://techcrunch.com/2026/10/10/apple-discloses-deal-to-hire-team-and-license-tech-from-personalized-podcast-startup-huxe/",
+    "title": "Apple discloses deal to hire team and license tech from personalized podcast startup Huxe",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-11",
+    "tags": []
+  },
+  "7ff5bfb828527993b00ffd83608bbc1780412748": {
+    "url": "https://techcrunch.com/2026/10/10/3-days-to-disrupt-2026-meet-the-startups-before-they-hit-mainstream/",
+    "title": "3 days to TechCrunch Disrupt 2026: Meet the startups before they hit mainstream",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-11",
+    "tags": []
+  },
+  "92e4233ce3ff40a3c629ce09aa353890954cbb2e": {
+    "url": "https://techcrunch.com/2026/10/10/all-the-ai-agents-that-can-live-in-your-text-messages/",
+    "title": "Here are the top AI agents that can live in your text messages",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-10-11",
+    "tags": []
+  },
+  "c5abe7fc1e5d7868436dcf738f5d9e59b0ae39ed": {
+    "url": "https://arstechnica.com/science/2026/10/the-psychedelic-brain-looks-like-chaos-underneath-theres-order/",
+    "title": "One with the world? A new look at brains transformed by psychedelics.",
+    "category": "deep-learning",
+    "source_tier": 4,
+    "first_seen": "2026-10-11",
+    "tags": []
+  },
+  "f34536c255b8301ea1f3119f326650bbd1539288": {
+    "url": "https://www.wired.com/story/ai-is-getting-really-good-at-messing-with-cybercriminals/",
+    "title": "AI Is Getting Really Good at Messing With Cybercriminals",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-11",
+    "tags": []
+  },
+  "fac776aeeb0d62b262b472be0442ea5c46ba4340": {
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE5fZEVTbmhab3RBQ25rOVd6cDg2akF0NlUwbVJnM1RjalBjd2ZlYWd5Q25UU2I3TjNUTno3WERteFQyTGtBb1UxTmZtOHpTZFZpbC1LMlFyMXVsbS1kWDUwVHM3aGtSWjA1c3FMU3JVcjZrRDZtQlViT3hEd1ZGQQ?oc=5",
+    "title": "Investigating unintended model actions in our evaluations and internal use - Anthropic",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-11",
+    "tags": [
+      "evaluation",
+      "reliability",
+      "safety"
+    ]
+  },
+  "475cf10b4095c5fd05203ccb6e066ea151cd3697": {
+    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNVGtjZWlOc1dLRmxxLVhRa29VVVBxYnVlTlJUMU5yMnNGdXpFU3MwOXFDbUZKZ2g1TTRvRmY2RVAxZlFDczJrZHZpTE1kYm8tYXJSeXpDSER0WUhhQzQtOTRaSE9mVEh5eTdlUkFBMWdOZXEyWGFFdXVBVzQyWE45SUdOdEdlNzBMN0pCUlpsX3lCWEVVVnczbktSRTBFTzY3Qm1nWEZUeFV1NjhhdU5SMVVuWVN1dzRYOTNLRklpYS0ycHhIOWI5VGZLOVRTaXBMSlhHSTRn0gHbAUFVX3lxTE1GOHJ4Y1ZoQjBNOFRUWElxMTdtQjBOSmRzRXltQmpxcXFDZDdFWGtNa3cxSkw0NDk2N1VaNXVYa0lyQU8zTjJmcXY2TWZUVFRIZ0ZOd3BJMk1HTUxmWGdGMDR1UkNUYnkySWwtRFVtSmVTbmdWcS1vX3FSQ3hDb0VwdmxiOGgwa2RHVHFYXzFRV0gzN3ZIN1ZWSlVzbEJCazVxRXlvMVV3a2ZxX0haU3p2cDR6QmN1M2J6a0hfZ0JKYUhhQzJDcVQ1NXJXSEMxV2RVdTI1OExZb2Z3Zw?oc=5",
+    "title": "Illumina Stock In Focus After New Genomic AI Model Launch - Simply Wall Street",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-11",
+    "tags": []
+  },
+  "5500463423f4b35cd5403f1f6923113476f3a377": {
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNVjl5WFlHYkZHajhNTHdwUFdPRW1MSkNZalJxWXVOZ2s2ZUlKelphc2ZHbERaTGFUTk9laHp0Umg1cThEdVI2djhBZGxIZnZPenJpMGxnbHQwMFU5UW0xalkyOFpxMHVvRHhHZ21NeHBha0tDMlY3cXpiOW5TWFo4TWZMRGF2eURNRnprOTF4OHpPTkVldm9pYW9wMFhHcHIwWnRRS3dQMTM?oc=5",
+    "title": "An Anthropic AI model sent a false homicide tip to Philadelphia police - TechCrunch",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-11",
+    "tags": [
+      "reliability",
+      "safety"
+    ]
+  },
+  "fe4513e045bbd68f45098b78bf310a6129379e5e": {
+    "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxOeUtYYnk2Zm0wUUpxeGx5bC11RWFPVmRwUUtKRjFlZzRuYUliTnEwbTB2WGJnU3FPWTVTSjgwdm1ZWHFrSWFoZUx3Vm1GZUp5MVlLZjhiTzBvVVhVOWNYTWtRbE9ubDByd1RSYVBYcUpyY2NWZ2NpcTBudk5BWmtORWRRNzJiMFdqMlhkbzNQcTZQdW9Ob3U4V1pHWnEyU1UzYWhZWUZkU2ZpbWtUSjVEUmpHQVFoUE43a0NPbkxpd3Y1Umk5R0tlSXhCRlJlZHhEX00zQVJiaTNYRVVSZTZndE50bw?oc=5",
+    "title": "ICO secures changes from leading AI developers as scrutiny extends to AI agents - ICO",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-10-11",
+    "tags": [
+      "safety",
+      "regulation"
+    ]
+  },
+  "b4544e7500175172c62b9097aba124492c78f629": {
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOeVo3UnNuSkpKU1EzcURnNFpuaU1WNXlIRzhTUkR5S2pIVWlZejZlSnhkYnVaVmpZenVoNlhhN2JsbkQtQmozOFB4Tk5PdnItZUtxczdoY2NqMDJ3bUJieVBzMFBjaEYzVHFzSTR6QVRobkRwUGQ0RlhYZ0tLMzBLM2hwa3pCbEpwM1o3VFoxQ3kycjlNbzljOUV0cm9OdDA1b2dUWFRMdkNhcjQ?oc=5",
+    "title": "Inner Sky Labs Launches Physical AI Foundation Models Beyond Miko Robots - Konsulteer",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-11",
+    "tags": []
+  },
+  "95234627d68d10286f395ab6885955a6c908f8e7": {
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQLU8wd3dlRTdLb0hTTE1ZOERWRzlwOWRBLVNhbVlwcVNzeUhRVkhBSVozUFlpV1dFMVV2R25uMEhVbUh2M2RIRWEyNnR4d2RqME96Mk82QS05QnhuS05GOVd3cUFpdUJkdGhHbHpsUzdtLWp3ZmRSMUtYbk5fVUt6UUJFYmg4Q0Y0eDY4cjhJMjdYWGZwTGgtRFVpY01WTW5KZV9JWXZR?oc=5",
+    "title": "Microsoft's Nadella Unveils Microsoft-Decision 1, A New AI Model For Fast Decisions - Yahoo Tech",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-11",
+    "tags": []
+  },
+  "cbb5ba2911c7acc38787c53d7b1b78688243e5c3": {
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1Tbm5FNGUwaXFPQ3B5MlBiaGdCMXUzM05BdlVwYlVtSk4zX3pFSmFYb1dadm9Uejl1M3JTNThJZXJZaEJvQ19DTFNNZUZSeDE0VW10bWZZTXVJQS1rZF95S2h2NDIwbHJWX1pB?oc=5",
+    "title": "Introducing Clef-omni with full multimodality, plus a faster Clef and a cheaper Clef-flash - Cloudflare Blog",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-11",
+    "tags": []
+  },
+  "5ef3264406104326b23dca4e015e712a26d556a5": {
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOQkFkM1JGX2xLb3VBanhBTURqOHlhUVByMXFEd0xDbW4wcHY4V3ZYU1dXNFlOYkFOYVFpY2xYaEM0UWVuMEtkaDhYYjF6MUVYU2dKdkJlOEVRYlNuOWUtNkM4LS1tM05SdEt5Uk9SclhNZUtHUnotUU1DemkySVJ3QTJUYkNNVU1xYUlhbFlDb1R6ZDdTX19veHV0QmExNGRuSnVfallJWkp1a3Yx?oc=5",
+    "title": "This AI Model Has Native Text, Image, and Video Capabilities: Here's What You Should Know - HackerNoon",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-11",
+    "tags": [
+      "multimodal"
+    ]
+  },
+  "52e9dfe6a959599e094a66da2607936f4ac949d4": {
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxQS2oxbWxkMUR2TjBuNVVYek5KYWxMdlRpV3R6ZTc5LVJvWHBqdVVZaXU1ZDBGRktRMkFHVUF2M3Q2NjJ6X1pHazlXdVpCWHU2TnlWeUpWUXdtLTNtREpqZnFVZVE5RjJvSTFZdThmWFU4cGVMNzdwamNiMWcyT2pWVENuZk4zQTR3cTdhVWFGQ0tLalFXRGVuNF9GQklNY1Y4alFYcTFvQ0thaGJ1bkJNQXd6YjZidw?oc=5",
+    "title": "Anthropic’s AI gave Philadelphia police a fake tip about an unsolved homicide - The Verge",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-11",
+    "tags": [
+      "ai-failure",
+      "hallucination"
+    ]
+  },
+  "b75971d5949ff73f408c71f2f9aaf0cfb314815e": {
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOdDdUckNla21ES2pWcWtOUkI2T0pzOW9CcDBOUWRsX1RPTl9uZDVyREhsczZhTjNkNTNHRThWT3VnTEVkaXNoa1JXN29LUzA1dGtOSEJtN0JJVmhVLUFoV2hmVnZKS2trQVRyZzBrSEFTNkpLSWlhZWJTRUlta0tRT3VSSF82TGk5ZExmUF9VdnE?oc=5",
+    "title": "TypeSafe AI Hits $7.5B Valuation Weeks After Jev Launch - The Tech Buzz",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-11",
+    "tags": []
+  },
+  "8a5a85f1ff50968168d674dc2bf704f8a1deb00f": {
+    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBJMUNqZl9tSEdlQ3RLdy02OW40aktXYndLNkxFalNFZEZxN2VjbDVHUmEzTjdKZXJzMWlzSVc2R3lvYkljM25qdkNkNGM0RWc0X2dNdHdwd2M4ZzAzYnFMcUI4bmR5NW5ObHFKSUlxQkp6VnpIdEE?oc=5",
+    "title": "Jev, the AI That Doesn't Write Text, Surpasses $7.5 Billion Valuation Three Weeks After Launch - BigGo Finance",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-11",
+    "tags": []
+  },
+  "f7637826d70823e7157f26f94a27757a45ac46c4": {
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTE96c0FtTjdWaFUzSXl0NTRlTmZ5VnF5OGdVZ1VQUlRpVHp1R1hqdjBRS1dOWG1HUjFfWlpNX3k2NzNLdWh2ZnVTQXJsTXI5Tmttc0RzWVprQURvMGtiNW9lcjlPU2Y3blZGajRhcFRoeHA2dnlnM2JjSmQ2OHY?oc=5",
+    "title": "Beijing Will Not Pace the Frontier: China’s Speed-First AI Safety Regime - SemiAnalysis",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-11",
+    "tags": [
+      "regulation",
+      "governance"
+    ]
   }
 }
