@@ -84349,5 +84349,148 @@
       "regulation",
       "governance"
     ]
+  },
+  "ee92128ac4624f395088f69c897a80bf4769e6ce": {
+    "url": "https://towardsdatascience.com/a-practical-guide-to-openais-new-decisions-api/",
+    "title": "A Practical Guide to OpenAI's New Decisions API",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-10-12",
+    "tags": [
+      "function-calling"
+    ]
+  },
+  "31276c3a3106709ff201b1dae1afa5f80494fdac": {
+    "url": "https://towardsdatascience.com/agentic-systems-a-practitioners-guide-to-6-advanced-architectural-patterns/",
+    "title": "Agentic Systems: A Practitioner's Guide to 6 Advanced Architectural Patterns",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-10-12",
+    "tags": [
+      "multi-agent",
+      "orchestration"
+    ]
+  },
+  "1c66d2fe3a8997593383fa6c6026d3d837aeaaa7": {
+    "url": "https://www.analyticsvidhya.com/blog/2026/10/human-in-the-loop-ai-agent-langgraph/",
+    "title": "How to Design Human-in-the-Loop Checkpoints for Autonomous AI Agents",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-10-12",
+    "tags": [
+      "agentic-workflow"
+    ]
+  },
+  "7d4e278f0b74844571bb3cf87efa87ac5316d15f": {
+    "url": "https://techcrunch.com/2026/10/11/will-the-homeview-be-apples-first-smart-home-success/",
+    "title": "Will the HomeView be Apple’s first smart home success?",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-12",
+    "tags": []
+  },
+  "8d1b5970f0e4c138f22740a6fb37cfd78cddfe2e": {
+    "url": "https://techcrunch.com/2026/10/11/48-hours-to-techcrunch-disrupt-2026-hear-directly-from-the-people-building-whats-next/",
+    "title": "48 hours to TechCrunch Disrupt 2026 — hear directly from the people building what’s next",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-12",
+    "tags": []
+  },
+  "df97c62cc773ca8681dae7e4956554b91d53bcca": {
+    "url": "https://techcrunch.com/2026/10/11/can-the-ai-industry-persuade-data-center-opponents-by-getting-rid-of-ndas/",
+    "title": "Can the AI industry persuade data center opponents by getting rid of NDAs?",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-12",
+    "tags": []
+  },
+  "778ab122b6ef9260b6e465550fb532d73d5724a8": {
+    "url": "https://techcrunch.com/2026/10/11/these-execs-think-voice-ai-hasnt-reached-its-chatgpt-moment-yet/",
+    "title": "These execs think voice AI hasn’t reached its ChatGPT moment yet",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-12",
+    "tags": []
+  },
+  "2b5ad7216a911ac6f44b058b1482d8473df39db6": {
+    "url": "https://arstechnica.com/culture/2026/10/review-4-hour-musk-documentary-feels-like-two-different-films/",
+    "title": "Review: 4-hour Musk documentary feels like two different films",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-12",
+    "tags": []
+  },
+  "30c8f7a3d93c9e18e47b6b0dced1f20b8bbed360": {
+    "url": "https://arstechnica.com/culture/2026/10/prime-video-unveils-blade-runner-2099-full-trailer-at-nycc/",
+    "title": "Prime Video unveils Blade Runner 2099 full trailer at NYCC",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-12",
+    "tags": []
+  },
+  "0b1518dc9b60572e714097df4b5561081239201f": {
+    "url": "https://www.wired.com/story/i-made-terrible-games-with-googles-ai-playground/",
+    "title": "I Made Terrible Games With Google’s AI Playground",
+    "category": "deep-learning",
+    "source_tier": 4,
+    "first_seen": "2026-10-12",
+    "tags": []
+  },
+  "01e06cad5ae51ea52a87303c0bf1df2cdf0e0a89": {
+    "url": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQUHl4Tjh1WHBZc09yUnN2V0Noaml2MUQxN05tWmRQWHlNTWQyMDBldXllODNXSXU3c05XbVFKX29ZR3N5dE85a3J5djJfc2Z3My1pSXZJUm5OXzVrNEprNm9oMWZLS0FCeGpPQ3U5N0trMFdXcFN1Q3RvUmJZa3NSZnRoX2wzUGlLclBVd0pueUN3V1lwcXRBQ3dzR1BLM00tSnBTbzNXWk8zazdoZ0ZnTFBBaVh6WnZBMk9LWE1LWkxQa0dEMnFwdk8xRC1DbmNVRjRZN25yYVV5dExkTFHSAeMBQVVfeXFMTVJSUkhGUzZsMHZ1S25nOF9nR1ZfNHkwcG9KcDExbGRpSzFsd1JieFlzaHA3UHFnR29ZMXllUUtTSGQ5NDlSeVo2WlZFNGdNTUNMMndTbFhDMHpkX3Q2bE5fMWE3NGNjLTJJYTBzX2xCbEI4TTJmSm1ETE9kV1dEQ1NTaUFRZ3FHUi15ZGtHelpuSm5heDRKZFM2SXU3U2xJVjV5d2NKYklmUWVyUzBnc2hzVUYwMmJheTVFQW1WaEpmaDdyWkpNMWo1Skp0NWdmdk9kZDZCeThSTDJ5ZkZZdnhOQkU?oc=5",
+    "title": "[COVER STORY] Korea's 2-track AI strategy casts uncertainty over sovereign model project - The Korea Times",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-12",
+    "tags": []
+  },
+  "430e601b1b1cf4d1f753bbe407d2c49d373a5ef3": {
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1jQVpWd2UtQllkVWRKNDNlZm9JdzR3b09fTm5GdjNmb2FTTmRHZ1NJMHA0bDZ6S1hjdmNmNTluM01zcnZpM1d0dlRmb3JZUWgyR194NlZPSTBjNGVkeTRRUGNUZGlUbUE5UnJLU25CLXVHTGFTNnpJWA?oc=5",
+    "title": "Introducing Microsoft-Decision-1, our model for fast decision-making - Microsoft",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-12",
+    "tags": []
+  },
+  "05811d55fc7cfbb4fd9e5a99379dcdb22338a2da": {
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOQ01mWXpKUEZteF90X0twQkhkeWxORkc5eVRiX1ZmYWRUZHQxMng3T3FKVWY4Sm1qXzlIUzY3ZnlrNG9KM0ctMDBjajJCaTZBTURtN0NuTFlqYUQ4MG5PYmFOcVRsdmJrWlJZbDBCOXdjM3ctczNuc0dFMGhVMXJkc19USVlMcnhfSUJyYUtKWmdxQVRCRkNKSjBIa1VVVHBHSGpxZ255UGdaRWN2cEo5UTRFUTBpUkMyOV9N0gG7AUFVX3lxTE5DTWZZekpQRm14X3RfS3BCSGR5bE5GRzl5VGJfVmZhZFRkdDEyeDdPcUpVZjhKbWpfOUhTNjdmeWs0b0ozRy0wMGNqMkJpNkFNRG03Q25MWWphRDgwbk9iYU5xVGx2YmtaUllsMEI5d2Mzdy1zM25zR0UwaFUxcmRzX1RJWUxyeF9JQnJhS0paZ3FBVEJGQ0pKMEhrVVVUcEdIanFnbnlQZ1pFY3ZwSjlRNEVRMGlSQzI5X00?oc=5",
+    "title": "Nace AI Open-Sources Drex 1.5: A 9B Decision Model That Scores Options, Not Text - MarkTechPost",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-12",
+    "tags": []
+  },
+  "985c4d3b41b031939a388548c0fbfcd8d9a8801c": {
+    "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9XTWNXZllYSlI2eEV3QkZOZ0R2SFlYNVlvRHl6S0VsMUJTOWs0ZlV2RTBSbk81eTl4cnBOVHBtQ1JNU0J1VjV4SkcySmI3X05vb0pkM0JqQXhQaDM2NGdwdHVn?oc=5",
+    "title": "Microsoft Launches Decision-1: The Fast, Low-Cost AI Model Built to Make Decisions Instead of Writing Answers - Kingy AI",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-12",
+    "tags": []
+  },
+  "c1408e44f0e4865e1f1ac684db69b6ad93b1e265": {
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5FS2lKQk14empmNjRqM0VFZzFYYkR5YXRGdmRBdmNLOF91SUdEdTV3LXlSRHNsVEhFSUdOa1NNc0pzbEktOTFNQVQwaGd5Y3hnUlo5ejdKaEd1QWduM2FleWRjZXNyQm9YZmJELV9jNkNaSlhwTWJxVjhKbEEtXzQ?oc=5",
+    "title": "OpenAI Math Release: What’s Real in the 722 AI Manuscripts - Online Tech Tips",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-12",
+    "tags": []
+  },
+  "f5cf49a4df223638adf302e5048470f4cd3780f8": {
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOdTFGalAwc3Exbmc1ckQ1MkxFc2ViTERKYXg1YU1xU09FamhMdkhuV19aVTFUOWFodHpZdmJXOEJDOFdJQk5VZU12UTd6WklHUHBVRU1tYV9lZHlaOXFWYUhkQjN4V3hlSGtXTkNPQ1hNVGxLQTFic0Z5aEExcVk1bUdn?oc=5",
+    "title": "This Week's Top Five Stories in AI - AI Magazine",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-10-12",
+    "tags": []
+  },
+  "f6598e119132f0c186f5d9d51c3d15a7203b9286": {
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOVXpvaFdacktESjZwbURtOUpFTW5WTTktSnZ4TjBudmVJcXVHenYxdEpRQ1p0RjFENkJuQmFIVHdVM3JjN1lSSkc3UEZfejI2cVNDRFNoRi1yV0l2NWNGb3VEQTVmVmpGcm1acWVOeXVtMFk0Y1JtNDFkUjNXdkZ4bFN4UHhjTk1qTGdIZkF1TmNTd3ZQWVNwWTlMX3A4SzhJTm5yTDlVRTE2TlhS0gGsAUFVX3lxTE5Vem9oV1pyS0RKNnBtRG05SkVNblZNOS1KdnhOMG52ZUlxdUd6djF0SlFDWnRGMUQ2Qm5CYUhUd1UzcmM3WVJKRzdQRl96MjZxU0NEU2hGLXJXSXY1Y0ZvdURBNWZWakZybVpxZU55dW0wWTRjUm00MWRSM1d2RnhsU3hQeGNOTWpMZ0hmQXVOY1N3dlBZU3BZOUxfcDhLOElObnJMOVVFMTZOWFI?oc=5",
+    "title": "Alibaba Qwen Releases Qwen-Image-2.1-Turbo, an 8-Step 7B Image Model - MarkTechPost",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-12",
+    "tags": []
   }
 }
