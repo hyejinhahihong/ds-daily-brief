@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI &amp; ML News Letter · 10/15</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --accent:#5DB8A6; --accent-hover:#479B8B; --accent-weak:#E8F4F1;
+  --focus-ring:rgba(93,184,166,.5);
+  --bg:#FAF9F5; --bg-subtle:#F0EEE6; --border:#E7E3D9;
+  --text:#1F1E1D; --text-2:#6B6862; --text-3:#A39E94;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}}
+:root[data-theme="dark"]{
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover);text-decoration:underline}
+strong{font-weight:600;color:var(--text)}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px;border-radius:3px}
+
+/* 모바일 우선 단일 컬럼 (<1200px). 덩어리 중앙 정렬은 margin:0 auto. */
+.page{max-width:760px;margin:0 auto;padding:20px 18px 40px}
+
+/* --- 마스트헤드 (뉴스레터 제호) --- */
+.mast{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+  padding-bottom:14px;border-bottom:2px solid var(--text);margin-bottom:24px}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--accent);
+  text-transform:uppercase;margin:0 0 6px}
+.mast-title{font-size:26px;font-weight:600;margin:0;letter-spacing:-.01em;line-height:1.15}
+.mast-date{font-size:14px;color:var(--text-2);margin-top:8px}
+.themebtn{flex:none;background:var(--bg-subtle);border:1px solid var(--border);color:var(--text-2);
+  border-radius:20px;padding:5px 12px;font-size:13px;cursor:pointer;font-family:inherit}
+.topnav{margin-top:11px;display:flex;gap:16px;font-size:13px}
+.topnav a{color:var(--text-2);font-weight:500} .topnav a:hover{color:var(--accent)}
+@media (min-width:640px){.mast-title{font-size:31px}}
+
+/* --- TODAY'S TOP 3 --- */
+.top3{background:var(--accent-weak);border-radius:12px;padding:14px 18px;margin-bottom:24px}
+.top3 h2{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--accent);margin:0 0 8px}
+.top3 ol{margin:0;padding:0;list-style:none}
+.top3 li{padding:4px 0 4px 22px;position:relative;font-size:15px;color:var(--text)}
+.top3 li::before{content:"\2605";position:absolute;left:0;color:var(--accent);font-size:12px;top:7px}
+.top3 .t3cat{color:var(--text-2);font-size:12px;margin-right:5px}
+.top3 a{color:var(--text)} .top3 a:hover{color:var(--accent-hover)}
+
+/* --- 목차 (TOC) --- */
+.toc{margin-bottom:26px}
+.toc h2{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--text-2);margin:0 0 8px}
+.toc ul{margin:0;padding:0;list-style:none}
+.toc li{padding:6px 0;border-top:1px solid var(--border)}
+.toc li:first-child{border-top:none}
+.toc .r{display:flex;gap:6px;align-items:baseline;font-size:14px}
+.toc .nm{font-weight:500;color:var(--text)} .toc a:hover .nm{color:var(--accent)}
+.toc .cnt{color:var(--text-3);font-size:12px}
+.toc .lead{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  font-size:12px;color:var(--text-2);margin-top:2px;line-height:1.4}
+.toc li.active .nm{color:var(--accent)}
+.toc li.active{border-left:2px solid var(--accent);padding-left:8px;margin-left:-10px}
+
+/* --- 섹션 --- */
+.sec{margin:0 0 34px;scroll-margin-top:14px}
+.sec-h{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:0 0 2px;padding-top:6px}
+.sec-h .nm{font-size:20px;font-weight:600}
+.sec-h .cnt{font-size:13px;color:var(--text-3)}
+.sec-h .all{font-size:12px;color:var(--text-3);margin-left:auto}
+.sec-h .all span{color:var(--text-2)}
+.sec-h .exp{font-size:12px;background:none;border:1px solid var(--border);color:var(--text-2);
+  border-radius:14px;padding:2px 10px;cursor:pointer;font-family:inherit}
+.sec-desc{font-size:13px;color:var(--text-2);margin:0 0 8px}
+.sec-empty{font-size:14px;color:var(--text-3);padding:4px 0 6px}
+.backtop{display:inline-block;font-size:12px;color:var(--text-3);margin-top:6px}
+
+/* --- 아이템 (아코디언) — 거터(번호) + 단일 콘텐츠 컬럼 (DESIGN §3 v4). 좌측 정렬선 1개. --- */
+.item{border-bottom:1px solid var(--border);--gutter:28px}
+.item>summary{list-style:none;cursor:pointer;padding:16px 26px 16px 0;position:relative;
+  display:grid;grid-template-columns:var(--gutter) 1fr;align-items:start}
+.item>summary::-webkit-details-marker{display:none}
+.item>summary::after{content:"\25B8";position:absolute;right:2px;top:16px;color:var(--text-3);
+  font-size:13px;transition:transform .15s;display:inline-block}
+.item[open]>summary::after{transform:rotate(90deg)}
+.num{font-size:13px;color:var(--text-3);font-variant-numeric:tabular-nums;font-weight:500;padding-top:3px}
+.t3star{color:var(--accent);font-size:11px;margin-right:2px}
+.body-col{min-width:0}
+.it-title{display:block;font-size:18px;font-weight:600;color:var(--text);line-height:1.4}
+.item>summary:hover .it-title{color:var(--accent)}
+.it-sub{display:block;font-size:13px;color:var(--text-2);margin-top:3px;line-height:1.35}
+.it-meta{display:block;font-size:13px;color:var(--text-2);margin-top:6px}
+.it-lede{display:block;font-size:15px;color:var(--text-2);margin-top:7px;line-height:1.5}
+.item[open] .it-lede{color:var(--text)}
+/* 접힘 본문도 콘텐츠 컬럼에 정렬 (거터만큼 들여씀) */
+.it-body{padding:0 0 20px var(--gutter)}
+.it-body p{margin:0 0 10px}
+@media (min-width:900px){.item{--gutter:40px}}
+.slot-l{font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--text-2);margin:14px 0 2px}
+.tags{margin-top:10px}
+.tag{display:inline-block;font-size:12px;color:var(--text-2);background:var(--bg-subtle);
+  border:1px solid var(--border);border-radius:12px;padding:1px 9px;margin:0 5px 5px 0}
+.prev{font-size:13px;color:var(--text-3);margin-top:8px}
+.src-cta{display:inline-block;margin-top:12px;font-size:14px;font-weight:500;color:var(--accent)}
+.weak{color:var(--accent);font-size:12px;border:1px solid var(--accent);border-radius:5px;
+  padding:0 6px;margin-left:6px}
+
+/* --- "다루는 주제" 푸터 --- */
+.topics{margin-top:36px;padding-top:22px;border-top:2px solid var(--text)}
+.topics h2{font-size:15px;font-weight:600;margin:0 0 12px}
+.topics ul{margin:0;padding:0;list-style:none}
+.topics li{padding:7px 0;border-top:1px solid var(--border);font-size:13px;color:var(--text-2)}
+.topics li:first-child{border-top:none}
+.topics .tnm{font-weight:600;color:var(--accent);margin-right:6px}
+
+/* --- 데스크톱 (≥1200px): 좌측 sticky TOC(260) + 본문(720), 덩어리 중앙 정렬 --- */
+@media (min-width:1200px){
+  /* max-width = 260+44+720 그리드(1024) + 좌우 padding(18*2). box-sizing:border-box
+     라 padding 을 포함해야 본문 720 이 찌그러지지 않는다. */
+  .page{max-width:1060px;display:grid;grid-template-columns:260px minmax(0,720px);
+    column-gap:44px;justify-content:center;align-items:start;padding-top:28px}
+  .mast{grid-column:1/3}
+  .toc{grid-column:1;grid-row:2/999;position:sticky;top:24px;margin:0;align-self:start}
+  .top3,.main{grid-column:2}
+  .topics{grid-column:1/3}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="mast">
+    <div class="mast-l">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1 class="mast-title">AI &amp; ML News Letter</h1>
+      <div class="mast-date">2026 / 10 / 15 (목) · 16건</div>
+      <nav class="topnav"><a href="../../../archive.html">📅 지난 브리핑</a>
+        <a href="#topics">🗂 주제별 보기</a></nav>
+    </div>
+    <button id="tbtn" class="themebtn" type="button">🌓 테마</button>
+  </header>
+  <section class="top3"><h2>TODAY'S TOP 3</h2><ol><li><a href="#0e5e53f87dfc"><span class="t3cat">[LLM / Foundation Model]</span>Google, Gemini 4 Argon 정식 공개 — API 가격 입력 $2·출력 $10/100만 토큰 한시 할인</a></li><li><a href="#16fd5cad5353"><span class="t3cat">[LLM / Foundation Model]</span>Google, 개발자·기업 대상 Gemini 4 Argon AI 모델 공개</a></li><li><a href="#7164a00f3682"><span class="t3cat">[AI Agent]</span>Meta, 개인·업무용 에이전트 위한 Muse Wonder AI 모델 공개</a></li></ol></section>
+  <nav class="toc" id="toc"><h2>오늘의 목차</h2><ul><li data-cat="ai-agent"><a href="#ai-agent"><span class="r"><span class="nm">AI Agent</span><span class="cnt">2</span></span><span class="lead">Meta, 개인·업무용 에이전트 위한 Muse Wonder AI 모델 공개</span></a></li><li data-cat="llm-foundation-model"><a href="#llm-foundation-model"><span class="r"><span class="nm">LLM / Foundation Model</span><span class="cnt">2</span></span><span class="lead">Google, Gemini 4 Argon 정식 공개 — API 가격 입력 $2·출력 $10/100만 토큰 한시 할인</span></a></li><li data-cat="deep-learning"><a href="#deep-learning"><span class="r"><span class="nm">Deep Learning</span><span class="cnt">3</span></span><span class="lead">Apple, 텍스트·이미지·오디오 통합 Tri-Modal Masked Diffusion Model 처음부터 사전학습</span></a></li><li data-cat="predictive-modeling"><a href="#predictive-modeling"><span class="r"><span class="nm">예측 모델링</span><span class="cnt">2</span></span><span class="lead">Jeva 공개 — 순서 바꿔도 결정 불변, 수천 개 후보로 확장되는 &#x27;의사결정 전용&#x27; 시스템원 모델</span></a></li><li data-cat="causal-inference"><a href="#causal-inference"><span class="r"><span class="nm">인과추론</span><span class="cnt">1</span></span><span class="lead">Netflix, 개인화 추천의 인과적 가치 측정 모델 공개 — 알고리즘 탐색 변동과 A/B 테스트 결합 검증</span></a></li><li data-cat="mlops"><a href="#mlops"><span class="r"><span class="nm">MLOps / ML Engineering</span><span class="cnt">2</span></span><span class="lead">Netflix, 오픈소스 시맨틱 레이어 DataJunction으로 실험 플랫폼 메트릭 정의 주 단위 소요를 해결</span></a></li><li data-cat="practice"><a href="#practice"><span class="r"><span class="nm">실무 사례 · 노하우</span><span class="cnt">2</span></span><span class="lead">구글, 기술 문서 분석용 &#x27;Deep Review&#x27; 소개</span></a></li><li data-cat="industry-application"><a href="#industry-application"><span class="r"><span class="nm">산업 적용 사례</span><span class="cnt">2</span></span><span class="lead">DeepMind·싱가포르 정부, 온디바이스 Gemma로 대화형 스캠 실시간 차단 — 클라우드 데이터 유출 無</span></a></li></ul></nav>
+  <main class="main"><section class="sec" id="ai-agent"><div class="sec-h"><span class="nm">AI Agent</span><span class="cnt">2건</span><span class="all"><a href="../../../category/ai-agent.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="ai-agent">전체 펼치기</button></div><div class="sec-desc">AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</div><details class="item" id="7164a00f3682" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">Meta, 개인·업무용 에이전트 위한 Muse Wonder AI 모델 공개</span><span class="it-sub">Meta launches Muse Wonder AI models for personal and professional agents - Yahoo Finance UK</span><span class="it-meta">📰 뉴스 · news.google.com<span class="weak">원문 근거 부족</span></span><span class="it-lede">Meta가 개인 및 업무용 에이전트를 위한 Muse Wonder AI 모델을 출시했다고 보도되었다.</span></span></summary><div class="it-body"><div class="slot-l">WHY IT MATTERS</div><p>Meta의 에이전트형 AI 모델 진출 동향을 보여주는 소식이다.</p><a class="src-cta" href="https://news.google.com/rss/articles/CBMigwFBVV95cUxNcVpYU3dHRGcwWF9pOC1fTmNsbDFPSzJyWU1XN3NDNjd0czJpNTliNkdUYUVvWFVyelpLd2cwXzFOZTVBQ0R5cXhER1pCeGNkTlk4aW54YVk0ZGtXX1otZTdxalZYZkxWeVFMbkx3OElZSEtyV19jV3AzdV90ZGxZY0xBTQ?oc=5" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="9dd119a51b88"><summary><span class="num">02</span><span class="body-col"><span class="it-title">NVIDIA, NeMo Gym으로 칩 설계용 AI 에이전트 신뢰성·툴콜 효율 개선</span><span class="it-sub">Optimizing Agent Reliability and Tool Calling Efficiency for Chip Design Using NVIDIA NeMo Gym</span><span class="it-meta">✍️ 블로그 · developer.nvidia.com</span><span class="it-lede">칩 설계처럼 다단계 엔지니어링 워크플로우에서는 AI 에이전트가 그럴듯하지만 틀린 산출물을 생성해도 초기 단계의 오류가 감지되지 않은 채 후속 단계와 최종 산출물로 조용히 전파될 수 있다.</span></span></summary><div class="it-body"><p>이는 AI 에이전트의 실제 프로덕션 도입을 가로막는 주요 신뢰성 문제로 지적된다. NVIDIA는 <strong>NeMo Gym</strong>을 활용해 이러한 에이전트를 평가하고 개선하는 방법을 소개한다.</p><div class="slot-l">WHY IT MATTERS</div><p>에이전트 생성 오류가 다단계 워크플로우에서 눈에 띄지 않고 누적되는 문제는 칩 설계 외에도 복잡한 엔지니어링 자동화 전반에 적용되는 중요한 신뢰성 리스크다.</p><a class="src-cta" href="https://developer.nvidia.com/blog/optimizing-agent-reliability-and-tool-calling-efficiency-for-chip-design-using-nvidia-nemo-gym/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="llm-foundation-model"><div class="sec-h"><span class="nm">LLM / Foundation Model</span><span class="cnt">2건</span><span class="all"><a href="../../../category/llm-foundation-model.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="llm-foundation-model">전체 펼치기</button></div><div class="sec-desc">LLM·파운데이션 모델 — 사전학습·정렬·추론</div><details class="item" id="0e5e53f87dfc" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">Google, Gemini 4 Argon 정식 공개 — API 가격 입력 $2·출력 $10/100만 토큰 한시 할인</span><span class="it-sub">Google makes Gemini 4 Argon broadly available with limited-time low API pricing of $2/$10 per 1M token - VentureBeat</span><span class="it-meta">📰 뉴스 · news.google.com</span><span class="it-lede">Google이 신규 모델 Gemini 4 Argon을 정식 출시했다.</span></span></summary><div class="it-body"><p>API 가격은 입력 토큰 100만 개당 <strong>$2</strong>, 출력 토큰 100만 개당 <strong>$10</strong>로 책정되었으며, 이는 한시적 할인가로 제공된다.</p><div class="slot-l">WHY IT MATTERS</div><p>저렴한 API 가격은 개발자와 기업의 모델 채택 장벽을 낮춰 Gemini 생태계 확산 속도에 직접 영향을 준다.</p><a class="src-cta" href="https://news.google.com/rss/articles/CBMi0AFBVV95cUxQMWVpd2JZRXp6eS1fYlUyeWFPZjlCaDVzR3RQa3lUMHFKUmduUGlrOVZHTjJxUGRGakpYWk1qUFpkS1FpcmZDSlozMjM1STFVcGE1NmFsNjZLLW4xU09UUk9UNmY5MEs2Mk9RN0ZRbndtbzJUZDRidkVzU3l1aGZPVEhzb2N1MFlpeF9JZGtxbkU1U1BIWTd2eG1fM19JdjNXSm94Y0VjYWt5Nll3U1VDUS15RzJjWE5Bdm1kSm9oN0VCc3lPajIxZS1MQ2JXZkl1?oc=5" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="16fd5cad5353" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>02</span><span class="body-col"><span class="it-title">Google, 개발자·기업 대상 Gemini 4 Argon AI 모델 공개</span><span class="it-sub">Google Releases Gemini 4 Argon AI Model for Developers and Businesses - Binance</span><span class="it-meta">📰 뉴스 · news.google.com<span class="weak">원문 근거 부족</span></span><span class="it-lede">Google이 개발자와 기업을 위한 Gemini 4 Argon AI 모델을 공개했다고 보도되었다.</span></span></summary><div class="it-body"><div class="slot-l">WHY IT MATTERS</div><p>Google의 차세대 Gemini 모델 출시 동향을 보여주는 소식이다.</p><a class="src-cta" href="https://news.google.com/rss/articles/CBMiZEFVX3lxTE04WVhuaGRRVjE0V1VNSk1qYVFnbmRSQ2VsZkhZbUM2SHEzc2hMX0UtaVhzeklKd2FTbV9xSUNFdEJLekxlcDZpLWY1d3h2NG0xVWRDQmlHTVI2dW5KV0tDVXpIbkQ?oc=5" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="deep-learning"><div class="sec-h"><span class="nm">Deep Learning</span><span class="cnt">3건</span><span class="all"><a href="../../../category/deep-learning.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="deep-learning">전체 펼치기</button></div><div class="sec-desc">딥러닝 — 아키텍처·학습기법 자체</div><details class="item" id="e612dc941250"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Apple, 텍스트·이미지·오디오 통합 Tri-Modal Masked Diffusion Model 처음부터 사전학습</span><span class="it-sub">The Design Space of Tri-Modal Masked Diffusion Models</span><span class="it-meta">✍️ 블로그 · machinelearning.apple.com</span><span class="it-lede">이 블로그는 텍스트, 이미지-텍스트, 오디오-텍스트 데이터를 처음부터 함께 사전학습한 <strong>최초의 삼중 모달(tri-modal) Masked Diffusion Model(MDM)</strong>을 소개한다.</span></span></summary><div class="it-body"><p>기존 연구가 단일 모달 기반 모델을 초기화·파인튜닝해 이중 모달 생성을 구현한 것과 달리, 이 연구는 세 모달리티를 동시에 다룬다. 멀티모달 스케일링 법칙, 모달리티 혼합 비율, 노이즈 스케줄, 배치 크기 효과를 체계적으로 분석하고 최적화된 추론 샘플링 기본값을 제시한다. 배치 크기 분석에서는 새로운 확률미분방정식(SDE) 기반 접근을 도출했다.</p><div class="slot-l">WHY IT MATTERS</div><p>텍스트·이미지·오디오를 아우르는 통합 생성 모델의 설계 지침(스케일링 법칙, 모달 혼합 비율 등)을 체계적으로 제공해, 향후 멀티모달 확산 모델 개발 시 참고할 수 있는 실증적 근거를 마련한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 연구는 단일 모달로 사전학습된 모델을 초기화해 이중 모달로 파인튜닝하는 방식이었으나, 이 연구는 <strong>세 가지 모달리티를 처음부터 함께 사전학습</strong>한다는 점에서 다르다.</p><a class="src-cta" href="https://machinelearning.apple.com/research/tri-modal-masked-diffusion" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="15a88e7ee914"><summary><span class="num">02</span><span class="body-col"><span class="it-title">Apple, 음성 기반 모델의 &#x27;언어 선택적 차원&#x27;으로 전사 없이 코드스위칭 직접 탐지</span><span class="it-sub">Code-Switching Detection via Language-Selective Dimensions in Speech Foundation Models</span><span class="it-meta">✍️ 블로그 · machinelearning.apple.com</span><span class="it-lede">코드스위칭(CS)은 한 발화 내에서 언어가 번갈아 나타나는 현상으로 다국어 음성에서 흔하지만 사전학습 데이터에는 충분히 반영되지 않는다.</span></span></summary><div class="it-body"><p>기존 방식은 음성을 전사한 뒤 텍스트에서 언어 전환을 탐지하는데, 이는 정확한 다국어 전사 결과에 의존한다는 한계가 있다. 이 연구는 사전학습된 음성 기반 모델 내부의 프레임 단위 언어 정보를 활용해 <strong>전사 과정 없이</strong> 음성에서 직접 CS를 탐지하는 경량 방법을 제안한다.</p><div class="slot-l">WHY IT MATTERS</div><p>다국어 음성 코퍼스에서 CS 발화를 효율적으로 찾아낼 수 있으면 사전학습 데이터의 언어 다양성을 늘릴 수 있어, 다국어·코드스위칭 음성 인식 성능 개선에 기여할 수 있다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>음성을 텍스트로 전사한 후 언어 전환을 탐지하던 <strong>기존 전사 기반 방식</strong>과 달리, 음성 모델 내부의 언어 선택적 차원을 활용해 전사 단계 없이 직접 탐지한다.</p><a class="src-cta" href="https://machinelearning.apple.com/research/code-switching-detection" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="672ebf75c430"><summary><span class="num">03</span><span class="body-col"><span class="it-title">HiRO-ACEv2, 3km 해상도로 극한 기상 시뮬레이션 — 저비용 수행 공개</span><span class="it-sub">HiRO-ACEv2: Simulating extreme weather at 3 km resolution for a fraction of the cost</span><span class="it-meta">📰 뉴스 · huggingface.co<span class="weak">원문 근거 부족</span></span><span class="it-lede">HiRO-ACEv2는 3km 해상도에서 극한 기상 현상을 시뮬레이션하는 모델로, 기존 대비 낮은 비용으로 수행 가능하다는 내용이 소개되었다.</span></span></summary><div class="it-body"><div class="slot-l">WHY IT MATTERS</div><p>기상 시뮬레이션 비용 절감은 <strong>기후·재해 연구</strong>의 접근성을 높일 수 있는 요소다.</p><a class="src-cta" href="https://huggingface.co/blog/allenai/hiro-acev2" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="predictive-modeling"><div class="sec-h"><span class="nm">예측 모델링</span><span class="cnt">2건</span><span class="all"><a href="../../../category/predictive-modeling.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="predictive-modeling">전체 펼치기</button></div><div class="sec-desc">예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</div><details class="item" id="eac0b0377890"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Jeva: System One Models from First Principles</span><span class="it-sub">Jeva 공개 — 순서 바꿔도 결정 불변, 수천 개 후보로 확장되는 &#x27;의사결정 전용&#x27; 시스템원 모델</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">이 논문은 텍스트 직렬화 후 답을 예측하는 기존 시스템원 모델 설계가 결정 문제의 구조를 제대로 반영하지 못한다고 지적한다.</span></span></summary><div class="it-body"><p>저자들은 <strong>null-aware, 순열 불변, 옵션 확장성, 캐시 가능성</strong> 네 가지 구조적 요건을 제시하고, 이를 동시에 만족하는 결정 전용 아키텍처 Jeva를 제안한다. Jeva는 요청과 각 옵션을 독립적으로 표현하는 공유 인코더와, 고정된 옵션 메모리에 대해 요청 상태만 정제하는 결정 스택으로 구성되며, 대칭 집계로 순열 등변 확률을 산출하고 커버리지 추정으로 답 부재와 후보 간 경쟁을 구분한다. 평가 결과 Jeva는 강력한 유형별 결정 성능과 거의 완벽한 null 탐지, 테스트된 모든 순열에서 결정 변화 없음을 보였고, <strong>수천 개 후보로 확장되면서도</strong> 요청 간 재사용을 통해 지연시간을 크게 줄였다.</p><div class="slot-l">WHY IT MATTERS</div><p>표 형태나 후보 선택형 의사결정 문제에서 순서나 후보 수 변화에 민감한 기존 모델의 신뢰성 문제를 구조적으로 해결하려는 시도로, 실시간 추천·검색·분류 시스템 설계에 시사점을 준다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존의 텍스트 직렬화 기반 답 예측 방식 대비, 요청과 옵션 표현을 분리하고 재사용 가능한 옵션 메모리를 두어 순열 불변성과 대규모 후보 확장성을 동시에 확보한 점이 다르다.</p><div class="tags"><span class="tag">#tabular</span></div><a class="src-cta" href="https://arxiv.org/abs/2610.18773" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="2b78f55e5bcb"><summary><span class="num">02</span><span class="body-col"><span class="it-title">스태킹 앙상블, 언제 단일 최강 모델을 이길까 — 핵심은 &#x27;서로 다른 오류 패턴&#x27;</span><span class="it-sub">Does Stacking Beat Your Best Model?</span><span class="it-meta">✍️ 블로그 · towardsdatascience.com</span><span class="it-lede">이 글은 스태킹(stacking) 앙상블이 항상 최고 성능의 단일 모델을 능가하는 것은 아니라는 점을 다룬다.</span></span></summary><div class="it-body"><p>스태킹이 실제로 도움이 되는 경우는 모델들이 <strong>서로 다른 종류의 실수</strong>를 할 때뿐이라는 것이 핵심 주장이다. 즉 모델들의 예측 오류가 유사하다면 스태킹으로 결합해도 성능 향상 효과가 크지 않다.</p><div class="slot-l">WHY IT MATTERS</div><p>실무에서 여러 모델을 무작정 쌓기보다, 모델 간 오류의 다양성을 먼저 점검해야 불필요한 복잡도 증가 없이 성능 개선을 얻을 수 있다.</p><div class="tags"><span class="tag">#tabular</span></div><a class="src-cta" href="https://towardsdatascience.com/does-stacking-beat-your-best-model/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="causal-inference"><div class="sec-h"><span class="nm">인과추론</span><span class="cnt">1건</span><span class="all"><a href="../../../category/causal-inference.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="causal-inference">전체 펼치기</button></div><div class="sec-desc">인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</div><details class="item" id="d50f8b873d03"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Netflix, 개인화 추천의 인과적 가치 측정 모델 공개 — 알고리즘 탐색 변동과 A/B 테스트 결합 검증</span><span class="it-sub">Measuring the Impact of Personalized Recommendations</span><span class="it-meta">✍️ 블로그 · netflixtechblog.com</span><span class="it-lede">Netflix가 개인화 추천이 시청에 미치는 실제 효과를 측정하는 행동 모델을 개발해 International Journal of Industrial Organization에 발표하고 ACM EC &#x27;26에서도 공개한다.</span></span></summary><div class="it-body"><p>핵심 문제는 추천이 무작위로 노출되지 않고 이미 수요가 예측된 제목에 집중되므로, 추천된 제목의 시청이 추천 효과 때문인지 원래 선호 때문인지 구분하기 어렵다는 점이다. 이를 풀기 위해 전체 개인화를 끄는 실험 대신, <strong>알고리즘 탐색에서 발생하는 자연적 변동</strong>을 활용해 회원의 선택 확률을 추정하는 모델을 구축했다. 모델의 제목 대체 가능성 예측은 소규모 A/B 테스트로 일부 제목의 노출도를 외생적으로 조정해 얻은 실측 대체 패턴과 비교해 검증했다.</p><div class="slot-l">WHY IT MATTERS</div><p>대규모 개인화 시스템을 전면 중단하지 않고도 그 인과적 가치를 측정할 방법을 제시한다는 점에서, 추천 시스템 운영 조직이 겪는 &#x27;측정은 하고 싶지만 실험은 할 수 없는&#x27; 딜레마에 대한 실무적 해법을 보여준다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>모든 제목으로 시청이 균등하게 대체된다고 가정하는 단순 모델과 달리, 로맨틱 코미디처럼 <strong>유사 장르 내 대체</strong>를 반영하는 구조를 사용하고, 이를 전면적 무작위 실험이 아닌 기존 추천 시스템의 알고리즘 탐색 변동과 소규모 A/B 테스트 조합으로 검증한다.</p><div class="tags"><span class="tag">#did</span></div><a class="src-cta" href="https://netflixtechblog.com/measuring-the-impact-of-personalized-recommendations-4c26be3a4d96?source=rss----2615bd06b42e---4" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="mlops"><div class="sec-h"><span class="nm">MLOps / ML Engineering</span><span class="cnt">2건</span><span class="all"><a href="../../../category/mlops.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="mlops">전체 펼치기</button></div><div class="sec-desc">MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</div><details class="item" id="ba69a65221dd"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Netflix, 오픈소스 시맨틱 레이어 DataJunction으로 실험 플랫폼 메트릭 정의 주 단위 소요를 해결</span><span class="it-sub">DataJunction as Netflix’s answer to the missing piece of the modern data stack</span><span class="it-meta">✍️ 블로그 · netflixtechblog.com</span><span class="it-lede">Netflix 실험 플랫폼은 메트릭 정의가 흩어져 있고 일관성이 없어 신뢰하기 어려운 문제를 겪었으며, 기존 도구는 복잡한 엔지니어링 지식을 요구해 메트릭 등록에 <strong>몇 주가 소요</strong>되는 구조였다.</span></span></summary><div class="it-body"><p>이를 해결하기 위해 Mando, Minerva, DataJunction(DJ) 세 후보를 검토했고, 강력한 SQL 파싱·생성 엔진과 그래프 기반 정의 저장 구조를 갖춘 DJ를 채택했다. DJ는 원래 2015년경 Facebook DSI 팀의 내부 프로젝트에서 출발해 실험 플랫폼 Deltoid의 메트릭 이식성 문제를 해결하며 MDF로 발전했고, 2021년 Beto Dealmeida가 오픈소스 Github 프로젝트로 시작했다. 이후 Netflix 엔지니어 3명과 외부 기여자들이 플랫폼의 나머지 기능을 함께 구축해왔다.</p><div class="slot-l">WHY IT MATTERS</div><p>조직 전반에 흩어진 메트릭 정의를 중앙화하는 시맨틱 레이어는 데이터 기반 의사결정의 신뢰성과 속도를 좌우하는 공통 과제이며, 대규모 데이터 조직이라면 유사한 메트릭 거버넌스 문제를 겪을 가능성이 높다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 내부 솔루션 Mando나 오픈소스 Minerva와 달리, DJ는 관계형 데이터베이스가 뷰·쿼리 메타데이터를 저장하는 방식과 유사하게 모든 정의를 <strong>연결된 그래프</strong>로 저장하는 유일한 오픈소스 솔루션이었다는 점이 채택 결정 요인이었다.</p><div class="tags"><span class="tag">#metric-platform</span><span class="tag">#open-source</span></div><a class="src-cta" href="https://netflixtechblog.com/datajunction-as-netflixs-answer-to-the-missing-piece-of-the-modern-data-stack-92af926b40a5?source=rss----2615bd06b42e---4" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="9bad7e9a2674"><summary><span class="num">02</span><span class="body-col"><span class="it-title">Netflix, GPU 수백 대 학습 작업의 장애 자동 복구 체계 공개 — 하드웨어 손실에도 잡 생존</span><span class="it-sub">Reliable GPU compute for large training &amp; inference jobs</span><span class="it-meta">✍️ 블로그 · netflixtechblog.com</span><span class="it-lede">Netflix는 수백 개 GPU로 몇 주간 이어지는 대규모 학습 작업에서 GPU와 네트워크 장비 장애를 사전·실시간으로 감지하고 문제 머신을 사람 개입 없이 자동 복구하는 시스템을 운영한다.</span></span></summary><div class="it-body"><p>이런 분산 학습은 모든 랭크가 매 스텝 데이터를 주고받는 gang 방식이라 한 참가자만 죽어도 전체 작업이 멈춘다. 클라우드 제공자의 인스턴스 상태 점검은 호스트가 켜져 있고 접근 가능한지만 확인할 뿐, GPU 개별 장치·온칩 메모리·인터커넥트·네트워크 패브릭이 분산 학습을 버틸 만큼 건강한지는 검증하지 못한다. 이 시스템은 Netflix의 Kubernetes 기반 Compute 플랫폼 위에서 학습과 추론 워크로드 모두에 적용된다.</p><div class="slot-l">WHY IT MATTERS</div><p>추천·개인화부터 생성형 AI 기반 추론까지 Netflix 인프라에서 GPU 비중이 가장 빠르게 커지고 비용도 크기 때문에, <strong>가용성과 활용률</strong>을 높이는 것이 곧 동일 작업을 더 적은 비용으로 수행하는 것과 같다. 다중 GPU 분산 학습을 운영하는 조직이라면 장애 허용 설계가 선택이 아닌 필수임을 보여주는 사례다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p><strong>클라우드 제공자의 기본 인스턴스 상태 점검</strong> 대비, 이 시스템은 GPU 개별 장치·인터커넥트·네트워크 패브릭 수준까지 내려가 건강성을 검증하고 사람 개입 없이 자동 복구한다는 점이 다르다.</p><div class="tags"><span class="tag">#serving</span><span class="tag">#infrastructure</span></div><a class="src-cta" href="https://netflixtechblog.com/reliable-gpu-compute-for-large-training-inference-jobs-d62b03a96d7a?source=rss----2615bd06b42e---4" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="practice"><div class="sec-h"><span class="nm">실무 사례 · 노하우</span><span class="cnt">2건</span><span class="all"><a href="../../../category/practice.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="practice">전체 펼치기</button></div><div class="sec-desc">실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</div><details class="item" id="09678c4af343"><summary><span class="num">01</span><span class="body-col"><span class="it-title">구글, 기술 문서 분석용 &#x27;Deep Review&#x27; 소개</span><span class="it-sub">Analyzing technical documents with Deep Review</span><span class="it-meta">✍️ 블로그 · research.google<span class="weak">원문 근거 부족</span></span><span class="it-lede">구글 리서치가 기술 문서를 분석하는 &#x27;Deep Review&#x27;를 소개하는 블로그를 공개했다.</span></span></summary><div class="it-body"><p>원문에 구체적인 방법이나 수치는 제시되지 않았다.</p><div class="slot-l">WHY IT MATTERS</div><p>기술 문서 분석에 대한 구글의 접근을 보여주는 사례로 참고할 만하다.</p><a class="src-cta" href="https://research.google/blog/analyzing-technical-documents-with-deep-review/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="bb00923bcd69"><summary><span class="num">02</span><span class="body-col"><span class="it-title">Netflix, Dataflow 브랜치 격리로 Spark 실험 병렬화 — 5개 동시 실행으로 디버깅 기간 2개월 단축</span><span class="it-sub">Running Apache Spark experiments in my sleep (and on a plane)</span><span class="it-meta">✍️ 블로그 · netflixtechblog.com</span><span class="it-lede">Netflix의 member-sessionizer 파이프라인 튜닝 작업이 샘플 데이터로는 재현 안 되는 <strong>대규모 데이터 스큐</strong> 문제로 2주에서 2개월로 늘어졌다.</span></span></summary><div class="it-body"><p>원인은 소수 세션이 수만 건의 텔레메트리 이벤트를 생성하는 롱테일 분포로, 1% 샘플링으로는 OOM 에러, 셔플 스필리지, 수천 번의 스테이지 재시도를 잡아낼 수 없었다. 해결책은 단일 실행 속도 개선 대신, Netflix의 Dataflow 도구가 지원하는 브랜치별 자동 격리(sanitized branch name)를 이용해 브랜치마다 독립된 테이블·네임스페이스로 실험을 동시에 여러 개 돌리는 방식이었다. 캡 크기, 셔플 파티션 수 등 파라미터를 바꾼 5개 변형을 동일 시간대에 동시 실행해 총 실행 시간을 전체 합산이 아닌 <strong>가장 느린 작업 하나의 길이</strong>로 줄였다.</p><div class="slot-l">WHY IT MATTERS</div><p>대규모 분산 데이터 파이프라인의 성능 버그는 샘플 데이터로는 재현되지 않는 경우가 많아, 전체 프로덕션 규모 테스트와 병렬 실험 인프라가 실질적인 디버깅 속도를 좌우한다는 교훈을 준다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>순차적으로 단일 실행을 최적화하던 기존 방식 대신, 브랜치마다 테이블·네임스페이스를 자동 격리해 여러 실험을 동시에 충돌 없이 실행하는 접근으로 전환했다.</p><a class="src-cta" href="https://netflixtechblog.com/running-apache-spark-experiments-in-my-sleep-and-on-a-plane-588816b6b5f8?source=rss----2615bd06b42e---4" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="industry-application"><div class="sec-h"><span class="nm">산업 적용 사례</span><span class="cnt">2건</span><span class="all"><a href="../../../category/industry-application.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="industry-application">전체 펼치기</button></div><div class="sec-desc">산업 적용 사례 — 산업 현장의 AI/ML 적용</div><details class="item" id="5cb1618c1db5"><summary><span class="num">01</span><span class="body-col"><span class="it-title">DeepMind·싱가포르 정부, 온디바이스 Gemma로 대화형 스캠 실시간 차단 — 클라우드 데이터 유출 無</span><span class="it-sub">Google DeepMind and Singapore Government collaborate to build fine-tuned AI model for scam detection</span><span class="it-meta">✍️ 블로그 · deepmind.google</span><span class="it-lede">Google DeepMind와 GovTech Singapore가 협력해 경량 Gemma 모델을 온디바이스에서 구동, 개인 채팅 내 대화형 스캠을 실시간으로 탐지한다.</span></span></summary><div class="it-body"><p>모델이 기기 내에서 직접 추론을 수행하기 때문에 <strong>클라우드로 데이터가 전송되지 않는다</strong>. 메시지 내용이 외부 서버로 나가지 않으면서도 사기성 대화 패턴을 식별할 수 있다는 점이 핵심이다.</p><div class="slot-l">WHY IT MATTERS</div><p>개인정보가 민감한 메신저 환경에서 <strong>온디바이스 AI</strong>로 보안 기능을 구현한 정부-빅테크 협업 사례로, 프라이버시와 보안을 동시에 만족시키려는 실용적 접근을 보여준다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>클라우드 기반 스캠 탐지 서비스와 달리 대화 데이터를 서버로 전송하지 않고 기기 내에서 처리한다는 점이 다르다.</p><a class="src-cta" href="https://deepmind.google/blog/on-device-ai-scam-detection-mddi/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="7d10f0ddfecf"><summary><span class="num">02</span><span class="body-col"><span class="it-title">Block, OpenAI 기술로 보안 체계 구축 — AI가 위협 조사 가속화하고 수 분 내 패치 제안</span><span class="it-sub">How Block is building AI-powered security with OpenAI technology</span><span class="it-meta">✍️ 블로그 · openai.com</span><span class="it-lede">Block이 OpenAI 기술을 활용해 AI 기반 보안 시스템을 구축했다.</span></span></summary><div class="it-body"><p>이를 통해 보안팀은 위협을 더 빠르게 조사할 수 있게 됐다. 또한 AI가 <strong>수 분 내에 패치를 제안</strong>하는 기능도 지원한다.</p><div class="slot-l">WHY IT MATTERS</div><p>보안 대응처럼 신속성이 생명인 업무에 LLM이 실무 투입되는 사례로, 기업 보안 운영의 자동화 가능성을 보여준다.</p><a class="src-cta" href="https://openai.com/index/block-ai-powered-security" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section></main>
+  <footer class="topics" id="topics"><h2>다루는 주제</h2><ul><li><a class="tnm" href="../../../category/ai-agent.html">AI Agent</a>AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</li><li><a class="tnm" href="../../../category/llm-foundation-model.html">LLM / Foundation Model</a>LLM·파운데이션 모델 — 사전학습·정렬·추론</li><li><a class="tnm" href="../../../category/deep-learning.html">Deep Learning</a>딥러닝 — 아키텍처·학습기법 자체</li><li><a class="tnm" href="../../../category/predictive-modeling.html">예측 모델링</a>예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</li><li><a class="tnm" href="../../../category/causal-inference.html">인과추론</a>인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</li><li><a class="tnm" href="../../../category/mlops.html">MLOps / ML Engineering</a>MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</li><li><a class="tnm" href="../../../category/practice.html">실무 사례 · 노하우</a>실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</li><li><a class="tnm" href="../../../category/industry-application.html">산업 적용 사례</a>산업 적용 사례 — 산업 현장의 AI/ML 적용</li></ul></footer>
+</div>
+<script>
+(function(){
+var r=document.documentElement,k="dsb-theme",s=localStorage.getItem(k);
+if(s)r.dataset.theme=s;
+document.getElementById('tbtn').addEventListener('click',function(){
+  var cur=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  var n=cur==='dark'?'light':'dark';r.dataset.theme=n;localStorage.setItem(k,n);});
+// 섹션 전체 펼치기/접기
+document.querySelectorAll('.exp').forEach(function(b){b.addEventListener('click',function(){
+  var sec=document.getElementById(b.dataset.sec);
+  var ds=sec.querySelectorAll('details.item'),open=b.dataset.state!=='open';
+  ds.forEach(function(d){d.open=open;});
+  b.dataset.state=open?'open':'closed';b.textContent=open?'전체 접기':'전체 펼치기';});});
+// 스크롤 위치 카테고리 TOC 활성 (데스크톱 사이드 TOC)
+var links={};document.querySelectorAll('.toc li[data-cat]').forEach(function(li){links[li.dataset.cat]=li;});
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){Object.values(links).forEach(function(l){l.classList.remove('active');});
+    if(links[e.target.id])links[e.target.id].classList.add('active');}});},
+  {rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('section.sec').forEach(function(s){obs.observe(s);});
+})();
+</script>
+</body>
+</html>
