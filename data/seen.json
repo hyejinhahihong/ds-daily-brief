@@ -92970,5 +92970,231 @@
       "world-modeling",
       "benchmark"
     ]
+  },
+  "4a2f3ca18eb9cee6e404d64432a48a189cc310da": {
+    "url": "https://openai.com/index/benefit-street-partners",
+    "title": "Benefit Street Partners answers questions faster with Codex",
+    "category": "industry-application",
+    "source_tier": 1,
+    "first_seen": "2026-10-18",
+    "tags": []
+  },
+  "11b6e9b0168c78f465bef86754d0d5fdaff59b11": {
+    "url": "https://towardsdatascience.com/the-number-your-quantization-gate-doesnt-have/",
+    "title": "The Number Your Quantization Gate Doesn't Have",
+    "category": "deep-learning",
+    "source_tier": 3,
+    "first_seen": "2026-10-18",
+    "tags": []
+  },
+  "fd436f42d425c1086ed7d4733490997b18c79bb6": {
+    "url": "https://towardsdatascience.com/when-eeg-models-see-the-same-people-in-training-and-testing/",
+    "title": "When EEG Models See the Same People in Training and Testing",
+    "category": "predictive-modeling",
+    "source_tier": 3,
+    "first_seen": "2026-10-18",
+    "tags": [
+      "feature-selection"
+    ]
+  },
+  "d4d8a21bd9972e11394c29470a79b7d15cd8916b": {
+    "url": "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/",
+    "title": "Meta removes language that raised scraping and AI training concerns",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-18",
+    "tags": []
+  },
+  "0dabc6c10b97c37b5111d1bc15962486a0b5583a": {
+    "url": "https://techcrunch.com/2026/10/17/anthropic-says-its-workforce-has-become-less-junior-and-is-spending-more-time-in-meetings/",
+    "title": "Anthropic says its workforce has become less junior and is spending more time in meetings",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-10-18",
+    "tags": []
+  },
+  "6435f671229b69ca08cbe2a0c540ff989dd2f621": {
+    "url": "https://techcrunch.com/2026/10/17/replit-is-no-longer-working-with-anthropic-ceo-says/",
+    "title": "Replit makes OpenAI its default over Anthropic, CEO says",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-18",
+    "tags": []
+  },
+  "a73522a3fefcaa2941a76dd2bf54b2fcf3d88ca9": {
+    "url": "https://arstechnica.com/science/2026/10/science-says-your-boss-should-talk-less-in-meetings/",
+    "title": "Science says your boss should talk less in meetings",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-10-18",
+    "tags": []
+  },
+  "dc01b1847cbecc8d09228b1ab35b803ff4b20b6d": {
+    "url": "https://arstechnica.com/gaming/2026/10/why-biowares-neverwinter-nights-still-has-thousands-of-active-players/",
+    "title": "Why BioWare's Neverwinter Nights still has thousands of active players",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-10-18",
+    "tags": []
+  },
+  "e86f92efb2651db53d684299bf466ba2775c2d91": {
+    "url": "https://arstechnica.com/security/2026/10/openai-models-hacked-a-crypto-wallet-and-breached-more-websites/",
+    "title": "OpenAI models hacked a crypto wallet and breached more websites",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-10-18",
+    "tags": []
+  },
+  "f8d655888dc5f63a107624e05b867b12e0d05c29": {
+    "url": "https://www.wired.com/story/why-ai-isnt-ready-to-tackle-our-convoluted-genomes/",
+    "title": "Why AI Isn’t Ready to Tackle Our Convoluted Genomes",
+    "category": "deep-learning",
+    "source_tier": 4,
+    "first_seen": "2026-10-18",
+    "tags": []
+  },
+  "723623052971e5f91fdc1b6e0bb766a004cc8f8f": {
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPNk85UDhheTRLWlR3YUtHQ2FjUnU2dVg5Q3dIa1Y4b1p5bS1XajV1REJSMWotUUN4XzZLZGNIajBmRm45M0p5aTdBb0p3R082SHJFNVVXcFRKXzZBZGJsRURfWXhBNmRNdEJYYnJsaGVGM3ZNSXV5UE1NSkZTS0hSU2FsSS1nUVBnSGtBdGk2Sm11S0xqUkZNT3dRTDNTNVpwel9lS0pycU9jZHkxZUFRb1FCemdJdDdKUkhr?oc=5",
+    "title": "Anthropic’s AI Safety Bill Has an Alarming Threshold for Government Action - Mother Jones",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-18",
+    "tags": []
+  },
+  "015db140672c0ef9c9f4b455b776c546f2cb2678": {
+    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNb096cnlnRzFVaHJqeS05WUh3dWhmYjg2UDJzcDhjZ19ySFcxRUswSlI3UmREQ1RwYU9zR0w2RVhyMC04NDdXZXRQby1QWVNRdEYtY3dKRnhmek1YRTc1cU0tZnBVeVJ4S29nUjJiX1FJTTc4WmR6YllYZC13SVBKOVNDaEtKTkpZ?oc=5",
+    "title": "DeepSeek releases AI model update, opens search APIs to all users - Yahoo Finance Australia",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-18",
+    "tags": []
+  },
+  "1d4e5fa071dc3ab47bcedcbdf8a57277ca40aac2": {
+    "url": "https://news.google.com/rss/articles/CBMifEFVX3lxTFA3Z29iZXJVY3pWNUhCUy1Nd2dDVDYxVDc5dHcydi1MU1dOTkJRbWphVGc2QU9ObFFLclhvQWhsS0t1QmVPbW5nbF9hYVcyTUVWVjFBMnJ5c3JFVkJsUEd3c05BMXVvWmZUOTRCQWZVZHJHU2RUMkNlR1d6OVY?oc=5",
+    "title": "Meta Releases Muse Spark Open, and Challenges China - Tech.co",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-18",
+    "tags": []
+  },
+  "3f44510f7a288adb8107d695239ae2b5bdf9558c": {
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxORXhPN25OVlBaYlk5SlB4RENMR1FVWU9DOGt0NTZUN0VuWnVKT1NCZjVQbFRndnhmbnlvSUVSeTIxNllQbFJnaHVQOUJxeDlxcE1jMU1rcnhxRGlhXzNZcVFNek9xek13SG1BX3VPcXlUR3JaVVdEQ0drWk0wZTU1NndSQWM?oc=5",
+    "title": "Meta and Apple team up on AI model tailored for Mac computers - Financial Times",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-18",
+    "tags": []
+  },
+  "f07de03e87f30f18c67481ecb361e571d3223eeb": {
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE84blhmV2dIOVExN05vaGVhalFsbk55OTdwaGdBNkFNMHVoWWxLMm1tdm5ZMDI0T3NTNk80WlVQX2x6aWM0dDQwejU1YWdTLWEyQ2ZQdVFOZnBIZ0RRSE8zRXpUWW4zLU54MGRaNzZkemtEUkFP?oc=5",
+    "title": "Surprise! Meta and Apple Worked Together on a New Open-Source AI Model - CNET",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-18",
+    "tags": []
+  },
+  "9c91b7683bf92d86b46ea8d5a80df5b715d4b2c3": {
+    "url": "https://news.google.com/rss/articles/CBMickFVX3lxTE1XbHNDSHdhZ08yYnp3NENLOUtFcmJJQ3FwS3QwUkUtQ2JfUFpUSWdFaTFrSmE2TGlqZmdQS0Z0SkwwbFBlSjk0TXVSRTVLTXBNUW45RTBzaUcyNGE4ZEg5bnpJTERpbzBOUS1xOVJHdzY1dw?oc=5",
+    "title": "Chinese Startup StepFun Launches a Phone Built Around an AI Agent, Not Apps - Decrypt",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-10-18",
+    "tags": [
+      "agentic-workflow"
+    ]
+  },
+  "0585d10777002f615900c6690b397eac55ff8e4f": {
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNaFQ4cFplbndSZC03UHVBOU45bWs4QmE4QWJtdUVqZE5KM2IwcXFwMFpWUWJqZHZWQlpNZTY5WmlnT1JfZXEtR1g2cWhlRHgzdy1lN1oyb0xRWW5hQUl5cnRKV1NEUVVwVkJyVXhMbV95UmdtUWEycE9QYmRPNS1xSUtUanFsNk5WbjZFOURITWpRd3VlNlJveVZnSkpXRXp4dTFMbDNyR3BRQQ?oc=5",
+    "title": "Meta, Apple come together to let developers run large AI model on Mac (META:NASDAQ) - Seeking Alpha",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-18",
+    "tags": [
+      "deployment"
+    ]
+  },
+  "0f72e50a6d1ebf894f79ebc6f42bf4c9135c86f1": {
+    "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTFBaTk5VLVNMSzBNcmhfWWtLbEZzNENRdVBQazhKMzI4ZTk3M3h5dmZndW1WQko5Mk1Pd01OWEl3YnltazhZN1d2N2tha0NfWHZWMTNVb25DbzF1anhYbUtpQTI5S3cyMG96Q3hlTFJOVnBfMkV6?oc=5",
+    "title": "Gemini 4 Argon Goes Global, Tokens Jump 16x to 1M [2026] - shattered.io",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-18",
+    "tags": []
+  },
+  "4a721a6610aa2c3c7bb2653d947f322f5050eb21": {
+    "url": "https://news.google.com/rss/articles/CBMieEFVX3lxTE0ydWVrbHdHeGNraEdTSHQ5eExwZ2lLRUU1U1BoVFJUTWNLenpWTXJOMHNnWnhaa0thQXlRbk1KdEliVVVGUEJXZWwtcWtUZE9Ielo2X05DaHJKSmJpd05rRl9vMWdQQUE4ZnVRRFBLQ3hlcm9FNG12bg?oc=5",
+    "title": "Anthropic quietly pitches its own AI safety bill to lawmakers - Politico",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-18",
+    "tags": []
+  },
+  "abe2239531b05ae4053acf15b3d2705c2a7236b4": {
+    "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxOQjJJNGtEbm5FOVg2WjBNc2JDX051YTB1aEEzcjBQdlRRbHBnU2pfRnBYaGNSVjRsTWctWFVsVmpLd0hTS1JiNjJWd2RXQ3JQb0dSRkctN2xPZ0MwdTYwcWpxdEVlQ0RaYm5MTzJ4UmFmM3lFWWNFblNTWmQwM1pCcFNfekc4R0lXT0VQZjRJYTNsMFlNb2lJX1A5RnE?oc=5",
+    "title": "DeepSeek pushes out ‘faster, leaner’ updated AI model - The Straits Times",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-18",
+    "tags": []
+  },
+  "84fbbc9bb768f1891780c8e79a1b66280b0419b1": {
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQV3FldmQtcVFnTWoyb1BWelp0S3NTc01zZkRFcTFwVGN4S1dZU1NjR3RBcjVkbkc5TWp6Z1RIOTJRem9NbFdxUUVCUEtQWDBGYUZFV1RDS0tkNHNOeWdTUVNiQzFxSi1SaVEwUk9SVFlWR2NOTzRFbmp1N1FVT3ZnQWVNYzRjSDE3SnVtM2tnclZtSUlNQUhvN29ia0FqRE44RS1jTVg5VE5JOFhIWmVKcEV2WQ?oc=5",
+    "title": "Nvidia's Nemotron 3.5 Super VL is an open model built to run enterprise AI agents nonstop - The Decoder",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-10-18",
+    "tags": [
+      "agentic-workflow"
+    ]
+  },
+  "34d567e7a0914a3c6ca3d9ab99218559e1b78862": {
+    "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQdUtCMXF4eHM4OTJqUnZTTXdJY3MzNlMwR0V5NjduNTR4cFN1SldEWTktcjBQbFV0Um01alQ1c1hCbHg0Skt6RERpWl9pRnM5Y3NHY0NvTjFzaHhmdjkwLWpSemVRbGRHVXl0VFVaX2lacTNpUzFpendNd0JFZDBFclFtUDBlWVh3NVk4eVFFZGFybC1fRXNGZjIxSE4wUQ?oc=5",
+    "title": "Mark Zuckerberg Opens Meta's Massive Muse Spark AI Model, Says It Runs Great on Apple's New Mac Studios T - Benzinga",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-18",
+    "tags": []
+  },
+  "d76e0bf2ce92302a53668cb210c2c7a0edc3aba4": {
+    "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNSEs4OXFCbWt2dlVmVUE3ZElpVmFYVGV2LW4wWi13SGV1S2pFWGJCRGhGaHNGRUR2U1V6ZjZyNFhoU2tMcXdEaXBZcTJxMldJTGV3Y1p2YVZGQS1lLVB2SERyaGRacmNoUXllYjEtNEdRYUJmZl9heXZvZGx2RnJlRGlEZ3Y2bmZZc01aUHA2SXNleGo2OXZ0ZHFQbFV1VUczbTUwdEwxV0FrQ1nSAasBQVVfeXFMTUhLODlxQm1rdnZVZlVBN2RJaVZhWFRldi1uMFotd0hldUtqRVhiQkRoRmhzRkVEdlNVemY2cjRYaFNrTHF3RGlwWXEycTJXSUxld2NadmFWRkEtZS1QdkhEcmhkWnJjaFF5ZWIxLTRHUWFCZmZfYXl2b2RsdkZyZURpRGd2Nm5mWXNNWlBwNklzZXhqNjl2dGRxUGxVdVVHM201MHRMMVdBa0NZ?oc=5",
+    "title": "20 Jev Alternatives: The Decision Models Taking On TypeSafe in 2026 - MarkTechPost",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-10-18",
+    "tags": []
+  },
+  "d06dc4bbace172362823419dabf5c87afa2c6acb": {
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPZHBkZGEtVEpZTVo3Y0tiWnJmTlEzX1lLMG9tSW45MU45VXNtZUV2M2hyNnFaeXY3bF9UMV9wM25xNWZTRnFTVS1OS0dkblZyRGFXSzZYU05BVGdGOWxDRGNQMEJEUE10VlFYUlNuZ2N2S2RFOHpXRnlhZm5GWThTWXA0ZzkwXzZwOWFuaDNtaVNnTm13MTJsd2I1TzFKaUZJRmNWUTFsdXlwbUt5cm5GeG5aWXQ0T1R1V3Nr0gG7AUFVX3lxTE9kcGRkYS1USllNWjdjS2JacmZOUTNfWUswb21JbjkxTjlVc21lRXYzaHI2cVp5djdsX1QxX3AzbnE1ZlNGcVNVLU5LR2RuVnJEYVdLNlhTTkFUZ0Y5bENEY1AwQkRQTXRWUVhSU25nY3ZLZEU4eldGeWFmbkZZOFNZcDRnOTBfNnA5YW5oM21pU2dObXcxMmx3YjVPMUppRklGY1ZRMWx1eXBtS3lybkZ4blpZdDRPVHVXc2s?oc=5",
+    "title": "DeepSeek Just Released V4.1-Flash-1017, Scores 77.0 on DeepSWE, Opens Search API - MarkTechPost",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-18",
+    "tags": []
+  },
+  "c55ec784788b67d77e17ab0ef4d597537c0b0730": {
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNdExPak9nb2l1cFIwcVVMcGJZZktCcXlLQ2ROYjZrVVk4TG8wc3hXTXcxdDlVTDlNZFJGNmxNaDI4QUI2bHZBRVM0U3lIZ2xMd3pCTno5cGhLM19BMjRTa2pCN2o1M3hSQzlIeTJvRUtlSlJKc2JLaTQ5eVBWT1VTU0ozQkJwNmVuQlZ5MVFYSFFhZ2o4elhCTU5kWFIwZ2M?oc=5",
+    "title": "Amazon’s Bee launches two new personal AI devices, starting at $75 - TechCrunch",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-10-18",
+    "tags": [
+      "agentic-workflow"
+    ]
+  },
+  "9b13d6a721a0c27049840c9b9a043dabdb98a309": {
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "title": "deepseek-ai/DeepSeek-V4.1-Flash-1017",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-10-18",
+    "tags": []
+  },
+  "29f0c1cc849678336b0572d4982848c867971c9e": {
+    "url": "https://arxiv.org/abs/2610.21185",
+    "title": "Mine, Sample, Render: Test-Time Diversity Alignment Of Generative Models",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-10-18",
+    "tags": []
   }
 }
