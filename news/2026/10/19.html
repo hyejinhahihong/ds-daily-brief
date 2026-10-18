@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI &amp; ML News Letter · 10/19</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --accent:#5DB8A6; --accent-hover:#479B8B; --accent-weak:#E8F4F1;
+  --focus-ring:rgba(93,184,166,.5);
+  --bg:#FAF9F5; --bg-subtle:#F0EEE6; --border:#E7E3D9;
+  --text:#1F1E1D; --text-2:#6B6862; --text-3:#A39E94;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}}
+:root[data-theme="dark"]{
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover);text-decoration:underline}
+strong{font-weight:600;color:var(--text)}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px;border-radius:3px}
+
+/* 모바일 우선 단일 컬럼 (<1200px). 덩어리 중앙 정렬은 margin:0 auto. */
+.page{max-width:760px;margin:0 auto;padding:20px 18px 40px}
+
+/* --- 마스트헤드 (뉴스레터 제호) --- */
+.mast{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+  padding-bottom:14px;border-bottom:2px solid var(--text);margin-bottom:24px}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--accent);
+  text-transform:uppercase;margin:0 0 6px}
+.mast-title{font-size:26px;font-weight:600;margin:0;letter-spacing:-.01em;line-height:1.15}
+.mast-date{font-size:14px;color:var(--text-2);margin-top:8px}
+.themebtn{flex:none;background:var(--bg-subtle);border:1px solid var(--border);color:var(--text-2);
+  border-radius:20px;padding:5px 12px;font-size:13px;cursor:pointer;font-family:inherit}
+.topnav{margin-top:11px;display:flex;gap:16px;font-size:13px}
+.topnav a{color:var(--text-2);font-weight:500} .topnav a:hover{color:var(--accent)}
+@media (min-width:640px){.mast-title{font-size:31px}}
+
+/* --- TODAY'S TOP 3 --- */
+.top3{background:var(--accent-weak);border-radius:12px;padding:14px 18px;margin-bottom:24px}
+.top3 h2{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--accent);margin:0 0 8px}
+.top3 ol{margin:0;padding:0;list-style:none}
+.top3 li{padding:4px 0 4px 22px;position:relative;font-size:15px;color:var(--text)}
+.top3 li::before{content:"\2605";position:absolute;left:0;color:var(--accent);font-size:12px;top:7px}
+.top3 .t3cat{color:var(--text-2);font-size:12px;margin-right:5px}
+.top3 a{color:var(--text)} .top3 a:hover{color:var(--accent-hover)}
+
+/* --- 목차 (TOC) --- */
+.toc{margin-bottom:26px}
+.toc h2{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--text-2);margin:0 0 8px}
+.toc ul{margin:0;padding:0;list-style:none}
+.toc li{padding:6px 0;border-top:1px solid var(--border)}
+.toc li:first-child{border-top:none}
+.toc .r{display:flex;gap:6px;align-items:baseline;font-size:14px}
+.toc .nm{font-weight:500;color:var(--text)} .toc a:hover .nm{color:var(--accent)}
+.toc .cnt{color:var(--text-3);font-size:12px}
+.toc .lead{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  font-size:12px;color:var(--text-2);margin-top:2px;line-height:1.4}
+.toc li.active .nm{color:var(--accent)}
+.toc li.active{border-left:2px solid var(--accent);padding-left:8px;margin-left:-10px}
+
+/* --- 섹션 --- */
+.sec{margin:0 0 34px;scroll-margin-top:14px}
+.sec-h{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:0 0 2px;padding-top:6px}
+.sec-h .nm{font-size:20px;font-weight:600}
+.sec-h .cnt{font-size:13px;color:var(--text-3)}
+.sec-h .all{font-size:12px;color:var(--text-3);margin-left:auto}
+.sec-h .all span{color:var(--text-2)}
+.sec-h .exp{font-size:12px;background:none;border:1px solid var(--border);color:var(--text-2);
+  border-radius:14px;padding:2px 10px;cursor:pointer;font-family:inherit}
+.sec-desc{font-size:13px;color:var(--text-2);margin:0 0 8px}
+.sec-empty{font-size:14px;color:var(--text-3);padding:4px 0 6px}
+.backtop{display:inline-block;font-size:12px;color:var(--text-3);margin-top:6px}
+
+/* --- 아이템 (아코디언) — 거터(번호) + 단일 콘텐츠 컬럼 (DESIGN §3 v4). 좌측 정렬선 1개. --- */
+.item{border-bottom:1px solid var(--border);--gutter:28px}
+.item>summary{list-style:none;cursor:pointer;padding:16px 26px 16px 0;position:relative;
+  display:grid;grid-template-columns:var(--gutter) 1fr;align-items:start}
+.item>summary::-webkit-details-marker{display:none}
+.item>summary::after{content:"\25B8";position:absolute;right:2px;top:16px;color:var(--text-3);
+  font-size:13px;transition:transform .15s;display:inline-block}
+.item[open]>summary::after{transform:rotate(90deg)}
+.num{font-size:13px;color:var(--text-3);font-variant-numeric:tabular-nums;font-weight:500;padding-top:3px}
+.t3star{color:var(--accent);font-size:11px;margin-right:2px}
+.body-col{min-width:0}
+.it-title{display:block;font-size:18px;font-weight:600;color:var(--text);line-height:1.4}
+.item>summary:hover .it-title{color:var(--accent)}
+.it-sub{display:block;font-size:13px;color:var(--text-2);margin-top:3px;line-height:1.35}
+.it-meta{display:block;font-size:13px;color:var(--text-2);margin-top:6px}
+.it-lede{display:block;font-size:15px;color:var(--text-2);margin-top:7px;line-height:1.5}
+.item[open] .it-lede{color:var(--text)}
+/* 접힘 본문도 콘텐츠 컬럼에 정렬 (거터만큼 들여씀) */
+.it-body{padding:0 0 20px var(--gutter)}
+.it-body p{margin:0 0 10px}
+@media (min-width:900px){.item{--gutter:40px}}
+.slot-l{font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--text-2);margin:14px 0 2px}
+.tags{margin-top:10px}
+.tag{display:inline-block;font-size:12px;color:var(--text-2);background:var(--bg-subtle);
+  border:1px solid var(--border);border-radius:12px;padding:1px 9px;margin:0 5px 5px 0}
+.prev{font-size:13px;color:var(--text-3);margin-top:8px}
+.src-cta{display:inline-block;margin-top:12px;font-size:14px;font-weight:500;color:var(--accent)}
+.weak{color:var(--accent);font-size:12px;border:1px solid var(--accent);border-radius:5px;
+  padding:0 6px;margin-left:6px}
+
+/* --- "다루는 주제" 푸터 --- */
+.topics{margin-top:36px;padding-top:22px;border-top:2px solid var(--text)}
+.topics h2{font-size:15px;font-weight:600;margin:0 0 12px}
+.topics ul{margin:0;padding:0;list-style:none}
+.topics li{padding:7px 0;border-top:1px solid var(--border);font-size:13px;color:var(--text-2)}
+.topics li:first-child{border-top:none}
+.topics .tnm{font-weight:600;color:var(--accent);margin-right:6px}
+
+/* --- 데스크톱 (≥1200px): 좌측 sticky TOC(260) + 본문(720), 덩어리 중앙 정렬 --- */
+@media (min-width:1200px){
+  /* max-width = 260+44+720 그리드(1024) + 좌우 padding(18*2). box-sizing:border-box
+     라 padding 을 포함해야 본문 720 이 찌그러지지 않는다. */
+  .page{max-width:1060px;display:grid;grid-template-columns:260px minmax(0,720px);
+    column-gap:44px;justify-content:center;align-items:start;padding-top:28px}
+  .mast{grid-column:1/3}
+  .toc{grid-column:1;grid-row:2/999;position:sticky;top:24px;margin:0;align-self:start}
+  .top3,.main{grid-column:2}
+  .topics{grid-column:1/3}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="mast">
+    <div class="mast-l">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1 class="mast-title">AI &amp; ML News Letter</h1>
+      <div class="mast-date">2026 / 10 / 19 (월) · 7건</div>
+      <nav class="topnav"><a href="../../../archive.html">📅 지난 브리핑</a>
+        <a href="#topics">🗂 주제별 보기</a></nav>
+    </div>
+    <button id="tbtn" class="themebtn" type="button">🌓 테마</button>
+  </header>
+  <section class="top3"><h2>TODAY'S TOP 3</h2><ol><li><a href="#4e2a126483a5"><span class="t3cat">[LLM / Foundation Model]</span>Meta, &#x27;Muse Spark Open&#x27; 공개 — 파라미터 816B·토큰당 $1.25/M</a></li><li><a href="#d01115e4a5ab"><span class="t3cat">[AI Agent]</span>Meta, 코딩·AI 에이전트용 오픈웨이트 모델 &#x27;Muse Spark&#x27; 공개</a></li><li><a href="#2ae6d8610039"><span class="t3cat">[LLM / Foundation Model]</span>Meta-Apple, 오픈소스 AI 모델 공동 출시 — 세부 정보는 공개되지 않음</a></li></ol></section>
+  <nav class="toc" id="toc"><h2>오늘의 목차</h2><ul><li data-cat="ai-agent"><a href="#ai-agent"><span class="r"><span class="nm">AI Agent</span><span class="cnt">1</span></span><span class="lead">Meta, 코딩·AI 에이전트용 오픈웨이트 모델 &#x27;Muse Spark&#x27; 공개</span></a></li><li data-cat="llm-foundation-model"><a href="#llm-foundation-model"><span class="r"><span class="nm">LLM / Foundation Model</span><span class="cnt">2</span></span><span class="lead">Meta, &#x27;Muse Spark Open&#x27; 공개 — 파라미터 816B·토큰당 $1.25/M</span></a></li><li data-cat="deep-learning"><a href="#deep-learning"><span class="r"><span class="nm">Deep Learning</span><span class="cnt">1</span></span><span class="lead">Kyutai, 24억 파라미터 VLA 모델 REKI 공개 — 로봇 조작용 메모리 효율화 시도</span></a></li><li data-cat="predictive-modeling"><a href="#predictive-modeling"><span class="r"><span class="nm">예측 모델링</span><span class="cnt">3</span></span><span class="lead">우크라이나-NATO, 적 무인기(UAV) 공격 예측하는 AI 모델 공동 개발</span></a></li></ul></nav>
+  <main class="main"><section class="sec" id="ai-agent"><div class="sec-h"><span class="nm">AI Agent</span><span class="cnt">1건</span><span class="all"><a href="../../../category/ai-agent.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="ai-agent">전체 펼치기</button></div><div class="sec-desc">AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</div><details class="item" id="d01115e4a5ab" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">Meta, 코딩·AI 에이전트용 오픈웨이트 모델 &#x27;Muse Spark&#x27; 공개</span><span class="it-sub">Meta Launches Open-Weight Muse Spark Model to Power Advanced Coding and AI Agents - OODA Loop</span><span class="it-meta">📰 뉴스 · news.google.com<span class="weak">원문 근거 부족</span></span><span class="it-lede">Meta가 코딩과 AI 에이전트 구동을 위한 오픈웨이트 모델 &#x27;Muse Spark&#x27;를 공개했다.</span></span></summary><div class="it-body"><div class="slot-l">WHY IT MATTERS</div><p>오픈웨이트 모델이 늘어나면 코딩·에이전트 분야 개발자들의 선택지가 넓어진다.</p><div class="tags"><span class="tag">#agent-capability</span><span class="tag">#coding</span></div><a class="src-cta" href="https://news.google.com/rss/articles/CBMivgFBVV95cUxOTUhzU20yOFRDNkZUT3NPbk5NLXU5MWlWUV9Db0s1Xy1MYktZUURTMHpYYjJyX2kxTmlBU3RySmhTUnNwdkZnV3dfdUZ3ODlGWVhZWHlkN09WejdNTkRLQzdyZDBxNjJ1SWhZNjlXaEZSRFZPbUxObUZlWUVFVE1aNnpiUmdweWhiMEx6ZHpQbDctQW1BS0ZNRVFNanZHZFlYLWtLOWJGcjY3Z0lqd3lpdjdzVmJCTnZkdjcwWXJn?oc=5" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="llm-foundation-model"><div class="sec-h"><span class="nm">LLM / Foundation Model</span><span class="cnt">2건</span><span class="all"><a href="../../../category/llm-foundation-model.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="llm-foundation-model">전체 펼치기</button></div><div class="sec-desc">LLM·파운데이션 모델 — 사전학습·정렬·추론</div><details class="item" id="4e2a126483a5" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">Meta, &#x27;Muse Spark Open&#x27; 공개 — 파라미터 816B·토큰당 $1.25/M</span><span class="it-sub">Meta Muse Spark Open: 816B Params, $1.25/M Tokens - shattered.io</span><span class="it-meta">📰 뉴스 · news.google.com<span class="weak">원문 근거 부족</span></span><span class="it-lede">Meta가 &#x27;<strong>Muse Spark Open</strong>&#x27;이라는 모델을 공개했으며, 파라미터 수는 <strong>816B</strong>, 토큰당 가격은 $1.25/M으로 알려졌다.</span></span></summary><div class="it-body"><div class="slot-l">WHY IT MATTERS</div><p>대형 모델의 파라미터 규모와 가격 정보는 관련 생태계의 비용 구조를 가늠하는 데 참고가 된다.</p><a class="src-cta" href="https://news.google.com/rss/articles/CBMia0FVX3lxTFBvSnZoemZnUGhnYWhDNkNHYUNMWHl5YUxqTVpLRkVPSWNBTTc1OEVaOE9jdVFRYkdIME5yZWM0RFJYaGlGdWx1eGZuZE50aFRoRHBsVHBzZm5CSFRRQjRzOTZ0dXc2SUdqbEJr?oc=5" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="2ae6d8610039" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>02</span><span class="body-col"><span class="it-title">Meta-Apple, 오픈소스 AI 모델 공동 출시 — 세부 정보는 공개되지 않음</span><span class="it-sub">Meta and Apple Team Up to Launch a Powerhouse Open-Source AI Model - Android Headlines</span><span class="it-meta">📰 뉴스 · news.google.com<span class="weak">원문 근거 부족</span></span><span class="it-lede">Meta와 Apple이 협력해 오픈소스 AI 모델을 출시했다는 소식이 전해졌다.</span></span></summary><div class="it-body"><p>다만 원문에는 모델의 이름, 규모, 성능 등 구체적인 정보는 포함되어 있지 않다.</p><div class="slot-l">WHY IT MATTERS</div><p>두 빅테크의 협력이 사실이라면 오픈소스 AI 생태계에 영향을 줄 수 있는 소식이다.</p><a class="src-cta" href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNaFlYVDNsVFhWRlNRWnU0SFJGUmlNQmQtYnRzQVlUNnFUcF9RbWdQWTRvWFZJdWhnVnMySHc4V0FyUDk4OWRjQzJpb2hiRFo3T3BTUFA3dlhHMU1SWmpqcFRLa0xBNkpsR25uV3JUZzlNRnVBdGZ1bjBHeUpYLWo2UlJCZDJWX1JT?oc=5" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="deep-learning"><div class="sec-h"><span class="nm">Deep Learning</span><span class="cnt">1건</span><span class="all"><a href="../../../category/deep-learning.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="deep-learning">전체 펼치기</button></div><div class="sec-desc">딥러닝 — 아키텍처·학습기법 자체</div><details class="item" id="83908c3b81a4"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Kyutai, 24억 파라미터 VLA 모델 REKI 공개 — 로봇 조작용 메모리 효율화 시도</span><span class="it-sub">Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation - MarkTechPost</span><span class="it-meta">📰 뉴스 · news.google.com<span class="weak">원문 근거 부족</span></span><span class="it-lede">Kyutai가 로봇 조작을 위한 24억 파라미터 규모의 비전-언어-액션(VLA) 모델 REKI를 공개했다.</span></span></summary><div class="it-body"><p>이 모델은 메모리 효율성을 높이는 데 초점을 맞춘 것으로 소개된다.</p><div class="slot-l">WHY IT MATTERS</div><p>로봇 제어용 대형 모델의 경량화·효율화 흐름을 보여주는 사례로, VLA 모델의 실제 배포 가능성을 가늠해볼 수 있다.</p><a class="src-cta" href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxPNHplallUWHczMjBLQWh0MXlxVXYzdGhTakt6NVZ6bWpCVjd1cnhVZzY0Z2FJb195aHcxRHdVN0lWZkNuMVZJTXhlbkVGaHllb1pKelpZQ1NtbERTV2JZX3FzLUsyNHd6UzhwVFlycXVLQXdZdEdjT3dCOGxxZUFwLW5SUERCVGxXLTNiU0VCZHp1RkJ0cW55T21oUnZOZktfQU5FNWsyYmV1b3FJVGFia3BJbG4yS2NCazBlYzBNcndRUdIBwgFBVV95cUxPNHplallUWHczMjBLQWh0MXlxVXYzdGhTakt6NVZ6bWpCVjd1cnhVZzY0Z2FJb195aHcxRHdVN0lWZkNuMVZJTXhlbkVGaHllb1pKelpZQ1NtbERTV2JZX3FzLUsyNHd6UzhwVFlycXVLQXdZdEdjT3dCOGxxZUFwLW5SUERCVGxXLTNiU0VCZHp1RkJ0cW55T21oUnZOZktfQU5FNWsyYmV1b3FJVGFia3BJbG4yS2NCazBlYzBNcndRUQ?oc=5" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="predictive-modeling"><div class="sec-h"><span class="nm">예측 모델링</span><span class="cnt">3건</span><span class="all"><a href="../../../category/predictive-modeling.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="predictive-modeling">전체 펼치기</button></div><div class="sec-desc">예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</div><details class="item" id="48383865ddcc"><summary><span class="num">01</span><span class="body-col"><span class="it-title">우크라이나-NATO, 적 무인기(UAV) 공격 예측하는 AI 모델 공동 개발</span><span class="it-sub">Ukraine and NATO develop AI model for predicting enemy UAV strikes - Janes</span><span class="it-meta">📰 뉴스 · news.google.com<span class="weak">원문 근거 부족</span></span><span class="it-lede">우크라이나와 NATO가 적군 무인기(UAV) 공격을 예측하기 위한 AI 모델을 개발하고 있다는 소식이 전해졌다.</span></span></summary><div class="it-body"><div class="slot-l">WHY IT MATTERS</div><p>군사 분야에서 예측 모델링과 이상탐지 기술이 실전에 적용되는 사례로, 방어 체계에 AI가 어떻게 결합되는지 보여준다.</p><div class="tags"><span class="tag">#anomaly</span><span class="tag">#timeseries</span></div><a class="src-cta" href="https://news.google.com/rss/articles/CBMi1wFBVV95cUxQTUZONkdkVVh2NlBmbU54STczS0pzYm9xQ1ZsUTkyV2h3cWphTXJuaUZ0WjFtUmR2NlNCZUJpZkF3eHp4cGlRTDBfV0NZLVNVbVNoNk12Zy1OUURPMlE4aU11WllYdWxtXzAzYVVXRGxIUlBEWHpsNzZqQVpfUTdUbXRVSzFGaWVfa0t4MG5zdFdvd1lkNjU3UDRQeTUyendvbHQxNGViSTJEYTlzQ2FiZVBVMWtCVTRRWHpOWW5lSWhkVHJtNGZyYnhiNmo3aVlFVnBRNzU2MA?oc=5" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="50096de02983"><summary><span class="num">02</span><span class="body-col"><span class="it-title">몬티 홀 문제 재해석 — &#x27;무조건 바꿔라&#x27;는 특정 사회자에게만 참, 베이지안 추론으로 사회자 성향 파악 가능</span><span class="it-sub">Inferring the Host: A Bayesian Look at the Monty Hall Problem</span><span class="it-meta">✍️ 블로그 · towardsdatascience.com</span><span class="it-lede">이 글은 몬티 홀 문제의 표준 해법인 &#x27;항상 바꿔라&#x27;가 특정 행동 방식을 가진 사회자에게만 성립한다는 점을 지적한다.</span></span></summary><div class="it-body"><p>사회자가 염소가 있는 문을 여는 규칙이 다르면 최적 전략도 달라질 수 있다는 것이다. 저자는 베이지안 관점에서 몇 번의 에피소드를 관찰하면 해당 사회자가 어떤 유형인지 추론할 수 있다고 설명한다.</p><div class="slot-l">WHY IT MATTERS</div><p>겉보기에 고정된 정답처럼 보이는 확률 문제도 숨겨진 가정(사회자의 행동 규칙)에 따라 결론이 달라질 수 있음을 보여주는 사례로, <strong>베이지안 추론</strong>이 불확실한 메커니즘을 데이터로 파악하는 데 어떻게 쓰이는지 직관적으로 전달한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>전통적인 몬티 홀 문제 풀이는 사회자의 행동 규칙을 고정된 가정으로 전제하지만, 이 글은 그 규칙 자체를 <strong>베이지안 방식으로 추론 대상</strong>으로 삼는다는 점이 다르다.</p><div class="tags"><span class="tag">#XAI</span></div><a class="src-cta" href="https://towardsdatascience.com/inferring-the-host-a-bayesian-look-at-the-monty-hall-problem/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="edbdb8bef18d"><summary><span class="num">03</span><span class="body-col"><span class="it-title">두 차트 모두 맞다? 데이터 결합 시 결론이 뒤집히는 통계적 역설의 정체</span><span class="it-sub">Both Charts Are Right. So Why Do They Disagree?</span><span class="it-meta">✍️ 블로그 · towardsdatascience.com</span><span class="it-lede">이 글은 동일한 데이터를 다르게 집계했을 때 서로 반대되는 결론이 나오는 통계적 역설을 다룬다.</span></span></summary><div class="it-body"><p>개별 그룹별로 보면 맞는 차트와 전체로 합쳐서 보면 맞는 차트가 서로 다른 이야기를 할 수 있음을 보여준다. 즉 <strong>데이터를 어떻게 집계하느냐에 따라 전달되는 결론이 뒤바뀔 수 있다</strong>는 점을 강조한다.</p><div class="slot-l">WHY IT MATTERS</div><p>데이터 분석가와 의사결정자는 집계 수준에 따라 상반된 결론이 나올 수 있음을 인지하지 못하면 잘못된 판단을 내릴 위험이 있다.</p><a class="src-cta" href="https://towardsdatascience.com/both-charts-are-right-so-why-do-they-disagree/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="causal-inference"><div class="sec-h"><span class="nm">인과추론</span></div><div class="sec-desc">인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="mlops"><div class="sec-h"><span class="nm">MLOps / ML Engineering</span></div><div class="sec-desc">MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="practice"><div class="sec-h"><span class="nm">실무 사례 · 노하우</span></div><div class="sec-desc">실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="industry-application"><div class="sec-h"><span class="nm">산업 적용 사례</span></div><div class="sec-desc">산업 적용 사례 — 산업 현장의 AI/ML 적용</div><div class="sec-empty">금일 신규 없음</div></section></main>
+  <footer class="topics" id="topics"><h2>다루는 주제</h2><ul><li><a class="tnm" href="../../../category/ai-agent.html">AI Agent</a>AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</li><li><a class="tnm" href="../../../category/llm-foundation-model.html">LLM / Foundation Model</a>LLM·파운데이션 모델 — 사전학습·정렬·추론</li><li><a class="tnm" href="../../../category/deep-learning.html">Deep Learning</a>딥러닝 — 아키텍처·학습기법 자체</li><li><a class="tnm" href="../../../category/predictive-modeling.html">예측 모델링</a>예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</li><li><a class="tnm" href="../../../category/causal-inference.html">인과추론</a>인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</li><li><a class="tnm" href="../../../category/mlops.html">MLOps / ML Engineering</a>MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</li><li><a class="tnm" href="../../../category/practice.html">실무 사례 · 노하우</a>실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</li><li><a class="tnm" href="../../../category/industry-application.html">산업 적용 사례</a>산업 적용 사례 — 산업 현장의 AI/ML 적용</li></ul></footer>
+</div>
+<script>
+(function(){
+var r=document.documentElement,k="dsb-theme",s=localStorage.getItem(k);
+if(s)r.dataset.theme=s;
+document.getElementById('tbtn').addEventListener('click',function(){
+  var cur=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  var n=cur==='dark'?'light':'dark';r.dataset.theme=n;localStorage.setItem(k,n);});
+// 섹션 전체 펼치기/접기
+document.querySelectorAll('.exp').forEach(function(b){b.addEventListener('click',function(){
+  var sec=document.getElementById(b.dataset.sec);
+  var ds=sec.querySelectorAll('details.item'),open=b.dataset.state!=='open';
+  ds.forEach(function(d){d.open=open;});
+  b.dataset.state=open?'open':'closed';b.textContent=open?'전체 접기':'전체 펼치기';});});
+// 스크롤 위치 카테고리 TOC 활성 (데스크톱 사이드 TOC)
+var links={};document.querySelectorAll('.toc li[data-cat]').forEach(function(li){links[li.dataset.cat]=li;});
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){Object.values(links).forEach(function(l){l.classList.remove('active');});
+    if(links[e.target.id])links[e.target.id].classList.add('active');}});},
+  {rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('section.sec').forEach(function(s){obs.observe(s);});
+})();
+</script>
+</body>
+</html>

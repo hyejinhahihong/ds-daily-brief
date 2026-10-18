@@ -93196,5 +93196,189 @@
     "source_tier": 1,
     "first_seen": "2026-10-18",
     "tags": []
+  },
+  "50096de029830214f4d7f799c75cbefd419038ec": {
+    "url": "https://towardsdatascience.com/inferring-the-host-a-bayesian-look-at-the-monty-hall-problem/",
+    "title": "Inferring the Host: A Bayesian Look at the Monty Hall Problem",
+    "category": "predictive-modeling",
+    "source_tier": 3,
+    "first_seen": "2026-10-19",
+    "tags": [
+      "XAI"
+    ]
+  },
+  "edbdb8bef18dc52117f4aaffe19d975dec916cbb": {
+    "url": "https://towardsdatascience.com/both-charts-are-right-so-why-do-they-disagree/",
+    "title": "Both Charts Are Right. So Why Do They Disagree?",
+    "category": "predictive-modeling",
+    "source_tier": 3,
+    "first_seen": "2026-10-19",
+    "tags": []
+  },
+  "29d64934b3fec5e3e1d490a8ee570396e1663c13": {
+    "url": "https://www.analyticsvidhya.com/blog/2026/10/rea-ai-agent-reverse-engineer-anything/",
+    "title": "Reverse Engineer Anything (REA): Can AI Really Crack Closed Code?",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-10-19",
+    "tags": []
+  },
+  "efeb3746fdd37d801674c72b785de49682be6da8": {
+    "url": "https://techcrunch.com/2026/10/18/anthropic-says-its-committing-5-of-its-shares-to-a-public-benefit-fund/",
+    "title": "Anthropic says it’s committing 5% of its shares to a ‘public benefit fund’",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-10-19",
+    "tags": []
+  },
+  "218f77bb959f0137a2323231ddc1aa12a0ee1e5f": {
+    "url": "https://techcrunch.com/2026/10/18/disney-agrees-to-hire-the-majority-of-character-ais-workforce/",
+    "title": "Disney agrees to hire the majority of Character.AI’s workforce",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-19",
+    "tags": []
+  },
+  "56b1c8aea7595b3335b11cd6d1e093f937735d1a": {
+    "url": "https://arstechnica.com/ai/2026/10/anthropic-gives-outside-ai-watchdog-employee-like-access/",
+    "title": "Anthropic gives outside AI watchdog “employee-like” access",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-19",
+    "tags": []
+  },
+  "5f3fe56efca119c58bf5849f82ecfc7c2bf730fb": {
+    "url": "https://www.wired.com/story/onlyfans-creators-are-pissed-that-meta-lets-muse-talk-dirty/",
+    "title": "OnlyFans Creators Are Pissed That Meta Lets Muse Talk Dirty",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-10-19",
+    "tags": []
+  },
+  "23197d791d96641905b8a50d72f6fcac096c9f76": {
+    "url": "https://www.wired.com/story/data-center-industry-is-trying-to-woo-kids/",
+    "title": "Data Centers Have a New PR Plan: Your Kid’s Field Trip",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-19",
+    "tags": []
+  },
+  "a4a52140b9181fe06925c75b252f79d07a75ddb6": {
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNTVpONkFFTks2bFROQXBrcHBJb1BGczJIbUtaU3hhdTl0Q2M0U1JUWllzUlRzdEJZM3o4UE9UbWFTUlpoQjRIQjY3clhteDRaOFU3emRReDZHVE9NVlBpNlBoMWFzZjIzOXBxazA2TFJhRVRPQ1RHZW9KbDV1MEhwTm1vTW5IVGc1MkdOd1NPaERJbWJRb1JIbDBnLWYwRjAyR251T0hTRkg3d0tCRmF3?oc=5",
+    "title": "DeepSeek releases updated V4.1-Flash model it says completes tasks faster - SiliconANGLE",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-19",
+    "tags": []
+  },
+  "2ae6d8610039e275b3067290399cc33d88fdd129": {
+    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNaFlYVDNsVFhWRlNRWnU0SFJGUmlNQmQtYnRzQVlUNnFUcF9RbWdQWTRvWFZJdWhnVnMySHc4V0FyUDk4OWRjQzJpb2hiRFo3T3BTUFA3dlhHMU1SWmpqcFRLa0xBNkpsR25uV3JUZzlNRnVBdGZ1bjBHeUpYLWo2UlJCZDJWX1JT?oc=5",
+    "title": "Meta and Apple Team Up to Launch a Powerhouse Open-Source AI Model - Android Headlines",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-19",
+    "tags": []
+  },
+  "a07459ee24b06fe854b41fc08fc5e2a1f3a11259": {
+    "url": "https://news.google.com/rss/articles/CBMiiwNBVV95cUxOZzBaVmx3ZGk3YlBaUW1pR0FwLVdwWFlwaVlUeVFVdHY4dVhqRExLeV91blg0ZmNyRERfMFpQNmY5NlZtaW8xUDVwbEVlVWFMLUNkUnFiRk9KMEtsNThBR2loVXRxWkZiekxNYllWaEZpTzZBNUMtNndZUnVvTzQzZFJWS2d4NTE2eldDUzR0R2RDNHhuZ3p0cW9ib2puME5nQ2xpR2RRQkRkMmxjTmw2NV9Jck1tZjVCUDZwYjlYb0NyMS1MbWV0cE00SzlBbzZWcFB6M1FnRkFveFQxV0o2QS11MWtzOEUtQkx2NG40S3RJM0lOMUNBZjkzelBLdk94QzA3LUl6cDlPMFF3ZUM2MDYzSDRtQVlWR0pEeTVoY0JDdEN0WUxiUDl1eFpGTDBObUtZRHVlb0pyYzdMOFdTVUIxTXRQNnV5eGFlMWJIbEJhQWpKUDZEX1psZWxNakkzdWp2ekE3V3VFNWNXT21oYnA4c0w5bHZCTHNVUGNkLXRJU3pwMlV6V1p2aw?oc=5",
+    "title": "Anthropic’s proposed AI safety bill only kicks in if 50 deaths or $1 billion in damages are on the line — proposal would effectively make the Commerce Department the only agency capable of stopping an AI model - Tom's Hardware",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-19",
+    "tags": []
+  },
+  "aa9ec41b08dd25ab9d2773edba145849b14cf664": {
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNd0JqQlRDd3JxZG9sWmUyLU03cFkwSDJLbkhOc0tpa2NUS24zby1jU0JQX242dEdFYWtRSXNNbUJOM2hwdDFJX3VKc1E4UFN1VVVsYi1ncl9qNkg4ZnhhcERDMkc1ZkhXUlRxUy1BdW9JTC1wYmV5YVlTZmYtUWlLRnNJQ2ZUWEw3UHNXMkdNMUdVLXJGR2M1YXRYcFFacFNmSWJCLVNxNkZ4bTZ4UXVpOXNR?oc=5",
+    "title": "DeepSeek Pushes Out Updated AI Model It Says Is Faster, Leaner - Bloomberg.com",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-19",
+    "tags": []
+  },
+  "66f7e5d1aa8e2288fb4796ba7d535ddde43fb11f": {
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQUGdtMm0zTGN2ZDByNFhUUExKanVmSGhiOWgxVG8tdW1fWS1pUGlGTWUyTkZUbkR3R3Vha1VIUXNsUDlRNXU0a2lsdHJsaXJMUXRFX180ZjE5S0ttUDVKdlRMUlFxZ1EwVlM5cmN2d1JBU2V0b3Q4NGFfMjdqTTJ4c1h1OTN3c0pld3ViZF9wSkFxdFdpV3dNZU9kY0tOLWFpQXNJSVBEWVR1R1QyZFhBVDE2NWxVa1V6TTRRR3R3?oc=5",
+    "title": "DeepSeek releases AI model update, opens search APIs to all users - Investing.com",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-19",
+    "tags": []
+  },
+  "204ef462a8bf4ca924202f35b7def7991922a56d": {
+    "url": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBWb0o4Z19CZVhfYWM2dTF1Q25IaFRCM0EyOHVKSTktTERpTzkxZjNYM0JZeWxxM2YySjlMeGZ1eXZXMDNTRFhXWl81WEJvdHNYZjBybnE2YWNvT01RVUpuc1JmXzdLcDl5MGtWN1NieE9JNk5GVTlF?oc=5",
+    "title": "Viewpoint: Model Independence Is the AI Strategy Insurers Can’t Afford to Ignore - Insurance Journal",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-19",
+    "tags": []
+  },
+  "2e35eedabe1ac38aad8b442a9fc04301414fde19": {
+    "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxOX0w2akJBX0EyTklXMFVNZEd2RHhJZzdPLTFDc1dPUDZJcWxoTWl2RklBRHh0b1o0WDRmMjJzNF9lTEpRdWFtQWpIbXlSX1ZDV0N2elVXMWhmVndoeHVGNWl4aE8xWVRsb1hWdVBzVmRldU9wWGMwdHlwOG9yaW8zeU8zZmZUamhzcjZWaFhESW1MZ3VGeXFiSUU0S0Q1eWVHTW05b283aDlYOVRkajRHUHFB?oc=5",
+    "title": "Open source and on device: the strategy behind Nvidia’s new AI models - TechTarget",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-19",
+    "tags": []
+  },
+  "d01115e4a5ab97c727a57ac90b0c1ef9c882b019": {
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOTUhzU20yOFRDNkZUT3NPbk5NLXU5MWlWUV9Db0s1Xy1MYktZUURTMHpYYjJyX2kxTmlBU3RySmhTUnNwdkZnV3dfdUZ3ODlGWVhZWHlkN09WejdNTkRLQzdyZDBxNjJ1SWhZNjlXaEZSRFZPbUxObUZlWUVFVE1aNnpiUmdweWhiMEx6ZHpQbDctQW1BS0ZNRVFNanZHZFlYLWtLOWJGcjY3Z0lqd3lpdjdzVmJCTnZkdjcwWXJn?oc=5",
+    "title": "Meta Launches Open-Weight Muse Spark Model to Power Advanced Coding and AI Agents - OODA Loop",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-10-19",
+    "tags": [
+      "agent-capability",
+      "coding"
+    ]
+  },
+  "48383865ddcc0a45a101c3f395a0eabf14d25de3": {
+    "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQTUZONkdkVVh2NlBmbU54STczS0pzYm9xQ1ZsUTkyV2h3cWphTXJuaUZ0WjFtUmR2NlNCZUJpZkF3eHp4cGlRTDBfV0NZLVNVbVNoNk12Zy1OUURPMlE4aU11WllYdWxtXzAzYVVXRGxIUlBEWHpsNzZqQVpfUTdUbXRVSzFGaWVfa0t4MG5zdFdvd1lkNjU3UDRQeTUyendvbHQxNGViSTJEYTlzQ2FiZVBVMWtCVTRRWHpOWW5lSWhkVHJtNGZyYnhiNmo3aVlFVnBRNzU2MA?oc=5",
+    "title": "Ukraine and NATO develop AI model for predicting enemy UAV strikes - Janes",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-10-19",
+    "tags": [
+      "anomaly",
+      "timeseries"
+    ]
+  },
+  "294261bf5ab49c49e8b7ee079723d2c83c815954": {
+    "url": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQa3lWQTNQaTFRNEJiZ1NqeE8yRzg0ei1WemdFQkU4ek9pYWxEQVY5anpPUFQtZE9ZS3NUQV9sVm9DaldHVUg2b0k0X3lCT0hpcDlLMm1mdlAzbGFKVXd6WlJvRjBRWWVHQUI1eFhoTlA1eGo4UlVpdGEtWDFXaDZEOWN4Zmp2aE5fSHg0?oc=5",
+    "title": "Grok 4.7 vs Claude vs DeepSeek: 13x Price Gap [2026] - https://tech-insider.org/",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-19",
+    "tags": []
+  },
+  "4e2a126483a5065dd86479ba1713938bf5430068": {
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBvSnZoemZnUGhnYWhDNkNHYUNMWHl5YUxqTVpLRkVPSWNBTTc1OEVaOE9jdVFRYkdIME5yZWM0RFJYaGlGdWx1eGZuZE50aFRoRHBsVHBzZm5CSFRRQjRzOTZ0dXc2SUdqbEJr?oc=5",
+    "title": "Meta Muse Spark Open: 816B Params, $1.25/M Tokens - shattered.io",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-19",
+    "tags": []
+  },
+  "45c1831277791837dff2b04dcfee04835e2ad214": {
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPR3RxRnhHZ2pGWEczVGFfblpkRmFZb2FiWFcyY3lQWF9QZmFOLTVpcGdpaWRrcnkzRHlDb0g4ZlB1M0d0aFZqdXp3V1JYWGR5YlE4MXYwR21PbjdPVTZJRzVoWmpBa1VUeU1GenhldVlVQi1VN1Z0b0xwSktPR2VZZlhjNzdPMjJ4R2YzTS1EdkU3eVFQMmZPSThEcVZJa25adUVCNU1CR2lfQ1R3NDZn?oc=5",
+    "title": "DeepSeek pushes out ‘faster, leaner’ updated AI model - The Straits Times",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-19",
+    "tags": []
+  },
+  "83908c3b81a465daae94ae8ffead883472d18bd8": {
+    "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPNHplallUWHczMjBLQWh0MXlxVXYzdGhTakt6NVZ6bWpCVjd1cnhVZzY0Z2FJb195aHcxRHdVN0lWZkNuMVZJTXhlbkVGaHllb1pKelpZQ1NtbERTV2JZX3FzLUsyNHd6UzhwVFlycXVLQXdZdEdjT3dCOGxxZUFwLW5SUERCVGxXLTNiU0VCZHp1RkJ0cW55T21oUnZOZktfQU5FNWsyYmV1b3FJVGFia3BJbG4yS2NCazBlYzBNcndRUdIBwgFBVV95cUxPNHplallUWHczMjBLQWh0MXlxVXYzdGhTakt6NVZ6bWpCVjd1cnhVZzY0Z2FJb195aHcxRHdVN0lWZkNuMVZJTXhlbkVGaHllb1pKelpZQ1NtbERTV2JZX3FzLUsyNHd6UzhwVFlycXVLQXdZdEdjT3dCOGxxZUFwLW5SUERCVGxXLTNiU0VCZHp1RkJ0cW55T21oUnZOZktfQU5FNWsyYmV1b3FJVGFia3BJbG4yS2NCazBlYzBNcndRUQ?oc=5",
+    "title": "Meet Kyutai REKI: The 2.4B VLA Model Bringing Efficient Memory to Robot Manipulation - MarkTechPost",
+    "category": "deep-learning",
+    "source_tier": 4,
+    "first_seen": "2026-10-19",
+    "tags": []
+  },
+  "66d5720ec836838d2d67b7f24d4c6f30004e00be": {
+    "url": "https://www.anthropic.com/news/public-benefit-fund",
+    "title": "Investing in the public benefit",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-10-19",
+    "tags": []
   }
 }
