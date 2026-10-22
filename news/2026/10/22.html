@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI &amp; ML News Letter · 10/22</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --accent:#5DB8A6; --accent-hover:#479B8B; --accent-weak:#E8F4F1;
+  --focus-ring:rgba(93,184,166,.5);
+  --bg:#FAF9F5; --bg-subtle:#F0EEE6; --border:#E7E3D9;
+  --text:#1F1E1D; --text-2:#6B6862; --text-3:#A39E94;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}}
+:root[data-theme="dark"]{
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover);text-decoration:underline}
+strong{font-weight:600;color:var(--text)}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px;border-radius:3px}
+
+/* 모바일 우선 단일 컬럼 (<1200px). 덩어리 중앙 정렬은 margin:0 auto. */
+.page{max-width:760px;margin:0 auto;padding:20px 18px 40px}
+
+/* --- 마스트헤드 (뉴스레터 제호) --- */
+.mast{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+  padding-bottom:14px;border-bottom:2px solid var(--text);margin-bottom:24px}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--accent);
+  text-transform:uppercase;margin:0 0 6px}
+.mast-title{font-size:26px;font-weight:600;margin:0;letter-spacing:-.01em;line-height:1.15}
+.mast-date{font-size:14px;color:var(--text-2);margin-top:8px}
+.themebtn{flex:none;background:var(--bg-subtle);border:1px solid var(--border);color:var(--text-2);
+  border-radius:20px;padding:5px 12px;font-size:13px;cursor:pointer;font-family:inherit}
+.topnav{margin-top:11px;display:flex;gap:16px;font-size:13px}
+.topnav a{color:var(--text-2);font-weight:500} .topnav a:hover{color:var(--accent)}
+@media (min-width:640px){.mast-title{font-size:31px}}
+
+/* --- TODAY'S TOP 3 --- */
+.top3{background:var(--accent-weak);border-radius:12px;padding:14px 18px;margin-bottom:24px}
+.top3 h2{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--accent);margin:0 0 8px}
+.top3 ol{margin:0;padding:0;list-style:none}
+.top3 li{padding:4px 0 4px 22px;position:relative;font-size:15px;color:var(--text)}
+.top3 li::before{content:"\2605";position:absolute;left:0;color:var(--accent);font-size:12px;top:7px}
+.top3 .t3cat{color:var(--text-2);font-size:12px;margin-right:5px}
+.top3 a{color:var(--text)} .top3 a:hover{color:var(--accent-hover)}
+
+/* --- 목차 (TOC) --- */
+.toc{margin-bottom:26px}
+.toc h2{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--text-2);margin:0 0 8px}
+.toc ul{margin:0;padding:0;list-style:none}
+.toc li{padding:6px 0;border-top:1px solid var(--border)}
+.toc li:first-child{border-top:none}
+.toc .r{display:flex;gap:6px;align-items:baseline;font-size:14px}
+.toc .nm{font-weight:500;color:var(--text)} .toc a:hover .nm{color:var(--accent)}
+.toc .cnt{color:var(--text-3);font-size:12px}
+.toc .lead{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  font-size:12px;color:var(--text-2);margin-top:2px;line-height:1.4}
+.toc li.active .nm{color:var(--accent)}
+.toc li.active{border-left:2px solid var(--accent);padding-left:8px;margin-left:-10px}
+
+/* --- 섹션 --- */
+.sec{margin:0 0 34px;scroll-margin-top:14px}
+.sec-h{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:0 0 2px;padding-top:6px}
+.sec-h .nm{font-size:20px;font-weight:600}
+.sec-h .cnt{font-size:13px;color:var(--text-3)}
+.sec-h .all{font-size:12px;color:var(--text-3);margin-left:auto}
+.sec-h .all span{color:var(--text-2)}
+.sec-h .exp{font-size:12px;background:none;border:1px solid var(--border);color:var(--text-2);
+  border-radius:14px;padding:2px 10px;cursor:pointer;font-family:inherit}
+.sec-desc{font-size:13px;color:var(--text-2);margin:0 0 8px}
+.sec-empty{font-size:14px;color:var(--text-3);padding:4px 0 6px}
+.backtop{display:inline-block;font-size:12px;color:var(--text-3);margin-top:6px}
+
+/* --- 아이템 (아코디언) — 거터(번호) + 단일 콘텐츠 컬럼 (DESIGN §3 v4). 좌측 정렬선 1개. --- */
+.item{border-bottom:1px solid var(--border);--gutter:28px}
+.item>summary{list-style:none;cursor:pointer;padding:16px 26px 16px 0;position:relative;
+  display:grid;grid-template-columns:var(--gutter) 1fr;align-items:start}
+.item>summary::-webkit-details-marker{display:none}
+.item>summary::after{content:"\25B8";position:absolute;right:2px;top:16px;color:var(--text-3);
+  font-size:13px;transition:transform .15s;display:inline-block}
+.item[open]>summary::after{transform:rotate(90deg)}
+.num{font-size:13px;color:var(--text-3);font-variant-numeric:tabular-nums;font-weight:500;padding-top:3px}
+.t3star{color:var(--accent);font-size:11px;margin-right:2px}
+.body-col{min-width:0}
+.it-title{display:block;font-size:18px;font-weight:600;color:var(--text);line-height:1.4}
+.item>summary:hover .it-title{color:var(--accent)}
+.it-sub{display:block;font-size:13px;color:var(--text-2);margin-top:3px;line-height:1.35}
+.it-meta{display:block;font-size:13px;color:var(--text-2);margin-top:6px}
+.it-lede{display:block;font-size:15px;color:var(--text-2);margin-top:7px;line-height:1.5}
+.item[open] .it-lede{color:var(--text)}
+/* 접힘 본문도 콘텐츠 컬럼에 정렬 (거터만큼 들여씀) */
+.it-body{padding:0 0 20px var(--gutter)}
+.it-body p{margin:0 0 10px}
+@media (min-width:900px){.item{--gutter:40px}}
+.slot-l{font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--text-2);margin:14px 0 2px}
+.tags{margin-top:10px}
+.tag{display:inline-block;font-size:12px;color:var(--text-2);background:var(--bg-subtle);
+  border:1px solid var(--border);border-radius:12px;padding:1px 9px;margin:0 5px 5px 0}
+.prev{font-size:13px;color:var(--text-3);margin-top:8px}
+.src-cta{display:inline-block;margin-top:12px;font-size:14px;font-weight:500;color:var(--accent)}
+.weak{color:var(--accent);font-size:12px;border:1px solid var(--accent);border-radius:5px;
+  padding:0 6px;margin-left:6px}
+
+/* --- "다루는 주제" 푸터 --- */
+.topics{margin-top:36px;padding-top:22px;border-top:2px solid var(--text)}
+.topics h2{font-size:15px;font-weight:600;margin:0 0 12px}
+.topics ul{margin:0;padding:0;list-style:none}
+.topics li{padding:7px 0;border-top:1px solid var(--border);font-size:13px;color:var(--text-2)}
+.topics li:first-child{border-top:none}
+.topics .tnm{font-weight:600;color:var(--accent);margin-right:6px}
+
+/* --- 데스크톱 (≥1200px): 좌측 sticky TOC(260) + 본문(720), 덩어리 중앙 정렬 --- */
+@media (min-width:1200px){
+  /* max-width = 260+44+720 그리드(1024) + 좌우 padding(18*2). box-sizing:border-box
+     라 padding 을 포함해야 본문 720 이 찌그러지지 않는다. */
+  .page{max-width:1060px;display:grid;grid-template-columns:260px minmax(0,720px);
+    column-gap:44px;justify-content:center;align-items:start;padding-top:28px}
+  .mast{grid-column:1/3}
+  .toc{grid-column:1;grid-row:2/999;position:sticky;top:24px;margin:0;align-self:start}
+  .top3,.main{grid-column:2}
+  .topics{grid-column:1/3}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="mast">
+    <div class="mast-l">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1 class="mast-title">AI &amp; ML News Letter</h1>
+      <div class="mast-date">2026 / 10 / 22 (목) · 14건</div>
+      <nav class="topnav"><a href="../../../archive.html">📅 지난 브리핑</a>
+        <a href="#topics">🗂 주제별 보기</a></nav>
+    </div>
+    <button id="tbtn" class="themebtn" type="button">🌓 테마</button>
+  </header>
+  <section class="top3"><h2>TODAY'S TOP 3</h2><ol><li><a href="#80d288fa6c96"><span class="t3cat">[LLM / Foundation Model]</span>Flint AI 코딩 모델, SWE-Bench 89.7% 기록</a></li><li><a href="#63c4ea774a12"><span class="t3cat">[AI Agent]</span>Muse Glimmer 30B: An On-Device Agentic Model</a></li><li><a href="#1de8e62ff715"><span class="t3cat">[AI Agent]</span>OpenAI·PerturbAI·Scripps, 수천 개 AI 에이전트로 수백만 뇌세포 데이터에서 신규 연구 단서 발굴</a></li></ol></section>
+  <nav class="toc" id="toc"><h2>오늘의 목차</h2><ul><li data-cat="ai-agent"><a href="#ai-agent"><span class="r"><span class="nm">AI Agent</span><span class="cnt">2</span></span><span class="lead">30B 에이전틱 모델 Muse Glimmer 공개 — 온디바이스 4비트 양자화로 Gemma4-31B·Qwen3.6-27B 능가</span></a></li><li data-cat="llm-foundation-model"><a href="#llm-foundation-model"><span class="r"><span class="nm">LLM / Foundation Model</span><span class="cnt">2</span></span><span class="lead">Flint AI 코딩 모델, SWE-Bench 89.7% 기록</span></a></li><li data-cat="deep-learning"><a href="#deep-learning"><span class="r"><span class="nm">Deep Learning</span><span class="cnt">3</span></span><span class="lead">Microsoft, 31년 난제 KLS 추측 증명 — AI 에이전트가 100개 이상 접근법 탐색해 고차원 기하학 돌파</span></a></li><li data-cat="predictive-modeling"><a href="#predictive-modeling"><span class="r"><span class="nm">예측 모델링</span><span class="cnt">2</span></span><span class="lead">NVIDIA·Kumo, 관계형 데이터에서 훈련 없이 지도학습 능가 주장</span></a></li><li data-cat="mlops"><a href="#mlops"><span class="r"><span class="nm">MLOps / ML Engineering</span><span class="cnt">2</span></span><span class="lead">AWS, trn2.48xlarge에서 torchtitan으로 Qwen3 학습하는 3가지 방법 공개</span></a></li><li data-cat="practice"><a href="#practice"><span class="r"><span class="nm">실무 사례 · 노하우</span><span class="cnt">1</span></span><span class="lead">장시간 걸리는 파이썬 시뮬레이션을 AWS 기반 셀프서비스 플랫폼으로 전환하기</span></a></li><li data-cat="industry-application"><a href="#industry-application"><span class="r"><span class="nm">산업 적용 사례</span><span class="cnt">2</span></span><span class="lead">Google, AI 기반 초음파 보조 기술로 일선 산모 관리 지원</span></a></li></ul></nav>
+  <main class="main"><section class="sec" id="ai-agent"><div class="sec-h"><span class="nm">AI Agent</span><span class="cnt">2건</span><span class="all"><a href="../../../category/ai-agent.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="ai-agent">전체 펼치기</button></div><div class="sec-desc">AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</div><details class="item" id="63c4ea774a12" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">Muse Glimmer 30B: An On-Device Agentic Model</span><span class="it-sub">30B 에이전틱 모델 Muse Glimmer 공개 — 온디바이스 4비트 양자화로 Gemma4-31B·Qwen3.6-27B 능가</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">Muse Glimmer는 지각 인코더를 결합한 300억 파라미터 규모의 오픈소스 인과 언어모델로, 소비자용 하드웨어에서 자율 에이전트 작업을 수행하도록 설계됐다.</span></span></summary><div class="it-body"><p>다단계 추론, 신뢰성 있는 도구 사용, 실패 복구 기능을 하나의 모델에 통합해 클라우드 없이 로컬에서 동작한다. 텍스트와 이미지를 입력받아 텍스트를 출력하며 100개 이상 언어 데이터로 학습됐고, 단일 GPU 추론을 위해 약 4비트로 양자화됐다. 도구 사용, 다단계 계획, 에이전틱 작업 완수 벤치마크에서 <strong>Gemma4-31B와 Qwen3.6-27B를 능가</strong>하는 동급 최고 성능을 보였으며, Apache 2.0 라이선스로 공개됐다.</p><div class="slot-l">WHY IT MATTERS</div><p>클라우드 의존 없이 로컬에서 동작하는 에이전트 모델은 지연 시간, 비용, 개인정보 측면에서 실용적 이점이 크며, 오픈 라이선스 공개는 온디바이스 AI 에이전트 생태계 확산을 가속할 수 있다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>동일 체급의 Gemma4-31B, Qwen3.6-27B와 직접 비교해 도구 사용·다단계 계획 벤치마크에서 더 높은 성능을 보였다는 점이 차별점이다.</p><div class="tags"><span class="tag">#model-release</span><span class="tag">#on-device</span><span class="tag">#tool-use</span></div><a class="src-cta" href="https://arxiv.org/abs/2610.24628" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="1de8e62ff715" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>02</span><span class="body-col"><span class="it-title">OpenAI·PerturbAI·Scripps, 수천 개 AI 에이전트로 수백만 뇌세포 데이터에서 신규 연구 단서 발굴</span><span class="it-sub">Using thousands of AI agents to uncover new leads in biological data</span><span class="it-meta">✍️ 블로그 · openai.com</span><span class="it-lede">OpenAI는 PerturbAI, Scripps Research와 협력해 수천 개의 분산 AI 에이전트를 활용한 연구를 진행했다.</span></span></summary><div class="it-body"><p>이 에이전트들은 수백만 개의 뇌세포에서 수집된 생물학 데이터를 분석했다. 그 결과 유망한 연구 단서(leads)를 발굴해냈다.</p><div class="slot-l">WHY IT MATTERS</div><p><strong>대규모 분산 에이전트</strong>를 활용해 방대한 생물학 데이터를 탐색하는 접근이 신약·질병 연구의 가설 발굴 단계를 가속할 수 있음을 보여준다.</p><div class="tags"><span class="tag">#distributed-agents</span><span class="tag">#multi-agent</span></div><a class="src-cta" href="https://openai.com/index/scaling-ai-research-for-complex-biological-data" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="llm-foundation-model"><div class="sec-h"><span class="nm">LLM / Foundation Model</span><span class="cnt">2건</span><span class="all"><a href="../../../category/llm-foundation-model.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="llm-foundation-model">전체 펼치기</button></div><div class="sec-desc">LLM·파운데이션 모델 — 사전학습·정렬·추론</div><details class="item" id="80d288fa6c96" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">Flint AI 코딩 모델, SWE-Bench 89.7% 기록</span><span class="it-sub">Flint AI Coding Model Hits 89.7% on SWE-Bench [2026] - https://tech-insider.org/</span><span class="it-meta">📰 뉴스 · news.google.com<span class="weak">원문 근거 부족</span></span><span class="it-lede">Flint라는 AI 코딩 모델이 SWE-Bench 벤치마크에서 <strong>89.7%</strong>의 점수를 기록했다고 전해졌다.</span></span></summary><div class="it-body"><div class="slot-l">WHY IT MATTERS</div><p>코드 생성 모델의 벤치마크 성능 동향을 보여주는 사례다.</p><div class="tags"><span class="tag">#code-generation</span><span class="tag">#benchmark</span><span class="tag">#model-release</span></div><a class="src-cta" href="https://news.google.com/rss/articles/CBMib0FVX3lxTFBjLXBRYy1qSTRkRHJvbGxsRXlDOG5lUWtNbHJTQUw5NFJvdDB5WVdLMEthWWZaOC1LN1A4Y3hkNEgzR2Z1SWpfVnZRQW4zMzFOZzdPZHh6ZDJXaXM2UnpVWFdxZ29ja0Rpd2prNWxoRQ?oc=5" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="61f4d0141ff3"><summary><span class="num">02</span><span class="body-col"><span class="it-title">OpenAI, Google Cloud와 손잡고 Gemini Model Garden에 프론티어 모델·Codex 제공</span><span class="it-sub">OpenAI models are coming to Google Cloud</span><span class="it-meta">✍️ 블로그 · openai.com</span><span class="it-lede">OpenAI와 Google Cloud가 파트너십을 맺고 OpenAI의 프론티어 모델과 Codex 워크플로를 Gemini의 <strong>Model Garden</strong>에 통합한다.</span></span></summary><div class="it-body"><p>해당 모델들은 Google Cloud Marketplace를 통해 제공될 예정이다.</p><div class="slot-l">WHY IT MATTERS</div><p>경쟁 관계인 OpenAI와 Google이 클라우드 유통 채널에서 협력한다는 점은 AI 모델 배포 생태계의 경계가 유연해지고 있음을 보여준다.</p><div class="tags"><span class="tag">#model-release</span><span class="tag">#partnership</span></div><a class="src-cta" href="https://openai.com/index/openai-models-google-cloud" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="deep-learning"><div class="sec-h"><span class="nm">Deep Learning</span><span class="cnt">3건</span><span class="all"><a href="../../../category/deep-learning.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="deep-learning">전체 펼치기</button></div><div class="sec-desc">딥러닝 — 아키텍처·학습기법 자체</div><details class="item" id="0397d30cafbc"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Microsoft, 31년 난제 KLS 추측 증명 — AI 에이전트가 100개 이상 접근법 탐색해 고차원 기하학 돌파</span><span class="it-sub">Solving a 31-year-old grand challenge in mathematics – the KLS conjecture</span><span class="it-meta">✍️ 블로그 · microsoft.com</span><span class="it-lede">Microsoft Research의 Xinzhi Zhang 등 연구자들이 1995년 제기된 Kannan-Lovász-Simonovits(KLS) 추측을 증명했다.</span></span></summary><div class="it-body"><p>이 추측은 로그오목 분포에서 가장 좋은 평면 절단이 어떤 형태의 절단과 비교해도 차원과 무관한 고정 상수 이내로 근접함을 주장한다. 기존 2026년 7월 결과는 이 경계가 차원 증가에 따라 서서히 커지는 것을 허용했으나, 이번 연구는 <strong>고정된 경계</strong>가 성립함을 보였다. 연구진은 AI 에이전트가 고차 텐서 계산을 포함한 100개 이상의 후보 접근법을 탐색하고 인간 연구자가 평가·조정하는 human-directed agentic 방식으로 증명을 완성했으며, 이후 독립적 검증과 기계 검증된 형식 검증을 거쳤다.</p><div class="slot-l">WHY IT MATTERS</div><p>KLS 추측은 고차원 샘플링과 무작위 알고리즘의 효율성을 좌우하는 핵심 이론적 장벽으로, 통계·최적화·이론 컴퓨터과학 전반에 영향을 미친다. 이번 증명은 <strong>인간-AI 협업 연구 프로세스</strong>가 수십 년간 풀리지 않던 수학 난제 해결에 실질적으로 기여할 수 있음을 보여주는 사례다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>2026년 7월까지의 최선의 결과는 차원이 늘어날수록 경계가 서서히 커지는 것을 허용했지만, 이번 연구는 <strong>차원과 무관한 고정 경계</strong>를 확립해 기존 결과를 넘어섰다.</p><div class="tags"><span class="tag">#ai-assisted-research</span></div><a class="src-cta" href="https://www.microsoft.com/en-us/research/blog/solving-a-31-year-old-grand-challenge-in-mathematics-the-kls-conjecture/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="eb16235ac421"><summary><span class="num">02</span><span class="body-col"><span class="it-title">NVIDIA, RFD4-Proteina로 보상 기반 추론 시간 탐색을 통한 단백질 설계 소개</span><span class="it-sub">Design Proteins with RFD4-Proteina Using Reward-Guided Inference-Time Search</span><span class="it-meta">✍️ 블로그 · developer.nvidia.com</span><span class="it-lede">단백질 설계는 방대한 조합 공간에서 목표 기능을 가진 서열을 찾는 탐색 문제로 설명된다.</span></span></summary><div class="it-body"><p>8개 잔기 서열만 해도 250억 개 이상의 조합이 가능하며, 100개 잔기 서열의 경우 가능한 조합 수가 관측 가능한 우주의 원자 수를 넘어선다. 이 글은 RFD4-Proteina 모델과 <strong>보상 기반 추론 시간 탐색</strong> 기법을 활용해 이 거대한 탐색 공간에서 유망한 단백질 후보를 찾는 접근을 다룬다.</p><div class="slot-l">WHY IT MATTERS</div><p>신약 개발 등에서 목표 기능을 가진 단백질을 찾는 과정은 탐색 공간이 기하급수적으로 커지는 문제이므로, 효율적인 탐색 전략은 신약 후보 발굴 속도에 직접적인 영향을 준다.</p><div class="tags"><span class="tag">#protein-design</span><span class="tag">#generative-model</span></div><a class="src-cta" href="https://developer.nvidia.com/blog/design-proteins-with-rfd4-proteina-using-reward-guided-inference-time-search/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="354f89a6c7db"><summary><span class="num">03</span><span class="body-col"><span class="it-title">SLM 어휘 특화로 실제 응용에서 추론 비용 77% 절감</span><span class="it-sub">How Specializing the Vocabulary of SLMs Can Cut Inference Cost by 77% in Real Applications</span><span class="it-meta">📰 뉴스 · huggingface.co<span class="weak">원문 근거 부족</span></span><span class="it-lede">소형 언어모델(SLM)의 어휘집합을 특정 응용에 맞게 특화하면 추론 비용을 크게 줄일 수 있다는 내용이다.</span></span></summary><div class="it-body"><p>원문에 구체적인 방법이나 수치에 대한 설명은 제공되지 않았다.</p><div class="slot-l">WHY IT MATTERS</div><p>비용 절감 수치(<strong>77%</strong>)가 사실이라면 SLM을 실제 서비스에 적용할 때 비용 효율성을 크게 높일 수 있어 주목할 만하다.</p><a class="src-cta" href="https://huggingface.co/blog/Dharma-AI/vocabx-vocabulary-specialization" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="predictive-modeling"><div class="sec-h"><span class="nm">예측 모델링</span><span class="cnt">2건</span><span class="all"><a href="../../../category/predictive-modeling.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="predictive-modeling">전체 펼치기</button></div><div class="sec-desc">예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</div><details class="item" id="7104bc51c295"><summary><span class="num">01</span><span class="body-col"><span class="it-title">NVIDIA·Kumo, 관계형 데이터에서 훈련 없이 지도학습 능가 주장</span><span class="it-sub">NVIDIA Kumo Relational Outperforms Supervised Machine Learning on Relational Data, No Training Required</span><span class="it-meta">📰 뉴스 · huggingface.co<span class="weak">원문 근거 부족</span></span><span class="it-lede">NVIDIA와 Kumo가 관계형 데이터(relational data)에서 별도 훈련 없이도 기존 지도학습 머신러닝 모델을 능가하는 결과를 냈다는 소식이다.</span></span></summary><div class="it-body"><p>구체적인 방법이나 수치는 원문에 제공되지 않았다.</p><div class="slot-l">WHY IT MATTERS</div><p>관계형 데이터 예측에 훈련 과정을 생략할 수 있다면 실무 적용 비용과 시간이 크게 줄어들 수 있어 주목할 만하다.</p><div class="tags"><span class="tag">#tabular</span></div><a class="src-cta" href="https://huggingface.co/blog/nvidia/kumo-relational" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="cc20b4b4210c"><summary><span class="num">02</span><span class="body-col"><span class="it-title">Mass General Brigham, 얼굴 사진으로 생물학적 나이·생존 위험 예측하는 AI 도구 개발</span><span class="it-sub">AI facial health recognition tools help physicians assess age and survival risk to guide personalized treatment - Mass General Brigham</span><span class="it-meta">📰 뉴스 · news.google.com</span><span class="it-lede">Mass General Brigham 연구진이 얼굴 사진을 분석해 환자의 <strong>생물학적 나이와 생존 위험</strong>을 평가하는 AI 기반 안면 건강 인식 도구를 공개했다.</span></span></summary><div class="it-body"><p>이 도구는 의사가 환자별 치료 계획을 맞춤화하는 데 참고 정보로 활용될 수 있다. 원문은 도구의 개발 배경과 임상 적용 가능성을 간략히 소개하는 수준이다.</p><div class="slot-l">WHY IT MATTERS</div><p>나이와 생존 위험을 예측하는 것은 암 치료 등에서 치료 강도를 결정하는 핵심 변수인데, 이를 비침습적 얼굴 사진만으로 추정할 수 있다면 <strong>임상 의사결정 지원</strong>에 실질적 도움이 될 수 있다.</p><div class="tags"><span class="tag">#healthcare</span><span class="tag">#XAI</span><span class="tag">#application</span></div><a class="src-cta" href="https://news.google.com/rss/articles/CBMinwFBVV95cUxPenVRcm9BaHN2LV9udXdIRjRWNE5SVkhoeWppMlB0N0YteHBkc2lfMGZXNEFkaURxenVtTlpqRkNGU2xPR1YySV9rSWlZaUlIQWNFUUFYWFFGbzNCdkdmT1FNTUs3WHd6RmpoQUI3X2ZZcGJ4NjBqRDNjajhYUl83NXRfbThBblBxbnZQS29WNjZqZTVUNFdNOWJ2bXVHSGM?oc=5" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="causal-inference"><div class="sec-h"><span class="nm">인과추론</span></div><div class="sec-desc">인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="mlops"><div class="sec-h"><span class="nm">MLOps / ML Engineering</span><span class="cnt">2건</span><span class="all"><a href="../../../category/mlops.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="mlops">전체 펼치기</button></div><div class="sec-desc">MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</div><details class="item" id="ff2a2ed5c225"><summary><span class="num">01</span><span class="body-col"><span class="it-title">AWS, trn2.48xlarge에서 torchtitan으로 Qwen3 학습하는 3가지 방법 공개</span><span class="it-sub">Train Qwen3 on AWS Trainium with torchtitan</span><span class="it-meta">✍️ 블로그 · aws.amazon.com</span><span class="it-lede">AWS Trainium에서 torchtitan을 사용해 Qwen3를 학습하는 방법을 소개하는 블로그다.</span></span></summary><div class="it-body"><p>TorchNeuron이 Trainium을 네이티브 PyTorch 디바이스로 등록해 torchtitan이 표준 PyTorch 인터페이스로 이를 사용할 수 있게 한다. 글에서는 단일 <strong>trn2.48xlarge</strong> 인스턴스에서 Qwen3를 세 가지 방식으로 학습하는데, Transformers v5 백엔드로 Hub 모델을 직접 구동하는 방법, torchtitan 네이티브 Qwen3 구현으로 전환하는 방법, torchtitan-neuron 레시피의 NKI MoE 커널을 적용하고 오버라이드 레지스트리로 커스텀 커널을 붙이는 방법이다. 세 구성 모두 동일한 torchrun 실행 패턴과 config 구조를 공유한다.</p><div class="slot-l">WHY IT MATTERS</div><p>모델 구현이나 커널을 바꿔도 동일한 학습 파이프라인과 런치 방식을 유지할 수 있어, <strong>Trainium 기반 학습 환경</strong>으로의 전환 비용을 낮춰준다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존에는 Hub 모델과 커스텀 커널 최적화를 각각 다른 워크플로로 다뤄야 했지만, 이 글은 <strong>torchtitan의 config_registry와 오버라이드 레지스트리</strong>를 통해 Transformers v5 백엔드, torchtitan 네이티브 구현, NKI MoE 커널을 동일한 launch 패턴 안에서 전환 가능하게 했다.</p><div class="tags"><span class="tag">#training</span><span class="tag">#hardware-optimization</span></div><a class="src-cta" href="https://aws.amazon.com/blogs/machine-learning/train-qwen3-on-aws-trainium-with-torchtitan/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="636deb7cdf06"><summary><span class="num">02</span><span class="body-col"><span class="it-title">Specter: Fast MoE Inference via Quantization-Enabled Multi-Step Speculative Offloading</span><span class="it-sub">Specter, 양자화 기반 추측적 디코딩으로 MoE 오프로딩 가속 — TPOT 평균 1.50배, 최대 1.88배 향상</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">MoE 모델은 전문가(expert) 수가 많아 단일 가속기 메모리를 초과하는 경우가 많고, 이를 호스트 메모리로 오프로딩하면 데이터 의존적 라우팅 때문에 PCIe I/O 병목이 심해진다.</span></span></summary><div class="it-body"><p>Specter는 양자화된 경량 드래프트 모델을 장치에서 실행해 향후 전문가 사용 패턴을 다단계로 미리 예측하는 추측적 디코딩 기법을 전문가 오프로딩과 결합했다. 이 예측을 통해 런타임이 검증 이전에 전문가 이동과 실행을 미리 조직화해 통신과 실행 효율을 동시에 개선한다. 단일 요청 추론에서 기존 최첨단 시스템 대비 <strong>TPOT 평균 1.50배, 최대 1.88배</strong> 속도 향상을 달성했다.</p><div class="slot-l">WHY IT MATTERS</div><p>메모리 제약이 있는 단일 GPU에서도 대형 MoE 모델 추론이 가능해져, 범용 하드웨어에서의 <strong>MoE 서빙 실용성</strong>을 크게 높인다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 전문가 오프로딩 시스템이 라우팅 결정 이후 전문가를 전송해 PCIe 병목을 겪는 것과 달리, Specter는 양자화된 드래프트 모델의 추측적 디코딩으로 전문가 사용을 미리 예측해 전송을 앞당긴다.</p><div class="tags"><span class="tag">#inference-optimization</span><span class="tag">#quantization</span><span class="tag">#speculative-decoding</span></div><a class="src-cta" href="https://arxiv.org/abs/2511.14102" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="practice"><div class="sec-h"><span class="nm">실무 사례 · 노하우</span><span class="cnt">1건</span><span class="all"><a href="../../../category/practice.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="practice">전체 펼치기</button></div><div class="sec-desc">실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</div><details class="item" id="68d8eb3b0273"><summary><span class="num">01</span><span class="body-col"><span class="it-title">장시간 걸리는 파이썬 시뮬레이션을 AWS 기반 셀프서비스 플랫폼으로 전환하기</span><span class="it-sub">How to Turn Long-Running Python Simulations Into a Self-Service Platform</span><span class="it-meta">✍️ 블로그 · towardsdatascience.com</span><span class="it-lede">저자는 장시간 실행되는 파이썬 시뮬레이션을 비동기 워크로드로 처리하여 셀프서비스 플랫폼으로 전환한 경험을 공유한다.</span></span></summary><div class="it-body"><p>이 과정에서 <strong>큐(queue) 설계</strong>, 실패 복구 메커니즘, 재현성 확보가 핵심 과제로 다뤄졌다. AWS 환경에서 이러한 워크로드를 구축하며 얻은 실무적 교훈을 정리한 글이다.</p><div class="slot-l">WHY IT MATTERS</div><p>연구용 시뮬레이션 코드를 여러 사용자가 직접 실행할 수 있는 서비스로 전환하는 작업은 많은 데이터 조직이 겪는 실무 과제이며, 큐잉과 장애 복구 설계는 재현 가능한 파이프라인 구축에 직결된다.</p><a class="src-cta" href="https://towardsdatascience.com/how-to-turn-long-running-python-simulations-into-a-self-service-platform/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="industry-application"><div class="sec-h"><span class="nm">산업 적용 사례</span><span class="cnt">2건</span><span class="all"><a href="../../../category/industry-application.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="industry-application">전체 펼치기</button></div><div class="sec-desc">산업 적용 사례 — 산업 현장의 AI/ML 적용</div><details class="item" id="8477c3daca9c"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Google, AI 기반 초음파 보조 기술로 일선 산모 관리 지원</span><span class="it-sub">Empowering frontline maternal care with AI-assisted ultrasound</span><span class="it-meta">✍️ 블로그 · research.google<span class="weak">원문 근거 부족</span></span><span class="it-lede">Google은 산모 관리 현장에서 초음파 검사를 돕는 AI 기술을 소개했다.</span></span></summary><div class="it-body"><p>의료 영상 분야에 AI를 적용해 산전 관리 접근성을 높이려는 시도로 소개되고 있다.</p><div class="slot-l">WHY IT MATTERS</div><p>의료 자원이 부족한 현장에서 AI가 진단 보조 역할을 할 수 있다는 점에서 주목할 만하다.</p><div class="tags"><span class="tag">#medical-imaging</span></div><a class="src-cta" href="https://research.google/blog/empowering-frontline-maternal-care-with-ai-assisted-ultrasound/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="4ab93569e260"><summary><span class="num">02</span><span class="body-col"><span class="it-title">AT&amp;T, OpenAI와 손잡고 사내 법무 혁신 — LegalEdge팀이 법률 지식 접근성과 업무 처리 방식 재설계</span><span class="it-sub">How AT&amp;T is rethinking in-house legal work with OpenAI</span><span class="it-meta">✍️ 블로그 · openai.com</span><span class="it-lede">AT&amp;T는 OpenAI와 협력해 사내 법무 지식에 대한 접근성을 높이는 작업을 진행하고 있다.</span></span></summary><div class="it-body"><p>이 회사의 LegalEdge팀은 법무 요청 접수 방식을 새롭게 설계하고 있다. 또한 소수 전문 인력에 의존하던 법률적 판단 업무를 더 넓은 범위로 확장하는 방안을 모색하고 있다.</p><div class="slot-l">WHY IT MATTERS</div><p>법무는 전문성이 집중된 영역이라 자동화가 어렵다고 여겨져 왔는데, <strong>대기업 사내 법무팀</strong>이 실제로 AI 도입을 시도한 사례라는 점에서 다른 기업의 법무·컴플라이언스 조직에 참고가 될 수 있다.</p><div class="tags"><span class="tag">#case-study</span><span class="tag">#legal</span></div><a class="src-cta" href="https://openai.com/index/att-legal" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section></main>
+  <footer class="topics" id="topics"><h2>다루는 주제</h2><ul><li><a class="tnm" href="../../../category/ai-agent.html">AI Agent</a>AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</li><li><a class="tnm" href="../../../category/llm-foundation-model.html">LLM / Foundation Model</a>LLM·파운데이션 모델 — 사전학습·정렬·추론</li><li><a class="tnm" href="../../../category/deep-learning.html">Deep Learning</a>딥러닝 — 아키텍처·학습기법 자체</li><li><a class="tnm" href="../../../category/predictive-modeling.html">예측 모델링</a>예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</li><li><a class="tnm" href="../../../category/causal-inference.html">인과추론</a>인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</li><li><a class="tnm" href="../../../category/mlops.html">MLOps / ML Engineering</a>MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</li><li><a class="tnm" href="../../../category/practice.html">실무 사례 · 노하우</a>실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</li><li><a class="tnm" href="../../../category/industry-application.html">산업 적용 사례</a>산업 적용 사례 — 산업 현장의 AI/ML 적용</li></ul></footer>
+</div>
+<script>
+(function(){
+var r=document.documentElement,k="dsb-theme",s=localStorage.getItem(k);
+if(s)r.dataset.theme=s;
+document.getElementById('tbtn').addEventListener('click',function(){
+  var cur=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  var n=cur==='dark'?'light':'dark';r.dataset.theme=n;localStorage.setItem(k,n);});
+// 섹션 전체 펼치기/접기
+document.querySelectorAll('.exp').forEach(function(b){b.addEventListener('click',function(){
+  var sec=document.getElementById(b.dataset.sec);
+  var ds=sec.querySelectorAll('details.item'),open=b.dataset.state!=='open';
+  ds.forEach(function(d){d.open=open;});
+  b.dataset.state=open?'open':'closed';b.textContent=open?'전체 접기':'전체 펼치기';});});
+// 스크롤 위치 카테고리 TOC 활성 (데스크톱 사이드 TOC)
+var links={};document.querySelectorAll('.toc li[data-cat]').forEach(function(li){links[li.dataset.cat]=li;});
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){Object.values(links).forEach(function(l){l.classList.remove('active');});
+    if(links[e.target.id])links[e.target.id].classList.add('active');}});},
+  {rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('section.sec').forEach(function(s){obs.observe(s);});
+})();
+</script>
+</body>
+</html>
