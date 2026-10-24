@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI &amp; ML News Letter · 10/25</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --accent:#5DB8A6; --accent-hover:#479B8B; --accent-weak:#E8F4F1;
+  --focus-ring:rgba(93,184,166,.5);
+  --bg:#FAF9F5; --bg-subtle:#F0EEE6; --border:#E7E3D9;
+  --text:#1F1E1D; --text-2:#6B6862; --text-3:#A39E94;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}}
+:root[data-theme="dark"]{
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover);text-decoration:underline}
+strong{font-weight:600;color:var(--text)}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px;border-radius:3px}
+
+/* 모바일 우선 단일 컬럼 (<1200px). 덩어리 중앙 정렬은 margin:0 auto. */
+.page{max-width:760px;margin:0 auto;padding:20px 18px 40px}
+
+/* --- 마스트헤드 (뉴스레터 제호) --- */
+.mast{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+  padding-bottom:14px;border-bottom:2px solid var(--text);margin-bottom:24px}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--accent);
+  text-transform:uppercase;margin:0 0 6px}
+.mast-title{font-size:26px;font-weight:600;margin:0;letter-spacing:-.01em;line-height:1.15}
+.mast-date{font-size:14px;color:var(--text-2);margin-top:8px}
+.themebtn{flex:none;background:var(--bg-subtle);border:1px solid var(--border);color:var(--text-2);
+  border-radius:20px;padding:5px 12px;font-size:13px;cursor:pointer;font-family:inherit}
+.topnav{margin-top:11px;display:flex;gap:16px;font-size:13px}
+.topnav a{color:var(--text-2);font-weight:500} .topnav a:hover{color:var(--accent)}
+@media (min-width:640px){.mast-title{font-size:31px}}
+
+/* --- TODAY'S TOP 3 --- */
+.top3{background:var(--accent-weak);border-radius:12px;padding:14px 18px;margin-bottom:24px}
+.top3 h2{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--accent);margin:0 0 8px}
+.top3 ol{margin:0;padding:0;list-style:none}
+.top3 li{padding:4px 0 4px 22px;position:relative;font-size:15px;color:var(--text)}
+.top3 li::before{content:"\2605";position:absolute;left:0;color:var(--accent);font-size:12px;top:7px}
+.top3 .t3cat{color:var(--text-2);font-size:12px;margin-right:5px}
+.top3 a{color:var(--text)} .top3 a:hover{color:var(--accent-hover)}
+
+/* --- 목차 (TOC) --- */
+.toc{margin-bottom:26px}
+.toc h2{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--text-2);margin:0 0 8px}
+.toc ul{margin:0;padding:0;list-style:none}
+.toc li{padding:6px 0;border-top:1px solid var(--border)}
+.toc li:first-child{border-top:none}
+.toc .r{display:flex;gap:6px;align-items:baseline;font-size:14px}
+.toc .nm{font-weight:500;color:var(--text)} .toc a:hover .nm{color:var(--accent)}
+.toc .cnt{color:var(--text-3);font-size:12px}
+.toc .lead{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  font-size:12px;color:var(--text-2);margin-top:2px;line-height:1.4}
+.toc li.active .nm{color:var(--accent)}
+.toc li.active{border-left:2px solid var(--accent);padding-left:8px;margin-left:-10px}
+
+/* --- 섹션 --- */
+.sec{margin:0 0 34px;scroll-margin-top:14px}
+.sec-h{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:0 0 2px;padding-top:6px}
+.sec-h .nm{font-size:20px;font-weight:600}
+.sec-h .cnt{font-size:13px;color:var(--text-3)}
+.sec-h .all{font-size:12px;color:var(--text-3);margin-left:auto}
+.sec-h .all span{color:var(--text-2)}
+.sec-h .exp{font-size:12px;background:none;border:1px solid var(--border);color:var(--text-2);
+  border-radius:14px;padding:2px 10px;cursor:pointer;font-family:inherit}
+.sec-desc{font-size:13px;color:var(--text-2);margin:0 0 8px}
+.sec-empty{font-size:14px;color:var(--text-3);padding:4px 0 6px}
+.backtop{display:inline-block;font-size:12px;color:var(--text-3);margin-top:6px}
+
+/* --- 아이템 (아코디언) — 거터(번호) + 단일 콘텐츠 컬럼 (DESIGN §3 v4). 좌측 정렬선 1개. --- */
+.item{border-bottom:1px solid var(--border);--gutter:28px}
+.item>summary{list-style:none;cursor:pointer;padding:16px 26px 16px 0;position:relative;
+  display:grid;grid-template-columns:var(--gutter) 1fr;align-items:start}
+.item>summary::-webkit-details-marker{display:none}
+.item>summary::after{content:"\25B8";position:absolute;right:2px;top:16px;color:var(--text-3);
+  font-size:13px;transition:transform .15s;display:inline-block}
+.item[open]>summary::after{transform:rotate(90deg)}
+.num{font-size:13px;color:var(--text-3);font-variant-numeric:tabular-nums;font-weight:500;padding-top:3px}
+.t3star{color:var(--accent);font-size:11px;margin-right:2px}
+.body-col{min-width:0}
+.it-title{display:block;font-size:18px;font-weight:600;color:var(--text);line-height:1.4}
+.item>summary:hover .it-title{color:var(--accent)}
+.it-sub{display:block;font-size:13px;color:var(--text-2);margin-top:3px;line-height:1.35}
+.it-meta{display:block;font-size:13px;color:var(--text-2);margin-top:6px}
+.it-lede{display:block;font-size:15px;color:var(--text-2);margin-top:7px;line-height:1.5}
+.item[open] .it-lede{color:var(--text)}
+/* 접힘 본문도 콘텐츠 컬럼에 정렬 (거터만큼 들여씀) */
+.it-body{padding:0 0 20px var(--gutter)}
+.it-body p{margin:0 0 10px}
+@media (min-width:900px){.item{--gutter:40px}}
+.slot-l{font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--text-2);margin:14px 0 2px}
+.tags{margin-top:10px}
+.tag{display:inline-block;font-size:12px;color:var(--text-2);background:var(--bg-subtle);
+  border:1px solid var(--border);border-radius:12px;padding:1px 9px;margin:0 5px 5px 0}
+.prev{font-size:13px;color:var(--text-3);margin-top:8px}
+.src-cta{display:inline-block;margin-top:12px;font-size:14px;font-weight:500;color:var(--accent)}
+.weak{color:var(--accent);font-size:12px;border:1px solid var(--accent);border-radius:5px;
+  padding:0 6px;margin-left:6px}
+
+/* --- "다루는 주제" 푸터 --- */
+.topics{margin-top:36px;padding-top:22px;border-top:2px solid var(--text)}
+.topics h2{font-size:15px;font-weight:600;margin:0 0 12px}
+.topics ul{margin:0;padding:0;list-style:none}
+.topics li{padding:7px 0;border-top:1px solid var(--border);font-size:13px;color:var(--text-2)}
+.topics li:first-child{border-top:none}
+.topics .tnm{font-weight:600;color:var(--accent);margin-right:6px}
+
+/* --- 데스크톱 (≥1200px): 좌측 sticky TOC(260) + 본문(720), 덩어리 중앙 정렬 --- */
+@media (min-width:1200px){
+  /* max-width = 260+44+720 그리드(1024) + 좌우 padding(18*2). box-sizing:border-box
+     라 padding 을 포함해야 본문 720 이 찌그러지지 않는다. */
+  .page{max-width:1060px;display:grid;grid-template-columns:260px minmax(0,720px);
+    column-gap:44px;justify-content:center;align-items:start;padding-top:28px}
+  .mast{grid-column:1/3}
+  .toc{grid-column:1;grid-row:2/999;position:sticky;top:24px;margin:0;align-self:start}
+  .top3,.main{grid-column:2}
+  .topics{grid-column:1/3}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="mast">
+    <div class="mast-l">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1 class="mast-title">AI &amp; ML News Letter</h1>
+      <div class="mast-date">2026 / 10 / 25 (일) · 9건</div>
+      <nav class="topnav"><a href="../../../archive.html">📅 지난 브리핑</a>
+        <a href="#topics">🗂 주제별 보기</a></nav>
+    </div>
+    <button id="tbtn" class="themebtn" type="button">🌓 테마</button>
+  </header>
+  <section class="top3"><h2>TODAY'S TOP 3</h2><ol><li><a href="#bd1a9e13cdfe"><span class="t3cat">[LLM / Foundation Model]</span>Moonshot AI, 3조 파라미터 규모 플래그십 모델 &#x27;Kim K3.1 Pro&#x27; 공개</a></li><li><a href="#58086fa33a6e"><span class="t3cat">[LLM / Foundation Model]</span>Nvidia-워싱턴대 단백질설계연구소, 오픈소스 단백질 설계 AI 모델 공개</a></li><li><a href="#a809332edc38"><span class="t3cat">[AI Agent]</span>TARSphere: A Robot-Oriented Full-Stack Framework for Long-Horizon Embodied Agents in Evolving Physical and Social Environments</a></li></ol></section>
+  <nav class="toc" id="toc"><h2>오늘의 목차</h2><ul><li data-cat="ai-agent"><a href="#ai-agent"><span class="r"><span class="nm">AI Agent</span><span class="cnt">2</span></span><span class="lead">TARSphere 공개 — 30개 실내 씬·360개 에피소드로 장기 로봇 에이전트 평가, 범용 MLLM이 임바디드 모델 능가</span></a></li><li data-cat="llm-foundation-model"><a href="#llm-foundation-model"><span class="r"><span class="nm">LLM / Foundation Model</span><span class="cnt">2</span></span><span class="lead">Moonshot AI, 3조 파라미터 규모 플래그십 모델 &#x27;Kim K3.1 Pro&#x27; 공개</span></a></li><li data-cat="deep-learning"><a href="#deep-learning"><span class="r"><span class="nm">Deep Learning</span><span class="cnt">1</span></span><span class="lead">Sebastian Raschka, &#x27;Build a Reasoning Model (From Scratch)&#x27; 8편·11시간 코딩 강의 공개</span></a></li><li data-cat="predictive-modeling"><a href="#predictive-modeling"><span class="r"><span class="nm">예측 모델링</span><span class="cnt">1</span></span><span class="lead">새 AI 모델, 위성 신호 결합해 하천 수위 예측 정확도 높여</span></a></li><li data-cat="mlops"><a href="#mlops"><span class="r"><span class="nm">MLOps / ML Engineering</span><span class="cnt">1</span></span><span class="lead">OpenAI, 프런티어 모델 학습 환경 보안 강화 방침 발표</span></a></li><li data-cat="practice"><a href="#practice"><span class="r"><span class="nm">실무 사례 · 노하우</span><span class="cnt">2</span></span><span class="lead">PHP 수년 묵은 취약점, AI 보조로 발견되자 곧바로 AI 기반 공격으로 이어져</span></a></li></ul></nav>
+  <main class="main"><section class="sec" id="ai-agent"><div class="sec-h"><span class="nm">AI Agent</span><span class="cnt">2건</span><span class="all"><a href="../../../category/ai-agent.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="ai-agent">전체 펼치기</button></div><div class="sec-desc">AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</div><details class="item" id="a809332edc38" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">TARSphere: A Robot-Oriented Full-Stack Framework for Long-Horizon Embodied Agents in Evolving Physical and Social Environments</span><span class="it-sub">TARSphere 공개 — 30개 실내 씬·360개 에피소드로 장기 로봇 에이전트 평가, 범용 MLLM이 임바디드 모델 능가</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">TARSphere는 물리·사회적 제약 속에서 변화하는 환경에 적응해야 하는 로봇형 장기 임바디드 에이전트를 위한 풀스택 프레임워크다.</span></span></summary><div class="it-body"><p>TARSphere-Infra는 물리 시뮬레이터에서 임바디드 NPC와 제약된 대화를 운영하며, 이벤트 기반 유한상태머신(FSM)이 완료된 행동과 전달된 정보를 바탕으로 과업 상태를 갱신하고 결과를 평가한다. TARSphere-Harness는 고정된 멀티모달 LLM이 관찰, 계층적 메모리, 실행 피드백을 활용해 다단계 실행 가능한 스킬로 행동하고 결정을 수정하게 한다. 이를 기반으로 <strong>TARSphere-Bench</strong>를 구축했는데, 30개 실내 씬에 걸친 360개 에피소드로 지각 강건성, 교란 적응, 과업 갱신, 인간 협력, 의도 이해 등 5가지 조건을 평가한다. 8개 MLLM을 평가한 결과 <strong>범용 모델이 임바디드 전용 모델을 능가</strong>했으며, 과업 갱신과 인간 상호작용은 여전히 어려운 과제로 남았고 잦은 충돌·낙상은 실행 안전성 평가의 필요성을 시사한다.</p><div class="slot-l">WHY IT MATTERS</div><p>기존 임바디드 에이전트 평가가 고정 목표나 추상화된 상징적 행동에 머물렀던 것과 달리, 변화하는 물리·사회 환경에서의 장기 과업 수행 능력을 종합 평가하는 벤치마크가 드물었다는 점에서 DS/AI 연구자에게 로봇-LLM 통합 설계의 현실적 한계를 보여준다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 임바디드 에이전트 시스템이 특정 목표나 상징적 행동 실행에 집중했던 것과 달리, TARSphere는 과업 갱신, 인간 협력, 실행 안전성까지 함께 평가하는 완전한 풀스택 벤치마크 체계를 제시한다.</p><a class="src-cta" href="https://arxiv.org/abs/2610.30043" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="3eba8a54549f"><summary><span class="num">02</span><span class="body-col"><span class="it-title">EvalResearchBench: Can AI Agents Build Their Own Feedback for Recursive Self-Improvement?</span><span class="it-sub">EvalResearchBench 공개 — AI 에이전트가 설계한 평가지표, 목표 벤치마크와 쌍별 일치율 최대 75%에 그쳐</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">이 논문은 AI 에이전트가 재귀적 자기개선(RSI)에 필요한 평가 피드백을 스스로 설계할 수 있는지 검증하기 위해 EvalResearchBench(ERB)를 제안한다.</span></span></summary><div class="it-body"><p>&#x27;연구자&#x27; 에이전트는 목표 자료, 개발 참고자료, 후보 API, 시간·API 예산이 주어지면 과제를 선택·합성하고 채점기를 구현한 뒤 파일럿 테스트로 수정해 코딩·협업·추론용 평가기를 완성한다. 9개의 연구자 에이전트와 13개 후보 모델을 14개 목표 벤치마크와 점수 일치도·쌍별 일치율로 비교한 결과, 최고 성능 평가기도 후보 쌍 순서의 <strong>약 75%</strong>만 목표 벤치마크와 일치해, 목표 벤치마크들 간 불일치로 정해지는 91% 상한에 못 미쳤다. 개발 목표에서 최고였던 평가기가 숨겨진 봉인 목표에서는 최고가 아니었으며, 사람이 설계한 공개 과제 샘플이 여전히 강력한 기준선으로 남았다. 실행 비용이 가장 낮은 평가기가 오히려 가장 높은 쌍별 일치율을 보였고, 에이전트는 파일럿 피드백으로 과제와 채점기를 고치지만 답변 절단, 예산 소진, 일부 문항의 과도한 영향 같은 문제는 여전했다.</p><div class="slot-l">WHY IT MATTERS</div><p>재귀적 자기개선을 위해서는 값싸고 신뢰할 수 있는 평가 피드백이 필수인데, 이 연구는 AI가 자체 평가 체계를 자동 설계하는 능력에 명확한 한계가 있음을 보여준다. 평가 자동화가 모델 개선 루프의 병목이 될 수 있다는 점에서 RSI 연구자들에게 중요한 시사점을 준다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존에는 사람 전문가가 벤치마크 부분집합을 선정하거나 축소판 평가 스위트를 설계했는데, 이 연구는 그 과정을 AI 에이전트가 자동으로 수행하도록 하고 그 결과를 <strong>사람이 설계한 공개 과제 샘플</strong>과 직접 비교했다는 점이 다르다.</p><a class="src-cta" href="https://arxiv.org/abs/2610.04184" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="llm-foundation-model"><div class="sec-h"><span class="nm">LLM / Foundation Model</span><span class="cnt">2건</span><span class="all"><a href="../../../category/llm-foundation-model.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="llm-foundation-model">전체 펼치기</button></div><div class="sec-desc">LLM·파운데이션 모델 — 사전학습·정렬·추론</div><details class="item" id="bd1a9e13cdfe" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">Moonshot AI, 3조 파라미터 규모 플래그십 모델 &#x27;Kim K3.1 Pro&#x27; 공개</span><span class="it-sub">Moonshot AI launches new flagship Kim K3.1 Pro model with 3T parameters - SiliconANGLE</span><span class="it-meta">📰 뉴스 · news.google.com<span class="weak">원문 근거 부족</span></span><span class="it-lede">Moonshot AI가 새로운 플래그십 모델 Kim K3.1 Pro를 출시했다.</span></span></summary><div class="it-body"><p>이 모델은 <strong>3조 파라미터</strong> 규모로 알려져 있다.</p><div class="slot-l">WHY IT MATTERS</div><p>초대형 파라미터 모델의 공개는 업계 경쟁 구도와 성능 기준점에 영향을 줄 수 있어 주목할 필요가 있다.</p><div class="tags"><span class="tag">#model-release</span><span class="tag">#large-scale</span></div><a class="src-cta" href="https://news.google.com/rss/articles/CBMirAFBVV95cUxPNE0yTnZ3bmZweG5GVGx6eGV2bTBOR0x6ZEp5TThmR3prQWlhRzdPaWc2Z1FJWEJmc2J6Y1M0SVBsS2VtMHhWS29sNXI0U1R3XzV3YV8tWTh3OEIzNkpJaW1FVkFEcHEwdWtWVzYzVzg4S2lpdFdpWDM2Rm9KS1ZTN2FTclFkcENXeEJZV25hRnM1QUFnNWdvY1VCYkFpeTFSeUJBekwzemNKVjhm?oc=5" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="58086fa33a6e" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>02</span><span class="body-col"><span class="it-title">Nvidia-워싱턴대 단백질설계연구소, 오픈소스 단백질 설계 AI 모델 공개</span><span class="it-sub">Nvidia, UW Institute for Protein Design Unveil Open-Source Protein Design AI Model - Genetic Engineering and Biotechnology News</span><span class="it-meta">📰 뉴스 · news.google.com</span><span class="it-lede">Nvidia와 워싱턴대학교 단백질 설계 연구소(Institute for Protein Design)가 <strong>오픈소스 단백질 설계 AI 모델</strong>을 공동 발표했다.</span></span></summary><div class="it-body"><p>해당 소식은 제목 수준의 정보만 제공되어 구체적인 모델 구조나 성능 지표는 원문에 명시되지 않았다.</p><div class="slot-l">WHY IT MATTERS</div><p>단백질 설계는 신약 개발과 생명공학 연구의 핵심 영역으로, 대형 기술기업과 학계 연구소의 협업을 통한 오픈소스화는 해당 분야 진입장벽을 낮출 수 있다.</p><div class="tags"><span class="tag">#model-release</span><span class="tag">#open-source</span><span class="tag">#domain-specific</span></div><a class="src-cta" href="https://news.google.com/rss/articles/CBMi1wFBVV95cUxPcXJuT25OLTFUZmxiZ0VYZlBRZjVVekpVNWltWFpYV2FDRlkzSk5ud3JxVWRuVFRfMlpDMHlzQ0tUWWdoemszczBwYW1LQkRJYm1ZVmJUZktWWmNWSU1zeXZyblhvb3dkcm55V2NmTUdKYkJTamdVZFRmMWV6NHVkb0p3bjRhSHFQdlcxc0hRUnBpeXFFcHJJdjFQUGk3NkVkY3h2eFJuaVR3UjdQTVh3RThLMHFGZTN0aTNpWUtUbmc3M2g4VkpDTHhlZ3pqbTZZZGZfbjJFZw?oc=5" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="deep-learning"><div class="sec-h"><span class="nm">Deep Learning</span><span class="cnt">1건</span><span class="all"><a href="../../../category/deep-learning.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="deep-learning">전체 펼치기</button></div><div class="sec-desc">딥러닝 — 아키텍처·학습기법 자체</div><details class="item" id="d1a3b4fa5d93"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Sebastian Raschka, &#x27;Build a Reasoning Model (From Scratch)&#x27; 8편·11시간 코딩 강의 공개</span><span class="it-sub">Building Reasoning Models from the Ground Up: A Full Video Course</span><span class="it-meta">✍️ 블로그 · magazine.sebastianraschka.com</span><span class="it-lede">저자는 추론 모델의 동작 원리를 다룬 책 &#x27;Build a Reasoning Model (From Scratch)&#x27;에 이어, 이를 PyTorch로 처음부터 구현하는 <strong>8편·11시간 분량의 영상 강의</strong>를 공개했다.</span></span></summary><div class="it-body"><p>사전학습된 소형 Qwen3 모델에서 시작해 평가, 추론 시점 스케일링, 강화학습, 증류(distillation)까지 직접 구현한다. 이는 이전 &#x27;Build a Large Language Model (From Scratch)&#x27; 강의의 후속작이지만 선행 수강 없이도 학습 가능하다. 아울러 저자는 LLM, 추론 모델, 에이전트의 관계를 엔진-하네스 비유로 설명하며, 추론 모델은 검증 가능한 보상을 통한 강화학습 후처리로 LLM을 업그레이드한 것이고 에이전트 하네스는 그 위에 도구 접근과 컨텍스트 관리를 더한 것이라고 정리한다.</p><div class="slot-l">WHY IT MATTERS</div><p>현재 대부분의 최신 LLM이 추론 모드를 내장하고 있는 상황에서, 블랙박스로 쓰기보다 <strong>직접 구현하며 원리를 익히는 학습 자료</strong>는 DS/AI 실무자가 추론 모델과 에이전트 설계를 이해하는 데 실질적 도움이 된다.</p><div class="tags"><span class="tag">#reasoning-models</span><span class="tag">#reinforcement-learning</span><span class="tag">#distillation</span></div><a class="src-cta" href="https://magazine.sebastianraschka.com/p/building-reasoning-models" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="predictive-modeling"><div class="sec-h"><span class="nm">예측 모델링</span><span class="cnt">1건</span><span class="all"><a href="../../../category/predictive-modeling.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="predictive-modeling">전체 펼치기</button></div><div class="sec-desc">예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</div><details class="item" id="30bbfbaa4076"><summary><span class="num">01</span><span class="body-col"><span class="it-title">새 AI 모델, 위성 신호 결합해 하천 수위 예측 정확도 높여</span><span class="it-sub">New AI model fuses satellite signals to sharpen river water level forecasts - 24-7PressRelease.com</span><span class="it-meta">📰 뉴스 · news.google.com<span class="weak">원문 근거 부족</span></span><span class="it-lede">위성 신호 데이터를 결합한 새로운 AI 모델이 하천 수위 예측의 정밀도를 향상시켰다고 발표됐다.</span></span></summary><div class="it-body"><div class="slot-l">WHY IT MATTERS</div><p>정확한 수위 예측은 홍수 대비 등 재해 관리에 중요한 역할을 할 수 있다.</p><div class="tags"><span class="tag">#timeseries</span></div><a class="src-cta" href="https://news.google.com/rss/articles/CBMiyAFBVV95cUxNMGdoOThZbC1wVjhKS3VIZktXcTlhR0xuYVRwR1RVUWZ4Z3dibFhOVkdfaWNqcjd2RnJwWk5pOWpkVllKNURqVW51X2l0ZjNNQ1M0R0RPUGpHY29hS080bnpzR1QxVmFjNGxmSHJ5ZTBCVnZDSE5FeWl0NEVlSTlZQUpxTEdkQWRiMkllZElLbnRDZmxVMC1WN2VZXzZUaDBIbERONVd4dTVnaG1QVW5LU0xPYnAtT0JUOFd5X0JIbnVISkhYLWR2eQ?oc=5" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="causal-inference"><div class="sec-h"><span class="nm">인과추론</span></div><div class="sec-desc">인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="mlops"><div class="sec-h"><span class="nm">MLOps / ML Engineering</span><span class="cnt">1건</span><span class="all"><a href="../../../category/mlops.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="mlops">전체 펼치기</button></div><div class="sec-desc">MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</div><details class="item" id="4952e80f7fb9"><summary><span class="num">01</span><span class="body-col"><span class="it-title">OpenAI, 프런티어 모델 학습 환경 보안 강화 방침 발표</span><span class="it-sub">Securing our frontier model training environment - OpenAI</span><span class="it-meta">📰 뉴스 · news.google.com<span class="weak">원문 근거 부족</span></span><span class="it-lede">OpenAI가 프런티어 모델 학습 환경의 보안을 강화한다고 밝혔다.</span></span></summary><div class="it-body"><p>원문에 구체적인 방법이나 수치는 제공되지 않았다.</p><div class="slot-l">WHY IT MATTERS</div><p>대규모 AI 모델 학습 인프라의 보안은 <strong>모델 유출 및 악용 방지</strong>와 직결되는 문제다.</p><div class="tags"><span class="tag">#security</span><span class="tag">#model-training</span></div><a class="src-cta" href="https://news.google.com/rss/articles/CBMif0FVX3lxTE5EQVY3Q0FYVVg3MU1JeDdHREJsV1RqbTFIdG03VWN2NWhGdFNwczlRdkV5ME9FOWRnWmdxMHZFYXJTc0haNXg0RnRzSVhSMzhqVHNfVVZKWWNMNWQ1RDZkVFhpRWVCcVVzYWFlQ1k1b29USEIyVFRGTDlZbk9hUkU?oc=5" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="practice"><div class="sec-h"><span class="nm">실무 사례 · 노하우</span><span class="cnt">2건</span><span class="all"><a href="../../../category/practice.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="practice">전체 펼치기</button></div><div class="sec-desc">실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</div><details class="item" id="128c778d038c"><summary><span class="num">01</span><span class="body-col"><span class="it-title">PHP 수년 묵은 취약점, AI 보조로 발견되자 곧바로 AI 기반 공격으로 이어져</span><span class="it-sub">The PHP Meltdown Shows How AI Makes Bugs More Exploitable</span><span class="it-meta">📰 뉴스 · wired.com</span><span class="it-lede">보안 연구자들이 AI 도구를 활용해 PHP 웹 스크립팅 언어에서 수년간 존재해온 취약점을 찾아냈다.</span></span></summary><div class="it-body"><p>취약점이 공개되자 이를 악용한 <strong>AI 보조 공격</strong>이 곧바로 시작됐다. 즉 AI가 취약점 발견뿐 아니라 실제 공격 실행 단계까지 가속화하는 데 쓰인 사례다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI가 보안 연구와 공격 양쪽 모두의 속도를 높이면서, 취약점 공개와 패치 사이의 대응 시간이 극도로 짧아질 위험이 커진다.</p><div class="tags"><span class="tag">#security</span><span class="tag">#vulnerability-discovery</span></div><a class="src-cta" href="https://www.wired.com/story/kernel-panic-the-php-meltdown-shows-how-ai-makes-bugs-more-exploitable/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="0e0c36ed7f0c"><summary><span class="num">02</span><span class="body-col"><span class="it-title">Google, &#x27;코끼리-금붕어 모델&#x27; 플러그인 공개 — 디자인 주도 AI 소프트웨어 개발 확장 지원</span><span class="it-sub">Introducing the Elephant-Goldfish Model plugin: scaling design-driven AI software development - Google Open Source Blog</span><span class="it-meta">📰 뉴스 · news.google.com</span><span class="it-lede">Google Open Source Blog가 &#x27;코끼리-금붕어 모델(Elephant-Goldfish Model)&#x27; 플러그인을 소개했다.</span></span></summary><div class="it-body"><p>이 플러그인은 디자인 주도 AI 소프트웨어 개발을 확장하는 것을 목표로 한다. 원문 초록에는 구체적인 동작 방식이나 세부 기능에 대한 추가 설명은 제공되지 않았다.</p><div class="slot-l">WHY IT MATTERS</div><p>Google이 <strong>AI 소프트웨어 개발 워크플로우</strong>에 디자인 중심 도구를 공식 오픈소스로 공개했다는 점에서, 실무에 적용 가능한 개발 생산성 도구의 흐름을 파악하는 데 참고가 된다.</p><a class="src-cta" href="https://news.google.com/rss/articles/CBMikwFBVV95cUxNNEVzQWlUWnd4ekJrMDcxZDZ0TmVRcS1TMmtWbkIwSTJqRnhTcGNRMWExSW1ZR1hPSUxIYkVzbXpzY2t6dDdNLTVmLWp3d201TGZ5bjM4VnZoRFZQalc5VUVsZkM3VHotaEpjcXhHc1J2YVdua25sU3hROXRZSW52R3N3MUlxZDVUT3B0WFRmMlJNcWs?oc=5" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="industry-application"><div class="sec-h"><span class="nm">산업 적용 사례</span></div><div class="sec-desc">산업 적용 사례 — 산업 현장의 AI/ML 적용</div><div class="sec-empty">금일 신규 없음</div></section></main>
+  <footer class="topics" id="topics"><h2>다루는 주제</h2><ul><li><a class="tnm" href="../../../category/ai-agent.html">AI Agent</a>AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</li><li><a class="tnm" href="../../../category/llm-foundation-model.html">LLM / Foundation Model</a>LLM·파운데이션 모델 — 사전학습·정렬·추론</li><li><a class="tnm" href="../../../category/deep-learning.html">Deep Learning</a>딥러닝 — 아키텍처·학습기법 자체</li><li><a class="tnm" href="../../../category/predictive-modeling.html">예측 모델링</a>예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</li><li><a class="tnm" href="../../../category/causal-inference.html">인과추론</a>인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</li><li><a class="tnm" href="../../../category/mlops.html">MLOps / ML Engineering</a>MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</li><li><a class="tnm" href="../../../category/practice.html">실무 사례 · 노하우</a>실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</li><li><a class="tnm" href="../../../category/industry-application.html">산업 적용 사례</a>산업 적용 사례 — 산업 현장의 AI/ML 적용</li></ul></footer>
+</div>
+<script>
+(function(){
+var r=document.documentElement,k="dsb-theme",s=localStorage.getItem(k);
+if(s)r.dataset.theme=s;
+document.getElementById('tbtn').addEventListener('click',function(){
+  var cur=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  var n=cur==='dark'?'light':'dark';r.dataset.theme=n;localStorage.setItem(k,n);});
+// 섹션 전체 펼치기/접기
+document.querySelectorAll('.exp').forEach(function(b){b.addEventListener('click',function(){
+  var sec=document.getElementById(b.dataset.sec);
+  var ds=sec.querySelectorAll('details.item'),open=b.dataset.state!=='open';
+  ds.forEach(function(d){d.open=open;});
+  b.dataset.state=open?'open':'closed';b.textContent=open?'전체 접기':'전체 펼치기';});});
+// 스크롤 위치 카테고리 TOC 활성 (데스크톱 사이드 TOC)
+var links={};document.querySelectorAll('.toc li[data-cat]').forEach(function(li){links[li.dataset.cat]=li;});
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){Object.values(links).forEach(function(l){l.classList.remove('active');});
+    if(links[e.target.id])links[e.target.id].classList.add('active');}});},
+  {rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('section.sec').forEach(function(s){obs.observe(s);});
+})();
+</script>
+</body>
+</html>

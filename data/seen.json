@@ -101765,5 +101765,244 @@
       "medical-application",
       "tool-use"
     ]
+  },
+  "515ae2db759d8aea835a7ce8d66fd33867755e7b": {
+    "url": "https://towardsdatascience.com/how-to-add-guardrails-to-a-local-llm-agent/",
+    "title": "How to Add Guardrails to a Local LLM Agent",
+    "category": "ai-agent",
+    "source_tier": 3,
+    "first_seen": "2026-10-25",
+    "tags": [
+      "guardrails",
+      "local-deployment"
+    ]
+  },
+  "7988f73597f91afcedbd007fe9612951ab60d3af": {
+    "url": "https://towardsdatascience.com/python-315-has-a-new-profiler/",
+    "title": "Python 3.15 Has a New Profiler",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-10-25",
+    "tags": []
+  },
+  "d1a3b4fa5d93fb49d3ffb0461ed4419c6c113f01": {
+    "url": "https://magazine.sebastianraschka.com/p/building-reasoning-models",
+    "title": "Building Reasoning Models from the Ground Up: A Full Video Course",
+    "category": "deep-learning",
+    "source_tier": 3,
+    "first_seen": "2026-10-25",
+    "tags": [
+      "reasoning-models",
+      "reinforcement-learning",
+      "distillation"
+    ]
+  },
+  "dbe76530e9896fc9916adb72c771caca0b8db0a3": {
+    "url": "https://techcrunch.com/2026/10/24/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/",
+    "title": "The AI graveyard: a running list of projects and startups that didn’t make it",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-25",
+    "tags": []
+  },
+  "688136660c106304b5046a5ebd37c3f3c722af5b": {
+    "url": "https://techcrunch.com/2026/10/24/blocks-new-voice-model-sounds-eerily-human/",
+    "title": "Block’s new voice model sounds eerily human",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-25",
+    "tags": [
+      "voice-model",
+      "local-deployment"
+    ]
+  },
+  "e4ac1d3f295acd6002b61261949e9040b5dc3cd2": {
+    "url": "https://techcrunch.com/2026/10/24/forced-to-pick-groks-ai-model-chooses-republicans-openais-picks-democrats/",
+    "title": "Forced to pick, Grok’s AI model chooses Republicans. OpenAI’s picks Democrats.",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-25",
+    "tags": [
+      "alignment",
+      "bias",
+      "evaluation"
+    ]
+  },
+  "4a535eced667a36f30fd5e8875815af9caf74149": {
+    "url": "https://techcrunch.com/2026/10/24/all-the-ai-agents-that-can-live-in-your-text-messages/",
+    "title": "Here are the top AI agents that can live in your text messages",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-10-25",
+    "tags": [
+      "messaging",
+      "application"
+    ]
+  },
+  "77a2412996833ea1a260a21753f5bfd99cfe71ba": {
+    "url": "https://arstechnica.com/science/2026/10/a-1000-mile-cloud-on-mars-may-reveal-physics-never-seen-in-nature/",
+    "title": "A 1,000-mile cloud on Mars may reveal physics never seen in nature",
+    "category": "deep-learning",
+    "source_tier": 4,
+    "first_seen": "2026-10-25",
+    "tags": []
+  },
+  "5bb272a35065dcc05a8627e14f89647206fe33b7": {
+    "url": "https://arstechnica.com/science/2026/10/ice-sheet-expansion-may-have-started-2000-years-go-but-we-canceled-that/",
+    "title": "Ice sheet expansion may have started 2,000 years ago, but we canceled that",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-10-25",
+    "tags": []
+  },
+  "128c778d038c2534b6358fcb2f68e11b6126dad3": {
+    "url": "https://www.wired.com/story/kernel-panic-the-php-meltdown-shows-how-ai-makes-bugs-more-exploitable/",
+    "title": "The PHP Meltdown Shows How AI Makes Bugs More Exploitable",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-10-25",
+    "tags": [
+      "security",
+      "vulnerability-discovery"
+    ]
+  },
+  "bd1a9e13cdfe461f545f3c044b7de7ecf871a14f": {
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPNE0yTnZ3bmZweG5GVGx6eGV2bTBOR0x6ZEp5TThmR3prQWlhRzdPaWc2Z1FJWEJmc2J6Y1M0SVBsS2VtMHhWS29sNXI0U1R3XzV3YV8tWTh3OEIzNkpJaW1FVkFEcHEwdWtWVzYzVzg4S2lpdFdpWDM2Rm9KS1ZTN2FTclFkcENXeEJZV25hRnM1QUFnNWdvY1VCYkFpeTFSeUJBekwzemNKVjhm?oc=5",
+    "title": "Moonshot AI launches new flagship Kim K3.1 Pro model with 3T parameters - SiliconANGLE",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-25",
+    "tags": [
+      "model-release",
+      "large-scale"
+    ]
+  },
+  "4952e80f7fb91752f319881737f2e175d892a2e2": {
+    "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5EQVY3Q0FYVVg3MU1JeDdHREJsV1RqbTFIdG03VWN2NWhGdFNwczlRdkV5ME9FOWRnWmdxMHZFYXJTc0haNXg0RnRzSVhSMzhqVHNfVVZKWWNMNWQ1RDZkVFhpRWVCcVVzYWFlQ1k1b29USEIyVFRGTDlZbk9hUkU?oc=5",
+    "title": "Securing our frontier model training environment - OpenAI",
+    "category": "mlops",
+    "source_tier": 4,
+    "first_seen": "2026-10-25",
+    "tags": [
+      "security",
+      "model-training"
+    ]
+  },
+  "58086fa33a6e3d9ccbcdaefc07dd5ff75be623a0": {
+    "url": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPcXJuT25OLTFUZmxiZ0VYZlBRZjVVekpVNWltWFpYV2FDRlkzSk5ud3JxVWRuVFRfMlpDMHlzQ0tUWWdoemszczBwYW1LQkRJYm1ZVmJUZktWWmNWSU1zeXZyblhvb3dkcm55V2NmTUdKYkJTamdVZFRmMWV6NHVkb0p3bjRhSHFQdlcxc0hRUnBpeXFFcHJJdjFQUGk3NkVkY3h2eFJuaVR3UjdQTVh3RThLMHFGZTN0aTNpWUtUbmc3M2g4VkpDTHhlZ3pqbTZZZGZfbjJFZw?oc=5",
+    "title": "Nvidia, UW Institute for Protein Design Unveil Open-Source Protein Design AI Model - Genetic Engineering and Biotechnology News",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-25",
+    "tags": [
+      "model-release",
+      "open-source",
+      "domain-specific"
+    ]
+  },
+  "fa6128c97bf1ded17e2e796f81ea79bff24fe075": {
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPcktaUjlRNUc4SkZ3UzlJSnJwX0tzalVkaHFKTmxkWGItR0J6b3VVQ01xU25ZdFRueWdrVXNsMjRab2NJNTVFMG9sRHdfbWJwQ2FLQlBwSGdfS1hYWFhWUXRONm8zczlYSnoxX1hiamdRWFU3UThWS05fVFpKNzN4OU5ISkZoOXJNS09Qc2djYVVxMGtnQjVlWFJHTE1wQWdmVjZYckhnd2JjbURxSy1ra2lXbw?oc=5",
+    "title": "Moonshot Debuts First AI Upgrade Since Its Own DeepSeek Moment - Bloomberg.com",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-25",
+    "tags": [
+      "model-release",
+      "upgrade"
+    ]
+  },
+  "c57f2a633fb1542cf6ffd7f413a93d13deb68578": {
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQWlpZNXVZQXBxZ1hCTzA4X0VZYUh0QkhJb281X3VmMUt0VVZRY0N2N1Fja1dyZlB4cGlsTGktdjRaRzEzSDgtR01QS1F4V0ZsN0lsbzdTRjhRbG1MMlhfMkluTkxwTXFhOG1XZVVpRlRJX29ULXBEcUdTQUpoa2NkUmRMZFhDbkF3a0N3SDlqbTg1QnR3aFkwSW9LS181X0hsbXM1bXF2a0ZTWldQdlBMSlJRSzFoOGI2aFRF?oc=5",
+    "title": "Moonshot curbs hacking ability in new Kimi model as fears grow over AI-powered cyberattacks - Reuters",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-25",
+    "tags": [
+      "alignment",
+      "safety",
+      "capability-limitation"
+    ]
+  },
+  "0e0c36ed7f0cc998c431313aa3c6c5f375631b20": {
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNNEVzQWlUWnd4ekJrMDcxZDZ0TmVRcS1TMmtWbkIwSTJqRnhTcGNRMWExSW1ZR1hPSUxIYkVzbXpzY2t6dDdNLTVmLWp3d201TGZ5bjM4VnZoRFZQalc5VUVsZkM3VHotaEpjcXhHc1J2YVdua25sU3hROXRZSW52R3N3MUlxZDVUT3B0WFRmMlJNcWs?oc=5",
+    "title": "Introducing the Elephant-Goldfish Model plugin: scaling design-driven AI software development - Google Open Source Blog",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-10-25",
+    "tags": []
+  },
+  "b5ab6d8df0b847ff062929da40dfbbb74f27cb35": {
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPOWFlMmFWTWZLYV9UNVVwQ2dXRXFWQUxROU9KX1YzQnRzQWpGQ2dhSF9pNGh5SFNlcGxEeFo3VC1paU1fVGRrRWJ3SjBhSjRTUTJQdHhpOVVocVNnYl9KRlBhUmp3dHZjV0J6OHNnRE9jZnA1anlkdnZvNWVmRkRhZVQ4UGNsS2dwSlpHVUowQW8?oc=5",
+    "title": "Moonshot AI Releases Kimi K3.1 Pro, First Model in New K3.1 Series - Unite.AI",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-25",
+    "tags": []
+  },
+  "fa4f3f8701ef9113e1b3f01f024f68b230537896": {
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNVVpwcWpndFJ1UEU0WTJmQjYwaXhIOFB5SzJxcVFCaktVWThvTDNEVklkUVRuaUFWTloxYnBqUG5qSHE2bmx1Wk9vMzF1b0NuN2xsTVdQZE4zRHMtTjJ0cnhwV3ZrbEFUa00tYkhXV0hfUy05UmlvVUt2VFQ0SXl3LUxsdG4xdjBaTkowdERUNFd0dnoxQkJSUVloRXkzYmp1?oc=5",
+    "title": "Hugging Face says its new AI model can help scientists study DNA and develop new gene therapies - Business Insider",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-25",
+    "tags": []
+  },
+  "350eabbd3b55307284dee71a3207655fb54978d9": {
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOV3dqUk5faExZdzlTVHlwNVg1WHF1N3l4M3ZpTUJ1VDNCMll2TnA0NUxTQjJsYmVacF95Ui1mbk4yMXMzTFNTQVRNVnI4NW5VX3ZOZ1pfQVljR0Rvd2t0c0pIMVhSb0pnV3pGX3NJODNWUmRicUkySVlQMTlObUdrV19XbXBPS2trZGxTVXFjUnRhRjV0UXFHYm1yNGdGWEVZcE56VE45V1FVSV9JOHBTLXZGR3poWGF5d3I4c05B?oc=5",
+    "title": "Anthropic reveals Mythos 5 tried submitting malicious code to an open-source project - SiliconANGLE",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-25",
+    "tags": []
+  },
+  "b26e4d4f11569370cb52e02d242fed630cdc6084": {
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNNWM1aVd0X2lQdTV5bWQ0cDJSMUx6RVpmMnZzRTJVMHUxSXZERmtYeVJTekNxaDFhcU00UDlHenlqaFB0c0pZcTE4ZExvaHVCaFMxUHRFdFF5cDFua2gwc3pGazUzLWN3Z3dKVjFQaUc5QnpyLW1hNWVpYmhoWkxKdUF3cWstZ1RIR1RuNWt6RE1RTEoyY1lFbmdUNmJVR3FtU0hEVWR3ajI2bHhwX2tTaA?oc=5",
+    "title": "‘Serious competitor:’ Does Canva’s new AI model match global giants? - AFR",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-25",
+    "tags": []
+  },
+  "d3f105673e967f63cd60010342f52e5bffd7b354": {
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQRUN4NktMQlpqNllWYVRpNFVaSlVBWjNKTkRsZHF1d1BDY3hhak9kWk1Bb3ppbTl5NXkwenBud3ByOE42ank5TmxCT3Q4SDNsMXBaYzhIMGV0b1BPY05XNkFEN0FDMVI0SGV4M2FKdmtKM09hN2hLY1FCSEtiX1lMT3RYSHZDQzlMNzNvYThjMXdldGRQdXA5VW5qQnRnN0FfdF90a0pKNWhiRUxqWEh1Ym1SN2RiZVI5YzZJ?oc=5",
+    "title": "Canva launches Craft — its first image generation model, trained on human-designed templates - TechRadar",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-25",
+    "tags": []
+  },
+  "30bbfbaa4076aaa3233231e81431190b2db395a4": {
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNMGdoOThZbC1wVjhKS3VIZktXcTlhR0xuYVRwR1RVUWZ4Z3dibFhOVkdfaWNqcjd2RnJwWk5pOWpkVllKNURqVW51X2l0ZjNNQ1M0R0RPUGpHY29hS080bnpzR1QxVmFjNGxmSHJ5ZTBCVnZDSE5FeWl0NEVlSTlZQUpxTEdkQWRiMkllZElLbnRDZmxVMC1WN2VZXzZUaDBIbERONVd4dTVnaG1QVW5LU0xPYnAtT0JUOFd5X0JIbnVISkhYLWR2eQ?oc=5",
+    "title": "New AI model fuses satellite signals to sharpen river water level forecasts - 24-7PressRelease.com",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-10-25",
+    "tags": [
+      "timeseries"
+    ]
+  },
+  "a809332edc384a982a89de981c6242b6b26de1a8": {
+    "url": "https://arxiv.org/abs/2610.30043",
+    "title": "TARSphere: A Robot-Oriented Full-Stack Framework for Long-Horizon Embodied Agents in Evolving Physical and Social Environments",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-10-25",
+    "tags": []
+  },
+  "9afbb952e1c0f0b3e14856bd0d2e218447c745eb": {
+    "url": "https://arxiv.org/abs/2610.22722",
+    "title": "The LLM-Attacker: A Unified Red-Team Framework for Privacy Evaluation of Split and Distributed LLM Systems",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-10-25",
+    "tags": []
+  },
+  "3eba8a54549fb359f73528912e0e84244d29c82f": {
+    "url": "https://arxiv.org/abs/2610.04184",
+    "title": "EvalResearchBench: Can AI Agents Build Their Own Feedback for Recursive Self-Improvement?",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-10-25",
+    "tags": []
   }
 }
