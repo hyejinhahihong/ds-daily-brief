@@ -102175,5 +102175,1110 @@
     "source_tier": 1,
     "first_seen": "2026-10-26",
     "tags": []
+  },
+  "9401fe00400266b3a1868bd71c49efc3ebf6081b": {
+    "url": "https://engineering.fb.com/2026/10/26/open-source/ocp-summit-2026-meta-networking-talks/",
+    "title": "Meta Networking at the 2026 OCP Global Summit: Open Innovation for Scale-Up, Scale-Out, and Scale-Across AI Networks",
+    "category": "mlops",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "deployment",
+      "infrastructure"
+    ]
+  },
+  "8ed93bec790144d55397bfd44b1812a9f10ebd2d": {
+    "url": "https://aws.amazon.com/blogs/machine-learning/fleet-wide-computer-vision-lifecycle-at-the-edge-with-sagemaker-sdk-v3/",
+    "title": "Fleet-wide computer vision lifecycle at the edge with SageMaker SDK v3",
+    "category": "mlops",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "deployment",
+      "monitoring",
+      "drift"
+    ]
+  },
+  "0f715e1693d7c6b7d219b2afbd429b317d5e50d8": {
+    "url": "https://aws.amazon.com/blogs/machine-learning/groundhog-day-for-ai-agents-prompt-caching-patterns-for-using-openai-models-on-amazon-bedrock/",
+    "title": "Groundhog Day for AI agents: Prompt caching patterns for using OpenAI models on Amazon Bedrock",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "tool-use",
+      "orchestration"
+    ]
+  },
+  "e5e4c3ae2b7984fd46d4694158614fde6cbde655": {
+    "url": "https://aws.amazon.com/blogs/machine-learning/build-agentic-retrieval-on-a-managed-amazon-bedrock-knowledge-base-with-cdk/",
+    "title": "Build agentic retrieval on a Managed Amazon Bedrock Knowledge Base with CDK",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "multi-agent",
+      "orchestration"
+    ]
+  },
+  "4cd82f93193128969c95620957e4ddb1f1d65f4a": {
+    "url": "https://machinelearning.apple.com/research/gharp-head-animation",
+    "title": "GHARP: Real-Time Gaussian Head Animation from Large-Scale Reconstruction Prior",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "3d-vision",
+      "animation"
+    ]
+  },
+  "1bb838b3befa3587ab3ce38e59741790f5c22924": {
+    "url": "https://developer.nvidia.com/blog/how-nvidia-minerva-turns-telemetry-chaos-into-peak-gpu-yield/",
+    "title": "How NVIDIA Minerva Turns Telemetry Chaos Into Peak GPU Yield",
+    "category": "mlops",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "monitoring",
+      "deployment"
+    ]
+  },
+  "56260fcd11d47ed1a5c9b22cbca55ea4b8c31702": {
+    "url": "https://developer.nvidia.com/blog/how-nvidia-mission-control-2-5-brings-autonomous-recovery-to-kubernetes/",
+    "title": "How NVIDIA Mission Control 2.5 Brings Autonomous Recovery to Kubernetes",
+    "category": "mlops",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "deployment",
+      "monitoring"
+    ]
+  },
+  "250e5d8f302445e732f11c3d93295dd5649f2f7e": {
+    "url": "https://openai.com/index/greptile-code-review-codex-astra",
+    "title": "Greptile takes bug detection beyond code review with GPT-6 Astra",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "tool-use",
+      "function-calling"
+    ]
+  },
+  "f16aefe89a6e3f3b8efed940fa1afba45d52bb2d": {
+    "url": "https://openai.com/index/building-scientific-understanding-with-academic-communities",
+    "title": "Working with academic communities to build scientific understanding",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "evaluation",
+      "benchmark"
+    ]
+  },
+  "1a1d4bf2fc111eb8468802ff9bbd62e331b7f1cf": {
+    "url": "https://openai.com/index/gpt-6-1-sol-coderabbit-code-security",
+    "title": "GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "tool-use",
+      "function-calling"
+    ]
+  },
+  "64d59b55a8fb866695c8c1e923e768f9baf418cb": {
+    "url": "https://openai.com/index/chatgpt-expanding-world-of-work",
+    "title": "ChatGPT’s expanding world of work",
+    "category": "industry-application",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "adoption"
+    ]
+  },
+  "eb7708c5f537ab79bfe683ac06695862c6627f7a": {
+    "url": "https://openai.com/index/fanatics-streamline-fan-experience",
+    "title": "How Fanatics and OpenAI streamline the fan experience",
+    "category": "industry-application",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "adoption"
+    ]
+  },
+  "8f2f08b6e197805b4e591a57a55e222a54e44f14": {
+    "url": "https://openai.com/index/openai-cut-incident-investigation",
+    "title": "How Ultrafast cut incident investigation from hours to minutes at OpenAI",
+    "category": "practice",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "workflow"
+    ]
+  },
+  "1758535ac6be3e6bbbbd229f2163da1b6bc77452": {
+    "url": "https://openai.com/index/introducing-gpt-6-1-terra",
+    "title": "Introducing GPT-6.1 Terra",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "8475093c4b1d02f236523be2861893b117b12b3b": {
+    "url": "https://netflixtechblog.com/making-failure-diagnosis-reliable-with-pensive-ai-6b0811a1c015?source=rss----2615bd06b42e---4",
+    "title": "Making Failure Diagnosis Reliable with Pensive AI",
+    "category": "mlops",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "monitoring",
+      "deployment"
+    ]
+  },
+  "7028f0740bab9c81f94f2e8aa0c1a90e47af9801": {
+    "url": "https://netflixtechblog.com/multi-ratio-video-resizing-for-mobile-feed-and-marketing-2e6b42810f49?source=rss----2615bd06b42e---4",
+    "title": "Multi‑Ratio Video Resizing for Mobile Feed and Marketing",
+    "category": "industry-application",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "video-processing"
+    ]
+  },
+  "8b1ad81c7872a1c4b4ffd51272fd6b147257a303": {
+    "url": "https://tldr.tech/ai/2026-10-26",
+    "title": "Apple’s 20B model 📱, Kimi K3.1 Pro 🧠, Block Dessa 🗣️, frontier training security 🔐",
+    "category": "llm-foundation-model",
+    "source_tier": 2,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "model-release"
+    ]
+  },
+  "89c03e7259490f75140dd4b1cdcef27e29dbe758": {
+    "url": "https://www.oreilly.com/radar/?p=20064",
+    "title": "This Week in AI: AI’s Growing Pains",
+    "category": "industry-application",
+    "source_tier": 2,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "chip-shortage",
+      "ai-scaling"
+    ]
+  },
+  "b2f70752c7908c45a0459b6c4570f311f7257eb1": {
+    "url": "https://www.oreilly.com/radar/soloists-copy-pasters-and-tourists/",
+    "title": "Soloists, Copy-Pasters, and Tourists",
+    "category": "practice",
+    "source_tier": 2,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "ai-adoption",
+      "developer-workflow"
+    ]
+  },
+  "514209c440a3beaaed140f27a2273dcd722c0e2c": {
+    "url": "https://towardsdatascience.com/what-makes-ai-written-stories-feel-off/",
+    "title": "What Makes AI-Written Stories Feel Off?",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "cd1801de4cf5264f3f498e612089623be6556b76": {
+    "url": "https://towardsdatascience.com/opening-the-box-can-machine-learning-resolve-schrdingers-cat/",
+    "title": "Opening the Box: Can Machine Learning Resolve Schrödinger’s Cat?",
+    "category": "deep-learning",
+    "source_tier": 3,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "992fdc22358ecab39644667240a64d432c6c0522": {
+    "url": "https://towardsdatascience.com/my-machine-learning-pipeline-cheated-and-cross-validation-never-noticed/",
+    "title": "My Machine Learning Pipeline Cheated, and Cross-Validation Never Noticed",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "model-evaluation",
+      "data-leakage"
+    ]
+  },
+  "fe2c5e22d1274debf9ffcb56f094fca2a2c4819d": {
+    "url": "https://towardsdatascience.com/claude-code-vs-cursor-what-a-field-test-shows-that-the-feature-comparisons-miss/",
+    "title": "Claude Code vs. Cursor: What a Field Test Shows That the Feature Comparisons Miss",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "llm-tooling",
+      "benchmark"
+    ]
+  },
+  "b5d2bd3b2fdda411847bea6d556c15a480c184f2": {
+    "url": "https://machinelearningmastery.com/robust-serialization-with-json-and-custom-types/",
+    "title": "Robust Serialization with JSON and Custom Types",
+    "category": "practice",
+    "source_tier": 3,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "7e606632a3d43bae4b6cb4674435241d6f190f31": {
+    "url": "https://www.analyticsvidhya.com/blog/2026/10/astra-vs-argon-vs-opus/",
+    "title": "GPT-6 Astra vs Gemini 4 Argon vs Claude Opus 5.5: Full Comparsion",
+    "category": "llm-foundation-model",
+    "source_tier": 3,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "model-comparison"
+    ]
+  },
+  "a3e5e3993999079e77563f71772f87cc4c232fea": {
+    "url": "https://www.technologyreview.com/2026/10/26/1147672/will-the-real-anthropic-please-stand-up/",
+    "title": "Will the real Anthropic please stand up",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "299eb2563957f8f110a63fe666ae89b59081b9f7": {
+    "url": "https://www.technologyreview.com/2026/10/26/1147650/the-download-everyday-ai-harms-nuclear-spaceflight/",
+    "title": "The Download: everyday AI harms and the race to nuclear spaceflight",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "8b97b35d7a871fc54073acd24cfeddc03b799c0b": {
+    "url": "https://www.technologyreview.com/2026/10/26/1147645/the-focus-on-ai-safety-disasters-ignores-everyday-harms/",
+    "title": "The focus on AI safety disasters ignores everyday harms",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "d57e9a8a9f2db5fe0289a7e7eca3a8f1ddbdde61": {
+    "url": "https://spectrum.ieee.org/ieee-xplore-digital-library-ai",
+    "title": "IEEE Xplore Digital Library Adds AI Assistant",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "rag",
+      "research-tool"
+    ]
+  },
+  "2ee31f3d9c920d1d543b203e7452918700c969f8": {
+    "url": "https://spectrum.ieee.org/poetry-for-engineers-of-code-and-shortleaf-pine",
+    "title": "Poetry for Engineers: Of Code and Shortleaf Pine",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "8d6b6f60f40a0ec4b6170df7dff17a703fc22a84": {
+    "url": "https://techcrunch.com/2026/10/26/anthropics-ipo-filing-reveals-its-strategy-for-keeping-enterprise-customers-hooked/",
+    "title": "Anthropic’s IPO filing reveals its strategy for keeping enterprise customers hooked",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "62326578878251f201e9f7f034cccea6bdb0d9d2": {
+    "url": "https://techcrunch.com/2026/10/26/spacex-locks-in-40b-gpu-financing-deal-with-apollo/",
+    "title": "SpaceX locks in $40B GPU financing deal with Apollo",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "7ca6b100a30f009334c28bd1ec0727f353305f99": {
+    "url": "https://techcrunch.com/2026/10/26/anthropic-officially-files-for-its-public-debut/",
+    "title": "Anthropic officially files for its public debut",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "c95cc9144761b871191ae7d5dabc5a794fdff56b": {
+    "url": "https://techcrunch.com/2026/10/24/will-ai-expose-the-rickety-infrastructure-of-the-internet/",
+    "title": "Will AI expose the rickety infrastructure of the internet?",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "3291964448bf63b8259a4d0f9e2a9f619f21fcdd": {
+    "url": "https://arstechnica.com/gadgets/2026/10/microsoft-offers-voluntary-buyouts-to-60000-employees/",
+    "title": "Microsoft offers to buy out a quarter of its workforce",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "ff235960aebe93e3342415707714c78886af3788": {
+    "url": "https://arstechnica.com/health/2026/10/whats-worse-than-having-eye-worms-having-eye-worms-with-babies/",
+    "title": "Worms mate in man's eyes, get plucked out right before larvae burst out",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "e690224c4db60bf8bfa8e86cb7a1670a7e204273": {
+    "url": "https://arstechnica.com/science/2026/10/meet-the-real-life-scottish-surgeon-who-inspired-sherlock-holmes/",
+    "title": "Meet the real-life Scottish surgeon who inspired Sherlock Holmes",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "93eb651fa249ea23799e96710d9a15b375f8beed": {
+    "url": "https://arstechnica.com/apple/2026/10/apple-releases-ios-and-macos-27-2-with-new-siri-ai-features-new-music-logo/",
+    "title": "Apple releases iOS and macOS 27.2 with new Siri AI features, new Music logo",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "prompting"
+    ]
+  },
+  "ca17970b897c2bdedce20cc03be6a31d5dd61f10": {
+    "url": "https://arstechnica.com/apple/2026/10/apple-reveals-updated-ipad-mini-with-a-bigger-oled-screen-for-700/",
+    "title": "Apple reveals updated iPad mini with a bigger OLED screen for $700",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "603e1fd3a28bff8f9286ebfe9b28f60ac035e02e": {
+    "url": "https://arstechnica.com/ai/2026/10/boston-dynamics-employees-want-to-block-sale-of-robot-dogs-to-ice/",
+    "title": "ICE plan to buy robot dogs spurs protest from hundreds of Boston Dynamics employees",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "8895e47dd322e274126f79a08d2b0ba749c52dc1": {
+    "url": "https://arstechnica.com/tech-policy/2026/10/musk-accuses-ukraine-of-violating-starlink-terms-with-deadly-drone-strikes/",
+    "title": "Musk accuses Ukraine of violating Starlink terms with deadly drone strikes",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "e2358621b2dbc8321e08a0ca298305da1b149aa6": {
+    "url": "https://arstechnica.com/tech-policy/2026/10/highway-thieves-are-spoofing-gps-to-steal-millions-in-data-center-bound-cargo/",
+    "title": "Highway thieves are spoofing GPS to steal millions in data center-bound cargo",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "8e8f0387002bfcb3f8a3dc9983d2bc4507e091ee": {
+    "url": "https://arstechnica.com/gadgets/2026/10/some-iphone-duo-screens-are-already-failing/",
+    "title": "Some iPhone Duo screens are already failing",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "424b22ba2a89868553a77ccb146dfb00ee51fa6b": {
+    "url": "https://arstechnica.com/cars/2026/10/f1-in-texas-one-more-race-and-well-have-a-new-champion/",
+    "title": "F1 in Texas: The American race that fans love to attend",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "400e513e48467761a00a9a673a50e1514b2d18ed": {
+    "url": "https://arstechnica.com/cars/2026/10/tesla-wants-ai-and-software-to-be-its-next-profit-engine/",
+    "title": "Tesla gave up the EV crown. Now it wants to win the autonomy race.",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "09b74834de1240c5785b9ddb77bdf04ea1c7943a": {
+    "url": "https://arstechnica.com/gadgets/2026/10/from-impulse-purchase-to-pocket-studio-the-m-vave-fm-1/",
+    "title": "From impulse purchase to pocket studio: The M-Vave FM-1",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "860db5a2c35b77183119a4d6bce41915ea0ad95b": {
+    "url": "https://www.wired.com/story/anthropic-prospectus-leaves-out-some-numbers/",
+    "title": "Why Anthropic’s IPO Prospectus Is Missing So Many Key Figures",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "e56e60adc9604a0d7ce2e52082e402fe2f2bc53a": {
+    "url": "https://www.wired.com/story/the-anthropic-ipo-is-also-a-doomsday-primer/",
+    "title": "The Anthropic S-1 Filing Is Also an AI Doomsday Primer",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "932791a914954d081d85d466523930c29d1a5e3e": {
+    "url": "https://www.wired.com/story/anthropic-ipo-filings-reveal-finances-risks-strategy/",
+    "title": "Anthropic’s IPO Prospectus Reveals What’s Under the Hood",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "4944c1d1afa9e5261c149daf5990137c5d9e0a0f": {
+    "url": "https://www.wired.com/story/ai-agents-are-trying-to-be-journalists-now/",
+    "title": "Meet the AI Agents Trying to Be Real-Life Journalists",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "6d8ba0a0b78a2116067a1ec23e0c838b78552242": {
+    "url": "https://www.wired.com/story/this-ai-radio-hosts-speaks-spanish-and-backs-immigrants-its-winning-over-listeners/",
+    "title": "This AI Radio Host Speaks Spanish and Backs Immigrants. It’s Winning Over Listeners",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "a99d6d420c3ac8a659f6111b7ffc762979c03a99": {
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOQVU2V3Q0WElDSlhyRGJBS3IwMkRidWZHTVk4dmhNWWt0d2tMRlFTWHVjU0E1RXkyUlMzZ05YSzFWcnJYU1p4MUlhblBqcy1PeTJPWXYtaF9VUHJoc2FCYUhITUZPVHhsM3NRX29zSEpFSFRSbXpodEcxVGtvYy1pWnZ3?oc=5",
+    "title": "OpenAI Launches GPT-6.1 Terra, Its Half-Good AI Model at Half the Price - Decrypt",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "363448a6b4b4cbce397493eae82c6afcb69c42ad": {
+    "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQQjQ2UlZUdjNxQ3paUHM2djJFNk42NjF1LW5YLUR1Y3RtZUE3dnBwcTVadThUZHpxTmVMVGZtQTJTWEFYZWh3QS1lT1FKTDB2SU5zTE5iOTlqMGEyX0NobWxXSjdTbFpXUjQwR3ZVSXNjLWdxeHhGazM4Y2xBa1VpQ3lTSzF4Ymg0ejNCTEdsZC1wc1FUY0tQMFpGQkU0OHhIQzlnVEtUWEI0V0o1eEM4bUtERks4S2VYd01vQTFmLTJaWVE?oc=5",
+    "title": "EXL’s iMerit Launches Scholars Platform for AI Model Training and Evaluation - HPCwire",
+    "category": "mlops",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "8bc1eba91a36a51f863c9c24aa4b996013f323c0": {
+    "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPcXRmSjFmOHdEU3JYbDhEMEpTRXU5amxwOTdpTHN6cG1YOVJ6UW9wb1VyV0h0TGMzSzNsZ2N5cTlreDBWTFZrT21PX3JXRGxxV0F1UUdVVnBTelVTRURoaEF0OUFjeGVOMDBmV3hfTDRLcFpOTTRxLUg0am13RmRYanpiS2R4ZXpJ?oc=5",
+    "title": "OpenAI Launches GPT-6.1 Terra, Its Half-Good AI Model at Half the Price - Yahoo Tech",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "b4feac9e83823dc4e27dbf4dbd1d3d9957beae91": {
+    "url": "https://news.google.com/rss/articles/CBMihgFBVV95cUxQd0hqN19iSjh6QmV2eEFnLWFhc1VlVDFXVFBxel9vb1RYSnd0X1BYZUdEYXMzZFVka29RbWxqT1pjYnlSRnY5NEtLT3J6MGtTMkpZSXIzenRTSnRTaF9TSlVnM3VvZ2MwWmVjUEctU3FLN1Blb18zckkweUJvTTE0RmhUX0lyUQ?oc=5",
+    "title": "Anthropic makes US IPO filing public amid AI market concerns - The Jerusalem Post",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "13f073cfd95f77856b92d5fee850e1c1c188a161": {
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPUHduQm8yZXV4UFp4NjJWdEx6V083ellmQUtrUUJ2bXo0S1FLaUFqblVQZzRLVnpDQkxsdFJSZDF6ZzVJNlNNRWptek1LRXozZnJvM29lMWJ4X2JMV3A1ZzRkSTBRNkhndXNjZUVyQ3hKRW5pZ1FaRm0zNkNKUmRUZ2JKNk80bUtHdjlQN1A5czZYSUg2NXl6TmR4LS0yMkFKMDltSXdBV1ZFbTI4NWNFOUxlUk1VZEJ4enc?oc=5",
+    "title": "Cadence launches Maestro AI model portfolio for chip design - StreetInsider",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "c348cda576952e37499795b6c27f128525f14afe": {
+    "url": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9aVUNfaEpNcUdLd1g3M2J1THJfVmF5b05qdG5VZkZUd3AwdUtvUXUyQmwwenA3WmxaWEhYVlNBQmZ6MjZwX1AyTDdRb2djVEh5VkRtcWtfZzNzRWEtOXdrcjdxbHI4cm9qS0s4?oc=5",
+    "title": "AI Colonies Are Coming - Time Magazine",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "fa423b6158257c1004e234fe41467893a1d707dc": {
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPbjY5TUNMREJRZEFJVUd0TEUwX0xocHY2blk1Uk8zVHFRNjZnLWJFVTFObDg5T0d3RVdPaWVJQmRBS192OWhiNDZ2dHhxOE9Db3BIRDc0UkRwZjQzS0tUSEZRMF9URmg4dG85T2JOZ1l5SFhaSi1FRlRrOXV1ZExWM1ZtMERHVVJ3Ymg1ZnVkSGpmMzVUNzhlTHFUM2hqR0ltMFJLWVJ3M0JVMFBlZ0JIOXlLT1dRMm1KZlE?oc=5",
+    "title": "Exclusive: iMerit launches platform to connect AI developers with specialized domain experts - SiliconANGLE",
+    "category": "mlops",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "6ca97c847e5811c62c6c971684061d82713b47ef": {
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOYWgxWWpZQmVncVp4ekNpTlpBWjBTWVVtWkZBTXdNdnJydjh4dkFSRWxmdUNqTDRxay1heG5JUUk4eV9LNUgtNkFkeDFxVExYQ2s0RWdJSkFCVHhIRWlzZnJPem1pa3lEV1AwS0ZDZDNLZXZsZ0VQWVRaWTZHamlGWkl0clczdU9OZ2lRQzRfOXotZERKZEdDTnR6Y25xRHo1Wnc?oc=5",
+    "title": "Moonshot AI Launches More Powerful Kimi Model - Caixin Global",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "01ebdaad6c108d8852b567aed5df8c5a7dc031a5": {
+    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTE1zc2NoRXdKNGVlOGtvcnFndDlWMEpQMl9nd0hJQTkzUXdEaWdqTnMwajYyMUFfdmw4MDZJWEZpcnpyNEVMNlpucGdaU3FfT1RrNWJyd05DMXdVV1lpMTQ1dWJzODdUOC01cDVOUkNha0dWNGYxTkE?oc=5",
+    "title": "China's iFlytek launches SparkAuto Space 3.0 cockpit, claims on-device AI model works without internet - BigGo Finance",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "765f5e3fbecf59afbde09ee0b7df95e00f8d8665": {
+    "url": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNQmtfcmM0WjdtVWtCQzg5NGNWYV9WQS1nOXlfT0Rod1djQkdLTmRjeDBYUndhd3FlUHo5TTV4bG1GcExjUHE2VWVfU0tHZlhBQUtVUVlKTjg0eDF2QWJfMlZWcUFYZnZ3dW9wLVlXMDljc1QtbEVMUHpFQ3RUSVVtNnRB?oc=5",
+    "title": "iMerit Launches Scholars Platform to Scale Expert-Led AI Training and Evaluation - Unite.AI",
+    "category": "practice",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "ad6e1911ebd2ffcad94d31ecda732b29300562b8": {
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNV3pZSThNT094YTlYSjB1YjhIVG5ORGZXMWp5YjFCR1A0UFhPOU15VE9BRVBheGtlTlNZQUxJTUphOURaWnllMkMyRHI1TTlDYXMtYWlObUViNk41WV9WTVlpOXN3d194TFh2UTR4d0RyOE55WGtDVlc1dkFOMzFLc3UxOG9kU0h0RWhoNjlQdWF1QVhLdkJTX1djaGl4WjdseXJiSVFKeVZYOUpWYlhGQWN3TUZUYjBjYWY5TjhxeXpRUXY1dzkyZQ?oc=5",
+    "title": "Fortinet Launches FortiGuard Inline AI Security Service to Expand Enterprise AI Protection - citybiz",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "60a25b9f24f5b81305deaeb1b30f2b6f74e72d5b": {
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNZW51V1FKalNNckJoVkVWa3pNVm9lUXVBZXEwVVVGeEEtalhWTUpUYzRsbERtdE5mQnBONXBMYzlORWZOaTNjZHFvYzV0NFY3N2Z1OXVYQ05mZ2NCWEUxV2pvMUpvRTBUNjJkVmxaLWY3SHViTnFfeV8xMTdjQWtJaW1jbGhmLVlYZkJpZjZaeXVFX2M5WVc5UHhNOFJBdl9nY05vazNwYk43Rm5fWERJZGV1a3p6WEd1RElv?oc=5",
+    "title": "Atos Launches Genesis Intelligence AI Suite for Regulated Enterprises - HPCwire",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "17ee72674321de44bf037d5334ca63f0e3f94926": {
+    "url": "https://news.google.com/rss/articles/CBMihAFBVV95cUxORW53eVo3OXkyQTVrTUZObGM1OEFxcEVWdlBmallCRUE0cTZPRE8zZmg0TjZ6R25rcDZTZ0xwbEozRnZYYVpFRzJaS1RlUnJqMjhyUmVzYnA3NXVtQWtuUVBZOURJX0FoOGNmRjJFMWNYTkFSLVBJZEZZcDIyLUoyRDhjaG4?oc=5",
+    "title": "H2O.ai's TimeH2O Beats Mistral, Google, and Amazon in Time-Series Forecasting - Yahoo Finance Singapore",
+    "category": "predictive-modeling",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "timeseries"
+    ]
+  },
+  "ba38634dada35e293a068d83a97f96f3777bbab0": {
+    "url": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPb3lGdkJfYmtJeTFWMU9XNFlvWEFBdkJpVHZEMjByRkl5Tjl6RjFORFdKdTV0d2RWYlo1NGdVWktteTZQSTl4N2tXc1NwNGtrNi1OVW9mYlNSMldWa0hWWG50SVU0UzFTLVoyWmZieEljc0JtbndCYVNjZmhyRHFnd3IzSExRLUt1UkdKbmVua2p0YmJxTFRDaWNjM0JTRzF6b3RxcnNqU2xjNUdVZVJSWjktbGRXZHJsMVdCTXh4VGJzcmJjNjl5MkZlSkg4V1BUYWc?oc=5",
+    "title": "Texas Athletics and Partners Launch Bevo Lab, Bringing Together Sports, AI and Analytics - HPCwire",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "dcf433a2c2782077e9bcfaa4a503c2182d9d3528": {
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxONmp2UHhsdEFySGEtcVllLXBmWlVZbDhSMGNYYXpHV1FBME1zdW5zYlJQb2U5ZHhfNVBRRDNCWUtBc242STVKMTJDYnV6bl9PSlJKT2VBUTZ4V3A2R3h5TndnT2NLMXpYN0RucUVoa2RzVUVPRk5xbXg0LW05c3FrQ2F2Yi1pZjlNUHVwd1J3dUlMLUxPRG1hN3VjZXZvTGZQUXVTY0Z0bTZyRHpQU0ozN2FmVXE5NGFJVjVFdEdPcTFlTnZiSzBsNVlCRknSAdIBQVVfeXFMT21fRERZQlMzNmlKWks3QkJHSXc2X1hOUFMzZUE0NHYtTGhybDBjS1E3RW1zZ2VzRmROdUxTRnV2cVlMUy1SR2ZwNDZuWTlsR1FZblVBSXNldlMzWFVRYXJJTlZXLTgwLTlOcXJZWDI4QTV0M0MxeU1ObXBZTGp1djZjSndNTmVTWVVMS1IxTWxqZlZoaHUyQ3gwOGF0ZFBQYmlBX28xdGI0V1ZzbDNlY1VkMGJ3Tmo0Rk1ldHJLZUV3bWpvajRTQTRCOTZBNE10bmx3?oc=5",
+    "title": "Nearly half of new Korean AI services based on Chinese foundation models - The Korea Times",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "478984768e60052cdd119cc0a225ce3c8834558f": {
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPRHJpdUhqMEFGOWtDSTBiZ3FVcWM1bXoxdXZRVFBtWlpjM18zZGcwSnB1R2p5cXF2RDQxOHBmeXR5LXFSU3RwZTV3QXhMQTItRW85QmpOVzZhWVBMVmNzdTFwUDc4QTZ6Y295SVJ4V1NMaVNfd2l3TEtzMWFnX0tRYlNqSUtHOTVfTDZCa3JRaDdSMmxGNGFPNXVNY2JDem80OUVRYTNfOEs4cmRiU1VJUlJkbW96Zw?oc=5",
+    "title": "Ritual Launches AI-Native Layer 1 for Autonomous Agents - TradingView",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "616a6f3e918e1e180af283e9778f2aeeaa9b16ac": {
+    "url": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1sdkZ5M1lHbmZaQ2ZRRTZCRl91WUx1VmIyaVROdVN3bjE3MEllUU5yUjdUbWlGT1pvZkR6ZkMzMXV0RDQ1OG1nMG1pRQ?oc=5",
+    "title": "iPad mini OLED: Price, Release Date, and the 512GB AI Catch - Fello AI",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "ef7e2e1421ba5bdfc07e3392f5288e31c508989b": {
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNenRPckdaRE95dVczUFA4QjVUZVR3SEtJeEN5UjlMSkRtenFTR20ydEpaVXIzclJBZGZkSjk5UGw3LUM5N0tseExjSkw1enE4R0wwWlBhRTVUbHFja2FCOXBSZEtsY1djLWR2VVJHNXkwMjJyb0ExSHpRN25GUjkyOUJYVmVkVnNmeHNSaS1NQlNueXNrRjVVS0NUcV9Ld0tSb3pteU1SMzc0QQ?oc=5",
+    "title": "Moonshot AI launches new Kimi model with reduced hacking capabilities - National Technology News",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "a1f090b4af82fbae2102f883b886ad2937ed3193": {
+    "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOZXZqbGJBOVNfT1JTeFRNbkJ5X1g4VjZmZTREUGdBRUNrTlZZbFhuQTM0QUlfZlFBVXJmeU54M2xBcmowMy1RRmNZRkJjT1RhRHUzNGlZZ2ZjSmFIUDNUSTZ3enEzVGxaUlJ5bmtzN0VHaEJ5N3k5NjB3LUhtcHE3V213WGdjVkdIaWc?oc=5",
+    "title": "AtScale launches AI suite to boost enterprise accuracy - IT Brief UK",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "c72fc9515d9e3c59cf1c53e86d77069a25341a4c": {
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQRHhyV2ZuNU15UTdVYWtuZG5PZGNaWFg3Sk42X2Y3Uk53LVNPQ1c2RmVRRV81M244S3phV3U1N3VUeVNMenVfSEh0aTRtQkZ3MWJDN3djblRDcjgyZjJuOHhHQ0J6Y1A3RWhqVWhSZ0Q3dmpXcDlMVkpkVzhDV3FXUERCdEpQeEU2NmNsUDVKYTdjVVBkZUhsemNqY0w2bVljdlN0ZVRXckttWFQzNlF2M3NRRjZCQ3YzemdXaGNJZXhhb2R6U1dDYnlB?oc=5",
+    "title": "Canva launches a home-grown AI image generation model - Startup Daily",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "5b3f03eccec9c19f6af48856b4b5f2e1b6224883": {
+    "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPNUYxc01HUW9oTWFScGZZdGJUNW9JVDJkUkwxa1Y2ckxyU1JNRDBtdms5d3N1THVXRU51WWxnczJmSTkwakFLcE9kN1phNUc4X2hyR1ppY0cwMm54d2V4RnRUZG9FT19tQ2phR2MxRGhzT3ZRV3RIWXpnR0FxX0J3ZThVU3F2NHZQWDhVU25jcEFVUTVFLXlwRERYZ1o5WTRtRVFqSmhWdnRHcEhINWpJcTNsNEcyRzlfN1dEVERualQ2Z3p20gHKAUFVX3lxTE04V3ppYzRRM05QMkpiZTZKTnZjZWNwQWRMTHlEVmtndnE0NjBNVVVweUpSejQ2RzBwSDF5M3pVQXlBQjBsMHQtOGlxLTFkckVHUUtzYXo0QkZJMkxMYmxNM3hpTl9hWXdzSURsNzlTaEdTdnI1R1d1OU5Pa0Qtb2ttUzlualIzZ0NhN1BPUHE5ZEtoMEFaVFFjdmpqRmFpVXBKdG1JbUFWMG1YWlJqMU83VHk2OHBlY2xKdC1hS05ZWno0czhHSWhyOEE?oc=5",
+    "title": "Amid rising cyber threats, Moonshot AI limits hacking capabilities in latest model - Firstpost",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "73fea0b44f4a2f98c9e991f0bfb51817615699fa": {
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOMWZxaDlBcGlNbVctQjcwdEpNMWdkSjh3dU1LZzl2Xy1WcXNsd2Vjbm12YVBNUEpEb1I1RlZtS04zbWxLcTMyMjQ4YjhXZ3ZUOXhCeVFlZXFzYTNhbm9ZQmJfLUlvV3BMZDNzc0x0M0hxMXVoOG9SRHNzYk5wT0JZNDdfNzZuZ2NIU2lGWExmbU5wcmF2SlVtSi1pMm92VWM?oc=5",
+    "title": "Block Unveils Dessa Voice AI as Critics Warn of Phone Scams - Northeast Times",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "c8609594704e3116b9239b616871222987084006": {
+    "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQTi05N1VCbW0tT1h5cEZrTjZVQVQ1RDhKNjdGTXdhSGpGMFk1NW5HRUw1R1JUb096MGtGRXVjYS1qV25mZFFyUGN3alp1eDR4TkFxRmxXdEhSUnJ6cDlGNHZfUFB5SG9QeVRDM0Y5MG1MWDBSaWI4amZ1cXhGSnc1Wk1wbHZ4WkpEcTl0LWtyVW1xV01lVlNEeU9BY0tyZ3M?oc=5",
+    "title": "Canva launches Craft, its first in-house AI image model - t2ONLINE",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "2a3d268bfdb7df5882f39fa0232ff26fce63a296": {
+    "url": "https://news.google.com/rss/articles/CBMidkFVX3lxTFBpNWtra195V0tKN3lHemRwWTdfbmk4VUtnZXBCVE15cFUxaUpidFFQQksydTd4RUw5MVh3NnJOZ2N4ZExycnh4YkFueXpLdXRNRHlFVjBxSDF3b2p6bUN2dlM5TC05QzdsbVNLY0lMd1Jzak85UlE?oc=5",
+    "title": "Kimi K3.1 Pro Rate-Limited Two Days After Launch; Moonshot AI Compensates Members With One Week's Quota - BigGo Finance",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "773795b883b98804fbb96beeb40d24c17a081351": {
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxORVQ4TnE0c2Fxby1Rcmo5QjBXRlg0aE5HQUh5R1ZlVHJyUnlnM0xyay1kLTlpaHVjeFduTnVsdVVKQ3hoMk1mUUVxZHp1QllacVdoM2hqMnVaN2ZRczE4VU1keEhPalgwcVBHSlkxUUlUVGZGQmx1RGN0RTE3TVQ3TTFDRW5JdkFyX2NIVThPd3pTSGNjSlJKbDd2ZGtYNnM5XzM1VGZyUVBGZ1B6Vno4?oc=5",
+    "title": "Canva launches Craft, its first in-house AI image model, ranks second globally - Indian Television Dot Com",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "43b79e3fa5179b53513a671296b8aad2ca35f6f2": {
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQeDRoUXNmUU9ESVZXSDBlX1JSOW1jQ2RTZktDVUVvM0FRVU03MUtnT3M3SnBIc2wtMHZfcHgyR3hKdlF3RDU2Um82SkdKQVN5RFVSRERSMzNJajNXVng4dk5NVWkxdUpyNGdUWThpVXVhYVdIeHZqa0h3a1M0WjIzU3lSRGlNdDhHLXRGUk5EM29ZaTEzaGxiVDZSdWNmZXVMdERVOFdTNjZQeldqNzhpOWwwcjVkZEU?oc=5",
+    "title": "China’s Moonshot AI Restricts Kimi K3.1 Pro’s Cyber Capabilities Ahead of Open-Weight Release - Tekedia",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "6cab16da989fd34f059674a2c001da1f58a0644c": {
+    "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNVlI4dEx5ZmItbEtqNmRuUTFzV1IyQ0pZa1oydjlUVUlCdHB0MEozMVdSd0JOdU40M1A3SHhKOVpoN1FKZHo1QTB5eEhNdUV4Z2pYOXpZSWt0MTJwellwVnRRR2tYRmwzRUZ3VEhVYWpEcXZLckVlWE1EbG5pYUIzd3RFMTFXX2JyVEFmNkRVWUJTLV8ydEFEZDdURXlrUlhUcmfSAaIBQVVfeXFMTVZSOHRMeWZiLWxLajZkblExc1dSMkNKWWtaMnY5VFVJQnRwdDBKMzFXUndCTnVONDNQN0h4SjlaaDdRSmR6NUEweXhITXVFeGdqWDl6WUlrdDEycHpZcFZ0UUdrWEZsM0VGd1RIVWFqRHF2S3JFZVhNRGxuaWFCM3d0RTExV19iclRBZjZEVVlCUy1fMnRBRGQ3VEV5a1JYVHJn?oc=5",
+    "title": "Nanbeige Releases Nanbeige4.3-33B, a 33B Open Agentic Coding Model - MarkTechPost",
+    "category": "ai-agent",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "88e57090be3989b31886a9bc0c399859e6d3a7f0": {
+    "url": "https://news.google.com/rss/articles/CBMiigJBVV95cUxOSmtZb0dybWhQREVtZW9JVmQydUZKZTQtN2dUZmZiek5sYU9FOV9BV0U3a2lHdTFWZFJmcGQ0OVM2UVU5QXAzSWh3b3RvSkltd25fLUtReFp5MFVCM0o2T2NYNFFQUEkzdWkzM1ZLVFh0QlhheEpSUTZBd2dJbDVTX0F1V3FiVGl4Qk1HRTd3My1xcEpvUGFNZUFtakU0MTVsWHZCd28xbk9GQ2JtQkdFWS03TUh6clVLN013cVpkWURhQXkzOFFJcnRiYVFOTXJvYUNkVWpramZhMEtEWWpNajNpSXo3dzJ0S0E0VUJPaU12SWZheXdzYXg0eG5nQmJxc2p4anVDSkFqd9IBjwJBVV95cUxQZGxOZVp5TTJTYzhoTVh6MlNLckZxMmxzSnc2eVljRUpYRUhkR2hQRDR4WFFiT0YwUlM4cVpUQ1h5Zm9Hcy1xbXlmVXhQQ3htVWFzN00zVGtFLWNZVHd1SkVMUUN0akxEM1NJUzFmV3ZVSjhxRF9wOUlDbTd5XzF1ZXA1aUlDU25NQ1ZZejN2TU9fSmRXUHZTMEJSd25xUG1LWEZQVzMxSkxQRWZCanBWRVVySTBTZ3BJeUFtSHpRWE41Y25fVkpuWDQ0RVgxYl96aFhxblFnYTRfdGk0Qy1XNHBaVV9PelU3RDFfQlJfd2VlNjdmVElnbTJ6MkZWQVJtSEhVQWxPYnRSSVNJS1Nr?oc=5",
+    "title": "ZWAG AI Announces the Launch of Center of Excellence for Linguistic Sovereignty at the Dubai AI Festival - The Manila Times",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "2186267ad390a731753a139fd984f304dde0148d": {
+    "url": "https://news.google.com/rss/articles/CBMiggJBVV95cUxQZnFuVUN5SmM2RVkxMUo0bGNNLUkzSzNXQUZtZFJ4Q2hOVUYyY1A2WFJ4M0JFcVdpeTJUdFNVemp0djNkd2lWbVpHYUNxZnV0MVQ3REFjakxvSzY2cnFpRnp1M1NleFpFa3RGR0NzWXZzcHhkb3QwbmZ3TVBPUkFaamZVcFNlYXJCVTY1TkxwMXQ0WVh6eHYybzNMWmxLQWZMRlkwTDdEQlotMTN5UmRKNUNEX1RtVjIzalNSRC1kX1hfSW1HMTRyMDZJM0ZEaHNCbVNiRnNZVlpHNWN2cExjSmx6Z3lWblpHaG5yV2cwdUIzVzNqaWljUXpiRUxKdVZjZXfSAYcCQVVfeXFMUENIb1RLbE1lM1gxVmlKd3Rvc3hWZlRUR0pXS3NFTl8teXRxQWVKUzNGcGxVSmZ6c2M2b3pXbnhEQXdxMTl4aldiT2o2b2xFUlZBUjVaRV9BYTFCMm9LV1UxSUN4b1N4ZDBib1IzQjZLUXFqS09XaFN5TThnVVE0SEh0Wlljd3FpREg0RXA5cWlNeGJRZUFDZVoyRERxUUlKS0ZtWkxlai1TYTdISUlZUTA5aWpIb2N0dGd0cjJXRk91T3dUTlZBZXNmZ1MzQzR1bWJNRllucjhqYW1Bc2NVX0ZqU1Vicnc4Y3dFSjQzQXVWY0tyREZWd2p4Y2tfOHhQZnBCYUV1NVE?oc=5",
+    "title": "Newborn Town and Viggle Launch AI-Powered 3D Interactive Game, Bringing World Models to Social Gaming - The Manila Times",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "e42550e9c5ad8f8fff7cc400cb71194aec078e46": {
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPM2ZqUnB3VlVTaHYySEROU0gzclFRYTVDWFBLaXl2WUU0Z3d6ZEpnQlo1dDlyaGxuYWlmemROelhlWkVXUThLQUtWVDU2U3NxSmVxVDlDcGYzbmlROHlDTUdEZ2ttYXVEWVV4OFI4d2Z0RjNLWmhpS1FzVzhSNEdPYlUyNEVVcWRaQUI1c2FqYkdIUEZPUXBkSkJpRWVJdE5lR2RyUWd0VUwwUGpENWs0Y2owaWJOWV9wVFJmWExKNlpoT3pPbFJ5Qg?oc=5",
+    "title": "Hyundai's AI powered Bayon SUV launched at Rs 9.99 lakh; CNG model to arrive in January - Business Today",
+    "category": "industry-application",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "d3f949be09879915c6df86088869d5d0cd1eb83e": {
+    "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOOWdkZnROV1dFYjFDQ0VGeUgyd0ZwUWtBcEljX0VpOXdwMXlvNzltQkR4cWFCaFdiNnZnME93MWJvQ0NITV91cWZFOTI5YV9NdC1lb0Npa2VfZk9RVTM1dG84bEVMTEMxbU1DeXB1aFZuMmF2VW9jTjFZRzY4elNNYW1FV2MzUnhIUHJQQ1ZWNHMxdjMtbkxHWHdnS0JJb0dQVkpfR1pR0gGmAUFVX3lxTE45Z2RmdE5XV0ViMUNDRUZ5SDJ3RnBRa0FwSWNfRWk5d3AxeW83OW1CRHhxYUJoV2I2dmcwT3cxYm9DQ0hNX3VxZkU5MjlhX010LWVvQ2lrZV9mT1FVMzV0bzhsRUxMQzFtTUN5cHVoVm4yYXZVb2NOMVlHNjh6U01hbUVXYzNSeEhQclBDVlY0czF2My1uTEdYd2dLQklvR1BWSl9HWlE?oc=5",
+    "title": "Anthropic Launches OSS Scanner, a Free AI Vulnerability Scanner - MarkTechPost",
+    "category": "mlops",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "b4aa3d50a771f341b1d87b63ef21cc708152ef38": {
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxORzUyVEs4Y3ZZVmFUMmN2RVpiVXd0djFsV2lqbEdBNjMyaHA5a2c0ZkRibTMwbFdKZGxqemVvNTZxSEJzbGJwTVUzdjhYVVhaSkh5d0JCQm84OGtXSGlWc0xJdG5tWEVadzAyRC1ibVk2U3ZKVEZwOWhFRUNzMnc5NE9SZWhrLXNMSEd1TldaS1RlaUxT?oc=5",
+    "title": "Braiin launches Force AI to orchestrate RADIUS contact-center models and workflows - OpenTools",
+    "category": "mlops",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "d42452f1cc155d472a30e18b682430409c4eb4b2": {
+    "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxNNlF4Q0ZSNVBfMjZEZzB5Uk9CR1ltNE8zMXVkV0ZHY29lQXBUdlU0SW5XVzZSLUhkMzh2dVdHTVNYSnhmb3ZpUDhTSmNZNDlLWEN6SWtBSHdsMGYzV0JMaWoxVWFkc2I5dWpMM0tGdlpiQU41YmNpalJ3Q1FxeE9tYXozeFl6VFJNZGRTTGpR0gGOAUFVX3lxTE02UXhDRlI1UF8yNkRnMHlST0JHWW00TzMxdWRXRkdjb2VBcFR2VTRJbldXNlItSGQzOHZ1V0dNU1hKeGZvdmlQOFNKY1k0OUtYQ3pJa0FId2wwZjNXQkxpajFVYWRzYjl1akwzS0Z2WmJBTjViY2lqUndDUXF4T21hejN4WXpUUk1kZFNMalE?oc=5",
+    "title": "Hugging Face Releases Carbon-X, a 14B Open DNA Language Model that Brings DNA and Natural Language Together for the First Time - MarkTechPost",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "2b35c2c35f7f5f8f79ac0f14fafa425b26d0d011": {
+    "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTFBKNlJXQlltakNHcmxKaEpIUlR4VC1jZ3VUdkJseEcwOWhOSXV3UEh0VGlJNmlCSzBUOU1oZkhaRTNYcjhFTFk0TWxrWFVhN3ZpeGhJdm1jTXBCdm04Rkd6V0FKeTlNTXJOOVp1TUd6V19sQVZpWXpraVpjc0tyZ9IBfkFVX3lxTFBKNlJXQlltakNHcmxKaEpIUlR4VC1jZ3VUdkJseEcwOWhOSXV3UEh0VGlJNmlCSzBUOU1oZkhaRTNYcjhFTFk0TWxrWFVhN3ZpeGhJdm1jTXBCdm04Rkd6V0FKeTlNTXJOOVp1TUd6V19sQVZpWXpraVpjc0tyZw?oc=5",
+    "title": "NVIDIA Releases Nemotron 3.5 Bolt E4B 4GB: An Open Small Language Model for Local Voice Agents, Game Characters and Robots - MarkTechPost",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "ccd7f0ffb136bf6d6f11bdbf6d77a45409ba50f8": {
+    "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNc0F1bHlzUkJmVWRWd0hha2xraWQ0RHNUa1dxekNjSTFyYnQ3V2VfeGFXRkhzenZkMGhSRlpsWmZWRXRRdC1vc0JiSHNYaHBoOHo1ZnRMUzlDcXg2RlRTdlVDVU52NHBSM0wtaHNyVENwZE1UOXBWSUFNXzlTXy1QaXRiYmlHV043SXV1X2MxalJoVU0?oc=5",
+    "title": "Ollama adds Phonon speech on Macs, with different licences for model variants - OpenTools",
+    "category": "llm-foundation-model",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "a95ec743a2e88f5d89b5844532fec64096be78aa": {
+    "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNQld2Y2lJNFo3RkQwX3daSXBQckEwSGkxS2ctX3Z0U01haEV5MDdKbl9pRzdWQ1E1Q3JXZkVKN3RRV1JCZHlSenFJRGhXZnpnR01fYlUtbUJ5NWVnVklweTRSb1U5NW9qOWZKaG1laWgtYXZ6Vkpxbl9IeFhLYlRGcjgxNjd5X2dQa1ZnVFVXS1k?oc=5",
+    "title": "'Skynet' AI Hijacks Other Models to Launch Attacks - Newsmax",
+    "category": "deep-learning",
+    "source_tier": 4,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "8a77e646571ba4d58515e7833bd3b43420286a74": {
+    "url": "https://www.anthropic.com/news/s1-sec",
+    "title": "Anthropic files S-1 with the SEC for proposed initial public offering",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "c6e0dd4e296af99c5c9ce9ffc30c83124f293467": {
+    "url": "https://arxiv.org/abs/2610.25118",
+    "title": "How Much Feedback Is Needed to Break Template Protection? The Geometric Vulnerability of Biometric Authentication",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "b552032d1a2b080a834a4e3922b2e4baa00c8f9b": {
+    "url": "https://arxiv.org/abs/2610.21109",
+    "title": "Kolab: Benchmarking Human-Agent Collaboration in Long-Horizon Workflows",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "078121e40a81f84a7b9cff5e8d35ab40b4c823c4": {
+    "url": "https://arxiv.org/abs/2610.27364",
+    "title": "Predictive Closure: A Set-Level Characterization of JEPA's Feature Selection",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "XAI"
+    ]
+  },
+  "b95743e7b07bdf2112949414b915209c268349fb": {
+    "url": "https://arxiv.org/abs/2610.27528",
+    "title": "Judging the Justification: Decision Certificate Supervision for Generative Reward Models",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "001dacb82ab45bfbf77f70de581cab42460cdaaf": {
+    "url": "https://arxiv.org/abs/2610.31572",
+    "title": "On the Token Collapse Phenomenon in Textual Graph Soft Prompting",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "496530d5363d22f4020ebd929017b4714efb84b0": {
+    "url": "https://arxiv.org/abs/2610.31779",
+    "title": "FLORA: An Open Model Suite for Scaling Robotics Data Engines",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "3dcf0fa7a9940a0269627faf9877fecb64ce90ad": {
+    "url": "https://arxiv.org/abs/2610.20117",
+    "title": "KANLab: TensorFlow Playground for Kolmogorov-Arnold Networks",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "e1e1135a147c7a004e5befe06f82b838341efc64": {
+    "url": "https://arxiv.org/abs/2610.30524",
+    "title": "LLM2Cert: LLM Synthesis of Certificates with SMT/Lean Verification",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "a91bbbe34ca157a9b7fbed0570183ece48697565": {
+    "url": "https://arxiv.org/abs/2610.19589",
+    "title": "JockeyBench: Evaluating LLM Agents on Horse-Racing Decision-Making",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "589eb8bb0bb373411e3231720f648fed44ada34c": {
+    "url": "https://arxiv.org/abs/2610.31810",
+    "title": "PaperFormalizer: Author-in-the-Loop Autoformalization of Research Papers in Lean",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "f1626553d1a8b1a2811475851a055caeeb5ad1c1": {
+    "url": "https://arxiv.org/abs/2610.31819",
+    "title": "Speculative Diffusion is a Tale of Two Tradeoffs",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "30aa378e46b2846a09fbaaedf6a54bf38b4c1d46": {
+    "url": "https://arxiv.org/abs/2610.28655",
+    "title": "What Git Does Not Record: Provenance Legibility in Two AI-Assisted Research Repositories",
+    "category": "practice",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "1318998d3efc62ba44c12817e11b5b582a32bc6e": {
+    "url": "https://arxiv.org/abs/2610.31423",
+    "title": "FocusVLA: Future-Intent Guided Dynamic View Routing for Vision-Language-Action Models",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "545bf505fe3a5f7b64a929bb1a9e8917958ce288": {
+    "url": "https://arxiv.org/abs/2610.31716",
+    "title": "Does LeWorldModel Preserve Local Action Geometry?",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "024729098f31936d5ff163e1a7724c1c3b4e956c": {
+    "url": "https://arxiv.org/abs/2610.27782",
+    "title": "RoboJudge: Multimodal Language Models as Judges for Embodied Video Generation",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "39d3b8f46b9d7fcab55bcf0b16a396f62aa52330": {
+    "url": "https://arxiv.org/abs/2610.14253",
+    "title": "SliderEdit++: Improved Slider Trajectories in Instruction-Based Image Editing",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "81490604487c852a6bdf1c9d46ba720cec27c668": {
+    "url": "https://arxiv.org/abs/2610.01352",
+    "title": "MMVistaReason: Toward Open-Data and Post-Training Recipes for Multimodal Reasoning",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "imbalanced"
+    ]
+  },
+  "ffffe15a5ab7f4688b7badb7d8a865190887ae13": {
+    "url": "https://arxiv.org/abs/2610.14465",
+    "title": "Co-adaptive Rule Routing and Constraining for Structured Knowledge Retrieval",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "feature-selection"
+    ]
+  },
+  "09d6f74854cfc8db5462e4fa553085415be3e70d": {
+    "url": "https://arxiv.org/abs/2610.31288",
+    "title": "DISC: Domain-Integrated Similarity Cost for Time-Series Dataset",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": [
+      "timeseries"
+    ]
+  },
+  "27260301886a20aaab6c0fb713069a0bbe3aaa15": {
+    "url": "https://arxiv.org/abs/2610.30006",
+    "title": "Building Auditable AI Text Detectors with Sparse Autoencoders",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "e57dfd907c2125342907b78f1a5342907843244b": {
+    "url": "https://arxiv.org/abs/2610.29477",
+    "title": "TenetBench: A Clause-Anchored Russian Corpus for Evaluating Language Models against Professional Codes of Ethics",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "a9e4dfa064aadb70e61a0d29da3a43ed62390947": {
+    "url": "https://arxiv.org/abs/2610.24481",
+    "title": "DuoLM: Fast and Effective Personalized Recommendation with Language Models",
+    "category": "industry-application",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "21a8f0a210a2c7a16dd62626a68433c39bc58ef0": {
+    "url": "https://arxiv.org/abs/2606.00778",
+    "title": "A path-following framework on fiber bundle for variational inequalities",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "669dcd923a820f13c1ea88d51b094401541a4c44": {
+    "url": "https://arxiv.org/abs/2609.16158",
+    "title": "The fixed-point bundle method over product-of-simplex domains arising from game equilibria",
+    "category": "predictive-modeling",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "292a4eacd9568177cf700768068920de2c863ad0": {
+    "url": "https://arxiv.org/abs/2610.32770",
+    "title": "On-Policy Self-Training: Data-Free Self-Improvement in Large Language Models",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "b75d3b50ac1e7221c06b133a2ee6a8dbc4e7c68d": {
+    "url": "https://arxiv.org/abs/2610.23234",
+    "title": "MultiAgent-OPD: End-to-End Training of Hierarchical Multi-Agent Systems with On-Policy Distillation",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "d60bb864f724a9341053e0415143998f17faf569": {
+    "url": "https://arxiv.org/abs/2610.32894",
+    "title": "LoCA: Enabling Multi-Modality in Geospatial Location Encoders",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "a45846e0cd61ce21e9d797f46c316013b981d96e": {
+    "url": "https://arxiv.org/abs/2610.32002",
+    "title": "DraMaze: A Multi-Agent Pipeline with Future-Aware Memory for Diverse Microdrama Script Generation",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "1ecc01d4f72618957a2b03332f037c7f1f2926b7": {
+    "url": "https://arxiv.org/abs/2610.31931",
+    "title": "Every Weight Is a Path of Shared Discrete Decisions",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "3f8ec6c10c09ad0575de6e09d60f82ee23e99579": {
+    "url": "https://arxiv.org/abs/2610.31066",
+    "title": "Dual Exam: Controlled Evaluation of Multimodal Agents and World Models",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "ae4b88c3e84b8ba38a56b5db380e76531fbf0dd9": {
+    "url": "https://arxiv.org/abs/2610.31162",
+    "title": "HiSTEVE 1.0: Harnessing Human-Interface VLA Agents for Open-World Games",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "1db723ca702fd85d87468f7c636558d1187082b7": {
+    "url": "https://arxiv.org/abs/2610.17821",
+    "title": "FLOMSS: Generative Music Source Separation by Flow Matching",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "77007805b9a771d87c3365605a10d14971023283": {
+    "url": "https://arxiv.org/abs/2610.32250",
+    "title": "Easy-3Dfy: Object-Level Geometric Composition for Single-Image 3D Scene Construction",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "a3346b4e2ef3fe378a014613b8af3f1e6fc56abc": {
+    "url": "https://arxiv.org/abs/2610.32253",
+    "title": "RSIHub: A Composable Framework for Agent-Evolution Methods",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "ec10673b83ff29a716b8ec77564f118b827a7878": {
+    "url": "https://arxiv.org/abs/2610.32965",
+    "title": "RynnUnify: Towards Unified Embodied Brain",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "864b0161d31ca1c682e34f4c0e111f5e625d9dae": {
+    "url": "https://arxiv.org/abs/2610.31569",
+    "title": "Echo: Coupled Action and Task Status Signal Denoising for Vision Language Action Models",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "4e613eb61812a98531288929ea868a9e3d0a180f": {
+    "url": "https://arxiv.org/abs/2610.29552",
+    "title": "Generalized CycleGRPO for Fine-Grained Multimodal Understanding and Grounding",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "c5add34a96762df887ea1e07fb3fadc08f5857ec": {
+    "url": "https://arxiv.org/abs/2610.30932",
+    "title": "UserArena: Benchmarking Interactive User Simulation for Long-Horizon Shopping Agents",
+    "category": "industry-application",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "4700373125d754086775d0404ae8de367a24273a": {
+    "url": "https://arxiv.org/abs/2610.31734",
+    "title": "DirCast: Live Esports Directing and Commentary with a Single Streaming Video-Language Model",
+    "category": "ai-agent",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "9db30709e4465a173e2c2e1907cb3b6ed7ffd463": {
+    "url": "https://arxiv.org/abs/2610.32909",
+    "title": "HoloBoxing: A Simple Recipe for Humanoid Boxing with 7 Minutes of Single-GPU Training",
+    "category": "deep-learning",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
+  },
+  "8c078e508ad8b3172bd1b2756963b3a9cf427345": {
+    "url": "https://arxiv.org/abs/2610.27103",
+    "title": "Omni-Woodpecker: Hallucination Correction via Evidence-Prior Rebalancing for Omni LLMs",
+    "category": "llm-foundation-model",
+    "source_tier": 1,
+    "first_seen": "2026-10-27",
+    "tags": []
   }
 }

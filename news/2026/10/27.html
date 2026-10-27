@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI &amp; ML News Letter · 10/27</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --accent:#5DB8A6; --accent-hover:#479B8B; --accent-weak:#E8F4F1;
+  --focus-ring:rgba(93,184,166,.5);
+  --bg:#FAF9F5; --bg-subtle:#F0EEE6; --border:#E7E3D9;
+  --text:#1F1E1D; --text-2:#6B6862; --text-3:#A39E94;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}}
+:root[data-theme="dark"]{
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover);text-decoration:underline}
+strong{font-weight:600;color:var(--text)}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px;border-radius:3px}
+
+/* 모바일 우선 단일 컬럼 (<1200px). 덩어리 중앙 정렬은 margin:0 auto. */
+.page{max-width:760px;margin:0 auto;padding:20px 18px 40px}
+
+/* --- 마스트헤드 (뉴스레터 제호) --- */
+.mast{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+  padding-bottom:14px;border-bottom:2px solid var(--text);margin-bottom:24px}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--accent);
+  text-transform:uppercase;margin:0 0 6px}
+.mast-title{font-size:26px;font-weight:600;margin:0;letter-spacing:-.01em;line-height:1.15}
+.mast-date{font-size:14px;color:var(--text-2);margin-top:8px}
+.themebtn{flex:none;background:var(--bg-subtle);border:1px solid var(--border);color:var(--text-2);
+  border-radius:20px;padding:5px 12px;font-size:13px;cursor:pointer;font-family:inherit}
+.topnav{margin-top:11px;display:flex;gap:16px;font-size:13px}
+.topnav a{color:var(--text-2);font-weight:500} .topnav a:hover{color:var(--accent)}
+@media (min-width:640px){.mast-title{font-size:31px}}
+
+/* --- TODAY'S TOP 3 --- */
+.top3{background:var(--accent-weak);border-radius:12px;padding:14px 18px;margin-bottom:24px}
+.top3 h2{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--accent);margin:0 0 8px}
+.top3 ol{margin:0;padding:0;list-style:none}
+.top3 li{padding:4px 0 4px 22px;position:relative;font-size:15px;color:var(--text)}
+.top3 li::before{content:"\2605";position:absolute;left:0;color:var(--accent);font-size:12px;top:7px}
+.top3 .t3cat{color:var(--text-2);font-size:12px;margin-right:5px}
+.top3 a{color:var(--text)} .top3 a:hover{color:var(--accent-hover)}
+
+/* --- 목차 (TOC) --- */
+.toc{margin-bottom:26px}
+.toc h2{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--text-2);margin:0 0 8px}
+.toc ul{margin:0;padding:0;list-style:none}
+.toc li{padding:6px 0;border-top:1px solid var(--border)}
+.toc li:first-child{border-top:none}
+.toc .r{display:flex;gap:6px;align-items:baseline;font-size:14px}
+.toc .nm{font-weight:500;color:var(--text)} .toc a:hover .nm{color:var(--accent)}
+.toc .cnt{color:var(--text-3);font-size:12px}
+.toc .lead{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  font-size:12px;color:var(--text-2);margin-top:2px;line-height:1.4}
+.toc li.active .nm{color:var(--accent)}
+.toc li.active{border-left:2px solid var(--accent);padding-left:8px;margin-left:-10px}
+
+/* --- 섹션 --- */
+.sec{margin:0 0 34px;scroll-margin-top:14px}
+.sec-h{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:0 0 2px;padding-top:6px}
+.sec-h .nm{font-size:20px;font-weight:600}
+.sec-h .cnt{font-size:13px;color:var(--text-3)}
+.sec-h .all{font-size:12px;color:var(--text-3);margin-left:auto}
+.sec-h .all span{color:var(--text-2)}
+.sec-h .exp{font-size:12px;background:none;border:1px solid var(--border);color:var(--text-2);
+  border-radius:14px;padding:2px 10px;cursor:pointer;font-family:inherit}
+.sec-desc{font-size:13px;color:var(--text-2);margin:0 0 8px}
+.sec-empty{font-size:14px;color:var(--text-3);padding:4px 0 6px}
+.backtop{display:inline-block;font-size:12px;color:var(--text-3);margin-top:6px}
+
+/* --- 아이템 (아코디언) — 거터(번호) + 단일 콘텐츠 컬럼 (DESIGN §3 v4). 좌측 정렬선 1개. --- */
+.item{border-bottom:1px solid var(--border);--gutter:28px}
+.item>summary{list-style:none;cursor:pointer;padding:16px 26px 16px 0;position:relative;
+  display:grid;grid-template-columns:var(--gutter) 1fr;align-items:start}
+.item>summary::-webkit-details-marker{display:none}
+.item>summary::after{content:"\25B8";position:absolute;right:2px;top:16px;color:var(--text-3);
+  font-size:13px;transition:transform .15s;display:inline-block}
+.item[open]>summary::after{transform:rotate(90deg)}
+.num{font-size:13px;color:var(--text-3);font-variant-numeric:tabular-nums;font-weight:500;padding-top:3px}
+.t3star{color:var(--accent);font-size:11px;margin-right:2px}
+.body-col{min-width:0}
+.it-title{display:block;font-size:18px;font-weight:600;color:var(--text);line-height:1.4}
+.item>summary:hover .it-title{color:var(--accent)}
+.it-sub{display:block;font-size:13px;color:var(--text-2);margin-top:3px;line-height:1.35}
+.it-meta{display:block;font-size:13px;color:var(--text-2);margin-top:6px}
+.it-lede{display:block;font-size:15px;color:var(--text-2);margin-top:7px;line-height:1.5}
+.item[open] .it-lede{color:var(--text)}
+/* 접힘 본문도 콘텐츠 컬럼에 정렬 (거터만큼 들여씀) */
+.it-body{padding:0 0 20px var(--gutter)}
+.it-body p{margin:0 0 10px}
+@media (min-width:900px){.item{--gutter:40px}}
+.slot-l{font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--text-2);margin:14px 0 2px}
+.tags{margin-top:10px}
+.tag{display:inline-block;font-size:12px;color:var(--text-2);background:var(--bg-subtle);
+  border:1px solid var(--border);border-radius:12px;padding:1px 9px;margin:0 5px 5px 0}
+.prev{font-size:13px;color:var(--text-3);margin-top:8px}
+.src-cta{display:inline-block;margin-top:12px;font-size:14px;font-weight:500;color:var(--accent)}
+.weak{color:var(--accent);font-size:12px;border:1px solid var(--accent);border-radius:5px;
+  padding:0 6px;margin-left:6px}
+
+/* --- "다루는 주제" 푸터 --- */
+.topics{margin-top:36px;padding-top:22px;border-top:2px solid var(--text)}
+.topics h2{font-size:15px;font-weight:600;margin:0 0 12px}
+.topics ul{margin:0;padding:0;list-style:none}
+.topics li{padding:7px 0;border-top:1px solid var(--border);font-size:13px;color:var(--text-2)}
+.topics li:first-child{border-top:none}
+.topics .tnm{font-weight:600;color:var(--accent);margin-right:6px}
+
+/* --- 데스크톱 (≥1200px): 좌측 sticky TOC(260) + 본문(720), 덩어리 중앙 정렬 --- */
+@media (min-width:1200px){
+  /* max-width = 260+44+720 그리드(1024) + 좌우 padding(18*2). box-sizing:border-box
+     라 padding 을 포함해야 본문 720 이 찌그러지지 않는다. */
+  .page{max-width:1060px;display:grid;grid-template-columns:260px minmax(0,720px);
+    column-gap:44px;justify-content:center;align-items:start;padding-top:28px}
+  .mast{grid-column:1/3}
+  .toc{grid-column:1;grid-row:2/999;position:sticky;top:24px;margin:0;align-self:start}
+  .top3,.main{grid-column:2}
+  .topics{grid-column:1/3}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="mast">
+    <div class="mast-l">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1 class="mast-title">AI &amp; ML News Letter</h1>
+      <div class="mast-date">2026 / 10 / 27 (화) · 16건</div>
+      <nav class="topnav"><a href="../../../archive.html">📅 지난 브리핑</a>
+        <a href="#topics">🗂 주제별 보기</a></nav>
+    </div>
+    <button id="tbtn" class="themebtn" type="button">🌓 테마</button>
+  </header>
+  <section class="top3"><h2>TODAY'S TOP 3</h2><ol><li><a href="#8b1ad81c7872"><span class="t3cat">[LLM / Foundation Model]</span>애플 200억 파라미터 모델, Kimi K3.1 Pro 등 소식 — 상세 내용은 원문 미제공</a></li><li><a href="#1758535ac6be"><span class="t3cat">[LLM / Foundation Model]</span>OpenAI, &#x27;GPT-6.1 Terra&#x27; 공개 — 컴퓨터 사용 기능 강화</a></li><li><a href="#4cd82f931931"><span class="t3cat">[Deep Learning]</span>Apple, GHARP 공개 — 소수 이미지로 실시간 3D 얼굴 애니메이션, 신원·표정 단계 분리</a></li></ol></section>
+  <nav class="toc" id="toc"><h2>오늘의 목차</h2><ul><li data-cat="ai-agent"><a href="#ai-agent"><span class="r"><span class="nm">AI Agent</span><span class="cnt">2</span></span><span class="lead">CodeRabbit, GPT-6.1 Sol 도입 — 복잡한 코드베이스 보안 취약점 자동 조사·수정 제안</span></a></li><li data-cat="llm-foundation-model"><a href="#llm-foundation-model"><span class="r"><span class="nm">LLM / Foundation Model</span><span class="cnt">2</span></span><span class="lead">애플 200억 파라미터 모델, Kimi K3.1 Pro 등 소식 — 상세 내용은 원문 미제공</span></a></li><li data-cat="deep-learning"><a href="#deep-learning"><span class="r"><span class="nm">Deep Learning</span><span class="cnt">3</span></span><span class="lead">Apple, GHARP 공개 — 소수 이미지로 실시간 3D 얼굴 애니메이션, 신원·표정 단계 분리</span></a></li><li data-cat="predictive-modeling"><a href="#predictive-modeling"><span class="r"><span class="nm">예측 모델링</span><span class="cnt">3</span></span><span class="lead">H2O.ai, 시계열 예측 모델 TimeH2O 공개 — Mistral·Google·Amazon 모델 능가 주장</span></a></li><li data-cat="mlops"><a href="#mlops"><span class="r"><span class="nm">MLOps / ML Engineering</span><span class="cnt">2</span></span><span class="lead">Netflix, &#x27;Pensive AI&#x27;로 실패 진단 커버리지 확대 — 미분류 장애 0%, 수동 로그 탐색 321% 감소</span></a></li><li data-cat="practice"><a href="#practice"><span class="r"><span class="nm">실무 사례 · 노하우</span><span class="cnt">2</span></span><span class="lead">OpenAI, Codex Ultrafast로 장애 조사 시간을 수시간에서 수분으로 단축</span></a></li><li data-cat="industry-application"><a href="#industry-application"><span class="r"><span class="nm">산업 적용 사례</span><span class="cnt">2</span></span><span class="lead">Fanatics, OpenAI로 경기일 코디 추천 &#x27;Shop the Look&#x27; 도입 — MLB 상품 3만개 테스트서 참여율 10%↑</span></a></li></ul></nav>
+  <main class="main"><section class="sec" id="ai-agent"><div class="sec-h"><span class="nm">AI Agent</span><span class="cnt">2건</span><span class="all"><a href="../../../category/ai-agent.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="ai-agent">전체 펼치기</button></div><div class="sec-desc">AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</div><details class="item" id="1a1d4bf2fc11"><summary><span class="num">01</span><span class="body-col"><span class="it-title">CodeRabbit, GPT-6.1 Sol 도입 — 복잡한 코드베이스 보안 취약점 자동 조사·수정 제안</span><span class="it-sub">GPT-6.1 Sol helps CodeRabbit strengthen security across complex codebases</span><span class="it-meta">✍️ 블로그 · openai.com</span><span class="it-lede">CodeRabbit은 GPT-6.1 Sol을 활용해 복잡한 코드베이스 전반의 보안 위험을 조사한다.</span></span></summary><div class="it-body"><p>이 모델을 기반으로 한 보안 에이전트는 개발자가 발견된 취약점과 제안된 수정 사항을 검토하도록 돕는다.</p><div class="slot-l">WHY IT MATTERS</div><p>코드 리뷰와 보안 점검처럼 반복적이고 전문성이 요구되는 작업에 <strong>에이전트형 AI</strong>가 실무 도구로 자리잡고 있음을 보여주는 사례다.</p><div class="tags"><span class="tag">#tool-use</span><span class="tag">#function-calling</span></div><a class="src-cta" href="https://openai.com/index/gpt-6-1-sol-coderabbit-code-security" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="250e5d8f3024"><summary><span class="num">02</span><span class="body-col"><span class="it-title">Greptile, GPT-6 Astra·Daybreak·Codex로 코드리뷰 넘어 버그 탐지 확장</span><span class="it-sub">Greptile takes bug detection beyond code review with GPT-6 Astra</span><span class="it-meta">✍️ 블로그 · openai.com</span><span class="it-lede">Greptile은 OpenAI의 GPT-6 Astra를 활용해 사용자 워크플로를 테스트하고 버그를 탐지한다.</span></span></summary><div class="it-body"><p>또한 Daybreak으로 보안을 강화하고, Codex를 사용해 재작업을 줄이는 방식으로 개발 프로세스를 개선했다. 이를 통해 기존 코드 리뷰 단계를 넘어선 버그 탐지 체계를 구축했다.</p><div class="slot-l">WHY IT MATTERS</div><p>코드 리뷰 도구가 <strong>워크플로 테스트와 보안 강화</strong>까지 범위를 넓히는 사례로, AI 에이전트의 실무 적용 방향을 보여준다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 코드 리뷰 중심 버그 탐지 대비, 사용자 워크플로 테스트와 보안 강화까지 포함하는 점이 다르다.</p><div class="tags"><span class="tag">#tool-use</span><span class="tag">#function-calling</span></div><a class="src-cta" href="https://openai.com/index/greptile-code-review-codex-astra" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="llm-foundation-model"><div class="sec-h"><span class="nm">LLM / Foundation Model</span><span class="cnt">2건</span><span class="all"><a href="../../../category/llm-foundation-model.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="llm-foundation-model">전체 펼치기</button></div><div class="sec-desc">LLM·파운데이션 모델 — 사전학습·정렬·추론</div><details class="item" id="8b1ad81c7872" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">애플 200억 파라미터 모델, Kimi K3.1 Pro 등 소식 — 상세 내용은 원문 미제공</span><span class="it-sub">Apple’s 20B model 📱, Kimi K3.1 Pro 🧠, Block Dessa 🗣️, frontier training security 🔐</span><span class="it-meta">📰 뉴스 · tldr.tech<span class="weak">원문 근거 부족</span></span><span class="it-lede">애플의 200억 파라미터 모델, Kimi K3.1 Pro, Block Dessa, 프런티어 훈련 보안 관련 소식이 언급되었으나 원문 요약이 제공되지 않았다.</span></span></summary><div class="it-body"><div class="slot-l">WHY IT MATTERS</div><p>구체적 내용이 없어 중요성을 판단하기 어렵다.</p><div class="tags"><span class="tag">#model-release</span></div><a class="src-cta" href="https://tldr.tech/ai/2026-10-26" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="1758535ac6be" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>02</span><span class="body-col"><span class="it-title">OpenAI, &#x27;GPT-6.1 Terra&#x27; 공개 — 컴퓨터 사용 기능 강화</span><span class="it-sub">Introducing GPT-6.1 Terra</span><span class="it-meta">✍️ 블로그 · openai.com<span class="weak">원문 근거 부족</span></span><span class="it-lede">OpenAI가 GPT-6.1 Terra를 공개했다.</span></span></summary><div class="it-body"><p>빠르고 성능 좋은 컴퓨터 사용 기능을 모두에게 제공하는 것을 목표로 한다.</p><div class="slot-l">WHY IT MATTERS</div><p>컴퓨터 사용 에이전트 기능이 대중화되면 다양한 자동화 작업에 영향을 줄 수 있다.</p><a class="src-cta" href="https://openai.com/index/introducing-gpt-6-1-terra" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="deep-learning"><div class="sec-h"><span class="nm">Deep Learning</span><span class="cnt">3건</span><span class="all"><a href="../../../category/deep-learning.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="deep-learning">전체 펼치기</button></div><div class="sec-desc">딥러닝 — 아키텍처·학습기법 자체</div><details class="item" id="4cd82f931931" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">Apple, GHARP 공개 — 소수 이미지로 실시간 3D 얼굴 애니메이션, 신원·표정 단계 분리</span><span class="it-sub">GHARP: Real-Time Gaussian Head Animation from Large-Scale Reconstruction Prior</span><span class="it-meta">✍️ 블로그 · machinelearning.apple.com</span><span class="it-lede">GHARP는 피사체의 입력 이미지 몇 장과 구동 표정 신호로부터 3D 사람 머리를 실시간으로 애니메이션하는 방법이다.</span></span></summary><div class="it-body"><p>문제를 두 단계로 분리하는데, 오프라인에서 피사체의 기하와 외형 표현을 구축하는 신원 단계와, 런타임에 그 위에 표정 의존적 잔차를 예측하는 애니메이션 단계로 나눈다. 이 분리 구조는 <strong>신원 단계는 비용이 들더라도 애니메이션 단계는 가볍게</strong> 실행할 수 있어 품질, 충실도, 실행 속도 사이의 균형을 유리하게 가져간다.</p><div class="slot-l">WHY IT MATTERS</div><p>실시간 3D 아바타 생성은 화상회의, 게임, AR/VR 등에 직접 적용 가능한 핵심 기술로, 가벼운 런타임 연산이 실용성을 좌우한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>신원 정보를 오프라인에서 미리 구축하고 런타임에는 표정 잔차만 예측하는 <strong>단계 분리 구조</strong>를 통해 실시간성과 품질을 동시에 확보한다는 점이 특징이다.</p><div class="tags"><span class="tag">#3d-vision</span><span class="tag">#animation</span></div><a class="src-cta" href="https://machinelearning.apple.com/research/gharp-head-animation" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="496530d5363d"><summary><span class="num">02</span><span class="body-col"><span class="it-title">FLORA: An Open Model Suite for Scaling Robotics Data Engines</span><span class="it-sub">Flora 공개 — GR00T 학습용 로보틱스 데이터 엔진, WGO-Bench 등 SOTA에 GPT-6 Astra 대비 125배 저렴</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">Flora는 로보틱스 파운데이션 모델 학습에 필요한 결과 보상, 과정 보상, 타임스탬프 캡션 레이블을 동시에 생성하는 산업용 데이터 엔진으로, GR00T 모델 학습에 사용됐다.</span></span></summary><div class="it-body"><p>캡션 벤치마크 WGO-Bench와 보상 벤치마크 RoboReward, Robometer에서 <strong>SOTA 성능</strong>을 달성했다. 내부 벤치마크에서는 GPT-6 Astra와 대등하거나 다른 프런티어 모델들을 능가하며, API 기반 대안보다 <strong>약 125배 저렴</strong>하다. 512개의 GB300 장비로 하루 20만 시간 분량의 데이터를 레이블링하는 규모로 실전 검증됐다.</p><div class="slot-l">WHY IT MATTERS</div><p>로보틱스 모델 학습은 레이블링 비용과 품질에 크게 좌우되는데, 이를 오픈소스로 공개하면 연구자들이 커스텀 로보틱스 데이터셋을 저비용으로 확장하고 물리적 자동 연구, 인간-로봇 전이 같은 새로운 응용을 탐색할 수 있게 된다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p><strong>GPT-6 Astra</strong> 등 API 기반 프런티어 모델 대비 비슷하거나 더 나은 성능을 내면서 비용은 약 125배 저렴하다는 점이 차별점이다.</p><a class="src-cta" href="https://arxiv.org/abs/2610.31779" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="1ecc01d4f726"><summary><span class="num">03</span><span class="body-col"><span class="it-title">Every Weight Is a Path of Shared Discrete Decisions</span><span class="it-sub">TWIG: 신경망 가중치를 공유 트리 구조로 표현 — GPTQ 대비 3/4비트에서 덧셈 연산 최대 55% 절감</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">TWIG(Tree-structured Weights with Inherited Gates)는 신경망의 모든 가중치를 부호, 2의 거듭제곱 이동, 제로 게이트, 공유 테이블 인덱스 등 작은 이산 결정들의 경로 끝으로 표현하는 방법이다.</span></span></summary><div class="it-body"><p>관련된 가중치들은 경로의 상위 부분을 공유해 각 결정이 한 번만 저장·적용되며, 어떤 학습된 네트워크도 TWIG로 변환할 수 있다. 이 구조 덕분에 가지치기, 양자화, 저랭크 분해, 코드북, 가중치 공유 등 서로 다른 압축 기법들이 하나의 객체에 대한 편집으로 통일되어 단일 최적화기로 전체를 다룰 수 있다. 또한 결정을 고르는 문제는 트리 경로를 따르는 고차 볼츠만 머신의 바닥상태 문제로 환원되어 어닐러나 양자 최적화기로 풀 수 있다. 대형 언어모델의 5개 가중치 행렬에 적용한 결과, <strong>GPTQ 대비 3·4비트 정밀도에서 동일한 레이어 오차 기준으로 덧셈 연산이 9~15% 적고, 이상치가 강한 행렬에서는 20~55% 적었다</strong>.</p><div class="slot-l">WHY IT MATTERS</div><p>가중치 압축·양자화·가지치기 등이 제각각의 포맷과 솔버로 다뤄지던 것을 하나의 통일된 표현으로 묶어, 고정 가중치 회로 설계나 이산 최적화 하드웨어(어닐러, 양자 최적화기) 활용 가능성을 열어준다는 점에서 실용적 의미가 크다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p><strong>기존 GPTQ의 그룹 스케일 기반 양자화 대비</strong> 별도의 그룹 스케일 없이도 가중치별 부호 있는 2의 거듭제곱 항을 선택해 동일 오차에서 더 적은 덧셈 연산으로 회로 비용을 줄인다.</p><a class="src-cta" href="https://arxiv.org/abs/2610.31931" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="predictive-modeling"><div class="sec-h"><span class="nm">예측 모델링</span><span class="cnt">3건</span><span class="all"><a href="../../../category/predictive-modeling.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="predictive-modeling">전체 펼치기</button></div><div class="sec-desc">예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</div><details class="item" id="17ee72674321"><summary><span class="num">01</span><span class="body-col"><span class="it-title">H2O.ai, 시계열 예측 모델 TimeH2O 공개 — Mistral·Google·Amazon 모델 능가 주장</span><span class="it-sub">H2O.ai&#x27;s TimeH2O Beats Mistral, Google, and Amazon in Time-Series Forecasting - Yahoo Finance Singapore</span><span class="it-meta">📰 뉴스 · news.google.com</span><span class="it-lede">H2O.ai가 시계열 예측 모델 TimeH2O를 발표했다.</span></span></summary><div class="it-body"><p>해당 모델이 Mistral, Google, Amazon이 내놓은 시계열 예측 모델들을 <strong>성능에서 능가</strong>했다고 보도됐다. 구체적인 벤치마크나 수치, 모델 구조에 대한 상세 내용은 원문에 제시되지 않았다.</p><div class="slot-l">WHY IT MATTERS</div><p>시계열 예측은 수요·재고·금융 등 실무 의사결정에 직결되는 영역이라, 대형 플랫폼 기업들의 기존 모델을 능가했다는 주장은 실무 적용 가능성 측면에서 주목할 만하다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>Mistral, Google, Amazon의 기존 시계열 예측 모델 대비 우위를 주장하지만, 비교 방식이나 벤치마크 세부사항은 원문에 명시되지 않았다.</p><div class="tags"><span class="tag">#timeseries</span></div><a class="src-cta" href="https://news.google.com/rss/articles/CBMihAFBVV95cUxORW53eVo3OXkyQTVrTUZObGM1OEFxcEVWdlBmallCRUE0cTZPRE8zZmg0TjZ6R25rcDZTZ0xwbEozRnZYYVpFRzJaS1RlUnJqMjhyUmVzYnA3NXVtQWtuUVBZOURJX0FoOGNmRjJFMWNYTkFSLVBJZEZZcDIyLUoyRDhjaG4?oc=5" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="09d6f74854cf"><summary><span class="num">02</span><span class="body-col"><span class="it-title">DISC: Domain-Integrated Similarity Cost for Time-Series Dataset</span><span class="it-sub">DISC: 여러 유사도 지표를 학습 결합해 시계열 데이터셋 전이 적합성 예측 정확도 향상</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">시계열 기초모델 확산으로 소스-타겟 데이터셋 간 전이 적합성을 사전 평가할 필요가 커졌지만, 기존 단일 유사도 지표들은 과업마다 다운스트림 성능과의 상관관계가 제각각이다.</span></span></summary><div class="it-body"><p>저자들은 소스-타겟 유사도 점수와 분포 외·전이학습 환경에서의 예측 오차 간 상관관계를 측정해 이 문제를 분석했다. 이를 바탕으로 여러 유사도 지표를 보정용 전이 관측치로 학습해 선택·가중·결합하는 프레임워크인 <strong>DISC</strong>를 제안한다. 보정 후에는 유사도 지표 값만으로 소스-타겟 쌍을 평가하며, 보고된 분할에서 단일 지표 기준보다 더 높은 정렬도를 보였다.</p><div class="slot-l">WHY IT MATTERS</div><p>시계열 기초모델을 특정 도메인에 적용하기 전, 전수 평가 없이도 어떤 소스 데이터가 타겟 전이에 유리한지 미리 판단할 수 있는 실용적 방법이 필요한 시점에서 의미가 크다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p><strong>단일 유사도 지표를 수작업으로 선택</strong>하던 기존 방식과 달리, DISC는 여러 지표를 과업별로 학습 결합해 다운스트림 전이 성능과의 정렬도를 높인다.</p><div class="tags"><span class="tag">#timeseries</span></div><a class="src-cta" href="https://arxiv.org/abs/2610.31288" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="ffffe15a5ab7"><summary><span class="num">03</span><span class="body-col"><span class="it-title">Co-adaptive Rule Routing and Constraining for Structured Knowledge Retrieval</span><span class="it-sub">CoRE 제안 — 쿼리-규칙 쌍 없이 라우팅·검색 공동학습, STaRK-QA 전 도메인서 구조적 지식 검색 개선</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">이 논문은 구조화된 지식 검색을 위해 CoRE(Co-Adaptive Rule Routing and Constraining Retrieval)라는 방법을 제안한다.</span></span></summary><div class="it-body"><p>기존 방식은 비제약 검색이나 저자-논문, 해부학-약물 같은 사전 정의된 쿼리-규칙 지도 데이터가 필요했지만, CoRE는 이런 사전 쌍 없이 각 쿼리에 어떤 추론 규칙을 할당할지와 해당 규칙 하에서 증거를 어떻게 검색할지를 함께 학습한다. 라우팅 에이전트가 규칙을 선택하면, 해당 검색기가 지식베이스를 탐색해 규칙 제약을 만족하는 증거를 순위화하며, <strong>강화학습 기반 라우팅 정책</strong>과 대조학습 기반 검색기 학습을 번갈아 수행하는 폐루프 구조로 두 요소가 공동 적응한다. 과학적 발견, 생의학 추론, 전자상거래 지식관리 등 STaRK-QA 데이터셋 실험에서 효과를 입증했으며, 라우터와 검색기의 공동 적응이 성능에 기여함을 어블레이션으로 확인했다. 생성 기반 라우팅은 데이터셋 간 전이가 가능하고 다중 도메인 사전학습 후 타겟 특화 미세조정에서 이점을 보였다.</p><div class="slot-l">WHY IT MATTERS</div><p>쿼리-규칙 지도 데이터가 실제로는 거의 구비되지 않는다는 현실적 제약을 해소함으로써, 과학적 발견이나 정밀의료처럼 구조화된 지식베이스를 다루는 다양한 응용 분야에 적용 가능성을 넓힌다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존의 비제약 검색이나 저자-논문, 해부학-약물 같은 <strong>사전 정의된 쿼리-규칙 지도</strong> 방식과 달리, CoRE는 라우팅 정책과 규칙 제약 검색기를 사전 쌍 없이 강화학습-대조학습 교대 방식으로 동시에 학습한다.</p><div class="tags"><span class="tag">#feature-selection</span></div><a class="src-cta" href="https://arxiv.org/abs/2610.14465" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="causal-inference"><div class="sec-h"><span class="nm">인과추론</span></div><div class="sec-desc">인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</div><div class="sec-empty">금일 신규 없음</div></section><section class="sec" id="mlops"><div class="sec-h"><span class="nm">MLOps / ML Engineering</span><span class="cnt">2건</span><span class="all"><a href="../../../category/mlops.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="mlops">전체 펼치기</button></div><div class="sec-desc">MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</div><details class="item" id="8475093c4b1d"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Netflix, &#x27;Pensive AI&#x27;로 실패 진단 커버리지 확대 — 미분류 장애 0%, 수동 로그 탐색 321% 감소</span><span class="it-sub">Making Failure Diagnosis Reliable with Pensive AI</span><span class="it-meta">✍️ 블로그 · netflixtechblog.com</span><span class="it-lede">Netflix는 하루 약 10만 건의 워크로드 실패를 처리하기 위해 정규식과 Java 규칙 기반의 자동 진단 시스템 Pensive를 운영해왔으며, 이는 실패의 <strong>약 50%</strong>를 셀프서비스화했다.</span></span></summary><div class="it-body"><p>그러나 3개월간 약 700만 건의 분류 중 절반가량이 &#x27;미분류&#x27;로 남는 한계가 있었다. 이를 해결하기 위해 AI 기반 오류 추출과 진단 가이드를 결합한 Pensive AI를 도입했고, 기존 규칙 기반 시스템의 결정론적 장점은 유지하면서 범위를 확장했다. 그 결과 AI 오류 추출이 <strong>실패의 100%</strong>를 커버하게 되었고, 온디맨드 디버깅 기능도 함께 제공한다.</p><div class="slot-l">WHY IT MATTERS</div><p>대규모 플랫폼에서 규칙 기반 자동화의 한계(새로운 실패 패턴에 대한 커버리지 확장의 어려움)를 LLM으로 보완하면서도 비용과 지연시간을 통제한 실제 운영 사례라는 점에서 MLOps 실무자에게 참고할 가치가 있다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 Pensive의 정규식·수동 작성 Java 규칙 기반 분류 대비, Pensive AI는 결정론적 추출 구조는 유지한 채 AI를 그 위에 결합하여 미분류 실패까지 커버하는 점이 다르다.</p><div class="tags"><span class="tag">#monitoring</span><span class="tag">#deployment</span></div><a class="src-cta" href="https://netflixtechblog.com/making-failure-diagnosis-reliable-with-pensive-ai-6b0811a1c015?source=rss----2615bd06b42e---4" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="8ed93bec7901"><summary><span class="num">02</span><span class="body-col"><span class="it-title">AWS, SageMaker SDK v3로 카메라별 이상탐지+분류 모델 수천 개 자동 학습·배포 파이프라인 공개</span><span class="it-sub">Fleet-wide computer vision lifecycle at the edge with SageMaker SDK v3</span><span class="it-meta">✍️ 블로그 · aws.amazon.com</span><span class="it-lede">공장 내 수십 개 라인, 각각 여러 대의 카메라에서 품질 검사를 할 때 단일 모델은 성능이 부족해 카메라마다 별도로 파인튜닝된 모델이 필요해진다는 문제에서 출발한다.</span></span></summary><div class="it-body"><p>이 글은 카메라별로 오토인코더 기반 이상탐지기와 ResNet18 결함 분류기를 학습·평가·버전관리·배포하는 13단계 <strong>SageMaker Pipeline</strong>을 제시하며, 품질 게이트를 통과한 모델만 ONNX로 내보내 SageMaker Neo로 엣지용 컴파일 후 Model Registry에 등록한다. AWS Step Functions와 SQS, DynamoDB 세마포어로 구성된 오케스트레이션 레이어가 재학습 요청을 큐잉하고 동시 실행 수를 제한해 전체 카메라 군의 학습 속도를 조절한다. 합성 데이터 기준 전체 파이프라인 1회 실행 비용은 <strong>약 0.07달러</strong>이며, AWS CDK로 전체 인프라를 배포한다.</p><div class="slot-l">WHY IT MATTERS</div><p>PoC 단계에서 통하던 단일 모델이 현장 배치에서는 카메라별 각도·조명 차이로 성능이 떨어지는 현상은 컴퓨터 비전 엣지 배포에서 흔히 겪는 실전 문제이며, 사람 개입 없이 수천 개 모델을 관리하는 패턴은 제조업 MLOps에 바로 적용 가능하다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>2023년 공개된 기존 패턴에서 더 이상 지원되지 않는 <strong>Amazon SageMaker Edge Manager</strong>를 SageMaker Neo로 교체하고 SDK v3에 맞게 업데이트한 버전이다.</p><div class="tags"><span class="tag">#deployment</span><span class="tag">#monitoring</span><span class="tag">#drift</span></div><a class="src-cta" href="https://aws.amazon.com/blogs/machine-learning/fleet-wide-computer-vision-lifecycle-at-the-edge-with-sagemaker-sdk-v3/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="practice"><div class="sec-h"><span class="nm">실무 사례 · 노하우</span><span class="cnt">2건</span><span class="all"><a href="../../../category/practice.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="practice">전체 펼치기</button></div><div class="sec-desc">실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</div><details class="item" id="8f2f08b6e197"><summary><span class="num">01</span><span class="body-col"><span class="it-title">OpenAI, Codex Ultrafast로 장애 조사 시간을 수시간에서 수분으로 단축</span><span class="it-sub">How Ultrafast cut incident investigation from hours to minutes at OpenAI</span><span class="it-meta">✍️ 블로그 · openai.com</span><span class="it-lede">OpenAI 엔지니어들이 Codex Ultrafast를 활용해 장애(인시던트) 조사를 <strong>수분 내</strong>로 처리하는 사례를 소개한다.</span></span></summary><div class="it-body"><p>보안 분석, 코드 리팩토링 등 일상 업무 워크플로에도 적용된다. 구체적인 조사 절차와 활용 방식을 실제 사례 중심으로 설명한다.</p><div class="slot-l">WHY IT MATTERS</div><p>장애 대응 속도는 서비스 신뢰성과 직결되는 영역으로, AI 코딩 도구가 단순 코드 작성을 넘어 <strong>운영·보안 업무</strong>까지 확장되고 있음을 보여준다.</p><div class="tags"><span class="tag">#workflow</span></div><a class="src-cta" href="https://openai.com/index/openai-cut-incident-investigation" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="b2f70752c790"><summary><span class="num">02</span><span class="body-col"><span class="it-title">O&#x27;Reilly 칼럼 — AI 시대 개발자 5유형 분석, 병목은 코딩에서 &#x27;기획&#x27;으로 이동</span><span class="it-sub">Soloists, Copy-Pasters, and Tourists</span><span class="it-meta">📰 뉴스 · oreilly.com</span><span class="it-lede">같은 AI 구독 도구를 쓰고도 팀 내 엔지니어들은 하루 40개 PR을 올리는 사람부터 도구를 거의 쓰지 않는 사람까지 전혀 다른 결과를 낸다.</span></span></summary><div class="it-body"><p>저자는 Rogers의 기술 수용 주기(혁신가·초기 수용자 등)가 &#x27;언제 쓰는가&#x27;만 설명할 뿐 &#x27;어떻게 쓰는가&#x27;는 설명하지 못한다고 지적한다. Waterfall에서 Agile, Facebook의 &#x27;move fast and break things&#x27;까지 소프트웨어 개발 방법론은 항상 코딩 속도라는 병목을 관리해왔지만, <strong>AI가 구현 속도를 극도로 높이면서 이제 병목은 기획과 로드맵으로 옮겨갔다</strong>. 저자는 요구사항과 맥락을 쥐고 에이전트를 지휘하는 &#x27;Conductor&#x27;와 단순히 티켓을 넘기고 결과물만 확인하는 &#x27;Auditor&#x27;를 구분하며, AI 리뷰어는 diff만 볼 뿐 그 둘을 구별하지 못한다고 설명한다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI 도입이 빨라질수록 코드 생산 속도보다 &#x27;무엇을, 왜 만드는가&#x27;를 정하는 기획·로드맵 역량이 팀 성과를 가르는 핵심 변수가 된다는 점에서, 단순 도구 보급률이 아니라 활용 방식에 주목해야 함을 시사한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 Rogers의 기술 수용 주기 모델 대비, 이 글은 &#x27;언제 도입했는가&#x27;가 아니라 &#x27;도입 후 어떻게 사용하는가&#x27;에 따라 동일한 초기 수용자 집단 안에서도 성과와 위험이 크게 갈린다는 점을 강조한다.</p><div class="tags"><span class="tag">#ai-adoption</span><span class="tag">#developer-workflow</span></div><a class="src-cta" href="https://www.oreilly.com/radar/soloists-copy-pasters-and-tourists/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="industry-application"><div class="sec-h"><span class="nm">산업 적용 사례</span><span class="cnt">2건</span><span class="all"><a href="../../../category/industry-application.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="industry-application">전체 펼치기</button></div><div class="sec-desc">산업 적용 사례 — 산업 현장의 AI/ML 적용</div><details class="item" id="eb7708c5f537"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Fanatics, OpenAI로 경기일 코디 추천 &#x27;Shop the Look&#x27; 도입 — MLB 상품 3만개 테스트서 참여율 10%↑</span><span class="it-sub">How Fanatics and OpenAI streamline the fan experience</span><span class="it-meta">✍️ 블로그 · openai.com</span><span class="it-lede">Fanatics는 OpenAI 기술을 활용해 팬들이 경기일 복장을 완성할 수 있도록 돕는 &#x27;Shop the Look&#x27; 기능을 도입했다.</span></span></summary><div class="it-body"><p>약 3만 개의 MLB 상품을 대상으로 테스트한 결과, <strong>참여율이 10% 높아진</strong> 것으로 나타났다.</p><div class="slot-l">WHY IT MATTERS</div><p>전자상거래 기업이 생성형 AI를 활용해 상품 추천과 구매 전환을 높이는 실제 적용 사례를 보여준다.</p><div class="tags"><span class="tag">#adoption</span></div><a class="src-cta" href="https://openai.com/index/fanatics-streamline-fan-experience" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="64d59b55a8fb"><summary><span class="num">02</span><span class="body-col"><span class="it-title">OpenAI, ChatGPT 업무 활용 데이터 공개 — 100개국 165개 업무 활동 분석</span><span class="it-sub">ChatGPT’s expanding world of work</span><span class="it-meta">✍️ 블로그 · openai.com</span><span class="it-lede">OpenAI가 &#x27;Signals&#x27;라는 데이터를 통해 ChatGPT가 업무에서 어떻게 사용되는지 공개했다.</span></span></summary><div class="it-body"><p>거의 <strong>100개국</strong>에 걸쳐 <strong>165개 업무 활동</strong>을 대상으로 사용 패턴을 분석했다. 이를 통해 시간에 따른 사용 변화 추이도 함께 살펴볼 수 있다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI 도구의 실제 업무 적용 양상을 국가·업무 단위로 파악할 수 있는 드문 대규모 데이터로, 기업과 연구자가 AI 도입 전략을 세우는 데 참고할 수 있다.</p><div class="tags"><span class="tag">#adoption</span></div><a class="src-cta" href="https://openai.com/index/chatgpt-expanding-world-of-work" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section></main>
+  <footer class="topics" id="topics"><h2>다루는 주제</h2><ul><li><a class="tnm" href="../../../category/ai-agent.html">AI Agent</a>AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</li><li><a class="tnm" href="../../../category/llm-foundation-model.html">LLM / Foundation Model</a>LLM·파운데이션 모델 — 사전학습·정렬·추론</li><li><a class="tnm" href="../../../category/deep-learning.html">Deep Learning</a>딥러닝 — 아키텍처·학습기법 자체</li><li><a class="tnm" href="../../../category/predictive-modeling.html">예측 모델링</a>예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</li><li><a class="tnm" href="../../../category/causal-inference.html">인과추론</a>인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</li><li><a class="tnm" href="../../../category/mlops.html">MLOps / ML Engineering</a>MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</li><li><a class="tnm" href="../../../category/practice.html">실무 사례 · 노하우</a>실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</li><li><a class="tnm" href="../../../category/industry-application.html">산업 적용 사례</a>산업 적용 사례 — 산업 현장의 AI/ML 적용</li></ul></footer>
+</div>
+<script>
+(function(){
+var r=document.documentElement,k="dsb-theme",s=localStorage.getItem(k);
+if(s)r.dataset.theme=s;
+document.getElementById('tbtn').addEventListener('click',function(){
+  var cur=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  var n=cur==='dark'?'light':'dark';r.dataset.theme=n;localStorage.setItem(k,n);});
+// 섹션 전체 펼치기/접기
+document.querySelectorAll('.exp').forEach(function(b){b.addEventListener('click',function(){
+  var sec=document.getElementById(b.dataset.sec);
+  var ds=sec.querySelectorAll('details.item'),open=b.dataset.state!=='open';
+  ds.forEach(function(d){d.open=open;});
+  b.dataset.state=open?'open':'closed';b.textContent=open?'전체 접기':'전체 펼치기';});});
+// 스크롤 위치 카테고리 TOC 활성 (데스크톱 사이드 TOC)
+var links={};document.querySelectorAll('.toc li[data-cat]').forEach(function(li){links[li.dataset.cat]=li;});
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){Object.values(links).forEach(function(l){l.classList.remove('active');});
+    if(links[e.target.id])links[e.target.id].classList.add('active');}});},
+  {rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('section.sec').forEach(function(s){obs.observe(s);});
+})();
+</script>
+</body>
+</html>
