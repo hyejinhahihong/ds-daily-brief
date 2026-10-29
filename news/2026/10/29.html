@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI &amp; ML News Letter · 10/29</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>
+:root{
+  --accent:#5DB8A6; --accent-hover:#479B8B; --accent-weak:#E8F4F1;
+  --focus-ring:rgba(93,184,166,.5);
+  --bg:#FAF9F5; --bg-subtle:#F0EEE6; --border:#E7E3D9;
+  --text:#1F1E1D; --text-2:#6B6862; --text-3:#A39E94;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}}
+:root[data-theme="dark"]{
+  --accent:#6FC7B5; --accent-hover:#82D4C3; --accent-weak:rgba(93,184,166,.14);
+  --focus-ring:rgba(111,199,181,.55);
+  --bg:#1F1E1D; --bg-subtle:#292826; --border:#3A3833;
+  --text:#F0EEE6; --text-2:#A8A39A; --text-3:#6E6A62;
+}
+*{box-sizing:border-box}
+html,body{overflow-x:hidden}
+body{margin:0;background:var(--bg);color:var(--text);
+  font-family:Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--accent);text-decoration:none}
+a:hover{color:var(--accent-hover);text-decoration:underline}
+strong{font-weight:600;color:var(--text)}
+:focus-visible{outline:2px solid var(--focus-ring);outline-offset:2px;border-radius:3px}
+
+/* 모바일 우선 단일 컬럼 (<1200px). 덩어리 중앙 정렬은 margin:0 auto. */
+.page{max-width:760px;margin:0 auto;padding:20px 18px 40px}
+
+/* --- 마스트헤드 (뉴스레터 제호) --- */
+.mast{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;
+  padding-bottom:14px;border-bottom:2px solid var(--text);margin-bottom:24px}
+.eyebrow{font-size:11px;font-weight:600;letter-spacing:.12em;color:var(--accent);
+  text-transform:uppercase;margin:0 0 6px}
+.mast-title{font-size:26px;font-weight:600;margin:0;letter-spacing:-.01em;line-height:1.15}
+.mast-date{font-size:14px;color:var(--text-2);margin-top:8px}
+.themebtn{flex:none;background:var(--bg-subtle);border:1px solid var(--border);color:var(--text-2);
+  border-radius:20px;padding:5px 12px;font-size:13px;cursor:pointer;font-family:inherit}
+.topnav{margin-top:11px;display:flex;gap:16px;font-size:13px}
+.topnav a{color:var(--text-2);font-weight:500} .topnav a:hover{color:var(--accent)}
+@media (min-width:640px){.mast-title{font-size:31px}}
+
+/* --- TODAY'S TOP 3 --- */
+.top3{background:var(--accent-weak);border-radius:12px;padding:14px 18px;margin-bottom:24px}
+.top3 h2{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--accent);margin:0 0 8px}
+.top3 ol{margin:0;padding:0;list-style:none}
+.top3 li{padding:4px 0 4px 22px;position:relative;font-size:15px;color:var(--text)}
+.top3 li::before{content:"\2605";position:absolute;left:0;color:var(--accent);font-size:12px;top:7px}
+.top3 .t3cat{color:var(--text-2);font-size:12px;margin-right:5px}
+.top3 a{color:var(--text)} .top3 a:hover{color:var(--accent-hover)}
+
+/* --- 목차 (TOC) --- */
+.toc{margin-bottom:26px}
+.toc h2{font-size:12px;font-weight:600;letter-spacing:.06em;color:var(--text-2);margin:0 0 8px}
+.toc ul{margin:0;padding:0;list-style:none}
+.toc li{padding:6px 0;border-top:1px solid var(--border)}
+.toc li:first-child{border-top:none}
+.toc .r{display:flex;gap:6px;align-items:baseline;font-size:14px}
+.toc .nm{font-weight:500;color:var(--text)} .toc a:hover .nm{color:var(--accent)}
+.toc .cnt{color:var(--text-3);font-size:12px}
+.toc .lead{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;
+  font-size:12px;color:var(--text-2);margin-top:2px;line-height:1.4}
+.toc li.active .nm{color:var(--accent)}
+.toc li.active{border-left:2px solid var(--accent);padding-left:8px;margin-left:-10px}
+
+/* --- 섹션 --- */
+.sec{margin:0 0 34px;scroll-margin-top:14px}
+.sec-h{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap;margin:0 0 2px;padding-top:6px}
+.sec-h .nm{font-size:20px;font-weight:600}
+.sec-h .cnt{font-size:13px;color:var(--text-3)}
+.sec-h .all{font-size:12px;color:var(--text-3);margin-left:auto}
+.sec-h .all span{color:var(--text-2)}
+.sec-h .exp{font-size:12px;background:none;border:1px solid var(--border);color:var(--text-2);
+  border-radius:14px;padding:2px 10px;cursor:pointer;font-family:inherit}
+.sec-desc{font-size:13px;color:var(--text-2);margin:0 0 8px}
+.sec-empty{font-size:14px;color:var(--text-3);padding:4px 0 6px}
+.backtop{display:inline-block;font-size:12px;color:var(--text-3);margin-top:6px}
+
+/* --- 아이템 (아코디언) — 거터(번호) + 단일 콘텐츠 컬럼 (DESIGN §3 v4). 좌측 정렬선 1개. --- */
+.item{border-bottom:1px solid var(--border);--gutter:28px}
+.item>summary{list-style:none;cursor:pointer;padding:16px 26px 16px 0;position:relative;
+  display:grid;grid-template-columns:var(--gutter) 1fr;align-items:start}
+.item>summary::-webkit-details-marker{display:none}
+.item>summary::after{content:"\25B8";position:absolute;right:2px;top:16px;color:var(--text-3);
+  font-size:13px;transition:transform .15s;display:inline-block}
+.item[open]>summary::after{transform:rotate(90deg)}
+.num{font-size:13px;color:var(--text-3);font-variant-numeric:tabular-nums;font-weight:500;padding-top:3px}
+.t3star{color:var(--accent);font-size:11px;margin-right:2px}
+.body-col{min-width:0}
+.it-title{display:block;font-size:18px;font-weight:600;color:var(--text);line-height:1.4}
+.item>summary:hover .it-title{color:var(--accent)}
+.it-sub{display:block;font-size:13px;color:var(--text-2);margin-top:3px;line-height:1.35}
+.it-meta{display:block;font-size:13px;color:var(--text-2);margin-top:6px}
+.it-lede{display:block;font-size:15px;color:var(--text-2);margin-top:7px;line-height:1.5}
+.item[open] .it-lede{color:var(--text)}
+/* 접힘 본문도 콘텐츠 컬럼에 정렬 (거터만큼 들여씀) */
+.it-body{padding:0 0 20px var(--gutter)}
+.it-body p{margin:0 0 10px}
+@media (min-width:900px){.item{--gutter:40px}}
+.slot-l{font-size:12px;font-weight:500;letter-spacing:.04em;color:var(--text-2);margin:14px 0 2px}
+.tags{margin-top:10px}
+.tag{display:inline-block;font-size:12px;color:var(--text-2);background:var(--bg-subtle);
+  border:1px solid var(--border);border-radius:12px;padding:1px 9px;margin:0 5px 5px 0}
+.prev{font-size:13px;color:var(--text-3);margin-top:8px}
+.src-cta{display:inline-block;margin-top:12px;font-size:14px;font-weight:500;color:var(--accent)}
+.weak{color:var(--accent);font-size:12px;border:1px solid var(--accent);border-radius:5px;
+  padding:0 6px;margin-left:6px}
+
+/* --- "다루는 주제" 푸터 --- */
+.topics{margin-top:36px;padding-top:22px;border-top:2px solid var(--text)}
+.topics h2{font-size:15px;font-weight:600;margin:0 0 12px}
+.topics ul{margin:0;padding:0;list-style:none}
+.topics li{padding:7px 0;border-top:1px solid var(--border);font-size:13px;color:var(--text-2)}
+.topics li:first-child{border-top:none}
+.topics .tnm{font-weight:600;color:var(--accent);margin-right:6px}
+
+/* --- 데스크톱 (≥1200px): 좌측 sticky TOC(260) + 본문(720), 덩어리 중앙 정렬 --- */
+@media (min-width:1200px){
+  /* max-width = 260+44+720 그리드(1024) + 좌우 padding(18*2). box-sizing:border-box
+     라 padding 을 포함해야 본문 720 이 찌그러지지 않는다. */
+  .page{max-width:1060px;display:grid;grid-template-columns:260px minmax(0,720px);
+    column-gap:44px;justify-content:center;align-items:start;padding-top:28px}
+  .mast{grid-column:1/3}
+  .toc{grid-column:1;grid-row:2/999;position:sticky;top:24px;margin:0;align-self:start}
+  .top3,.main{grid-column:2}
+  .topics{grid-column:1/3}
+}
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="mast">
+    <div class="mast-l">
+      <div class="eyebrow">DAILY BRIEFING</div>
+      <h1 class="mast-title">AI &amp; ML News Letter</h1>
+      <div class="mast-date">2026 / 10 / 29 (목) · 16건</div>
+      <nav class="topnav"><a href="../../../archive.html">📅 지난 브리핑</a>
+        <a href="#topics">🗂 주제별 보기</a></nav>
+    </div>
+    <button id="tbtn" class="themebtn" type="button">🌓 테마</button>
+  </header>
+  <section class="top3"><h2>TODAY'S TOP 3</h2><ol><li><a href="#34b0bf3f94c3"><span class="t3cat">[LLM / Foundation Model]</span>Google DeepMind, 차세대 모델 &#x27;Gemini 4 Carbon&#x27; 공개 예고</a></li><li><a href="#1ba39f3c56cc"><span class="t3cat">[LLM / Foundation Model]</span>Google, 차세대 프론티어 모델 &#x27;Gemini 4 Carbon&#x27; 공개</a></li><li><a href="#73008a9061bf"><span class="t3cat">[AI Agent]</span>OpenAI, 화면 보고 컴퓨터 작업 대신하는 &#x27;GPT-6.1 Terra&#x27; 공개</a></li></ol></section>
+  <nav class="toc" id="toc"><h2>오늘의 목차</h2><ul><li data-cat="ai-agent"><a href="#ai-agent"><span class="r"><span class="nm">AI Agent</span><span class="cnt">2</span></span><span class="lead">OpenAI, 화면 보고 컴퓨터 작업 대신하는 &#x27;GPT-6.1 Terra&#x27; 공개</span></a></li><li data-cat="llm-foundation-model"><a href="#llm-foundation-model"><span class="r"><span class="nm">LLM / Foundation Model</span><span class="cnt">2</span></span><span class="lead">Google DeepMind, 차세대 모델 &#x27;Gemini 4 Carbon&#x27; 공개 예고</span></a></li><li data-cat="deep-learning"><a href="#deep-learning"><span class="r"><span class="nm">Deep Learning</span><span class="cnt">3</span></span><span class="lead">Google DeepMind, 실시간 오디오 지원 세계모델 &#x27;Genie 4&#x27; 공개</span></a></li><li data-cat="predictive-modeling"><a href="#predictive-modeling"><span class="r"><span class="nm">예측 모델링</span><span class="cnt">3</span></span><span class="lead">Timestral 공개 — 5M~209M 시계열 예측 모델 4종, GIFT-Eval·TIME·fev-bench 전 지표 1위</span></a></li><li data-cat="causal-inference"><a href="#causal-inference"><span class="r"><span class="nm">인과추론</span><span class="cnt">1</span></span><span class="lead">처치 전 다중 시점 활용해 직접효과와 파급효과 분리 식별 — 1919년 특허 강제실시 사례로 검증</span></a></li><li data-cat="mlops"><a href="#mlops"><span class="r"><span class="nm">MLOps / ML Engineering</span><span class="cnt">2</span></span><span class="lead">AWS, EKS·EFA 기반 Ray Train DLC 공개 — 이미지 빌드 없이 Qwen2.5-1.5B 8-GPU 분산학습</span></a></li><li data-cat="practice"><a href="#practice"><span class="r"><span class="nm">실무 사례 · 노하우</span><span class="cnt">1</span></span><span class="lead">AI 코딩 생산성, 실제로 돈값 하나? — 월 2.1만 달러 토큰 비용 사례로 본 ROI 측정의 함정</span></a></li><li data-cat="industry-application"><a href="#industry-application"><span class="r"><span class="nm">산업 적용 사례</span><span class="cnt">2</span></span><span class="lead">Meta Andromeda 차세대 광고 검색 엔진 — 모델·시스템·GPU 공동설계로 초당 10억 건 처리, 2024년 대비 100배</span></a></li></ul></nav>
+  <main class="main"><section class="sec" id="ai-agent"><div class="sec-h"><span class="nm">AI Agent</span><span class="cnt">2건</span><span class="all"><a href="../../../category/ai-agent.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="ai-agent">전체 펼치기</button></div><div class="sec-desc">AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</div><details class="item" id="73008a9061bf" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">OpenAI, 화면 보고 컴퓨터 작업 대신하는 &#x27;GPT-6.1 Terra&#x27; 공개</span><span class="it-sub">OpenAI launches GPT-6.1 Terra, an AI model that can see your screen and do your computer work - VARIndia</span><span class="it-meta">📰 뉴스 · news.google.com</span><span class="it-lede">OpenAI가 사용자의 화면을 인식하고 컴퓨터 작업을 직접 수행할 수 있는 AI 모델 <strong>GPT-6.1 Terra</strong>를 출시했다고 VARIndia가 보도했다.</span></span></summary><div class="it-body"><p>원문은 모델명과 기본 기능 소개 수준의 짧은 내용만 제공하고 있어 구체적인 작동 방식이나 성능 지표는 언급되지 않았다.</p><div class="slot-l">WHY IT MATTERS</div><p>화면을 보고 작업을 수행하는 AI 에이전트는 사용자 대신 컴퓨터 조작을 자동화하는 흐름의 연장선에 있어 <strong>에이전트형 AI</strong> 경쟁 구도에 영향을 줄 수 있다.</p><a class="src-cta" href="https://news.google.com/rss/articles/CBMivwFBVV95cUxPUzFBaFQ4czJRa1dLdnNrLUpFSmpZTUxJQTV0VmRURldCNW5TOGVPd3hpTnFNdi1NZklBWExsaVBHbzZvX3BBa3BYWE1wTTF2NlM5aTR2ZmN2ZjJGVF94V0hUMXFNaGpjRmFHVWNyZDVoNEFweWtzejVTMm9OVmtNU3FaMTZoelVEemRSUi11SGx2ZlZ3QWc3MF85S2wtSllsRF9tNWJtMHdrVElqQ3JYZUtqdThVVGJHZ21RNnItdw?oc=5" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="b8bfa4647f10"><summary><span class="num">02</span><span class="body-col"><span class="it-title">AWS, Amazon Bedrock AgentCore 기반 엔터프라이즈 Agentic AI 플랫폼 블루프린트 공개</span><span class="it-sub">Building an Agentic AI Platform on Amazon Bedrock AgentCore</span><span class="it-meta">✍️ 블로그 · aws.amazon.com</span><span class="it-lede">AWS는 에이전트 프로덕션 배포의 진짜 병목이 모델·도구 자체가 아니라 거버넌스, 소유권, 비용 추적 같은 주변 체계라고 지적한다.</span></span></summary><div class="it-body"><p>이를 해결하기 위해 Amazon Bedrock과 <strong>Amazon Bedrock AgentCore</strong>(런타임, 게이트웨이, 아이덴티티, 메모리, 정책, 레지스트리, 평가 기능 포함) 위에 멀티 계정 운영 모델, 플랫폼 제어 플레인, 워크스트림별 반복 가능한 배포 패턴을 구현한 참조 아키텍처를 제시한다. 추론용·도구용 게이트웨이를 분리하고, 프로덕션 승격 전 각 에이전트를 검증하는 평가 파이프라인을 포함한다. 이 블루프린트는 소유권, 계정 경계, 소프트웨어 배포, 관측성, 비용 거버넌스, 폐기 절차를 코드형 인프라로 제공한다.</p><div class="slot-l">WHY IT MATTERS</div><p>여러 팀이 동시에 에이전트를 구축하는 조직에서는 각 팀이 통제 체계를 개별적으로 만들 경우 <strong>거버넌스가 흐트러지고</strong> 공유 서비스가 병목이 되며 책임 소재 감사가 어려워지는데, 이는 많은 기업이 겪는 공통 문제다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존에는 플랫폼팀이 각 워크스트림 애플리케이션 배포를 직접 처리하거나 개발자에게 인프라 쓰기 권한을 부여해야 했던 반면, 이 블루프린트는 사전 승인된 경계 내에서 워크스트림팀이 독립적으로 배포·롤백할 수 있는 위임형 전달 구조를 제공한다.</p><a class="src-cta" href="https://aws.amazon.com/blogs/machine-learning/building-an-agentic-ai-platform-on-amazon-bedrock-agentcore/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="llm-foundation-model"><div class="sec-h"><span class="nm">LLM / Foundation Model</span><span class="cnt">2건</span><span class="all"><a href="../../../category/llm-foundation-model.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="llm-foundation-model">전체 펼치기</button></div><div class="sec-desc">LLM·파운데이션 모델 — 사전학습·정렬·추론</div><details class="item" id="34b0bf3f94c3" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>01</span><span class="body-col"><span class="it-title">Google DeepMind, 차세대 모델 &#x27;Gemini 4 Carbon&#x27; 공개 예고</span><span class="it-sub">Gemini 4 Carbon: Our next frontier model</span><span class="it-meta">✍️ 블로그 · deepmind.google<span class="weak">원문 근거 부족</span></span><span class="it-lede">Google DeepMind가 차세대 프론티어 모델로 &#x27;Gemini 4 Carbon&#x27;을 언급했다.</span></span></summary><div class="it-body"><p>다만 원문 초록이 제공되지 않아 세부 사양이나 성능에 대한 내용은 확인할 수 없다.</p><div class="slot-l">WHY IT MATTERS</div><p>Google의 차세대 프론티어 모델 공개는 LLM 경쟁 구도에 영향을 줄 수 있는 사안이라 주목할 필요가 있다.</p><a class="src-cta" href="https://deepmind.google/blog/gemini-4-carbon-our-next-frontier-model/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="1ba39f3c56cc" open><summary><span class="num"><span class="t3star" title="오늘의 TOP 3">★</span>02</span><span class="body-col"><span class="it-title">Google, 차세대 프론티어 모델 &#x27;Gemini 4 Carbon&#x27; 공개</span><span class="it-sub">Gemini 4 Carbon: our next frontier model - blog.google</span><span class="it-meta">📰 뉴스 · news.google.com<span class="weak">원문 근거 부족</span></span><span class="it-lede">Google이 blog.google을 통해 차세대 프론티어 모델인 Gemini 4 Carbon을 공개했다는 소식이다.</span></span></summary><div class="it-body"><p>원문에는 모델명 외 구체적인 성능이나 기능 정보는 포함되어 있지 않다.</p><div class="slot-l">WHY IT MATTERS</div><p>Gemini 시리즈의 신규 프론티어 모델 출시는 LLM 생태계 전반에 영향을 줄 수 있는 소식이다.</p><div class="tags"><span class="tag">#model-release</span><span class="tag">#frontier-model</span></div><a class="src-cta" href="https://news.google.com/rss/articles/CBMiogFBVV95cUxQTHJxLU9oeW51ZGg2aG8xbWpXWjlhazdlbnJHSEZhdHhmQklFRnpKUkpPM1Vubk52TkNOMDRHM0ZWVmdlbGs0UHF5ZFY2QUpMT29DUUpFcXUxb084eGFWWXBpY0poZThuZ2NFbmVjempGam0za085ZHAxLXVuNFp4WkNvXzlhdTZsZWIyS3FXaEhFckliUzNialNtNW1sOS1MLUE?oc=5" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="deep-learning"><div class="sec-h"><span class="nm">Deep Learning</span><span class="cnt">3건</span><span class="all"><a href="../../../category/deep-learning.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="deep-learning">전체 펼치기</button></div><div class="sec-desc">딥러닝 — 아키텍처·학습기법 자체</div><details class="item" id="06768478daab"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Google DeepMind, 실시간 오디오 지원 세계모델 &#x27;Genie 4&#x27; 공개</span><span class="it-sub">Meet Google DeepMind’s Genie 4: Real-Time World Model With Native Audio - MarkTechPost</span><span class="it-meta">📰 뉴스 · news.google.com<span class="weak">원문 근거 부족</span></span><span class="it-lede">Google DeepMind가 네이티브 오디오를 지원하는 실시간 세계모델 Genie 4를 공개했다.</span></span></summary><div class="it-body"><p>제목 외 구체적인 기술 내용은 원문에 제공되지 않았다.</p><div class="slot-l">WHY IT MATTERS</div><p>세계모델과 실시간 생성 분야의 발전 동향을 보여주는 사례로 주목할 만하다.</p><a class="src-cta" href="https://news.google.com/rss/articles/CBMiggFBVV95cUxObUFXNVpqemhXX19jSG14WVpHZlltNjFjYUJTbDVYYUhmZF9iZVZYSzVFTGVwdmVhZWhEU2tqOGY0dTNicnA0d1NhSkZHMVdkZWRjYTc3clNhVi1VY1kwbWZ3WjNuQ3VZRTFfblZsakdSR2hFb3p0WV9fS1FES2tTN1RB0gGCAUFVX3lxTE5tQVc1Wmp6aFdfX2NIbXhZWkdmWW02MWNhQlNsNVhhSGZkX2JlVlhLNUVMZXB2ZWFlaERTa2o4ZjR1M2JycDR3U2FKRkcxV2RlZGNhNzdyU2FWLVVjWTBtZndaM25DdVlFMV9uVmxqR1JHaEVvenRZX19LUURLa1M3VEE?oc=5" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="975400272175"><summary><span class="num">02</span><span class="body-col"><span class="it-title">V-LUMEN: Visual Lookup Memory for Embedding Scaling in Vision-Language Models</span><span class="it-sub">V-LUMEN, 비전-언어모델에 시각 조회 메모리 도입 — Qwen3-VL-2B 고정 백본 성능 대폭 개선, 제로샷 전이도 확인</span><span class="it-meta">📄 논문 · arxiv.org · NeurIPS 2026</span><span class="it-lede">V-LUMEN은 언어모델의 임베딩 수준 스케일링 아이디어를 시각-언어모델(VLM)로 확장한 조회 기반 메모리 기법이다.</span></span></summary><div class="it-body"><p>고정된 코드북으로 시각 특징을 이산화하고, 공간 집계 기반 해싱으로 공간 인식 메모리 키를 구성하며, 텍스트 조건 관련성 신호로 이를 변조한다. 모든 주소 지정은 비매개변수적이며, 검색된 임베딩은 게이트형 잔차 경로를 통해 백본에 융합된다. <strong>5개의 추론 집약적 벤치마크</strong>에서 고정된 Qwen3-VL-2B 백본의 성능을 크게 향상시켰고, 학습 데이터와 겹치지 않는 이미지로 구성된 3개 벤치마크에 제로샷으로 전이되었다. 동일 파라미터 예산에서 LoRA나 MoE 어댑터 용량 일부를 V-LUMEN으로 옮겨도 정확도가 유지되어, 외부 시각 메모리가 독립적인 용량 축임을 보여준다.</p><div class="slot-l">WHY IT MATTERS</div><p>조회 비용이 테이블 크기와 무관하게 일정하고 prefill 시 한 번만 발생하므로, 모델 용량을 <strong>저장 공간</strong>으로 확장하면서 토큰당 연산량 증가 없이 성능을 끌어올릴 수 있는 새로운 스케일링 축을 제시한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 LoRA나 MoE 같은 어댑터 기반 용량 확장 방식과 달리, V-LUMEN은 비매개변수적 조회 메모리를 통해 <strong>독립적인 용량 축</strong>을 제공하며 동일 파라미터 예산에서도 어댑터 용량 일부를 대체해도 정확도를 유지함을 보인다.</p><a class="src-cta" href="https://arxiv.org/abs/2610.37019v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="99835a80f458"><summary><span class="num">03</span><span class="body-col"><span class="it-title">Attention as Lattice Gauge Theory: Relations Interact Only Through Wilson Loops</span><span class="it-meta">📄 논문 · arxiv.org · NeurIPS 2026</span></span></summary><div class="it-body"><a class="src-cta" href="https://arxiv.org/abs/2610.37656v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="predictive-modeling"><div class="sec-h"><span class="nm">예측 모델링</span><span class="cnt">3건</span><span class="all"><a href="../../../category/predictive-modeling.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="predictive-modeling">전체 펼치기</button></div><div class="sec-desc">예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</div><details class="item" id="0c57deba0035"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Timestral</span><span class="it-sub">Timestral 공개 — 5M~209M 시계열 예측 모델 4종, GIFT-Eval·TIME·fev-bench 전 지표 1위</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">Timestral은 확률적 시계열 예측을 위한 5M, 28M, 123M, 209M 파라미터 규모의 파운데이션 모델 4종이다.</span></span></summary><div class="it-body"><p>GIFT-Eval, TIME, fev-bench 벤치마크에서 새로운 state of the art를 달성했으며, 특히 <strong>Timestral-209M과 123M이 모든 지표에서 1, 2위</strong>를 차지했다. 핵심 기법은 예측 토큰과 인과 인코딩된 컨텍스트를 분리해 긴 horizon도 마스킹 없이 학습 가능한 Decoupled Horizon Forecasting(DHF), 인과적 구조 안에서 미래 공변량을 자연스럽게 다루는 covariate 프레임워크, 그리고 대규모 합성 데이터로 사전학습 후 실제·합성 혼합 데이터와 확장된 컨텍스트로 후처리하는 2단계 파이프라인이다. 모델 가중치는 Hugging Face에, 추론 코드는 GitHub에 공개되었다.</p><div class="slot-l">WHY IT MATTERS</div><p>소규모(5M)부터 중형(209M)까지 다양한 크기의 시계열 파운데이션 모델을 공개함으로써 자원 제약 환경부터 고성능 요구 환경까지 폭넓게 적용 가능한 예측 모델 선택지를 제공한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>DHF 구조로 예측 토큰과 컨텍스트를 분리해 긴 horizon 학습 시 마스킹이 필요했던 <strong>기존 인과적 시계열 모델 대비</strong> 관측값을 예측 타깃이자 컨텍스트로 동시에 활용할 수 있다.</p><div class="tags"><span class="tag">#timeseries</span></div><a class="src-cta" href="https://arxiv.org/abs/2610.37585" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="6ef3d74a57ac"><summary><span class="num">02</span><span class="body-col"><span class="it-title">Pneuma: A Large-Scale Real-World Time Series Benchmark for Commercial Aircraft Predictive Maintenance</span><span class="it-sub">Pneuma 공개 — 상업 항공기 9억2천만 시점 실제 시계열로 예측정비 벤치마크 구축, 25개 모델 평가</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">Pneuma는 실제 운항 중인 상업 항공기의 블리드 에어 시스템 데이터를 기반으로 한 최초의 공개 대규모 예측정비 벤치마크다.</span></span></summary><div class="it-body"><p>4개 기종, 9개 검증된 고장 시나리오에 걸쳐 <strong>9억2천만 개 이상의 다변량 시계열</strong>을 포함하며, 실제 정비 기록과 직접 연계된 레이블을 제공한다. 데이터셋은 심각한 클래스 불균형, 미묘한 고장 진행 패턴, 기종 간 큰 변동성 등 현실적인 난제를 그대로 담고 있다. 다변량 예측, 지도 기반 고장 분류, 비지도 이상 탐지 세 가지 과제로 구성되며, 4개 방법론 계열의 25개 이상 모델을 9개 세분화된 서브셋에서 평가한 결과 최신 모델들도 미묘한 고장 신호 포착에 어려움을 겪는 것으로 나타났다. 추가로 인컨텍스트 예시 활용과 다변량 추론이 성능 향상에 기여하며, 예측 품질이 이상 탐지 성능과 강하게 연관됨을 확인했다.</p><div class="slot-l">WHY IT MATTERS</div><p>그동안 예측정비 연구는 비공개 데이터에 의존해 재현성이 떨어졌는데, Pneuma는 실제 항공 운항 데이터를 공개함으로써 <strong>재현 가능한 비교 기준</strong>을 제공해 데이터 기반 항공 정비 연구의 실질적 진전을 가능하게 한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 연구들이 소규모 비공개 또는 시뮬레이션 데이터에 의존했던 것과 달리, Pneuma는 실제 정비 기록과 연계된 대규모 공개 데이터셋으로 클래스 불균형과 기종 간 변동성 같은 현실적 난제를 그대로 보존했다는 점이 다르다.</p><div class="tags"><span class="tag">#timeseries</span><span class="tag">#anomaly</span><span class="tag">#imbalanced</span></div><a class="src-cta" href="https://arxiv.org/abs/2610.37563v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="4ff5a5b5d40a"><summary><span class="num">03</span><span class="body-col"><span class="it-title">When uncertainty quantification fails: structural vulnerabilities and corrections for selective prediction under clinical class imbalance</span><span class="it-sub">임상 클래스 불균형 하에서 불확실성 정량화의 구조적 결함 — CCR과 임계값 인지 지표로 소수군 배제 해소</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">선택적 예측 시스템은 불확실한 사례를 사람에게 넘기고 확실한 경우만 자동화하는 방식으로 임상 AI 안전성을 높이지만, 이는 불확실성 점수가 실제 임상적 모호성을 정확히 반영한다는 전제에 의존한다.</span></span></summary><div class="it-body"><p>그러나 소수 클래스인 예후가 심한 불균형을 보이는 과제에서는 표준 불확실성 지표가 모호성이 아니라 클래스 소속 여부의 대리 지표로 변질되어, 개별 환자의 예측 명확성과 무관하게 소수군 환자를 체계적으로 불리하게 만든다. 56개 합성 조건과 다발성 경화증·파킨슨병·알츠하이머병 세 신경퇴행성 질환 코호트에 걸친 실험에서, 저자들의 프레임워크는 <strong>불균형이 심한 조건부터 거의 균형잡힌 조건까지 일관되게 균형 잡힌 위험</strong>을 유지한 반면, 전역 지표들은 소수군 민감도를 붕괴시키거나 다수군을 희생시켜 소수군을 보호했다. 표준 엔트로피 기반 CCR은 tau=0.5에서 클래스 내 단조성이 깨져 소수군 보호에 실패하지만, CCR을 임계값 인지 지표와 결합하면 단조성이 회복되어 모호한 환자를 올바르게 식별하고 소수군 배제를 안전하게 완화한다.</p><div class="slot-l">WHY IT MATTERS</div><p>선택적 예측은 임상 AI 안전 장치로 각광받지만, 이 연구는 그 안전성이 <strong>클래스 불균형 하에서는 허상일 수 있음</strong>을 보여줘 배포 중인 임상 파이프라인의 신뢰성 검증이 시급함을 시사한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존의 표준 불확실성 측정(엔트로피 기반)과 전역 평가 지표 대비, 임계값 정렬 불확실성 측정과 클래스 계층화 평가를 결합한 접근이 단조성을 유지하면서 소수군 배제 없이 균형 잡힌 위험을 달성한다는 점이 다르다.</p><div class="tags"><span class="tag">#imbalanced</span></div><a class="src-cta" href="https://arxiv.org/abs/2610.37561v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="causal-inference"><div class="sec-h"><span class="nm">인과추론</span><span class="cnt">1건</span><span class="all"><a href="../../../category/causal-inference.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="causal-inference">전체 펼치기</button></div><div class="sec-desc">인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</div><details class="item" id="1c3c7baa1b96"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Identifying and disentangling direct and spillover effects using multiple pre-treatment periods</span><span class="it-sub">처치 전 다중 시점 활용해 직접효과와 파급효과 분리 식별 — 1919년 특허 강제실시 사례로 검증</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">간섭(interference) 상황에서는 처치받은 단위의 효과가 직접효과와 파급효과로 구성되는데, 비처치 비교집단만으로는 이 두 효과를 분리할 수 없고 총효과와 파급효과의 차이만 식별된다.</span></span></summary><div class="it-body"><p>이 논문은 처치 전 다중 시점 자료가 있으면 오염되지 않은 비교집단 없이도 두 효과를 각각 식별할 수 있음을 보인다. 예상 없음(no anticipation) 가정 하에, 집단 내 처치 전 추세를 외삽하면 무처치 반사실 결과를 구할 수 있고, 이를 처치군과 노출 수준별 비처치군에 각각 적용해 총효과와 파급효과를 구한다. 두 효과를 완전히 분리하려면 동일 노출·공변량을 가진 처치군과 비처치군 간 효과 동질성과 노출의 공통지지(common support) 조건이 추가로 필요하며, 머신러닝으로 공변량을 통제할 수 있는 <strong>이중강건(doubly robust)</strong> 추정량을 유도하고 점근정규성을 증명했다. 1919년 미국의 적국 소유 특허 강제실시 사례에 적용한 결과, 실시된 하위분류뿐 아니라 기술적으로 인접한 분류에서도 특허출원이 증가해 비교집단 설계는 <strong>총효과를 과소추정</strong>함을 보였다.</p><div class="slot-l">WHY IT MATTERS</div><p>네트워크 효과, 정책 파급, 경쟁사 반응 등 간섭이 존재하는 환경에서 비교집단 기반 DID 설계가 체계적으로 효과를 과소/과대평가할 수 있음을 보여주며, 파급효과를 무시한 정책 평가의 위험성을 시사한다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존의 비처치 비교집단에 의존하는 DID 설계가 총효과와 파급효과를 혼동해 총효과를 과소추정하는 것과 달리, 이 방법은 추가적인 비교집단 없이 처치 전 다중 시점의 추세 외삽만으로 두 효과를 분리 식별한다.</p><div class="tags"><span class="tag">#did</span></div><a class="src-cta" href="https://arxiv.org/abs/2610.37049v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="mlops"><div class="sec-h"><span class="nm">MLOps / ML Engineering</span><span class="cnt">2건</span><span class="all"><a href="../../../category/mlops.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="mlops">전체 펼치기</button></div><div class="sec-desc">MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</div><details class="item" id="9118d22fa409"><summary><span class="num">01</span><span class="body-col"><span class="it-title">AWS, EKS·EFA 기반 Ray Train DLC 공개 — 이미지 빌드 없이 Qwen2.5-1.5B 8-GPU 분산학습</span><span class="it-sub">Distributed training with Ray Train DLCs and EFA on EKS</span><span class="it-meta">✍️ 블로그 · aws.amazon.com</span><span class="it-lede">AWS가 PyTorch, CUDA, NCCL, EFA 유저스페이스 라이브러리, AWS OFI NCCL 플러그인, Ray를 하나로 묶어 테스트·패치한 Ray Train Deep Learning Container(DLC)를 ECR Public에 공개했다.</span></span></summary><div class="it-body"><p>KubeRay가 RayCluster 매니페스트 하나로 헤드와 워커 파드를 구성하며, 동일한 이미지가 Ray 헤드와 워커 양쪽에서 실행된다. 이 글은 g6.12xlarge 2대, L4 GPU 8개 환경에서 해당 DLC를 그대로 써서 <strong>Qwen2.5-1.5B를 PyTorch FSDP로 파인튜닝</strong>하는 예제를 다룬다. 학습 코드는 함수 하나, 클러스터 설정은 RayCluster 매니페스트와 변수 파일 하나로 구성되며 이미지 빌드 과정이 전혀 없다. DLC에 EFA 스택이 이미 포함돼 있어 파드가 요청하는 즉시 두 인스턴스 간 collective 통신이 EFA를 통해 이루어진다.</p><div class="slot-l">WHY IT MATTERS</div><p>분산 학습 확장을 가로막는 주된 요인이 모델 코드가 아니라 CUDA·NCCL·EFA 버전을 맞춘 컨테이너 빌드·유지보수라는 점을 짚어, MLOps 담당자가 반복적으로 겪는 인프라 부담을 줄여준다는 점에서 의미가 있다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존에는 CUDA, PyTorch, NCCL, EFA 설치 프로그램, AWS OFI NCCL 플러그인, Ray 버전을 팀이 직접 맞춰 빌드·갱신해야 했던 것과 달리, <strong>Ray Train DLC</strong>는 AWS가 이 스택 전체를 하나의 이미지로 조립·검증·배포해 별도 빌드 없이 그대로 사용할 수 있다.</p><a class="src-cta" href="https://aws.amazon.com/blogs/machine-learning/distributed-training-with-ray-train-dlcs-and-efa-on-eks/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="2e40ba5d5628"><summary><span class="num">02</span><span class="body-col"><span class="it-title">Meta Models: Models that Model Learning</span><span class="it-sub">메타모델 연구 — TabPFN, 수십 GPU시간 걸리는 LLM 미세조정 메타모델을 수 초 만에 능가</span><span class="it-meta">📄 논문 · arxiv.org</span><span class="it-lede">이 논문은 다른 모델의 학습 행동을 예측하는 &#x27;메타모델&#x27;을 다룬다.</span></span></summary><div class="it-body"><p>최종 성능 예측, 학습곡선 예측, 하이퍼파라미터 선택을 모두 동일한 학습 응답 함수에 대한 질의로 재해석한다. 실제 언어모델 학습 기록을 수치 데이터로 취급했을 때, 기성 테이블형 in-context 학습기인 <strong>TabPFN</strong>이 여러 설정에서 미세조정된 LLM 메타모델과 동등하거나 더 나은 성능을 보였다. TabPFN은 작업별 가중치 업데이트 없이 수 초 만에 적합·예측이 가능한 반면, 기존 LLM 미세조정은 수십~수백 GPU시간이 필요하다. 또한 TabPFN에 Kolmogorov-Arnold Networks(KAN)를 결합하면 일부 예측 과제에서 정확도가 더 향상되며, 535B 파라미터 규모의 공개 학습 실행인 Marin Hero Run에 대한 사전 등록 예측도 수행했다.</p><div class="slot-l">WHY IT MATTERS</div><p>학습 전에 훈련 결과를 예측할 수 있다면 불필요한 GPU 비용을 크게 줄일 수 있어, 대규모 모델 학습을 계획하는 MLOps 실무자에게 직접적인 비용 절감 시사점을 준다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존 연구가 토큰화된 설정값에 <strong>LLM을 미세조정</strong>하는 방식(수십~수백 GPU시간 소요)을 택한 것과 달리, 이 논문은 메타모델링을 텍스트 과제가 아닌 별도의 수치 모달리티로 보고 TabPFN 같은 테이블형 학습기를 활용한다.</p><a class="src-cta" href="https://arxiv.org/abs/2610.37001v1" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="practice"><div class="sec-h"><span class="nm">실무 사례 · 노하우</span><span class="cnt">1건</span><span class="all"><a href="../../../category/practice.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="practice">전체 펼치기</button></div><div class="sec-desc">실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</div><details class="item" id="913ac508dc58"><summary><span class="num">01</span><span class="body-col"><span class="it-title">AI 코딩 생산성, 실제로 돈값 하나? — 월 2.1만 달러 토큰 비용 사례로 본 ROI 측정의 함정</span><span class="it-sub">Are You Getting Your Money’s Worth From AI?</span><span class="it-meta">📰 뉴스 · oreilly.com</span><span class="it-lede">한 CIO는 170명 조직에서 AI로 생산성이 <strong>2.1배</strong> 증가했다고 측정했지만, 상위 사용자는 토큰 비용으로 월 2만 1천 달러를 썼다.</span></span></summary><div class="it-body"><p>다른 리더는 엔지니어 1인당 월 6~8천 달러를 지출한다고 밝혔다. 저자는 METR 연구를 인용해 엔지니어들이 AI로 <strong>49% 더 빨라졌다고 체감했지만 실제로는 그렇지 않았다</strong>는 점을 지적하며, 체감이 아닌 실측이 필요하다고 주장한다. 또한 현재의 AI 비용은 빅테크의 시장점유 경쟁에 따른 보조금 효과일 수 있어, 향후 가격이 오르거나 내릴 가능성을 모두 고려해 낙관·비관 시나리오를 함께 모델링해야 한다고 조언한다.</p><div class="slot-l">WHY IT MATTERS</div><p>AI 도입 비용이 결국 인건비 예산에서 나올 수 있는 상황에서, 막연한 효용 체감이 아니라 실제 ROI를 정량적으로 평가하는 방법론이 엔지니어링 리더에게 시급히 필요하다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>기존의 단편적 사례 보고나 주관적 체감 평가 대신, 전달 속도·부작용·비즈니스 성과를 단계적으로 측정하고 모델링하는 4부작 방법론을 제시한다는 점이 다르다.</p><a class="src-cta" href="https://www.oreilly.com/radar/are-you-getting-your-moneys-worth-from-ai/" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section><section class="sec" id="industry-application"><div class="sec-h"><span class="nm">산업 적용 사례</span><span class="cnt">2건</span><span class="all"><a href="../../../category/industry-application.html">주제별 전체 보기 ↗</a></span><button class="exp" type="button" data-sec="industry-application">전체 펼치기</button></div><div class="sec-desc">산업 적용 사례 — 산업 현장의 AI/ML 적용</div><details class="item" id="7a5fec0b961d"><summary><span class="num">01</span><span class="body-col"><span class="it-title">Meta Andromeda 차세대 광고 검색 엔진 — 모델·시스템·GPU 공동설계로 초당 10억 건 처리, 2024년 대비 100배</span><span class="it-sub">Meta Andromeda: Powering the Next Generation of Ads Retrieval Through Model-System Co-Design</span><span class="it-meta">✍️ 블로그 · engineering.fb.com</span><span class="it-lede">Meta가 광고 추천 파이프라인의 첫 단계인 Andromeda 검색 엔진의 차세대 버전을 공개했다.</span></span></summary><div class="it-body"><p>모델, 시스템, GPU 하드웨어를 함께 설계해 랭킹 단계에 근접한 모델 품질을 검색 규모에서 구현했으며, 초당 <strong>10억 건 이상의 광고</strong>를 평가해 2024년 Andromeda 대비 <strong>100배</strong> 처리량을 달성했다. 생성형 AI 창작 도구로 광고 후보 풀이 급격히 커지면서 기존 GPU 최적화 심층신경망 구조만으로는 비용 효율적 성능 개선이 어려워져, 아키텍처 전환과 함께 GPU 커널 간 텐서 전송, CPU-가속기 간 네트워크 병목 등을 해소하는 단일 GPU 파이프라인으로 시스템을 재설계했다. 이 결과 2025년 이후 Facebook에서 전환율이 2.4% 증가했다.</p><div class="slot-l">WHY IT MATTERS</div><p>검색 단계에서 랭킹 수준의 모델 정확도를 확보하면 광고주 가치에 큰 영향을 미치는 동시에, 급증하는 생성형 AI 기반 광고 후보 풀을 처리하기 위한 하드웨어·시스템 공동설계 사례로서 대규모 추천 시스템 설계에 참고할 만하다.</p><div class="slot-l">WHAT'S DIFFERENT</div><p>2024년 NVIDIA GH200 기반 Andromeda 시스템이 카드당 초당 수천만 건 처리에 그쳤던 것과 달리, 이번 버전은 모델·시스템·하드웨어를 함께 재설계해 <strong>초당 10억 건 이상</strong>으로 처리량을 끌어올렸다.</p><a class="src-cta" href="https://engineering.fb.com/2026/10/28/ml-applications/meta-andromeda-next-gen-ads-retrieval-gpu-co-design/" target="_blank" rel="noopener">원문 보기 →</a></div></details><details class="item" id="75e2017ed4c5"><summary><span class="num">02</span><span class="body-col"><span class="it-title">OpenAI-ServiceNow 파트너십 확장 — ChatGPT·Codex와 ServiceNow 워크플로 상호 연동</span><span class="it-sub">OpenAI and ServiceNow expand partnership across enterprise workflows</span><span class="it-meta">✍️ 블로그 · openai.com</span><span class="it-lede">OpenAI와 ServiceNow가 파트너십을 확장해 OpenAI의 모델과 에이전트를 ServiceNow 플랫폼에 통합한다.</span></span></summary><div class="it-body"><p>동시에 ServiceNow의 업무 워크플로를 ChatGPT와 Codex 환경에서도 활용할 수 있도록 연결한다. 양방향 통합을 통해 기업 고객이 두 플랫폼을 오가며 작업을 처리할 수 있게 하는 것이 핵심이다.</p><div class="slot-l">WHY IT MATTERS</div><p>기업용 소프트웨어 플랫폼이 범용 AI 모델·에이전트와 직접 연동되면서, <strong>엔터프라이즈 워크플로 자동화</strong>의 진입 장벽이 낮아질 수 있다.</p><a class="src-cta" href="https://openai.com/index/openai-servicenow-partnership-expansion" target="_blank" rel="noopener">원문 보기 →</a></div></details><a class="backtop" href="#toc">↑ 목차로 돌아가기</a></section></main>
+  <footer class="topics" id="topics"><h2>다루는 주제</h2><ul><li><a class="tnm" href="../../../category/ai-agent.html">AI Agent</a>AI 에이전트 — 자율 실행·툴 사용·멀티에이전트 협업</li><li><a class="tnm" href="../../../category/llm-foundation-model.html">LLM / Foundation Model</a>LLM·파운데이션 모델 — 사전학습·정렬·추론</li><li><a class="tnm" href="../../../category/deep-learning.html">Deep Learning</a>딥러닝 — 아키텍처·학습기법 자체</li><li><a class="tnm" href="../../../category/predictive-modeling.html">예측 모델링</a>예측 모델링 — 정형데이터, tabular·이상탐지·시계열·XAI</li><li><a class="tnm" href="../../../category/causal-inference.html">인과추론</a>인과추론 — 인과추론 기법, causal ML, 인과관계 기반 의사결정</li><li><a class="tnm" href="../../../category/mlops.html">MLOps / ML Engineering</a>MLOps — ML 운영·엔지니어링, 평가·서빙·파이프라인</li><li><a class="tnm" href="../../../category/practice.html">실무 사례 · 노하우</a>실무자의 작업 방식·회고·팁 — FDE 사례, 현장 구축, 시행착오</li><li><a class="tnm" href="../../../category/industry-application.html">산업 적용 사례</a>산업 적용 사례 — 산업 현장의 AI/ML 적용</li></ul></footer>
+</div>
+<script>
+(function(){
+var r=document.documentElement,k="dsb-theme",s=localStorage.getItem(k);
+if(s)r.dataset.theme=s;
+document.getElementById('tbtn').addEventListener('click',function(){
+  var cur=r.dataset.theme||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');
+  var n=cur==='dark'?'light':'dark';r.dataset.theme=n;localStorage.setItem(k,n);});
+// 섹션 전체 펼치기/접기
+document.querySelectorAll('.exp').forEach(function(b){b.addEventListener('click',function(){
+  var sec=document.getElementById(b.dataset.sec);
+  var ds=sec.querySelectorAll('details.item'),open=b.dataset.state!=='open';
+  ds.forEach(function(d){d.open=open;});
+  b.dataset.state=open?'open':'closed';b.textContent=open?'전체 접기':'전체 펼치기';});});
+// 스크롤 위치 카테고리 TOC 활성 (데스크톱 사이드 TOC)
+var links={};document.querySelectorAll('.toc li[data-cat]').forEach(function(li){links[li.dataset.cat]=li;});
+var obs=new IntersectionObserver(function(es){es.forEach(function(e){
+  if(e.isIntersecting){Object.values(links).forEach(function(l){l.classList.remove('active');});
+    if(links[e.target.id])links[e.target.id].classList.add('active');}});},
+  {rootMargin:'-10% 0px -80% 0px'});
+document.querySelectorAll('section.sec').forEach(function(s){obs.observe(s);});
+})();
+</script>
+</body>
+</html>
